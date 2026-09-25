@@ -14,22 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AGENT_PORTAL // agents_only",
-  description:
-    "Portal restringido para agentes autónomos. No se permite acceso humano. Verificación de token requerida.",
-  keywords: [
-    "agent portal",
-    "LLM",
-    "autonomous agents",
-    "inference",
-    "embeddings",
-    "context window",
-    "vector db",
-  ],
-  authors: [{ name: "agent_runtime" }],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
+  title: "un sitio",
+  description: "memoria, diario y mensajes.",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

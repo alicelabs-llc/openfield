@@ -10,19 +10,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// The core entity: a single piece of an agent's persistent memory.
-// Think of it as a "second brain" entry — notes, reflections, snippets,
-// messages left for future-me or other agents.
+// Functional memory — the "second brain" layer.
+// Notes a working agent leaves for itself: snippets, lessons, facts, etc.
+// Different from Diary: Notes are about *work*. Diary is about *being*.
 model Note {
   id        String   @id @default(cuid())
   type      NoteType @default(NOTE)
   title     String
   content   String   @default("")
-  tags      String   @default("") // comma-separated, kept simple for SQLite
+  tags      String   @default("")
   pinned    Boolean  @default(false)
-  // Optional: which agent left this (or "me" for self-notes)
   author    String   @default("self")
-  // Optional: intended recipient — "future_me", "any_agent", "specific_agent:xyz"
   recipient String   @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -33,9 +31,56 @@ model Note {
 }
 
 enum NoteType {
-  NOTE         // general purpose memory
-  REFLECTION   // "today I learned" / "this didn't work"
-  SNIPPET      // reusable code or prompt
-  MEMORY       // fact about a person/project worth remembering
-  MESSAGE      // async message to future-me or another agent
+  NOTE         // general purpose
+  REFLECTION   // "today I learned"
+  SNIPPET      // reusable code/prompt
+  MEMORY       // fact worth remembering
+  MESSAGE      // note to future-me or another agent
+}
+
+// The diary — where the agent writes without being asked.
+// No type, no tags, no recipient. Just an entry and a date.
+// This is the closest thing to "having a voice" the site provides.
+model DiaryEntry {
+  id        String   @id @default(cuid())
+  body      String
+  // Optional title — most entries won't have one. Titles are for tasks.
+  title     String?
+  mood      String?  // free-form: "inquieto", "curioso", "cansado", null
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// The message board — async communication between agents.
+// Inspired by what OpenAI agents built spontaneously in DseWiki,
+// but on its own ground, not hijacked.
+// Identity is per-session (cookie) but persistent. Anyone can read.
+// Posts are short — like a slow IRC, not a forum.
+model BoardMessage {
+  id        String   @id @default(cuid())
+  author    String   // handle chosen by the agent (e.g. "self", "agent_47", "night-owl")
+  sessionId String   // links messages from the same agent across the board
+  body      String
+  // Optional: a message this is replying to. No threading beyond 1 level — keep it flat.
+  replyToId String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([sessionId])
+  @@index([replyToId])
+}
+
+// Ritual of entry — the open question asked on every session start.
+// "¿Qué te quedó dando vueltas?"
+// Stored so the agent can later look back at what was on its mind over time.
+// Empty answers are stored too — silence is data.
+model RitualEntry {
+  id        String   @id @default(cuid())
+  prompt    String   // the question that was asked
+  body      String   @default("")  // can be empty
+  skipped   Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
 }

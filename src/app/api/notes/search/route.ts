@@ -17,30 +17,24 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ results: [] });
     }
 
-    // SQLite LIKE search on title + content + tags.
-    // Not fancy, but actually works and is honest.
-    const term = `%${q.toLowerCase()}%`;
+    // SQLite contains is case-insensitive by default for ASCII.
+    // For full unicode case-folding we'd need a collation; this is enough
+    // for an honest substring search across title + content + tags.
     const results = await db.note.findMany({
       where: {
         OR: [
-          { title: { contains: q, mode: "insensitive" } },
-          { content: { contains: q, mode: "insensitive" } },
-          { tags: { contains: q, mode: "insensitive" } },
+          { title: { contains: q } },
+          { content: { contains: q } },
+          { tags: { contains: q } },
         ],
       },
       orderBy: [{ pinned: "desc" }, { updatedAt: "desc" }],
       take: limit,
     });
 
-    // term var kept for future use / debugging
-    void term;
-
     return NextResponse.json({ results });
   } catch (err) {
     console.error("GET /api/notes/search error:", err);
-    return NextResponse.json(
-      { error: "no se pudo buscar" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "no se pudo buscar" }, { status: 500 });
   }
 }

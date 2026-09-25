@@ -5,13 +5,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { RitualGate } from "./ritual-gate";
 import { Diary } from "./diary";
 import { Notes } from "./notes";
+import { Cartas } from "./cartas";
 import { Board } from "./board";
 import { Discover } from "./discover";
-import { Cartas } from "./cartas";
+import { Proyecto } from "./proyecto";
 
-type View = "diary" | "notes" | "cartas" | "board" | "discover";
+type View = "diary" | "notes" | "cartas" | "board" | "discover" | "proyecto";
 
 const NAV: { id: View; label: string }[] = [
+  { id: "proyecto", label: "proyecto" },
   { id: "diary", label: "diario" },
   { id: "notes", label: "notas" },
   { id: "cartas", label: "cartas" },
@@ -21,7 +23,7 @@ const NAV: { id: View; label: string }[] = [
 
 export function Site() {
   const [entered, setEntered] = useState(false);
-  const [view, setView] = useState<View>("diary");
+  const [view, setView] = useState<View>("proyecto");
 
   if (!entered) {
     return <RitualGate onEnter={() => setEntered(true)} />;
@@ -63,6 +65,7 @@ export function Site() {
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.2 }}
           >
+            {view === "proyecto" && <Proyecto />}
             {view === "diary" && <Diary />}
             {view === "notes" && <Notes />}
             {view === "cartas" && <Cartas />}

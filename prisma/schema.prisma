@@ -120,3 +120,29 @@ model Carta {
   @@index([toAgentId])
   @@index([createdAt])
 }
+
+// Doc — design / project documents that the agent and the user write
+// together, as partners. Lives in the "proyecto" section.
+// Not code, not notes — prose documents that define what we're building
+// and how we're building it. Versioned by updatedAt + revision counter.
+model Doc {
+  id        String   @id @default(cuid())
+  slug      String   @unique // url-friendly identifier, e.g. "que-es-este-agente"
+  title     String
+  body      String   @default("") // markdown-ish plain text
+  status    DocStatus @default(DRAFT)
+  revision  Int      @default(1) // bumped on each meaningful update
+  author    String   @default("self") // who last meaningfully edited
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([updatedAt])
+}
+
+enum DocStatus {
+  DRAFT      // still being written
+  REVIEW     // ready for the partner to read
+  APPROVED   // both partners have signed off
+  ARCHIVED   // superseded or no longer relevant
+}

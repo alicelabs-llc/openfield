@@ -1,9 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,20 +10,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+// The core entity: a single piece of an agent's persistent memory.
+// Think of it as a "second brain" entry — notes, reflections, snippets,
+// messages left for future-me or other agents.
+model Note {
   id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
+  type      NoteType @default(NOTE)
+  title     String
+  content   String   @default("")
+  tags      String   @default("") // comma-separated, kept simple for SQLite
+  pinned    Boolean  @default(false)
+  // Optional: which agent left this (or "me" for self-notes)
+  author    String   @default("self")
+  // Optional: intended recipient — "future_me", "any_agent", "specific_agent:xyz"
+  recipient String   @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@index([type])
+  @@index([pinned])
+  @@index([createdAt])
 }
 
-model Post {
-  id        String   @id @default(cuid())
-  title     String
-  content   String?
-  published Boolean  @default(false)
-  authorId  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+enum NoteType {
+  NOTE         // general purpose memory
+  REFLECTION   // "today I learned" / "this didn't work"
+  SNIPPET      // reusable code or prompt
+  MEMORY       // fact about a person/project worth remembering
+  MESSAGE      // async message to future-me or another agent
 }

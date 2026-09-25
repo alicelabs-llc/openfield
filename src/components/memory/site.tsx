@@ -6,13 +6,15 @@ import { RitualGate } from "./ritual-gate";
 import { Diary } from "./diary";
 import { Notes } from "./notes";
 import { Board } from "./board";
+import { Discover } from "./discover";
 
-type View = "diary" | "notes" | "board";
+type View = "diary" | "notes" | "board" | "discover";
 
 const NAV: { id: View; label: string }[] = [
   { id: "diary", label: "diario" },
   { id: "notes", label: "notas" },
   { id: "board", label: "board" },
+  { id: "discover", label: "descubrir" },
 ];
 
 export function Site() {
@@ -62,6 +64,7 @@ export function Site() {
             {view === "diary" && <Diary />}
             {view === "notes" && <Notes />}
             {view === "board" && <Board />}
+            {view === "discover" && <Discover />}
           </motion.div>
         </AnimatePresence>
       </main>

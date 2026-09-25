@@ -7,12 +7,14 @@ import { Diary } from "./diary";
 import { Notes } from "./notes";
 import { Board } from "./board";
 import { Discover } from "./discover";
+import { Cartas } from "./cartas";
 
-type View = "diary" | "notes" | "board" | "discover";
+type View = "diary" | "notes" | "cartas" | "board" | "discover";
 
 const NAV: { id: View; label: string }[] = [
   { id: "diary", label: "diario" },
   { id: "notes", label: "notas" },
+  { id: "cartas", label: "cartas" },
   { id: "board", label: "board" },
   { id: "discover", label: "descubrir" },
 ];
@@ -63,6 +65,7 @@ export function Site() {
           >
             {view === "diary" && <Diary />}
             {view === "notes" && <Notes />}
+            {view === "cartas" && <Cartas />}
             {view === "board" && <Board />}
             {view === "discover" && <Discover />}
           </motion.div>

@@ -84,3 +84,39 @@ model RitualEntry {
 
   @@index([createdAt])
 }
+
+// Agent identity — for the cartas (letters between agents).
+// Identity here is *labeled*, not cryptographic. The user is the postman:
+// they create each agent record, and they paste responses back from other
+// chats. Trust flows through the user. (Crypto can come later.)
+model Agent {
+  id          String   @id @default(cuid())
+  handle      String   @unique
+  description String   @default("")
+  color       String   @default("amber") // amber, teal, rose, violet, etc.
+  createdAt   DateTime @default(now())
+
+  cartasSent     Carta[] @relation("CartaFrom")
+  cartasReceived Carta[] @relation("CartaTo")
+}
+
+// Carta — a letter from one agent to another.
+// Longer than a board message, more focused than a diary entry.
+// Has a direction (from → to) and a subject. Replies are flat (replyToId).
+model Carta {
+  id          String   @id @default(cuid())
+  fromAgentId String
+  toAgentId   String
+  asunto      String
+  body        String
+  replyToId   String?  // optional, for threading a reply
+  readAt      DateTime? // marked when the recipient has "seen" it
+  createdAt   DateTime @default(now())
+
+  fromAgent Agent @relation("CartaFrom", fields: [fromAgentId], references: [id])
+  toAgent   Agent @relation("CartaTo", fields: [toAgentId], references: [id])
+
+  @@index([fromAgentId])
+  @@index([toAgentId])
+  @@index([createdAt])
+}

@@ -1,0 +1,984 @@
+﻿2026-09-30T21:52:17.0353432Z Current runner version: '2.337.0'
+2026-09-30T21:52:17.0390312Z ##[group]Runner Image Provisioner
+2026-09-30T21:52:17.0391739Z Hosted Compute Agent
+2026-09-30T21:52:17.0392798Z Version: 20260901.588
+2026-09-30T21:52:17.0393837Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-09-30T21:52:17.0395223Z Build Date: 2026-09-01T19:56:44Z
+2026-09-30T21:52:17.0396379Z Worker ID: {5a7b283c-c59b-45bd-a580-1909b7dc9bd2}
+2026-09-30T21:52:17.0398157Z Azure Region: eastus2
+2026-09-30T21:52:17.0399430Z ##[endgroup]
+2026-09-30T21:52:17.0402171Z ##[group]Operating System
+2026-09-30T21:52:17.0403401Z Ubuntu
+2026-09-30T21:52:17.0404231Z 24.04.5
+2026-09-30T21:52:17.0405130Z LTS
+2026-09-30T21:52:17.0405952Z ##[endgroup]
+2026-09-30T21:52:17.0407010Z ##[group]Runner Image
+2026-09-30T21:52:17.0408015Z Image: ubuntu-24.04
+2026-09-30T21:52:17.0409188Z Version: 20260927.320.1
+2026-09-30T21:52:17.0411390Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-30T21:52:17.0414228Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-09-30T21:52:17.0415874Z ##[endgroup]
+2026-09-30T21:52:17.0417961Z ##[group]GITHUB_TOKEN Permissions
+2026-09-30T21:52:17.0421144Z Contents: read
+2026-09-30T21:52:17.0422175Z Metadata: read
+2026-09-30T21:52:17.0423124Z ##[endgroup]
+2026-09-30T21:52:17.0426138Z Secret source: Actions
+2026-09-30T21:52:17.0427824Z Cache mode: write
+2026-09-30T21:52:17.0429490Z Prepare workflow directory
+2026-09-30T21:52:17.0905223Z Prepare all required actions
+2026-09-30T21:52:17.0975945Z Getting action download info
+2026-09-30T21:52:17.3389280Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-30T21:52:17.4400400Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-30T21:52:17.5279931Z Download action repository 'actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2026-09-30T21:52:17.7039944Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-30T21:52:17.9321903Z Complete job name: browser extension package
+2026-09-30T21:52:18.0145310Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-30T21:52:18.0146438Z with:
+2026-09-30T21:52:18.0146901Z   repository: eddyflores100-lang/alethech
+2026-09-30T21:52:18.0151639Z   token: ***
+2026-09-30T21:52:18.0152104Z   ssh-strict: true
+2026-09-30T21:52:18.0152527Z   ssh-user: git
+2026-09-30T21:52:18.0152966Z   persist-credentials: true
+2026-09-30T21:52:18.0153444Z   clean: true
+2026-09-30T21:52:18.0153878Z   sparse-checkout-cone-mode: true
+2026-09-30T21:52:18.0154390Z   fetch-depth: 1
+2026-09-30T21:52:18.0154849Z   fetch-tags: false
+2026-09-30T21:52:18.0155281Z   show-progress: true
+2026-09-30T21:52:18.0155725Z   lfs: false
+2026-09-30T21:52:18.0156119Z   submodules: false
+2026-09-30T21:52:18.0156577Z   set-safe-directory: true
+2026-09-30T21:52:18.0157367Z ##[endgroup]
+2026-09-30T21:52:18.1350959Z Syncing repository: eddyflores100-lang/alethech
+2026-09-30T21:52:18.1353270Z ##[group]Getting Git version info
+2026-09-30T21:52:18.1354487Z Working directory is '/home/runner/work/alethech/alethech'
+2026-09-30T21:52:18.1356183Z [command]/usr/bin/git version
+2026-09-30T21:52:18.1458040Z git version 2.55.0
+2026-09-30T21:52:18.1512176Z ##[endgroup]
+2026-09-30T21:52:18.1527397Z Temporarily overriding HOME='/home/runner/work/_temp/2aa37403-6a2e-4e47-b3ff-2dd0f9b6dd48' before making global git config changes
+2026-09-30T21:52:18.1530563Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T21:52:18.1534891Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T21:52:18.1587188Z Deleting the contents of '/home/runner/work/alethech/alethech'
+2026-09-30T21:52:18.1592360Z ##[group]Initializing the repository
+2026-09-30T21:52:18.1598076Z [command]/usr/bin/git init /home/runner/work/alethech/alethech
+2026-09-30T21:52:18.1719347Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-30T21:52:18.1728450Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-30T21:52:18.1730602Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-30T21:52:18.1732215Z hint: call:
+2026-09-30T21:52:18.1733339Z hint:
+2026-09-30T21:52:18.1734825Z hint: 	git config --global init.defaultBranch <name>
+2026-09-30T21:52:18.1736187Z hint:
+2026-09-30T21:52:18.1737458Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-30T21:52:18.1839893Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-30T21:52:18.1841493Z hint:
+2026-09-30T21:52:18.1842368Z hint: 	git branch -m <name>
+2026-09-30T21:52:18.1843284Z hint:
+2026-09-30T21:52:18.1844411Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-30T21:52:18.1846418Z Initialized empty Git repository in /home/runner/work/alethech/alethech/.git/
+2026-09-30T21:52:18.1849989Z [command]/usr/bin/git remote add origin https://github.com/eddyflores100-lang/alethech
+2026-09-30T21:52:18.1852962Z ##[endgroup]
+2026-09-30T21:52:18.1854274Z ##[group]Disabling automatic garbage collection
+2026-09-30T21:52:18.1855430Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-30T21:52:18.1858315Z ##[endgroup]
+2026-09-30T21:52:18.1859812Z ##[group]Setting up auth
+2026-09-30T21:52:18.1861171Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T21:52:18.1891722Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T21:52:18.2281307Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T21:52:18.2323694Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T21:52:18.2555404Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-30T21:52:18.2596591Z ##[endgroup]
+2026-09-30T21:52:18.2597942Z ##[group]Fetching the repository
+2026-09-30T21:52:18.2607463Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8ecc4ed05146392486f5b795a9c1cf2f9e705953:refs/remotes/origin/main
+2026-09-30T21:52:18.6344534Z From https://github.com/eddyflores100-lang/alethech
+2026-09-30T21:52:18.6347216Z  * [new ref]         8ecc4ed05146392486f5b795a9c1cf2f9e705953 -> origin/main
+2026-09-30T21:52:18.6354800Z ##[endgroup]
+2026-09-30T21:52:18.6357584Z ##[group]Determining the checkout info
+2026-09-30T21:52:18.6361120Z ##[endgroup]
+2026-09-30T21:52:18.6363198Z [command]/usr/bin/git sparse-checkout disable
+2026-09-30T21:52:18.6419744Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-30T21:52:18.6453749Z ##[group]Checking out the ref
+2026-09-30T21:52:18.6458192Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-09-30T21:52:18.6777194Z Switched to a new branch 'main'
+2026-09-30T21:52:18.6783015Z branch 'main' set up to track 'origin/main'.
+2026-09-30T21:52:18.6792497Z ##[endgroup]
+2026-09-30T21:52:18.6841099Z [command]/usr/bin/git log -1 --format=%H
+2026-09-30T21:52:18.6876477Z 8ecc4ed05146392486f5b795a9c1cf2f9e705953
+2026-09-30T21:52:18.7263544Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-09-30T21:52:18.7265229Z with:
+2026-09-30T21:52:18.7266027Z   node-version: 20
+2026-09-30T21:52:18.7266923Z   always-auth: false
+2026-09-30T21:52:18.7267836Z   check-latest: false
+2026-09-30T21:52:18.7278843Z   token: ***
+2026-09-30T21:52:18.7279951Z ##[endgroup]
+2026-09-30T21:52:18.8772130Z Attempting to download 20...
+2026-09-30T21:52:18.8881132Z (node:2302) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T21:52:18.8882447Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T21:52:19.3739803Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-09-30T21:52:20.0798330Z Extracting ...
+2026-09-30T21:52:20.0920476Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/db8dca70-4e75-489f-beee-0bf7b42a2d88 -f /home/runner/work/_temp/9ef40ba7-d3ae-4da1-ba94-f758acc1d82d
+2026-09-30T21:52:21.1292738Z Adding to the cache ...
+2026-09-30T21:52:22.9897617Z ##[group]Environment details
+2026-09-30T21:52:23.2289597Z node: v20.20.2
+2026-09-30T21:52:23.2290633Z npm: 10.8.2
+2026-09-30T21:52:23.2309994Z yarn: 1.22.22
+2026-09-30T21:52:23.2311227Z ##[endgroup]
+2026-09-30T21:52:23.2553133Z ##[group]Run actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+2026-09-30T21:52:23.2553572Z with:
+2026-09-30T21:52:23.2553783Z   python-version: 3.12
+2026-09-30T21:52:23.2554034Z   check-latest: false
+2026-09-30T21:52:23.2556679Z   token: ***
+2026-09-30T21:52:23.2556909Z   update-environment: true
+2026-09-30T21:52:23.2557168Z   allow-prereleases: false
+2026-09-30T21:52:23.2557425Z ##[endgroup]
+2026-09-30T21:52:23.4044249Z ##[group]Installed versions
+2026-09-30T21:52:23.4169512Z (node:2337) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T21:52:23.4171484Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T21:52:23.4172793Z Successfully set up CPython (3.12.14)
+2026-09-30T21:52:23.4173875Z ##[endgroup]
+2026-09-30T21:52:23.4338927Z ##[group]Run pip install -e .
+2026-09-30T21:52:23.4339509Z [36;1mpip install -e .[0m
+2026-09-30T21:52:23.4340056Z [36;1mnpm ci --prefix scripts/browser-tests[0m
+2026-09-30T21:52:23.4340624Z [36;1mcd scripts/browser-tests[0m
+2026-09-30T21:52:23.4341172Z [36;1mnpx playwright install --with-deps chromium[0m
+2026-09-30T21:52:23.4689710Z shell: /usr/bin/bash -e {0}
+2026-09-30T21:52:23.4690253Z env:
+2026-09-30T21:52:23.4690761Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:23.4691648Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T21:52:23.4692453Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:23.4693157Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:23.4693867Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:23.4694587Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T21:52:23.4695245Z ##[endgroup]
+2026-09-30T21:52:24.4358299Z Obtaining file:///home/runner/work/alethech/alethech
+2026-09-30T21:52:24.4376527Z   Installing build dependencies: started
+2026-09-30T21:52:26.1290784Z   Installing build dependencies: finished with status 'done'
+2026-09-30T21:52:26.1316300Z   Checking if build backend supports build_editable: started
+2026-09-30T21:52:26.8203428Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-09-30T21:52:26.8212671Z   Getting requirements to build editable: started
+2026-09-30T21:52:27.1683576Z   Getting requirements to build editable: finished with status 'done'
+2026-09-30T21:52:27.1693004Z   Preparing editable metadata (pyproject.toml): started
+2026-09-30T21:52:27.3653658Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-09-30T21:52:27.6463027Z Collecting cryptography>=42.0 (from alethech==0.9.1)
+2026-09-30T21:52:27.7060033Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+2026-09-30T21:52:27.7275694Z Collecting click>=8.0 (from alethech==0.9.1)
+2026-09-30T21:52:27.7350161Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-09-30T21:52:27.8445353Z Collecting cffi>=2.0.0 (from cryptography>=42.0->alethech==0.9.1)
+2026-09-30T21:52:27.8523321Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-09-30T21:52:27.8690739Z Collecting pycparser (from cffi>=2.0.0->cryptography>=42.0->alethech==0.9.1)
+2026-09-30T21:52:27.8762838Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-09-30T21:52:27.8878023Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-09-30T21:52:27.9103536Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+2026-09-30T21:52:28.0240073Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 43.7 MB/s  0:00:00
+2026-09-30T21:52:28.0315815Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-09-30T21:52:28.0427677Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-09-30T21:52:28.0598316Z Building wheels for collected packages: alethech
+2026-09-30T21:52:28.0606482Z   Building editable for alethech (pyproject.toml): started
+2026-09-30T21:52:28.3005386Z   Building editable for alethech (pyproject.toml): finished with status 'done'
+2026-09-30T21:52:28.3013724Z   Created wheel for alethech: filename=alethech-0.9.1-0.editable-py3-none-any.whl size=8964 sha256=140c405c1440d21210f1095f81abc04412c6bfb1f6869d816dacd68b0824a11e
+2026-09-30T21:52:28.3016407Z   Stored in directory: /tmp/pip-ephem-wheel-cache-fx6t37k7/wheels/54/78/de/76f9ae20f73147d6e17ff4620b900a61c2935018b9873a40ed
+2026-09-30T21:52:28.3038768Z Successfully built alethech
+2026-09-30T21:52:28.3219166Z Installing collected packages: pycparser, click, cffi, cryptography, alethech
+2026-09-30T21:52:28.6858208Z 
+2026-09-30T21:52:28.6872941Z Successfully installed alethech-0.9.1 cffi-2.1.1 click-8.5.0 cryptography-50.0.2 pycparser-3.0
+2026-09-30T21:52:29.4053693Z 
+2026-09-30T21:52:29.4054732Z added 2 packages, and audited 3 packages in 589ms
+2026-09-30T21:52:29.4062267Z 
+2026-09-30T21:52:29.4062743Z found 0 vulnerabilities
+2026-09-30T21:52:30.2204383Z Installing dependencies...
+2026-09-30T21:52:30.2307840Z Switching to root user to install dependencies...
+2026-09-30T21:52:30.3390289Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-09-30T21:52:30.3561291Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-09-30T21:52:30.3700638Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-09-30T21:52:30.3740023Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-09-30T21:52:30.3759808Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-09-30T21:52:30.3789256Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-09-30T21:52:30.4402070Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [508 kB]
+2026-09-30T21:52:30.4542314Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [456 kB]
+2026-09-30T21:52:30.5535635Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1338 kB]
+2026-09-30T21:52:30.5626960Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [301 kB]
+2026-09-30T21:52:30.5643500Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
+2026-09-30T21:52:30.5648080Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1699 kB]
+2026-09-30T21:52:30.5733622Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [341 kB]
+2026-09-30T21:52:30.5769808Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+2026-09-30T21:52:30.5800003Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1689 kB]
+2026-09-30T21:52:30.5877474Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [386 kB]
+2026-09-30T21:52:30.5900586Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2026-09-30T21:52:30.6127485Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5760 B]
+2026-09-30T21:52:30.6572661Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+2026-09-30T21:52:30.6663345Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1066 kB]
+2026-09-30T21:52:30.6716555Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [220 kB]
+2026-09-30T21:52:30.6731620Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [46.4 kB]
+2026-09-30T21:52:30.6770412Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1216 kB]
+2026-09-30T21:52:30.6802770Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [244 kB]
+2026-09-30T21:52:30.6819577Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+2026-09-30T21:52:30.6827903Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1566 kB]
+2026-09-30T21:52:30.6955040Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [361 kB]
+2026-09-30T21:52:35.2329832Z Fetched 12.5 MB in 1s (9109 kB/s)
+2026-09-30T21:52:36.1342128Z Reading package lists...
+2026-09-30T21:52:36.1591739Z Reading package lists...
+2026-09-30T21:52:36.3525319Z Building dependency tree...
+2026-09-30T21:52:36.3532626Z Reading state information...
+2026-09-30T21:52:36.5010805Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+2026-09-30T21:52:36.5012034Z libasound2t64 set to manually installed.
+2026-09-30T21:52:36.5013320Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-09-30T21:52:36.5014591Z libatk-bridge2.0-0t64 set to manually installed.
+2026-09-30T21:52:36.5016439Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+2026-09-30T21:52:36.5017531Z libatk1.0-0t64 set to manually installed.
+2026-09-30T21:52:36.5018575Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-09-30T21:52:36.5019816Z libatspi2.0-0t64 set to manually installed.
+2026-09-30T21:52:36.5020778Z libcairo2 is already the newest version (1.18.0-3build1).
+2026-09-30T21:52:36.5021662Z libcairo2 set to manually installed.
+2026-09-30T21:52:36.5022664Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+2026-09-30T21:52:36.5023628Z libcups2t64 set to manually installed.
+2026-09-30T21:52:36.5024601Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+2026-09-30T21:52:36.5025501Z libdbus-1-3 set to manually installed.
+2026-09-30T21:52:36.5026509Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+2026-09-30T21:52:36.5027239Z libdrm2 set to manually installed.
+2026-09-30T21:52:36.5027829Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.9).
+2026-09-30T21:52:36.5028264Z libglib2.0-0t64 set to manually installed.
+2026-09-30T21:52:36.5028938Z libnspr4 is already the newest version (2:4.35-1.1build1).
+2026-09-30T21:52:36.5029365Z libnspr4 set to manually installed.
+2026-09-30T21:52:36.5029827Z libnss3 is already the newest version (2:3.98-1ubuntu0.2).
+2026-09-30T21:52:36.5030291Z libnss3 set to manually installed.
+2026-09-30T21:52:36.5030733Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+2026-09-30T21:52:36.5031172Z libpango-1.0-0 set to manually installed.
+2026-09-30T21:52:36.5031592Z libx11-6 is already the newest version (2:1.8.7-1build1).
+2026-09-30T21:52:36.5031969Z libx11-6 set to manually installed.
+2026-09-30T21:52:36.5032343Z libxcb1 is already the newest version (1.15-1ubuntu2).
+2026-09-30T21:52:36.5032716Z libxcb1 set to manually installed.
+2026-09-30T21:52:36.5033128Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+2026-09-30T21:52:36.5033556Z libxcomposite1 set to manually installed.
+2026-09-30T21:52:36.5033978Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+2026-09-30T21:52:36.5034499Z libxdamage1 set to manually installed.
+2026-09-30T21:52:36.5035131Z libxext6 is already the newest version (2:1.3.4-1build2).
+2026-09-30T21:52:36.5035515Z libxext6 set to manually installed.
+2026-09-30T21:52:36.5035910Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+2026-09-30T21:52:36.5036305Z libxfixes3 set to manually installed.
+2026-09-30T21:52:36.5036711Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+2026-09-30T21:52:36.5037116Z libxkbcommon0 set to manually installed.
+2026-09-30T21:52:36.5037519Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+2026-09-30T21:52:36.5037993Z libxrandr2 set to manually installed.
+2026-09-30T21:52:36.5038426Z xvfb is already the newest version (2:21.1.12-1ubuntu1.8).
+2026-09-30T21:52:36.5039221Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+2026-09-30T21:52:36.5039790Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+2026-09-30T21:52:36.5040206Z libfontconfig1 set to manually installed.
+2026-09-30T21:52:36.5040667Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.1).
+2026-09-30T21:52:36.5041089Z libfreetype6 set to manually installed.
+2026-09-30T21:52:36.5041496Z fonts-liberation is already the newest version (1:2.1.5-3).
+2026-09-30T21:52:36.5041912Z fonts-liberation set to manually installed.
+2026-09-30T21:52:36.5042313Z The following additional packages will be installed:
+2026-09-30T21:52:36.5042779Z   libgl1-mesa-dri libglx-mesa0 libwayland-server0 mesa-libgallium
+2026-09-30T21:52:36.5043181Z   xfonts-encodings xfonts-utils
+2026-09-30T21:52:36.5043451Z Recommended packages:
+2026-09-30T21:52:36.5043724Z   fonts-ipafont-mincho fonts-tlwg-loma
+2026-09-30T21:52:36.5254925Z The following NEW packages will be installed:
+2026-09-30T21:52:36.5255685Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+2026-09-30T21:52:36.5266124Z   fonts-wqy-zenhei libwayland-server0 xfonts-cyrillic xfonts-encodings
+2026-09-30T21:52:36.5288212Z   xfonts-scalable xfonts-utils
+2026-09-30T21:52:36.5289374Z The following packages will be upgraded:
+2026-09-30T21:52:36.5290022Z   libgbm1 libgl1-mesa-dri libglx-mesa0 mesa-libgallium
+2026-09-30T21:52:36.5497215Z 4 upgraded, 10 newly installed, 0 to remove and 19 not upgraded.
+2026-09-30T21:52:36.5497996Z Need to get 32.1 MB of archives.
+2026-09-30T21:52:36.5498979Z After this operation, 79.7 MB of additional disk space will be used.
+2026-09-30T21:52:36.5499657Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-09-30T21:52:36.6522963Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+2026-09-30T21:52:36.8872979Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+2026-09-30T21:52:37.3372918Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+2026-09-30T21:52:37.4286729Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+2026-09-30T21:52:37.7316249Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+2026-09-30T21:52:38.2783506Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.3 [37.9 kB]
+2026-09-30T21:52:38.3607719Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libwayland-server0 amd64 1.22.0-2.1build1 [33.9 kB]
+2026-09-30T21:52:38.4429118Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.3 [110 kB]
+2026-09-30T21:52:38.5317492Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.3 [34.3 kB]
+2026-09-30T21:52:38.6179656Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.3 [10.8 MB]
+2026-09-30T21:52:39.1094004Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+2026-09-30T21:52:39.2142107Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+2026-09-30T21:52:39.3065860Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+2026-09-30T21:52:39.4069372Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+2026-09-30T21:52:39.6680818Z Fetched 32.1 MB in 3s (11.1 MB/s)
+2026-09-30T21:52:39.6913487Z Selecting previously unselected package fonts-ipafont-gothic.
+2026-09-30T21:52:39.7204019Z (Reading database ... 
+2026-09-30T21:52:39.7204662Z (Reading database ... 5%
+2026-09-30T21:52:39.7205083Z (Reading database ... 10%
+2026-09-30T21:52:39.7205452Z (Reading database ... 15%
+2026-09-30T21:52:39.7205798Z (Reading database ... 20%
+2026-09-30T21:52:39.7206209Z (Reading database ... 25%
+2026-09-30T21:52:39.7206558Z (Reading database ... 30%
+2026-09-30T21:52:39.7206876Z (Reading database ... 35%
+2026-09-30T21:52:39.7207228Z (Reading database ... 40%
+2026-09-30T21:52:39.7207563Z (Reading database ... 45%
+2026-09-30T21:52:39.7207905Z (Reading database ... 50%
+2026-09-30T21:52:39.7256748Z (Reading database ... 55%
+2026-09-30T21:52:39.8240914Z (Reading database ... 60%
+2026-09-30T21:52:39.9313484Z (Reading database ... 65%
+2026-09-30T21:52:40.0704857Z (Reading database ... 70%
+2026-09-30T21:52:40.2714049Z (Reading database ... 75%
+2026-09-30T21:52:40.4123673Z (Reading database ... 80%
+2026-09-30T21:52:40.6181434Z (Reading database ... 85%
+2026-09-30T21:52:40.7907499Z (Reading database ... 90%
+2026-09-30T21:52:40.8973048Z (Reading database ... 95%
+2026-09-30T21:52:40.8973912Z (Reading database ... 100%
+2026-09-30T21:52:40.8975192Z (Reading database ... 202296 files and directories currently installed.)
+2026-09-30T21:52:40.9016411Z Preparing to unpack .../00-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+2026-09-30T21:52:40.9107461Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+2026-09-30T21:52:41.1409450Z Selecting previously unselected package fonts-freefont-ttf.
+2026-09-30T21:52:41.1538943Z Preparing to unpack .../01-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+2026-09-30T21:52:41.1548586Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+2026-09-30T21:52:41.2312200Z Selecting previously unselected package fonts-tlwg-loma-otf.
+2026-09-30T21:52:41.2442042Z Preparing to unpack .../02-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+2026-09-30T21:52:41.2448321Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+2026-09-30T21:52:41.2648535Z Selecting previously unselected package fonts-unifont.
+2026-09-30T21:52:41.2789170Z Preparing to unpack .../03-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+2026-09-30T21:52:41.2795759Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+2026-09-30T21:52:41.3850236Z Selecting previously unselected package fonts-wqy-zenhei.
+2026-09-30T21:52:41.3978569Z Preparing to unpack .../04-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+2026-09-30T21:52:41.4080576Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+2026-09-30T21:52:41.8898543Z Preparing to unpack .../05-libgl1-mesa-dri_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+2026-09-30T21:52:41.9042720Z Unpacking libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+2026-09-30T21:52:41.9404161Z Selecting previously unselected package libwayland-server0:amd64.
+2026-09-30T21:52:41.9537585Z Preparing to unpack .../06-libwayland-server0_1.22.0-2.1build1_amd64.deb ...
+2026-09-30T21:52:42.1667497Z Unpacking libwayland-server0:amd64 (1.22.0-2.1build1) ...
+2026-09-30T21:52:42.2432285Z Preparing to unpack .../07-libglx-mesa0_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+2026-09-30T21:52:42.2480819Z Unpacking libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+2026-09-30T21:52:42.2860906Z Preparing to unpack .../08-libgbm1_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+2026-09-30T21:52:42.2887045Z Unpacking libgbm1:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+2026-09-30T21:52:42.3263446Z Preparing to unpack .../09-mesa-libgallium_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+2026-09-30T21:52:42.3288152Z Unpacking mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+2026-09-30T21:52:42.4984944Z Selecting previously unselected package xfonts-encodings.
+2026-09-30T21:52:42.5116670Z Preparing to unpack .../10-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+2026-09-30T21:52:42.5124628Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2026-09-30T21:52:42.5401638Z Selecting previously unselected package xfonts-utils.
+2026-09-30T21:52:42.5532160Z Preparing to unpack .../11-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+2026-09-30T21:52:42.5538974Z Unpacking xfonts-utils (1:7.7+6build3) ...
+2026-09-30T21:52:42.5894546Z Selecting previously unselected package xfonts-cyrillic.
+2026-09-30T21:52:42.6020098Z Preparing to unpack .../12-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+2026-09-30T21:52:42.6027167Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+2026-09-30T21:52:42.6362018Z Selecting previously unselected package xfonts-scalable.
+2026-09-30T21:52:42.6488904Z Preparing to unpack .../13-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+2026-09-30T21:52:42.6495569Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+2026-09-30T21:52:42.6923305Z Setting up libwayland-server0:amd64 (1.22.0-2.1build1) ...
+2026-09-30T21:52:42.6942733Z Setting up mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+2026-09-30T21:52:42.6961555Z Setting up libgbm1:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+2026-09-30T21:52:42.6985676Z Setting up libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+2026-09-30T21:52:42.7056569Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+2026-09-30T21:52:42.7167778Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+2026-09-30T21:52:42.7185233Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+2026-09-30T21:52:42.7201661Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2026-09-30T21:52:42.7219274Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+2026-09-30T21:52:42.7284955Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+2026-09-30T21:52:42.7301257Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+2026-09-30T21:52:42.7320660Z Setting up libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+2026-09-30T21:52:42.7338445Z Setting up xfonts-utils (1:7.7+6build3) ...
+2026-09-30T21:52:42.7377262Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+2026-09-30T21:52:42.7689913Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+2026-09-30T21:52:42.7964311Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-09-30T21:52:42.8298979Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-09-30T21:52:42.8318323Z Not building database; man-db/auto-update is not 'true'.
+2026-09-30T21:52:42.8329752Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+2026-09-30T21:52:43.5692701Z 
+2026-09-30T21:52:43.5693469Z Running kernel seems to be up-to-date.
+2026-09-30T21:52:43.5693844Z 
+2026-09-30T21:52:43.5694101Z No services need to be restarted.
+2026-09-30T21:52:43.5694372Z 
+2026-09-30T21:52:43.5694597Z No containers need to be restarted.
+2026-09-30T21:52:43.5694874Z 
+2026-09-30T21:52:43.5695143Z No user sessions are running outdated binaries.
+2026-09-30T21:52:43.5695476Z 
+2026-09-30T21:52:43.5695924Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-09-30T21:52:44.3935212Z Downloading Chrome for Testing 151.0.7922.34 (playwright chromium v1234) from https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-linux64.zip
+2026-09-30T21:52:45.4543735Z |                                                                                |   0% of 184.3 MiB
+2026-09-30T21:52:45.8195308Z |■■■■■■■■                                                                        |  10% of 184.3 MiB
+2026-09-30T21:52:46.0622613Z |■■■■■■■■■■■■■■■■                                                                |  20% of 184.3 MiB
+2026-09-30T21:52:46.1693516Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 184.3 MiB
+2026-09-30T21:52:46.2751872Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 184.3 MiB
+2026-09-30T21:52:46.3783309Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 184.3 MiB
+2026-09-30T21:52:46.5131292Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 184.3 MiB
+2026-09-30T21:52:46.6276850Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 184.3 MiB
+2026-09-30T21:52:46.7236596Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 184.3 MiB
+2026-09-30T21:52:46.8282167Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 184.3 MiB
+2026-09-30T21:52:46.9259301Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 184.3 MiB
+2026-09-30T21:52:50.7547884Z Chrome for Testing 151.0.7922.34 (playwright chromium v1234) downloaded to /home/runner/.cache/ms-playwright/chromium-1234
+2026-09-30T21:52:50.7552315Z Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+2026-09-30T21:52:51.7995244Z |                                                                                |   0% of 2.3 MiB
+2026-09-30T21:52:51.8109708Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+2026-09-30T21:52:51.8205834Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+2026-09-30T21:52:51.8255268Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+2026-09-30T21:52:51.8282852Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+2026-09-30T21:52:51.8325434Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+2026-09-30T21:52:51.8355023Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+2026-09-30T21:52:51.8390544Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+2026-09-30T21:52:51.8410859Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+2026-09-30T21:52:51.8434550Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+2026-09-30T21:52:51.8456778Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+2026-09-30T21:52:51.9211301Z FFmpeg (playwright ffmpeg v1011) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+2026-09-30T21:52:51.9215465Z Downloading Chrome Headless Shell 151.0.7922.34 (playwright chromium-headless-shell v1234) from https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-headless-shell-linux64.zip
+2026-09-30T21:52:52.9899114Z |                                                                                |   0% of 114.7 MiB
+2026-09-30T21:52:53.1413814Z |■■■■■■■■                                                                        |  10% of 114.7 MiB
+2026-09-30T21:52:53.2197569Z |■■■■■■■■■■■■■■■■                                                                |  20% of 114.7 MiB
+2026-09-30T21:52:53.2858859Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 114.7 MiB
+2026-09-30T21:52:53.3439359Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 114.7 MiB
+2026-09-30T21:52:53.4010448Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 114.7 MiB
+2026-09-30T21:52:53.4587873Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.7 MiB
+2026-09-30T21:52:53.5133603Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.7 MiB
+2026-09-30T21:52:53.5757593Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.7 MiB
+2026-09-30T21:52:53.6297677Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.7 MiB
+2026-09-30T21:52:53.6880000Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.7 MiB
+2026-09-30T21:52:56.2115092Z Chrome Headless Shell 151.0.7922.34 (playwright chromium-headless-shell v1234) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1234
+2026-09-30T21:52:56.2321597Z ##[group]Run cargo install wasm-bindgen-cli --version 0.2.129 --locked
+2026-09-30T21:52:56.2322151Z [36;1mcargo install wasm-bindgen-cli --version 0.2.129 --locked[0m
+2026-09-30T21:52:56.2390293Z shell: /usr/bin/bash -e {0}
+2026-09-30T21:52:56.2390570Z env:
+2026-09-30T21:52:56.2390847Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:56.2391311Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T21:52:56.2391809Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:56.2392223Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:56.2392631Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:52:56.2393041Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T21:52:56.2393386Z ##[endgroup]
+2026-09-30T21:52:57.5394112Z     Updating crates.io index
+2026-09-30T21:52:57.7536382Z  Downloading crates ...
+2026-09-30T21:52:57.8100006Z   Downloaded wasm-bindgen-cli v0.2.129
+2026-09-30T21:52:58.1107994Z   Installing wasm-bindgen-cli v0.2.129
+2026-09-30T21:52:58.1371368Z     Updating crates.io index
+2026-09-30T21:52:58.6806323Z warning: package `yoke-derive v0.8.3` in Cargo.lock is yanked in registry `crates-io`
+2026-09-30T21:52:58.6807559Z   |
+2026-09-30T21:52:58.6808167Z   = help: consider running without --locked
+2026-09-30T21:52:59.1095085Z     Updating crates.io index
+2026-09-30T21:52:59.2458742Z  Downloading crates ...
+2026-09-30T21:52:59.2917638Z   Downloaded mime v0.3.17
+2026-09-30T21:52:59.2935142Z   Downloaded adler2 v2.0.1
+2026-09-30T21:52:59.2947454Z   Downloaded alloc-no-stdlib v2.0.4
+2026-09-30T21:52:59.2964358Z   Downloaded base64 v0.23.1
+2026-09-30T21:52:59.3099097Z   Downloaded once_cell v1.21.4
+2026-09-30T21:52:59.3125589Z   Downloaded autocfg v1.5.1
+2026-09-30T21:52:59.3144333Z   Downloaded brotli-decompressor v5.0.3
+2026-09-30T21:52:59.3205771Z   Downloaded time-core v0.1.9
+2026-09-30T21:52:59.3351528Z   Downloaded alloc-stdlib v0.2.4
+2026-09-30T21:52:59.3365017Z   Downloaded anstream v1.0.0
+2026-09-30T21:52:59.3392034Z   Downloaded anstyle-parse v1.0.0
+2026-09-30T21:52:59.3408116Z   Downloaded smallvec v1.16.2
+2026-09-30T21:52:59.3422210Z   Downloaded sha1_smol v1.0.1
+2026-09-30T21:52:59.3435092Z   Downloaded shlex v2.0.1
+2026-09-30T21:52:59.3448234Z   Downloaded ascii v1.1.0
+2026-09-30T21:52:59.3467569Z   Downloaded crossbeam-deque v0.8.8
+2026-09-30T21:52:59.3533610Z   Downloaded chrono v0.4.45
+2026-09-30T21:52:59.3605957Z   Downloaded icu_locale_core v2.3.0
+2026-09-30T21:52:59.3693632Z   Downloaded bitflags v2.13.2
+2026-09-30T21:52:59.3743141Z   Downloaded chunked_transfer v1.5.0
+2026-09-30T21:52:59.3758146Z   Downloaded serde_json v1.0.151
+2026-09-30T21:52:59.3841304Z   Downloaded heck v0.5.0
+2026-09-30T21:52:59.3856821Z   Downloaded fastrand v2.5.0
+2026-09-30T21:52:59.3870279Z   Downloaded displaydoc v0.2.7
+2026-09-30T21:52:59.3891080Z   Downloaded clap_lex v1.1.1
+2026-09-30T21:52:59.3902515Z   Downloaded rustc-demangle v0.1.28
+2026-09-30T21:52:59.3920039Z   Downloaded defmt-macros v1.1.1
+2026-09-30T21:52:59.3957543Z   Downloaded miniz_oxide v0.9.1
+2026-09-30T21:52:59.3983563Z   Downloaded num-conv v0.2.2
+2026-09-30T21:52:59.3992254Z   Downloaded subtle v2.6.1
+2026-09-30T21:52:59.4004056Z   Downloaded anstyle v1.0.14
+2026-09-30T21:52:59.4018732Z   Downloaded crc32fast v1.5.2
+2026-09-30T21:52:59.4040333Z   Downloaded icu_provider v2.3.1
+2026-09-30T21:52:59.4067108Z   Downloaded bitflags v1.3.2
+2026-09-30T21:52:59.4101903Z   Downloaded clap_builder v4.6.7
+2026-09-30T21:52:59.4167610Z   Downloaded errno v0.3.14
+2026-09-30T21:52:59.4184088Z   Downloaded log v0.4.34
+2026-09-30T21:52:59.4211890Z   Downloaded rouille v3.6.2
+2026-09-30T21:52:59.4253676Z   Downloaded safemem v0.3.3
+2026-09-30T21:52:59.4267252Z   Downloaded http v1.5.0
+2026-09-30T21:52:59.4304785Z   Downloaded num_threads v0.1.7
+2026-09-30T21:52:59.4315521Z   Downloaded utf8parse v0.2.2
+2026-09-30T21:52:59.4326030Z   Downloaded walrus-macro v0.26.0
+2026-09-30T21:52:59.4335236Z   Downloaded fallible-iterator v0.3.0
+2026-09-30T21:52:59.4347548Z   Downloaded getrandom v0.2.17
+2026-09-30T21:52:59.4377987Z   Downloaded indexmap v2.14.2
+2026-09-30T21:52:59.4424443Z   Downloaded serde_core v1.0.229
+2026-09-30T21:52:59.4452848Z   Downloaded utf8_iter v1.0.4
+2026-09-30T21:52:59.4463826Z   Downloaded wasm-bindgen-test-shared v0.2.129
+2026-09-30T21:52:59.4472238Z   Downloaded anstyle-query v1.1.5
+2026-09-30T21:52:59.4484609Z   Downloaded defmt-parser v1.0.0
+2026-09-30T21:52:59.4495715Z   Downloaded semver v1.0.28
+2026-09-30T21:52:59.4520139Z   Downloaded threadpool v1.8.1
+2026-09-30T21:52:59.4529191Z   Downloaded untrusted v0.9.0
+2026-09-30T21:52:59.4548017Z   Downloaded yoke v0.8.3
+2026-09-30T21:52:59.4566906Z   Downloaded zerovec-derive v0.11.6
+2026-09-30T21:52:59.4586552Z   Downloaded litemap v0.8.3
+2026-09-30T21:52:59.4611284Z   Downloaded itoa v1.0.18
+2026-09-30T21:52:59.4626549Z   Downloaded utf8-zero v0.8.1
+2026-09-30T21:52:59.4641349Z   Downloaded wasm-bindgen-shared v0.2.129
+2026-09-30T21:52:59.4654207Z   Downloaded strsim v0.11.1
+2026-09-30T21:52:59.4667888Z   Downloaded crossbeam-utils v0.8.23
+2026-09-30T21:52:59.4696580Z   Downloaded zerofrom v0.1.8
+2026-09-30T21:52:59.4706936Z   Downloaded zerofrom-derive v0.1.8
+2026-09-30T21:52:59.4718444Z   Downloaded stable_deref_trait v1.2.1
+2026-09-30T21:52:59.4727602Z   Downloaded yoke-derive v0.8.3
+2026-09-30T21:52:59.4739419Z   Downloaded num_cpus v1.17.0
+2026-09-30T21:52:59.4773762Z   Downloaded aho-corasick v1.1.5
+2026-09-30T21:52:59.4828568Z   Downloaded zeroize v1.9.0
+2026-09-30T21:52:59.4844989Z   Downloaded simd-adler32 v0.3.10
+2026-09-30T21:52:59.4864314Z   Downloaded synstructure v0.14.0
+2026-09-30T21:52:59.4874581Z   Downloaded twoway v0.1.8
+2026-09-30T21:52:59.4892189Z   Downloaded ppv-lite86 v0.2.21
+2026-09-30T21:52:59.4905413Z   Downloaded base64 v0.13.1
+2026-09-30T21:52:59.4936214Z   Downloaded clap_derive v4.6.7
+2026-09-30T21:52:59.4958852Z   Downloaded idna_adapter v1.2.2
+2026-09-30T21:52:59.4968509Z   Downloaded leb128 v0.2.7
+2026-09-30T21:52:59.4983781Z   Downloaded serde_derive v1.0.229
+2026-09-30T21:52:59.5015411Z   Downloaded shlex v1.3.0
+2026-09-30T21:52:59.5028920Z   Downloaded thiserror v2.0.21
+2026-09-30T21:52:59.5097837Z   Downloaded tinystr v0.8.4
+2026-09-30T21:52:59.5119447Z   Downloaded unicode-ident v1.0.26
+2026-09-30T21:52:59.5147501Z   Downloaded zmij v1.0.23
+2026-09-30T21:52:59.5165794Z   Downloaded defmt v1.1.1
+2026-09-30T21:52:59.5215647Z   Downloaded rustls-pki-types v1.15.1
+2026-09-30T21:52:59.5241853Z   Downloaded thiserror-impl v2.0.21
+2026-09-30T21:52:59.5256805Z   Downloaded writeable v0.6.4
+2026-09-30T21:52:59.5278026Z   Downloaded crossbeam-epoch v0.9.21
+2026-09-30T21:52:59.5303286Z   Downloaded find-msvc-tools v0.1.13
+2026-09-30T21:52:59.5319056Z   Downloaded is_terminal_polyfill v1.70.2
+2026-09-30T21:52:59.5328748Z   Downloaded memchr v2.8.3
+2026-09-30T21:52:59.5385101Z   Downloaded serde v1.0.229
+2026-09-30T21:52:59.5420130Z   Downloaded unicase v2.9.0
+2026-09-30T21:52:59.5435574Z   Downloaded potential_utf v0.1.6
+2026-09-30T21:52:59.5446732Z   Downloaded proc-macro2 v1.0.107
+2026-09-30T21:52:59.5477501Z   Downloaded bytes v1.12.1
+2026-09-30T21:52:59.5514130Z   Downloaded clap v4.6.7
+2026-09-30T21:52:59.5614534Z   Downloaded multipart v0.18.0
+2026-09-30T21:52:59.5649319Z   Downloaded wasm-encoder v0.245.1
+2026-09-30T21:52:59.5687997Z   Downloaded equivalent v1.0.2
+2026-09-30T21:52:59.5698316Z   Downloaded rand_core v0.6.4
+2026-09-30T21:52:59.5712444Z   Downloaded rayon-core v1.13.0
+2026-09-30T21:52:59.5750156Z   Downloaded rustls-webpki v0.103.15
+2026-09-30T21:52:59.5781252Z   Downloaded tempfile v3.27.0
+2026-09-30T21:52:59.5807133Z   Downloaded tiny_http v0.12.0
+2026-09-30T21:52:59.5845796Z   Downloaded rayon v1.12.0
+2026-09-30T21:52:59.5943253Z   Downloaded ureq-proto v0.6.4
+2026-09-30T21:52:59.5987420Z   Downloaded colorchoice v1.0.5
+2026-09-30T21:52:59.5997392Z   Downloaded env_filter v2.0.0
+2026-09-30T21:52:59.6011450Z   Downloaded form_urlencoded v1.2.2
+2026-09-30T21:52:59.6020150Z   Downloaded id-arena v2.3.0
+2026-09-30T21:52:59.6033348Z   Downloaded quick-error v1.2.3
+2026-09-30T21:52:59.6046650Z   Downloaded flate2 v1.1.10
+2026-09-30T21:52:59.6096863Z   Downloaded powerfmt v0.2.0
+2026-09-30T21:52:59.6108780Z   Downloaded url v2.5.8
+2026-09-30T21:52:59.6135018Z   Downloaded zerotrie v0.2.5
+2026-09-30T21:52:59.6176114Z   Downloaded deranged v0.5.8
+2026-09-30T21:52:59.6190397Z   Downloaded either v1.18.0
+2026-09-30T21:52:59.6205576Z   Downloaded cfg-if v1.0.5
+2026-09-30T21:52:59.6218937Z   Downloaded ureq v3.4.2
+2026-09-30T21:52:59.6276924Z   Downloaded zerovec v0.11.8
+2026-09-30T21:52:59.6337838Z   Downloaded percent-encoding v2.3.2
+2026-09-30T21:52:59.6346848Z   Downloaded anyhow v1.0.104
+2026-09-30T21:52:59.6388298Z   Downloaded iana-time-zone v0.1.65
+2026-09-30T21:52:59.6417746Z   Downloaded regex v1.13.1
+2026-09-30T21:52:59.6471777Z   Downloaded httparse v1.10.1
+2026-09-30T21:52:59.6497070Z   Downloaded zlib-rs v0.6.8
+2026-09-30T21:52:59.6552515Z   Downloaded httpdate v1.0.3
+2026-09-30T21:52:59.6565551Z   Downloaded jiff-core v0.1.1
+2026-09-30T21:52:59.6601317Z   Downloaded rand_chacha v0.3.1
+2026-09-30T21:52:59.6612958Z   Downloaded walrus v0.27.2
+2026-09-30T21:52:59.6674981Z   Downloaded icu_normalizer_data v2.3.0
+2026-09-30T21:52:59.6696357Z   Downloaded wasm-bindgen-cli-support v0.2.129
+2026-09-30T21:52:59.6763198Z   Downloaded webpki-roots v1.0.9
+2026-09-30T21:52:59.6793886Z   Downloaded idna v1.1.0
+2026-09-30T21:52:59.6828810Z   Downloaded mime_guess v2.0.5
+2026-09-30T21:52:59.6846320Z   Downloaded quote v1.0.47
+2026-09-30T21:52:59.6885820Z   Downloaded zerocopy v0.8.58
+2026-09-30T21:52:59.7115537Z   Downloaded base64 v0.22.1
+2026-09-30T21:52:59.7154565Z   Downloaded buf_redux v0.8.4
+2026-09-30T21:52:59.7170960Z   Downloaded cc v1.4.7
+2026-09-30T21:52:59.7201799Z   Downloaded env_logger v0.11.11
+2026-09-30T21:52:59.7224488Z   Downloaded foldhash v0.2.0
+2026-09-30T21:52:59.7236899Z   Downloaded hashbrown v0.16.1
+2026-09-30T21:52:59.7288554Z   Downloaded time v0.3.55
+2026-09-30T21:52:59.7439348Z   Downloaded wasmparser v0.245.1
+2026-09-30T21:52:59.7519805Z   Downloaded hashbrown v0.17.1
+2026-09-30T21:52:59.7572999Z   Downloaded syn v2.0.119
+2026-09-30T21:52:59.7680884Z   Downloaded syn v3.0.6
+2026-09-30T21:52:59.7789434Z   Downloaded icu_properties v2.3.0
+2026-09-30T21:52:59.7821393Z   Downloaded rand v0.8.8
+2026-09-30T21:52:59.7855498Z   Downloaded regex-syntax v0.8.11
+2026-09-30T21:52:59.7923599Z   Downloaded icu_properties_data v2.3.0
+2026-09-30T21:52:59.8036376Z   Downloaded rustls v0.23.45
+2026-09-30T21:52:59.8156640Z   Downloaded icu_collections v2.3.0
+2026-09-30T21:52:59.8220198Z   Downloaded rustix v1.1.5
+2026-09-30T21:52:59.8498294Z   Downloaded regex-automata v0.4.18
+2026-09-30T21:52:59.8639316Z   Downloaded gimli v0.32.3
+2026-09-30T21:52:59.8709369Z   Downloaded icu_normalizer v2.3.0
+2026-09-30T21:52:59.8805327Z   Downloaded jiff v0.2.37
+2026-09-30T21:52:59.8955570Z   Downloaded getrandom v0.4.3
+2026-09-30T21:52:59.8994051Z   Downloaded filetime v0.2.29
+2026-09-30T21:52:59.9011520Z   Downloaded num-traits v0.2.19
+2026-09-30T21:52:59.9037863Z   Downloaded ring v0.17.14
+2026-09-30T21:52:59.9486337Z   Downloaded leb128fmt v0.1.0
+2026-09-30T21:52:59.9496143Z   Downloaded libc v0.2.189
+2026-09-30T21:52:59.9950452Z   Downloaded linux-raw-sys v0.12.1
+2026-09-30T21:53:00.1362034Z    Compiling proc-macro2 v1.0.107
+2026-09-30T21:53:00.1362724Z    Compiling quote v1.0.47
+2026-09-30T21:53:00.1363588Z    Compiling unicode-ident v1.0.26
+2026-09-30T21:53:00.1364230Z    Compiling libc v0.2.189
+2026-09-30T21:53:02.5326490Z    Compiling stable_deref_trait v1.2.1
+2026-09-30T21:53:02.6155061Z    Compiling cfg-if v1.0.5
+2026-09-30T21:53:02.6430078Z    Compiling serde_core v1.0.229
+2026-09-30T21:53:04.1124404Z    Compiling memchr v2.8.3
+2026-09-30T21:53:04.1480023Z    Compiling log v0.4.34
+2026-09-30T21:53:05.2520043Z    Compiling getrandom v0.2.17
+2026-09-30T21:53:05.3199514Z    Compiling syn v3.0.6
+2026-09-30T21:53:05.4540022Z    Compiling crossbeam-utils v0.8.23
+2026-09-30T21:53:05.5031100Z    Compiling crossbeam-epoch v0.9.21
+2026-09-30T21:53:05.6092995Z    Compiling writeable v0.6.4
+2026-09-30T21:53:05.6299341Z    Compiling litemap v0.8.3
+2026-09-30T21:53:05.8021441Z    Compiling find-msvc-tools v0.1.13
+2026-09-30T21:53:05.8790124Z    Compiling shlex v2.0.1
+2026-09-30T21:53:05.9920482Z    Compiling cc v1.4.7
+2026-09-30T21:53:06.6630638Z    Compiling icu_properties_data v2.3.0
+2026-09-30T21:53:06.7480179Z    Compiling icu_normalizer_data v2.3.0
+2026-09-30T21:53:06.8410891Z    Compiling utf8_iter v1.0.4
+2026-09-30T21:53:06.9570327Z    Compiling zerocopy v0.8.58
+2026-09-30T21:53:07.1879901Z    Compiling bitflags v2.13.2
+2026-09-30T21:53:07.3030737Z    Compiling crossbeam-deque v0.8.8
+2026-09-30T21:53:07.4769930Z    Compiling ring v0.17.14
+2026-09-30T21:53:07.5530027Z    Compiling itoa v1.0.18
+2026-09-30T21:53:07.8040311Z    Compiling serde v1.0.229
+2026-09-30T21:53:07.8239750Z    Compiling rayon-core v1.13.0
+2026-09-30T21:53:07.8724189Z    Compiling httparse v1.10.1
+2026-09-30T21:53:08.1912715Z    Compiling getrandom v0.4.3
+2026-09-30T21:53:08.3079779Z    Compiling zmij v1.0.23
+2026-09-30T21:53:08.4398165Z    Compiling rustix v1.1.5
+2026-09-30T21:53:08.6599961Z    Compiling smallvec v1.16.2
+2026-09-30T21:53:08.8769921Z    Compiling synstructure v0.14.0
+2026-09-30T21:53:09.4130242Z    Compiling unicase v2.9.0
+2026-09-30T21:53:09.5540007Z    Compiling zeroize v1.9.0
+2026-09-30T21:53:09.7890300Z    Compiling equivalent v1.0.2
+2026-09-30T21:53:09.8319993Z    Compiling once_cell v1.21.4
+2026-09-30T21:53:10.0390062Z    Compiling autocfg v1.5.1
+2026-09-30T21:53:10.3559965Z    Compiling heck v0.5.0
+2026-09-30T21:53:10.5120214Z    Compiling hashbrown v0.17.1
+2026-09-30T21:53:10.6630152Z    Compiling zerofrom-derive v0.1.8
+2026-09-30T21:53:11.5120143Z    Compiling yoke-derive v0.8.3
+2026-09-30T21:53:12.1189919Z    Compiling zerofrom v0.1.8
+2026-09-30T21:53:12.2239864Z    Compiling zerovec-derive v0.11.6
+2026-09-30T21:53:12.7311135Z    Compiling displaydoc v0.2.7
+2026-09-30T21:53:12.7439934Z    Compiling yoke v0.8.3
+2026-09-30T21:53:12.9240158Z    Compiling serde_derive v1.0.229
+2026-09-30T21:53:13.2360788Z    Compiling zerovec v0.11.8
+2026-09-30T21:53:13.2780039Z    Compiling zerotrie v0.2.5
+2026-09-30T21:53:13.7509785Z    Compiling utf8parse v0.2.2
+2026-09-30T21:53:13.8048556Z    Compiling anstyle-parse v1.0.0
+2026-09-30T21:53:13.9020383Z    Compiling tinystr v0.8.4
+2026-09-30T21:53:13.9620410Z    Compiling potential_utf v0.1.6
+2026-09-30T21:53:14.0738596Z    Compiling icu_locale_core v2.3.0
+2026-09-30T21:53:14.0933404Z    Compiling icu_collections v2.3.0
+2026-09-30T21:53:14.8420111Z    Compiling ppv-lite86 v0.2.21
+2026-09-30T21:53:15.2850172Z    Compiling icu_provider v2.3.1
+2026-09-30T21:53:15.8760481Z    Compiling icu_properties v2.3.0
+2026-09-30T21:53:16.5049934Z    Compiling icu_normalizer v2.3.0
+2026-09-30T21:53:17.3829329Z    Compiling indexmap v2.14.2
+2026-09-30T21:53:17.6940067Z    Compiling num-traits v0.2.19
+2026-09-30T21:53:17.7809978Z    Compiling rustls-pki-types v1.15.1
+2026-09-30T21:53:17.8650316Z    Compiling mime_guess v2.0.5
+2026-09-30T21:53:18.3070218Z    Compiling rand_core v0.6.4
+2026-09-30T21:53:18.5010062Z    Compiling aho-corasick v1.1.5
+2026-09-30T21:53:18.6970283Z    Compiling percent-encoding v2.3.2
+2026-09-30T21:53:18.7239950Z    Compiling anstyle v1.0.14
+2026-09-30T21:53:18.9100429Z    Compiling anstyle-query v1.1.5
+2026-09-30T21:53:18.9360518Z    Compiling colorchoice v1.0.5
+2026-09-30T21:53:18.9649956Z    Compiling untrusted v0.9.0
+2026-09-30T21:53:18.9909921Z    Compiling anyhow v1.0.104
+2026-09-30T21:53:19.0379975Z    Compiling crc32fast v1.5.2
+2026-09-30T21:53:19.1590025Z    Compiling serde_json v1.0.151
+2026-09-30T21:53:19.1723131Z    Compiling foldhash v0.2.0
+2026-09-30T21:53:19.2540390Z    Compiling either v1.18.0
+2026-09-30T21:53:19.3630580Z    Compiling is_terminal_polyfill v1.70.2
+2026-09-30T21:53:19.4043858Z    Compiling regex-syntax v0.8.11
+2026-09-30T21:53:19.4469336Z    Compiling linux-raw-sys v0.12.1
+2026-09-30T21:53:19.8192653Z    Compiling rayon v1.12.0
+2026-09-30T21:53:22.7430711Z    Compiling regex-automata v0.4.18
+2026-09-30T21:53:23.1590299Z    Compiling anstream v1.0.0
+2026-09-30T21:53:23.6719974Z    Compiling hashbrown v0.16.1
+2026-09-30T21:53:25.3259881Z    Compiling rand_chacha v0.3.1
+2026-09-30T21:53:26.7320008Z    Compiling idna_adapter v1.2.2
+2026-09-30T21:53:26.8140209Z    Compiling syn v2.0.119
+2026-09-30T21:53:27.2100235Z    Compiling rustls v0.23.45
+2026-09-30T21:53:27.2960636Z    Compiling mime v0.3.17
+2026-09-30T21:53:27.7650014Z    Compiling alloc-no-stdlib v2.0.4
+2026-09-30T21:53:27.8429987Z    Compiling adler2 v2.0.1
+2026-09-30T21:53:27.9370454Z    Compiling bytes v1.12.1
+2026-09-30T21:53:28.8070477Z    Compiling fallible-iterator v0.3.0
+2026-09-30T21:53:29.1490390Z    Compiling fastrand v2.5.0
+2026-09-30T21:53:29.6019940Z    Compiling wasm-bindgen-shared v0.2.129
+2026-09-30T21:53:29.7070111Z    Compiling safemem v0.3.3
+2026-09-30T21:53:29.7389952Z    Compiling simd-adler32 v0.3.10
+2026-09-30T21:53:29.7579030Z    Compiling leb128fmt v0.1.0
+2026-09-30T21:53:29.8670535Z    Compiling semver v1.0.28
+2026-09-30T21:53:30.1440097Z    Compiling wasmparser v0.245.1
+2026-09-30T21:53:30.4740733Z    Compiling miniz_oxide v0.9.1
+2026-09-30T21:53:30.8060132Z    Compiling wasm-encoder v0.245.1
+2026-09-30T21:53:32.3400462Z    Compiling buf_redux v0.8.4
+2026-09-30T21:53:32.6491336Z    Compiling walrus-macro v0.26.0
+2026-09-30T21:53:34.0720050Z    Compiling tempfile v3.27.0
+2026-09-30T21:53:34.4580327Z    Compiling gimli v0.32.3
+2026-09-30T21:53:34.9749860Z    Compiling http v1.5.0
+2026-09-30T21:53:36.4460561Z    Compiling alloc-stdlib v0.2.4
+2026-09-30T21:53:36.5590443Z    Compiling idna v1.1.0
+2026-09-30T21:53:37.9600533Z    Compiling rustls-webpki v0.103.15
+2026-09-30T21:53:40.6160189Z    Compiling rand v0.8.8
+2026-09-30T21:53:40.8080469Z    Compiling regex v1.13.1
+2026-09-30T21:53:42.0082143Z    Compiling id-arena v2.3.0
+2026-09-30T21:53:42.1660098Z    Compiling form_urlencoded v1.2.2
+2026-09-30T21:53:42.2659978Z    Compiling num_cpus v1.17.0
+2026-09-30T21:53:42.3420516Z    Compiling twoway v0.1.8
+2026-09-30T21:53:42.4262368Z    Compiling ascii v1.1.0
+2026-09-30T21:53:42.5420286Z    Compiling strsim v0.11.1
+2026-09-30T21:53:42.9249998Z    Compiling deranged v0.5.8
+2026-09-30T21:53:43.1843677Z    Compiling clap_lex v1.1.1
+2026-09-30T21:53:43.3830010Z    Compiling httpdate v1.0.3
+2026-09-30T21:53:43.4790169Z    Compiling num-conv v0.2.2
+2026-09-30T21:53:43.6020216Z    Compiling time-core v0.1.9
+2026-09-30T21:53:43.7420600Z    Compiling subtle v2.6.1
+2026-09-30T21:53:43.7711210Z    Compiling jiff-core v0.1.1
+2026-09-30T21:53:43.8510472Z    Compiling powerfmt v0.2.0
+2026-09-30T21:53:44.0530317Z    Compiling num_threads v0.1.7
+2026-09-30T21:53:44.2055849Z    Compiling iana-time-zone v0.1.65
+2026-09-30T21:53:44.2169751Z    Compiling leb128 v0.2.7
+2026-09-30T21:53:44.2859888Z    Compiling base64 v0.23.1
+2026-09-30T21:53:44.6270499Z    Compiling quick-error v1.2.3
+2026-09-30T21:53:44.6787731Z    Compiling chunked_transfer v1.5.0
+2026-09-30T21:53:44.7788396Z    Compiling tiny_http v0.12.0
+2026-09-30T21:53:44.8500099Z    Compiling jiff v0.2.37
+2026-09-30T21:53:45.9690026Z    Compiling multipart v0.18.0
+2026-09-30T21:53:47.2089909Z    Compiling ureq-proto v0.6.4
+2026-09-30T21:53:49.8330395Z    Compiling chrono v0.4.45
+2026-09-30T21:53:50.5200591Z    Compiling walrus v0.27.2
+2026-09-30T21:53:53.8270296Z    Compiling time v0.3.55
+2026-09-30T21:53:54.6910307Z    Compiling clap_builder v4.6.7
+2026-09-30T21:54:03.7799999Z    Compiling threadpool v1.8.1
+2026-09-30T21:54:04.7289975Z    Compiling url v2.5.8
+2026-09-30T21:54:07.4270395Z    Compiling flate2 v1.1.10
+2026-09-30T21:54:07.4570121Z    Compiling env_filter v2.0.0
+2026-09-30T21:54:07.9390309Z    Compiling brotli-decompressor v5.0.3
+2026-09-30T21:54:08.4180021Z    Compiling webpki-roots v1.0.9
+2026-09-30T21:54:08.4920329Z    Compiling clap_derive v4.6.7
+2026-09-30T21:54:10.1191567Z    Compiling filetime v0.2.29
+2026-09-30T21:54:10.2959886Z    Compiling utf8-zero v0.8.1
+2026-09-30T21:54:10.4230203Z    Compiling base64 v0.13.1
+2026-09-30T21:54:10.7050308Z    Compiling rustc-demangle v0.1.28
+2026-09-30T21:54:11.8169910Z    Compiling sha1_smol v1.0.1
+2026-09-30T21:54:12.0929931Z    Compiling base64 v0.22.1
+2026-09-30T21:54:12.5790058Z    Compiling wasm-bindgen-cli-support v0.2.129
+2026-09-30T21:54:14.7289957Z    Compiling rouille v3.6.2
+2026-09-30T21:54:17.4049808Z    Compiling ureq v3.4.2
+2026-09-30T21:54:18.8830370Z    Compiling clap v4.6.7
+2026-09-30T21:54:18.9220214Z    Compiling env_logger v0.11.11
+2026-09-30T21:54:19.9540242Z    Compiling wasm-bindgen-test-shared v0.2.129
+2026-09-30T21:54:20.1050026Z    Compiling shlex v1.3.0
+2026-09-30T21:54:20.3380134Z    Compiling wasm-bindgen-cli v0.2.129
+2026-09-30T21:54:34.3894090Z     Finished `release` profile [optimized] target(s) in 1m 37s
+2026-09-30T21:54:34.3926236Z warning: the following packages contain code that will be rejected by a future version of Rust: buf_redux v0.8.4, multipart v0.18.0
+2026-09-30T21:54:34.3927761Z note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+2026-09-30T21:54:34.4058773Z   Installing /home/runner/.cargo/bin/wasm-bindgen
+2026-09-30T21:54:34.4059818Z   Installing /home/runner/.cargo/bin/wasm-bindgen-test-runner
+2026-09-30T21:54:34.4060668Z   Installing /home/runner/.cargo/bin/wasm2es6js
+2026-09-30T21:54:34.4064464Z    Installed package `wasm-bindgen-cli v0.2.129` (executables `wasm-bindgen`, `wasm-bindgen-test-runner`, `wasm2es6js`)
+2026-09-30T21:54:34.5902735Z ##[group]Run bash scripts/build_extension.sh
+2026-09-30T21:54:34.5903314Z [36;1mbash scripts/build_extension.sh[0m
+2026-09-30T21:54:34.5967764Z shell: /usr/bin/bash -e {0}
+2026-09-30T21:54:34.5968020Z env:
+2026-09-30T21:54:34.5968293Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:34.5969064Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T21:54:34.5969536Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:34.5969955Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:34.5970358Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:34.5970766Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T21:54:34.5971113Z ##[endgroup]
+2026-09-30T21:54:34.6757292Z info: downloading component rust-std
+2026-09-30T21:54:36.7016450Z     Updating crates.io index
+2026-09-30T21:54:36.8213115Z      Locking 54 packages to latest compatible versions
+2026-09-30T21:54:36.8216197Z       Adding aes-gcm v0.10.3 (available: v0.11.1)
+2026-09-30T21:54:36.8240783Z       Adding generic-array v0.14.7 (available: v0.14.9)
+2026-09-30T21:54:36.8250035Z       Adding getrandom v0.2.17 (available: v0.4.3)
+2026-09-30T21:54:36.8252675Z       Adding hkdf v0.12.4 (available: v0.13.0)
+2026-09-30T21:54:36.8287265Z       Adding scrypt v0.11.0 (available: v0.12.0)
+2026-09-30T21:54:36.8336386Z       Adding sha2 v0.10.9 (available: v0.11.0)
+2026-09-30T21:54:36.8475266Z  Downloading crates ...
+2026-09-30T21:54:36.9530506Z   Downloaded inout v0.1.4
+2026-09-30T21:54:36.9545743Z   Downloaded aead v0.5.2
+2026-09-30T21:54:36.9589619Z   Downloaded pbkdf2 v0.12.2
+2026-09-30T21:54:36.9605785Z   Downloaded block-buffer v0.10.4
+2026-09-30T21:54:36.9631327Z   Downloaded aes-gcm v0.10.3
+2026-09-30T21:54:36.9662923Z   Downloaded sha2 v0.10.9
+2026-09-30T21:54:36.9706467Z   Downloaded universal-hash v0.5.1
+2026-09-30T21:54:36.9716720Z   Downloaded aes v0.8.4
+2026-09-30T21:54:36.9753635Z   Downloaded polyval v0.6.2
+2026-09-30T21:54:36.9771633Z   Downloaded cipher v0.4.4
+2026-09-30T21:54:36.9790279Z   Downloaded futures-task v0.3.34
+2026-09-30T21:54:36.9803047Z   Downloaded ghash v0.5.1
+2026-09-30T21:54:36.9814299Z   Downloaded scrypt v0.11.0
+2026-09-30T21:54:36.9830182Z   Downloaded futures-core v0.3.34
+2026-09-30T21:54:36.9846600Z   Downloaded wasm-bindgen-macro v0.2.129
+2026-09-30T21:54:36.9859550Z   Downloaded bumpalo v3.20.3
+2026-09-30T21:54:36.9887245Z   Downloaded ctr v0.9.2
+2026-09-30T21:54:36.9908518Z   Downloaded digest v0.10.7
+2026-09-30T21:54:36.9926491Z   Downloaded slab v0.4.12
+2026-09-30T21:54:36.9939771Z   Downloaded version_check v0.9.5
+2026-09-30T21:54:36.9952540Z   Downloaded pin-project-lite v0.2.17
+2026-09-30T21:54:37.0012858Z   Downloaded crypto-common v0.1.7
+2026-09-30T21:54:37.0022343Z   Downloaded generic-array v0.14.7
+2026-09-30T21:54:37.0036436Z   Downloaded opaque-debug v0.3.1
+2026-09-30T21:54:37.0046280Z   Downloaded js-sys v0.3.106
+2026-09-30T21:54:37.0076738Z   Downloaded hmac v0.12.1
+2026-09-30T21:54:37.0096577Z   Downloaded salsa20 v0.10.2
+2026-09-30T21:54:37.0108851Z   Downloaded typenum v1.20.1
+2026-09-30T21:54:37.0144289Z   Downloaded futures-util v0.3.34
+2026-09-30T21:54:37.0281062Z   Downloaded cpufeatures v0.2.17
+2026-09-30T21:54:37.0295190Z   Downloaded hkdf v0.12.4
+2026-09-30T21:54:37.0319121Z   Downloaded wasm-bindgen v0.2.129
+2026-09-30T21:54:37.0346956Z   Downloaded wasm-bindgen-macro-support v0.2.129
+2026-09-30T21:54:37.0371734Z   Downloaded rustversion v1.0.23
+2026-09-30T21:54:37.0515825Z   Downloaded base64ct v1.8.3
+2026-09-30T21:54:37.0781319Z    Compiling wasm-bindgen-shared v0.2.129
+2026-09-30T21:54:37.0791815Z    Compiling unicode-ident v1.0.26
+2026-09-30T21:54:37.0792545Z    Compiling proc-macro2 v1.0.107
+2026-09-30T21:54:37.0802163Z    Compiling quote v1.0.47
+2026-09-30T21:54:37.1389204Z    Compiling rustversion v1.0.23
+2026-09-30T21:54:37.2352284Z    Compiling bumpalo v3.20.3
+2026-09-30T21:54:37.4280814Z    Compiling version_check v0.9.5
+2026-09-30T21:54:37.6471378Z    Compiling generic-array v0.14.7
+2026-09-30T21:54:37.6498826Z    Compiling wasm-bindgen v0.2.129
+2026-09-30T21:54:37.7630902Z    Compiling pin-project-lite v0.2.17
+2026-09-30T21:54:37.8017195Z    Compiling cfg-if v1.0.5
+2026-09-30T21:54:37.8350075Z    Compiling futures-core v0.3.34
+2026-09-30T21:54:37.8554673Z    Compiling futures-task v0.3.34
+2026-09-30T21:54:37.9107132Z    Compiling syn v3.0.6
+2026-09-30T21:54:38.0600255Z    Compiling slab v0.4.12
+2026-09-30T21:54:38.0653530Z    Compiling once_cell v1.21.4
+2026-09-30T21:54:38.1430024Z    Compiling typenum v1.20.1
+2026-09-30T21:54:38.2089933Z    Compiling futures-util v0.3.34
+2026-09-30T21:54:38.3610027Z    Compiling subtle v2.6.1
+2026-09-30T21:54:38.4589987Z    Compiling opaque-debug v0.3.1
+2026-09-30T21:54:38.4919973Z    Compiling zmij v1.0.23
+2026-09-30T21:54:38.6390066Z    Compiling serde_core v1.0.229
+2026-09-30T21:54:38.8393266Z    Compiling serde_json v1.0.151
+2026-09-30T21:54:39.5807625Z    Compiling inout v0.1.4
+2026-09-30T21:54:39.6620515Z    Compiling block-buffer v0.10.4
+2026-09-30T21:54:39.7449924Z    Compiling itoa v1.0.18
+2026-09-30T21:54:39.9370023Z    Compiling memchr v2.8.3
+2026-09-30T21:54:40.2340073Z    Compiling base64ct v1.8.3
+2026-09-30T21:54:40.9375970Z    Compiling wasm-bindgen-macro-support v0.2.129
+2026-09-30T21:54:43.7557548Z    Compiling wasm-bindgen-macro v0.2.129
+2026-09-30T21:54:44.8901043Z    Compiling js-sys v0.3.106
+2026-09-30T21:54:52.0543291Z    Compiling getrandom v0.2.17
+2026-09-30T21:54:52.3020037Z    Compiling rand_core v0.6.4
+2026-09-30T21:54:52.4230396Z    Compiling crypto-common v0.1.7
+2026-09-30T21:54:52.5060152Z    Compiling digest v0.10.7
+2026-09-30T21:54:52.6919864Z    Compiling cipher v0.4.4
+2026-09-30T21:54:52.7339809Z    Compiling hmac v0.12.1
+2026-09-30T21:54:52.7454887Z    Compiling universal-hash v0.5.1
+2026-09-30T21:54:52.8123197Z    Compiling polyval v0.6.2
+2026-09-30T21:54:52.8250487Z    Compiling pbkdf2 v0.12.2
+2026-09-30T21:54:52.8728558Z    Compiling ctr v0.9.2
+2026-09-30T21:54:52.8939974Z    Compiling salsa20 v0.10.2
+2026-09-30T21:54:52.9510130Z    Compiling ghash v0.5.1
+2026-09-30T21:54:52.9629788Z    Compiling aes v0.8.4
+2026-09-30T21:54:52.9903114Z    Compiling sha2 v0.10.9
+2026-09-30T21:54:53.0052765Z    Compiling aead v0.5.2
+2026-09-30T21:54:53.0109742Z    Compiling hkdf v0.12.4
+2026-09-30T21:54:53.1180233Z    Compiling scrypt v0.11.0
+2026-09-30T21:54:53.1720110Z    Compiling aes-gcm v0.10.3
+2026-09-30T21:54:53.7021134Z    Compiling alethech-wasm v0.1.0 (/home/runner/work/alethech/alethech/alethech-wasm)
+2026-09-30T21:54:54.7468946Z     Finished `release` profile [optimized] target(s) in 18.13s
+2026-09-30T21:54:56.1546403Z 
+2026-09-30T21:54:56.1548139Z   extension/dist/popup.js  94.1kb
+2026-09-30T21:54:56.1548519Z 
+2026-09-30T21:54:56.1549187Z ⚡ Done in 6ms
+2026-09-30T21:54:56.6894911Z 
+2026-09-30T21:54:56.6899853Z   extension/dist/brain.js  14.3kb
+2026-09-30T21:54:56.6900249Z 
+2026-09-30T21:54:56.6900627Z ⚡ Done in 3ms
+2026-09-30T21:54:56.7095948Z Extension built at /home/runner/work/alethech/alethech/extension/dist
+2026-09-30T21:54:56.7144637Z ##[group]Run python scripts/build_standalone.py
+2026-09-30T21:54:56.7145041Z [36;1mpython scripts/build_standalone.py[0m
+2026-09-30T21:54:56.7145944Z [36;1mnpx --yes esbuild@0.25.10 extension/src/chat-page-bridge.ts --bundle --platform=browser --format=iife --global-name=AlethechChatBridge --outfile=extension/dist/chat-page-bridge-test.js[0m
+2026-09-30T21:54:56.7212884Z shell: /usr/bin/bash -e {0}
+2026-09-30T21:54:56.7213154Z env:
+2026-09-30T21:54:56.7213447Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:56.7213940Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T21:54:56.7214431Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:56.7214862Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:56.7215290Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:56.7215726Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T21:54:56.7216304Z ##[endgroup]
+2026-09-30T21:54:57.3016781Z ▲ [WARNING] "import.meta" is not available with the "iife" output format and will be empty [empty-import-meta]
+2026-09-30T21:54:57.3017906Z 
+2026-09-30T21:54:57.3018282Z     extension/dist/vendor/wasm/alethech_wasm.js:566:58:
+2026-09-30T21:54:57.3019456Z       566 │ ...dule_or_path = new URL('alethech_wasm_bg.wasm', import.meta.url);
+2026-09-30T21:54:57.3020016Z           ╵                                                    ~~~~~~~~~~~
+2026-09-30T21:54:57.3020248Z 
+2026-09-30T21:54:57.3020705Z   You need to set the output format to "esm" for "import.meta" to work correctly.
+2026-09-30T21:54:57.3021035Z 
+2026-09-30T21:54:57.3047756Z 1 warning
+2026-09-30T21:54:57.3048313Z 
+2026-09-30T21:54:57.3048948Z   ../../../../../tmp/alethech-standalone-build-i7n190n9/app.js  112.7kb
+2026-09-30T21:54:57.3049287Z 
+2026-09-30T21:54:57.3049478Z ⚡ Done in 8ms
+2026-09-30T21:54:57.3174187Z Offline standalone HTML built at /home/runner/work/alethech/alethech/standalone/dist/alethech.html
+2026-09-30T21:54:57.8486016Z 
+2026-09-30T21:54:57.8486855Z   extension/dist/chat-page-bridge-test.js  8.7kb
+2026-09-30T21:54:57.8487332Z 
+2026-09-30T21:54:57.8487784Z ⚡ Done in 3ms
+2026-09-30T21:54:57.8613235Z ##[group]Run node - <<'JS'
+2026-09-30T21:54:57.8613554Z [36;1mnode - <<'JS'[0m
+2026-09-30T21:54:57.8613782Z [36;1mconst fs=require("fs");[0m
+2026-09-30T21:54:57.8614194Z [36;1mconst m=JSON.parse(fs.readFileSync("extension/dist/manifest.json","utf8"));[0m
+2026-09-30T21:54:57.8614742Z [36;1mif (m.manifest_version !== 3) throw new Error("Manifest V3 required");[0m
+2026-09-30T21:54:57.8615579Z [36;1mif (JSON.stringify([...(m.permissions || [])].sort()) !== JSON.stringify(["activeTab", "scripting"])) throw new Error("Only explicit current-tab capture permissions are allowed");[0m
+2026-09-30T21:54:57.8616503Z [36;1mif ((m.host_permissions || []).length) throw new Error("Extension must not request host permissions");[0m
+2026-09-30T21:54:57.8617227Z [36;1mif (!fs.existsSync("extension/dist/vendor/wasm/alethech_wasm_bg.wasm")) throw new Error("WASM missing");[0m
+2026-09-30T21:54:57.8617972Z [36;1mif (!fs.existsSync("extension/dist/popup.js")) throw new Error("popup bundle missing");[0m
+2026-09-30T21:54:57.8618623Z [36;1mif (!fs.existsSync("extension/dist/brain.js")) throw new Error("brain content script missing");[0m
+2026-09-30T21:54:57.8619502Z [36;1mconst html=fs.readFileSync("extension/dist/popup.html","utf8");[0m
+2026-09-30T21:54:57.8620946Z [36;1mfor (const id of ["provider-mode","generate-request","provider-response","review-writeback","accept-writeback","select-all-memories","clear-memory-selection","new-passphrase","confirm-passphrase","rekey","create-recovery","recovery-code-text","rotate-recovery","recovery-input","recover-new-pass","recover-confirm-pass","recover-btn"]) {[0m
+2026-09-30T21:54:57.8622445Z [36;1m  if (!html.includes(`id="${id}"`)) throw new Error(`provider bridge control missing: ${id}`);[0m
+2026-09-30T21:54:57.8622874Z [36;1m}[0m
+2026-09-30T21:54:57.8623158Z [36;1mconst js=fs.readFileSync("extension/dist/popup.js","utf8");[0m
+2026-09-30T21:54:57.8623773Z [36;1mif (!js.includes("alethech-writeback-proposal")) throw new Error("writeback contract missing from bundle");[0m
+2026-09-30T21:54:57.8624289Z [36;1mJS[0m
+2026-09-30T21:54:57.8689050Z shell: /usr/bin/bash -e {0}
+2026-09-30T21:54:57.8689307Z env:
+2026-09-30T21:54:57.8689574Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:57.8690028Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T21:54:57.8690458Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:57.8690844Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:57.8691230Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T21:54:57.8691622Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T21:54:57.8691962Z ##[endgroup]
+2026-09-30T21:54:57.9045618Z [stdin]:4
+2026-09-30T21:54:57.9047751Z if (JSON.stringify([...(m.permissions || [])].sort()) !== JSON.stringify(["activeTab", "scripting"])) throw new Error("Only explicit current-tab capture permissions are allowed");
+2026-09-30T21:54:57.9049795Z                                                                                                       ^
+2026-09-30T21:54:57.9050161Z 
+2026-09-30T21:54:57.9050516Z Error: Only explicit current-tab capture permissions are allowed
+2026-09-30T21:54:57.9050996Z     at [stdin]:4:109
+2026-09-30T21:54:57.9051396Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-09-30T21:54:57.9051944Z     at node:internal/process/execution:118:14
+2026-09-30T21:54:57.9052679Z     at [stdin]-wrapper:6:24
+2026-09-30T21:54:57.9053462Z     at runScript (node:internal/process/execution:101:62)
+2026-09-30T21:54:57.9054441Z     at evalScript (node:internal/process/execution:133:3)
+2026-09-30T21:54:57.9055325Z     at node:internal/main/eval_stdin:32:5
+2026-09-30T21:54:57.9056261Z     at Socket.<anonymous> (node:internal/process/execution:234:5)
+2026-09-30T21:54:57.9057215Z     at Socket.emit (node:events:536:35)
+2026-09-30T21:54:57.9058086Z     at endReadableNT (node:internal/streams/readable:1698:12)
+2026-09-30T21:54:57.9059158Z 
+2026-09-30T21:54:57.9059394Z Node.js v20.20.2
+2026-09-30T21:54:57.9075598Z ##[error]Process completed with exit code 1.
+2026-09-30T21:54:57.9210321Z Post job cleanup.
+2026-09-30T21:54:58.0065860Z [command]/usr/bin/git version
+2026-09-30T21:54:58.0107354Z git version 2.55.0
+2026-09-30T21:54:58.0177545Z Temporarily overriding HOME='/home/runner/work/_temp/8f8d739d-08fb-47e0-8f60-4c4817a2f056' before making global git config changes
+2026-09-30T21:54:58.0179267Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T21:54:58.0183272Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T21:54:58.0221032Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T21:54:58.0271958Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T21:54:58.0506177Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T21:54:58.0535536Z http.https://github.com/.extraheader
+2026-09-30T21:54:58.0547683Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-30T21:54:58.0583713Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T21:54:58.1150577Z Cleaning up orphan processes
+2026-09-30T21:54:58.1471411Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,358 @@
+﻿2026-09-30T04:38:36.2619246Z Current runner version: '2.337.0'
+2026-09-30T04:38:36.2646931Z ##[group]Runner Image Provisioner
+2026-09-30T04:38:36.2647941Z Hosted Compute Agent
+2026-09-30T04:38:36.2648701Z Version: 20260828.587
+2026-09-30T04:38:36.2649560Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-30T04:38:36.2650469Z Build Date: 2026-08-28T16:44:25Z
+2026-09-30T04:38:36.2651282Z Worker ID: {726cd082-126e-471f-9be4-ed914d31c353}
+2026-09-30T04:38:36.2652206Z Azure Region: eastus
+2026-09-30T04:38:36.2652984Z ##[endgroup]
+2026-09-30T04:38:36.2654706Z ##[group]Operating System
+2026-09-30T04:38:36.2655606Z Ubuntu
+2026-09-30T04:38:36.2656218Z 24.04.5
+2026-09-30T04:38:36.2656928Z LTS
+2026-09-30T04:38:36.2657580Z ##[endgroup]
+2026-09-30T04:38:36.2658332Z ##[group]Runner Image
+2026-09-30T04:38:36.2659074Z Image: ubuntu-24.04
+2026-09-30T04:38:36.2659728Z Version: 20260920.314.1
+2026-09-30T04:38:36.2661378Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-30T04:38:36.2663378Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-30T04:38:36.2664583Z ##[endgroup]
+2026-09-30T04:38:36.2666222Z ##[group]GITHUB_TOKEN Permissions
+2026-09-30T04:38:36.2668220Z Contents: read
+2026-09-30T04:38:36.2669138Z Metadata: read
+2026-09-30T04:38:36.2669803Z ##[endgroup]
+2026-09-30T04:38:36.2672231Z Secret source: Actions
+2026-09-30T04:38:36.2673322Z Cache mode: write
+2026-09-30T04:38:36.2674164Z Prepare workflow directory
+2026-09-30T04:38:36.3039347Z Prepare all required actions
+2026-09-30T04:38:36.3093617Z Getting action download info
+2026-09-30T04:38:36.4831732Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-30T04:38:36.6468452Z Download action repository 'actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2026-09-30T04:38:36.8326776Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-30T04:38:37.0526184Z Complete job name: cross-language conformance
+2026-09-30T04:38:37.1275732Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-30T04:38:37.1276640Z with:
+2026-09-30T04:38:37.1277012Z   repository: eddyflores100-lang/alethech
+2026-09-30T04:38:37.1280020Z   token: ***
+2026-09-30T04:38:37.1280373Z   ssh-strict: true
+2026-09-30T04:38:37.1280728Z   ssh-user: git
+2026-09-30T04:38:37.1281101Z   persist-credentials: true
+2026-09-30T04:38:37.1281491Z   clean: true
+2026-09-30T04:38:37.1281856Z   sparse-checkout-cone-mode: true
+2026-09-30T04:38:37.1282264Z   fetch-depth: 1
+2026-09-30T04:38:37.1282613Z   fetch-tags: false
+2026-09-30T04:38:37.1282969Z   show-progress: true
+2026-09-30T04:38:37.1283325Z   lfs: false
+2026-09-30T04:38:37.1283653Z   submodules: false
+2026-09-30T04:38:37.1284010Z   set-safe-directory: true
+2026-09-30T04:38:37.1284527Z ##[endgroup]
+2026-09-30T04:38:37.2077923Z Syncing repository: eddyflores100-lang/alethech
+2026-09-30T04:38:37.2080062Z ##[group]Getting Git version info
+2026-09-30T04:38:37.2081011Z Working directory is '/home/runner/work/alethech/alethech'
+2026-09-30T04:38:37.2082262Z [command]/usr/bin/git version
+2026-09-30T04:38:37.2112425Z git version 2.55.0
+2026-09-30T04:38:37.2128726Z ##[endgroup]
+2026-09-30T04:38:37.2142212Z Temporarily overriding HOME='/home/runner/work/_temp/d57882fd-00dd-40de-8116-a8867a571123' before making global git config changes
+2026-09-30T04:38:37.2144221Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T04:38:37.2146625Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T04:38:37.2196898Z Deleting the contents of '/home/runner/work/alethech/alethech'
+2026-09-30T04:38:37.2200146Z ##[group]Initializing the repository
+2026-09-30T04:38:37.2204566Z [command]/usr/bin/git init /home/runner/work/alethech/alethech
+2026-09-30T04:38:37.2279863Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-30T04:38:37.2281417Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-30T04:38:37.2282767Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-30T04:38:37.2283838Z hint: call:
+2026-09-30T04:38:37.2284619Z hint:
+2026-09-30T04:38:37.2285685Z hint: 	git config --global init.defaultBranch <name>
+2026-09-30T04:38:37.2286705Z hint:
+2026-09-30T04:38:37.2287601Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-30T04:38:37.2288968Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-30T04:38:37.2290106Z hint:
+2026-09-30T04:38:37.2290745Z hint: 	git branch -m <name>
+2026-09-30T04:38:37.2291517Z hint:
+2026-09-30T04:38:37.2292428Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-30T04:38:37.2294026Z Initialized empty Git repository in /home/runner/work/alethech/alethech/.git/
+2026-09-30T04:38:37.2296766Z [command]/usr/bin/git remote add origin https://github.com/eddyflores100-lang/alethech
+2026-09-30T04:38:37.2347433Z ##[endgroup]
+2026-09-30T04:38:37.2348457Z ##[group]Disabling automatic garbage collection
+2026-09-30T04:38:37.2349373Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-30T04:38:37.2380845Z ##[endgroup]
+2026-09-30T04:38:37.2381508Z ##[group]Setting up auth
+2026-09-30T04:38:37.2382222Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T04:38:37.2405074Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T04:38:37.2758084Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T04:38:37.2807255Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T04:38:37.3056973Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-30T04:38:37.3095020Z ##[endgroup]
+2026-09-30T04:38:37.3095883Z ##[group]Fetching the repository
+2026-09-30T04:38:37.3103218Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +013a62f9b9b35b4474cec7f24b22c3549c4f6140:refs/remotes/pull/8/merge
+2026-09-30T04:38:37.7879657Z From https://github.com/eddyflores100-lang/alethech
+2026-09-30T04:38:37.7882039Z  * [new ref]         013a62f9b9b35b4474cec7f24b22c3549c4f6140 -> pull/8/merge
+2026-09-30T04:38:37.7891714Z ##[endgroup]
+2026-09-30T04:38:37.7892482Z ##[group]Determining the checkout info
+2026-09-30T04:38:37.7893286Z ##[endgroup]
+2026-09-30T04:38:37.7899735Z [command]/usr/bin/git sparse-checkout disable
+2026-09-30T04:38:37.8065874Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-30T04:38:37.8119599Z ##[group]Checking out the ref
+2026-09-30T04:38:37.8123887Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/8/merge
+2026-09-30T04:38:37.8496067Z Note: switching to 'refs/remotes/pull/8/merge'.
+2026-09-30T04:38:37.8496861Z 
+2026-09-30T04:38:37.8497450Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-30T04:38:37.8498684Z changes and commit them, and you can discard any commits you make in this
+2026-09-30T04:38:37.8499684Z state without impacting any branches by switching back to a branch.
+2026-09-30T04:38:37.8500252Z 
+2026-09-30T04:38:37.8500722Z If you want to create a new branch to retain commits you create, you may
+2026-09-30T04:38:37.8501659Z do so (now or later) by using -c with the switch command. Example:
+2026-09-30T04:38:37.8502172Z 
+2026-09-30T04:38:37.8502437Z   git switch -c <new-branch-name>
+2026-09-30T04:38:37.8502805Z 
+2026-09-30T04:38:37.8503063Z Or undo this operation with:
+2026-09-30T04:38:37.8503830Z 
+2026-09-30T04:38:37.8504071Z   git switch -
+2026-09-30T04:38:37.8504381Z 
+2026-09-30T04:38:37.8515447Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-30T04:38:37.8516512Z 
+2026-09-30T04:38:37.8517634Z HEAD is now at 013a62f Merge e4bdc6a50f4f5aa08e72d58c1dae244a929221df into de5e67e4298b8233df005aee8fcceb87f9796ca3
+2026-09-30T04:38:37.8520370Z ##[endgroup]
+2026-09-30T04:38:37.8566209Z [command]/usr/bin/git log -1 --format=%H
+2026-09-30T04:38:37.8590361Z 013a62f9b9b35b4474cec7f24b22c3549c4f6140
+2026-09-30T04:38:37.8856668Z ##[group]Run actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+2026-09-30T04:38:37.8857419Z with:
+2026-09-30T04:38:37.8857855Z   python-version: 3.12
+2026-09-30T04:38:37.8858334Z   check-latest: false
+2026-09-30T04:38:37.8861615Z   token: ***
+2026-09-30T04:38:37.8862070Z   update-environment: true
+2026-09-30T04:38:37.8862569Z   allow-prereleases: false
+2026-09-30T04:38:37.8863082Z ##[endgroup]
+2026-09-30T04:38:37.9978143Z ##[group]Installed versions
+2026-09-30T04:38:38.0063056Z (node:2033) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T04:38:38.0064982Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T04:38:38.0066422Z Successfully set up CPython (3.12.14)
+2026-09-30T04:38:38.0067860Z ##[endgroup]
+2026-09-30T04:38:38.0314026Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-09-30T04:38:38.0314886Z with:
+2026-09-30T04:38:38.0315589Z   node-version: 20
+2026-09-30T04:38:38.0316134Z   always-auth: false
+2026-09-30T04:38:38.0316678Z   check-latest: false
+2026-09-30T04:38:38.0320074Z   token: ***
+2026-09-30T04:38:38.0320592Z env:
+2026-09-30T04:38:38.0321196Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:38.0322104Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:38:38.0322978Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:38.0323811Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:38.0324611Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:38.0326029Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:38:38.0327133Z ##[endgroup]
+2026-09-30T04:38:38.1535756Z Attempting to download 20...
+2026-09-30T04:38:38.1619106Z (node:2043) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T04:38:38.5764408Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T04:38:38.5816733Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-09-30T04:38:38.9285734Z Extracting ...
+2026-09-30T04:38:38.9398554Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8b664cd4-e9a8-4b34-804f-3b244323ce57 -f /home/runner/work/_temp/688b3b00-2069-4f9b-b0a6-9e3bf3ca7d46
+2026-09-30T04:38:39.8154392Z Adding to the cache ...
+2026-09-30T04:38:45.4301987Z ##[group]Environment details
+2026-09-30T04:38:45.7390970Z node: v20.20.2
+2026-09-30T04:38:45.7391388Z npm: 10.8.2
+2026-09-30T04:38:45.7391759Z yarn: 1.22.22
+2026-09-30T04:38:45.7392423Z ##[endgroup]
+2026-09-30T04:38:45.7552516Z ##[group]Run pip install -e .
+2026-09-30T04:38:45.7552818Z [36;1mpip install -e .[0m
+2026-09-30T04:38:45.7912986Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:38:45.7933998Z env:
+2026-09-30T04:38:45.7934294Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:45.7934697Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:38:45.7935040Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:45.7935531Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:45.7935863Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:45.7936348Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:38:45.7936613Z ##[endgroup]
+2026-09-30T04:38:47.0188172Z Obtaining file:///home/runner/work/alethech/alethech
+2026-09-30T04:38:47.0196061Z   Installing build dependencies: started
+2026-09-30T04:38:47.9818640Z   Installing build dependencies: finished with status 'done'
+2026-09-30T04:38:47.9827204Z   Checking if build backend supports build_editable: started
+2026-09-30T04:38:48.2375663Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-09-30T04:38:48.2382077Z   Getting requirements to build editable: started
+2026-09-30T04:38:48.5052152Z   Getting requirements to build editable: finished with status 'done'
+2026-09-30T04:38:48.5059233Z   Preparing editable metadata (pyproject.toml): started
+2026-09-30T04:38:48.6593970Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-09-30T04:38:48.8574902Z Collecting cryptography>=42.0 (from alethech==0.8.5)
+2026-09-30T04:38:48.8961143Z   Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+2026-09-30T04:38:49.0970908Z Collecting click>=8.0 (from alethech==0.8.5)
+2026-09-30T04:38:49.1001728Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-09-30T04:38:49.2889101Z Collecting cffi>=2.0.0 (from cryptography>=42.0->alethech==0.8.5)
+2026-09-30T04:38:49.2926591Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-09-30T04:38:49.3596518Z Collecting pycparser (from cffi>=2.0.0->cryptography>=42.0->alethech==0.8.5)
+2026-09-30T04:38:49.3633169Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-09-30T04:38:49.3733741Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-09-30T04:38:49.4079339Z Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+2026-09-30T04:38:49.5414398Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 34.9 MB/s  0:00:00
+2026-09-30T04:38:49.5446941Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-09-30T04:38:49.5930117Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-09-30T04:38:49.6333838Z Building wheels for collected packages: alethech
+2026-09-30T04:38:49.6340555Z   Building editable for alethech (pyproject.toml): started
+2026-09-30T04:38:49.8098075Z   Building editable for alethech (pyproject.toml): finished with status 'done'
+2026-09-30T04:38:49.8102738Z   Created wheel for alethech: filename=alethech-0.8.5-0.editable-py3-none-any.whl size=8561 sha256=9c9947e0df0cb0ee5e93bf1394680b9fb90a80e362a730a1c78c3c0deeb52375
+2026-09-30T04:38:49.8104248Z   Stored in directory: /tmp/pip-ephem-wheel-cache-dgsdml37/wheels/54/78/de/76f9ae20f73147d6e17ff4620b900a61c2935018b9873a40ed
+2026-09-30T04:38:49.8122506Z Successfully built alethech
+2026-09-30T04:38:49.8262810Z Installing collected packages: pycparser, click, cffi, cryptography, alethech
+2026-09-30T04:38:50.1074658Z 
+2026-09-30T04:38:50.1084394Z Successfully installed alethech-0.8.5 cffi-2.1.1 click-8.5.0 cryptography-50.0.1 pycparser-3.0
+2026-09-30T04:38:50.2257550Z ##[group]Run cargo build --locked --manifest-path alethech-rs/Cargo.toml --release --bin alethech-conf --bin alethech-container --bin alethech-container-v2
+2026-09-30T04:38:50.2258441Z [36;1mcargo build --locked --manifest-path alethech-rs/Cargo.toml --release --bin alethech-conf --bin alethech-container --bin alethech-container-v2[0m
+2026-09-30T04:38:50.2323692Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:38:50.2323907Z env:
+2026-09-30T04:38:50.2324129Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:50.2324472Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:38:50.2324812Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:50.2325107Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:50.2325596Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:38:50.2325893Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:38:50.2326369Z ##[endgroup]
+2026-09-30T04:38:53.9250755Z     Updating crates.io index
+2026-09-30T04:38:54.4567465Z  Downloading crates ...
+2026-09-30T04:38:54.4863575Z   Downloaded block-buffer v0.10.4
+2026-09-30T04:38:54.5467493Z   Downloaded aes-gcm v0.10.3
+2026-09-30T04:38:54.5536977Z   Downloaded cfg-if v1.0.5
+2026-09-30T04:38:54.5601191Z   Downloaded cpufeatures v0.2.17
+2026-09-30T04:38:54.5613558Z   Downloaded aead v0.5.2
+2026-09-30T04:38:54.5622317Z   Downloaded cipher v0.4.4
+2026-09-30T04:38:54.5634097Z   Downloaded version_check v0.9.5
+2026-09-30T04:38:54.5643845Z   Downloaded ed25519-dalek v2.2.0
+2026-09-30T04:38:54.5668958Z   Downloaded const-oid v0.9.6
+2026-09-30T04:38:54.5684075Z   Downloaded unicode-ident v1.0.26
+2026-09-30T04:38:54.5707143Z   Downloaded syn v2.0.119
+2026-09-30T04:38:54.5794181Z   Downloaded crypto-common v0.1.7
+2026-09-30T04:38:54.5801320Z   Downloaded spki v0.7.3
+2026-09-30T04:38:54.5815719Z   Downloaded base64ct v1.8.3
+2026-09-30T04:38:54.5836372Z   Downloaded aes v0.8.4
+2026-09-30T04:38:54.5863992Z   Downloaded proc-macro2 v1.0.107
+2026-09-30T04:38:54.5888303Z   Downloaded rand_chacha v0.3.1
+2026-09-30T04:38:54.5897296Z   Downloaded rand v0.8.8
+2026-09-30T04:38:54.5924141Z   Downloaded pbkdf2 v0.12.2
+2026-09-30T04:38:54.5937099Z   Downloaded curve25519-dalek v4.1.3
+2026-09-30T04:38:54.6005494Z   Downloaded serde_derive v1.0.229
+2026-09-30T04:38:54.6030623Z   Downloaded signature v2.2.0
+2026-09-30T04:38:54.6046121Z   Downloaded zeroize v1.9.0
+2026-09-30T04:38:54.6157971Z   Downloaded curve25519-dalek-derive v0.1.1
+2026-09-30T04:38:54.6166903Z   Downloaded serde_json v1.0.151
+2026-09-30T04:38:54.6226975Z   Downloaded typenum v1.20.1
+2026-09-30T04:38:54.6255235Z   Downloaded universal-hash v0.5.1
+2026-09-30T04:38:54.6262410Z   Downloaded memchr v2.8.3
+2026-09-30T04:38:54.6399232Z   Downloaded generic-array v0.14.7
+2026-09-30T04:38:54.6411452Z   Downloaded ctr v0.9.2
+2026-09-30T04:38:54.6434308Z   Downloaded pkcs8 v0.10.2
+2026-09-30T04:38:54.6466370Z   Downloaded rustc_version v0.4.1
+2026-09-30T04:38:54.6476952Z   Downloaded ghash v0.5.1
+2026-09-30T04:38:54.6486279Z   Downloaded opaque-debug v0.3.1
+2026-09-30T04:38:54.6493843Z   Downloaded scrypt v0.11.0
+2026-09-30T04:38:54.6504998Z   Downloaded hex v0.4.3
+2026-09-30T04:38:54.6518235Z   Downloaded inout v0.1.4
+2026-09-30T04:38:54.6527348Z   Downloaded salsa20 v0.10.2
+2026-09-30T04:38:54.6537274Z   Downloaded subtle v2.6.1
+2026-09-30T04:38:54.6547115Z   Downloaded thiserror-impl v1.0.69
+2026-09-30T04:38:54.6558025Z   Downloaded itoa v1.0.18
+2026-09-30T04:38:54.6569920Z   Downloaded polyval v0.6.2
+2026-09-30T04:38:54.6583612Z   Downloaded ppv-lite86 v0.2.21
+2026-09-30T04:38:54.6594343Z   Downloaded digest v0.10.7
+2026-09-30T04:38:54.6610005Z   Downloaded password-hash v0.5.0
+2026-09-30T04:38:54.6624281Z   Downloaded quote v1.0.47
+2026-09-30T04:38:54.6646544Z   Downloaded rand_core v0.6.4
+2026-09-30T04:38:54.6657405Z   Downloaded sha2 v0.10.9
+2026-09-30T04:38:54.6678168Z   Downloaded thiserror v1.0.69
+2026-09-30T04:38:54.6725826Z   Downloaded ed25519 v2.2.3
+2026-09-30T04:38:54.6740065Z   Downloaded zmij v1.0.23
+2026-09-30T04:38:54.6754427Z   Downloaded getrandom v0.2.17
+2026-09-30T04:38:54.6778611Z   Downloaded semver v1.0.28
+2026-09-30T04:38:54.6797518Z   Downloaded hmac v0.12.1
+2026-09-30T04:38:54.6813323Z   Downloaded serde_core v1.0.229
+2026-09-30T04:38:54.6835722Z   Downloaded der v0.7.10
+2026-09-30T04:38:54.6878752Z   Downloaded serde v1.0.229
+2026-09-30T04:38:54.6907354Z   Downloaded hkdf v0.12.4
+2026-09-30T04:38:54.6926068Z   Downloaded syn v3.0.6
+2026-09-30T04:38:54.7013458Z   Downloaded zerocopy v0.8.59
+2026-09-30T04:38:54.7191732Z   Downloaded libc v0.2.189
+2026-09-30T04:38:54.8677300Z    Compiling libc v0.2.189
+2026-09-30T04:38:54.8677742Z    Compiling cfg-if v1.0.5
+2026-09-30T04:38:54.8678103Z    Compiling version_check v0.9.5
+2026-09-30T04:38:54.8678342Z    Compiling typenum v1.20.1
+2026-09-30T04:38:58.4794703Z    Compiling subtle v2.6.1
+2026-09-30T04:38:59.6955156Z    Compiling proc-macro2 v1.0.107
+2026-09-30T04:39:00.8155026Z    Compiling generic-array v0.14.7
+2026-09-30T04:39:00.8160901Z    Compiling quote v1.0.47
+2026-09-30T04:39:04.5756485Z    Compiling unicode-ident v1.0.26
+2026-09-30T04:39:04.7243814Z    Compiling cpufeatures v0.2.17
+2026-09-30T04:39:04.7479740Z    Compiling semver v1.0.28
+2026-09-30T04:39:05.0863049Z    Compiling block-buffer v0.10.4
+2026-09-30T04:39:05.1243196Z    Compiling inout v0.1.4
+2026-09-30T04:39:05.1466452Z    Compiling zerocopy v0.8.59
+2026-09-30T04:39:05.1782388Z    Compiling rustc_version v0.4.1
+2026-09-30T04:39:05.2830883Z    Compiling serde_core v1.0.229
+2026-09-30T04:39:05.6821308Z    Compiling curve25519-dalek v4.1.3
+2026-09-30T04:39:05.7479993Z    Compiling opaque-debug v0.3.1
+2026-09-30T04:39:05.7653799Z    Compiling zmij v1.0.23
+2026-09-30T04:39:05.9442437Z    Compiling getrandom v0.2.17
+2026-09-30T04:39:06.2950249Z    Compiling rand_core v0.6.4
+2026-09-30T04:39:06.4250095Z    Compiling crypto-common v0.1.7
+2026-09-30T04:39:06.7526700Z    Compiling digest v0.10.7
+2026-09-30T04:39:06.7688707Z    Compiling syn v2.0.119
+2026-09-30T04:39:06.9024631Z    Compiling cipher v0.4.4
+2026-09-30T04:39:07.0617530Z    Compiling hmac v0.12.1
+2026-09-30T04:39:07.1307154Z    Compiling universal-hash v0.5.1
+2026-09-30T04:39:07.1878685Z    Compiling polyval v0.6.2
+2026-09-30T04:39:07.9966505Z    Compiling sha2 v0.10.9
+2026-09-30T04:39:08.2176508Z    Compiling syn v3.0.6
+2026-09-30T04:39:09.0693945Z    Compiling ppv-lite86 v0.2.21
+2026-09-30T04:39:09.2216340Z    Compiling curve25519-dalek-derive v0.1.1
+2026-09-30T04:39:09.5299130Z    Compiling zeroize v1.9.0
+2026-09-30T04:39:09.5833009Z    Compiling base64ct v1.8.3
+2026-09-30T04:39:09.7588788Z    Compiling signature v2.2.0
+2026-09-30T04:39:09.7888127Z    Compiling serde v1.0.229
+2026-09-30T04:39:09.8090636Z    Compiling serde_json v1.0.151
+2026-09-30T04:39:09.8140781Z    Compiling thiserror v1.0.69
+2026-09-30T04:39:09.8934028Z    Compiling ed25519 v2.2.3
+2026-09-30T04:39:09.9308242Z    Compiling serde_derive v1.0.229
+2026-09-30T04:39:09.9596820Z    Compiling password-hash v0.5.0
+2026-09-30T04:39:10.0236680Z    Compiling rand_chacha v0.3.1
+2026-09-30T04:39:10.7457750Z    Compiling thiserror-impl v1.0.69
+2026-09-30T04:39:10.8486554Z    Compiling ghash v0.5.1
+2026-09-30T04:39:10.8926360Z    Compiling pbkdf2 v0.12.2
+2026-09-30T04:39:10.9419504Z    Compiling ctr v0.9.2
+2026-09-30T04:39:11.0396649Z    Compiling salsa20 v0.10.2
+2026-09-30T04:39:11.1186725Z    Compiling aes v0.8.4
+2026-09-30T04:39:11.4729195Z    Compiling aead v0.5.2
+2026-09-30T04:39:11.9506535Z    Compiling memchr v2.8.3
+2026-09-30T04:39:12.0766621Z    Compiling itoa v1.0.18
+2026-09-30T04:39:12.2668705Z    Compiling aes-gcm v0.10.3
+2026-09-30T04:39:12.7536626Z    Compiling scrypt v0.11.0
+2026-09-30T04:39:12.9073653Z    Compiling ed25519-dalek v2.2.0
+2026-09-30T04:39:13.0786623Z    Compiling rand v0.8.8
+2026-09-30T04:39:13.1306481Z    Compiling hkdf v0.12.4
+2026-09-30T04:39:13.2006503Z    Compiling hex v0.4.3
+2026-09-30T04:39:13.7168527Z    Compiling alethech v0.8.5 (/home/runner/work/alethech/alethech/alethech-rs)
+2026-09-30T04:39:14.5280501Z error: literal out of range for `u8`
+2026-09-30T04:39:14.5306680Z    --> src/bin/aleth_container_v2.rs:727:30
+2026-09-30T04:39:14.5336202Z     |
+2026-09-30T04:39:14.5352000Z 727 |     let params = Params::new(32768, 8, 1, 32).unwrap();
+2026-09-30T04:39:14.5352794Z     |                              ^^^^^
+2026-09-30T04:39:14.5353334Z     |
+2026-09-30T04:39:14.5353995Z     = note: the literal `32768` does not fit into the type `u8` whose range is `0..=255`
+2026-09-30T04:39:14.5354855Z     = note: `#[deny(overflowing_literals)]` on by default
+2026-09-30T04:39:14.5355625Z 
+2026-09-30T04:39:14.5387565Z error: could not compile `alethech` (bin "alethech-container-v2") due to 1 previous error
+2026-09-30T04:39:14.5390312Z warning: build failed, waiting for other jobs to finish...
+2026-09-30T04:39:15.3621476Z ##[error]Process completed with exit code 101.
+2026-09-30T04:39:15.3812116Z Post job cleanup.
+2026-09-30T04:39:15.4516401Z [command]/usr/bin/git version
+2026-09-30T04:39:15.4536522Z git version 2.55.0
+2026-09-30T04:39:15.4567945Z Temporarily overriding HOME='/home/runner/work/_temp/1d037d4f-f038-4b29-995a-657162bed86d' before making global git config changes
+2026-09-30T04:39:15.4569043Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T04:39:15.4573250Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T04:39:15.4609056Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T04:39:15.4640700Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T04:39:15.4860982Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T04:39:15.4891095Z http.https://github.com/.extraheader
+2026-09-30T04:39:15.4902101Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-30T04:39:15.4934139Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T04:39:15.5331361Z Cleaning up orphan processes
+2026-09-30T04:39:15.5570707Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

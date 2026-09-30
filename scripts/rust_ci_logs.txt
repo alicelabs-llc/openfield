@@ -1,0 +1,457 @@
+﻿2026-09-30T04:36:27.8074961Z Current runner version: '2.337.0'
+2026-09-30T04:36:27.8092289Z ##[group]Runner Image Provisioner
+2026-09-30T04:36:27.8092916Z Hosted Compute Agent
+2026-09-30T04:36:27.8093361Z Version: 20260828.587
+2026-09-30T04:36:27.8093850Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-30T04:36:27.8094345Z Build Date: 2026-08-28T16:44:25Z
+2026-09-30T04:36:27.8094820Z Worker ID: {078cef71-60f0-416f-a35f-da0253436c9c}
+2026-09-30T04:36:27.8095319Z Azure Region: centralus
+2026-09-30T04:36:27.8095748Z ##[endgroup]
+2026-09-30T04:36:27.8096549Z ##[group]Operating System
+2026-09-30T04:36:27.8096966Z Ubuntu
+2026-09-30T04:36:27.8097332Z 24.04.5
+2026-09-30T04:36:27.8097704Z LTS
+2026-09-30T04:36:27.8098048Z ##[endgroup]
+2026-09-30T04:36:27.8098446Z ##[group]Runner Image
+2026-09-30T04:36:27.8099147Z Image: ubuntu-24.04
+2026-09-30T04:36:27.8099561Z Version: 20260920.314.1
+2026-09-30T04:36:27.8100503Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-30T04:36:27.8101550Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-30T04:36:27.8102188Z ##[endgroup]
+2026-09-30T04:36:27.8102986Z ##[group]GITHUB_TOKEN Permissions
+2026-09-30T04:36:27.8104511Z Contents: read
+2026-09-30T04:36:27.8104907Z Metadata: read
+2026-09-30T04:36:27.8105322Z ##[endgroup]
+2026-09-30T04:36:27.8106686Z Secret source: Actions
+2026-09-30T04:36:27.8107328Z Cache mode: write
+2026-09-30T04:36:27.8107817Z Prepare workflow directory
+2026-09-30T04:36:27.8341902Z Prepare all required actions
+2026-09-30T04:36:27.8376566Z Getting action download info
+2026-09-30T04:36:28.0803225Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-30T04:36:28.4504913Z Download action repository 'actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2026-09-30T04:36:28.6584622Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-30T04:36:29.0002404Z Complete job name: cross-language conformance
+2026-09-30T04:36:29.0765254Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-30T04:36:29.0766474Z with:
+2026-09-30T04:36:29.0767179Z   repository: eddyflores100-lang/alethech
+2026-09-30T04:36:29.0773459Z   token: ***
+2026-09-30T04:36:29.0774159Z   ssh-strict: true
+2026-09-30T04:36:29.0774840Z   ssh-user: git
+2026-09-30T04:36:29.0775517Z   persist-credentials: true
+2026-09-30T04:36:29.0776257Z   clean: true
+2026-09-30T04:36:29.0776964Z   sparse-checkout-cone-mode: true
+2026-09-30T04:36:29.0777751Z   fetch-depth: 1
+2026-09-30T04:36:29.0778412Z   fetch-tags: false
+2026-09-30T04:36:29.0779418Z   show-progress: true
+2026-09-30T04:36:29.0780107Z   lfs: false
+2026-09-30T04:36:29.0780765Z   submodules: false
+2026-09-30T04:36:29.0781493Z   set-safe-directory: true
+2026-09-30T04:36:29.0782441Z ##[endgroup]
+2026-09-30T04:36:29.1513906Z Syncing repository: eddyflores100-lang/alethech
+2026-09-30T04:36:29.1515955Z ##[group]Getting Git version info
+2026-09-30T04:36:29.1517114Z Working directory is '/home/runner/work/alethech/alethech'
+2026-09-30T04:36:29.1518975Z [command]/usr/bin/git version
+2026-09-30T04:36:29.1690024Z git version 2.55.0
+2026-09-30T04:36:29.1707686Z ##[endgroup]
+2026-09-30T04:36:29.1717294Z Temporarily overriding HOME='/home/runner/work/_temp/8cb43007-ff04-42e3-9ff9-87945d7d0807' before making global git config changes
+2026-09-30T04:36:29.1719756Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T04:36:29.1721749Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T04:36:29.1763790Z Deleting the contents of '/home/runner/work/alethech/alethech'
+2026-09-30T04:36:29.1767035Z ##[group]Initializing the repository
+2026-09-30T04:36:29.1770694Z [command]/usr/bin/git init /home/runner/work/alethech/alethech
+2026-09-30T04:36:29.1886615Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-30T04:36:29.1888221Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-30T04:36:29.1889754Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-30T04:36:29.1890822Z hint: call:
+2026-09-30T04:36:29.1891473Z hint:
+2026-09-30T04:36:29.1892341Z hint: 	git config --global init.defaultBranch <name>
+2026-09-30T04:36:29.1893282Z hint:
+2026-09-30T04:36:29.1894142Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-30T04:36:29.1895559Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-30T04:36:29.1896653Z hint:
+2026-09-30T04:36:29.1897318Z hint: 	git branch -m <name>
+2026-09-30T04:36:29.1898057Z hint:
+2026-09-30T04:36:29.1899106Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-30T04:36:29.2095643Z Initialized empty Git repository in /home/runner/work/alethech/alethech/.git/
+2026-09-30T04:36:29.2102829Z [command]/usr/bin/git remote add origin https://github.com/eddyflores100-lang/alethech
+2026-09-30T04:36:29.2139010Z ##[endgroup]
+2026-09-30T04:36:29.2140563Z ##[group]Disabling automatic garbage collection
+2026-09-30T04:36:29.2141645Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-30T04:36:29.2162367Z ##[endgroup]
+2026-09-30T04:36:29.2163486Z ##[group]Setting up auth
+2026-09-30T04:36:29.2165908Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T04:36:29.2190296Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T04:36:29.2645395Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T04:36:29.2671065Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T04:36:29.2816651Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-30T04:36:29.2846228Z ##[endgroup]
+2026-09-30T04:36:29.2847572Z ##[group]Fetching the repository
+2026-09-30T04:36:29.2854610Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cd82e76d5fb75a3f6fb0527af11cd37dc4664a5b:refs/remotes/pull/8/merge
+2026-09-30T04:36:30.1312764Z From https://github.com/eddyflores100-lang/alethech
+2026-09-30T04:36:30.1313390Z  * [new ref]         cd82e76d5fb75a3f6fb0527af11cd37dc4664a5b -> pull/8/merge
+2026-09-30T04:36:30.1317857Z ##[endgroup]
+2026-09-30T04:36:30.1318351Z ##[group]Determining the checkout info
+2026-09-30T04:36:30.1320617Z ##[endgroup]
+2026-09-30T04:36:30.1326148Z [command]/usr/bin/git sparse-checkout disable
+2026-09-30T04:36:30.1383626Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-30T04:36:30.1406446Z ##[group]Checking out the ref
+2026-09-30T04:36:30.1410652Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/8/merge
+2026-09-30T04:36:30.1595800Z Note: switching to 'refs/remotes/pull/8/merge'.
+2026-09-30T04:36:30.1596185Z 
+2026-09-30T04:36:30.1596563Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-30T04:36:30.1597013Z changes and commit them, and you can discard any commits you make in this
+2026-09-30T04:36:30.1597431Z state without impacting any branches by switching back to a branch.
+2026-09-30T04:36:30.1597705Z 
+2026-09-30T04:36:30.1597881Z If you want to create a new branch to retain commits you create, you may
+2026-09-30T04:36:30.1598304Z do so (now or later) by using -c with the switch command. Example:
+2026-09-30T04:36:30.1598524Z 
+2026-09-30T04:36:30.1598660Z   git switch -c <new-branch-name>
+2026-09-30T04:36:30.1599040Z 
+2026-09-30T04:36:30.1599187Z Or undo this operation with:
+2026-09-30T04:36:30.1599611Z 
+2026-09-30T04:36:30.1599728Z   git switch -
+2026-09-30T04:36:30.1599919Z 
+2026-09-30T04:36:30.1600175Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-30T04:36:30.1600460Z 
+2026-09-30T04:36:30.1600802Z HEAD is now at cd82e76 Merge e409c29aadca777cf40260f9193f47535957d5be into de5e67e4298b8233df005aee8fcceb87f9796ca3
+2026-09-30T04:36:30.1602381Z ##[endgroup]
+2026-09-30T04:36:30.1638591Z [command]/usr/bin/git log -1 --format=%H
+2026-09-30T04:36:30.1655854Z cd82e76d5fb75a3f6fb0527af11cd37dc4664a5b
+2026-09-30T04:36:30.1861872Z ##[group]Run actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+2026-09-30T04:36:30.1862255Z with:
+2026-09-30T04:36:30.1862515Z   python-version: 3.12
+2026-09-30T04:36:30.1862792Z   check-latest: false
+2026-09-30T04:36:30.1864793Z   token: ***
+2026-09-30T04:36:30.1865043Z   update-environment: true
+2026-09-30T04:36:30.1865365Z   allow-prereleases: false
+2026-09-30T04:36:30.1865643Z ##[endgroup]
+2026-09-30T04:36:30.2851846Z ##[group]Installed versions
+2026-09-30T04:36:30.4102585Z (node:2024) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T04:36:30.4103527Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T04:36:30.4104138Z Successfully set up CPython (3.12.14)
+2026-09-30T04:36:30.4104825Z ##[endgroup]
+2026-09-30T04:36:30.4220200Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-09-30T04:36:30.4220651Z with:
+2026-09-30T04:36:30.4220887Z   node-version: 20
+2026-09-30T04:36:30.4221133Z   always-auth: false
+2026-09-30T04:36:30.4221401Z   check-latest: false
+2026-09-30T04:36:30.4223338Z   token: ***
+2026-09-30T04:36:30.4223590Z env:
+2026-09-30T04:36:30.4223890Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:30.4224302Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:36:30.4224699Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:30.4225063Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:30.4225433Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:30.4225790Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:36:30.4226101Z ##[endgroup]
+2026-09-30T04:36:30.5574047Z Attempting to download 20...
+2026-09-30T04:36:30.5648314Z (node:2032) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T04:36:30.5649548Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T04:36:31.4240511Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-09-30T04:36:31.9247654Z Extracting ...
+2026-09-30T04:36:31.9330157Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/c240c311-fb4c-4b1f-abb0-dfd317069d2f -f /home/runner/work/_temp/c811a927-b4f7-40df-a157-7fc87cb29426
+2026-09-30T04:36:32.7326177Z Adding to the cache ...
+2026-09-30T04:36:34.6557356Z ##[group]Environment details
+2026-09-30T04:36:34.8580770Z node: v20.20.2
+2026-09-30T04:36:34.8581251Z npm: 10.8.2
+2026-09-30T04:36:34.8581552Z yarn: 1.22.22
+2026-09-30T04:36:34.8582267Z ##[endgroup]
+2026-09-30T04:36:34.8715656Z ##[group]Run pip install -e .
+2026-09-30T04:36:34.8716021Z [36;1mpip install -e .[0m
+2026-09-30T04:36:34.8910493Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:36:34.8910892Z env:
+2026-09-30T04:36:34.8911196Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:34.8911636Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:36:34.8912112Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:34.8912492Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:34.8912894Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:34.8913445Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:36:34.8913785Z ##[endgroup]
+2026-09-30T04:36:36.8646509Z Obtaining file:///home/runner/work/alethech/alethech
+2026-09-30T04:36:36.8653087Z   Installing build dependencies: started
+2026-09-30T04:36:37.7440226Z   Installing build dependencies: finished with status 'done'
+2026-09-30T04:36:37.7445867Z   Checking if build backend supports build_editable: started
+2026-09-30T04:36:37.9879237Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-09-30T04:36:37.9885290Z   Getting requirements to build editable: started
+2026-09-30T04:36:38.2280422Z   Getting requirements to build editable: finished with status 'done'
+2026-09-30T04:36:38.2287390Z   Preparing editable metadata (pyproject.toml): started
+2026-09-30T04:36:38.3559542Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-09-30T04:36:38.5874184Z Collecting cryptography>=42.0 (from alethech==0.8.5)
+2026-09-30T04:36:38.6485069Z   Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+2026-09-30T04:36:38.6723421Z Collecting click>=8.0 (from alethech==0.8.5)
+2026-09-30T04:36:38.6824334Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-09-30T04:36:38.7515991Z Collecting cffi>=2.0.0 (from cryptography>=42.0->alethech==0.8.5)
+2026-09-30T04:36:38.7614924Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-09-30T04:36:38.7819867Z Collecting pycparser (from cffi>=2.0.0->cryptography>=42.0->alethech==0.8.5)
+2026-09-30T04:36:38.7916516Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-09-30T04:36:38.8521247Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-09-30T04:36:38.8800574Z Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+2026-09-30T04:36:38.9679975Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 63.6 MB/s  0:00:00
+2026-09-30T04:36:38.9777437Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-09-30T04:36:38.9901101Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-09-30T04:36:39.0020763Z Building wheels for collected packages: alethech
+2026-09-30T04:36:39.0025305Z   Building editable for alethech (pyproject.toml): started
+2026-09-30T04:36:39.1473368Z   Building editable for alethech (pyproject.toml): finished with status 'done'
+2026-09-30T04:36:39.1476695Z   Created wheel for alethech: filename=alethech-0.8.5-0.editable-py3-none-any.whl size=8561 sha256=ea7b6ddb327e37cd1c663a8257aee8d1e186bede92cb173fdb23003a4d3744f2
+2026-09-30T04:36:39.1477566Z   Stored in directory: /tmp/pip-ephem-wheel-cache-0akyl34m/wheels/54/78/de/76f9ae20f73147d6e17ff4620b900a61c2935018b9873a40ed
+2026-09-30T04:36:39.1492215Z Successfully built alethech
+2026-09-30T04:36:39.1611457Z Installing collected packages: pycparser, click, cffi, cryptography, alethech
+2026-09-30T04:36:39.4644474Z 
+2026-09-30T04:36:39.4652526Z Successfully installed alethech-0.8.5 cffi-2.1.1 click-8.5.0 cryptography-50.0.1 pycparser-3.0
+2026-09-30T04:36:39.5303332Z ##[group]Run cargo build --locked --manifest-path alethech-rs/Cargo.toml --release --bin alethech-conf --bin alethech-container --bin alethech-container-v2
+2026-09-30T04:36:39.5304413Z [36;1mcargo build --locked --manifest-path alethech-rs/Cargo.toml --release --bin alethech-conf --bin alethech-container --bin alethech-container-v2[0m
+2026-09-30T04:36:39.5345153Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:36:39.5345443Z env:
+2026-09-30T04:36:39.5345832Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:39.5346372Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:36:39.5346971Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:39.5347505Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:39.5347986Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:36:39.5348655Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:36:39.5349380Z ##[endgroup]
+2026-09-30T04:36:39.9531101Z     Updating crates.io index
+2026-09-30T04:36:40.4276646Z  Downloading crates ...
+2026-09-30T04:36:40.6591288Z   Downloaded block-buffer v0.10.4
+2026-09-30T04:36:40.6824502Z   Downloaded aead v0.5.2
+2026-09-30T04:36:40.6951888Z   Downloaded curve25519-dalek-derive v0.1.1
+2026-09-30T04:36:40.6963366Z   Downloaded opaque-debug v0.3.1
+2026-09-30T04:36:40.6995718Z   Downloaded signature v2.2.0
+2026-09-30T04:36:40.7087123Z   Downloaded base64ct v1.8.3
+2026-09-30T04:36:40.7105716Z   Downloaded aes v0.8.4
+2026-09-30T04:36:40.7125674Z   Downloaded salsa20 v0.10.2
+2026-09-30T04:36:40.7131871Z   Downloaded pbkdf2 v0.12.2
+2026-09-30T04:36:40.7221595Z   Downloaded ed25519 v2.2.3
+2026-09-30T04:36:40.7229997Z   Downloaded hex v0.4.3
+2026-09-30T04:36:40.7237551Z   Downloaded pkcs8 v0.10.2
+2026-09-30T04:36:40.7249188Z   Downloaded rustc_version v0.4.1
+2026-09-30T04:36:40.7254573Z   Downloaded ctr v0.9.2
+2026-09-30T04:36:40.7263603Z   Downloaded rand_chacha v0.3.1
+2026-09-30T04:36:40.7268441Z   Downloaded subtle v2.6.1
+2026-09-30T04:36:40.7274067Z   Downloaded inout v0.1.4
+2026-09-30T04:36:40.7279062Z   Downloaded getrandom v0.2.17
+2026-09-30T04:36:40.7291281Z   Downloaded ppv-lite86 v0.2.21
+2026-09-30T04:36:40.7297310Z   Downloaded semver v1.0.28
+2026-09-30T04:36:40.7306814Z   Downloaded scrypt v0.11.0
+2026-09-30T04:36:40.7312834Z   Downloaded itoa v1.0.18
+2026-09-30T04:36:40.7356176Z   Downloaded ghash v0.5.1
+2026-09-30T04:36:40.7361098Z   Downloaded cpufeatures v0.2.17
+2026-09-30T04:36:40.7366688Z   Downloaded generic-array v0.14.7
+2026-09-30T04:36:40.7379679Z   Downloaded cipher v0.4.4
+2026-09-30T04:36:40.7387623Z   Downloaded cfg-if v1.0.5
+2026-09-30T04:36:40.7394809Z   Downloaded crypto-common v0.1.7
+2026-09-30T04:36:40.7399283Z   Downloaded version_check v0.9.5
+2026-09-30T04:36:40.7431864Z   Downloaded unicode-ident v1.0.26
+2026-09-30T04:36:40.7471199Z   Downloaded thiserror v1.0.69
+2026-09-30T04:36:40.7491723Z   Downloaded digest v0.10.7
+2026-09-30T04:36:40.7501395Z   Downloaded password-hash v0.5.0
+2026-09-30T04:36:40.7510948Z   Downloaded polyval v0.6.2
+2026-09-30T04:36:40.7519566Z   Downloaded zeroize v1.9.0
+2026-09-30T04:36:40.7548855Z   Downloaded const-oid v0.9.6
+2026-09-30T04:36:40.7558229Z   Downloaded zmij v1.0.23
+2026-09-30T04:36:40.7566935Z   Downloaded spki v0.7.3
+2026-09-30T04:36:40.7574584Z   Downloaded sha2 v0.10.9
+2026-09-30T04:36:40.7584813Z   Downloaded thiserror-impl v1.0.69
+2026-09-30T04:36:40.7590601Z   Downloaded quote v1.0.47
+2026-09-30T04:36:40.7601027Z   Downloaded universal-hash v0.5.1
+2026-09-30T04:36:40.7605528Z   Downloaded serde_derive v1.0.229
+2026-09-30T04:36:40.7618820Z   Downloaded rand_core v0.6.4
+2026-09-30T04:36:40.7624835Z   Downloaded hmac v0.12.1
+2026-09-30T04:36:40.7634308Z   Downloaded serde_core v1.0.229
+2026-09-30T04:36:40.7647801Z   Downloaded rand v0.8.8
+2026-09-30T04:36:40.7663833Z   Downloaded memchr v2.8.3
+2026-09-30T04:36:40.7691686Z   Downloaded typenum v1.20.1
+2026-09-30T04:36:40.7709536Z   Downloaded serde v1.0.229
+2026-09-30T04:36:40.7726221Z   Downloaded ed25519-dalek v2.2.0
+2026-09-30T04:36:40.7741897Z   Downloaded proc-macro2 v1.0.107
+2026-09-30T04:36:40.7755089Z   Downloaded der v0.7.10
+2026-09-30T04:36:40.7780511Z   Downloaded aes-gcm v0.10.3
+2026-09-30T04:36:40.7799979Z   Downloaded hkdf v0.12.4
+2026-09-30T04:36:40.7813527Z   Downloaded serde_json v1.0.151
+2026-09-30T04:36:40.7844916Z   Downloaded syn v2.0.119
+2026-09-30T04:36:40.7896062Z   Downloaded zerocopy v0.8.59
+2026-09-30T04:36:40.7979502Z   Downloaded curve25519-dalek v4.1.3
+2026-09-30T04:36:40.8020823Z   Downloaded syn v3.0.6
+2026-09-30T04:36:40.8071942Z   Downloaded libc v0.2.189
+2026-09-30T04:36:41.0641343Z    Compiling libc v0.2.189
+2026-09-30T04:36:41.0642148Z    Compiling cfg-if v1.0.5
+2026-09-30T04:36:41.0642539Z    Compiling version_check v0.9.5
+2026-09-30T04:36:41.0642935Z    Compiling typenum v1.20.1
+2026-09-30T04:36:41.1933274Z    Compiling subtle v2.6.1
+2026-09-30T04:36:42.1547770Z    Compiling proc-macro2 v1.0.107
+2026-09-30T04:36:42.3362797Z    Compiling unicode-ident v1.0.26
+2026-09-30T04:36:42.3582626Z    Compiling generic-array v0.14.7
+2026-09-30T04:36:42.3841401Z    Compiling quote v1.0.47
+2026-09-30T04:36:43.6809552Z    Compiling cpufeatures v0.2.17
+2026-09-30T04:36:43.7065019Z    Compiling semver v1.0.28
+2026-09-30T04:36:44.2007871Z    Compiling block-buffer v0.10.4
+2026-09-30T04:36:44.2240970Z    Compiling inout v0.1.4
+2026-09-30T04:36:44.2524455Z    Compiling zerocopy v0.8.59
+2026-09-30T04:36:44.2681310Z    Compiling rustc_version v0.4.1
+2026-09-30T04:36:44.3693777Z    Compiling serde_core v1.0.229
+2026-09-30T04:36:44.4846940Z    Compiling curve25519-dalek v4.1.3
+2026-09-30T04:36:44.5699441Z    Compiling zmij v1.0.23
+2026-09-30T04:36:44.6751067Z    Compiling opaque-debug v0.3.1
+2026-09-30T04:36:44.8300689Z    Compiling getrandom v0.2.17
+2026-09-30T04:36:45.0800927Z    Compiling rand_core v0.6.4
+2026-09-30T04:36:45.0819449Z    Compiling syn v2.0.119
+2026-09-30T04:36:45.2404623Z    Compiling crypto-common v0.1.7
+2026-09-30T04:36:45.3130275Z    Compiling digest v0.10.7
+2026-09-30T04:36:45.4570426Z    Compiling cipher v0.4.4
+2026-09-30T04:36:45.6060364Z    Compiling hmac v0.12.1
+2026-09-30T04:36:45.6720205Z    Compiling universal-hash v0.5.1
+2026-09-30T04:36:45.7310755Z    Compiling polyval v0.6.2
+2026-09-30T04:36:46.0361538Z    Compiling sha2 v0.10.9
+2026-09-30T04:36:46.6480716Z    Compiling syn v3.0.6
+2026-09-30T04:36:47.1760289Z    Compiling ppv-lite86 v0.2.21
+2026-09-30T04:36:47.4566464Z    Compiling thiserror v1.0.69
+2026-09-30T04:36:47.4650428Z    Compiling base64ct v1.8.3
+2026-09-30T04:36:47.5031854Z    Compiling curve25519-dalek-derive v0.1.1
+2026-09-30T04:36:47.5741307Z    Compiling zeroize v1.9.0
+2026-09-30T04:36:47.6784500Z    Compiling signature v2.2.0
+2026-09-30T04:36:47.7254394Z    Compiling serde_json v1.0.151
+2026-09-30T04:36:47.7711733Z    Compiling serde v1.0.229
+2026-09-30T04:36:47.8604112Z    Compiling ed25519 v2.2.3
+2026-09-30T04:36:47.9483962Z    Compiling password-hash v0.5.0
+2026-09-30T04:36:48.0470620Z    Compiling thiserror-impl v1.0.69
+2026-09-30T04:36:48.1540509Z    Compiling serde_derive v1.0.229
+2026-09-30T04:36:48.7135688Z    Compiling rand_chacha v0.3.1
+2026-09-30T04:36:48.8668570Z    Compiling ghash v0.5.1
+2026-09-30T04:36:48.9155917Z    Compiling pbkdf2 v0.12.2
+2026-09-30T04:36:48.9762215Z    Compiling ctr v0.9.2
+2026-09-30T04:36:49.0664528Z    Compiling salsa20 v0.10.2
+2026-09-30T04:36:49.1153652Z    Compiling aes v0.8.4
+2026-09-30T04:36:49.5221370Z    Compiling aead v0.5.2
+2026-09-30T04:36:49.8476890Z    Compiling memchr v2.8.3
+2026-09-30T04:36:50.1452776Z    Compiling itoa v1.0.18
+2026-09-30T04:36:50.6173725Z    Compiling aes-gcm v0.10.3
+2026-09-30T04:36:50.6683390Z    Compiling scrypt v0.11.0
+2026-09-30T04:36:50.7490518Z    Compiling rand v0.8.8
+2026-09-30T04:36:50.7660494Z    Compiling ed25519-dalek v2.2.0
+2026-09-30T04:36:51.0634507Z    Compiling hkdf v0.12.4
+2026-09-30T04:36:51.1079751Z    Compiling hex v0.4.3
+2026-09-30T04:36:51.3355713Z    Compiling alethech v0.8.5 (/home/runner/work/alethech/alethech/alethech-rs)
+2026-09-30T04:36:53.0404413Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.0406392Z    --> src/bin/aleth_container_v2.rs:431:57
+2026-09-30T04:36:53.0407021Z     |
+2026-09-30T04:36:53.0407730Z 431 |     format!("{}{}", RECOVERY_PREFIX, Base64UrlUnpadded::encode_vec(secret).unwrap())
+2026-09-30T04:36:53.0429089Z     |                                                         ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.0453268Z     |
+2026-09-30T04:36:53.0479794Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.0513873Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.0529558Z     |
+2026-09-30T04:36:53.0569694Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.0570910Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.0599394Z 
+2026-09-30T04:36:53.0913775Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.0949858Z    --> src/bin/aleth_container_v2.rs:474:37
+2026-09-30T04:36:53.0951204Z     |
+2026-09-30T04:36:53.0951801Z 474 |         "nonce": Base64UrlUnpadded::encode_vec(&nonce).unwrap(),
+2026-09-30T04:36:53.0952601Z     |                                     ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.0953222Z     |
+2026-09-30T04:36:53.0953739Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.0954589Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.0955271Z     |
+2026-09-30T04:36:53.0955880Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.0956574Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.0956951Z 
+2026-09-30T04:36:53.0990095Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1029826Z    --> src/bin/aleth_container_v2.rs:475:36
+2026-09-30T04:36:53.1030379Z     |
+2026-09-30T04:36:53.1030881Z 475 |         "salt": Base64UrlUnpadded::encode_vec(&salt).unwrap(),
+2026-09-30T04:36:53.1031584Z     |                                    ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1032083Z     |
+2026-09-30T04:36:53.1032502Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1033263Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1033863Z     |
+2026-09-30T04:36:53.1034363Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1034939Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1035223Z 
+2026-09-30T04:36:53.1035744Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1036472Z    --> src/bin/aleth_container_v2.rs:480:43
+2026-09-30T04:36:53.1036848Z     |
+2026-09-30T04:36:53.1037333Z 480 |         "wrapped_key": Base64UrlUnpadded::encode_vec(&wrapped).unwrap(),
+2026-09-30T04:36:53.1037999Z     |                                           ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1038475Z     |
+2026-09-30T04:36:53.1039103Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1040018Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1040608Z     |
+2026-09-30T04:36:53.1041042Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1041607Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1041953Z 
+2026-09-30T04:36:53.1058146Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1059239Z    --> src/bin/aleth_container_v2.rs:501:37
+2026-09-30T04:36:53.1059892Z     |
+2026-09-30T04:36:53.1060948Z 501 |         "nonce": Base64UrlUnpadded::encode_vec(&nonce).unwrap(),
+2026-09-30T04:36:53.1061630Z     |                                     ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1062236Z     |
+2026-09-30T04:36:53.1062684Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1063734Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1064305Z     |
+2026-09-30T04:36:53.1064763Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1065353Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1065680Z 
+2026-09-30T04:36:53.1085594Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1086429Z    --> src/bin/aleth_container_v2.rs:502:36
+2026-09-30T04:36:53.1086832Z     |
+2026-09-30T04:36:53.1087318Z 502 |         "salt": Base64UrlUnpadded::encode_vec(&salt).unwrap(),
+2026-09-30T04:36:53.1088131Z     |                                    ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1088893Z     |
+2026-09-30T04:36:53.1089462Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1090256Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1090939Z     |
+2026-09-30T04:36:53.1091530Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1092186Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1092562Z 
+2026-09-30T04:36:53.1112474Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1113280Z    --> src/bin/aleth_container_v2.rs:504:43
+2026-09-30T04:36:53.1113800Z     |
+2026-09-30T04:36:53.1114351Z 504 |         "wrapped_key": Base64UrlUnpadded::encode_vec(&wrapped).unwrap(),
+2026-09-30T04:36:53.1115110Z     |                                           ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1115676Z     |
+2026-09-30T04:36:53.1116167Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1117010Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1117713Z     |
+2026-09-30T04:36:53.1118241Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1119073Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1119434Z 
+2026-09-30T04:36:53.1142452Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1143567Z    --> src/bin/aleth_container_v2.rs:533:47
+2026-09-30T04:36:53.1144107Z     |
+2026-09-30T04:36:53.1145128Z 533 |     let container_id_str = Base64UrlUnpadded::encode_vec(&cid).unwrap();
+2026-09-30T04:36:53.1146102Z     |                                               ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1146612Z     |
+2026-09-30T04:36:53.1147114Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1147826Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1148365Z     |
+2026-09-30T04:36:53.1149018Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1149704Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1150047Z 
+2026-09-30T04:36:53.1173653Z error[E0599]: no associated function or constant named `encode_vec` found for struct `Base64UrlUnpadded` in the current scope
+2026-09-30T04:36:53.1174467Z    --> src/bin/aleth_container_v2.rs:552:45
+2026-09-30T04:36:53.1175071Z     |
+2026-09-30T04:36:53.1175697Z 552 |         "payload_nonce": Base64UrlUnpadded::encode_vec(&payload_nonce).unwrap(),
+2026-09-30T04:36:53.1176708Z     |                                             ^^^^^^^^^^ associated function or constant not found in `Base64UrlUnpadded`
+2026-09-30T04:36:53.1177260Z     |
+2026-09-30T04:36:53.1177739Z help: there is an associated function `encode` with a similar name
+2026-09-30T04:36:53.1178573Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64ct-1.8.3/src/encoding.rs:49:5
+2026-09-30T04:36:53.1179382Z     |
+2026-09-30T04:36:53.1179938Z  49 |     fn encode<'a>(src: &[u8], dst: &'a mut [u8]) -> Result<&'a str, InvalidLengthError>;
+2026-09-30T04:36:53.1180543Z     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-30T04:36:53.1180849Z 
+2026-09-30T04:36:53.1650102Z For more information about this error, try `rustc --explain E0599`.
+2026-09-30T04:36:53.1676307Z error: could not compile `alethech` (bin "alethech-container-v2") due to 9 previous errors
+2026-09-30T04:36:53.1821014Z ##[error]Process completed with exit code 101.
+2026-09-30T04:36:53.2007433Z Post job cleanup.
+2026-09-30T04:36:53.2647342Z [command]/usr/bin/git version
+2026-09-30T04:36:53.2678237Z git version 2.55.0
+2026-09-30T04:36:53.2704783Z Temporarily overriding HOME='/home/runner/work/_temp/26f22f82-9791-40ff-a704-94e99594f23e' before making global git config changes
+2026-09-30T04:36:53.2706053Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T04:36:53.2709133Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T04:36:53.2737836Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T04:36:53.2763055Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T04:36:53.2924959Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T04:36:53.2944065Z http.https://github.com/.extraheader
+2026-09-30T04:36:53.2948654Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-30T04:36:53.2976579Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T04:36:53.3268274Z Cleaning up orphan processes
+2026-09-30T04:36:53.3460849Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

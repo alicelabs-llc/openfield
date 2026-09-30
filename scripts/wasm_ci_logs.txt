@@ -1,0 +1,724 @@
+﻿2026-09-30T04:51:18.5313387Z Current runner version: '2.337.0'
+2026-09-30T04:51:18.5339053Z ##[group]Runner Image Provisioner
+2026-09-30T04:51:18.5340031Z Hosted Compute Agent
+2026-09-30T04:51:18.5341077Z Version: 20260828.587
+2026-09-30T04:51:18.5341752Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-30T04:51:18.5342573Z Build Date: 2026-08-28T16:44:25Z
+2026-09-30T04:51:18.5343269Z Worker ID: {4cc665d8-ee65-43d5-9e46-43a6654e1a7f}
+2026-09-30T04:51:18.5344008Z Azure Region: centralus
+2026-09-30T04:51:18.5344693Z ##[endgroup]
+2026-09-30T04:51:18.5346237Z ##[group]Operating System
+2026-09-30T04:51:18.5346962Z Ubuntu
+2026-09-30T04:51:18.5347513Z 24.04.5
+2026-09-30T04:51:18.5348045Z LTS
+2026-09-30T04:51:18.5348662Z ##[endgroup]
+2026-09-30T04:51:18.5349219Z ##[group]Runner Image
+2026-09-30T04:51:18.5349864Z Image: ubuntu-24.04
+2026-09-30T04:51:18.5350892Z Version: 20260920.314.1
+2026-09-30T04:51:18.5352282Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-30T04:51:18.5353895Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-30T04:51:18.5354910Z ##[endgroup]
+2026-09-30T04:51:18.5356085Z ##[group]GITHUB_TOKEN Permissions
+2026-09-30T04:51:18.5358324Z Contents: read
+2026-09-30T04:51:18.5359016Z Metadata: read
+2026-09-30T04:51:18.5359582Z ##[endgroup]
+2026-09-30T04:51:18.5361994Z Secret source: Actions
+2026-09-30T04:51:18.5362979Z Cache mode: write
+2026-09-30T04:51:18.5364062Z Prepare workflow directory
+2026-09-30T04:51:18.5702143Z Prepare all required actions
+2026-09-30T04:51:18.5757409Z Getting action download info
+2026-09-30T04:51:18.8832104Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-30T04:51:18.9913545Z Download action repository 'actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2026-09-30T04:51:19.2299478Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-30T04:51:19.4867524Z Complete job name: cross-language conformance
+2026-09-30T04:51:19.5872848Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-30T04:51:19.5874022Z with:
+2026-09-30T04:51:19.5874539Z   repository: eddyflores100-lang/alethech
+2026-09-30T04:51:19.5878680Z   token: ***
+2026-09-30T04:51:19.5879149Z   ssh-strict: true
+2026-09-30T04:51:19.5879619Z   ssh-user: git
+2026-09-30T04:51:19.5880094Z   persist-credentials: true
+2026-09-30T04:51:19.5881009Z   clean: true
+2026-09-30T04:51:19.5881491Z   sparse-checkout-cone-mode: true
+2026-09-30T04:51:19.5882056Z   fetch-depth: 1
+2026-09-30T04:51:19.5882527Z   fetch-tags: false
+2026-09-30T04:51:19.5882998Z   show-progress: true
+2026-09-30T04:51:19.5883480Z   lfs: false
+2026-09-30T04:51:19.5883934Z   submodules: false
+2026-09-30T04:51:19.5884424Z   set-safe-directory: true
+2026-09-30T04:51:19.5885259Z ##[endgroup]
+2026-09-30T04:51:19.6948313Z Syncing repository: eddyflores100-lang/alethech
+2026-09-30T04:51:19.6950893Z ##[group]Getting Git version info
+2026-09-30T04:51:19.6951927Z Working directory is '/home/runner/work/alethech/alethech'
+2026-09-30T04:51:19.6953031Z [command]/usr/bin/git version
+2026-09-30T04:51:19.7012576Z git version 2.55.0
+2026-09-30T04:51:19.7042286Z ##[endgroup]
+2026-09-30T04:51:19.7056785Z Temporarily overriding HOME='/home/runner/work/_temp/cfbc4bc9-0108-4979-97dc-44834a9fcd23' before making global git config changes
+2026-09-30T04:51:19.7059451Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T04:51:19.7063820Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T04:51:19.7121658Z Deleting the contents of '/home/runner/work/alethech/alethech'
+2026-09-30T04:51:19.7127505Z ##[group]Initializing the repository
+2026-09-30T04:51:19.7133143Z [command]/usr/bin/git init /home/runner/work/alethech/alethech
+2026-09-30T04:51:19.7268286Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-30T04:51:19.7270472Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-30T04:51:19.7272348Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-30T04:51:19.7273804Z hint: call:
+2026-09-30T04:51:19.7274525Z hint:
+2026-09-30T04:51:19.7275601Z hint: 	git config --global init.defaultBranch <name>
+2026-09-30T04:51:19.7276509Z hint:
+2026-09-30T04:51:19.7277578Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-30T04:51:19.7279028Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-30T04:51:19.7279878Z hint:
+2026-09-30T04:51:19.7280648Z hint: 	git branch -m <name>
+2026-09-30T04:51:19.7281224Z hint:
+2026-09-30T04:51:19.7281904Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-30T04:51:19.7282986Z Initialized empty Git repository in /home/runner/work/alethech/alethech/.git/
+2026-09-30T04:51:19.7286117Z [command]/usr/bin/git remote add origin https://github.com/eddyflores100-lang/alethech
+2026-09-30T04:51:19.7339619Z ##[endgroup]
+2026-09-30T04:51:19.7340841Z ##[group]Disabling automatic garbage collection
+2026-09-30T04:51:19.7343963Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-30T04:51:19.7451152Z ##[endgroup]
+2026-09-30T04:51:19.7453189Z ##[group]Setting up auth
+2026-09-30T04:51:19.7468610Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T04:51:19.7500775Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T04:51:19.7908676Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T04:51:19.7945952Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T04:51:19.8176519Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-30T04:51:19.8220058Z ##[endgroup]
+2026-09-30T04:51:19.8222011Z ##[group]Fetching the repository
+2026-09-30T04:51:19.8232453Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0382e2e8648b6e4f4a86c7273d2f9f18cd98c222:refs/remotes/pull/8/merge
+2026-09-30T04:51:20.5441113Z From https://github.com/eddyflores100-lang/alethech
+2026-09-30T04:51:20.5442935Z  * [new ref]         0382e2e8648b6e4f4a86c7273d2f9f18cd98c222 -> pull/8/merge
+2026-09-30T04:51:20.5447911Z ##[endgroup]
+2026-09-30T04:51:20.5449553Z ##[group]Determining the checkout info
+2026-09-30T04:51:20.5451748Z ##[endgroup]
+2026-09-30T04:51:20.5456620Z [command]/usr/bin/git sparse-checkout disable
+2026-09-30T04:51:20.5515219Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-30T04:51:20.5555574Z ##[group]Checking out the ref
+2026-09-30T04:51:20.5560169Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/8/merge
+2026-09-30T04:51:20.5831517Z Note: switching to 'refs/remotes/pull/8/merge'.
+2026-09-30T04:51:20.5833150Z 
+2026-09-30T04:51:20.5834582Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-30T04:51:20.5838009Z changes and commit them, and you can discard any commits you make in this
+2026-09-30T04:51:20.5841023Z state without impacting any branches by switching back to a branch.
+2026-09-30T04:51:20.5842436Z 
+2026-09-30T04:51:20.5843374Z If you want to create a new branch to retain commits you create, you may
+2026-09-30T04:51:20.5845628Z do so (now or later) by using -c with the switch command. Example:
+2026-09-30T04:51:20.5846984Z 
+2026-09-30T04:51:20.5847553Z   git switch -c <new-branch-name>
+2026-09-30T04:51:20.5848486Z 
+2026-09-30T04:51:20.5849047Z Or undo this operation with:
+2026-09-30T04:51:20.5850658Z 
+2026-09-30T04:51:20.5851249Z   git switch -
+2026-09-30T04:51:20.5851951Z 
+2026-09-30T04:51:20.5853208Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-30T04:51:20.5854839Z 
+2026-09-30T04:51:20.5857291Z HEAD is now at 0382e2e Merge 672fbedc6cfd6dcb49c46b580dcb4bb05ea3f3c7 into de5e67e4298b8233df005aee8fcceb87f9796ca3
+2026-09-30T04:51:20.5864985Z ##[endgroup]
+2026-09-30T04:51:20.5916856Z [command]/usr/bin/git log -1 --format=%H
+2026-09-30T04:51:20.5947310Z 0382e2e8648b6e4f4a86c7273d2f9f18cd98c222
+2026-09-30T04:51:20.6395800Z ##[group]Run actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+2026-09-30T04:51:20.6397520Z with:
+2026-09-30T04:51:20.6398351Z   python-version: 3.12
+2026-09-30T04:51:20.6399340Z   check-latest: false
+2026-09-30T04:51:20.6412236Z   token: ***
+2026-09-30T04:51:20.6413233Z   update-environment: true
+2026-09-30T04:51:20.6414310Z   allow-prereleases: false
+2026-09-30T04:51:20.6415328Z ##[endgroup]
+2026-09-30T04:51:20.7900121Z ##[group]Installed versions
+2026-09-30T04:51:20.8053336Z (node:2171) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T04:51:20.8057801Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T04:51:20.8060792Z Successfully set up CPython (3.12.14)
+2026-09-30T04:51:20.8063914Z ##[endgroup]
+2026-09-30T04:51:20.8404942Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-09-30T04:51:20.8407563Z with:
+2026-09-30T04:51:20.8408950Z   node-version: 20
+2026-09-30T04:51:20.8410833Z   always-auth: false
+2026-09-30T04:51:20.8412366Z   check-latest: false
+2026-09-30T04:51:20.8423081Z   token: ***
+2026-09-30T04:51:20.8423948Z env:
+2026-09-30T04:51:20.8425002Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:20.8426763Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:51:20.8428715Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:20.8430560Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:20.8432166Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:20.8433794Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:51:20.8435169Z ##[endgroup]
+2026-09-30T04:51:21.0048372Z Attempting to download 20...
+2026-09-30T04:51:21.0157203Z (node:2179) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-30T04:51:21.0162107Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-30T04:51:21.7395882Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-09-30T04:51:22.2158567Z Extracting ...
+2026-09-30T04:51:22.2385922Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/9b3eb21c-dc85-4c00-82cb-c190e35c4872 -f /home/runner/work/_temp/bf988987-4c57-488c-b8f5-e893057c7ea6
+2026-09-30T04:51:23.2487326Z Adding to the cache ...
+2026-09-30T04:51:25.1884949Z ##[group]Environment details
+2026-09-30T04:51:25.4153090Z node: v20.20.2
+2026-09-30T04:51:25.4153546Z npm: 10.8.2
+2026-09-30T04:51:25.4153888Z yarn: 1.22.22
+2026-09-30T04:51:25.4154402Z ##[endgroup]
+2026-09-30T04:51:25.4321057Z ##[group]Run pip install -e .
+2026-09-30T04:51:25.4321413Z [36;1mpip install -e .[0m
+2026-09-30T04:51:25.4706592Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:51:25.4707047Z env:
+2026-09-30T04:51:25.4707486Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:25.4708237Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:51:25.4709088Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:25.4709825Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:25.4710838Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:25.4711960Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:51:25.4712564Z ##[endgroup]
+2026-09-30T04:51:29.3762673Z Obtaining file:///home/runner/work/alethech/alethech
+2026-09-30T04:51:29.3774485Z   Installing build dependencies: started
+2026-09-30T04:51:31.1609461Z   Installing build dependencies: finished with status 'done'
+2026-09-30T04:51:31.1615758Z   Checking if build backend supports build_editable: started
+2026-09-30T04:51:31.6010816Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-09-30T04:51:31.6019037Z   Getting requirements to build editable: started
+2026-09-30T04:51:31.9540864Z   Getting requirements to build editable: finished with status 'done'
+2026-09-30T04:51:31.9550027Z   Preparing editable metadata (pyproject.toml): started
+2026-09-30T04:51:32.1504953Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-09-30T04:51:32.4446885Z Collecting cryptography>=42.0 (from alethech==0.8.5)
+2026-09-30T04:51:32.5105579Z   Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+2026-09-30T04:51:32.5366372Z Collecting click>=8.0 (from alethech==0.8.5)
+2026-09-30T04:51:32.5466745Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-09-30T04:51:32.6634688Z Collecting cffi>=2.0.0 (from cryptography>=42.0->alethech==0.8.5)
+2026-09-30T04:51:32.6744967Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-09-30T04:51:32.6927785Z Collecting pycparser (from cffi>=2.0.0->cryptography>=42.0->alethech==0.8.5)
+2026-09-30T04:51:32.7029758Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-09-30T04:51:32.7183650Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-09-30T04:51:32.7474573Z Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+2026-09-30T04:51:32.8335177Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 65.8 MB/s  0:00:00
+2026-09-30T04:51:32.8437623Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-09-30T04:51:32.8563491Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-09-30T04:51:32.8733499Z Building wheels for collected packages: alethech
+2026-09-30T04:51:32.8741243Z   Building editable for alethech (pyproject.toml): started
+2026-09-30T04:51:33.0964885Z   Building editable for alethech (pyproject.toml): finished with status 'done'
+2026-09-30T04:51:33.0971100Z   Created wheel for alethech: filename=alethech-0.8.5-0.editable-py3-none-any.whl size=8561 sha256=eb532c52c73702b44d6dec95f35cbd9766d9432ff6908252bffd596cd4ab2fd1
+2026-09-30T04:51:33.0973166Z   Stored in directory: /tmp/pip-ephem-wheel-cache-iz1stx9n/wheels/54/78/de/76f9ae20f73147d6e17ff4620b900a61c2935018b9873a40ed
+2026-09-30T04:51:33.1000021Z Successfully built alethech
+2026-09-30T04:51:33.1184661Z Installing collected packages: pycparser, click, cffi, cryptography, alethech
+2026-09-30T04:51:33.4747704Z 
+2026-09-30T04:51:33.4760010Z Successfully installed alethech-0.8.5 cffi-2.1.1 click-8.5.0 cryptography-50.0.1 pycparser-3.0
+2026-09-30T04:51:33.5456776Z ##[group]Run cargo build --locked --manifest-path alethech-rs/Cargo.toml --release --bin alethech-conf --bin alethech-container --bin alethech-container-v2
+2026-09-30T04:51:33.5457948Z [36;1mcargo build --locked --manifest-path alethech-rs/Cargo.toml --release --bin alethech-conf --bin alethech-container --bin alethech-container-v2[0m
+2026-09-30T04:51:33.5523237Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:51:33.5523490Z env:
+2026-09-30T04:51:33.5523759Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:33.5524219Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:51:33.5524680Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:33.5525081Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:33.5525475Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:33.5526038Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:51:33.5526416Z ##[endgroup]
+2026-09-30T04:51:36.6423322Z     Updating crates.io index
+2026-09-30T04:51:37.0350479Z  Downloading crates ...
+2026-09-30T04:51:37.1477716Z   Downloaded aead v0.5.2
+2026-09-30T04:51:37.1970252Z   Downloaded block-buffer v0.10.4
+2026-09-30T04:51:37.1982341Z   Downloaded base64ct v1.8.3
+2026-09-30T04:51:37.2072409Z   Downloaded cfg-if v1.0.5
+2026-09-30T04:51:37.2087476Z   Downloaded aes v0.8.4
+2026-09-30T04:51:37.2127337Z   Downloaded version_check v0.9.5
+2026-09-30T04:51:37.2140739Z   Downloaded signature v2.2.0
+2026-09-30T04:51:37.2155498Z   Downloaded crypto-common v0.1.7
+2026-09-30T04:51:37.2164939Z   Downloaded subtle v2.6.1
+2026-09-30T04:51:37.2176999Z   Downloaded ghash v0.5.1
+2026-09-30T04:51:37.2188467Z   Downloaded inout v0.1.4
+2026-09-30T04:51:37.2199913Z   Downloaded cpufeatures v0.2.17
+2026-09-30T04:51:37.2214329Z   Downloaded rustc_version v0.4.1
+2026-09-30T04:51:37.2227769Z   Downloaded hex v0.4.3
+2026-09-30T04:51:37.2244626Z   Downloaded generic-array v0.14.7
+2026-09-30T04:51:37.2259210Z   Downloaded curve25519-dalek-derive v0.1.1
+2026-09-30T04:51:37.2269198Z   Downloaded universal-hash v0.5.1
+2026-09-30T04:51:37.2278137Z   Downloaded salsa20 v0.10.2
+2026-09-30T04:51:37.2290113Z   Downloaded pbkdf2 v0.12.2
+2026-09-30T04:51:37.2303119Z   Downloaded itoa v1.0.18
+2026-09-30T04:51:37.2317388Z   Downloaded rand_chacha v0.3.1
+2026-09-30T04:51:37.2328457Z   Downloaded scrypt v0.11.0
+2026-09-30T04:51:37.2349376Z   Downloaded digest v0.10.7
+2026-09-30T04:51:37.2368496Z   Downloaded sha2 v0.10.9
+2026-09-30T04:51:37.2394249Z   Downloaded spki v0.7.3
+2026-09-30T04:51:37.2412524Z   Downloaded zeroize v1.9.0
+2026-09-30T04:51:37.2565345Z   Downloaded pkcs8 v0.10.2
+2026-09-30T04:51:37.2602660Z   Downloaded polyval v0.6.2
+2026-09-30T04:51:37.2619191Z   Downloaded thiserror v1.0.69
+2026-09-30T04:51:37.2677555Z   Downloaded cipher v0.4.4
+2026-09-30T04:51:37.2699478Z   Downloaded quote v1.0.47
+2026-09-30T04:51:37.2729217Z   Downloaded zmij v1.0.23
+2026-09-30T04:51:37.2747525Z   Downloaded ed25519 v2.2.3
+2026-09-30T04:51:37.2765779Z   Downloaded ctr v0.9.2
+2026-09-30T04:51:37.2788085Z   Downloaded ppv-lite86 v0.2.21
+2026-09-30T04:51:37.2801410Z   Downloaded password-hash v0.5.0
+2026-09-30T04:51:37.2819279Z   Downloaded semver v1.0.28
+2026-09-30T04:51:37.2843331Z   Downloaded rand_core v0.6.4
+2026-09-30T04:51:37.2857285Z   Downloaded thiserror-impl v1.0.69
+2026-09-30T04:51:37.2870911Z   Downloaded unicode-ident v1.0.26
+2026-09-30T04:51:37.2899114Z   Downloaded getrandom v0.2.17
+2026-09-30T04:51:37.2929083Z   Downloaded hmac v0.12.1
+2026-09-30T04:51:37.2949345Z   Downloaded opaque-debug v0.3.1
+2026-09-30T04:51:37.2959070Z   Downloaded serde_core v1.0.229
+2026-09-30T04:51:37.2986557Z   Downloaded const-oid v0.9.6
+2026-09-30T04:51:37.3005721Z   Downloaded aes-gcm v0.10.3
+2026-09-30T04:51:37.3035499Z   Downloaded proc-macro2 v1.0.107
+2026-09-30T04:51:37.3065540Z   Downloaded serde_derive v1.0.229
+2026-09-30T04:51:37.3099424Z   Downloaded serde v1.0.229
+2026-09-30T04:51:37.3135270Z   Downloaded typenum v1.20.1
+2026-09-30T04:51:37.3170599Z   Downloaded der v0.7.10
+2026-09-30T04:51:37.3225112Z   Downloaded memchr v2.8.3
+2026-09-30T04:51:37.3403447Z   Downloaded rand v0.8.8
+2026-09-30T04:51:37.3438818Z   Downloaded ed25519-dalek v2.2.0
+2026-09-30T04:51:37.3470500Z   Downloaded serde_json v1.0.151
+2026-09-30T04:51:37.3544895Z   Downloaded hkdf v0.12.4
+2026-09-30T04:51:37.3568681Z   Downloaded zerocopy v0.8.59
+2026-09-30T04:51:37.3784207Z   Downloaded curve25519-dalek v4.1.3
+2026-09-30T04:51:37.3865940Z   Downloaded syn v2.0.119
+2026-09-30T04:51:37.3972159Z   Downloaded syn v3.0.6
+2026-09-30T04:51:37.4082216Z   Downloaded libc v0.2.189
+2026-09-30T04:51:37.5509639Z    Compiling libc v0.2.189
+2026-09-30T04:51:37.5511396Z    Compiling version_check v0.9.5
+2026-09-30T04:51:37.5512201Z    Compiling cfg-if v1.0.5
+2026-09-30T04:51:37.5512758Z    Compiling typenum v1.20.1
+2026-09-30T04:51:39.2656356Z    Compiling subtle v2.6.1
+2026-09-30T04:51:39.9339309Z    Compiling proc-macro2 v1.0.107
+2026-09-30T04:51:40.3561817Z    Compiling unicode-ident v1.0.26
+2026-09-30T04:51:40.3853271Z    Compiling generic-array v0.14.7
+2026-09-30T04:51:40.4301987Z    Compiling quote v1.0.47
+2026-09-30T04:51:42.4556878Z    Compiling cpufeatures v0.2.17
+2026-09-30T04:51:42.4792320Z    Compiling semver v1.0.28
+2026-09-30T04:51:42.7562035Z    Compiling zerocopy v0.8.59
+2026-09-30T04:51:42.9697993Z    Compiling block-buffer v0.10.4
+2026-09-30T04:51:42.9771543Z    Compiling inout v0.1.4
+2026-09-30T04:51:43.0498217Z    Compiling rustc_version v0.4.1
+2026-09-30T04:51:43.0592536Z    Compiling serde_core v1.0.229
+2026-09-30T04:51:43.3771445Z    Compiling syn v2.0.119
+2026-09-30T04:51:43.3841476Z    Compiling curve25519-dalek v4.1.3
+2026-09-30T04:51:43.4749321Z    Compiling opaque-debug v0.3.1
+2026-09-30T04:51:43.5018226Z    Compiling zmij v1.0.23
+2026-09-30T04:51:43.6771975Z    Compiling getrandom v0.2.17
+2026-09-30T04:51:43.7094315Z    Compiling syn v3.0.6
+2026-09-30T04:51:44.0802464Z    Compiling rand_core v0.6.4
+2026-09-30T04:51:44.2781600Z    Compiling crypto-common v0.1.7
+2026-09-30T04:51:44.3641586Z    Compiling digest v0.10.7
+2026-09-30T04:51:44.5652076Z    Compiling cipher v0.4.4
+2026-09-30T04:51:44.7556911Z    Compiling hmac v0.12.1
+2026-09-30T04:51:44.8431544Z    Compiling universal-hash v0.5.1
+2026-09-30T04:51:44.9215119Z    Compiling polyval v0.6.2
+2026-09-30T04:51:45.4347342Z    Compiling sha2 v0.10.9
+2026-09-30T04:51:46.8141566Z    Compiling curve25519-dalek-derive v0.1.1
+2026-09-30T04:51:47.3381344Z    Compiling signature v2.2.0
+2026-09-30T04:51:47.4068109Z    Compiling serde_json v1.0.151
+2026-09-30T04:51:47.4991420Z    Compiling ppv-lite86 v0.2.21
+2026-09-30T04:51:47.5040067Z    Compiling serde v1.0.229
+2026-09-30T04:51:47.5061934Z    Compiling thiserror v1.0.69
+2026-09-30T04:51:47.6586087Z    Compiling base64ct v1.8.3
+2026-09-30T04:51:47.6603828Z    Compiling zeroize v1.9.0
+2026-09-30T04:51:47.8991567Z    Compiling password-hash v0.5.0
+2026-09-30T04:51:47.9088300Z    Compiling rand_chacha v0.3.1
+2026-09-30T04:51:48.5676986Z    Compiling ed25519 v2.2.3
+2026-09-30T04:51:48.6249698Z    Compiling thiserror-impl v1.0.69
+2026-09-30T04:51:48.7261607Z    Compiling serde_derive v1.0.229
+2026-09-30T04:51:48.9671468Z    Compiling ghash v0.5.1
+2026-09-30T04:51:49.0281728Z    Compiling pbkdf2 v0.12.2
+2026-09-30T04:51:49.1031477Z    Compiling salsa20 v0.10.2
+2026-09-30T04:51:49.1901730Z    Compiling ctr v0.9.2
+2026-09-30T04:51:49.3191388Z    Compiling aes v0.8.4
+2026-09-30T04:51:49.6731463Z    Compiling aead v0.5.2
+2026-09-30T04:51:50.2322843Z    Compiling memchr v2.8.3
+2026-09-30T04:51:50.5241569Z    Compiling itoa v1.0.18
+2026-09-30T04:51:51.4821442Z    Compiling aes-gcm v0.10.3
+2026-09-30T04:51:51.6521468Z    Compiling scrypt v0.11.0
+2026-09-30T04:51:51.7022220Z    Compiling ed25519-dalek v2.2.0
+2026-09-30T04:51:52.0545657Z    Compiling rand v0.8.8
+2026-09-30T04:51:52.0550818Z    Compiling hkdf v0.12.4
+2026-09-30T04:51:52.1481728Z    Compiling hex v0.4.3
+2026-09-30T04:51:52.8602596Z    Compiling alethech v0.8.5 (/home/runner/work/alethech/alethech/alethech-rs)
+2026-09-30T04:51:55.7304625Z     Finished `release` profile [optimized] target(s) in 21.58s
+2026-09-30T04:51:55.7703020Z ##[group]Run cargo test --locked --manifest-path alethech-rs/Cargo.toml
+2026-09-30T04:51:55.7703562Z [36;1mcargo test --locked --manifest-path alethech-rs/Cargo.toml[0m
+2026-09-30T04:51:55.7766633Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:51:55.7766882Z env:
+2026-09-30T04:51:55.7767149Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:55.7767598Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:51:55.7768038Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:55.7768432Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:55.7768828Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:51:55.7769220Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:51:55.7769731Z ##[endgroup]
+2026-09-30T04:51:55.8372189Z    Compiling libc v0.2.189
+2026-09-30T04:51:55.8372868Z    Compiling cfg-if v1.0.5
+2026-09-30T04:51:55.8386432Z    Compiling version_check v0.9.5
+2026-09-30T04:51:55.8387287Z    Compiling typenum v1.20.1
+2026-09-30T04:51:55.8633961Z    Compiling subtle v2.6.1
+2026-09-30T04:51:55.9565692Z    Compiling proc-macro2 v1.0.107
+2026-09-30T04:51:56.0737226Z    Compiling generic-array v0.14.7
+2026-09-30T04:51:56.2391575Z    Compiling unicode-ident v1.0.26
+2026-09-30T04:51:56.3321353Z    Compiling quote v1.0.47
+2026-09-30T04:51:56.5085590Z    Compiling cpufeatures v0.2.17
+2026-09-30T04:51:56.5421517Z    Compiling semver v1.0.28
+2026-09-30T04:51:56.9621292Z    Compiling syn v2.0.119
+2026-09-30T04:51:57.0147253Z    Compiling zerocopy v0.8.59
+2026-09-30T04:51:57.0368461Z    Compiling block-buffer v0.10.4
+2026-09-30T04:51:57.1109024Z    Compiling inout v0.1.4
+2026-09-30T04:51:57.1841939Z    Compiling rustc_version v0.4.1
+2026-09-30T04:51:57.2501591Z    Compiling getrandom v0.2.17
+2026-09-30T04:51:57.2801696Z    Compiling serde_core v1.0.229
+2026-09-30T04:51:57.4008789Z    Compiling rand_core v0.6.4
+2026-09-30T04:51:57.4026736Z    Compiling curve25519-dalek v4.1.3
+2026-09-30T04:51:57.5371628Z    Compiling crypto-common v0.1.7
+2026-09-30T04:51:57.5701365Z    Compiling zmij v1.0.23
+2026-09-30T04:51:57.6012431Z    Compiling digest v0.10.7
+2026-09-30T04:51:57.7324396Z    Compiling cipher v0.4.4
+2026-09-30T04:51:57.7565020Z    Compiling hmac v0.12.1
+2026-09-30T04:51:57.8307301Z    Compiling universal-hash v0.5.1
+2026-09-30T04:51:57.8972368Z    Compiling opaque-debug v0.3.1
+2026-09-30T04:51:57.9011271Z    Compiling sha2 v0.10.9
+2026-09-30T04:51:57.9301896Z    Compiling polyval v0.6.2
+2026-09-30T04:51:58.2761779Z    Compiling syn v3.0.6
+2026-09-30T04:52:00.5719564Z    Compiling serde v1.0.229
+2026-09-30T04:52:00.6817422Z    Compiling signature v2.2.0
+2026-09-30T04:52:00.7366421Z    Compiling curve25519-dalek-derive v0.1.1
+2026-09-30T04:52:00.7481633Z    Compiling serde_json v1.0.151
+2026-09-30T04:52:00.7561498Z    Compiling thiserror v1.0.69
+2026-09-30T04:52:00.8514986Z    Compiling zeroize v1.9.0
+2026-09-30T04:52:00.9254077Z    Compiling base64ct v1.8.3
+2026-09-30T04:52:01.0251647Z    Compiling thiserror-impl v1.0.69
+2026-09-30T04:52:01.1651555Z    Compiling password-hash v0.5.0
+2026-09-30T04:52:01.2981629Z    Compiling ppv-lite86 v0.2.21
+2026-09-30T04:52:01.5755934Z    Compiling ed25519 v2.2.3
+2026-09-30T04:52:01.6361603Z    Compiling rand_chacha v0.3.1
+2026-09-30T04:52:01.7101711Z    Compiling serde_derive v1.0.229
+2026-09-30T04:52:02.1088991Z    Compiling ghash v0.5.1
+2026-09-30T04:52:02.1703686Z    Compiling salsa20 v0.10.2
+2026-09-30T04:52:02.2482160Z    Compiling ctr v0.9.2
+2026-09-30T04:52:02.3621505Z    Compiling aes v0.8.4
+2026-09-30T04:52:02.4171770Z    Compiling pbkdf2 v0.12.2
+2026-09-30T04:52:02.4711478Z    Compiling aead v0.5.2
+2026-09-30T04:52:02.5632028Z    Compiling itoa v1.0.18
+2026-09-30T04:52:02.6111539Z    Compiling memchr v2.8.3
+2026-09-30T04:52:02.6961423Z    Compiling scrypt v0.11.0
+2026-09-30T04:52:02.9186897Z    Compiling aes-gcm v0.10.3
+2026-09-30T04:52:02.9722252Z    Compiling ed25519-dalek v2.2.0
+2026-09-30T04:52:03.0151845Z    Compiling rand v0.8.8
+2026-09-30T04:52:03.3711373Z    Compiling hkdf v0.12.4
+2026-09-30T04:52:03.4511471Z    Compiling hex v0.4.3
+2026-09-30T04:52:04.4023816Z    Compiling alethech v0.8.5 (/home/runner/work/alethech/alethech/alethech-rs)
+2026-09-30T04:52:05.5569315Z     Finished `test` profile [unoptimized + debuginfo] target(s) in 9.76s
+2026-09-30T04:52:05.5602326Z      Running unittests src/lib.rs (alethech-rs/target/debug/deps/alethech-6daa79e0b4bfc04e)
+2026-09-30T04:52:05.5614228Z 
+2026-09-30T04:52:05.5614369Z running 30 tests
+2026-09-30T04:52:05.5618680Z test canonical::tests::test_array_preserves_order ... ok
+2026-09-30T04:52:05.5619535Z test canonical::tests::test_basic_object ... ok
+2026-09-30T04:52:05.5620125Z test canonical::tests::test_empty_array ... ok
+2026-09-30T04:52:05.5621115Z test canonical::tests::test_empty_object ... ok
+2026-09-30T04:52:05.5622235Z test canonical::tests::test_integer_float ... ok
+2026-09-30T04:52:05.5622999Z test canonical::tests::test_negative_zero ... ok
+2026-09-30T04:52:05.5623804Z test canonical::tests::test_nested_object ... ok
+2026-09-30T04:52:05.5624208Z test canonical::tests::test_null ... ok
+2026-09-30T04:52:05.5624601Z test canonical::tests::test_string_escaping ... ok
+2026-09-30T04:52:05.5624998Z test canonical::tests::test_true_false ... ok
+2026-09-30T04:52:05.5625374Z test canonical::tests::test_utf16_sorting ... ok
+2026-09-30T04:52:05.5625738Z test crypto::tests::test_b32lower ... ok
+2026-09-30T04:52:05.5626114Z test canonical::tests::test_unicode_preserved ... ok
+2026-09-30T04:52:05.5626498Z test canonical::tests::test_zero ... ok
+2026-09-30T04:52:05.5631478Z test crypto::tests::test_b64url_roundtrip ... ok
+2026-09-30T04:52:05.5632238Z test crypto::tests::test_derive_agent_id_deterministic ... ok
+2026-09-30T04:52:05.5633118Z test crypto::tests::test_sha256_empty ... ok
+2026-09-30T04:52:05.5633921Z test crypto::tests::test_sha256_known_vector ... ok
+2026-09-30T04:52:05.5650874Z test objects::tests::test_commit_id_changes_with_content ... ok
+2026-09-30T04:52:05.5749746Z test crypto::tests::test_keypair_generate_sign_verify ... ok
+2026-09-30T04:52:05.5773808Z test objects::tests::test_commit_sign_and_verify ... ok
+2026-09-30T04:52:05.5801032Z test objects::tests::test_identity_derivation ... ok
+2026-09-30T04:52:05.5819383Z test verify::tests::test_ancestry_check_direct ... ok
+2026-09-30T04:52:05.5829312Z test crypto::tests::test_keypair_tamper_detected ... ok
+2026-09-30T04:52:05.5830763Z test crypto::tests::test_verify_with_public_key ... ok
+2026-09-30T04:52:05.5831732Z test verify::tests::test_ancestry_check_parent ... ok
+2026-09-30T04:52:05.5832756Z test verify::tests::test_ancestry_check_unreachable ... ok
+2026-09-30T04:52:05.5900755Z test objects::tests::test_commit_tamper_detected ... ok
+2026-09-30T04:52:05.5922642Z test verify::tests::test_verify_tampered_commit ... ok
+2026-09-30T04:52:05.5933778Z test verify::tests::test_verify_valid_commit ... ok
+2026-09-30T04:52:05.5934046Z 
+2026-09-30T04:52:05.5935972Z test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+2026-09-30T04:52:05.5937273Z      Running unittests src/bin/conf.rs (alethech-rs/target/debug/deps/alethech_conf-fe67a41fce4fd8c6)
+2026-09-30T04:52:05.5937726Z 
+2026-09-30T04:52:05.5946476Z 
+2026-09-30T04:52:05.5946661Z running 0 tests
+2026-09-30T04:52:05.5948047Z 
+2026-09-30T04:52:05.5948481Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-30T04:52:05.5948854Z 
+2026-09-30T04:52:05.5949398Z      Running unittests src/bin/aleth_container.rs (alethech-rs/target/debug/deps/alethech_container-0ef7f56f166804e7)
+2026-09-30T04:52:05.5958215Z 
+2026-09-30T04:52:05.5958367Z running 0 tests
+2026-09-30T04:52:05.5958621Z 
+2026-09-30T04:52:05.5958997Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-30T04:52:05.5959362Z 
+2026-09-30T04:52:05.5961381Z      Running unittests src/bin/aleth_container_v2.rs (alethech-rs/target/debug/deps/alethech_container_v2-1047b665f5ff86b0)
+2026-09-30T04:52:05.5970468Z 
+2026-09-30T04:52:05.5970673Z running 0 tests
+2026-09-30T04:52:05.5970914Z 
+2026-09-30T04:52:05.5971554Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-30T04:52:05.5972094Z 
+2026-09-30T04:52:05.5972599Z    Doc-tests alethech
+2026-09-30T04:52:06.3812299Z 
+2026-09-30T04:52:06.3812979Z running 1 test
+2026-09-30T04:52:06.4954488Z test src/lib.rs - (line 8) ... ok
+2026-09-30T04:52:06.4954743Z 
+2026-09-30T04:52:06.5019032Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+2026-09-30T04:52:06.5019469Z 
+2026-09-30T04:52:06.5123155Z ##[group]Run npx --yes tsx alethech-ts/test.ts
+2026-09-30T04:52:06.5123823Z [36;1mnpx --yes tsx alethech-ts/test.ts[0m
+2026-09-30T04:52:06.5205203Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:52:06.5205912Z env:
+2026-09-30T04:52:06.5206382Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:06.5207189Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:52:06.5207984Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:06.5208680Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:06.5209375Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:06.5210097Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:52:06.5211012Z ##[endgroup]
+2026-09-30T04:52:08.2819558Z PASS Ed25519 sign + verify
+2026-09-30T04:52:08.2820147Z PASS Ed25519 tamper detection
+2026-09-30T04:52:08.2820949Z PASS SHA-256 NIST vector abc
+2026-09-30T04:52:08.2821463Z PASS SHA-256 NIST vector empty
+2026-09-30T04:52:08.2821871Z PASS Base32 RFC 4648 vector
+2026-09-30T04:52:08.2822338Z PASS Agent ID deterministic
+2026-09-30T04:52:08.2822806Z PASS Agent ID Python/JCS conformance vector
+2026-09-30T04:52:08.2823397Z PASS JCS key sorting
+2026-09-30T04:52:08.2823742Z PASS JCS nested
+2026-09-30T04:52:08.2824013Z PASS JCS -0 to 0 RFC 8785 erratum
+2026-09-30T04:52:08.2824286Z PASS JCS 3.0 to 3
+2026-09-30T04:52:08.2824521Z PASS Commit sign + verify
+2026-09-30T04:52:08.2824782Z PASS Commit tamper detection
+2026-09-30T04:52:08.2825093Z PASS Commit ID integrity mutation guard
+2026-09-30T04:52:08.2825569Z PASS Commit ID changes with content
+2026-09-30T04:52:08.2825851Z PASS Ancestry direct self
+2026-09-30T04:52:08.2826102Z PASS Ancestry unreachable
+2026-09-30T04:52:08.2826536Z TypeScript tests: 17 passed, 0 failed
+2026-09-30T04:52:08.3067848Z ##[group]Run cargo test --manifest-path alethech-wasm/Cargo.toml
+2026-09-30T04:52:08.3068369Z [36;1mcargo test --manifest-path alethech-wasm/Cargo.toml[0m
+2026-09-30T04:52:08.3134564Z shell: /usr/bin/bash -e {0}
+2026-09-30T04:52:08.3134824Z env:
+2026-09-30T04:52:08.3135103Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:08.3135581Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-30T04:52:08.3136017Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:08.3136428Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:08.3136816Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-30T04:52:08.3137218Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-30T04:52:08.3137547Z ##[endgroup]
+2026-09-30T04:52:08.3574680Z     Updating crates.io index
+2026-09-30T04:52:08.5573952Z      Locking 54 packages to latest compatible versions
+2026-09-30T04:52:08.5597202Z       Adding aes-gcm v0.10.3 (available: v0.11.1)
+2026-09-30T04:52:08.5649410Z       Adding generic-array v0.14.7 (available: v0.14.9)
+2026-09-30T04:52:08.5664040Z       Adding getrandom v0.2.17 (available: v0.4.3)
+2026-09-30T04:52:08.5672423Z       Adding hkdf v0.12.4 (available: v0.13.0)
+2026-09-30T04:52:08.5748337Z       Adding scrypt v0.11.0 (available: v0.12.0)
+2026-09-30T04:52:08.5805561Z       Adding sha2 v0.10.9 (available: v0.11.0)
+2026-09-30T04:52:08.5943786Z  Downloading crates ...
+2026-09-30T04:52:08.6342968Z   Downloaded wasm-bindgen-macro v0.2.129
+2026-09-30T04:52:08.6440356Z   Downloaded once_cell v1.21.4
+2026-09-30T04:52:08.6468219Z   Downloaded rustversion v1.0.23
+2026-09-30T04:52:08.6523269Z   Downloaded wasm-bindgen v0.2.129
+2026-09-30T04:52:08.6589259Z   Downloaded wasm-bindgen-shared v0.2.129
+2026-09-30T04:52:08.6705041Z   Downloaded bumpalo v3.20.3
+2026-09-30T04:52:08.6732499Z   Downloaded wasm-bindgen-macro-support v0.2.129
+2026-09-30T04:52:08.6988617Z    Compiling version_check v0.9.5
+2026-09-30T04:52:08.6989213Z    Compiling libc v0.2.189
+2026-09-30T04:52:08.6989669Z    Compiling cfg-if v1.0.5
+2026-09-30T04:52:08.6990126Z    Compiling typenum v1.20.1
+2026-09-30T04:52:08.7331452Z    Compiling subtle v2.6.1
+2026-09-30T04:52:08.8121444Z    Compiling unicode-ident v1.0.26
+2026-09-30T04:52:08.8778188Z    Compiling proc-macro2 v1.0.107
+2026-09-30T04:52:08.9422225Z    Compiling generic-array v0.14.7
+2026-09-30T04:52:09.0655589Z    Compiling wasm-bindgen-shared v0.2.129
+2026-09-30T04:52:09.1826288Z    Compiling quote v1.0.47
+2026-09-30T04:52:09.2320486Z    Compiling cpufeatures v0.2.17
+2026-09-30T04:52:09.3631589Z    Compiling rustversion v1.0.23
+2026-09-30T04:52:09.9801547Z    Compiling getrandom v0.2.17
+2026-09-30T04:52:10.0126899Z    Compiling inout v0.1.4
+2026-09-30T04:52:10.0201658Z    Compiling block-buffer v0.10.4
+2026-09-30T04:52:10.0708102Z    Compiling rand_core v0.6.4
+2026-09-30T04:52:10.0861805Z    Compiling syn v3.0.6
+2026-09-30T04:52:10.1020877Z    Compiling zmij v1.0.23
+2026-09-30T04:52:10.1901764Z    Compiling crypto-common v0.1.7
+2026-09-30T04:52:10.2436378Z    Compiling bumpalo v3.20.3
+2026-09-30T04:52:10.2568353Z    Compiling cipher v0.4.4
+2026-09-30T04:52:10.4051553Z    Compiling digest v0.10.7
+2026-09-30T04:52:10.4331804Z    Compiling universal-hash v0.5.1
+2026-09-30T04:52:10.4391852Z    Compiling serde_core v1.0.229
+2026-09-30T04:52:10.4941690Z    Compiling opaque-debug v0.3.1
+2026-09-30T04:52:10.5153007Z    Compiling polyval v0.6.2
+2026-09-30T04:52:10.5761538Z    Compiling hmac v0.12.1
+2026-09-30T04:52:10.6491693Z    Compiling wasm-bindgen v0.2.129
+2026-09-30T04:52:10.6631859Z    Compiling serde_json v1.0.151
+2026-09-30T04:52:10.6891952Z    Compiling pbkdf2 v0.12.2
+2026-09-30T04:52:10.7971590Z    Compiling ghash v0.5.1
+2026-09-30T04:52:10.8651770Z    Compiling sha2 v0.10.9
+2026-09-30T04:52:11.0711647Z    Compiling ctr v0.9.2
+2026-09-30T04:52:11.1901923Z    Compiling salsa20 v0.10.2
+2026-09-30T04:52:11.2291433Z    Compiling aes v0.8.4
+2026-09-30T04:52:11.2722471Z    Compiling aead v0.5.2
+2026-09-30T04:52:11.3659346Z    Compiling itoa v1.0.18
+2026-09-30T04:52:11.5142000Z    Compiling once_cell v1.21.4
+2026-09-30T04:52:11.5701552Z    Compiling memchr v2.8.3
+2026-09-30T04:52:11.8122185Z    Compiling aes-gcm v0.10.3
+2026-09-30T04:52:11.9081973Z    Compiling scrypt v0.11.0
+2026-09-30T04:52:12.1237980Z    Compiling hkdf v0.12.4
+2026-09-30T04:52:12.1992175Z    Compiling base64ct v1.8.3
+2026-09-30T04:52:13.0874685Z    Compiling wasm-bindgen-macro-support v0.2.129
+2026-09-30T04:52:15.7629446Z    Compiling wasm-bindgen-macro v0.2.129
+2026-09-30T04:52:16.8995962Z    Compiling alethech-wasm v0.1.0 (/home/runner/work/alethech/alethech/alethech-wasm)
+2026-09-30T04:52:17.0288392Z warning: unused import: `hkdf::Hkdf`
+2026-09-30T04:52:17.0289581Z   --> src/lib.rs:15:5
+2026-09-30T04:52:17.0290655Z    |
+2026-09-30T04:52:17.0291558Z 15 | use hkdf::Hkdf;
+2026-09-30T04:52:17.0292409Z    |     ^^^^^^^^^^
+2026-09-30T04:52:17.0293120Z    |
+2026-09-30T04:52:17.0294369Z    = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+2026-09-30T04:52:17.0295355Z 
+2026-09-30T04:52:17.1548761Z warning: unused variable: `container_id`
+2026-09-30T04:52:17.1550830Z    --> src/lib.rs:576:9
+2026-09-30T04:52:17.1551842Z     |
+2026-09-30T04:52:17.1553741Z 576 |     let container_id = Base64UrlUnpadded::decode_vec(&container_id_str).map_err(|_| err("invalid container_id"))?;
+2026-09-30T04:52:17.1555926Z     |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_container_id`
+2026-09-30T04:52:17.1557128Z     |
+2026-09-30T04:52:17.1558096Z     = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+2026-09-30T04:52:17.1559059Z 
+2026-09-30T04:52:17.7293524Z warning: `alethech-wasm` (lib) generated 2 warnings (2 duplicates)
+2026-09-30T04:52:17.7762898Z warning: `alethech-wasm` (lib test) generated 2 warnings (run `cargo fix --lib -p alethech-wasm --tests` to apply 2 suggestions)
+2026-09-30T04:52:17.7763961Z     Finished `test` profile [unoptimized + debuginfo] target(s) in 9.44s
+2026-09-30T04:52:17.7848100Z      Running unittests src/lib.rs (alethech-wasm/target/debug/deps/alethech_wasm-11f5532060a9d7bc)
+2026-09-30T04:52:17.7861073Z 
+2026-09-30T04:52:17.7861418Z running 6 tests
+2026-09-30T04:52:24.5341097Z 
+2026-09-30T04:52:24.5341161Z 
+2026-09-30T04:52:24.5352519Z thread 'tests::v2_recover_preserves_payload_and_container_id' (5460) panicked at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panicking.rs:225:5:
+2026-09-30T04:52:24.5355889Z thread 'tests::v2_recover_preserves_payload_and_container_id' (5460) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/lib.rs:1323:1:
+2026-09-30T04:52:24.5371122Z panic in a function that cannot unwind
+2026-09-30T04:52:24.5371939Z function not implemented on non-wasm32 targets
+2026-09-30T04:52:24.5400876Z stack backtrace:
+2026-09-30T04:52:24.5401804Z note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2026-09-30T04:52:24.5431468Z    0:     0x55b7470e8711 - std[6c98fd8553dbae28]::backtrace_rs::backtrace::libunwind::trace
+2026-09-30T04:52:24.5441473Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/../../backtrace/src/backtrace/libunwind.rs:117:9
+2026-09-30T04:52:24.5461699Z    1:     0x55b7470e8711 - std[6c98fd8553dbae28]::backtrace_rs::backtrace::trace_unsynchronized::<std[6c98fd8553dbae28]::sys::backtrace::_print_fmt::{closure#1}>
+2026-09-30T04:52:24.5491460Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/../../backtrace/src/backtrace/mod.rs:66:14
+2026-09-30T04:52:24.5521147Z    2:     0x55b7470e8711 - std[6c98fd8553dbae28]::sys::backtrace::_print_fmt
+2026-09-30T04:52:24.5531226Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/backtrace.rs:74:9
+2026-09-30T04:52:24.5538193Z    3:     0x55b7470e8711 - <<std[6c98fd8553dbae28]::sys::backtrace::BacktraceLock>::print::DisplayBacktrace as core[c0acaeba6ab4c2e0]::fmt::Display>::fmt
+2026-09-30T04:52:24.5539293Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/backtrace.rs:44:26
+2026-09-30T04:52:24.5540460Z    4:     0x55b7470fcb6a - <core[c0acaeba6ab4c2e0]::fmt::rt::Argument>::fmt
+2026-09-30T04:52:24.5541826Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/fmt/rt.rs:152:76
+2026-09-30T04:52:24.5542525Z    5:     0x55b7470fcb6a - core[c0acaeba6ab4c2e0]::fmt::write
+2026-09-30T04:52:24.5543415Z    6:     0x55b7470ed98c - std[6c98fd8553dbae28]::io::default_write_fmt::<std[6c98fd8553dbae28]::sys::stdio::unix::Stderr>
+2026-09-30T04:52:24.5544278Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/io/mod.rs:626:11
+2026-09-30T04:52:24.5545229Z    7:     0x55b7470ed98c - <std[6c98fd8553dbae28]::sys::stdio::unix::Stderr as std[6c98fd8553dbae28]::io::Write>::write_fmt
+2026-09-30T04:52:24.5546108Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/io/mod.rs:1730:13
+2026-09-30T04:52:24.5546873Z    8:     0x55b7470c6e36 - <std[6c98fd8553dbae28]::sys::backtrace::BacktraceLock>::print
+2026-09-30T04:52:24.5547744Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/backtrace.rs:47:9
+2026-09-30T04:52:24.5548499Z    9:     0x55b7470c6e36 - std[6c98fd8553dbae28]::panicking::default_hook::{closure#0}
+2026-09-30T04:52:24.5549302Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:292:27
+2026-09-30T04:52:24.5549997Z   10:     0x55b7470e0901 - std[6c98fd8553dbae28]::panicking::default_hook
+2026-09-30T04:52:24.5551236Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:319:9
+2026-09-30T04:52:24.5553043Z   11:     0x55b74701f220 - <alloc[12e961f32105355]::boxed::Box<dyn for<'a, 'b> core[c0acaeba6ab4c2e0]::ops::function::Fn<(&'a std[6c98fd8553dbae28]::panic::PanicHookInfo<'b>,), Output = ()> + core[c0acaeba6ab4c2e0]::marker::Send + core[c0acaeba6ab4c2e0]::marker::Sync> as core[c0acaeba6ab4c2e0]::ops::function::Fn<(&std[6c98fd8553dbae28]::panic::PanicHookInfo,)>>::call
+2026-09-30T04:52:24.5554652Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/boxed.rs:2333:9
+2026-09-30T04:52:24.5555854Z   12:     0x55b74701f220 - test[69f9176bb4e5faed]::test_main_inner::<test[69f9176bb4e5faed]::test_main_static::{closure#0}>::{closure#0}
+2026-09-30T04:52:24.5556791Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/test/src/lib.rs:155:21
+2026-09-30T04:52:24.5558618Z   13:     0x55b7470e0af2 - <alloc[12e961f32105355]::boxed::Box<dyn for<'a, 'b> core[c0acaeba6ab4c2e0]::ops::function::Fn<(&'a std[6c98fd8553dbae28]::panic::PanicHookInfo<'b>,), Output = ()> + core[c0acaeba6ab4c2e0]::marker::Send + core[c0acaeba6ab4c2e0]::marker::Sync> as core[c0acaeba6ab4c2e0]::ops::function::Fn<(&std[6c98fd8553dbae28]::panic::PanicHookInfo,)>>::call
+2026-09-30T04:52:24.5560355Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/boxed.rs:2333:9
+2026-09-30T04:52:24.5561054Z   14:     0x55b7470e0af2 - std[6c98fd8553dbae28]::panicking::panic_with_hook
+2026-09-30T04:52:24.5561839Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:823:13
+2026-09-30T04:52:24.5562656Z   15:     0x55b7470c6f14 - std[6c98fd8553dbae28]::panicking::panic_handler::{closure#0}
+2026-09-30T04:52:24.5563443Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:681:13
+2026-09-30T04:52:24.5564443Z   16:     0x55b7470bc0a9 - std[6c98fd8553dbae28]::sys::backtrace::__rust_end_short_backtrace::<std[6c98fd8553dbae28]::panicking::panic_handler::{closure#0}, !>
+2026-09-30T04:52:24.5568328Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/backtrace.rs:182:18
+2026-09-30T04:52:24.5569643Z   17:     0x55b7470c7add - __rustc[100742bb89c490cb]::rust_begin_unwind
+2026-09-30T04:52:24.5571086Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:679:5
+2026-09-30T04:52:24.5572306Z   18:     0x55b7470fd11d - core[c0acaeba6ab4c2e0]::panicking::panic_nounwind_fmt::runtime
+2026-09-30T04:52:24.5573163Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panicking.rs:122:22
+2026-09-30T04:52:24.5573968Z   19:     0x55b7470fd11d - core[c0acaeba6ab4c2e0]::panicking::panic_nounwind_fmt
+2026-09-30T04:52:24.5574817Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/intrinsics/mod.rs:2458:9
+2026-09-30T04:52:24.5575561Z   20:     0x55b7470fd09b - core[c0acaeba6ab4c2e0]::panicking::panic_nounwind
+2026-09-30T04:52:24.5576392Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panicking.rs:225:5
+2026-09-30T04:52:24.5577524Z   21:     0x55b7470fd227 - core[c0acaeba6ab4c2e0]::panicking::panic_cannot_unwind
+2026-09-30T04:52:24.5578914Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panicking.rs:337:5
+2026-09-30T04:52:24.5580530Z   22:     0x55b74705336a - wasm_bindgen[268e65c29dfaec9b]::__wbindgen_describe
+2026-09-30T04:52:24.5582097Z                                at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/lib.rs:116:13
+2026-09-30T04:52:24.5583666Z   23:     0x55b747054bac - wasm_bindgen[268e65c29dfaec9b]::describe::inform
+2026-09-30T04:52:24.5585168Z                                at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/describe.rs:20:14
+2026-09-30T04:52:24.5587249Z   24:     0x55b747054bac - wasm_bindgen[268e65c29dfaec9b]::__rt::wbg_cast::breaks_if_inlined::<&str, wasm_bindgen[268e65c29dfaec9b]::JsValue>
+2026-09-30T04:52:24.5589135Z                                at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/rt/mod.rs:102:9
+2026-09-30T04:52:24.5591055Z   25:     0x55b747054a9d - wasm_bindgen[268e65c29dfaec9b]::__rt::wbg_cast::<&str, wasm_bindgen[268e65c29dfaec9b]::JsValue>
+2026-09-30T04:52:24.5592173Z                                at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/rt/mod.rs:129:27
+2026-09-30T04:52:24.5593568Z   26:     0x55b746ffd274 - <wasm_bindgen[268e65c29dfaec9b]::JsValue>::from_str
+2026-09-30T04:52:24.5594504Z                                at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/lib.rs:226:9
+2026-09-30T04:52:24.5595265Z   27:     0x55b746fed2f3 - alethech_wasm[5110679e5721df29]::err
+2026-09-30T04:52:24.5595958Z                                at /home/runner/work/alethech/alethech/alethech-wasm/src/lib.rs:30:5
+2026-09-30T04:52:24.5596662Z   28:     0x55b746feb43f - alethech_wasm[5110679e5721df29]::unlock_dek_with_recovery_v2
+2026-09-30T04:52:24.5597358Z                                at /home/runner/work/alethech/alethech/alethech-wasm/src/lib.rs:326:24
+2026-09-30T04:52:24.5598091Z   29:     0x55b746fe1461 - alethech_wasm[5110679e5721df29]::recover_aleth_v2
+2026-09-30T04:52:24.5599808Z                                at /home/runner/work/alethech/alethech/alethech-wasm/src/lib.rs:573:15
+2026-09-30T04:52:24.5601039Z   30:     0x55b74700ed77 - alethech_wasm[5110679e5721df29]::tests::v2_recover_preserves_payload_and_container_id
+2026-09-30T04:52:24.5601886Z                                at /home/runner/work/alethech/alethech/alethech-wasm/src/lib.rs:683:30
+2026-09-30T04:52:24.5602785Z   31:     0x55b746ff3ce7 - alethech_wasm[5110679e5721df29]::tests::v2_recover_preserves_payload_and_container_id::{closure#0}
+2026-09-30T04:52:24.5603860Z                                at /home/runner/work/alethech/alethech/alethech-wasm/src/lib.rs:673:55
+2026-09-30T04:52:24.5604979Z   32:     0x55b746fdb5b6 - <alethech_wasm[5110679e5721df29]::tests::v2_recover_preserves_payload_and_container_id::{closure#0} as core[c0acaeba6ab4c2e0]::ops::function::FnOnce<()>>::call_once
+2026-09-30T04:52:24.5606190Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+2026-09-30T04:52:24.5607315Z   33:     0x55b74701255b - <fn() -> core[c0acaeba6ab4c2e0]::result::Result<(), alloc[12e961f32105355]::string::String> as core[c0acaeba6ab4c2e0]::ops::function::FnOnce<()>>::call_once
+2026-09-30T04:52:24.5608385Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+2026-09-30T04:52:24.5609837Z   34:     0x55b74701255b - test[69f9176bb4e5faed]::__rust_begin_short_backtrace::<core[c0acaeba6ab4c2e0]::result::Result<(), alloc[12e961f32105355]::string::String>, fn() -> core[c0acaeba6ab4c2e0]::result::Result<(), alloc[12e961f32105355]::string::String>>
+2026-09-30T04:52:24.5611401Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/test/src/lib.rs:724:18
+2026-09-30T04:52:24.5612058Z   35:     0x55b74701fba5 - test[69f9176bb4e5faed]::run_test_in_process::{closure#0}
+2026-09-30T04:52:24.5612676Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/test/src/lib.rs:747:74
+2026-09-30T04:52:24.5613787Z   36:     0x55b74701fba5 - <core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<test[69f9176bb4e5faed]::run_test_in_process::{closure#0}> as core[c0acaeba6ab4c2e0]::ops::function::FnOnce<()>>::call_once
+2026-09-30T04:52:24.5614893Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panic/unwind_safe.rs:275:9
+2026-09-30T04:52:24.5616320Z   37:     0x55b74701fba5 - std[6c98fd8553dbae28]::panicking::catch_unwind::do_call::<core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<test[69f9176bb4e5faed]::run_test_in_process::{closure#0}>, core[c0acaeba6ab4c2e0]::result::Result<(), alloc[12e961f32105355]::string::String>>
+2026-09-30T04:52:24.5617636Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:576:43
+2026-09-30T04:52:24.5619036Z   38:     0x55b74701fba5 - std[6c98fd8553dbae28]::panicking::catch_unwind::<core[c0acaeba6ab4c2e0]::result::Result<(), alloc[12e961f32105355]::string::String>, core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<test[69f9176bb4e5faed]::run_test_in_process::{closure#0}>>
+2026-09-30T04:52:24.5620730Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:544:19
+2026-09-30T04:52:24.5622096Z   39:     0x55b74701fba5 - std[6c98fd8553dbae28]::panic::catch_unwind::<core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<test[69f9176bb4e5faed]::run_test_in_process::{closure#0}>, core[c0acaeba6ab4c2e0]::result::Result<(), alloc[12e961f32105355]::string::String>>
+2026-09-30T04:52:24.5623355Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panic.rs:359:14
+2026-09-30T04:52:24.5623933Z   40:     0x55b74701fba5 - test[69f9176bb4e5faed]::run_test_in_process
+2026-09-30T04:52:24.5624515Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/test/src/lib.rs:747:27
+2026-09-30T04:52:24.5625095Z   41:     0x55b74701fba5 - test[69f9176bb4e5faed]::run_test::{closure#0}
+2026-09-30T04:52:24.5625673Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/test/src/lib.rs:668:43
+2026-09-30T04:52:24.5626234Z   42:     0x55b747019554 - test[69f9176bb4e5faed]::run_test::{closure#1}
+2026-09-30T04:52:24.5626808Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/test/src/lib.rs:698:41
+2026-09-30T04:52:24.5627769Z   43:     0x55b747019554 - std[6c98fd8553dbae28]::sys::backtrace::__rust_begin_short_backtrace::<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>
+2026-09-30T04:52:24.5628652Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/backtrace.rs:166:18
+2026-09-30T04:52:24.5629604Z   44:     0x55b747022cf2 - std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked::<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}
+2026-09-30T04:52:24.5630808Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/thread/lifecycle.rs:70:13
+2026-09-30T04:52:24.5632246Z   45:     0x55b747022cf2 - <core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}> as core[c0acaeba6ab4c2e0]::ops::function::FnOnce<()>>::call_once
+2026-09-30T04:52:24.5633601Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panic/unwind_safe.rs:275:9
+2026-09-30T04:52:24.5635038Z   46:     0x55b747022cf2 - std[6c98fd8553dbae28]::panicking::catch_unwind::do_call::<core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}>, ()>
+2026-09-30T04:52:24.5636356Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:576:43
+2026-09-30T04:52:24.5637724Z   47:     0x55b747022cf2 - std[6c98fd8553dbae28]::panicking::catch_unwind::<(), core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}>>
+2026-09-30T04:52:24.5638996Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:544:19
+2026-09-30T04:52:24.5640617Z   48:     0x55b747022cf2 - std[6c98fd8553dbae28]::panic::catch_unwind::<core[c0acaeba6ab4c2e0]::panic::unwind_safe::AssertUnwindSafe<std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}>, ()>
+2026-09-30T04:52:24.5641884Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panic.rs:359:14
+2026-09-30T04:52:24.5642754Z   49:     0x55b747022cf2 - std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked::<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1}
+2026-09-30T04:52:24.5643805Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/thread/lifecycle.rs:68:26
+2026-09-30T04:52:24.5645676Z   50:     0x55b747022cf2 - <std[6c98fd8553dbae28]::thread::lifecycle::spawn_unchecked<test[69f9176bb4e5faed]::run_test::{closure#1}, ()>::{closure#1} as core[c0acaeba6ab4c2e0]::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+2026-09-30T04:52:24.5647716Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+2026-09-30T04:52:24.5649363Z   51:     0x55b7470e7f9f - <alloc[12e961f32105355]::boxed::Box<dyn core[c0acaeba6ab4c2e0]::ops::function::FnOnce<(), Output = ()> + core[c0acaeba6ab4c2e0]::marker::Send> as core[c0acaeba6ab4c2e0]::ops::function::FnOnce<()>>::call_once
+2026-09-30T04:52:24.5650746Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/boxed.rs:2319:9
+2026-09-30T04:52:24.5651461Z   52:     0x55b7470e7f9f - <std[6c98fd8553dbae28]::sys::thread::unix::Thread>::new::thread_start
+2026-09-30T04:52:24.5652177Z                                at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/thread/unix.rs:123:17
+2026-09-30T04:52:24.5652711Z   53:     0x7f677c49cb84 - <unknown>
+2026-09-30T04:52:24.5653007Z   54:     0x7f677c529ecc - <unknown>
+2026-09-30T04:52:24.5653279Z   55:                0x0 - <unknown>
+2026-09-30T04:52:24.5653621Z thread caused non-unwinding panic. aborting.
+2026-09-30T04:52:24.9287523Z error: test failed, to rerun pass `--lib`
+2026-09-30T04:52:24.9288113Z 
+2026-09-30T04:52:24.9288895Z Caused by:
+2026-09-30T04:52:24.9290453Z   process didn't exit successfully: `/home/runner/work/alethech/alethech/alethech-wasm/target/debug/deps/alethech_wasm-11f5532060a9d7bc` (signal: 6, SIGABRT: process abort signal)
+2026-09-30T04:52:24.9374551Z ##[error]Process completed with exit code 101.
+2026-09-30T04:52:24.9678822Z Post job cleanup.
+2026-09-30T04:52:25.0638888Z [command]/usr/bin/git version
+2026-09-30T04:52:25.0691360Z git version 2.55.0
+2026-09-30T04:52:25.0737368Z Temporarily overriding HOME='/home/runner/work/_temp/7f73cb7d-d027-40da-a778-0759e2678f55' before making global git config changes
+2026-09-30T04:52:25.0739477Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-30T04:52:25.0746220Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-30T04:52:25.0792404Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-30T04:52:25.0834011Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-30T04:52:25.1090157Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-30T04:52:25.1122415Z http.https://github.com/.extraheader
+2026-09-30T04:52:25.1136414Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-30T04:52:25.1178867Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-30T04:52:25.1692717Z Cleaning up orphan processes
+2026-09-30T04:52:25.2027248Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,590 @@
+﻿2026-10-06T00:03:40.8887203Z Current runner version: '2.337.0'
+2026-10-06T00:03:40.8906823Z ##[group]Runner Image Provisioner
+2026-10-06T00:03:40.8907574Z Hosted Compute Agent
+2026-10-06T00:03:40.8908097Z Version: 20260901.588
+2026-10-06T00:03:40.8908656Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-06T00:03:40.8909303Z Build Date: 2026-09-01T19:56:44Z
+2026-10-06T00:03:40.8909862Z Worker ID: {e16125a5-fce6-44f0-8f3e-e863b2de0b51}
+2026-10-06T00:03:40.8910492Z Azure Region: westus3
+2026-10-06T00:03:40.8910966Z ##[endgroup]
+2026-10-06T00:03:40.8912165Z ##[group]Operating System
+2026-10-06T00:03:40.8912773Z Ubuntu
+2026-10-06T00:03:40.8913465Z 24.04.5
+2026-10-06T00:03:40.8913922Z LTS
+2026-10-06T00:03:40.8914403Z ##[endgroup]
+2026-10-06T00:03:40.8914844Z ##[group]Runner Image
+2026-10-06T00:03:40.8915406Z Image: ubuntu-24.04
+2026-10-06T00:03:40.8915875Z Version: 20260927.320.1
+2026-10-06T00:03:40.8916949Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-06T00:03:40.8918198Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-06T00:03:40.8919024Z ##[endgroup]
+2026-10-06T00:03:40.8919888Z ##[group]GITHUB_TOKEN Permissions
+2026-10-06T00:03:40.8921768Z Contents: read
+2026-10-06T00:03:40.8922259Z Metadata: read
+2026-10-06T00:03:40.8922807Z ##[endgroup]
+2026-10-06T00:03:40.8924722Z Secret source: Actions
+2026-10-06T00:03:40.8925590Z Cache mode: write
+2026-10-06T00:03:40.8926172Z Prepare workflow directory
+2026-10-06T00:03:40.9290225Z Prepare all required actions
+2026-10-06T00:03:40.9328094Z Getting action download info
+2026-10-06T00:03:41.2420306Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-10-06T00:03:41.6661467Z Download action repository 'actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2026-10-06T00:03:42.1289282Z Complete job name: pytest (py3.12)
+2026-10-06T00:03:42.1853865Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-10-06T00:03:42.1854783Z with:
+2026-10-06T00:03:42.1855177Z   repository: eddyflores100-lang/alethech
+2026-10-06T00:03:42.1858616Z   token: ***
+2026-10-06T00:03:42.1859000Z   ssh-strict: true
+2026-10-06T00:03:42.1859384Z   ssh-user: git
+2026-10-06T00:03:42.1859771Z   persist-credentials: true
+2026-10-06T00:03:42.1860190Z   clean: true
+2026-10-06T00:03:42.1860579Z   sparse-checkout-cone-mode: true
+2026-10-06T00:03:42.1861024Z   fetch-depth: 1
+2026-10-06T00:03:42.1861397Z   fetch-tags: false
+2026-10-06T00:03:42.1861782Z   show-progress: true
+2026-10-06T00:03:42.1862167Z   lfs: false
+2026-10-06T00:03:42.1862534Z   submodules: false
+2026-10-06T00:03:42.1862925Z   set-safe-directory: true
+2026-10-06T00:03:42.1863739Z ##[endgroup]
+2026-10-06T00:03:42.2658373Z Syncing repository: eddyflores100-lang/alethech
+2026-10-06T00:03:42.2660644Z ##[group]Getting Git version info
+2026-10-06T00:03:42.2661745Z Working directory is '/home/runner/work/alethech/alethech'
+2026-10-06T00:03:42.2663379Z [command]/usr/bin/git version
+2026-10-06T00:03:42.4122577Z git version 2.55.0
+2026-10-06T00:03:42.4138990Z ##[endgroup]
+2026-10-06T00:03:42.4151611Z Temporarily overriding HOME='/home/runner/work/_temp/0e2305c0-7424-45bd-aa73-2374e1e61b6d' before making global git config changes
+2026-10-06T00:03:42.4153545Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T00:03:42.4156042Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-10-06T00:03:42.4204459Z Deleting the contents of '/home/runner/work/alethech/alethech'
+2026-10-06T00:03:42.4207814Z ##[group]Initializing the repository
+2026-10-06T00:03:42.4211355Z [command]/usr/bin/git init /home/runner/work/alethech/alethech
+2026-10-06T00:03:42.4292832Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-06T00:03:42.4294437Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-06T00:03:42.4295685Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-06T00:03:42.4296715Z hint: call:
+2026-10-06T00:03:42.4297134Z hint:
+2026-10-06T00:03:42.4298044Z hint: 	git config --global init.defaultBranch <name>
+2026-10-06T00:03:42.4298968Z hint:
+2026-10-06T00:03:42.4299710Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-06T00:03:42.4300796Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-06T00:03:42.4301413Z hint:
+2026-10-06T00:03:42.4301795Z hint: 	git branch -m <name>
+2026-10-06T00:03:42.4302371Z hint:
+2026-10-06T00:03:42.4303217Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-06T00:03:42.4304430Z Initialized empty Git repository in /home/runner/work/alethech/alethech/.git/
+2026-10-06T00:03:42.4305866Z [command]/usr/bin/git remote add origin https://github.com/eddyflores100-lang/alethech
+2026-10-06T00:03:42.4351058Z ##[endgroup]
+2026-10-06T00:03:42.4351754Z ##[group]Disabling automatic garbage collection
+2026-10-06T00:03:42.4353974Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-06T00:03:42.4383186Z ##[endgroup]
+2026-10-06T00:03:42.4388172Z ##[group]Setting up auth
+2026-10-06T00:03:42.4388842Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T00:03:42.4416498Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T00:03:42.4708503Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T00:03:42.4740674Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T00:03:42.4930879Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-06T00:03:42.4966725Z ##[endgroup]
+2026-10-06T00:03:42.4967383Z ##[group]Fetching the repository
+2026-10-06T00:03:42.4974789Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +57967eebddd13f396bef6b7429f8e0e303633790:refs/remotes/origin/main
+2026-10-06T00:03:43.6047759Z From https://github.com/eddyflores100-lang/alethech
+2026-10-06T00:03:43.6049983Z  * [new ref]         57967eebddd13f396bef6b7429f8e0e303633790 -> origin/main
+2026-10-06T00:03:43.6057427Z ##[endgroup]
+2026-10-06T00:03:43.6058725Z ##[group]Determining the checkout info
+2026-10-06T00:03:43.6059909Z ##[endgroup]
+2026-10-06T00:03:43.6061464Z [command]/usr/bin/git sparse-checkout disable
+2026-10-06T00:03:43.6109763Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-06T00:03:43.6137031Z ##[group]Checking out the ref
+2026-10-06T00:03:43.6140051Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-06T00:03:43.6403257Z Switched to a new branch 'main'
+2026-10-06T00:03:43.6407369Z branch 'main' set up to track 'origin/main'.
+2026-10-06T00:03:43.6414964Z ##[endgroup]
+2026-10-06T00:03:43.6460957Z [command]/usr/bin/git log -1 --format=%H
+2026-10-06T00:03:43.6483982Z 57967eebddd13f396bef6b7429f8e0e303633790
+2026-10-06T00:03:43.6787211Z ##[group]Run actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+2026-10-06T00:03:43.6788514Z with:
+2026-10-06T00:03:43.6789212Z   python-version: 3.12
+2026-10-06T00:03:43.6790003Z   check-latest: false
+2026-10-06T00:03:43.6798032Z   token: ***
+2026-10-06T00:03:43.6798774Z   update-environment: true
+2026-10-06T00:03:43.6799622Z   allow-prereleases: false
+2026-10-06T00:03:43.6800427Z ##[endgroup]
+2026-10-06T00:03:43.7878163Z ##[group]Installed versions
+2026-10-06T00:03:43.7984325Z (node:2049) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-06T00:03:43.7987162Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-06T00:03:43.7988961Z Successfully set up CPython (3.12.14)
+2026-10-06T00:03:43.7991012Z ##[endgroup]
+2026-10-06T00:03:43.8144818Z ##[group]Run pip install -e ".[dev]"
+2026-10-06T00:03:43.8145842Z [36;1mpip install -e ".[dev]"[0m
+2026-10-06T00:03:43.8449739Z shell: /usr/bin/bash -e {0}
+2026-10-06T00:03:43.8450675Z env:
+2026-10-06T00:03:43.8451578Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:43.8453027Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T00:03:43.8454679Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:43.8455976Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:43.8457269Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:43.8458580Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T00:03:43.8459691Z ##[endgroup]
+2026-10-06T00:03:44.5381464Z Obtaining file:///home/runner/work/alethech/alethech
+2026-10-06T00:03:44.5395445Z   Installing build dependencies: started
+2026-10-06T00:03:45.1995799Z   Installing build dependencies: finished with status 'done'
+2026-10-06T00:03:45.2000314Z   Checking if build backend supports build_editable: started
+2026-10-06T00:03:45.4672304Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-10-06T00:03:45.4678525Z   Getting requirements to build editable: started
+2026-10-06T00:03:45.7402916Z   Getting requirements to build editable: finished with status 'done'
+2026-10-06T00:03:45.7409994Z   Preparing editable metadata (pyproject.toml): started
+2026-10-06T00:03:45.8927221Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-10-06T00:03:46.1303416Z Collecting cryptography>=42.0 (from alethech==0.9.5)
+2026-10-06T00:03:46.1871055Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+2026-10-06T00:03:46.2085177Z Collecting click>=8.0 (from alethech==0.9.5)
+2026-10-06T00:03:46.2186876Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-06T00:03:46.2454080Z Collecting pytest>=8.0 (from alethech==0.9.5)
+2026-10-06T00:03:46.2558001Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-06T00:03:46.2759932Z Collecting pytest-cov (from alethech==0.9.5)
+2026-10-06T00:03:46.2859159Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+2026-10-06T00:03:46.3877834Z Collecting cffi>=2.0.0 (from cryptography>=42.0->alethech==0.9.5)
+2026-10-06T00:03:46.3979619Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-10-06T00:03:46.4250272Z Collecting pycparser (from cffi>=2.0.0->cryptography>=42.0->alethech==0.9.5)
+2026-10-06T00:03:46.4349172Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-10-06T00:03:46.4507862Z Collecting iniconfig>=1.0.1 (from pytest>=8.0->alethech==0.9.5)
+2026-10-06T00:03:46.4606758Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-06T00:03:46.4679151Z Collecting packaging>=22 (from pytest>=8.0->alethech==0.9.5)
+2026-10-06T00:03:46.4688337Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-06T00:03:46.4833939Z Collecting pluggy<2,>=1.5 (from pytest>=8.0->alethech==0.9.5)
+2026-10-06T00:03:46.4933830Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-06T00:03:46.5148405Z Collecting pygments>=2.7.2 (from pytest>=8.0->alethech==0.9.5)
+2026-10-06T00:03:46.5247812Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-06T00:03:46.8548793Z Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov->alethech==0.9.5)
+2026-10-06T00:03:46.8652514Z   Downloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.2 kB)
+2026-10-06T00:03:46.8815269Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-06T00:03:46.9043152Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+2026-10-06T00:03:47.0196390Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 44.2 MB/s  0:00:00
+2026-10-06T00:03:47.0297511Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-10-06T00:03:47.0415003Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-06T00:03:47.0535928Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-06T00:03:47.0658365Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-10-06T00:03:47.0680543Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-06T00:03:47.0778499Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-06T00:03:47.0829899Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 295.1 MB/s  0:00:00
+2026-10-06T00:03:47.0927425Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-10-06T00:03:47.1040051Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+2026-10-06T00:03:47.1154104Z Downloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (258 kB)
+2026-10-06T00:03:47.1433253Z Building wheels for collected packages: alethech
+2026-10-06T00:03:47.1439182Z   Building editable for alethech (pyproject.toml): started
+2026-10-06T00:03:47.3185764Z   Building editable for alethech (pyproject.toml): finished with status 'done'
+2026-10-06T00:03:47.3189813Z   Created wheel for alethech: filename=alethech-0.9.5-0.editable-py3-none-any.whl size=9382 sha256=edcfa4724c38769e83eef9520c6de012c2d5a715a2f8b1e1ba8ca3b67f4e2eee
+2026-10-06T00:03:47.3191130Z   Stored in directory: /tmp/pip-ephem-wheel-cache-h8k2pp82/wheels/54/78/de/76f9ae20f73147d6e17ff4620b900a61c2935018b9873a40ed
+2026-10-06T00:03:47.3209105Z Successfully built alethech
+2026-10-06T00:03:47.3574297Z Installing collected packages: pygments, pycparser, pluggy, packaging, iniconfig, coverage, click, pytest, cffi, pytest-cov, cryptography, alethech
+2026-10-06T00:03:48.6034098Z 
+2026-10-06T00:03:48.6047657Z Successfully installed alethech-0.9.5 cffi-2.1.1 click-8.5.0 coverage-7.16.2 cryptography-50.0.2 iniconfig-2.3.0 packaging-26.3 pluggy-1.6.0 pycparser-3.0 pygments-2.21.0 pytest-9.1.1 pytest-cov-7.1.0
+2026-10-06T00:03:48.6823754Z ##[group]Run python -m pytest tests/ -v
+2026-10-06T00:03:48.6824098Z [36;1mpython -m pytest tests/ -v[0m
+2026-10-06T00:03:48.6880579Z shell: /usr/bin/bash -e {0}
+2026-10-06T00:03:48.6880785Z env:
+2026-10-06T00:03:48.6881008Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:48.6881353Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T00:03:48.6881680Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:48.6881972Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:48.6882268Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T00:03:48.6882567Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T00:03:48.6882820Z ##[endgroup]
+2026-10-06T00:03:48.9092367Z ============================= test session starts ==============================
+2026-10-06T00:03:48.9093009Z platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.12.14/x64/bin/python
+2026-10-06T00:03:48.9093648Z cachedir: .pytest_cache
+2026-10-06T00:03:48.9093865Z rootdir: /home/runner/work/alethech/alethech
+2026-10-06T00:03:48.9094106Z configfile: pyproject.toml
+2026-10-06T00:03:48.9094296Z plugins: cov-7.1.0
+2026-10-06T00:03:49.5015211Z collecting ... collected 354 items
+2026-10-06T00:03:49.5015770Z 
+2026-10-06T00:03:49.5169105Z tests/test_056_bloqueantes.py::TestCheckpointContinuity::test_checkpoint_head_not_ancestor_of_current_head_rejected PASSED [  0%]
+2026-10-06T00:03:49.5274122Z tests/test_056_bloqueantes.py::TestCheckpointContinuity::test_checkpoint_head_equals_current_head_accepted PASSED [  0%]
+2026-10-06T00:03:49.5379806Z tests/test_056_bloqueantes.py::TestCheckpointContinuity::test_checkpoint_head_is_ancestor_of_advanced_head_accepted PASSED [  0%]
+2026-10-06T00:03:49.5524552Z tests/test_056_bloqueantes.py::TestRootBinding::test_identity_record_with_foreign_root_id_rejected PASSED [  1%]
+2026-10-06T00:03:49.5596909Z tests/test_056_bloqueantes.py::TestRootBinding::test_control_event_with_foreign_root_id_rejected PASSED [  1%]
+2026-10-06T00:03:49.5712434Z tests/test_070_audit_fixes.py::TestAtomicImport::test_failed_checkpoint_does_not_modify_target PASSED [  1%]
+2026-10-06T00:03:49.5802122Z tests/test_070_audit_fixes.py::TestFailClosedCheckpoint::test_count_mismatch_is_error_not_warning PASSED [  1%]
+2026-10-06T00:03:49.5901797Z tests/test_070_audit_fixes.py::TestArtifactHashCheck::test_corrupted_artifact_rejected PASSED [  2%]
+2026-10-06T00:03:49.6003511Z tests/test_070_audit_fixes.py::TestTrustGateV2::test_unknown_v2_identity_rejected_without_trust_flag PASSED [  2%]
+2026-10-06T00:03:49.6099746Z tests/test_070_audit_fixes.py::TestMutationGuards::test_artifact_hash_check_is_enforced PASSED [  2%]
+2026-10-06T00:03:49.6152112Z tests/test_adapters.py::test_memory_view_is_verified_and_causally_ordered PASSED [  3%]
+2026-10-06T00:03:49.6191872Z tests/test_adapters.py::test_memory_view_never_exposes_unverified_store PASSED [  3%]
+2026-10-06T00:03:49.8178978Z tests/test_adapters.py::test_drop_file_to_verified_context PASSED        [  3%]
+2026-10-06T00:03:50.0068600Z tests/test_adapters.py::test_drop_file_wrong_passphrase_exposes_no_context PASSED [  3%]
+2026-10-06T00:03:50.0219810Z tests/test_adapters.py::test_python_chat_envelope_and_local_writeback PASSED [  4%]
+2026-10-06T00:03:50.0250902Z tests/test_adapters.py::test_python_writeback_rejects_stale_and_invalid_without_writing PASSED [  4%]
+2026-10-06T00:03:50.0271329Z tests/test_adapters.py::test_commit_validates_provider_provenance_fields PASSED [  4%]
+2026-10-06T00:03:50.0315269Z tests/test_anti_rollback.py::TestCheckpointSequence::test_checkpoint_has_sequence_field PASSED [  5%]
+2026-10-06T00:03:50.0320473Z tests/test_anti_rollback.py::TestCheckpointSequence::test_checkpoint_without_sequence_backward_compat PASSED [  5%]
+2026-10-06T00:03:50.0364533Z tests/test_anti_rollback.py::TestCheckpointSequence::test_sequence_is_signed PASSED [  5%]
+2026-10-06T00:03:50.0411037Z tests/test_anti_rollback.py::TestRollbackDetection::test_lower_sequence_detected_as_rollback PASSED [  5%]
+2026-10-06T00:03:50.0449879Z tests/test_anti_rollback.py::TestRollbackDetection::test_equal_sequence_detected_as_replay PASSED [  6%]
+2026-10-06T00:03:50.0489984Z tests/test_anti_rollback.py::TestRollbackDetection::test_higher_sequence_accepted PASSED [  6%]
+2026-10-06T00:03:50.0525333Z tests/test_api.py::test_initialize_commit_verify_roundtrip PASSED        [  6%]
+2026-10-06T00:03:50.0554616Z tests/test_api.py::test_open_existing_store PASSED                       [  7%]
+2026-10-06T00:03:50.0577200Z tests/test_api.py::test_commit_rejects_missing_evidence PASSED           [  7%]
+2026-10-06T00:03:50.0596434Z tests/test_api.py::test_commit_rejects_invalid_memory_type PASSED        [  7%]
+2026-10-06T00:03:50.0608538Z tests/test_api.py::test_initialize_refuses_nonempty_directory PASSED     [  7%]
+2026-10-06T00:03:50.3311710Z tests/test_api.py::test_portable_aleth_public_api PASSED                 [  8%]
+2026-10-06T00:03:50.3348770Z tests/test_api.py::test_public_api_context_view PASSED                   [  8%]
+2026-10-06T00:03:50.3394394Z tests/test_api.py::test_programmatic_evidence_roundtrip PASSED           [  8%]
+2026-10-06T00:03:50.9759927Z tests/test_api.py::test_public_api_aleth_v2_recovery_flow PASSED         [  9%]
+2026-10-06T00:03:51.4313652Z tests/test_api.py::test_public_api_v1_to_v2_migration_preserves_head PASSED [  9%]
+2026-10-06T00:03:51.4320665Z tests/test_conformance_vectors.py::test_conformance_vector[identity/01_agent_id.json] PASSED [  9%]
+2026-10-06T00:03:51.4327039Z tests/test_conformance_vectors.py::test_conformance_vector[invalid_key/01_wrong_kty.json] PASSED [  9%]
+2026-10-06T00:03:51.4333278Z tests/test_conformance_vectors.py::test_conformance_vector[invalid_key/02_wrong_curve.json] PASSED [ 10%]
+2026-10-06T00:03:51.4339424Z tests/test_conformance_vectors.py::test_conformance_vector[invalid_key/03_malformed_base64.json] PASSED [ 10%]
+2026-10-06T00:03:51.4348369Z tests/test_conformance_vectors.py::test_conformance_vector[invalid_signature/01_flipped_bit.json] PASSED [ 10%]
+2026-10-06T00:03:51.4357134Z tests/test_conformance_vectors.py::test_conformance_vector[invalid_signature/02_tampered_content.json] PASSED [ 11%]
+2026-10-06T00:03:51.4362531Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/01_zero.json] PASSED [ 11%]
+2026-10-06T00:03:51.4368238Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/02_positive.json] PASSED [ 11%]
+2026-10-06T00:03:51.4373698Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/03_negative.json] PASSED [ 11%]
+2026-10-06T00:03:51.4379259Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/04_large.json] PASSED [ 12%]
+2026-10-06T00:03:51.4384946Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/05_small.json] PASSED [ 12%]
+2026-10-06T00:03:51.4390445Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/06_below.json] PASSED [ 12%]
+2026-10-06T00:03:51.4395878Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/07_above.json] PASSED [ 12%]
+2026-10-06T00:03:51.4401332Z tests/test_conformance_vectors.py::test_conformance_vector[numeric/08_integer-valued.json] PASSED [ 13%]
+2026-10-06T00:03:51.4406928Z tests/test_conformance_vectors.py::test_conformance_vector[unicode/01_normalization_distinctness.json] PASSED [ 13%]
+2026-10-06T00:03:51.4415210Z tests/test_conformance_vectors.py::test_conformance_vector[valid/01_basic_commit.json] PASSED [ 13%]
+2026-10-06T00:03:51.4420979Z tests/test_conformance_vectors.py::test_conformance_vectors_exist PASSED [ 14%]
+2026-10-06T00:03:51.6554417Z tests/test_container.py::test_seal_open_roundtrip PASSED                 [ 14%]
+2026-10-06T00:03:51.8454667Z tests/test_container.py::test_wrong_passphrase_fails_without_plaintext PASSED [ 14%]
+2026-10-06T00:03:51.9768300Z tests/test_container.py::test_tampering_fails_closed[20] PASSED          [ 14%]
+2026-10-06T00:03:52.2661594Z tests/test_container.py::test_tampering_fails_closed[-1] PASSED          [ 15%]
+2026-10-06T00:03:52.4887155Z tests/test_container.py::test_truncated_container_fails PASSED           [ 15%]
+2026-10-06T00:03:52.4917754Z tests/test_container.py::test_refuses_invalid_source_store PASSED        [ 15%]
+2026-10-06T00:03:52.4947276Z tests/test_container.py::test_refuses_mismatched_portable_signing_key PASSED [ 16%]
+2026-10-06T00:03:52.7540349Z tests/test_container.py::test_portable_filesystem_names_preserve_logical_container_paths PASSED [ 16%]
+2026-10-06T00:03:53.2429032Z tests/test_container.py::test_rekey_preserves_logical_payload PASSED     [ 16%]
+2026-10-06T00:03:53.4289541Z tests/test_container.py::test_rekey_wrong_old_passphrase_creates_no_output PASSED [ 16%]
+2026-10-06T00:03:53.9661658Z tests/test_container.py::test_rekey_in_place_is_safe_and_preserves_payload PASSED [ 17%]
+2026-10-06T00:03:54.2247201Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[fsync-seal1] PASSED [ 17%]
+2026-10-06T00:03:54.4942299Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[fsync-seal2] PASSED [ 17%]
+2026-10-06T00:03:54.8085312Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[fsync-rekey1] PASSED [ 18%]
+2026-10-06T00:03:55.1227911Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[fsync-rekey2] PASSED [ 18%]
+2026-10-06T00:03:55.3951975Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[fsync-recover] PASSED [ 18%]
+2026-10-06T00:03:55.7138173Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[fsync-migrate] PASSED [ 18%]
+2026-10-06T00:03:55.9891239Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[replace-seal1] PASSED [ 19%]
+2026-10-06T00:03:56.2514823Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[replace-seal2] PASSED [ 19%]
+2026-10-06T00:03:56.5727418Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[replace-rekey1] PASSED [ 19%]
+2026-10-06T00:03:57.1858586Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[replace-rekey2] PASSED [ 20%]
+2026-10-06T00:03:57.4515651Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[replace-recover] PASSED [ 20%]
+2026-10-06T00:03:57.7754809Z tests/test_container_atomic.py::test_encrypted_publication_failure_preserves_output[replace-migrate] PASSED [ 20%]
+2026-10-06T00:03:57.9041971Z tests/test_container_atomic.py::test_seal_publishes_private_file[False] PASSED [ 20%]
+2026-10-06T00:03:58.0527293Z tests/test_container_atomic.py::test_seal_publishes_private_file[True] PASSED [ 21%]
+2026-10-06T00:03:58.4419451Z tests/test_container_atomic.py::test_migration_requires_explicit_inplace_authorization PASSED [ 21%]
+2026-10-06T00:03:58.9976225Z tests/test_container_atomic.py::test_v2_rekey_preserves_recovery_and_requires_credential PASSED [ 21%]
+2026-10-06T00:03:59.2653636Z tests/test_container_atomic.py::test_plaintext_destination_stays_empty_until_verified[False] PASSED [ 22%]
+2026-10-06T00:03:59.5066307Z tests/test_container_atomic.py::test_plaintext_destination_stays_empty_until_verified[True] PASSED [ 22%]
+2026-10-06T00:03:59.7058474Z tests/test_container_atomic.py::test_invalid_authenticated_history_cannot_replace_existing_output[False] PASSED [ 22%]
+2026-10-06T00:03:59.8448898Z tests/test_container_atomic.py::test_invalid_authenticated_history_cannot_replace_existing_output[True] PASSED [ 22%]
+2026-10-06T00:03:59.8455100Z tests/test_container_atomic.py::test_payload_schema_rejects_ambiguous_encodings[payload0] PASSED [ 23%]
+2026-10-06T00:03:59.8461269Z tests/test_container_atomic.py::test_payload_schema_rejects_ambiguous_encodings[None] PASSED [ 23%]
+2026-10-06T00:03:59.8467278Z tests/test_container_atomic.py::test_payload_schema_rejects_ambiguous_encodings[payload2] PASSED [ 23%]
+2026-10-06T00:03:59.8473456Z tests/test_container_atomic.py::test_payload_schema_rejects_ambiguous_encodings[payload3] PASSED [ 24%]
+2026-10-06T00:03:59.8479337Z tests/test_container_atomic.py::test_payload_schema_rejects_ambiguous_encodings[payload4] PASSED [ 24%]
+2026-10-06T00:03:59.8485445Z tests/test_container_atomic.py::test_payload_schema_rejects_ambiguous_encodings[payload5] PASSED [ 24%]
+2026-10-06T00:04:00.0432932Z tests/test_container_atomic.py::test_plaintext_publication_failure_preserves_empty_destination[False] PASSED [ 24%]
+2026-10-06T00:04:00.2374820Z tests/test_container_atomic.py::test_plaintext_publication_failure_preserves_empty_destination[True] PASSED [ 25%]
+2026-10-06T00:04:00.2447298Z tests/test_container_atomic.py::test_seal_verifies_collected_snapshot_before_publication[False] PASSED [ 25%]
+2026-10-06T00:04:00.2517069Z tests/test_container_atomic.py::test_seal_verifies_collected_snapshot_before_publication[True] PASSED [ 25%]
+2026-10-06T00:04:00.3817106Z tests/test_container_atomic.py::test_committed_output_returns_recovery_when_directory_fsync_fails PASSED [ 25%]
+2026-10-06T00:04:00.5147543Z tests/test_container_atomic.py::test_container_seal_and_open_without_posix_fchmod PASSED [ 26%]
+2026-10-06T00:04:00.6442937Z tests/test_container_atomic.py::test_migration_rejects_hardlinked_source_alias PASSED [ 26%]
+2026-10-06T00:04:00.8964981Z tests/test_container_atomic.py::test_recovery_rejects_authenticated_extra_slots_without_output_loss[passphrase] PASSED [ 26%]
+2026-10-06T00:04:01.0883439Z tests/test_container_atomic.py::test_recovery_rejects_authenticated_extra_slots_without_output_loss[recovery-secret] PASSED [ 27%]
+2026-10-06T00:04:01.2844459Z tests/test_container_atomic.py::test_windows_existing_empty_destination_publication[False-False] PASSED [ 27%]
+2026-10-06T00:04:01.4782123Z tests/test_container_atomic.py::test_windows_existing_empty_destination_publication[False-True] PASSED [ 27%]
+2026-10-06T00:04:01.6733020Z tests/test_container_atomic.py::test_windows_existing_empty_destination_publication[True-False] PASSED [ 27%]
+2026-10-06T00:04:01.8679025Z tests/test_container_atomic.py::test_windows_existing_empty_destination_publication[True-True] PASSED [ 28%]
+2026-10-06T00:04:02.4307293Z tests/test_container_cli.py::test_cli_seal_open_rekey_recover_with_env_credentials PASSED [ 28%]
+2026-10-06T00:04:02.7640887Z tests/test_container_cli.py::test_cli_upgrade_rejects_inplace_without_explicit_option PASSED [ 28%]
+2026-10-06T00:04:03.0217394Z tests/test_container_cli.py::test_cli_recovers_with_hidden_prompt PASSED [ 29%]
+2026-10-06T00:04:03.1531975Z tests/test_container_cli.py::test_recovery_save_failure_never_publishes_container PASSED [ 29%]
+2026-10-06T00:04:03.3157164Z tests/test_container_cli.py::test_module_entrypoint_exposes_all_registered_commands PASSED [ 29%]
+2026-10-06T00:04:03.6628387Z tests/test_container_v2.py::test_v2_passphrase_and_recovery_open_same_verified_history PASSED [ 29%]
+2026-10-06T00:04:03.8686152Z tests/test_container_v2.py::test_v2_wrong_credentials_fail_without_plaintext PASSED [ 30%]
+2026-10-06T00:04:04.3199529Z tests/test_container_v2.py::test_recovery_replaces_forgotten_passphrase_and_preserves_history PASSED [ 30%]
+2026-10-06T00:04:04.6480705Z tests/test_container_v2.py::test_recovery_secret_rotation_invalidates_old_code PASSED [ 30%]
+2026-10-06T00:04:04.9050737Z tests/test_container_v2.py::test_v2_tampered_ciphertext_and_header_fail PASSED [ 31%]
+2026-10-06T00:04:05.0404647Z tests/test_container_v2.py::test_v2_tampered_wrapped_recovery_key_fails PASSED [ 31%]
+2026-10-06T00:04:05.3106217Z tests/test_container_v2.py::test_v2_recovery_slot_replay_between_containers_fails PASSED [ 31%]
+2026-10-06T00:04:05.8985447Z tests/test_container_v2.py::test_v1_to_v2_migration_preserves_logical_payload_and_source PASSED [ 31%]
+2026-10-06T00:04:06.0939151Z tests/test_container_v2.py::test_v2_without_recovery_slot_remains_passphrase_only PASSED [ 32%]
+2026-10-06T00:04:06.2303923Z tests/test_container_v2.py::test_v2_requires_exactly_one_unlock_credential PASSED [ 32%]
+2026-10-06T00:04:06.3708128Z tests/test_container_v2_golden.py::test_frozen_v2_vector_preserves_payload_and_verified_history PASSED [ 32%]
+2026-10-06T00:04:06.3788986Z tests/test_corruption_recovery.py::TestTruncatedJSON::test_truncated_commit_json_detected PASSED [ 33%]
+2026-10-06T00:04:06.3862232Z tests/test_corruption_recovery.py::TestTruncatedJSON::test_empty_commit_file_detected PASSED [ 33%]
+2026-10-06T00:04:06.3960452Z tests/test_corruption_recovery.py::TestCorruptSignature::test_random_bytes_signature_detected PASSED [ 33%]
+2026-10-06T00:04:06.4061172Z tests/test_corruption_recovery.py::TestMissingParent::test_nonexistent_parent_detected PASSED [ 33%]
+2026-10-06T00:04:06.4135324Z tests/test_corruption_recovery.py::TestDuplicateDifferentContent::test_two_files_same_id_different_content PASSED [ 34%]
+2026-10-06T00:04:06.4234043Z tests/test_corruption_recovery.py::TestCorruptControlEvent::test_modified_control_event_field PASSED [ 34%]
+2026-10-06T00:04:06.4371937Z tests/test_corruption_recovery.py::TestCorruptCheckpoint::test_modified_checkpoint_signature PASSED [ 34%]
+2026-10-06T00:04:06.4471542Z tests/test_corruption_recovery.py::TestCorruptIncompleteCompensation::test_corrupt_incomplete_compensation_doesnt_crash PASSED [ 35%]
+2026-10-06T00:04:06.4550609Z tests/test_corruption_recovery.py::TestNonJSONContent::test_non_json_commit_file PASSED [ 35%]
+2026-10-06T00:04:06.4641231Z tests/test_corruption_recovery.py::TestMissingIdentity::test_identity_file_deleted PASSED [ 35%]
+2026-10-06T00:04:06.4716960Z tests/test_corruption_recovery.py::TestFailClosed::test_verify_fails_closed[truncate_commit] PASSED [ 35%]
+2026-10-06T00:04:06.4792216Z tests/test_corruption_recovery.py::TestFailClosed::test_verify_fails_closed[empty_commit] PASSED [ 36%]
+2026-10-06T00:04:06.4893639Z tests/test_corruption_recovery.py::TestFailClosed::test_verify_fails_closed[corrupt_sig] PASSED [ 36%]
+2026-10-06T00:04:06.4972148Z tests/test_corruption_recovery.py::TestFailClosed::test_verify_fails_closed[non_json] PASSED [ 36%]
+2026-10-06T00:04:06.5066784Z tests/test_corruption_recovery.py::TestFailClosed::test_verify_fails_closed[delete_identity] PASSED [ 37%]
+2026-10-06T00:04:06.5115299Z tests/test_hook_adversarial_040.py::TestA1_CompensationSucceeded::test_A1_chromadb_ok_alethech_fail_delete_ok PASSED [ 37%]
+2026-10-06T00:04:06.5172534Z tests/test_hook_adversarial_040.py::TestE1_RetryAfterFailure::test_E1_retry_same_key_after_failure PASSED [ 37%]
+2026-10-06T00:04:06.5229971Z tests/test_hook_adversarial_040.py::TestE2_RetryAfterSuccessLostResponse::test_E2_retry_after_success_returns_existing PASSED [ 37%]
+2026-10-06T00:04:06.5276073Z tests/test_hook_adversarial_040.py::TestH1_IdentitySelection::test_H1_unknown_identity_raises PASSED [ 38%]
+2026-10-06T00:04:06.5328930Z tests/test_hook_adversarial_040.py::TestH1_IdentitySelection::test_H1_default_identity_used_when_none_specified PASSED [ 38%]
+2026-10-06T00:04:06.5421723Z tests/test_hook_adversarial_040.py::TestC1_ConcurrentAdd::test_C1_two_threads_no_corruption PASSED [ 38%]
+2026-10-06T00:04:06.5476106Z tests/test_hook_adversarial_040.py::TestR1_IncompleteCompensation::test_R1_delete_fails_incomplete_compensation PASSED [ 38%]
+2026-10-06T00:04:06.5532565Z tests/test_hook_adversarial_040.py::TestR2_DiscoverIncompletePostRestart::test_R2_discover_incomplete_after_restart PASSED [ 39%]
+2026-10-06T00:04:06.5589636Z tests/test_idempotency_fuzzing.py::TestIdempotencyConflict::test_same_key_different_text PASSED [ 39%]
+2026-10-06T00:04:06.5644369Z tests/test_idempotency_fuzzing.py::TestIdempotencyConflict::test_same_key_same_text_returns_existing PASSED [ 39%]
+2026-10-06T00:04:06.5760690Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_commit_missing_fields PASSED [ 40%]
+2026-10-06T00:04:06.5856746Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_commit_wrong_type PASSED [ 40%]
+2026-10-06T00:04:06.5909812Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_commit_array_not_object PASSED [ 40%]
+2026-10-06T00:04:06.5958783Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_extra_fields_no_crash PASSED [ 40%]
+2026-10-06T00:04:06.6155016Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_invalid_jwk PASSED  [ 41%]
+2026-10-06T00:04:06.6238652Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_unicode_content PASSED [ 41%]
+2026-10-06T00:04:06.6398968Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_large_content PASSED [ 41%]
+2026-10-06T00:04:06.6482538Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_null_values PASSED  [ 42%]
+2026-10-06T00:04:06.6580188Z tests/test_idempotency_fuzzing.py::TestFuzzing::test_deep_nesting PASSED [ 42%]
+2026-10-06T00:04:06.6745932Z tests/test_identity_adversarial.py::TestSuccessiveRotations::test_three_rotations_chain_valid PASSED [ 42%]
+2026-10-06T00:04:06.6859517Z tests/test_identity_adversarial.py::TestRevokedKeyAfterCutoff::test_k1_commit_after_rotation_detected PASSED [ 42%]
+2026-10-06T00:04:06.6971680Z tests/test_identity_adversarial.py::TestWrongKeyId::test_commit_claims_wrong_key_id PASSED [ 43%]
+2026-10-06T00:04:06.7051623Z tests/test_identity_adversarial.py::TestDuplicateSequence::test_duplicate_sequence_detected PASSED [ 43%]
+2026-10-06T00:04:06.7128010Z tests/test_identity_adversarial.py::TestSequenceGap::test_sequence_gap_detected PASSED [ 43%]
+2026-10-06T00:04:06.7204687Z tests/test_identity_adversarial.py::TestWrongPreviousHash::test_broken_chain_link_detected PASSED [ 44%]
+2026-10-06T00:04:06.7279666Z tests/test_identity_adversarial.py::TestNonexistentCutoffHead::test_nonexistent_cutoff_detected PASSED [ 44%]
+2026-10-06T00:04:06.7355136Z tests/test_identity_adversarial.py::TestMigrationUnilateral::test_migration_with_only_legacy_signature PASSED [ 44%]
+2026-10-06T00:04:06.7430931Z tests/test_identity_adversarial.py::TestReplayControlEvent::test_old_control_event_replay_detected PASSED [ 44%]
+2026-10-06T00:04:06.7506243Z tests/test_identity_adversarial.py::TestPreGrantSigning::test_commit_with_key_not_yet_authorized PASSED [ 45%]
+2026-10-06T00:04:06.7512614Z tests/test_identity_rev3.py::test_root_authority_self_verify PASSED      [ 45%]
+2026-10-06T00:04:06.7518873Z tests/test_identity_rev3.py::test_root_authority_detects_mismatch PASSED [ 45%]
+2026-10-06T00:04:06.7567998Z tests/test_identity_rev3.py::test_migrate_produces_bilateral_signatures PASSED [ 46%]
+2026-10-06T00:04:06.7611513Z tests/test_identity_rev3.py::test_migrate_creates_root_authority PASSED  [ 46%]
+2026-10-06T00:04:06.7659071Z tests/test_identity_rev3.py::test_migrate_creates_genesis_control_event PASSED [ 46%]
+2026-10-06T00:04:06.7705582Z tests/test_identity_rev3.py::test_migrate_preserves_legacy_agent_id PASSED [ 46%]
+2026-10-06T00:04:06.7752824Z tests/test_identity_rev3.py::test_migrate_creates_new_agent_id_derived_from_root PASSED [ 47%]
+2026-10-06T00:04:06.7814118Z tests/test_identity_rev3.py::test_key_rotate_produces_atomic_control_event PASSED [ 47%]
+2026-10-06T00:04:06.7877817Z tests/test_identity_rev3.py::test_key_rotate_preserves_history PASSED    [ 47%]
+2026-10-06T00:04:06.7941416Z tests/test_identity_rev3.py::test_key_rotate_increments_sequence PASSED  [ 48%]
+2026-10-06T00:04:06.8185467Z tests/test_identity_rev3.py::test_key_rotate_chain_links PASSED          [ 48%]
+2026-10-06T00:04:06.8255747Z tests/test_identity_rev3.py::test_check_commit_with_active_key_returns_VALID PASSED [ 48%]
+2026-10-06T00:04:06.8302982Z tests/test_identity_rev3.py::test_check_commit_with_unknown_key_returns_UNKNOWN_KEY PASSED [ 48%]
+2026-10-06T00:04:06.8308778Z tests/test_identity_rev3.py::test_ancestry_check_basic PASSED            [ 49%]
+2026-10-06T00:04:06.8314480Z tests/test_identity_rev3.py::test_ancestry_check_dag_with_branches PASSED [ 49%]
+2026-10-06T00:04:06.8399373Z tests/test_identity_rev3.py::test_control_chain_detects_broken_link PASSED [ 49%]
+2026-10-06T00:04:06.8483732Z tests/test_identity_rev3.py::test_control_chain_detects_sequence_gap PASSED [ 50%]
+2026-10-06T00:04:06.8532543Z tests/test_identity_rev3.py::test_identity_list_shows_v01_and_v02 PASSED [ 50%]
+2026-10-06T00:04:06.8588486Z tests/test_identity_rev3.py::test_identity_publish_creates_signed_file PASSED [ 50%]
+2026-10-06T00:04:06.8824108Z tests/test_import_export_adversarial.py::TestRoundtrip::test_export_package_uses_cross_platform_filenames PASSED [ 50%]
+2026-10-06T00:04:06.9118559Z tests/test_import_export_adversarial.py::TestRoundtrip::test_roundtrip PASSED [ 51%]
+2026-10-06T00:04:06.9317652Z tests/test_import_export_adversarial.py::TestModifiedSignature::test_modified_signature_rejected PASSED [ 51%]
+2026-10-06T00:04:06.9478495Z tests/test_import_export_adversarial.py::TestModifiedCommitId::test_modified_commit_id_rejected PASSED [ 51%]
+2026-10-06T00:04:06.9723609Z tests/test_import_export_adversarial.py::TestMissingParent::test_missing_parent_detected PASSED [ 51%]
+2026-10-06T00:04:06.9951979Z tests/test_import_export_adversarial.py::TestDuplicateCommits::test_duplicate_ignored PASSED [ 52%]
+2026-10-06T00:04:07.0095468Z tests/test_import_export_adversarial.py::TestTamperedManifest::test_tampered_manifest_rejected PASSED [ 52%]
+2026-10-06T00:04:07.0524281Z tests/test_import_export_adversarial.py::TestReplayBundle::test_replay_no_duplicate PASSED [ 52%]
+2026-10-06T00:04:07.0897547Z tests/test_import_export_adversarial.py::TestOutOfOrder::test_out_of_order_import PASSED [ 53%]
+2026-10-06T00:04:07.1053518Z tests/test_import_export_adversarial.py::TestUnknownIdentity::test_no_trust_fails PASSED [ 53%]
+2026-10-06T00:04:07.1334924Z tests/test_import_export_adversarial.py::TestVerifyConsistency::test_same_result_before_and_after PASSED [ 53%]
+2026-10-06T00:04:07.1418948Z tests/test_import_hardening.py::TestImportPathTraversal::test_dotdot_in_filename_rejected PASSED [ 53%]
+2026-10-06T00:04:07.1502236Z tests/test_import_hardening.py::TestImportPathTraversal::test_package_paths_are_confined_to_input_root PASSED [ 54%]
+2026-10-06T00:04:07.1569056Z tests/test_import_hardening.py::TestImportSymlinkRejection::test_symlink_in_package_rejected PASSED [ 54%]
+2026-10-06T00:04:07.1637424Z tests/test_import_hardening.py::TestImportSymlinkRejection::test_input_path_itself_being_symlink_rejected PASSED [ 54%]
+2026-10-06T00:04:07.1946287Z tests/test_import_hardening.py::TestImportSizeLimits::test_large_file_rejected PASSED [ 55%]
+2026-10-06T00:04:07.8371065Z tests/test_import_hardening.py::TestImportSizeLimits::test_too_many_files_rejected PASSED [ 55%]
+2026-10-06T00:04:07.8466831Z tests/test_import_hardening.py::TestImportValidPackageStillWorks::test_valid_package_imports_ok PASSED [ 55%]
+2026-10-06T00:04:07.8471752Z tests/test_jcs_conformance.py::TestIntegerVectors::test_zero PASSED      [ 55%]
+2026-10-06T00:04:07.8477229Z tests/test_jcs_conformance.py::TestIntegerVectors::test_positive_int PASSED [ 56%]
+2026-10-06T00:04:07.8482738Z tests/test_jcs_conformance.py::TestIntegerVectors::test_negative_int PASSED [ 56%]
+2026-10-06T00:04:07.8488306Z tests/test_jcs_conformance.py::TestIntegerVectors::test_large_int PASSED [ 56%]
+2026-10-06T00:04:07.8492984Z tests/test_jcs_conformance.py::TestIntegerVectors::test_very_large_int PASSED [ 57%]
+2026-10-06T00:04:07.8497976Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_half PASSED    [ 57%]
+2026-10-06T00:04:07.8502485Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_quarter PASSED [ 57%]
+2026-10-06T00:04:07.8507330Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_eighth PASSED  [ 57%]
+2026-10-06T00:04:07.8511767Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_tenth PASSED   [ 58%]
+2026-10-06T00:04:07.8516344Z tests/test_jcs_conformance.py::TestFloatVectors::test_two_tenths PASSED  [ 58%]
+2026-10-06T00:04:07.8520891Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_third_approx PASSED [ 58%]
+2026-10-06T00:04:07.8525475Z tests/test_jcs_conformance.py::TestFloatVectors::test_integer_valued_float PASSED [ 59%]
+2026-10-06T00:04:07.8529954Z tests/test_jcs_conformance.py::TestFloatVectors::test_negative_integer_valued_float PASSED [ 59%]
+2026-10-06T00:04:07.8534479Z tests/test_jcs_conformance.py::TestFloatVectors::test_small_float_below_one PASSED [ 59%]
+2026-10-06T00:04:07.8538858Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_e21 PASSED     [ 59%]
+2026-10-06T00:04:07.8543377Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_e_minus_7 PASSED [ 60%]
+2026-10-06T00:04:07.8548632Z tests/test_jcs_conformance.py::TestFloatVectors::test_one_e20 PASSED     [ 60%]
+2026-10-06T00:04:07.8552839Z tests/test_jcs_conformance.py::TestFloatVectors::test_negative_one_e21 PASSED [ 60%]
+2026-10-06T00:04:07.8557591Z tests/test_jcs_conformance.py::TestFloatVectors::test_5e_minus_324 PASSED [ 61%]
+2026-10-06T00:04:07.8562072Z tests/test_jcs_conformance.py::TestFloatVectors::test_max_safe_integer_float PASSED [ 61%]
+2026-10-06T00:04:07.8566626Z tests/test_jcs_conformance.py::TestFloatVectors::test_5e_minus_3 PASSED  [ 61%]
+2026-10-06T00:04:07.8571023Z tests/test_jcs_conformance.py::TestFloatVectors::test_1_5e20 PASSED      [ 61%]
+2026-10-06T00:04:07.8575534Z tests/test_jcs_conformance.py::TestNegativeZero::test_positive_zero PASSED [ 62%]
+2026-10-06T00:04:07.8581745Z tests/test_jcs_conformance.py::TestNegativeZero::test_negative_zero PASSED [ 62%]
+2026-10-06T00:04:07.8586343Z tests/test_jcs_conformance.py::TestNegativeZero::test_positive_zero_int PASSED [ 62%]
+2026-10-06T00:04:07.8590801Z tests/test_jcs_conformance.py::TestNegativeZero::test_zero_from_arithmetic PASSED [ 62%]
+2026-10-06T00:04:07.8595498Z tests/test_jcs_conformance.py::TestNaNInfinity::test_nan_raises PASSED   [ 63%]
+2026-10-06T00:04:07.8599962Z tests/test_jcs_conformance.py::TestNaNInfinity::test_inf_raises PASSED   [ 63%]
+2026-10-06T00:04:07.8604561Z tests/test_jcs_conformance.py::TestNaNInfinity::test_neg_inf_raises PASSED [ 63%]
+2026-10-06T00:04:07.8609119Z tests/test_jcs_conformance.py::TestUTF16KeyOrdering::test_ascii_keys_sorted PASSED [ 64%]
+2026-10-06T00:04:07.8613767Z tests/test_jcs_conformance.py::TestUTF16KeyOrdering::test_uppercase_before_lowercase PASSED [ 64%]
+2026-10-06T00:04:07.8618373Z tests/test_jcs_conformance.py::TestUTF16KeyOrdering::test_supplementary_plane_key_sorts_before_ffff PASSED [ 64%]
+2026-10-06T00:04:07.8622773Z tests/test_jcs_conformance.py::TestUTF16KeyOrdering::test_surrogate_pair_ordering PASSED [ 64%]
+2026-10-06T00:04:07.8627442Z tests/test_jcs_conformance.py::TestUTF16KeyOrdering::test_accented_chars PASSED [ 65%]
+2026-10-06T00:04:07.8631773Z tests/test_jcs_conformance.py::TestStringEscaping::test_basic_string PASSED [ 65%]
+2026-10-06T00:04:07.8636318Z tests/test_jcs_conformance.py::TestStringEscaping::test_quote_escape PASSED [ 65%]
+2026-10-06T00:04:07.8640693Z tests/test_jcs_conformance.py::TestStringEscaping::test_backslash_escape PASSED [ 66%]
+2026-10-06T00:04:07.8645226Z tests/test_jcs_conformance.py::TestStringEscaping::test_control_chars PASSED [ 66%]
+2026-10-06T00:04:07.8649650Z tests/test_jcs_conformance.py::TestStringEscaping::test_non_printable_control PASSED [ 66%]
+2026-10-06T00:04:07.8654112Z tests/test_jcs_conformance.py::TestStringEscaping::test_unicode_preserved PASSED [ 66%]
+2026-10-06T00:04:07.8658411Z tests/test_jcs_conformance.py::TestStringEscaping::test_empty_string PASSED [ 67%]
+2026-10-06T00:04:07.8662739Z tests/test_jcs_conformance.py::TestContainers::test_empty_object PASSED  [ 67%]
+2026-10-06T00:04:07.8667462Z tests/test_jcs_conformance.py::TestContainers::test_empty_array PASSED   [ 67%]
+2026-10-06T00:04:07.8671958Z tests/test_jcs_conformance.py::TestContainers::test_nested_object PASSED [ 68%]
+2026-10-06T00:04:07.8676543Z tests/test_jcs_conformance.py::TestContainers::test_array_preserves_order PASSED [ 68%]
+2026-10-06T00:04:07.8680822Z tests/test_jcs_conformance.py::TestContainers::test_mixed_array PASSED   [ 68%]
+2026-10-06T00:04:07.8685335Z tests/test_jcs_conformance.py::TestContainers::test_null_value PASSED    [ 68%]
+2026-10-06T00:04:07.8689677Z tests/test_jcs_conformance.py::TestContainers::test_true_false PASSED    [ 69%]
+2026-10-06T00:04:07.8694347Z tests/test_jcs_conformance.py::TestContainers::test_bool_rejected_as_number PASSED [ 69%]
+2026-10-06T00:04:07.8699036Z tests/test_jcs_conformance.py::TestRFC8785OfficialVectors::test_numbers_appA PASSED [ 69%]
+2026-10-06T00:04:07.8703468Z tests/test_jcs_conformance.py::TestRFC8785OfficialVectors::test_appA_full_object PASSED [ 70%]
+2026-10-06T00:04:07.8708423Z tests/test_jcs_conformance.py::TestRFC8785OfficialVectors::test_appA_numbers PASSED [ 70%]
+2026-10-06T00:04:07.8712641Z tests/test_jcs_conformance.py::TestRFC8785OfficialVectors::test_appA_string_unicode PASSED [ 70%]
+2026-10-06T00:04:07.8717265Z tests/test_jcs_conformance.py::TestRFC8785OfficialVectors::test_appA_structures PASSED [ 70%]
+2026-10-06T00:04:07.8721894Z tests/test_jcs_conformance.py::TestDeterminism::test_same_input_same_output PASSED [ 71%]
+2026-10-06T00:04:07.8727627Z tests/test_jcs_conformance.py::TestDeterminism::test_byte_stability PASSED [ 71%]
+2026-10-06T00:04:09.0511224Z tests/test_mcp_memory.py::test_initialize_list_context_and_verification PASSED [ 71%]
+2026-10-06T00:04:11.9991372Z tests/test_mcp_memory.py::test_rereads_current_file_and_credential PASSED [ 72%]
+2026-10-06T00:04:12.4937138Z tests/test_mcp_memory.py::test_bad_password_and_tampered_file_fail_closed PASSED [ 72%]
+2026-10-06T00:04:12.7057354Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments0] PASSED [ 72%]
+2026-10-06T00:04:12.9169373Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments1] PASSED [ 72%]
+2026-10-06T00:04:13.1296405Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments2] PASSED [ 73%]
+2026-10-06T00:04:13.3449594Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments3] PASSED [ 73%]
+2026-10-06T00:04:13.5770608Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments4] PASSED [ 73%]
+2026-10-06T00:04:13.8329809Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments5] PASSED [ 74%]
+2026-10-06T00:04:14.0634104Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments6] PASSED [ 74%]
+2026-10-06T00:04:14.2747041Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments7] PASSED [ 74%]
+2026-10-06T00:04:14.5032551Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments8] PASSED [ 74%]
+2026-10-06T00:04:14.7324021Z tests/test_mcp_memory.py::test_unknown_arguments_and_invalid_limits_rejected[arguments9] PASSED [ 75%]
+2026-10-06T00:04:14.7335209Z tests/test_mcp_memory.py::test_rejects_invalid_arguments_before_any_reads PASSED [ 75%]
+2026-10-06T00:04:14.9590860Z tests/test_mcp_memory.py::test_parse_errors_unknown_method_and_bounded_frames PASSED [ 75%]
+2026-10-06T00:04:15.2612589Z tests/test_mcp_memory.py::test_limit_cannot_hide_invalid_history_outside_head PASSED [ 75%]
+2026-10-06T00:04:15.2787374Z tests/test_mcp_memory.py::test_default_limit_and_oversized_output_fail_explicitly PASSED [ 76%]
+2026-10-06T00:04:15.2817997Z tests/test_memex_hook.py::test_hook_activates_with_v01_alethech PASSED   [ 76%]
+2026-10-06T00:04:15.2867485Z tests/test_memex_hook.py::test_hook_activates_with_v02_alethech PASSED   [ 76%]
+2026-10-06T00:04:15.2874649Z tests/test_memex_hook.py::test_hook_passthrough_when_alethech_missing PASSED [ 77%]
+2026-10-06T00:04:15.2928226Z tests/test_memex_hook.py::test_add_writes_to_both_stores PASSED          [ 77%]
+2026-10-06T00:04:15.3195541Z tests/test_memex_hook.py::test_add_returns_result_with_memex_id PASSED   [ 77%]
+2026-10-06T00:04:15.3264781Z tests/test_memex_hook.py::test_multiple_writes_create_chain PASSED       [ 77%]
+2026-10-06T00:04:15.3341634Z tests/test_memex_hook.py::test_signed_commits_verify PASSED              [ 78%]
+2026-10-06T00:04:15.3397308Z tests/test_memex_hook.py::test_tamper_memex_doesnt_affect_alethech PASSED [ 78%]
+2026-10-06T00:04:15.3404766Z tests/test_memex_hook.py::test_passthrough_when_alethech_missing PASSED  [ 78%]
+2026-10-06T00:04:15.3601392Z tests/test_memex_hook.py::test_search_passes_through PASSED              [ 79%]
+2026-10-06T00:04:15.3673508Z tests/test_memex_hook.py::test_verify_memex_integrity PASSED             [ 79%]
+2026-10-06T00:04:15.3735658Z tests/test_memex_hook.py::test_verify_memex_integrity_detects_tamper PASSED [ 79%]
+2026-10-06T00:04:15.3794744Z tests/test_memex_hook.py::test_get_all_passes_through PASSED             [ 79%]
+2026-10-06T00:04:15.4103532Z tests/test_memex_hook.py::test_hook_supports_key_rotation PASSED         [ 80%]
+2026-10-06T00:04:15.4108098Z tests/test_protocol.py::test_sha256_is_deterministic PASSED              [ 80%]
+2026-10-06T00:04:15.4112673Z tests/test_protocol.py::test_sha256_differs_on_input PASSED              [ 80%]
+2026-10-06T00:04:15.4119837Z tests/test_protocol.py::test_ed25519_sign_verify_roundtrip PASSED        [ 81%]
+2026-10-06T00:04:15.4126581Z tests/test_protocol.py::test_ed25519_rejects_tampered_signature PASSED   [ 81%]
+2026-10-06T00:04:15.4135163Z tests/test_protocol.py::test_agent_id_derivation_is_deterministic PASSED [ 81%]
+2026-10-06T00:04:15.4141230Z tests/test_protocol.py::test_agent_id_changes_with_different_key PASSED  [ 81%]
+2026-10-06T00:04:15.4148087Z tests/test_protocol.py::test_agent_id_does_not_match_with_wrong_public_key PASSED [ 82%]
+2026-10-06T00:04:15.4152676Z tests/test_protocol.py::test_canonical_json_sorts_keys PASSED            [ 82%]
+2026-10-06T00:04:15.4157347Z tests/test_protocol.py::test_canonical_json_no_whitespace PASSED         [ 82%]
+2026-10-06T00:04:15.4161796Z tests/test_protocol.py::test_canonical_json_nested_objects PASSED        [ 83%]
+2026-10-06T00:04:15.4166275Z tests/test_protocol.py::test_canonical_json_escapes_strings PASSED       [ 83%]
+2026-10-06T00:04:15.4170562Z tests/test_protocol.py::test_canonical_json_unicode_preserved PASSED     [ 83%]
+2026-10-06T00:04:15.4179621Z tests/test_protocol.py::test_memory_commit_signature_validates PASSED    [ 83%]
+2026-10-06T00:04:15.4188283Z tests/test_protocol.py::test_memory_commit_signature_rejects_tampered_content PASSED [ 84%]
+2026-10-06T00:04:15.4195930Z tests/test_protocol.py::test_memory_commit_id_changes_with_content PASSED [ 84%]
+2026-10-06T00:04:15.4204643Z tests/test_protocol.py::test_memory_commit_signature_rejects_wrong_key PASSED [ 84%]
+2026-10-06T00:04:15.4228602Z tests/test_protocol.py::test_init_creates_all_expected_files PASSED      [ 85%]
+2026-10-06T00:04:15.4239429Z tests/test_protocol.py::test_init_fails_if_directory_not_empty PASSED    [ 85%]
+2026-10-06T00:04:15.4261756Z tests/test_protocol.py::test_init_agent_id_is_deterministic PASSED       [ 85%]
+2026-10-06T00:04:15.4315799Z tests/test_protocol.py::test_commit_creates_signed_commit PASSED         [ 85%]
+2026-10-06T00:04:15.4345315Z tests/test_protocol.py::test_commit_fails_with_invalid_content PASSED    [ 86%]
+2026-10-06T00:04:15.4376409Z tests/test_protocol.py::test_commit_fails_with_non_object_content PASSED [ 86%]
+2026-10-06T00:04:15.4407839Z tests/test_protocol.py::test_evidence_creates_signed_evidence PASSED     [ 86%]
+2026-10-06T00:04:15.4437567Z tests/test_protocol.py::test_evidence_fails_with_missing_input PASSED    [ 87%]
+2026-10-06T00:04:15.4470318Z tests/test_protocol.py::test_verify_passes_after_init PASSED             [ 87%]
+2026-10-06T00:04:15.4520255Z tests/test_protocol.py::test_verify_detects_tampered_commit PASSED       [ 87%]
+2026-10-06T00:04:15.4567210Z tests/test_protocol.py::test_verify_detects_missing_parent PASSED        [ 87%]
+2026-10-06T00:04:15.4597623Z tests/test_protocol.py::test_verify_detects_identity_mismatch PASSED     [ 88%]
+2026-10-06T00:04:15.4748553Z tests/test_protocol.py::test_export_then_import_preserves_state PASSED   [ 88%]
+2026-10-06T00:04:15.4807329Z tests/test_protocol.py::test_import_rejects_tampered_manifest PASSED     [ 88%]
+2026-10-06T00:04:15.4844901Z tests/test_protocol.py::test_emit_checkpoint_creates_signed_file PASSED  [ 88%]
+2026-10-06T00:04:15.4895752Z tests/test_protocol.py::test_verify_with_checkpoint_passes_when_consistent PASSED [ 89%]
+2026-10-06T00:04:15.4964492Z tests/test_protocol.py::test_verify_with_checkpoint_detects_rollback PASSED [ 89%]
+2026-10-06T00:04:15.4975868Z tests/test_protocol.py::test_store_layout_after_init PASSED              [ 89%]
+2026-10-06T00:04:15.4983855Z tests/test_release_metadata.py::test_language_package_versions_match PASSED [ 90%]
+2026-10-06T00:04:15.4990449Z tests/test_release_metadata.py::test_citation_uses_current_version_and_protocol_term PASSED [ 90%]
+2026-10-06T00:04:15.4996051Z tests/test_revoked_key_reachability.py::TestAncestryCheckMutationGuard::test_reachable_cases_return_true PASSED [ 90%]
+2026-10-06T00:04:15.5000553Z tests/test_revoked_key_reachability.py::TestAncestryCheckMutationGuard::test_unreachable_cases_return_false PASSED [ 90%]
+2026-10-06T00:04:15.5005238Z tests/test_revoked_key_reachability.py::TestAncestryCheckMutationGuard::test_nonexistent_commit_returns_false PASSED [ 91%]
+2026-10-06T00:04:15.5009745Z tests/test_revoked_key_reachability.py::TestAncestryCheckMutationGuard::test_nonexistent_cutoff_head_returns_false PASSED [ 91%]
+2026-10-06T00:04:15.5116622Z tests/test_revoked_key_reachability.py::TestRevokedKeyHistoricalCommitAccepted::test_historical_commit_still_verifies PASSED [ 91%]
+2026-10-06T00:04:15.5220794Z tests/test_revoked_key_reachability.py::TestRevokedKeyHistoricalCommitAccepted::test_verify_report_counts_historical PASSED [ 92%]
+2026-10-06T00:04:15.5337079Z tests/test_revoked_key_reachability.py::TestRevokedKeyNotInProvenPreRotationHistory::test_commit_child_of_cutoff_rejected PASSED [ 92%]
+2026-10-06T00:04:15.5449490Z tests/test_revoked_key_reachability.py::TestRevokedKeyNotInProvenPreRotationHistory::test_commit_with_synthetic_parent_rejected PASSED [ 92%]
+2026-10-06T00:04:15.5559278Z tests/test_revoked_key_reachability.py::TestRevokedKeyNotInProvenPreRotationHistory::test_verify_report_counts_rejected_commit PASSED [ 92%]
+2026-10-06T00:04:15.5792173Z tests/test_revoked_key_reachability.py::TestReachabilityWiredIntoVerify::test_revoked_key_with_empty_cutoff_head_rejected PASSED [ 93%]
+2026-10-06T00:04:15.5911378Z tests/test_revoked_key_reachability.py::TestRecallSeamDefeats::test_identity_record_undeclares_revocation PASSED [ 93%]
+2026-10-06T00:04:15.6026592Z tests/test_revoked_key_reachability.py::TestRecallSeamDefeats::test_identity_record_undeclares_revocation_api PASSED [ 93%]
+2026-10-06T00:04:15.6144734Z tests/test_revoked_key_reachability.py::TestCutoffHeadMutation::test_cutoff_head_mutated_to_dark_commit PASSED [ 94%]
+2026-10-06T00:04:15.6260921Z tests/test_revoked_key_reachability.py::TestCutoffHeadMutation::test_cutoff_head_mutated_to_dark_commit_api PASSED [ 94%]
+2026-10-06T00:04:15.6266042Z tests/test_search.py::TestTFIDFEmbedder::test_empty_corpus PASSED        [ 94%]
+2026-10-06T00:04:15.6271219Z tests/test_search.py::TestTFIDFEmbedder::test_fitted_corpus PASSED       [ 94%]
+2026-10-06T00:04:15.6276199Z tests/test_search.py::TestTFIDFEmbedder::test_dimension_is_positive PASSED [ 95%]
+2026-10-06T00:05:55.3406595Z tests/test_search.py::TestLocalSearch::test_recall_returns_results PASSED [ 95%]
+2026-10-06T00:05:56.7467602Z tests/test_search.py::TestLocalSearch::test_recall_relevance PASSED      [ 95%]
+2026-10-06T00:05:57.9937465Z tests/test_search.py::TestLocalSearch::test_recall_jwt_query PASSED      [ 96%]
+2026-10-06T00:05:59.2585388Z tests/test_search.py::TestLocalSearch::test_recall_database_query PASSED [ 96%]
+2026-10-06T00:06:00.5166993Z tests/test_search.py::TestLocalSearch::test_recall_filter_by_memory_type PASSED [ 96%]
+2026-10-06T00:06:01.7688577Z tests/test_search.py::TestLocalSearch::test_recall_no_results FAILED     [ 96%]
+2026-10-06T00:06:03.0998972Z tests/test_search.py::TestLocalSearch::test_recall_top_k_limit PASSED    [ 97%]
+2026-10-06T00:06:04.3598537Z tests/test_search.py::TestLocalSearch::test_recall_results_have_scores PASSED [ 97%]
+2026-10-06T00:06:05.6955390Z tests/test_search.py::TestLocalSearch::test_recall_snippet_is_truncated PASSED [ 97%]
+2026-10-06T00:06:07.0443263Z tests/test_search.py::TestLocalSearch::test_stats PASSED                 [ 98%]
+2026-10-06T00:06:08.3230008Z tests/test_search.py::TestLocalSearch::test_repeated_queries_reuse_index PASSED [ 98%]
+2026-10-06T00:06:09.5818680Z tests/test_search.py::TestLocalSearch::test_to_dict_serialization PASSED [ 98%]
+2026-10-06T00:06:10.7665823Z tests/test_search.py::TestLocalSearch::test_empty_store PASSED           [ 98%]
+2026-10-06T00:06:10.9672224Z tests/test_v2_public_boundaries.py::test_drop_context_accepts_both_envelopes[1] PASSED [ 99%]
+2026-10-06T00:06:11.1688478Z tests/test_v2_public_boundaries.py::test_drop_context_accepts_both_envelopes[2] PASSED [ 99%]
+2026-10-06T00:06:11.4383391Z tests/test_v2_public_boundaries.py::test_recovery_rejects_authenticated_but_invalid_history[False] PASSED [ 99%]
+2026-10-06T00:06:12.1668557Z tests/test_v2_public_boundaries.py::test_recovery_rejects_authenticated_but_invalid_history[True] PASSED [100%]
+2026-10-06T00:06:12.1669097Z 
+2026-10-06T00:06:12.1669255Z =================================== FAILURES ===================================
+2026-10-06T00:06:12.1669764Z ____________________ TestLocalSearch.test_recall_no_results ____________________
+2026-10-06T00:06:12.1670068Z 
+2026-10-06T00:06:12.1670230Z self = <tests.test_search.TestLocalSearch object at 0x7f1c867bf1d0>
+2026-10-06T00:06:12.1670814Z populated_store = Store(root=PosixPath('/tmp/pytest-of-runner/pytest-0/test_recall_no_results0'))
+2026-10-06T00:06:12.1671319Z 
+2026-10-06T00:06:12.1671491Z     def test_recall_no_results(self, populated_store):
+2026-10-06T00:06:12.1671949Z         """A query that doesn't match anything should return empty."""
+2026-10-06T00:06:12.1672463Z         results = recall(populated_store, "xyzqwerty nonexist", top_k=5)
+2026-10-06T00:06:12.1672873Z >       assert len(results) == 0
+2026-10-06T00:06:12.1673300Z E       assert 3 == 0
+2026-10-06T00:06:12.1678219Z E        +  where 3 = len([SearchResult(commit_id='sha256:6486f9069ec74f06c636c1ccb9029a475e0e5450bd11b031471da30710926513', agent_id='did:alethech:qev3pu2lr3dymhmbnljeotdb6y', memory_type='episodic', content={'bug': 'Memory leak in worker pool', 'fix': 'Added explicit cleanup after each task'}, timestamp='2026-10-06T00:06:00.525Z', score=0.0209220422346741, snippet='Memory leak in worker pool Added explicit cleanup after each task episodic'), SearchResult(commit_id='sha256:4b94e8798ed90dad91484b788dc46ac8366ca9ee8326465e5a0d655fb6cee0a3', agent_id='did:alethech:qev3pu2lr3dymhmbnljeotdb6y', memory_type='semantic', content={'recipe': 'Chocolate cake', 'ingredients': ['flour', 'sugar', 'cocoa', 'eggs']}, timestamp='2026-10-06T00:06:00.520Z', score=0.01974701151108433, snippet='Chocolate cake ["flour", "sugar", "cocoa", "eggs"] semantic'), SearchResult(commit_id='sha256:e4d5597116ac8ebd55d54266ae8d651687f0c7456d97435a5bf285890bc8114e', agent_id='did:alethech:qev3pu2lr3dymhmbnljeotdb6y', memory_type='episodic', content={'task': 'Fix JWT authentication bug', 'notes': 'The token was missing the aud claim in the payload'}, timestamp='2026-10-06T00:06:00.519Z', score=0.01731950017240089, snippet='Fix JWT authentication bug The token was missing the aud claim in the payload episodic')])
+2026-10-06T00:06:12.1683904Z 
+2026-10-06T00:06:12.1684024Z tests/test_search.py:82: AssertionError
+2026-10-06T00:06:12.1684459Z ----------------------------- Captured stderr call -----------------------------
+2026-10-06T00:06:12.1684835Z 
+2026-10-06T00:06:12.1685014Z Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+2026-10-06T00:06:12.1685840Z Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5626.49it/s]
+2026-10-06T00:06:12.1686326Z =========================== short test summary info ============================
+2026-10-06T00:06:12.1686907Z FAILED tests/test_search.py::TestLocalSearch::test_recall_no_results - assert 3 == 0
+2026-10-06T00:06:12.1692572Z  +  where 3 = len([SearchResult(commit_id='sha256:6486f9069ec74f06c636c1ccb9029a475e0e5450bd11b031471da30710926513', agent_id='did:alethech:qev3pu2lr3dymhmbnljeotdb6y', memory_type='episodic', content={'bug': 'Memory leak in worker pool', 'fix': 'Added explicit cleanup after each task'}, timestamp='2026-10-06T00:06:00.525Z', score=0.0209220422346741, snippet='Memory leak in worker pool Added explicit cleanup after each task episodic'), SearchResult(commit_id='sha256:4b94e8798ed90dad91484b788dc46ac8366ca9ee8326465e5a0d655fb6cee0a3', agent_id='did:alethech:qev3pu2lr3dymhmbnljeotdb6y', memory_type='semantic', content={'recipe': 'Chocolate cake', 'ingredients': ['flour', 'sugar', 'cocoa', 'eggs']}, timestamp='2026-10-06T00:06:00.520Z', score=0.01974701151108433, snippet='Chocolate cake ["flour", "sugar", "cocoa", "eggs"] semantic'), SearchResult(commit_id='sha256:e4d5597116ac8ebd55d54266ae8d651687f0c7456d97435a5bf285890bc8114e', agent_id='did:alethech:qev3pu2lr3dymhmbnljeotdb6y', memory_type='episodic', content={'task': 'Fix JWT authentication bug', 'notes': 'The token was missing the aud claim in the payload'}, timestamp='2026-10-06T00:06:00.519Z', score=0.01731950017240089, snippet='Fix JWT authentication bug The token was missing the aud claim in the payload episodic')])
+2026-10-06T00:06:12.1698226Z ================== 1 failed, 353 passed in 142.82s (0:02:22) ===================
+2026-10-06T00:06:13.1621047Z ##[error]Process completed with exit code 1.
+2026-10-06T00:06:13.1747861Z Post job cleanup.
+2026-10-06T00:06:13.2457804Z [command]/usr/bin/git version
+2026-10-06T00:06:13.2489269Z git version 2.55.0
+2026-10-06T00:06:13.2522944Z Temporarily overriding HOME='/home/runner/work/_temp/fcebb520-0dd0-4d7f-94a7-53bf4f95b204' before making global git config changes
+2026-10-06T00:06:13.2524516Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T00:06:13.2527732Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-10-06T00:06:13.2853726Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T00:06:13.2882706Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T00:06:13.3107542Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T00:06:13.3326998Z http.https://github.com/.extraheader
+2026-10-06T00:06:13.3334901Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-06T00:06:13.3434097Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T00:06:13.3785815Z Cleaning up orphan processes
+2026-10-06T00:06:13.4054655Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

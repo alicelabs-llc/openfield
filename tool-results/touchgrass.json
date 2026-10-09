@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://dev.to/devopsdaily/touch-grass-6-project-ideas-for-people-who-live-in-a-terminal-hacktoberfest-dev-challenge-week-1-1e7n",
+    "name": "Touch Grass: 6 Project Ideas for People Who Live in a Terminal",
+    "snippet": "The prompt: build something with open-source AI at its core: an open-weight model, an open-source agent harness or framework, local inference, ...",
+    "host_name": "dev.to",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/vrushali_dev_15/petal-leaf-is-a-small-web-app-that-helps-you-look-at-your-plants-instead-of-your-phone-53fo",
+    "name": "Petal & Leaf is a small web app that helps you look at your",
+    "snippet": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass. What I Built. Petal & Leaf is a small web app that ...",
+    "host_name": "dev.to",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://unfem.com/devto/post/tFMhz0yfAaJRFw6",
+    "name": "Devto on Unfem: \"Touch Grass: 6 Project Ideas for People\"",
+    "snippet": "The prompt: build something with open-source AI at its core: an open-weight model, an open-source agent harness or framework, local inference, ...",
+    "host_name": "unfem.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/aws/how-to-make-ai-answer-questions-about-your-documents-by-building-rag-from-scratch-4dg0",
+    "name": "How to make AI answer questions about your documents",
+    "snippet": "Week 1 of Hacktoberfest is here, and the theme is Touch Grass. Build a project with open-source AI at its core and compete for $2,450 across 17 ...",
+    "host_name": "dev.to",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://hacktoberfest-handbook.mlh.com/fest-planning-guide/open-source-prize-categories",
+    "name": "Open-Source AI Prize Challenge | Hacktoberfest Host Handbook",
+    "snippet": "Teams could create an agent skill, build with an open-weight large or small language model, or build or adapt an open-source model harness.",
+    "host_name": "hacktoberfest-handbook.mlh.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

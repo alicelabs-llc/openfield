@@ -1,0 +1,6 @@
+{
+  "name": "VeriSanctions - Global AML, Sanctions & PEP Compliance Screening",
+  "description": "Enterprise-grade AML, OFAC sanctions, PEP and adverse media screening platform by AliceLabs LLC. Real-time OpenSanctions intelligence, audit-ready PDF dossiers, and Stripe-ready compliance billing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

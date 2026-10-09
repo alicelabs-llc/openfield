@@ -1,0 +1,907 @@
+     1→//! On-disk state: the ledger, search history, config, and the crash marker.
+     2→//!
+     3→//! Three rules, all of them about not losing a user's data:
+     4→//!
+     5→//! 1. **Every write is atomic** — temp file in the same directory, then rename.
+     6→//!    A crash mid-write leaves either the old file or the new one, never half of
+     7→//!    one (`FR-55`). Same directory matters: a rename across filesystems is a
+     8→//!    copy, and stops being atomic.
+     9→//! 2. **A corrupt file is quarantined, never deleted and never overwritten.**
+    10→//!    We rename it to `.corrupt`, start from defaults, and say so (`FR-54`).
+    11→//!    The user's file may be the only copy of something they care about.
+    12→//! 3. **One bad row does not lose the file.** A ledger with nineteen good
+    13→//!    entries and one malformed one restores nineteen items.
+    14→//!
+    15→//! Everything is addressed through [`Store`] rather than reading the environment
+    16→//! at each call, so tests run against a temp directory in parallel without
+    17→//! fighting over `HARBOUR_STATE_DIR`.
+    18→//!
+    19→//! `dead_code` is allowed module-wide until the app loop calls [`Store`] on the
+    20→//! boot and quit paths (E2/E3). Every item here is covered by tests; the lint
+    21→//! only means nothing in `main` reaches it yet. Remove the allow as the wiring
+    22→//! lands.
+    23→
+    24→#![allow(dead_code)]
+    25→
+    26→use std::collections::HashSet;
+    27→use std::fs;
+    28→use std::io;
+    29→use std::path::{Path, PathBuf};
+    30→
+    31→use serde::{Deserialize, Serialize};
+    32→
+    33→use crate::core::paths;
+    34→use crate::core::types::{QueueItem, SourceId};
+    35→
+    36→/// Hard cap on remembered search queries (`FR-49`).
+    37→pub const HISTORY_CAP: usize = 500;
+    38→
+    39→/// User configuration (`FR-51`).
+    40→#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+    41→#[serde(default)]
+    42→pub struct Config {
+    43→    /// Where downloads land unless overridden per item.
+    44→    pub download_dir: PathBuf,
+    45→    /// Active theme name.
+    46→    pub theme: String,
+    47→    /// Keep seeding after a download completes.
+    48→    pub seed_by_default: bool,
+    49→    /// When true, `d` asks for a folder (then files); `shift+d` is direct.
+    50→    /// When false the keys swap. Default on (FR-29).
+    51→    pub ask_save_path: bool,
+    52→    /// Extra announce URLs added to every torrent.
+    53→    pub trackers: Vec<String>,
+    54→    /// External player for watch mode (`w`): an explicit path or command
+    55→    /// name (mpv/VLC). None = unset; the first `w` opens the player picker
+    56→    /// and the choice is persisted so it never nags.
+    57→    pub player: Option<String>,
+    58→    /// Sources the user disabled via the sidebar; they are never queried or
+    59→    /// merged. Empty = everything enabled (additive: configs written by
+    60→    /// older builds keep working).
+    61→    pub disabled_sources: Vec<SourceId>,
+    62→    /// Base URL of the user-run indexer service. The
+    63→    /// client ships zero scrapers; every search and magnet resolution is one
+    64→    /// HTTP call to this address. Defaults to the indexer's default bind.
+    65→    pub indexer_url: String,
+    66→    /// Global download cap in MiB/s; None = unlimited (librqbit's session
+    67→    /// rate limiter, applied live from settings).
+    68→    pub download_limit_mib: Option<u64>,
+    69→    /// Global upload cap in MiB/s; None = unlimited.
+    70→    pub upload_limit_mib: Option<u64>,
+    71→    /// Alternate-rate download cap in MiB/s (the qBittorrent "alt rates"
+    72→    /// slot); used while `use_alt_rates` is on.
+    73→    pub alt_download_limit_mib: Option<u64>,
+    74→    /// Alternate-rate upload cap in MiB/s.
+    75→    pub alt_upload_limit_mib: Option<u64>,
+    76→    /// When true the alternate caps apply; toggling re-applies live.
+    77→    pub use_alt_rates: bool,
+    78→    /// Queueing: max simultaneous downloads; None = the env default
+    79→    /// (`HARBOUR_MAX_DOWNLOADS`, 0 = unlimited). Applied live.
+    80→    pub max_active_downloads: Option<usize>,
+    81→    /// Listen port for the swarm; None = librqbit picks one. Boot-time.
+    82→    pub listen_port: Option<u16>,
+    83→    /// UPnP port forwarding. Boot-time.
+    84→    pub enable_upnp: bool,
+    85→    /// DHT bootstrap. Boot-time.
+    86→    pub enable_dht: bool,
+    87→    /// SOCKS5 proxy URL for the swarm (e.g. socks5://host:1080). Boot-time.
+    88→    pub socks_proxy_url: Option<String>,
+    89→    /// Stop seeding once the share ratio (uploaded / downloaded) is met.
+    90→    /// Applied live; the seed pauses (a paused seed, per AGENTS vocabulary).
+    91→    pub stop_seed_at_ratio: bool,
+    92→    /// The ratio that triggers the stop above (qBittorrent `max_ratio`).
+    93→    pub seed_ratio: f64,
+    94→}
+    95→
+    96→impl Default for Config {
+    97→    fn default() -> Self {
+    98→        Self {
+    99→            download_dir: paths::default_download_dir(),
+   100→            theme: "titanium".into(),
+   101→            seed_by_default: true,
+   102→            ask_save_path: true,
+   103→            trackers: Vec::new(),
+   104→            player: None,
+   105→            disabled_sources: Vec::new(),
+   106→            indexer_url: "http://127.0.0.1:8765".into(),
+   107→            download_limit_mib: None,
+   108→            upload_limit_mib: None,
+   109→            alt_download_limit_mib: None,
+   110→            alt_upload_limit_mib: None,
+   111→            use_alt_rates: false,
+   112→            max_active_downloads: None,
+   113→            listen_port: None,
+   114→            enable_upnp: true,
+   115→            enable_dht: true,
+   116→            socks_proxy_url: None,
+   117→            stop_seed_at_ratio: false,
+   118→            seed_ratio: 1.0,
+   119→        }
+   120→    }
+   121→}
+   122→
+   123→/// Outcome of a load that can degrade. The caller turns `Recovered` into the
+   124→/// banner the user sees — a silent fallback is how people lose data without
+   125→/// noticing.
+   126→#[derive(Debug, Clone, PartialEq)]
+   127→pub enum Loaded<T> {
+   128→    /// Loaded cleanly, or the file simply did not exist yet.
+   129→    Ok(T),
+   130→    /// Something was wrong. `value` is the best we could salvage.
+   131→    Recovered { value: T, warning: String },
+   132→}
+   133→
+   134→impl<T> Loaded<T> {
+   135→    pub fn value(self) -> T {
+   136→        match self {
+   137→            Loaded::Ok(v) => v,
+   138→            Loaded::Recovered { value, .. } => value,
+   139→        }
+   140→    }
+   141→
+   142→    pub fn warning(&self) -> Option<&str> {
+   143→        match self {
+   144→            Loaded::Ok(_) => None,
+   145→            Loaded::Recovered { warning, .. } => Some(warning),
+   146→        }
+   147→    }
+   148→}
+   149→
+   150→/// Handle on one state directory.
+   151→#[derive(Debug, Clone)]
+   152→pub struct Store {
+   153→    root: PathBuf,
+   154→}
+   155→
+   156→impl Store {
+   157→    pub fn new(root: impl Into<PathBuf>) -> Self {
+   158→        Self { root: root.into() }
+   159→    }
+   160→
+   161→    /// The real state directory (`HARBOUR_STATE_DIR`, else `~/.harbour`).
+   162→    pub fn from_env() -> Self {
+   163→        Self::new(paths::state_dir())
+   164→    }
+   165→
+   166→    pub fn root(&self) -> &Path {
+   167→        &self.root
+   168→    }
+   169→
+   170→    pub fn ledger_path(&self) -> PathBuf {
+   171→        self.root.join("downloads.json")
+   172→    }
+   173→
+   174→    pub fn history_path(&self) -> PathBuf {
+   175→        self.root.join("history.json")
+   176→    }
+   177→
+   178→    pub fn config_path(&self) -> PathBuf {
+   179→        self.root.join("config.toml")
+   180→    }
+   181→
+   182→    pub fn boot_marker_path(&self) -> PathBuf {
+   183→        self.root.join("boot.marker")
+   184→    }
+   185→
+   186→    // --- ledger -------------------------------------------------------------
+   187→
+   188→    /// Writes the ledger atomically. Only durable fields are in [`QueueItem`],
+   189→    /// so this is called on status transitions rather than on every poll tick.
+   190→    pub fn save_ledger(&self, items: &[QueueItem]) -> io::Result<()> {
+   191→        let json = serde_json::to_vec_pretty(items)
+   192→            .map_err(|e| io::Error::new(io::ErrorKind::InvalidData, e))?;
+   193→        atomic_write(&self.ledger_path(), &json)
+   194→    }
+   195→
+   196→    /// Loads the ledger, salvaging as much as possible.
+   197→    ///
+   198→    /// A missing file is a clean empty start. A file that will not parse at all
+   199→    /// is quarantined. A file that parses as an array keeps every row that is a
+   200→    /// valid item and reports how many were dropped.
+   201→    pub fn load_ledger(&self) -> Loaded<Vec<QueueItem>> {
+   202→        let path = self.ledger_path();
+   203→        let raw = match fs::read_to_string(&path) {
+   204→            Ok(raw) => raw,
+   205→            Err(e) if e.kind() == io::ErrorKind::NotFound => return Loaded::Ok(Vec::new()),
+   206→            Err(e) => {
+   207→                return Loaded::Recovered {
+   208→                    value: Vec::new(),
+   209→                    warning: format!("could not read {}: {e}", path.display()),
+   210→                };
+   211→            }
+   212→        };
+   213→
+   214→        // Parse to generic JSON first so one malformed entry costs one entry
+   215→        // rather than the whole file.
+   216→        let rows: Vec<serde_json::Value> = match serde_json::from_str(&raw) {
+   217→            Ok(serde_json::Value::Array(rows)) => rows,
+   218→            _ => {
+   219→                let warning = match quarantine(&path) {
+   220→                    Ok(moved) => format!(
+   221→                        "{} was unreadable; kept a copy at {} and started with an empty queue",
+   222→                        path.display(),
+   223→                        moved.display()
+   224→                    ),
+   225→                    Err(e) => format!(
+   226→                        "{} was unreadable and could not be set aside ({e}); \
+   227→                         started with an empty queue",
+   228→                        path.display()
+   229→                    ),
+   230→                };
+   231→                return Loaded::Recovered {
+   232→                    value: Vec::new(),
+   233→                    warning,
+   234→                };
+   235→            }
+   236→        };
+   237→
+   238→        let total = rows.len();
+   239→        let items: Vec<QueueItem> = rows
+   240→            .into_iter()
+   241→            .filter_map(|row| serde_json::from_value(row).ok())
+   242→            .collect();
+   243→
+   244→        let dropped = total - items.len();
+   245→        if dropped == 0 {
+   246→            Loaded::Ok(items)
+   247→        } else {
+   248→            Loaded::Recovered {
+   249→                warning: format!(
+   250→                    "{dropped} of {total} saved downloads could not be read and were skipped"
+   251→                ),
+   252→                value: items,
+   253→            }
+   254→        }
+   255→    }
+   256→
+   257→    // --- search history -----------------------------------------------------
+   258→
+   259→    /// Saves search queries, newest first, capped at [`HISTORY_CAP`].
+   260→    pub fn save_history(&self, queries: &[String]) -> io::Result<()> {
+   261→        let capped: Vec<&String> = queries.iter().take(HISTORY_CAP).collect();
+   262→        let json = serde_json::to_vec_pretty(&capped)
+   263→            .map_err(|e| io::Error::new(io::ErrorKind::InvalidData, e))?;
+   264→        atomic_write(&self.history_path(), &json)
+   265→    }
+   266→
+   267→    /// Loads search history. Corrupt history is worth nothing, so it degrades
+   268→    /// to empty without quarantine noise.
+   269→    pub fn load_history(&self) -> Loaded<Vec<String>> {
+   270→        let path = self.history_path();
+   271→        match fs::read_to_string(&path) {
+   272→            Err(e) if e.kind() == io::ErrorKind::NotFound => Loaded::Ok(Vec::new()),
+   273→            Err(e) => Loaded::Recovered {
+   274→                value: Vec::new(),
+   275→                warning: format!("could not read search history: {e}"),
+   276→            },
+   277→            Ok(raw) => match serde_json::from_str::<Vec<String>>(&raw) {
+   278→                Ok(mut v) => {
+   279→                    v.truncate(HISTORY_CAP);
+   280→                    Loaded::Ok(v)
+   281→                }
+   282→                Err(_) => Loaded::Recovered {
+   283→                    value: Vec::new(),
+   284→                    warning: "search history was unreadable and has been reset".into(),
+   285→                },
+   286→            },
+   287→        }
+   288→    }
+   289→
+   290→    /// Records a query at the front, de-duplicated, capped.
+   291→    pub fn push_history(&self, existing: &mut Vec<String>, query: &str) -> io::Result<()> {
+   292→        let query = query.trim();
+   293→        if query.is_empty() {
+   294→            return Ok(());
+   295→        }
+   296→        existing.retain(|q| q != query);
+   297→        existing.insert(0, query.to_owned());
+   298→        existing.truncate(HISTORY_CAP);
+   299→        self.save_history(existing)
+   300→    }
+   301→
+   302→    // --- config -------------------------------------------------------------
+   303→
+   304→    pub fn save_config(&self, config: &Config) -> io::Result<()> {
+   305→        let text = toml::to_string_pretty(config)
+   306→            .map_err(|e| io::Error::new(io::ErrorKind::InvalidData, e))?;
+   307→        atomic_write(&self.config_path(), text.as_bytes())
+   308→    }
+   309→
+   310→    /// Loads config, falling back loudly.
+   311→    ///
+   312→    /// A missing config is a first run, not an error. An unparseable one keeps
+   313→    /// defaults **and leaves the file alone** — overwriting someone's config
+   314→    /// because we could not read it is not a recovery, it is a second failure.
+   315→    pub fn load_config(&self) -> Loaded<Config> {
+   316→        let path = self.config_path();
+   317→        match fs::read_to_string(&path) {
+   318→            Err(e) if e.kind() == io::ErrorKind::NotFound => Loaded::Ok(Config::default()),
+   319→            Err(e) => Loaded::Recovered {
+   320→                value: Config::default(),
+   321→                warning: format!("could not read {}: {e}", path.display()),
+   322→            },
+   323→            Ok(raw) => match toml::from_str::<Config>(&raw) {
+   324→                Ok(cfg) => Loaded::Ok(cfg),
+   325→                Err(e) => Loaded::Recovered {
+   326→                    value: Config::default(),
+   327→                    warning: format!(
+   328→                        "{} is not valid TOML ({}); using defaults. Your file has been left \
+   329→                         untouched.",
+   330→                        path.display(),
+   331→                        e.message()
+   332→                    ),
+   333→                },
+   334→            },
+   335→        }
+   336→    }
+   337→
+   338→    // --- bootguard ----------------------------------------------------------
+   339→
+   340→    /// True if the previous run died before it finished starting up (`FR-08`).
+   341→    pub fn boot_was_interrupted(&self) -> bool {
+   342→        self.boot_marker_path().exists()
+   343→    }
+   344→
+   345→    /// Writes the crash marker. Called immediately before state is handed to the
+   346→    /// engine.
+   347→    pub fn arm_boot_marker(&self) -> io::Result<()> {
+   348→        ensure_parent(&self.boot_marker_path())?;
+   349→        fs::write(self.boot_marker_path(), b"harbour boot in progress\n")
+   350→    }
+   351→
+   352→    /// Clears the crash marker. **Flush the ledger before calling this**: a
+   353→    /// crash between the two would otherwise leave a clean marker over stale
+   354→    /// state, and bootguard would stand down exactly when it was needed.
+   355→    pub fn disarm_boot_marker(&self) -> io::Result<()> {
+   356→        match fs::remove_file(self.boot_marker_path()) {
+   357→            Ok(()) => Ok(()),
+   358→            Err(e) if e.kind() == io::ErrorKind::NotFound => Ok(()),
+   359→            Err(e) => Err(e),
+   360→        }
+   361→    }
+   362→
+   363→    /// The exit path, in the one order that is safe: flush state, *then* stand
+   364→    /// the crash breaker down.
+   365→    pub fn flush_and_disarm(&self, items: &[QueueItem]) -> io::Result<()> {
+   366→        self.save_ledger(items)?;
+   367→        self.disarm_boot_marker()
+   368→    }
+   369→
+   370→    // --- cache (FR-80) ------------------------------------------------------
+   371→
+   372→    /// Wipes `cache/search/` plus unused `.torrent` files and watch-now scratch
+   373→    /// dirs whose infohash is not in `keep`. Never touches the download
+   374→    /// directory or the ledger — leftover pieces there are `shift+X` (#77).
+   375→    pub fn clear_cache(&self, keep: &HashSet<String>) -> io::Result<u64> {
+   376→        let mut freed = wipe_tree(&paths::search_cache_root(&self.root))?;
+   377→        freed += purge_unused_torrents(&self.root, keep)?;
+   378→        freed += purge_unused_watch_dirs(&self.root, keep)?;
+   379→        Ok(freed)
+   380→    }
+   381→
+   382→    /// Deletes `<state>/cache/<hash>/` watch-now scratch for one torrent.
+   383→    /// Missing or invalid hashes are success: forget must stay idempotent.
+   384→    pub fn remove_watch_cache(&self, id: &str) -> io::Result<()> {
+   385→        let Some(dir) = paths::watch_cache_dir(&self.root, id) else {
+   386→            return Ok(());
+   387→        };
+   388→        match fs::remove_dir_all(&dir) {
+   389→            Ok(()) => Ok(()),
+   390→            Err(e) if e.kind() == io::ErrorKind::NotFound => Ok(()),
+   391→            Err(e) => Err(e),
+   392→        }
+   393→    }
+   394→}
+   395→
+   396→/// Writes `bytes` to `path` atomically.
+   397→///
+   398→/// The temp file is a sibling so the rename stays within one filesystem, and it
+   399→/// is removed on a failed write so a crashed run does not leave litter that
+   400→/// looks like state.
+   401→pub fn atomic_write(path: &Path, bytes: &[u8]) -> io::Result<()> {
+   402→    ensure_parent(path)?;
+   403→    let tmp = path.with_extension(format!(
+   404→        "{}.tmp",
+   405→        path.extension().and_then(|e| e.to_str()).unwrap_or("new")
+   406→    ));
+   407→    if let Err(e) = fs::write(&tmp, bytes) {
+   408→        let _ = fs::remove_file(&tmp);
+   409→        return Err(e);
+   410→    }
+   411→    // fsync before rename (FR-55): without it a power loss can make the rename
+   412→    // durable while the data blocks are not, leaving a zero-length or partial
+   413→    // ledger — the exact "no partial file" promise this function makes. The
+   414→    // handle must be opened write-enabled: sync_all on Windows requires it.
+   415→    if let Err(e) = fs::OpenOptions::new()
+   416→        .write(true)
+   417→        .open(&tmp)
+   418→        .and_then(|f| f.sync_all())
+   419→    {
+   420→        let _ = fs::remove_file(&tmp);
+   421→        return Err(e);
+   422→    }
+   423→    // rename replaces the destination on both Unix and Windows.
+   424→    if let Err(e) = fs::rename(&tmp, path) {
+   425→        let _ = fs::remove_file(&tmp);
+   426→        return Err(e);
+   427→    }
+   428→    Ok(())
+   429→}
+   430→
+   431→fn ensure_parent(path: &Path) -> io::Result<()> {
+   432→    match path.parent() {
+   433→        Some(dir) if !dir.as_os_str().is_empty() => fs::create_dir_all(dir),
+   434→        _ => Ok(()),
+   435→    }
+   436→}
+   437→
+   438→/// Moves an unreadable file aside, never deleting it.
+   439→fn quarantine(path: &Path) -> io::Result<PathBuf> {
+   440→    let target = path.with_extension(format!(
+   441→        "{}.corrupt",
+   442→        path.extension().and_then(|e| e.to_str()).unwrap_or("bak")
+   443→    ));
+   444→    fs::rename(path, &target)?;
+   445→    Ok(target)
+   446→}
+   447→
+   448→/// Recursively deletes `dir` and returns how many bytes it held. Missing is 0.
+   449→fn wipe_tree(dir: &Path) -> io::Result<u64> {
+   450→    if !dir.exists() {
+   451→        return Ok(0);
+   452→    }
+   453→    let bytes = dir_size(dir);
+   454→    fs::remove_dir_all(dir)?;
+   455→    Ok(bytes)
+   456→}
+   457→
+   458→fn dir_size(dir: &Path) -> u64 {
+   459→    let Ok(entries) = fs::read_dir(dir) else {
+   460→        return 0;
+   461→    };
+   462→    entries
+   463→        .flatten()
+   464→        .map(|entry| {
+   465→            let path = entry.path();
+   466→            if path.is_dir() {
+   467→                dir_size(&path)
+   468→            } else {
+   469→                entry.metadata().map(|m| m.len()).unwrap_or(0)
+   470→            }
+   471→        })
+   472→        .sum()
+   473→}
+   474→
+   475→fn purge_unused_torrents(root: &Path, keep: &HashSet<String>) -> io::Result<u64> {
+   476→    let dir = paths::torrent_cache_dir(root);
+   477→    let Ok(entries) = fs::read_dir(&dir) else {
+   478→        return Ok(0);
+   479→    };
+   480→    let mut freed = 0_u64;
+   481→    for entry in entries.flatten() {
+   482→        let path = entry.path();
+   483→        if path.extension().and_then(|e| e.to_str()) != Some("torrent") {
+   484→            continue;
+   485→        }
+   486→        let Some(stem) = path.file_stem().and_then(|s| s.to_str()) else {
+   487→            continue;
+   488→        };
+   489→        if keep.contains(stem) {
+   490→            continue;
+   491→        }
+   492→        let size = entry.metadata().map(|m| m.len()).unwrap_or(0);
+   493→        match fs::remove_file(&path) {
+   494→            Ok(()) => freed += size,
+   495→            Err(e) if e.kind() == io::ErrorKind::NotFound => {}
+   496→            Err(e) => return Err(e),
+   497→        }
+   498→    }
+   499→    Ok(freed)
+   500→}
+   501→
+   502→fn purge_unused_watch_dirs(root: &Path, keep: &HashSet<String>) -> io::Result<u64> {
+   503→    let dir = paths::cache_dir(root);
+   504→    let Ok(entries) = fs::read_dir(&dir) else {
+   505→        return Ok(0);
+   506→    };
+   507→    let mut freed = 0_u64;
+   508→    for entry in entries.flatten() {
+   509→        let path = entry.path();
+   510→        if !path.is_dir() {
+   511→            continue;
+   512→        }
+   513→        let Some(name) = entry.file_name().to_str().map(str::to_owned) else {
+   514→            continue;
+   515→        };
+   516→        // Only hash-keyed watch scratch (`cache/<hash>/`), never torrents/search.
+   517→        if paths::watch_cache_dir(root, &name).as_deref() != Some(path.as_path()) {
+   518→            continue;
+   519→        }
+   520→        if keep.contains(&name) {
+   521→            continue;
+   522→        }
+   523→        let size = dir_size(&path);
+   524→        match fs::remove_dir_all(&path) {
+   525→            Ok(()) => freed += size,
+   526→            Err(e) if e.kind() == io::ErrorKind::NotFound => {}
+   527→            Err(e) => return Err(e),
+   528→        }
+   529→    }
+   530→    Ok(freed)
+   531→}
+   532→
+   533→/// Binary units for the clear-cache banner, matching the downloads view.
+   534→pub(crate) fn format_bytes(bytes: u64) -> String {
+   535→    const UNITS: &[&str] = &["B", "KiB", "MiB", "GiB", "TiB"];
+   536→    let mut value = bytes as f64;
+   537→    let mut unit = 0;
+   538→    while value >= 1024.0 && unit < UNITS.len() - 1 {
+   539→        value /= 1024.0;
+   540→        unit += 1;
+   541→    }
+   542→    if unit == 0 {
+   543→        format!("{bytes} B")
+   544→    } else {
+   545→        format!("{value:.1} {}", UNITS[unit])
+   546→    }
+   547→}
+   548→
+   549→#[cfg(test)]
+   550→mod tests {
+   551→    use super::*;
+   552→    use crate::core::types::{QueueStatus, SourceId};
+   553→    use std::sync::atomic::{AtomicU32, Ordering};
+   554→
+   555→    /// Per-test temp directory. No `tempfile` dependency for what is six lines;
+   556→    /// the counter keeps parallel tests from colliding.
+   557→    fn temp_store(tag: &str) -> Store {
+   558→        static N: AtomicU32 = AtomicU32::new(0);
+   559→        let n = N.fetch_add(1, Ordering::Relaxed);
+   560→        let dir =
+   561→            std::env::temp_dir().join(format!("harbour-test-{tag}-{}-{n}", std::process::id()));
+   562→        let _ = fs::remove_dir_all(&dir);
+   563→        fs::create_dir_all(&dir).expect("create temp dir");
+   564→        Store::new(dir)
+   565→    }
+   566→
+   567→    fn item(id: char, status: QueueStatus) -> QueueItem {
+   568→        let mut item = QueueItem::new(
+   569→            std::iter::repeat_n(id, 40).collect(),
+   570→            format!("item {id}"),
+   571→            Some(SourceId::CineVault),
+   572→            Some("magnet:?xt=urn:btih:abc".into()),
+   573→            PathBuf::from("/tmp/dl"),
+   574→            1_786_000_000_000,
+   575→        );
+   576→        item.status = status;
+   577→        item
+   578→    }
+   579→
+   580→    #[test]
+   581→    fn ledger_round_trips() {
+   582→        let store = temp_store("ledger");
+   583→        let items = vec![
+   584→            item('a', QueueStatus::Seeding),
+   585→            item('b', QueueStatus::Paused),
+   586→        ];
+   587→        store.save_ledger(&items).expect("save");
+   588→        assert_eq!(store.load_ledger(), Loaded::Ok(items));
+   589→    }
+   590→
+   591→    #[test]
+   592→    fn a_missing_ledger_is_a_clean_start_not_an_error() {
+   593→        let store = temp_store("missing");
+   594→        assert_eq!(store.load_ledger(), Loaded::Ok(Vec::new()));
+   595→        assert!(store.load_ledger().warning().is_none());
+   596→    }
+   597→
+   598→    #[test]
+   599→    fn a_corrupt_ledger_is_quarantined_never_deleted() {
+   600→        let store = temp_store("corrupt");
+   601→        fs::write(store.ledger_path(), b"{ this is not json").expect("write");
+   602→
+   603→        let loaded = store.load_ledger();
+   604→        assert!(loaded.warning().is_some(), "the user is told");
+   605→        assert!(loaded.value().is_empty(), "startup survives");
+   606→
+   607→        let kept = store.ledger_path().with_extension("json.corrupt");
+   608→        assert!(
+   609→            kept.exists(),
+   610→            "FR-54: the original is set aside, not destroyed"
+   611→        );
+   612→        assert_eq!(fs::read_to_string(kept).unwrap(), "{ this is not json");
+   613→    }
+   614→
+   615→    #[test]
+   616→    fn one_bad_row_does_not_lose_the_whole_ledger() {
+   617→        let store = temp_store("badrow");
+   618→        let good = serde_json::to_value(item('a', QueueStatus::Queued)).unwrap();
+   619→        let payload = serde_json::json!([good, { "id": "nonsense" }]);
+   620→        fs::write(store.ledger_path(), payload.to_string()).expect("write");
+   621→
+   622→        let loaded = store.load_ledger();
+   623→        let warning = loaded.warning().map(str::to_owned);
+   624→        let items = loaded.value();
+   625→        assert_eq!(items.len(), 1, "the good row survives");
+   626→        assert!(warning.unwrap().contains("1 of 2"));
+   627→    }
+   628→
+   629→    #[test]
+   630→    fn writes_are_atomic_and_leave_no_litter() {
+   631→        let store = temp_store("atomic");
+   632→        store
+   633→            .save_ledger(&[item('a', QueueStatus::Queued)])
+   634→            .expect("save");
+   635→        store
+   636→            .save_ledger(&[item('b', QueueStatus::Queued)])
+   637→            .expect("overwrite");
+   638→
+   639→        let stray: Vec<String> = fs::read_dir(store.root())
+   640→            .unwrap()
+   641→            .filter_map(Result::ok)
+   642→            .map(|e| e.file_name().to_string_lossy().into_owned())
+   643→            .filter(|n| n.contains(".tmp"))
+   644→            .collect();
+   645→        assert!(stray.is_empty(), "temp files left behind: {stray:?}");
+   646→        assert_eq!(store.load_ledger().value()[0].name, "item b");
+   647→    }
+   648→
+   649→    #[test]
+   650→    fn history_dedupes_and_caps() {
+   651→        let store = temp_store("history");
+   652→        let mut history = Vec::new();
+   653→        store.push_history(&mut history, "dune").unwrap();
+   654→        store.push_history(&mut history, "shogun").unwrap();
+   655→        store.push_history(&mut history, "dune").unwrap();
+   656→        assert_eq!(
+   657→            history,
+   658→            vec!["dune", "shogun"],
+   659→            "newest first, no duplicate"
+   660→        );
+   661→
+   662→        for i in 0..HISTORY_CAP + 50 {
+   663→            store.push_history(&mut history, &format!("q{i}")).unwrap();
+   664→        }
+   665→        assert_eq!(history.len(), HISTORY_CAP, "FR-49 cap enforced on write");
+   666→        assert_eq!(store.load_history().value().len(), HISTORY_CAP);
+   667→    }
+   668→
+   669→    #[test]
+   670→    fn blank_queries_are_not_recorded() {
+   671→        let store = temp_store("blank");
+   672→        let mut history = Vec::new();
+   673→        store.push_history(&mut history, "   ").unwrap();
+   674→        assert!(history.is_empty());
+   675→    }
+   676→
+   677→    #[test]
+   678→    fn corrupt_history_resets_quietly_but_visibly() {
+   679→        let store = temp_store("badhistory");
+   680→        fs::write(store.history_path(), b"not json").unwrap();
+   681→        let loaded = store.load_history();
+   682→        assert!(loaded.warning().is_some());
+   683→        assert!(loaded.value().is_empty());
+   684→    }
+   685→
+   686→    #[test]
+   687→    fn config_round_trips() {
+   688→        let store = temp_store("config");
+   689→        let cfg = Config {
+   690→            download_dir: PathBuf::from("/tmp/somewhere"),
+   691→            theme: "midnight".into(),
+   692→            seed_by_default: false,
+   693→            ask_save_path: false,
+   694→            trackers: vec!["udp://tracker.example:80".into()],
+   695→            player: Some("mpv".into()),
+   696→            disabled_sources: vec![SourceId::GamesHub, SourceId::TsukiBase],
+   697→            indexer_url: "http://127.0.0.1:9999".into(),
+   698→            download_limit_mib: Some(25),
+   699→            upload_limit_mib: Some(10),
+   700→            alt_download_limit_mib: Some(100),
+   701→            alt_upload_limit_mib: None,
+   702→            use_alt_rates: true,
+   703→            max_active_downloads: Some(3),
+   704→            listen_port: Some(51413),
+   705→            enable_upnp: false,
+   706→            enable_dht: true,
+   707→            socks_proxy_url: Some("socks5://127.0.0.1:1080".into()),
+   708→            stop_seed_at_ratio: true,
+   709→            seed_ratio: 1.5,
+   710→        };
+   711→        store.save_config(&cfg).expect("save");
+   712→        assert_eq!(store.load_config(), Loaded::Ok(cfg));
+   713→    }
+   714→
+   715→    #[test]
+   716→    fn a_missing_config_is_a_first_run() {
+   717→        let store = temp_store("noconfig");
+   718→        let loaded = store.load_config();
+   719→        assert!(loaded.warning().is_none(), "a first run is not an error");
+   720→        let cfg = loaded.value();
+   721→        // Asserted field-wise rather than against `Config::default()` as a
+   722→        // whole: the default download directory is derived from the
+   723→        // environment, and comparing two separately-computed copies of it
+   724→        // couples this test to process-global state.
+   725→        assert_eq!(cfg.theme, "titanium");
+   726→        assert!(cfg.seed_by_default);
+   727→        assert!(cfg.ask_save_path, "first run asks for a save path on d");
+   728→        assert!(cfg.trackers.is_empty());
+   729→        assert_eq!(
+   730→            cfg.indexer_url, "http://127.0.0.1:8765",
+   731→            "a first run points at the indexer's default bind"
+   732→        );
+   733→    }
+   734→
+   735→    #[test]
+   736→    fn an_invalid_config_falls_back_without_overwriting_the_users_file() {
+   737→        let store = temp_store("badconfig");
+   738→        let original = "theme = [this is not toml";
+   739→        fs::write(store.config_path(), original).unwrap();
+   740→
+   741→        let loaded = store.load_config();
+   742→        assert!(loaded.warning().unwrap().contains("not valid TOML"));
+   743→        assert_eq!(loaded.value(), Config::default());
+   744→        assert_eq!(
+   745→            fs::read_to_string(store.config_path()).unwrap(),
+   746→            original,
+   747→            "we do not get to destroy a config we merely failed to parse"
+   748→        );
+   749→    }
+   750→
+   751→    #[test]
+   752→    fn a_partial_config_keeps_defaults_for_the_rest() {
+   753→        let store = temp_store("partialconfig");
+   754→        fs::write(store.config_path(), "theme = \"midnight\"\n").unwrap();
+   755→        let cfg = store.load_config().value();
+   756→        assert_eq!(cfg.theme, "midnight");
+   757→        assert!(cfg.seed_by_default, "unspecified keys keep their default");
+   758→        assert!(
+   759→            cfg.disabled_sources.is_empty(),
+   760→            "a config without the key keeps every source enabled"
+   761→        );
+   762→        assert_eq!(
+   763→            cfg.indexer_url, "http://127.0.0.1:8765",
+   764→            "unspecified keys keep their default"
+   765→        );
+   766→    }
+   767→
+   768→    #[test]
+   769→    fn bootguard_detects_an_interrupted_run() {
+   770→        let store = temp_store("boot");
+   771→        assert!(!store.boot_was_interrupted());
+   772→        store.arm_boot_marker().unwrap();
+   773→        assert!(
+   774→            store.boot_was_interrupted(),
+   775→            "a marker left behind means a crash"
+   776→        );
+   777→        store.disarm_boot_marker().unwrap();
+   778→        assert!(!store.boot_was_interrupted());
+   779→    }
+   780→
+   781→    #[test]
+   782→    fn disarming_twice_is_not_an_error() {
+   783→        let store = temp_store("boot2");
+   784→        store.disarm_boot_marker().expect("no marker is fine");
+   785→        store.arm_boot_marker().unwrap();
+   786→        store.disarm_boot_marker().unwrap();
+   787→        store.disarm_boot_marker().expect("idempotent");
+   788→    }
+   789→
+   790→    #[test]
+   791→    fn clean_exit_flushes_before_standing_the_breaker_down() {
+   792→        let store = temp_store("exit");
+   793→        store.arm_boot_marker().unwrap();
+   794→        let items = vec![item('a', QueueStatus::Downloading)];
+   795→        store.flush_and_disarm(&items).unwrap();
+   796→
+   797→        assert!(!store.boot_was_interrupted());
+   798→        assert_eq!(store.load_ledger().value(), items, "state landed first");
+   799→    }
+   800→
+   801→    #[test]
+   802→    fn a_failed_flush_leaves_the_breaker_armed() {
+   803→        // The ordering guarantee that matters: if we cannot save state, the
+   804→        // next boot must still know this run did not finish cleanly.
+   805→        let store = Store::new(std::env::temp_dir().join("harbour-test-exit-ro/nested"));
+   806→        fs::create_dir_all(store.root()).unwrap();
+   807→        store.arm_boot_marker().unwrap();
+   808→
+   809→        // Make the ledger path un-writable by turning it into a directory.
+   810→        fs::create_dir_all(store.ledger_path()).unwrap();
+   811→        assert!(
+   812→            store
+   813→                .flush_and_disarm(&[item('a', QueueStatus::Queued)])
+   814→                .is_err()
+   815→        );
+   816→        assert!(
+   817→            store.boot_was_interrupted(),
+   818→            "a failed flush must not clear the crash marker"
+   819→        );
+   820→        let _ = fs::remove_dir_all(store.root());
+   821→    }
+   822→
+   823→    fn write_file(path: &Path, bytes: &[u8]) {
+   824→        if let Some(parent) = path.parent() {
+   825→            fs::create_dir_all(parent).expect("parent");
+   826→        }
+   827→        fs::write(path, bytes).expect("write");
+   828→    }
+   829→
+   830→    #[test]
+   831→    fn clear_cache_wipes_search_and_unused_torrents_and_leaves_the_ledger() {
+   832→        // FR-80: search JSON and leftover .torrent files go; anything still
+   833→        // in the ledger stays; the download dir is someone else's job (#77).
+   834→        let store = temp_store("clear-cache");
+   835→        let keep = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+   836→        let drop = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb";
+   837→        let search = paths::search_cache_dir(store.root(), SourceId::CineVault).join("dune.json");
+   838→        let kept_torrent = paths::torrent_cache_file(store.root(), keep).expect("hash");
+   839→        let unused_torrent = paths::torrent_cache_file(store.root(), drop).expect("hash");
+   840→        let watch = paths::watch_cache_dir(store.root(), drop).expect("hash");
+   841→        let download_dir = store.root().join("downloads");
+   842→        write_file(&search, b"{\"q\":\"dune\"}");
+   843→        write_file(&kept_torrent, b"keep-me-torrent");
+   844→        write_file(&unused_torrent, b"unused-torrent-bytes");
+   845→        write_file(&watch.join("piece"), b"watch-scratch");
+   846→        write_file(&download_dir.join("movie.mkv"), b"do-not-delete");
+   847→        store
+   848→            .save_ledger(&[item('a', QueueStatus::Downloading)])
+   849→            .expect("ledger");
+   850→
+   851→        let keep_set = std::collections::HashSet::from([keep.to_string()]);
+   852→        let freed = store.clear_cache(&keep_set).expect("clear");
+   853→
+   854→        assert!(
+   855→            freed > 0,
+   856→            "the banner needs a non-zero byte count when files went"
+   857→        );
+   858→        assert!(
+   859→            !search.exists(),
+   860→            "cache/search/ is wiped, including nested JSON"
+   861→        );
+   862→        assert!(
+   863→            !unused_torrent.exists(),
+   864→            "a .torrent whose hash is not in the ledger is unused"
+   865→        );
+   866→        assert!(
+   867→            kept_torrent.exists(),
+   868→            "a .torrent still in the ledger is a re-seed cache (FR-37/FR-78)"
+   869→        );
+   870→        assert!(
+   871→            !watch.exists(),
+   872→            "orphaned watch-now scratch is cache, not a download"
+   873→        );
+   874→        assert!(
+   875→            download_dir.join("movie.mkv").exists(),
+   876→            "clear cache must never mix with download-dir delete (#77)"
+   877→        );
+   878→        assert_eq!(
+   879→            store.load_ledger().value().len(),
+   880→            1,
+   881→            "the ledger is untouched"
+   882→        );
+   883→    }
+   884→
+   885→    #[test]
+   886→    fn remove_watch_cache_deletes_only_that_hash_dir() {
+   887→        let store = temp_store("watch-cache");
+   888→        let gone = "cccccccccccccccccccccccccccccccccccccccc";
+   889→        let stay = "dddddddddddddddddddddddddddddddddddddddd";
+   890→        let gone_dir = paths::watch_cache_dir(store.root(), gone).expect("hash");
+   891→        let stay_dir = paths::watch_cache_dir(store.root(), stay).expect("hash");
+   892→        write_file(&gone_dir.join("a"), b"scratch");
+   893→        write_file(&stay_dir.join("b"), b"other");
+   894→
+   895→        store.remove_watch_cache(gone).expect("remove");
+   896→
+   897→        assert!(!gone_dir.exists());
+   898→        assert!(stay_dir.join("b").exists());
+   899→        store
+   900→            .remove_watch_cache("not-a-hash")
+   901→            .expect("invalid hashes are a no-op");
+   902→        store
+   903→            .remove_watch_cache(gone)
+   904→            .expect("missing dirs are a no-op");
+   905→    }
+   906→}
+   907→

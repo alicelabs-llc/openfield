@@ -1,0 +1,1586 @@
+     1→import asyncio
+     2→import json
+     3→from contextlib import asynccontextmanager
+     4→import os
+     5→import sys
+     6→import time
+     7→import uuid
+     8→import threading
+     9→from datetime import datetime
+    10→from pathlib import Path
+    11→from typing import Any, Dict, List, Optional
+    12→import re
+    13→import requests as _requests
+    14→import httpx
+    15→import logging
+    16→
+    17→from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, Depends, HTTPException, Request
+    18→from fastapi.responses import FileResponse, JSONResponse, Response
+    19→from fastapi.middleware.cors import CORSMiddleware
+    20→from pydantic import BaseModel
+    21→from slowapi import _rate_limit_exceeded_handler
+    22→from slowapi.errors import RateLimitExceeded
+    23→from slowapi.middleware import SlowAPIMiddleware
+    24→from starlette.middleware.trustedhost import TrustedHostMiddleware
+    25→from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
+    26→
+    27→sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+    28→import config
+    29→from config import PRISM_VERSION, USER_AGENT
+    30→
+    31→from modules.graph_builder import build_graph
+    32→from modules.module_status import classify, reason_for, OK, ERROR
+    33→from modules.opsec_score import score_from_results
+    34→from modules.report_generator import generate_html_report, generate_pdf_report
+    35→from modules.webhook_formatters import format_slack, format_discord
+    36→
+    37→logger = logging.getLogger("prism")
+    38→
+    39→def _server_error(e: Exception, context: str, status_code: int = 500) -> JSONResponse:
+    40→    logger.exception("%s failed", context)
+    41→    return JSONResponse({"error": "Internal server error"}, status_code=status_code)
+    42→
+    43→
+    44→def llm_providers() -> List[Dict[str, str]]:
+    45→    providers = []
+    46→    custom_key = os.getenv("LLM_API_KEY", "").strip()
+    47→    custom_url = os.getenv("LLM_BASE_URL", "").strip()
+    48→    if custom_key or custom_url:
+    49→        providers.append({
+    50→            "name": "custom",
+    51→            "url": custom_url or config.OPENROUTER_URL,
+    52→            "key": custom_key or "local",
+    53→            "model": os.getenv("LLM_MODEL", "").strip() or "nvidia/nemotron-3-nano-30b-a3b:free",
+    54→        })
+    55→    if config.OPENROUTER_API_KEY and not any(p["key"] == config.OPENROUTER_API_KEY for p in providers):
+    56→        providers.append({
+    57→            "name": "openrouter",
+    58→            "url": config.OPENROUTER_URL,
+    59→            "key": config.OPENROUTER_API_KEY,
+    60→            "model": os.getenv("LLM_MODEL", "").strip() or "nvidia/nemotron-3-nano-30b-a3b:free",
+    61→        })
+    62→    if config.GROQ_API_KEY and not any(p["key"] == config.GROQ_API_KEY for p in providers):
+    63→        providers.append({
+    64→            "name": "groq",
+    65→            "url": config.GROQ_URL,
+    66→            "key": config.GROQ_API_KEY,
+    67→            "model": os.getenv("GROQ_MODEL", "").strip() or "llama-3.1-8b-instant",
+    68→        })
+    69→    return providers
+    70→
+    71→from web.security import (
+    72→    require_api_key, validate_target, check_upload_size, get_allowed_origins,
+    73→    limiter, validate_scan_id, validate_url_not_private, validate_public_target,
+    74→    get_principal, principal_for_key, ANONYMOUS_PRINCIPAL,
+    75→    env_flag, normalize_base_path, parse_csv_env,
+    76→    check_scan_quota, record_scan, get_usage,
+    77→)
+    78→
+    79→_disable_docs = os.getenv("DISABLE_DOCS", "").lower() in ("1", "true", "yes")
+    80→_BASE_PATH = normalize_base_path(os.getenv("PRISM_BASE_PATH", ""))
+    81→_TRUST_PROXY_HEADERS = env_flag("TRUST_PROXY_HEADERS")
+    82→_FORWARDED_ALLOW_IPS = os.getenv("FORWARDED_ALLOW_IPS", "127.0.0.1,::1").strip() or "127.0.0.1,::1"
+    83→_TRUSTED_HOSTS = parse_csv_env("TRUSTED_HOSTS")
+    84→_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+    85→_FRONTEND_DIR = Path(os.getenv("PRISM_FRONTEND_DIR") or (_PROJECT_ROOT / "frontend" / "out")).resolve()
+    86→_RESERVED_FRONTEND_PATHS = {"api", "ws", "healthz", "docs", "redoc", "openapi.json"}
+    87→
+    88→@asynccontextmanager
+    89→async def _lifespan(_app: FastAPI):
+    90→    base_note = f" (public base path: {_BASE_PATH})" if _BASE_PATH else ""
+    91→    print(
+    92→        f"\n  PRISM is running on http://localhost:8080{base_note}\n"
+    93→        "  ⭐ If you find it useful, star the repo: "
+    94→        "https://github.com/NovaCode37/Prism-platform\n",
+    95→        flush=True,
+    96→    )
+    97→    _start_watchlist_scheduler()
+    98→    yield
+    99→
+   100→app = FastAPI(
+   101→    title="PRISM",
+   102→    description="PRISM, an open source intelligence platform",
+   103→    lifespan=_lifespan,
+   104→    version=PRISM_VERSION,
+   105→    root_path=_BASE_PATH,
+   106→    docs_url=None if _disable_docs else "/docs",
+   107→    redoc_url=None if _disable_docs else "/redoc",
+   108→    openapi_url=None if _disable_docs else "/openapi.json",
+   109→)
+   110→app.state.limiter = limiter
+   111→app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+   112→
+   113→app.add_middleware(SlowAPIMiddleware)
+   114→
+   115→@app.middleware("http")
+   116→async def add_security_headers(request, call_next):
+   117→    response = await call_next(request)
+   118→    response.headers["X-Content-Type-Options"] = "nosniff"
+   119→    response.headers["X-Frame-Options"] = "DENY"
+   120→    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+   121→    response.headers["Permissions-Policy"] = "geolocation=(), camera=(), microphone=()"
+   122→    return response
+   123→
+   124→if _TRUSTED_HOSTS and _TRUSTED_HOSTS != ["*"]:
+   125→    app.add_middleware(TrustedHostMiddleware, allowed_hosts=_TRUSTED_HOSTS)
+   126→
+   127→if _TRUST_PROXY_HEADERS:
+   128→    app.add_middleware(ProxyHeadersMiddleware, trusted_hosts=_FORWARDED_ALLOW_IPS)
+   129→
+   130→app.add_middleware(
+   131→    CORSMiddleware,
+   132→    allow_origins=get_allowed_origins(),
+   133→    allow_methods=["GET", "POST", "OPTIONS"],
+   134→    allow_headers=["Content-Type", "X-API-Key", "Authorization"],
+   135→    allow_credentials=False,
+   136→)
+   137→
+   138→_scans: Dict[str, Dict] = {}
+   139→_queues: Dict[str, asyncio.Queue] = {}
+   140→MAX_STORED_SCANS = int(os.getenv("MAX_STORED_SCANS") or "200")
+   141→
+   142→_SCANS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scan_data")
+   143→os.makedirs(_SCANS_DIR, exist_ok=True)
+   144→
+   145→_CACHE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "module_cache")
+   146→os.makedirs(_CACHE_DIR, exist_ok=True)
+   147→_CACHE_TTL = int(os.getenv("CACHE_TTL_HOURS") or "24") * 3600
+   148→
+   149→def _cache_key(module: str, target: str) -> str:
+   150→    import hashlib
+   151→    h = hashlib.md5(f"{module}:{target.lower().strip()}".encode()).hexdigest()
+   152→    return os.path.join(_CACHE_DIR, f"{module}_{h}.json")
+   153→
+   154→def _get_cached(module: str, target: str) -> Optional[Dict]:
+   155→    path = _cache_key(module, target)
+   156→    if not os.path.exists(path):
+   157→        return None
+   158→    try:
+   159→        age = time.time() - os.path.getmtime(path)
+   160→        if age > _CACHE_TTL:
+   161→            os.remove(path)
+   162→            return None
+   163→        with open(path, "r", encoding="utf-8") as f:
+   164→            return json.load(f)
+   165→    except Exception:
+   166→        return None
+   167→
+   168→def _set_cache(module: str, target: str, data: Any) -> None:
+   169→    try:
+   170→        with open(_cache_key(module, target), "w", encoding="utf-8") as f:
+   171→            json.dump(data, f, default=str)
+   172→    except Exception:
+   173→        pass
+   174→
+   175→def _geocode_place(query: str) -> Optional[Dict]:
+   176→    import hashlib
+   177→    cache_path = os.path.join(_CACHE_DIR, "geocode_" + hashlib.md5(query.lower().encode()).hexdigest() + ".json")
+   178→    try:
+   179→        if os.path.exists(cache_path) and time.time() - os.path.getmtime(cache_path) < 30 * 86400:
+   180→            with open(cache_path, "r", encoding="utf-8") as f:
+   181→                return json.load(f)
+   182→    except Exception:
+   183→        pass
+   184→    place = None
+   185→    try:
+   186→        r = _requests.get(
+   187→            "https://nominatim.openstreetmap.org/search",
+   188→            params={"q": query, "format": "json", "limit": 1},
+   189→            headers={"User-Agent": USER_AGENT},
+   190→            timeout=8,
+   191→        )
+   192→        arr = r.json()
+   193→        if arr:
+   194→            bb = arr[0].get("boundingbox")
+   195→            bbox = [float(bb[0]), float(bb[1]), float(bb[2]), float(bb[3])] if bb and len(bb) == 4 else None
+   196→            place = {"lat": float(arr[0]["lat"]), "lng": float(arr[0]["lon"]), "bbox": bbox}
+   197→    except Exception:
+   198→        return None
+   199→    try:
+   200→        with open(cache_path, "w", encoding="utf-8") as f:
+   201→            json.dump(place, f)
+   202→    except Exception:
+   203→        pass
+   204→    return place
+   205→
+   206→def _scan_path(scan_id: str) -> str:
+   207→    return os.path.join(_SCANS_DIR, f"{scan_id}.json")
+   208→
+   209→def _save_scan(scan_id: str, data: Dict) -> None:
+   210→    safe = {k: v for k, v in data.items() if k != "results" or v is not None}
+   211→    try:
+   212→        with open(_scan_path(scan_id), "w", encoding="utf-8") as f:
+   213→            json.dump(safe, f, default=str)
+   214→    except Exception:
+   215→        pass
+   216→
+   217→def _load_scan(scan_id: str) -> Optional[Dict]:
+   218→    if scan_id in _scans:
+   219→        return _scans[scan_id]
+   220→    p = _scan_path(scan_id)
+   221→    if os.path.exists(p):
+   222→        try:
+   223→            with open(p, "r", encoding="utf-8") as f:
+   224→                return json.load(f)
+   225→        except Exception:
+   226→            pass
+   227→    return None
+   228→
+   229→def _list_scans_from_disk(principal: Optional[str] = None) -> List[Dict]:
+   230→    result = []
+   231→    try:
+   232→        for fname in os.listdir(_SCANS_DIR):
+   233→            if not fname.endswith(".json"):
+   234→                continue
+   235→            try:
+   236→                with open(os.path.join(_SCANS_DIR, fname), "r", encoding="utf-8") as f:
+   237→                    s = json.load(f)
+   238→            except Exception:
+   239→                continue
+   240→            if principal is not None:
+   241→                if (s.get("owner") or ANONYMOUS_PRINCIPAL) != principal:
+   242→                    continue
+   243→            result.append(s)
+   244→    except Exception:
+   245→        pass
+   246→    result.sort(key=lambda s: s.get("started_at") or "", reverse=True)
+   247→    return result[:50]
+   248→
+   249→def _scan_visible_to(scan: Dict, principal: str) -> bool:
+   250→    return (scan.get("owner") or ANONYMOUS_PRINCIPAL) == principal
+   251→
+   252→def _evict_old_scans() -> None:
+   253→    if len(_scans) <= MAX_STORED_SCANS:
+   254→        return
+   255→    completed = sorted(
+   256→        ((k, v) for k, v in _scans.items() if v.get("status") in ("completed", "error")),
+   257→        key=lambda x: x[1].get("started_at", ""),
+   258→    )
+   259→    to_remove = len(_scans) - MAX_STORED_SCANS
+   260→    for k, _ in completed[:to_remove]:
+   261→        _scans.pop(k, None)
+   262→        _queues.pop(k, None)
+   263→
+   264→class ScanRequest(BaseModel):
+   265→    target: str
+   266→    scan_type: str = "auto"
+   267→    modules: List[str] = []
+   268→    webhook_url: Optional[str] = None
+   269→    force_refresh: bool = False
+   270→
+   271→class WatchlistRequest(BaseModel):
+   272→    target: str
+   273→    scan_type: str = "auto"
+   274→    modules: List[str] = []
+   275→    interval_hours: float = 24.0
+   276→    webhook_url: Optional[str] = None
+   277→
+   278→class WatchlistPatchRequest(BaseModel):
+   279→    paused: bool
+   280→
+   281→WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET", "").strip()
+   282→
+   283→def _is_public_ip(addr) -> bool:
+   284→    return not (
+   285→        addr.is_private or addr.is_loopback or addr.is_reserved
+   286→        or addr.is_link_local or addr.is_multicast or addr.is_unspecified
+   287→    )
+   288→
+   289→def _resolve_all_public(hostname: str) -> str:
+   290→    import ipaddress
+   291→    import socket
+   292→    try:
+   293→        infos = socket.getaddrinfo(hostname, None)
+   294→    except socket.gaierror:
+   295→        try:
+   296→            fallback_ip = socket.gethostbyname(hostname)
+   297→        except socket.gaierror:
+   298→            raise ValueError("webhook_url hostname cannot be resolved")
+   299→        try:
+   300→            addr = ipaddress.ip_address(fallback_ip)
+   301→        except ValueError:
+   302→            raise ValueError("webhook_url resolved to an invalid address")
+   303→        if not _is_public_ip(addr):
+   304→            raise ValueError("webhook_url resolves to a private/internal address")
+   305→        return str(addr)
+   306→    seen = set()
+   307→    first_public = None
+   308→    for fam, _t, _p, _c, sa in infos:
+   309→        ip_str = sa[0]
+   310→        if ip_str in seen:
+   311→            continue
+   312→        seen.add(ip_str)
+   313→        try:
+   314→            addr = ipaddress.ip_address(ip_str)
+   315→        except ValueError:
+   316→            raise ValueError("webhook_url resolved to an invalid address")
+   317→        if not _is_public_ip(addr):
+   318→            raise ValueError("webhook_url resolves to a private/internal address")
+   319→        if first_public is None:
+   320→            first_public = str(addr)
+   321→    if not seen:
+   322→        raise ValueError("webhook_url hostname did not resolve")
+   323→    return first_public
+   324→
+   325→
+   326→def _validate_webhook_url(url: str) -> str:
+   327→    from urllib.parse import urlparse
+   328→    if not url or len(url) > 2048:
+   329→        raise ValueError("webhook_url is empty or too long")
+   330→    parsed = urlparse(url)
+   331→    if parsed.scheme not in ("http", "https") or not parsed.hostname:
+   332→        raise ValueError("webhook_url must be http(s) with a hostname")
+   333→    _resolve_all_public(parsed.hostname)
+   334→    return url
+   335→
+   336→def _run_watchlist_once(entry: Dict[str, Any]) -> None:
+   337→    from web import watchlist
+   338→    import cli
+   339→    wid = entry["id"]
+   340→    modules = entry.get("modules") or None
+   341→    try:
+   342→        results = asyncio.run(cli.run_scan(entry["target"], entry["scan_type"], modules))
+   343→    except Exception:
+   344→        watchlist.mark_error(wid)
+   345→        return
+   346→    alert = watchlist.record_run(wid, results)
+   347→    if alert and entry.get("webhook_url"):
+   348→        payload = {
+   349→            "event": "watchlist_alert",
+   350→            "watchlist_id": wid,
+   351→            "target": entry["target"],
+   352→            "scan_type": entry["scan_type"],
+   353→            "added": alert["added_count"],
+   354→            "removed": alert["removed_count"],
+   355→            "changes": (alert["added"][:10] + [f"-{c}" for c in alert["removed"][:10]]),
+   356→        }
+   357→        _send_webhook(entry["webhook_url"], payload)
+   358→
+   359→def _watchlist_scheduler_loop() -> None:
+   360→    poll = int(os.getenv("WATCHLIST_POLL_SECONDS") or "60")
+   361→    while True:
+   362→        try:
+   363→            if env_flag("WATCHLIST_SCHEDULER", True):
+   364→                from web import watchlist
+   365→                for entry in watchlist.due_watchlists():
+   366→                    _run_watchlist_once(entry)
+   367→        except Exception:
+   368→            pass
+   369→        time.sleep(poll)
+   370→
+   371→_WATCHLIST_THREAD_NAME = "prism-watchlist-scheduler"
+   372→
+   373→def _start_watchlist_scheduler() -> None:
+   374→    if not env_flag("WATCHLIST_SCHEDULER", True):
+   375→        return
+   376→    # Look for the running thread rather than a module-level flag. Re-importing
+   377→    # this module (the test suite does it on every _load_app) re-runs every
+   378→    # top-level assignment, so a flag came back False and the next startup
+   379→    # launched another scheduler thread alongside the one still looping.
+   380→    if any(t.name == _WATCHLIST_THREAD_NAME and t.is_alive() for t in threading.enumerate()):
+   381→        return
+   382→    threading.Thread(
+   383→        target=_watchlist_scheduler_loop, name=_WATCHLIST_THREAD_NAME, daemon=True
+   384→    ).start()
+   385→
+   386→def _send_webhook(url: str, payload: Dict[str, Any]) -> None:
+   387→    from urllib.parse import urlparse
+   388→    try:
+   389→        parsed = urlparse(url)
+   390→        original_url = httpx.URL(url)
+   391→        if parsed.scheme not in ("http", "https") or not parsed.hostname:
+   392→            return
+   393→        pinned_ip = _resolve_all_public(parsed.hostname)
+   394→    except Exception:
+   395→        return
+   396→
+   397→    webhook_format = os.environ.get("WEBHOOK_FORMAT", "raw")
+   398→    if webhook_format == "slack":
+   399→        payload = format_slack(payload)
+   400→    elif webhook_format == "discord":
+   401→        payload = format_discord(payload)
+   402→
+   403→    headers = {"Content-Type": "application/json", "User-Agent": USER_AGENT}
+   404→    if WEBHOOK_SECRET:
+   405→        headers["X-Prism-Secret"] = WEBHOOK_SECRET
+   406→    original_host = original_url.raw_host.decode("ascii")
+   407→    host_header = f"[{original_host}]" if ":" in original_host else original_host
+   408→    if original_url.port is not None:
+   409→        host_header = f"{host_header}:{original_url.port}"
+   410→    headers["Host"] = host_header
+   411→    try:
+   412→        with httpx.Client(
+   413→            timeout=10, follow_redirects=False, trust_env=False, verify=True,
+   414→        ) as client:
+   415→            request = client.build_request(
+   416→                "POST",
+   417→                original_url.copy_with(host=pinned_ip),
+   418→                json=payload,
+   419→                headers=headers,
+   420→                extensions={"sni_hostname": original_host},
+   421→            )
+   422→            client.send(request, follow_redirects=False)
+   423→    except Exception:
+   424→        pass
+   425→
+   426→def _detect_type(target: str) -> str:
+   427→    if "@" in target:
+   428→        return "email"
+   429→    parts = target.replace("+", "").replace("-", "").replace(" ", "")
+   430→    if parts.isdigit():
+   431→        return "phone"
+   432→    t = target.lstrip("@")
+   433→    if t.startswith("t.me/") or t.startswith("telegram.me/"):
+   434→        return "telegram"
+   435→    if "." in target:
+   436→        segs = target.split(".")
+   437→        if len(segs) == 4 and all(s.isdigit() for s in segs):
+   438→            return "ip"
+   439→        return "domain"
+   440→    return "username"
+   441→
+   442→async def _push(scan_id: str, msg: Dict) -> None:
+   443→    scan = _scans.get(scan_id)
+   444→    if scan is not None:
+   445→        if "progress" not in scan:
+   446→            scan["progress"] = []
+   447→        scan["progress"].append(msg)
+   448→        _save_scan(scan_id, scan)
+   449→    q = _queues.get(scan_id)
+   450→    if q:
+   451→        await q.put(msg)
+   452→
+   453→_CACHED_MODULES = {"shodan", "hlr", "virustotal", "abuseipdb", "geoip"}
+   454→
+   455→def _done_message(name: str, result: Any, cached: bool = False) -> Dict[str, Any]:
+   456→    status = classify(result)
+   457→    msg: Dict[str, Any] = {"type": "module_done", "module": name, "status": status}
+   458→    if cached:
+   459→        msg["cached"] = True
+   460→    reason = reason_for(result)
+   461→    if reason and status != OK:
+   462→        msg["reason"] = reason
+   463→        if status == ERROR:
+   464→            msg["error"] = reason
+   465→    return msg
+   466→
+   467→
+   468→async def _run_module(scan_id: str, name: str, coro_or_func, *args, **kwargs) -> Any:
+   469→    await _push(scan_id, {"type": "module_start", "module": name})
+   470→    cache_target = args[0] if args else None
+   471→    force_refresh = bool(_scans.get(scan_id, {}).get("force_refresh"))
+   472→    if not force_refresh and name in _CACHED_MODULES and cache_target:
+   473→        cached = _get_cached(name, str(cache_target))
+   474→        # Ignore legacy non-OK cache entries so the module can re-run.
+   475→        if cached is not None and classify(cached) == OK:
+   476→            await _push(scan_id, _done_message(name, cached, cached=True))
+   477→            return cached
+   478→    try:
+   479→        if asyncio.iscoroutinefunction(coro_or_func):
+   480→            result = await coro_or_func(*args, **kwargs)
+   481→        else:
+   482→            loop = asyncio.get_running_loop()
+   483→            result = await loop.run_in_executor(None, lambda: coro_or_func(*args, **kwargs))
+   484→        status = classify(result)
+   485→        if isinstance(result, dict) and "status" not in result:
+   486→            result["status"] = status
+   487→        # Cache only successful results so a missing key is not frozen in cache.
+   488→        if name in _CACHED_MODULES and cache_target and status == OK:
+   489→            _set_cache(name, str(cache_target), result)
+   490→        await _push(scan_id, _done_message(name, result))
+   491→        return result
+   492→    except Exception as exc:
+   493→        await _push(scan_id, {"type": "module_done", "module": name, "status": ERROR, "error": str(exc)})
+   494→        return {"error": str(exc), "status": ERROR}
+   495→
+   496→async def _execute_scan(scan_id: str, target: str, scan_type: str, modules: list, webhook_url: Optional[str] = None) -> None:
+   497→    results: Dict[str, Any] = {}
+   498→    all_modules = not modules
+   499→
+   500→    def want(name: str) -> bool:
+   501→        return all_modules or name in modules
+   502→
+   503→    try:
+   504→        if scan_type in ("domain", "ip"):
+   505→            if want("whois") and scan_type == "domain":
+   506→                from modules.extra_tools import WhoisLookup
+   507→                results["whois"] = await _run_module(scan_id, "whois", WhoisLookup().lookup, target)
+   508→
+   509→            if want("rdap") and scan_type == "domain":
+   510→                from modules.rdap import RDAPLookup
+   511→                results["rdap"] = await _run_module(scan_id, "rdap", RDAPLookup().lookup, target)
+   512→
+   513→            if want("dns") and scan_type == "domain":
+   514→                from modules.extra_tools import DNSLookup
+   515→                results["dns"] = await _run_module(scan_id, "dns", DNSLookup().lookup, target)
+   516→
+   517→            if want("geoip"):
+   518→                from modules.extra_tools import GeoIPLookup
+   519→                results["geoip"] = await _run_module(scan_id, "geoip", GeoIPLookup().lookup, target)
+   520→
+   521→            if want("cert_transparency") and scan_type == "domain":
+   522→                from modules.cert_transparency import CertTransparency
+   523→                results["cert_transparency"] = await _run_module(
+   524→                    scan_id, "cert_transparency", CertTransparency().search, target
+   525→                )
+   526→
+   527→            if want("website") and scan_type == "domain":
+   528→                from modules.extra_tools import WebsiteAnalyzer
+   529→                results["website"] = await _run_module(
+   530→                    scan_id, "website", WebsiteAnalyzer().analyze, target
+   531→                )
+   532→
+   533→            if want("wayback") and scan_type == "domain":
+   534→                from modules.wayback import WaybackMachine
+   535→                wb = WaybackMachine()
+   536→                wayback_snap = await _run_module(
+   537→                    scan_id, "wayback", wb.get_snapshots, target, 15
+   538→                )
+   539→                wayback_urls = await _run_module(
+   540→                    scan_id, "wayback_urls", wb.get_all_urls, target, 200
+   541→                )
+   542→                merged = dict(wayback_snap) if isinstance(wayback_snap, dict) else {}
+   543→                if isinstance(wayback_urls, dict):
+   544→                    merged["urls"] = wayback_urls.get("urls", [])
+   545→                    merged["total_urls"] = wayback_urls.get("total", 0)
+   546→                    merged["interesting"] = wayback_urls.get("interesting", [])
+   547→                    if wayback_urls.get("error") and not merged.get("error"):
+   548→                        merged["urls_error"] = wayback_urls["error"]
+   549→                results["wayback"] = merged
+   550→
+   551→            if want("shodan"):
+   552→                from modules.shodan_lookup import ShodanLookup
+   553→                ip = target
+   554→                if scan_type == "domain":
+   555→                    import socket
+   556→                    try:
+   557→                        ip = socket.gethostbyname(target)
+   558→                    except Exception:
+   559→                        ip = target
+   560→                results["shodan"] = await _run_module(scan_id, "shodan", ShodanLookup().host_info, ip)
+   561→
+   562→            if want("virustotal"):
+   563→                from modules.threat_intel import VirusTotal
+   564→                vt = VirusTotal()
+   565→                if scan_type == "ip":
+   566→                    results["virustotal"] = await _run_module(scan_id, "virustotal", vt.check_ip, target)
+   567→                else:
+   568→                    results["virustotal"] = await _run_module(scan_id, "virustotal", vt.check_domain, target)
+   569→
+   570→            if want("abuseipdb") and scan_type == "ip":
+   571→                from modules.threat_intel import AbuseIPDB
+   572→                results["abuseipdb"] = await _run_module(scan_id, "abuseipdb", AbuseIPDB().check_ip, target)
+   573→
+   574→            if want("onion") and scan_type == "domain":
+   575→                from modules.onion_checker import OnionChecker
+   576→                results["onion"] = await _run_module(scan_id, "onion", OnionChecker().check, target)
+   577→
+   578→            if want("censys"):
+   579→                from modules.censys_lookup import CensysLookup
+   580→                cl = CensysLookup()
+   581→                if scan_type == "domain":
+   582→                    results["censys"] = await _run_module(scan_id, "censys", cl.search_domain, target)
+   583→                else:
+   584→                    results["censys"] = await _run_module(scan_id, "censys", cl.search_ip, target)
+   585→
+   586→            if want("hudsonrock") and scan_type == "domain":
+   587→                from modules.hudsonrock import HudsonRockLookup
+   588→                results["hudsonrock"] = await _run_module(
+   589→                    scan_id, "hudsonrock", HudsonRockLookup().search_domain, target
+   590→                )
+   591→
+   592→            if want("lunar") and scan_type == "domain":
+   593→                from modules.lunar import LunarLookup
+   594→                results["lunar"] = await _run_module(
+   595→                    scan_id, "lunar", LunarLookup().search_domain, target
+   596→                )
+   597→
+   598→        elif scan_type == "email":
+   599→            if want("smtp"):
+   600→                from modules.smtp_verify import SMTPVerifier
+   601→                results["smtp"] = await _run_module(scan_id, "smtp", SMTPVerifier().verify_email, target)
+   602→
+   603→            if want("leaks"):
+   604→                from modules.leak_lookup import LeakLookup
+   605→                results["breaches"] = await _run_module(
+   606→                    scan_id, "leaks", LeakLookup().check_email_full, target
+   607→                )
+   608→
+   609→            if want("emailrep"):
+   610→                from modules.hunter import EmailRepLookup
+   611→                results["emailrep"] = await _run_module(
+   612→                    scan_id, "emailrep", EmailRepLookup().lookup, target
+   613→                )
+   614→            
+   615→            if want("gravatar"):
+   616→                from modules.gravatar import GravatarRecon
+   617→                results["gravatar"] = await _run_module(
+   618→                    scan_id, "gravatar", GravatarRecon().lookup, target
+   619→                )
+   620→
+   621→            if want("hudsonrock"):
+   622→                from modules.hudsonrock import HudsonRockLookup
+   623→                results["hudsonrock"] = await _run_module(
+   624→                    scan_id, "hudsonrock", HudsonRockLookup().search_email, target
+   625→                )
+   626→
+   627→        elif scan_type == "phone":
+   628→            if want("hlr"):
+   629→                from modules.hlr_lookup import HLRLookup
+   630→                hlr_obj = HLRLookup()
+   631→                hlr = await _run_module(scan_id, "hlr", hlr_obj.validate_phone, target)
+   632→                results["hlr"] = hlr
+   633→                owner = await _run_module(
+   634→                    scan_id, "phone_owner", hlr_obj.reverse_lookup,
+   635→                    hlr.get("formatted") or target
+   636→                )
+   637→                results["phone_owner"] = owner
+   638→                results["phone"] = {
+   639→                    "valid": hlr.get("valid"),
+   640→                    "country_name": hlr.get("country_name") or hlr.get("country"),
+   641→                    "country_code": hlr.get("country_code"),
+   642→                    "carrier": hlr.get("carrier"),
+   643→                    "line_type": hlr.get("line_type"),
+   644→                    "region": hlr.get("region"),
+   645→                    "timezones": hlr.get("timezones"),
+   646→                    "reverse": {
+   647→                        "name": ", ".join(owner.get("names", [])) or None,
+   648→                        "address": owner.get("city"),
+   649→                        "source": ", ".join(owner.get("sources", [])) or None,
+   650→                    } if owner else None,
+   651→                }
+   652→
+   653→        elif scan_type == "telegram":
+   654→            from modules.telegram_lookup import TelegramLookup
+   655→            from config import TELEGRAM_BOT_TOKEN
+   656→            tg = TelegramLookup()
+   657→            tg_target = target.lstrip("@").replace("t.me/", "").replace("telegram.me/", "").strip()
+   658→            results["telegram"] = await _run_module(
+   659→                scan_id, "telegram", tg.run_lookup, tg_target, TELEGRAM_BOT_TOKEN or None
+   660→            )
+   661→
+   662→        elif scan_type == "username":
+   663→            if want("blackbird"):
+   664→                from modules.blackbird import Blackbird
+   665→                bb = Blackbird(timeout=10, max_concurrent=25)
+   666→                outcome = await _run_module(scan_id, "blackbird", bb.search, target)
+   667→                if isinstance(outcome, dict) and outcome.get("error"):
+   668→                    results["blackbird"] = outcome
+   669→                else:
+   670→                    results["blackbird"] = [
+   671→                        {"site": r.site, "url": r.url, "status": r.status, "response_time": r.response_time}
+   672→                        for r in bb.results
+   673→                    ]
+   674→
+   675→            if want("maigret"):
+   676→                from modules.maigret_wrapper import MaigretWrapper
+   677→                results["maigret"] = await _run_module(
+   678→                    scan_id, "maigret", MaigretWrapper().search, target
+   679→                )
+   680→
+   681→            if want("github"):
+   682→                from modules.github_recon import GitHubRecon
+   683→                results["github"] = await _run_module(
+   684→                    scan_id, "github", GitHubRecon().lookup, target
+   685→                )
+   686→
+   687→            if want("hudsonrock"):
+   688→                from modules.hudsonrock import HudsonRockLookup
+   689→                results["hudsonrock"] = await _run_module(
+   690→                    scan_id, "hudsonrock", HudsonRockLookup().search_username, target
+   691→                )
+   692→
+   693→        await _push(scan_id, {"type": "module_start", "module": "opsec_score"})
+   694→        opsec = score_from_results(results)
+   695→        results["opsec_score"] = opsec
+   696→        await _push(scan_id, {"type": "module_done", "module": "opsec_score", "status": OK})
+   697→
+   698→        graph = build_graph(target, scan_type, results)
+   699→        results["graph"] = graph
+   700→
+   701→        report_path = generate_html_report(target, scan_type, results, opsec)
+   702→        results["report_path"] = report_path
+   703→
+   704→        _scans[scan_id].update(
+   705→            {
+   706→                "status": "completed",
+   707→                "results": results,
+   708→                "completed_at": datetime.now().isoformat(),
+   709→            }
+   710→        )
+   711→        _save_scan(scan_id, _scans[scan_id])
+   712→        await _push(scan_id, {"type": "scan_complete", "scan_id": scan_id})
+   713→
+   714→    except Exception as exc:
+   715→        safe_err = str(exc).split("\n")[0][:200]
+   716→        _scans[scan_id].update({"status": "error", "error": safe_err})
+   717→        _save_scan(scan_id, _scans[scan_id])
+   718→        await _push(scan_id, {"type": "scan_error", "error": safe_err})
+   719→    finally:
+   720→        await _push(scan_id, {"type": "_done"})
+   721→        if webhook_url:
+   722→            scan_snapshot = _scans.get(scan_id, {})
+   723→            payload = {
+   724→                "scan_id": scan_id,
+   725→                "target": target,
+   726→                "scan_type": scan_type,
+   727→                "status": scan_snapshot.get("status"),
+   728→                "started_at": scan_snapshot.get("started_at"),
+   729→                "completed_at": scan_snapshot.get("completed_at"),
+   730→                "error": scan_snapshot.get("error"),
+   731→                "results": {
+   732→                    k: v for k, v in (scan_snapshot.get("results") or {}).items()
+   733→                    if k not in ("graph", "report_path")
+   734→                },
+   735→            }
+   736→            threading.Thread(target=_send_webhook, args=(webhook_url, payload), daemon=True).start()
+   737→
+   738→@app.get("/healthz", include_in_schema=False)
+   739→async def healthz():
+   740→    return {"status": "ok"}
+   741→
+   742→@app.get("/api/health")
+   743→async def health():
+   744→    return {"status": "ok", "version": app.version}
+   745→
+   746→@app.get("/api/usage", dependencies=[Depends(require_api_key)])
+   747→@limiter.limit("60/minute")
+   748→async def usage(request: Request):
+   749→    return get_usage(get_principal(request))
+   750→
+   751→@app.post("/api/watchlist", dependencies=[Depends(require_api_key)])
+   752→@limiter.limit("20/minute")
+   753→async def create_watchlist_entry(request: Request, req: WatchlistRequest):
+   754→    from web import watchlist
+   755→    target = validate_target(req.target)
+   756→    scan_type = req.scan_type if req.scan_type != "auto" else _detect_type(target)
+   757→    validate_public_target(target, scan_type)
+   758→    webhook_url = None
+   759→    if req.webhook_url:
+   760→        try:
+   761→            webhook_url = _validate_webhook_url(req.webhook_url.strip())
+   762→        except ValueError as e:
+   763→            return JSONResponse({"error": str(e)}, status_code=400)
+   764→    interval = max(1.0, min(float(req.interval_hours or 24.0), 24 * 30))
+   765→    entry = watchlist.create_watchlist(
+   766→        get_principal(request), target, scan_type, req.modules, interval, webhook_url,
+   767→    )
+   768→    return entry
+   769→
+   770→@app.get("/api/watchlist", dependencies=[Depends(require_api_key)])
+   771→@limiter.limit("60/minute")
+   772→async def list_watchlist(request: Request):
+   773→    from web import watchlist
+   774→    return {"watchlists": watchlist.list_watchlists(get_principal(request))}
+   775→
+   776→@app.get("/api/watchlist/{watch_id}/alerts", dependencies=[Depends(require_api_key)])
+   777→@limiter.limit("60/minute")
+   778→async def watchlist_alerts(request: Request, watch_id: str):
+   779→    from web import watchlist
+   780→    validate_scan_id(watch_id, status_code=404)
+   781→    entry = watchlist.get_watchlist(watch_id)
+   782→    if not entry or (entry.get("owner") or ANONYMOUS_PRINCIPAL) != get_principal(request):
+   783→        return JSONResponse({"error": "Watchlist not found"}, status_code=404)
+   784→    return {"id": watch_id, "alerts": entry.get("alerts", [])}
+   785→
+   786→@app.delete("/api/watchlist/{watch_id}", dependencies=[Depends(require_api_key)])
+   787→@limiter.limit("30/minute")
+   788→async def delete_watchlist_entry(request: Request, watch_id: str):
+   789→    from web import watchlist
+   790→    validate_scan_id(watch_id, status_code=404)
+   791→    if not watchlist.delete_watchlist(watch_id, get_principal(request)):
+   792→        return JSONResponse({"error": "Watchlist not found"}, status_code=404)
+   793→    return {"deleted": watch_id}
+   794→
+   795→@app.patch("/api/watchlist/{watch_id}", dependencies=[Depends(require_api_key)])
+   796→@limiter.limit("30/minute")
+   797→async def patch_watchlist_entry(request: Request, watch_id: str, req: WatchlistPatchRequest):
+   798→    from web import watchlist
+   799→    validate_scan_id(watch_id, status_code=404)
+   800→    entry = watchlist.set_paused(watch_id, get_principal(request), req.paused)
+   801→    if entry is None:
+   802→        return JSONResponse({"error": "Watchlist not found"}, status_code=404)
+   803→    return entry
+   804→
+   805→class TestWebhookRequest(BaseModel):
+   806→    webhook_url: str
+   807→
+   808→@app.post("/api/watchlist/test-webhook", dependencies=[Depends(require_api_key)])
+   809→@limiter.limit("10/minute")
+   810→async def test_webhook(request: Request, req: TestWebhookRequest):
+   811→    try:
+   812→        url = _validate_webhook_url(req.webhook_url.strip())
+   813→    except ValueError as e:
+   814→        return JSONResponse({"error": str(e)}, status_code=400)
+   815→    payload = {
+   816→        "event": "watchlist_test",
+   817→        "message": "This is a test webhook from Prism.",
+   818→        "target": "example.com",
+   819→        "scan_type": "domain",
+   820→        "added": 1,
+   821→        "removed": 0,
+   822→        "changes": ["+test.example.com"],
+   823→    }
+   824→    try:
+   825→        _send_webhook(url, payload)
+   826→    except Exception as e:
+   827→        logger.exception("Webhook delivery test failed")
+   828→        status = getattr(getattr(e, "response", None), "status_code", None)
+   829→        message = "Webhook could not be delivered"
+   830→        if status is not None:
+   831→            message += f" (HTTP {status})"
+   832→        return JSONResponse({"error": message}, status_code=502)
+   833→    return {"ok": True, "url": url}
+   834→
+   835→@app.post("/api/scan", dependencies=[Depends(require_api_key)])
+   836→@limiter.limit("10/minute")
+   837→async def start_scan(request: Request, req: ScanRequest):
+   838→    target = validate_target(req.target)
+   839→
+   840→    webhook_url = None
+   841→    if req.webhook_url:
+   842→        try:
+   843→            webhook_url = _validate_webhook_url(req.webhook_url.strip())
+   844→        except ValueError as e:
+   845→            return JSONResponse({"error": str(e)}, status_code=400)
+   846→
+   847→    scan_type = req.scan_type if req.scan_type != "auto" else _detect_type(target)
+   848→    validate_public_target(target, scan_type)
+   849→
+   850→    principal = get_principal(request)
+   851→    check_scan_quota(principal)
+   852→    record_scan(principal)
+   853→
+   854→    scan_id = str(uuid.uuid4())
+   855→
+   856→    _evict_old_scans()
+   857→    _scans[scan_id] = {
+   858→        "scan_id": scan_id,
+   859→        "target": target,
+   860→        "scan_type": scan_type,
+   861→        "status": "running",
+   862→        "started_at": datetime.now().isoformat(),
+   863→        "owner": get_principal(request),
+   864→        "results": None,
+   865→        "progress": [],
+   866→        "modules": req.modules,
+   867→        "force_refresh": req.force_refresh,
+   868→    }
+   869→    _save_scan(scan_id, _scans[scan_id])
+   870→    _queues[scan_id] = asyncio.Queue()
+   871→
+   872→    def _run_in_thread():
+   873→        loop = asyncio.new_event_loop()
+   874→        asyncio.set_event_loop(loop)
+   875→        try:
+   876→            loop.run_until_complete(_execute_scan(scan_id, target, scan_type, req.modules, webhook_url))
+   877→        finally:
+   878→            loop.close()
+   879→
+   880→    threading.Thread(target=_run_in_thread, daemon=True).start()
+   881→
+   882→    return {"scan_id": scan_id, "scan_type": scan_type}
+   883→
+   884→@app.get("/api/scan/{scan_id}", dependencies=[Depends(require_api_key)])
+   885→@limiter.limit("30/minute")
+   886→async def get_scan(request: Request, scan_id: str):
+   887→    validate_scan_id(scan_id)
+   888→    scan = _load_scan(scan_id)
+   889→    if not scan or not _scan_visible_to(scan, get_principal(request)):
+   890→        return JSONResponse({"error": "Scan not found"}, status_code=404)
+   891→    safe = {k: v for k, v in scan.items() if k not in ("results", "owner")}
+   892→    if scan.get("results"):
+   893→        res_copy = {k: v for k, v in scan["results"].items() if k not in ("graph", "report_path")}
+   894→        safe["results"] = res_copy
+   895→    safe["progress"] = scan.get("progress", [])
+   896→    return safe
+   897→
+   898→@app.get("/api/scan/{scan_id}/graph", dependencies=[Depends(require_api_key)])
+   899→@limiter.limit("30/minute")
+   900→async def get_graph(request: Request, scan_id: str):
+   901→    validate_scan_id(scan_id)
+   902→    scan = _load_scan(scan_id)
+   903→    if not scan or not _scan_visible_to(scan, get_principal(request)) or not scan.get("results"):
+   904→        return JSONResponse({"error": "Scan not found or not completed"}, status_code=404)
+   905→    return scan["results"].get("graph", {"nodes": [], "edges": []})
+   906→
+   907→
+   908→@app.get("/api/scan/{scan_id}/graph/export", dependencies=[Depends(require_api_key)])
+   909→@limiter.limit("30/minute")
+   910→async def export_graph(request: Request, scan_id: str, fmt: str = "graphml"):
+   911→    validate_scan_id(scan_id)
+   912→    scan = _load_scan(scan_id)
+   913→    if not scan or not _scan_visible_to(scan, get_principal(request)) or not scan.get("results"):
+   914→        return JSONResponse({"error": "Scan not found or not completed"}, status_code=404)
+   915→    graph = scan["results"].get("graph", {"nodes": [], "edges": []})
+   916→    fmt = (fmt or "graphml").lower()
+   917→    from modules.graph_export import to_graphml, to_gexf
+   918→    if fmt == "gexf":
+   919→        body, media, ext = to_gexf(graph), "application/gexf+xml", "gexf"
+   920→    elif fmt == "graphml":
+   921→        body, media, ext = to_graphml(graph), "application/graphml+xml", "graphml"
+   922→    else:
+   923→        return JSONResponse({"error": "Unsupported format. Use graphml or gexf."}, status_code=400)
+   924→    filename = f"prism_{scan_id[:8]}.{ext}"
+   925→    return Response(
+   926→        content=body,
+   927→        media_type=media,
+   928→        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+   929→    )
+   930→
+   931→@app.get("/api/scan/{scan_id}/map", dependencies=[Depends(require_api_key)])
+   932→@limiter.limit("30/minute")
+   933→async def get_map_data(request: Request, scan_id: str):
+   934→    validate_scan_id(scan_id)
+   935→    scan = _load_scan(scan_id)
+   936→    if not scan or not _scan_visible_to(scan, get_principal(request)) or not scan.get("results"):
+   937→        return JSONResponse({"error": "Scan not found or not completed"}, status_code=404)
+   938→
+   939→    results = scan["results"]
+   940→    markers = []
+   941→
+   942→    geoip = results.get("geoip", {})
+   943→    if geoip and geoip.get("loc") and not geoip.get("error"):
+   944→        try:
+   945→            lat, lng = map(float, geoip["loc"].split(","))
+   946→            markers.append({
+   947→                "lat": lat, "lng": lng,
+   948→                "ip": geoip.get("ip"),
+   949→                "label": geoip.get("ip", scan["target"]),
+   950→                "city": geoip.get("city"),
+   951→                "region": geoip.get("region"),
+   952→                "country": geoip.get("country_name") or geoip.get("country"),
+   953→                "org": geoip.get("org"),
+   954→                "timezone": geoip.get("timezone"),
+   955→                "type": "host",
+   956→            })
+   957→        except (ValueError, AttributeError):
+   958→            pass
+   959→
+   960→    shodan = results.get("shodan", {})
+   961→    if shodan and not shodan.get("error"):
+   962→        sloc = shodan.get("location", {})
+   963→        if sloc and sloc.get("latitude") and sloc.get("longitude"):
+   964→            lat, lng = sloc["latitude"], sloc["longitude"]
+   965→            if not any(abs(m["lat"] - lat) < 0.01 and abs(m["lng"] - lng) < 0.01 for m in markers):
+   966→                markers.append({
+   967→                    "lat": lat, "lng": lng,
+   968→                    "ip": shodan.get("ip_str"),
+   969→                    "label": shodan.get("ip_str", scan["target"]),
+   970→                    "city": sloc.get("city"),
+   971→                    "region": sloc.get("region_code"),
+   972→                    "country": sloc.get("country_name"),
+   973→                    "org": shodan.get("org"),
+   974→                    "type": "shodan",
+   975→                })
+   976→
+   977→    hlr = results.get("hlr", {})
+   978→    if hlr and not hlr.get("error"):
+   979→        country_str = hlr.get("country_name") or hlr.get("country") or ""
+   980→        region_str = hlr.get("location") or hlr.get("region") or ""
+   981→        phone_label = hlr.get("formatted") or hlr.get("phone")
+   982→        raw_lat = hlr.get("lat", hlr.get("latitude"))
+   983→        raw_lng = hlr.get("lng", hlr.get("longitude"))
+   984→        lat = None
+   985→        lng = None
+   986→        try:
+   987→            if raw_lat is not None and raw_lng is not None:
+   988→                lat = float(raw_lat)
+   989→                lng = float(raw_lng)
+   990→        except (TypeError, ValueError):
+   991→            lat = None
+   992→            lng = None
+   993→
+   994→        if lat is not None and lng is not None:
+   995→            approx = bool(hlr.get("approximate", False))
+   996→            markers.append({
+   997→                "lat": lat, "lng": lng,
+   998→                "ip": phone_label,
+   999→                "label": phone_label,
+  1000→                "city": region_str or None,
+  1001→                "country": country_str or None,
+  1002→                "org": hlr.get("carrier"),
+  1003→                "timezone": (hlr.get("timezones") or [None])[0],
+  1004→                "type": "phone",
+  1005→                "valid": hlr.get("valid"),
+  1006→                "line_type": hlr.get("line_type"),
+  1007→                "approximate": approx,
+  1008→                "precision": hlr.get("precision") or ("approximate" if approx else "exact"),
+  1009→            })
+  1010→
+  1011→    center = markers[0] if markers else None
+  1012→    zoom = 5 if (markers and markers[0].get("type") == "phone") else None
+  1013→
+  1014→    info = None
+  1015→    if not markers:
+  1016→        hlr = results.get("hlr") or {}
+  1017→        phone = results.get("phone") or {}
+  1018→        country = hlr.get("country_name") or hlr.get("country") or phone.get("country_name")
+  1019→        carrier = hlr.get("carrier") or phone.get("carrier")
+  1020→        region = hlr.get("location") or hlr.get("region") or phone.get("region")
+  1021→        phone_label = hlr.get("formatted") or hlr.get("phone") or scan["target"]
+  1022→
+  1023→        place = None
+  1024→        if region or country:
+  1025→            place = _geocode_place(", ".join(p for p in (region, country) if p))
+  1026→
+  1027→        if place:
+  1028→            bbox = place.get("bbox")
+  1029→            if bbox:
+  1030→                clat, clng = (bbox[0] + bbox[1]) / 2, (bbox[2] + bbox[3]) / 2
+  1031→            else:
+  1032→                clat, clng = place["lat"], place["lng"]
+  1033→            markers.append({
+  1034→                "lat": clat, "lng": clng,
+  1035→                "bbox": bbox,
+  1036→                "ip": phone_label, "label": phone_label,
+  1037→                "city": region or None, "country": country or None,
+  1038→                "org": carrier, "type": "phone",
+  1039→                "approximate": True,
+  1040→                "precision": "region" if region else "country",
+  1041→            })
+  1042→            center = markers[0]
+  1043→            zoom = 7 if region else 4
+  1044→        elif country or carrier or region:
+  1045→            info = {
+  1046→                "reason": "Phone numbers don't expose precise GPS coordinates.",
+  1047→                "country": country or None,
+  1048→                "carrier": carrier or None,
+  1049→                "region": region or None,
+  1050→            }
+  1051→
+  1052→    return {"markers": markers, "center": center, "zoom": zoom, "info": info}
+  1053→
+  1054→def _normalize_lang(raw: Optional[str]) -> str:
+  1055→    from modules.report_i18n import SUPPORTED_LANGS
+  1056→    if not raw:
+  1057→        return "en"
+  1058→    key = raw.lower().split("-")[0].strip()
+  1059→    return key if key in SUPPORTED_LANGS else "en"
+  1060→
+  1061→@app.get("/api/scan/{scan_id}/report", dependencies=[Depends(require_api_key)])
+  1062→@limiter.limit("10/minute")
+  1063→async def download_report(request: Request, scan_id: str, lang: str = "en"):
+  1064→    validate_scan_id(scan_id)
+  1065→    scan = _load_scan(scan_id)
+  1066→    if not scan or not _scan_visible_to(scan, get_principal(request)) or not scan.get("results"):
+  1067→        return JSONResponse({"error": "Scan not found or not completed"}, status_code=404)
+  1068→    results = scan["results"]
+  1069→    opsec = results.get("opsec_score")
+  1070→    lang = _normalize_lang(lang)
+  1071→    loop = asyncio.get_running_loop()
+  1072→    report_path = await loop.run_in_executor(
+  1073→        None,
+  1074→        lambda: generate_html_report(scan["target"], scan["scan_type"], results, opsec, lang=lang),
+  1075→    )
+  1076→    scan["results"]["report_path"] = report_path
+  1077→    return FileResponse(
+  1078→        report_path,
+  1079→        media_type="text/html",
+  1080→        filename=os.path.basename(report_path),
+  1081→    )
+  1082→
+  1083→@app.get("/api/scan/{scan_id}/report/pdf", dependencies=[Depends(require_api_key)])
+  1084→@limiter.limit("5/minute")
+  1085→async def download_report_pdf(request: Request, scan_id: str, lang: str = "en"):
+  1086→    validate_scan_id(scan_id)
+  1087→    scan = _load_scan(scan_id)
+  1088→    if not scan or not _scan_visible_to(scan, get_principal(request)) or not scan.get("results"):
+  1089→        return JSONResponse({"error": "Scan not found or not completed"}, status_code=404)
+  1090→    results = scan["results"]
+  1091→    opsec = results.get("opsec_score")
+  1092→    lang = _normalize_lang(lang)
+  1093→    loop = asyncio.get_running_loop()
+  1094→    try:
+  1095→        pdf_path = await loop.run_in_executor(
+  1096→            None,
+  1097→            lambda: generate_pdf_report(scan["target"], scan["scan_type"], results, opsec, lang=lang),
+  1098→        )
+  1099→    except ImportError as e:
+  1100→        return _server_error(e, "PDF generation (ImportError)", status_code=501)
+  1101→    except Exception as e:
+  1102→        return _server_error(e, "PDF generation")
+  1103→    return FileResponse(
+  1104→        pdf_path,
+  1105→        media_type="application/pdf",
+  1106→        filename=os.path.basename(pdf_path),
+  1107→    )
+  1108→
+  1109→@app.post("/api/url-scan", dependencies=[Depends(require_api_key)])
+  1110→@limiter.limit("20/minute")
+  1111→async def scan_url(request: Request, req: dict):
+  1112→    url = req.get("url", "").strip()
+  1113→    if not url or len(url) > 2048:
+  1114→        return JSONResponse({"error": "No URL provided or URL too long"}, status_code=400)
+  1115→    if not url.startswith(("http://", "https://")):
+  1116→        url = "https://" + url
+  1117→    validate_url_not_private(url)
+  1118→    from modules.url_scanner import URLScanner
+  1119→    loop = asyncio.get_running_loop()
+  1120→    result = await loop.run_in_executor(None, URLScanner().scan, url)
+  1121→    return result
+  1122→
+  1123→_OUI_DATA: Optional[Dict[str, str]] = None
+  1124→
+  1125→def _get_oui_data() -> Dict[str, str]:
+  1126→    global _OUI_DATA
+  1127→    if _OUI_DATA is None:
+  1128→        oui_path = os.path.join(os.path.dirname(__file__), "oui_data.json")
+  1129→        try:
+  1130→            with open(oui_path, "r", encoding="utf-8") as f:
+  1131→                _OUI_DATA = json.load(f)
+  1132→        except Exception:
+  1133→            _OUI_DATA = {}
+  1134→    return _OUI_DATA
+  1135→
+  1136→def _lookup_local_oui(mac: str) -> Optional[str]:
+  1137→    oui_data = _get_oui_data()
+  1138→    prefix = mac.upper().replace("-", ":")
+  1139→    first_three = ":".join(prefix.split(":")[:3])
+  1140→    return oui_data.get(first_three)
+  1141→
+  1142→@app.post("/api/mac-lookup", dependencies=[Depends(require_api_key)])
+  1143→@limiter.limit("20/minute")
+  1144→async def mac_lookup(request: Request, req: dict):
+  1145→    mac = req.get("mac", "").strip()
+  1146→    if not mac or len(mac) > 17:
+  1147→        return JSONResponse({"error": "No MAC address provided or format too long"}, status_code=400)
+  1148→    mac_pattern = re.compile(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$')
+  1149→    if not mac_pattern.match(mac):
+  1150→        return JSONResponse({"error": "Invalid MAC address format. Expected: 00:00:5e:00:53:af"}, status_code=400)
+  1151→
+  1152→    normalized_mac = mac.upper().replace("-", ":")
+  1153→    cached = _get_cached("mac", normalized_mac)
+  1154→    if cached:
+  1155→        return cached
+  1156→
+  1157→    vendor = _lookup_local_oui(normalized_mac)
+  1158→    if vendor:
+  1159→        result = {"mac": normalized_mac, "vendor": vendor, "source": "local"}
+  1160→        _set_cache("mac", normalized_mac, result)
+  1161→        return result
+  1162→
+  1163→    try:
+  1164→        loop = asyncio.get_running_loop()
+  1165→        def _fetch():
+  1166→            resp = _requests.get(f"https://api.macvendors.com/{mac}", timeout=10)
+  1167→            if resp.status_code == 200:
+  1168→                return {"mac": normalized_mac, "vendor": resp.text.strip(), "source": "api"}
+  1169→            elif resp.status_code == 404:
+  1170→                return {"mac": normalized_mac, "vendor": None, "error": "Not found", "source": "api"}
+  1171→            else:
+  1172→                return {"mac": normalized_mac, "vendor": None, "error": f"API returned status {resp.status_code}", "source": "api"}
+  1173→        result = await loop.run_in_executor(None, _fetch)
+  1174→        if result.get("vendor") and not result.get("error"):
+  1175→            _set_cache("mac", normalized_mac, result)
+  1176→        return result
+  1177→    except Exception as e:
+  1178→        local_vendor = _lookup_local_oui(normalized_mac)
+  1179→        if local_vendor:
+  1180→            result = {"mac": normalized_mac, "vendor": local_vendor, "source": "local_fallback"}
+  1181→            _set_cache("mac", normalized_mac, result)
+  1182→            return result
+  1183→        return _server_error(e, "MAC lookup for {}".format(normalized_mac))
+  1184→
+  1185→@app.post("/api/crypto", dependencies=[Depends(require_api_key)])
+  1186→@limiter.limit("20/minute")
+  1187→async def crypto_lookup(request: Request, req: dict):
+  1188→    address = req.get("address", "").strip()
+  1189→    if not address or len(address) > 256:
+  1190→        return JSONResponse({"error": "No address provided or address too long"}, status_code=400)
+  1191→    from modules.crypto_lookup import CryptoLookup
+  1192→    loop = asyncio.get_running_loop()
+  1193→    result = await loop.run_in_executor(None, CryptoLookup().lookup, address)
+  1194→    return result
+  1195→
+  1196→@app.post("/api/darkweb", dependencies=[Depends(require_api_key)])
+  1197→@limiter.limit("10/minute")
+  1198→async def darkweb_search(request: Request, req: dict):
+  1199→    query = req.get("query", "").strip()
+  1200→    if not query or len(query) > 512:
+  1201→        return JSONResponse({"error": "No query provided or query too long"}, status_code=400)
+  1202→    from modules.darkweb_search import DarkWebSearch
+  1203→    loop = asyncio.get_running_loop()
+  1204→    result = await loop.run_in_executor(None, DarkWebSearch().search, query)
+  1205→    return result
+  1206→
+  1207→@app.post("/api/qr-decode", dependencies=[Depends(require_api_key), Depends(check_upload_size)])
+  1208→@limiter.limit("20/minute")
+  1209→async def decode_qr(request: Request, file: UploadFile = File(...)):
+  1210→    from web.security import MAX_UPLOAD_BYTES
+  1211→    data = await file.read(MAX_UPLOAD_BYTES + 1)
+  1212→    if len(data) > MAX_UPLOAD_BYTES:
+  1213→        return JSONResponse({"error": "File too large"}, status_code=413)
+  1214→    from modules.qr_decoder import QRDecoder
+  1215→    loop = asyncio.get_running_loop()
+  1216→    result = await loop.run_in_executor(None, QRDecoder().decode, data, file.filename)
+  1217→    return result
+  1218→
+  1219→@app.post("/api/email-headers", dependencies=[Depends(require_api_key)])
+  1220→@limiter.limit("20/minute")
+  1221→async def analyze_email_headers(request: Request, req: dict):
+  1222→    raw = req.get("headers", "").strip()
+  1223→    if not raw or len(raw) > 50000:
+  1224→        return JSONResponse({"error": "No headers provided or input too large"}, status_code=400)
+  1225→    from modules.email_header_analyzer import analyze_headers
+  1226→    loop = asyncio.get_running_loop()
+  1227→    result = await loop.run_in_executor(None, analyze_headers, raw)
+  1228→    return result
+  1229→
+  1230→@app.post("/api/metadata", dependencies=[Depends(require_api_key), Depends(check_upload_size)])
+  1231→@limiter.limit("20/minute")
+  1232→async def extract_metadata_endpoint(request: Request, file: UploadFile = File(...)):
+  1233→    import tempfile, shutil
+  1234→    ALLOWED_EXTS = {".jpg", ".jpeg", ".png", ".tiff", ".tif", ".heic", ".heif", ".webp", ".pdf", ".docx", ".docm"}
+  1235→    suffix = os.path.splitext(file.filename or "")[1].lower()
+  1236→    if suffix not in ALLOWED_EXTS:
+  1237→        return JSONResponse({"error": f"Unsupported file type: {suffix}"}, status_code=400)
+  1238→    loop = asyncio.get_running_loop()
+  1239→
+  1240→    def _spool() -> str:
+  1241→        from web.security import MAX_UPLOAD_BYTES
+  1242→        tmp_path = None
+  1243→        try:
+  1244→            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+  1245→                tmp_path = tmp.name
+  1246→                written = 0
+  1247→                while True:
+  1248→                    chunk = file.file.read(64 * 1024)
+  1249→                    if not chunk:
+  1250→                        break
+  1251→                    written += tmp.write(chunk)
+  1252→                    if written > MAX_UPLOAD_BYTES:
+  1253→                        raise HTTPException(
+  1254→                            status_code=413,
+  1255→                            detail=f"File too large. Max {MAX_UPLOAD_BYTES // (1024*1024)} MB allowed.",
+  1256→                        )
+  1257→                return tmp_path
+  1258→        except Exception:
+  1259→            if tmp_path and os.path.exists(tmp_path):
+  1260→                try:
+  1261→                    os.unlink(tmp_path)
+  1262→                except OSError:
+  1263→                    pass
+  1264→            raise
+  1265→
+  1266→    tmp_path = await loop.run_in_executor(None, _spool)
+  1267→    try:
+  1268→        from modules.metadata_extractor import extract_metadata
+  1269→        result = await loop.run_in_executor(None, extract_metadata, tmp_path)
+  1270→        result["filename"] = file.filename
+  1271→        result["file_type"] = result.pop("format", None)
+  1272→        result["file_size"] = result.pop("size_bytes", None)
+  1273→        result["exif"] = result.pop("raw_exif", {})
+  1274→        return result
+  1275→    finally:
+  1276→        try:
+  1277→            os.unlink(tmp_path)
+  1278→        except Exception:
+  1279→            pass
+  1280→
+  1281→def _llm_error_message(err) -> str:
+  1282→    if isinstance(err, dict):
+  1283→        return str(err.get("message") or err.get("code") or err)
+  1284→    return str(err)
+  1285→
+  1286→
+  1287→_LLM_BLOCKED_HINTS = (
+  1288→    "access denied",
+  1289→    "security policy",
+  1290→    "unavailable in your",
+  1291→    "not available in your",
+  1292→    "region",
+  1293→    "country",
+  1294→    "forbidden",
+  1295→    "cloudflare",
+  1296→)
+  1297→
+  1298→
+  1299→def _looks_geo_blocked(message: str) -> bool:
+  1300→    low = (message or "").lower()
+  1301→    return any(hint in low for hint in _LLM_BLOCKED_HINTS)
+  1302→
+  1303→
+  1304→def _call_llm(provider: Dict[str, str], payload: Dict[str, Any]) -> Dict[str, Any]:
+  1305→    body = dict(payload)
+  1306→    body["model"] = provider["model"]
+  1307→    try:
+  1308→        r = _requests.post(
+  1309→            provider["url"],
+  1310→            headers={"Authorization": f"Bearer {provider['key']}", "Content-Type": "application/json",
+  1311→                     "HTTP-Referer": "https://getprism.su", "X-Title": "PRISM OSINT"},
+  1312→            json=body,
+  1313→            timeout=(10, int(os.getenv("LLM_TIMEOUT", "90") or 90)),
+  1314→            proxies=config.LLM_PROXIES,
+  1315→        )
+  1316→    except Exception as e:
+  1317→        return {"error": f"{provider['name']} could not be reached: {str(e)[:150]}"}
+  1318→    try:
+  1319→        data = r.json()
+  1320→    except ValueError:
+  1321→        return {"error": f"HTTP {r.status_code} from {provider['name']}: {r.text[:200]}"}
+  1322→    if not isinstance(data, dict):
+  1323→        return {"error": f"Unexpected response from {provider['name']}: {str(data)[:200]}"}
+  1324→    return data
+  1325→
+  1326→
+  1327→def _llm_complete(payload: Dict[str, Any]) -> Dict[str, Any]:
+  1328→    providers = llm_providers()
+  1329→    if not providers:
+  1330→        return {"error": "No LLM provider configured. Set LLM_API_KEY, OPENROUTER_API_KEY or GROQ_API_KEY in .env."}
+  1331→
+  1332→    attempts = []
+  1333→    for provider in providers:
+  1334→        data = _call_llm(provider, payload)
+  1335→        if data.get("choices"):
+  1336→            return {"text": data["choices"][0]["message"]["content"],
+  1337→                    "model": data.get("model") or provider["model"],
+  1338→                    "provider": provider["name"]}
+  1339→        message = _llm_error_message(data.get("error")) if data.get("error") else f"no choices returned by {provider['name']}"
+  1340→        attempts.append(f"{provider['name']}: {message}")
+  1341→
+  1342→    if len(attempts) == 1:
+  1343→        return {"error": attempts[0].split(": ", 1)[-1], "tried": attempts}
+  1344→    blocked = [a for a in attempts if _looks_geo_blocked(a)]
+  1345→    lead = "Every configured LLM provider refused the request."
+  1346→    if blocked:
+  1347→        lead += " Providers commonly reject traffic from datacentre regions at their edge."
+  1348→    return {"error": lead + " " + "; ".join(attempts), "tried": attempts}
+  1349→
+  1350→@app.post("/api/ai/summary", dependencies=[Depends(require_api_key)])
+  1351→@limiter.limit("10/minute")
+  1352→async def ai_summary(request: Request, req: dict):
+  1353→    if not llm_providers():
+  1354→        return JSONResponse({"error": "No LLM provider configured. Set LLM_API_KEY, OPENROUTER_API_KEY or GROQ_API_KEY in .env."}, status_code=400)
+  1355→    scan_id = req.get("scan_id")
+  1356→    scan = _load_scan(scan_id) if scan_id else None
+  1357→    if not scan or not _scan_visible_to(scan, get_principal(request)) or not scan.get("results"):
+  1358→        return JSONResponse({"error": "Scan not found"}, status_code=404)
+  1359→
+  1360→    results = scan["results"]
+  1361→    summary_data = {k: v for k, v in results.items()
+  1362→                    if k not in ("graph", "report_path") and v and not (isinstance(v, dict) and v.get("error"))}
+  1363→
+  1364→    prompt = (
+  1365→        f"You are a professional OSINT analyst. Analyze the following reconnaissance results for target '{scan['target']}' "
+  1366→        f"(type: {scan['scan_type']}) and provide:\n"
+  1367→        "1. A concise executive summary (3-4 sentences)\n"
+  1368→        "2. Key findings (bullet points)\n"
+  1369→        "3. Risk assessment (Low/Medium/High with reasoning)\n"
+  1370→        "4. Recommended next investigation steps\n\n"
+  1371→        f"Data:\n{json.dumps(summary_data, indent=2, default=str)[:6000]}"
+  1372→    )
+  1373→
+  1374→    payload = {"messages": [{"role": "user", "content": prompt}], "temperature": 0.3, "max_tokens": 1024}
+  1375→    try:
+  1376→        loop = asyncio.get_running_loop()
+  1377→        outcome = await loop.run_in_executor(None, lambda: _llm_complete(payload))
+  1378→        if outcome.get("error"):
+  1379→            return JSONResponse({"error": outcome["error"], "tried": outcome.get("tried", [])}, status_code=400)
+  1380→        return {"summary": outcome["text"], "model": outcome["model"], "provider": outcome["provider"]}
+  1381→    except Exception as e:
+  1382→        return _server_error(e, "AI summary generation")
+  1383→
+  1384→@app.post("/api/ai/chat", dependencies=[Depends(require_api_key)])
+  1385→@limiter.limit("10/minute")
+  1386→async def ai_chat(request: Request, req: dict):
+  1387→    if not llm_providers():
+  1388→        return JSONResponse({"error": "No LLM provider configured. Set LLM_API_KEY, OPENROUTER_API_KEY or GROQ_API_KEY in .env."}, status_code=400)
+  1389→    scan_id = req.get("scan_id")
+  1390→    message = req.get("message", "").strip()
+  1391→    if not message:
+  1392→        return JSONResponse({"error": "No message provided"}, status_code=400)
+  1393→    scan = _load_scan(scan_id) if scan_id else None
+  1394→    if scan and not _scan_visible_to(scan, get_principal(request)):
+  1395→        scan = None
+  1396→    context = ""
+  1397→    if scan and scan.get("results"):
+  1398→        results = scan["results"]
+  1399→        summary_data = {k: v for k, v in results.items()
+  1400→                        if k not in ("graph", "report_path") and v
+  1401→                        and not (isinstance(v, dict) and v.get("error"))}
+  1402→        context = (f"OSINT scan of '{scan['target']}' (type: {scan['scan_type']}):\n"
+  1403→                   f"{json.dumps(summary_data, indent=2, default=str)[:4000]}\n\n")
+  1404→    payload = {
+  1405→        "messages": [
+  1406→            {"role": "system", "content": (
+  1407→                "You are a professional OSINT analyst assistant. "
+  1408→                + (f"Context:\n{context}" if context else "Answer general OSINT questions concisely.")
+  1409→            )},
+  1410→            {"role": "user", "content": message},
+  1411→        ],
+  1412→        "temperature": 0.5,
+  1413→        "max_tokens": 512,
+  1414→    }
+  1415→    try:
+  1416→        loop = asyncio.get_running_loop()
+  1417→        outcome = await loop.run_in_executor(None, lambda: _llm_complete(payload))
+  1418→        if outcome.get("error"):
+  1419→            return JSONResponse({"error": outcome["error"], "tried": outcome.get("tried", [])}, status_code=400)
+  1420→        return {"reply": outcome["text"], "model": outcome["model"], "provider": outcome["provider"]}
+  1421→    except Exception as e:
+  1422→        return _server_error(e, "AI chat")
+  1423→
+  1424→@app.get("/api/scans", dependencies=[Depends(require_api_key)])
+  1425→@limiter.limit("30/minute")
+  1426→async def list_scans(request: Request):
+  1427→    all_scans = _list_scans_from_disk(principal=get_principal(request))
+  1428→    return [
+  1429→        {
+  1430→            "scan_id": s.get("scan_id", ""),
+  1431→            "target": s.get("target", ""),
+  1432→            "scan_type": s.get("scan_type", ""),
+  1433→            "status": s.get("status", ""),
+  1434→            "started_at": s.get("started_at", ""),
+  1435→        }
+  1436→        for s in all_scans
+  1437→    ]
+  1438→
+  1439→@app.delete("/api/scans", dependencies=[Depends(require_api_key)])
+  1440→@limiter.limit("10/minute")
+  1441→async def clear_scans(request: Request):
+  1442→    principal = get_principal(request)
+  1443→
+  1444→    def _purge() -> int:
+  1445→        deleted = 0
+  1446→        for fname in os.listdir(_SCANS_DIR):
+  1447→            if not fname.endswith(".json"):
+  1448→                continue
+  1449→
+  1450→            path = os.path.join(_SCANS_DIR, fname)
+  1451→
+  1452→            try:
+  1453→                with open(path, "r", encoding="utf-8") as f:
+  1454→                    scan = json.load(f)
+  1455→            except Exception:
+  1456→                continue
+  1457→
+  1458→            if (scan.get("owner") or ANONYMOUS_PRINCIPAL) != principal:
+  1459→                continue
+  1460→
+  1461→            try:
+  1462→                os.remove(path)
+  1463→                deleted += 1
+  1464→            except Exception:
+  1465→                pass
+  1466→
+  1467→        return deleted
+  1468→
+  1469→    try:
+  1470→        loop = asyncio.get_running_loop()
+  1471→        deleted = await loop.run_in_executor(None, _purge)
+  1472→        return {"deleted": deleted}
+  1473→
+  1474→    except Exception as e:
+  1475→        return _server_error(e, "clear scans")
+  1476→
+  1477→
+  1478→
+  1479→
+  1480→@app.websocket("/ws/{scan_id}")
+  1481→async def websocket_endpoint(websocket: WebSocket, scan_id: str):
+  1482→    try:
+  1483→        validate_scan_id(scan_id)
+  1484→    except Exception:
+  1485→        await websocket.close(code=1008)
+  1486→        return
+  1487→    token = websocket.query_params.get("api_key", "")
+  1488→    principal = principal_for_key(token)
+  1489→    if principal is None:
+  1490→        await websocket.close(code=1008)
+  1491→        return
+  1492→    scan = _scans.get(scan_id) or _load_scan(scan_id)
+  1493→    if scan and not _scan_visible_to(scan, principal):
+  1494→        await websocket.close(code=1008)
+  1495→        return
+  1496→    await websocket.accept()
+  1497→    q = _queues.get(scan_id)
+  1498→    if not q:
+  1499→        await websocket.send_json({"type": "error", "error": "Unknown scan ID"})
+  1500→        await websocket.close()
+  1501→        return
+  1502→
+  1503→    try:
+  1504→        while True:
+  1505→            msg = await asyncio.wait_for(q.get(), timeout=120)
+  1506→            await websocket.send_json(msg)
+  1507→            if msg.get("type") == "_done":
+  1508→                break
+  1509→    except asyncio.TimeoutError:
+  1510→        await websocket.send_json({"type": "error", "error": "Scan timed out"})
+  1511→    except WebSocketDisconnect:
+  1512→        pass
+  1513→    finally:
+  1514→        _queues.pop(scan_id, None)
+  1515→        try:
+  1516→            await websocket.close()
+  1517→        except Exception:
+  1518→            pass
+  1519→
+  1520→def _frontend_config_script() -> str:
+  1521→    config = {
+  1522→        "apiUrl": os.getenv("NEXT_PUBLIC_API_URL", ""),
+  1523→        "apiKey": os.getenv("PRISM_UI_API_KEY", os.getenv("NEXT_PUBLIC_API_KEY", "")),
+  1524→        "basePath": _BASE_PATH,
+  1525→        "demoMode": env_flag("PRISM_DEMO_MODE"),
+  1526→    }
+  1527→    payload = json.dumps(config, separators=(",", ":")).replace("</", "<\\/")
+  1528→    return f'<script id="prism-runtime-config">window.__PRISM_CONFIG__={payload};</script>'
+  1529→
+  1530→def _frontend_not_found() -> JSONResponse:
+  1531→    return JSONResponse({"detail": "Frontend build not found"}, status_code=404)
+  1532→
+  1533→def _is_reserved_frontend_path(path: str) -> bool:
+  1534→    first_segment = path.strip("/").split("/", 1)[0]
+  1535→    return first_segment in _RESERVED_FRONTEND_PATHS
+  1536→
+  1537→def _safe_frontend_file(path: str) -> Optional[Path]:
+  1538→    if not _FRONTEND_DIR.is_dir():
+  1539→        return None
+  1540→    root = _FRONTEND_DIR.resolve()
+  1541→    try:
+  1542→        candidate = (root / path).resolve()
+  1543→        candidate.relative_to(root)
+  1544→    except ValueError:
+  1545→        return None
+  1546→    if candidate.is_dir():
+  1547→        index = candidate / "index.html"
+  1548→        return index if index.is_file() else None
+  1549→    return candidate if candidate.is_file() else None
+  1550→
+  1551→def _serve_frontend_index(index_path: Path) -> Response:
+  1552→    html = index_path.read_text(encoding="utf-8")
+  1553→    script = _frontend_config_script()
+  1554→    if "</head>" in html:
+  1555→        html = html.replace("</head>", f"{script}</head>", 1)
+  1556→    else:
+  1557→        html = f"{script}{html}"
+  1558→    return Response(html, media_type="text/html")
+  1559→
+  1560→def _serve_frontend_path(path: str):
+  1561→    normalized = path.strip("/")
+  1562→    if normalized and _is_reserved_frontend_path(normalized):
+  1563→        return JSONResponse({"detail": "Not found"}, status_code=404)
+  1564→
+  1565→    file_path = _safe_frontend_file(normalized or "index.html")
+  1566→    if file_path:
+  1567→        if file_path.name == "index.html":
+  1568→            return _serve_frontend_index(file_path)
+  1569→        return FileResponse(file_path)
+  1570→
+  1571→    index_path = _safe_frontend_file("index.html")
+  1572→    if index_path:
+  1573→        return _serve_frontend_index(index_path)
+  1574→    return _frontend_not_found()
+  1575→
+  1576→@app.get("/", include_in_schema=False)
+  1577→async def frontend_root():
+  1578→    return _serve_frontend_path("")
+  1579→
+  1580→@app.get("/{full_path:path}", include_in_schema=False)
+  1581→async def frontend_fallback(full_path: str):
+  1582→    return _serve_frontend_path(full_path)
+  1583→
+  1584→if __name__ == "__main__":
+  1585→    import uvicorn
+  1586→    uvicorn.run("web.app:app", host="0.0.0.0", port=8080, reload=True, proxy_headers=False)

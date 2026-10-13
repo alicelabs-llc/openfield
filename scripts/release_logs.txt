@@ -1,0 +1,30 @@
+﻿2026-09-29T22:21:26.2887617Z Current runner version: '2.337.0'
+2026-09-29T22:21:26.2915109Z ##[group]Runner Image Provisioner
+2026-09-29T22:21:26.2916207Z Hosted Compute Agent
+2026-09-29T22:21:26.2916956Z Version: 20260828.587
+2026-09-29T22:21:26.2917621Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-29T22:21:26.2918381Z Build Date: 2026-08-28T16:44:25Z
+2026-09-29T22:21:26.2919139Z Worker ID: {21b923b5-0ed1-408f-bfe9-16320bfb984d}
+2026-09-29T22:21:26.2919893Z Azure Region: westus2
+2026-09-29T22:21:26.2920560Z ##[endgroup]
+2026-09-29T22:21:26.2922205Z ##[group]Operating System
+2026-09-29T22:21:26.2922934Z Ubuntu
+2026-09-29T22:21:26.2923611Z 24.04.5
+2026-09-29T22:21:26.2924188Z LTS
+2026-09-29T22:21:26.2925116Z ##[endgroup]
+2026-09-29T22:21:26.2925708Z ##[group]Runner Image
+2026-09-29T22:21:26.2926354Z Image: ubuntu-24.04
+2026-09-29T22:21:26.2926981Z Version: 20260920.314.1
+2026-09-29T22:21:26.2928265Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-29T22:21:26.2929866Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-29T22:21:26.2930874Z ##[endgroup]
+2026-09-29T22:21:26.2932442Z ##[group]GITHUB_TOKEN Permissions
+2026-09-29T22:21:26.2934768Z Contents: write
+2026-09-29T22:21:26.2935499Z Metadata: read
+2026-09-29T22:21:26.2936110Z ##[endgroup]
+2026-09-29T22:21:26.2938245Z Secret source: Actions
+2026-09-29T22:21:26.2939204Z Cache mode: write
+2026-09-29T22:21:26.2940231Z Prepare workflow directory
+2026-09-29T22:21:26.3274977Z Prepare all required actions
+2026-09-29T22:21:26.3323451Z Getting action download info
+2026-09-29T22:21:26.7477302Z ##[error]Unable to resolve action `pypa/gh-action-pypi-publish@76f52bc884231489b2a9c7132b812f3b7f33e158`, unable to find version `76f52bc884231489b2a9c7132b812f3b7f33e158`

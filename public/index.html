@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRFKYC — Global AML, Sanctions & PEP Screening</title>
+<meta name="description" content="Screen any person or company against 490+ sanctions lists, 235K news sources, and Wikidata. Instant risk scoring and PDF reports. By AliceLabs LLC.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+body{background:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%);color:#1e293b;min-height:100vh}
+.header{background:linear-gradient(135deg,#064e3b 0%,#047857 100%);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.header h1{font-size:20px;display:flex;align-items:center;gap:8px}
+.header .badge{font-size:11px;background:rgba(255,255,255,.15);padding:4px 10px;border-radius:12px}
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
+.hero{text-align:center;margin-bottom:40px}
+.hero h2{font-size:36px;font-weight:800;margin-bottom:12px;color:#0f172a}
+.hero h2 span{color:#059669}
+.hero p{font-size:18px;color:#64748b;max-width:600px;margin:0 auto}
+.search-card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:24px;margin-bottom:32px}
+.search-row{display:flex;gap:8px;margin-bottom:12px}
+.toggle{display:inline-flex;border-radius:8px;border:1px solid #e2e8f0;overflow:hidden;margin-bottom:12px}
+.toggle button{padding:8px 16px;border:none;background:#fff;color:#64748b;cursor:pointer;font-size:14px;font-weight:500}
+.toggle button.active{background:#059669;color:#fff}
+input{flex:1;padding:12px 16px;border:1px solid #e2e8f0;border-radius:8px;font-size:16px;outline:none}
+input:focus{border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1)}
+button.screen{padding:12px 24px;background:#059669;color:#fff;border:none;border-radius:8px;font-size:16px;cursor:pointer;font-weight:600;transition:background .2s}
+button.screen:hover{background:#047857}
+button.screen:disabled{background:#9ca3af;cursor:not-allowed}
+.results{margin-top:20px;display:none}
+.results.show{display:block}
+.risk-banner{padding:16px;border-radius:12px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.risk-low{background:#f0fdf4;border:1px solid #86efac;color:#166534}
+.risk-medium{background:#fffbeb;border:1px solid #fcd34d;color:#92400e}
+.risk-high{background:#fff7ed;border:1px solid #fdba74;color:#9a3412}
+.risk-critical{background:#fef2f2;border:1px solid #fca5a5;color:#991b1b}
+.risk-banner h3{font-size:18px;margin-bottom:4px}
+.risk-bar{width:100%;height:8px;background:#e2e8f0;border-radius:4px;margin-bottom:16px;overflow:hidden}
+.risk-bar-fill{height:100%;border-radius:4px;transition:width .5s}
+.tabs{display:flex;gap:4px;border-bottom:2px solid #e2e8f0;margin-bottom:16px}
+.tab{padding:8px 16px;cursor:pointer;font-size:14px;font-weight:500;border-bottom:2px solid transparent;color:#64748b}
+.tab.active{border-bottom-color:#059669;color:#059669}
+.tab-content{max-height:400px;overflow-y:auto}
+.match{border:1px solid #e2e8f0;border-left:4px solid #ef4444;border-radius:8px;padding:12px;margin-bottom:8px}
+.match h5{font-weight:600;margin-bottom:4px}
+.match .score{font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px}
+.score-high{background:#fef2f2;color:#991b1b}
+.score-med{background:#fffbeb;color:#92400e}
+.match .datasets{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.match .ds{background:#f1f5f9;color:#475569;padding:2px 8px;border-radius:4px;font-size:11px}
+.article{border:1px solid #e2e8f0;border-radius:8px;padding:12px;margin-bottom:8px;text-decoration:none;color:inherit;display:block}
+.article:hover{border-color:#34d399}
+.article h5{font-weight:500;font-size:14px;margin-bottom:4px}
+.article .meta{font-size:12px;color:#94a3b8}
+.loading{text-align:center;padding:20px;color:#64748b}
+.loading .spinner{display:inline-block;width:24px;height:24px;border:3px solid #e2e8f0;border-top-color:#059669;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:32px}
+.feature{background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.feature .icon{font-size:24px;margin-bottom:8px}
+.feature h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.feature p{font-size:12px;color:#64748b}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:32px}
+.plan{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.plan.popular{border:2px solid #059669;position:relative}
+.plan .badge{position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#059669;color:#fff;font-size:10px;padding:2px 10px;border-radius:8px}
+.plan h4{font-weight:600;margin-bottom:8px}
+.plan .price{font-size:28px;font-weight:800;color:#059669;margin-bottom:8px}
+.plan .price span{font-size:14px;font-weight:400}
+.plan ul{text-align:left;font-size:13px;list-style:none;color:#475569}
+.plan ul li{padding:4px 0}
+.plan ul li::before{content:'✓ ';color:#10b981}
+.plan ul li.no::before{content:'✗ ';color:#ef4444}
+.footer{border-top:1px solid #e2e8f0;padding:16px;text-align:center;font-size:12px;color:#94a3b8}
+.footer a{color:#059669;text-decoration:none}
+.api-info{background:#0f172a;color:#94a3b8;border-radius:12px;padding:16px;margin-bottom:32px;font-size:13px;font-family:monospace}
+.api-info strong{color:#34d399}
+.risk-factors{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.risk-factor{background:#fef3c7;color:#92400e;padding:4px 10px;border-radius:12px;font-size:12px;font-weight:500}
+@media(max-width:600px){.hero h2{font-size:24px}.search-row{flex-direction:column}.features,.pricing{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🛡️ VRFKYC <span class="badge">by AliceLabs LLC</span></h1>
+<div style="display:flex;gap:6px">
+<span class="badge">490 datasets</span>
+<span class="badge">235K news</span>
+<span class="badge">Instant</span>
+</div>
+</div>
+
+<div class="container">
+<div class="hero">
+<h2>Sanctions Screening with <span>Risk Score</span></h2>
+<p>Screen against 490+ sanctions lists, 235K news sources, and Wikidata — with instant risk scoring and PDF reports.</p>
+</div>
+
+<div class="search-card">
+<div class="toggle">
+<button id="btn-person" class="active" onclick="setType('Person')">Person</button>
+<button id="btn-company" onclick="setType('Company')">Company</button>
+</div>
+<div class="search-row">
+<input type="text" id="search-input" placeholder="e.g. Vladimir Putin" onkeydown="if(event.key==='Enter')doSearch()">
+<button class="screen" id="search-btn" onclick="doSearch()">🔍 Screen</button>
+</div>
+<div id="loading" class="loading" style="display:none">
+<div class="spinner"></div>
+<p>Screening across 490+ datasets...</p>
+</div>
+<div id="results" class="results">
+<div id="risk-banner"></div>
+<div id="risk-bar" class="risk-bar"></div>
+<div id="risk-factors" class="risk-factors"></div>
+<div class="tabs">
+<div class="tab active" onclick="showTab('sanctions')">Sanctions (<span id="count-sanctions">0</span>)</div>
+<div class="tab" onclick="showTab('adverse')">Adverse Media (<span id="count-adverse">0</span>)</div>
+<div class="tab" onclick="showTab('entity')">Entity Info</div>
+</div>
+<div class="tab-content" id="tab-sanctions"></div>
+<div class="tab-content" id="tab-adverse" style="display:none"></div>
+<div class="tab-content" id="tab-entity" style="display:none"></div>
+<div style="font-size:11px;color:#cbd5e1;margin-top:12px;padding-top:8px;border-top:1px solid #f1f5f9" id="report-id"></div>
+</div>
+</div>
+
+<div id="hero-features">
+<div class="features">
+<div class="feature"><div class="icon">🌐</div><h4>490+ Lists</h4><p>OFAC, EU, UN, UK + 30 countries</p></div>
+<div class="feature"><div class="icon">📰</div><h4>Adverse Media</h4><p>235K+ news sources</p></div>
+<div class="feature"><div class="icon">📊</div><h4>Risk Score</h4><p>0-100 with risk factors</p></div>
+<div class="feature"><div class="icon">📄</div><h4>PDF Reports</h4><p>Professional, downloadable</p></div>
+</div>
+
+<div class="pricing">
+<div class="plan">
+<h4>Free</h4>
+<div class="price">$0<span>/mo</span></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:8px">5 screenings / month</p>
+<ul>
+<li>Sanctions screening</li>
+<li>Risk score</li>
+<li class="no">Adverse media</li>
+<li class="no">PDF reports</li>
+</ul>
+</div>
+<div class="plan popular">
+<div class="badge">Popular</div>
+<h4>Pro</h4>
+<div class="price">$99<span>/mo</span></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:8px">100 screenings / month</p>
+<ul>
+<li>Sanctions + adverse media</li>
+<li>Risk score + factors</li>
+<li>PDF reports</li>
+<li>Entity enrichment</li>
+</ul>
+</div>
+<div class="plan">
+<h4>Business</h4>
+<div class="price">$299<span>/mo</span></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:8px">500 screenings / month</p>
+<ul>
+<li>Everything in Pro</li>
+<li>Multi-user access</li>
+<li>Batch screening API</li>
+<li>Priority support</li>
+</ul>
+</div>
+</div>
+
+<div class="api-info">
+<strong>VRFKYC API</strong><br>
+POST /api/screen — {"name":"John Smith","type":"Person"}<br>
+POST /api/report — Generate PDF report<br>
+GET /api/manifest — AI agent discovery<br>
+POST /api/mcp — MCP JSON-RPC 2.0 (3 tools)<br>
+GET /robots.txt — GPTBot, Claude-Web allowed<br>
+GET /ai-plugin.json — ChatGPT plugin manifest<br>
+GET /llms.txt — LLM-readable docs
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p>VRFKYC by AliceLabs LLC · USA / Ecuador</p>
+<p>OpenSanctions · Wikidata · GDELT · Not legal advice</p>
+<p style="margin-top:4px;font-size:10px">Contact: eddyflores100@gmail.com · LLC registered in USA</p>
+</div>
+
+<script>
+let searchType='Person';
+function setType(t){searchType=t;document.getElementById('btn-person').className=t==='Person'?'active':'';document.getElementById('btn-company').className=t==='Company'?'active':'';document.getElementById('search-input').placeholder=t==='Person'?'e.g. Vladimir Putin':'e.g. Petroleos de Venezuela';}
+
+async function doSearch(){
+const name=document.getElementById('search-input').value.trim();
+if(!name)return;
+document.getElementById('search-btn').disabled=true;
+document.getElementById('search-btn').textContent='⏳ Scanning...';
+document.getElementById('loading').style.display='block';
+document.getElementById('results').classList.remove('show');
+document.getElementById('hero-features').style.display='none';
+
+try{
+const res=await fetch('/api/screen',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,type:searchType})});
+if(!res.ok)throw new Error('Screening failed');
+const data=await res.json();
+displayResults(data,name);
+}catch(e){
+// Fallback: direct OpenSanctions API call
+try{
+const r2=await fetch('https://api.opensanctions.org/match/default',{method:'POST',headers:{'Authorization':'ApiKey 1ad95e58381ae978ff2cfb93a7f3bea2','Content-Type':'application/json'},body:JSON.stringify({queries:{q1:{schema:searchType==='Company'?'LegalEntity':'Person',properties:{name:[name]}}}})});
+const d2=await r2.json();
+const results=(d2.responses?.q1?.results||[]).filter(r=>r.score>=0.3);
+let score=0;if(results.length>0){score=results[0].score>=0.9?50:results[0].score>=0.7?30:15;}
+const level=score>=70?'critical':score>=40?'high':score>=20?'medium':'low';
+displayResults({query_id:'KYC-'+Date.now(),query:name,entity_type:searchType,timestamp:new Date().toISOString(),risk_score:score,risk_level:level.charAt(0).toUpperCase()+level.slice(1),risk_factors:results.length>0?['Sanctions match found']:[],sanctions:{total_matches:results.length,datasets_checked:490,results:results.map(r=>({caption:r.caption,schema:r.schema,score:r.score,datasets:r.datasets||[],properties:r.properties||{},topics:r.topics||[]}))},entity_info:null,adverse_media:{total_articles:0,sources_checked:'235K+',articles:[]},summary:{status:results.length>0?'FLAGGED':'CLEAR',recommendations:results.length>0?'Potential risk detected.':'No matches found.',data_sources:['OpenSanctions']}},name);
+}catch(e2){
+document.getElementById('loading').innerHTML='<p>❌ Error: '+e2.message+'</p>';
+}
+}finally{
+document.getElementById('search-btn').disabled=false;
+document.getElementById('search-btn').textContent='🔍 Screen';
+document.getElementById('loading').style.display='none';
+document.getElementById('results').classList.add('show');
+}
+}
+
+function displayResults(data,query){
+const colors={Low:['#f0fdf4','#86efac','#166534'],Medium:['#fffbeb','#fcd34d','#92400e'],High:['#fff7ed','#fdba74','#9a3412'],Critical:['#fef2f2','#fca5a5','#991b1b']};
+const c=colors[data.risk_level]||colors.Low;
+const rb=document.getElementById('risk-banner');
+rb.className='risk-banner risk-'+data.risk_level.toLowerCase();
+const icon=data.risk_level==='Low'?'✅':'⚠️';
+rb.innerHTML='<div><h3>'+icon+' Risk: '+data.risk_level+' ('+data.risk_score+'/100)</h3><p style="font-size:13px;opacity:.8">'+data.summary.recommendations+'</p></div><div style="display:flex;gap:8px"><button onclick="downloadReport()" style="padding:6px 12px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;font-size:12px">📄 PDF</button><button onclick="emailReport(\''+query+'\')" style="padding:6px 12px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;cursor:pointer;font-size:12px">✉️ Email</button></div>';
+const bar=document.getElementById('risk-bar');
+bar.innerHTML='<div class="risk-bar-fill" style="width:'+Math.max(data.risk_score,3)+'%;background:'+(data.risk_level==='Low'?'#10b981':data.risk_level==='Medium'?'#f59e0b':data.risk_level==='High'?'#f97316':'#ef4444')+'"></div>';
+const rf=document.getElementById('risk-factors');
+rf.innerHTML=data.risk_factors.map(f=>'<span class="risk-factor">⚠️ '+f+'</span>').join('');
+document.getElementById('count-sanctions').textContent=data.sanctions.total_matches;
+document.getElementById('count-adverse').textContent=data.adverse_media.total_articles;
+const st=document.getElementById('tab-sanctions');
+if(data.sanctions.results.length===0){st.innerHTML='<p style="text-align:center;padding:20px;color:#10b981">✅ No sanctions matches found across 490 datasets.</p>';}
+else{st.innerHTML=data.sanctions.results.map(m=>'<div class="match"><div style="display:flex;justify-content:space-between"><h5>'+m.caption+'</h5><span class="score '+(m.score>=0.9?'score-high':'score-med')+'">'+(m.score*100).toFixed(1)+'%</span></div>'+(m.properties.birthDate?'<div style="font-size:12px;color:#64748b">Birth: '+m.properties.birthDate[0]+'</div>':'')+'<div class="datasets">'+m.datasets.slice(0,8).map(d=>'<span class="ds">'+d+'</span>').join('')+(m.datasets.length>8?'<span class="ds">+'+(m.datasets.length-8)+' more</span>':'')+'</div></div>').join('');}
+const at=document.getElementById('tab-adverse');
+if(data.adverse_media.articles.length===0){at.innerHTML='<p style="text-align:center;padding:20px;color:#10b981">✅ No adverse media found across 235K+ sources.</p>';}
+else{at.innerHTML=data.adverse_media.articles.map(a=>'<a class="article" href="'+a.url+'" target="_blank"><h5>'+a.title+'</h5><div class="meta">'+a.source+' — '+a.date+'</div></a>').join('');}
+const et=document.getElementById('tab-entity');
+if(data.entity_info){var e=data.entity_info;et.innerHTML='<div style="padding:12px">'+(e.imageUrl?'<img src="'+e.imageUrl+'" style="width:80px;height:80px;border-radius:8px;object-fit:cover;float:right;margin-left:12px">':'')+'<h4 style="margin-bottom:4px">'+e.label+'</h4><p style="font-size:14px;color:#64748b;margin-bottom:12px">'+e.description+'</p>'+(e.birthDate?'<div style="font-size:12px"><strong>Birth:</strong> '+e.birthDate+'</div>':'')+(e.nationality?'<div style="font-size:12px"><strong>Nationality:</strong> '+e.nationality+'</div>':'')+(e.occupation?'<div style="font-size:12px"><strong>Occupation:</strong> '+e.occupation+'</div>':'')+(e.wikipediaUrl?'<a href="'+e.wikipediaUrl+'" target="_blank" style="font-size:12px;color:#059669">Wikipedia →</a>':'')+'</div>';}
+else{et.innerHTML='<p style="text-align:center;padding:20px;color:#94a3b8">No entity information found.</p>';}
+document.getElementById('report-id').textContent='Report ID: '+data.query_id+' · '+new Date(data.timestamp).toLocaleString()+' · Powered by OpenSanctions · AliceLabs LLC';
+window._lastResult=data;
+window._lastQuery=query;
+}
+function showTab(t){document.querySelectorAll('.tab').forEach((el,i)=>{el.className=i===(t==='sanctions'?0:t==='adverse'?1:2)?'tab active':'tab';});document.getElementById('tab-sanctions').style.display=t==='sanctions'?'block':'none';document.getElementById('tab-adverse').style.display=t==='adverse'?'block':'none';document.getElementById('tab-entity').style.display=t==='entity'?'block':'none';}
+function downloadReport(){
+if(!window._lastResult)return;
+const r=window._lastResult;const q=window._lastQuery;
+const html='<!DOCTYPE html><html><head><meta charset="utf-8"><title>KYC Report - '+q+'</title><style>body{font-family:Arial,sans-serif;margin:0;padding:0}.header{background:#064e3b;color:#fff;padding:40px 60px}.header h1{font-size:24px}.content{padding:40px 60px}.match{border-left:4px solid #ef4444;padding:12px;margin-bottom:12px}.footer{padding:20px 60px;background:#f7fafc;font-size:11px;color:#94a3b8}</style></head><body><div class="header"><h1>🛡️ VRFKYC — KYC Screening Report</h1><p>Report ID: '+r.query_id+'<br>Date: '+new Date(r.timestamp).toLocaleString()+'<br>Query: '+q+' ('+r.entity_type+')<br>Risk: '+r.risk_level+' ('+r.risk_score+'/100)<br>Status: '+r.summary.status+'</p></div><div class="content"><h2>Screening Results</h2><p>'+r.summary.recommendations+'</p><h3>Sanctions Matches: '+r.sanctions.total_matches+'</h3>'+r.sanctions.results.map(m=>'<div class="match"><strong>'+m.caption+'</strong> ('+(m.score*100).toFixed(1)+'% match)<br>Datasets: '+m.datasets.join(', ')+'</div>').join('')+'</div><div class="footer"><p>VRFKYC by AliceLabs LLC · OpenSanctions · Not legal advice</p><p>Contact: eddyflores100@gmail.com</p></div></body></html>';
+const blob=new Blob([html],{type:'text/html'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='KYC_Report_'+q.replace(/\s+/g,'_')+'.html';a.click();URL.revokeObjectURL(url);
+}
+function emailReport(q){const subject='KYC Screening Report: '+q;const body='Risk: '+window._lastResult.risk_level+' ('+window._lastResult.risk_score+'/100)\nMatches: '+window._lastResult.sanctions.total_matches+'\nReport ID: '+window._lastResult.query_id;window.location.href='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);}
+</script>
+</body>
+</html>

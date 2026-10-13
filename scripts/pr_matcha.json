@@ -1,0 +1,6 @@
+{
+  "title": "feat(i18n): complete Spanish locale — 9 missing keys translated",
+  "head": "eddyflores100-lang:feat/complete-spanish-locale",
+  "base": "master",
+  "body": "## Summary\n\nCloses #1507.\n\nThe existing `es.json` was missing 9 keys that exist in `en.json`. This PR translates all 9:\n\n| Key | Translation |\n|-----|-------------|\n| `choice.mouse_help` | Pulsa y para activar o n para desactivar... |\n| `choice.mouse_prompt` | ¿Activar soporte para ratón? [s/n] |\n| `common.logs` | Registros |\n| `common.no_logs_yet` | Sin registros todavía |\n| `composer.encrypt_pgp` | Cifrar correo (PGP) |\n| `composer.sign_pgp` | Firmar correo (PGP) |\n| `composer.sign_smime` | Firmar correo (S/MIME) |\n| `settings_general.mouse_support` | Soporte para ratón |\n| `settings_general.show_original_on_reply` | Mostrar original al responder |\n\n## Result\n\n**234/234 keys** — 100% Spanish locale coverage.\n\nTranslations follow the existing style in `es.json`. Technical terms (PGP, S/MIME) kept as-is. `s/n` used instead of `y/n` for yes/no in Spanish."
+}

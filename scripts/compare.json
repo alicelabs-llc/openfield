@@ -1,0 +1,656 @@
+{
+  "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/compare/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4...eeb3e137fb08fadc6300886fb92688c1316c8554",
+  "html_url": "https://github.com/cognicore-dev/cognicore-env/compare/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4...eeb3e137fb08fadc6300886fb92688c1316c8554",
+  "permalink_url": "https://github.com/cognicore-dev/cognicore-env/compare/cognicore-dev:4e46735...cognicore-dev:eeb3e13",
+  "diff_url": "https://github.com/cognicore-dev/cognicore-env/compare/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4...eeb3e137fb08fadc6300886fb92688c1316c8554.diff",
+  "patch_url": "https://github.com/cognicore-dev/cognicore-env/compare/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4...eeb3e137fb08fadc6300886fb92688c1316c8554.patch",
+  "base_commit": {
+    "sha": "4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+    "node_id": "C_kwDOR5a-mNoAKDRlNDY3MzUwM2FkMTRhMWZkMDViNWI0Yjc3ZjM5ZmMwNTE2N2FlYjQ",
+    "commit": {
+      "author": {
+        "name": "kaushal trivedi",
+        "email": "155625932+Kaushalt2004@users.noreply.github.com",
+        "date": "2026-09-28T16:44:20Z"
+      },
+      "committer": {
+        "name": "kaushal trivedi",
+        "email": "155625932+Kaushalt2004@users.noreply.github.com",
+        "date": "2026-09-28T16:44:20Z"
+      },
+      "message": "test(mem0-bridge): pin verifier-defeat tripwire to serial runs (xdst guard)\n\nFollow-up to #136: the tripwire mutates importer.py on disk and runs the\nsuite in a subprocess, which is unsafe to race against other pytest-xdist\nworkers. Skip when PYTEST_XDIST_WORKER is set; it runs in serial invocations\n(and can be wired as a dedicated CI step later).\n\nVerified: serial 14 passed; -n auto 13 passed, 1 skipped (the tripwire),\nimporter.py restored pristine.",
+      "tree": {
+        "sha": "ceeff3cc0f7cc762696235375aa4a9dfbaa3a3e2",
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/trees/ceeff3cc0f7cc762696235375aa4a9dfbaa3a3e2"
+      },
+      "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+    "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+    "comments_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4/comments",
+    "author": {
+      "login": "Kaushalt2004",
+      "id": 155625932,
+      "node_id": "U_kgDOCUapzA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155625932?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Kaushalt2004",
+      "html_url": "https://github.com/Kaushalt2004",
+      "followers_url": "https://api.github.com/users/Kaushalt2004/followers",
+      "following_url": "https://api.github.com/users/Kaushalt2004/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Kaushalt2004/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Kaushalt2004/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Kaushalt2004/subscriptions",
+      "organizations_url": "https://api.github.com/users/Kaushalt2004/orgs",
+      "repos_url": "https://api.github.com/users/Kaushalt2004/repos",
+      "events_url": "https://api.github.com/users/Kaushalt2004/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Kaushalt2004/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Kaushalt2004",
+      "id": 155625932,
+      "node_id": "U_kgDOCUapzA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155625932?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Kaushalt2004",
+      "html_url": "https://github.com/Kaushalt2004",
+      "followers_url": "https://api.github.com/users/Kaushalt2004/followers",
+      "following_url": "https://api.github.com/users/Kaushalt2004/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Kaushalt2004/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Kaushalt2004/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Kaushalt2004/subscriptions",
+      "organizations_url": "https://api.github.com/users/Kaushalt2004/orgs",
+      "repos_url": "https://api.github.com/users/Kaushalt2004/repos",
+      "events_url": "https://api.github.com/users/Kaushalt2004/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Kaushalt2004/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b1cfaab2562eed9ef23e07dd6018fe2e6aec67fc",
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/b1cfaab2562eed9ef23e07dd6018fe2e6aec67fc",
+        "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/b1cfaab2562eed9ef23e07dd6018fe2e6aec67fc"
+      }
+    ]
+  },
+  "merge_base_commit": {
+    "sha": "4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+    "node_id": "C_kwDOR5a-mNoAKDRlNDY3MzUwM2FkMTRhMWZkMDViNWI0Yjc3ZjM5ZmMwNTE2N2FlYjQ",
+    "commit": {
+      "author": {
+        "name": "kaushal trivedi",
+        "email": "155625932+Kaushalt2004@users.noreply.github.com",
+        "date": "2026-09-28T16:44:20Z"
+      },
+      "committer": {
+        "name": "kaushal trivedi",
+        "email": "155625932+Kaushalt2004@users.noreply.github.com",
+        "date": "2026-09-28T16:44:20Z"
+      },
+      "message": "test(mem0-bridge): pin verifier-defeat tripwire to serial runs (xdst guard)\n\nFollow-up to #136: the tripwire mutates importer.py on disk and runs the\nsuite in a subprocess, which is unsafe to race against other pytest-xdist\nworkers. Skip when PYTEST_XDIST_WORKER is set; it runs in serial invocations\n(and can be wired as a dedicated CI step later).\n\nVerified: serial 14 passed; -n auto 13 passed, 1 skipped (the tripwire),\nimporter.py restored pristine.",
+      "tree": {
+        "sha": "ceeff3cc0f7cc762696235375aa4a9dfbaa3a3e2",
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/trees/ceeff3cc0f7cc762696235375aa4a9dfbaa3a3e2"
+      },
+      "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+    "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+    "comments_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4/comments",
+    "author": {
+      "login": "Kaushalt2004",
+      "id": 155625932,
+      "node_id": "U_kgDOCUapzA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155625932?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Kaushalt2004",
+      "html_url": "https://github.com/Kaushalt2004",
+      "followers_url": "https://api.github.com/users/Kaushalt2004/followers",
+      "following_url": "https://api.github.com/users/Kaushalt2004/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Kaushalt2004/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Kaushalt2004/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Kaushalt2004/subscriptions",
+      "organizations_url": "https://api.github.com/users/Kaushalt2004/orgs",
+      "repos_url": "https://api.github.com/users/Kaushalt2004/repos",
+      "events_url": "https://api.github.com/users/Kaushalt2004/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Kaushalt2004/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Kaushalt2004",
+      "id": 155625932,
+      "node_id": "U_kgDOCUapzA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155625932?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Kaushalt2004",
+      "html_url": "https://github.com/Kaushalt2004",
+      "followers_url": "https://api.github.com/users/Kaushalt2004/followers",
+      "following_url": "https://api.github.com/users/Kaushalt2004/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Kaushalt2004/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Kaushalt2004/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Kaushalt2004/subscriptions",
+      "organizations_url": "https://api.github.com/users/Kaushalt2004/orgs",
+      "repos_url": "https://api.github.com/users/Kaushalt2004/repos",
+      "events_url": "https://api.github.com/users/Kaushalt2004/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Kaushalt2004/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b1cfaab2562eed9ef23e07dd6018fe2e6aec67fc",
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/b1cfaab2562eed9ef23e07dd6018fe2e6aec67fc",
+        "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/b1cfaab2562eed9ef23e07dd6018fe2e6aec67fc"
+      }
+    ]
+  },
+  "status": "ahead",
+  "ahead_by": 4,
+  "behind_by": 0,
+  "total_commits": 4,
+  "commits": [
+    {
+      "sha": "c75ca32e88f311970f92771bb0ce0aad0c6430d8",
+      "node_id": "C_kwDOR5a-mNoAKGM3NWNhMzJlODhmMzExOTcwZjkyNzcxYmIwY2UwYWFkMGM2NDMwZDg",
+      "commit": {
+        "author": {
+          "name": "Eddy-AliceLabs",
+          "email": "eddyflores100-lang@users.noreply.github.com",
+          "date": "2026-09-29T05:25:20Z"
+        },
+        "committer": {
+          "name": "Eddy-AliceLabs",
+          "email": "eddyflores100-lang@users.noreply.github.com",
+          "date": "2026-09-29T05:25:20Z"
+        },
+        "message": "fix(pyproject): add mem0 extra to [all] deps chain (#135 followup)\n\nCloses one of the three accepted items from #135 that did not land in\nmerge caf30da.\n\nBefore:\n  pip install cognicore-env[all]  →  ImportError: No module named 'mem0ai'\n\nAfter:\n  pip install cognicore-env[all]  →  pulls mem0 extra (cryptography>=43.0\n                                    + mem0ai>=2.0) automatically\n\nchenhz01's correction accepted: my original wording in #135 ('`[all]`\nomits mem0') was imprecise. The actual gap was that `mem0` was missing\nfrom the `[all]` extras chain, so `cryptography>=43.0` (which lives only\ninside the `mem0` extra at L39) was never pulled in by `[all]`. The\nImportError simply mutated from 'mem0ai' to 'cryptography'.\n\nReported-by: chenhz01\nReviewed-by: tonydzi\nRefs: cognicore-dev/cognicore-env#135",
+        "tree": {
+          "sha": "8f2151441cd6d4ab12ce3725991568dd42190bf7",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/trees/8f2151441cd6d4ab12ce3725991568dd42190bf7"
+        },
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/commits/c75ca32e88f311970f92771bb0ce0aad0c6430d8",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/c75ca32e88f311970f92771bb0ce0aad0c6430d8",
+      "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/c75ca32e88f311970f92771bb0ce0aad0c6430d8",
+      "comments_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/c75ca32e88f311970f92771bb0ce0aad0c6430d8/comments",
+      "author": {
+        "login": "eddyflores100-lang",
+        "id": 259931436,
+        "node_id": "U_kgDOD349LA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/259931436?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eddyflores100-lang",
+        "html_url": "https://github.com/eddyflores100-lang",
+        "followers_url": "https://api.github.com/users/eddyflores100-lang/followers",
+        "following_url": "https://api.github.com/users/eddyflores100-lang/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eddyflores100-lang/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eddyflores100-lang/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eddyflores100-lang/subscriptions",
+        "organizations_url": "https://api.github.com/users/eddyflores100-lang/orgs",
+        "repos_url": "https://api.github.com/users/eddyflores100-lang/repos",
+        "events_url": "https://api.github.com/users/eddyflores100-lang/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eddyflores100-lang/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "eddyflores100-lang",
+        "id": 259931436,
+        "node_id": "U_kgDOD349LA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/259931436?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eddyflores100-lang",
+        "html_url": "https://github.com/eddyflores100-lang",
+        "followers_url": "https://api.github.com/users/eddyflores100-lang/followers",
+        "following_url": "https://api.github.com/users/eddyflores100-lang/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eddyflores100-lang/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eddyflores100-lang/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eddyflores100-lang/subscriptions",
+        "organizations_url": "https://api.github.com/users/eddyflores100-lang/orgs",
+        "repos_url": "https://api.github.com/users/eddyflores100-lang/repos",
+        "events_url": "https://api.github.com/users/eddyflores100-lang/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eddyflores100-lang/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+          "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4"
+        }
+      ]
+    },
+    {
+      "sha": "a2c3f1e2bd7b09883a668bdf9c1dab84c361d989",
+      "node_id": "C_kwDOR5a-mNoAKGEyYzNmMWUyYmQ3YjA5ODgzYTY2OGJkZjljMWRhYjg0YzM2MWQ5ODk",
+      "commit": {
+        "author": {
+          "name": "Eddy-AliceLabs",
+          "email": "eddyflores100-lang@users.noreply.github.com",
+          "date": "2026-09-29T05:25:43Z"
+        },
+        "committer": {
+          "name": "Eddy-AliceLabs",
+          "email": "eddyflores100-lang@users.noreply.github.com",
+          "date": "2026-09-29T05:25:43Z"
+        },
+        "message": "docs(readme): use [mem0] extra instead of bare cryptography install (#135 followup)\n\nCloses one of the three accepted items from #135 that did not land in\nmerge caf30da.\n\nTwo changes:\n  1. Extras cheatsheet (L266-272): add 'pip install cognicore-env[mem0]'\n     line so users discover the extra without reading pyproject.toml.\n  2. mem0 Integration section (L322): replace the bare\n     'pip install cognicore-env cryptography' with the proper extra form\n     'pip install cognicore-env[mem0]'.\n\nThe old line was a documentation smell: it installed cryptography as a\nloose dependency instead of via the extra that bundles mem0ai together\nwith it. Users following the README literally would get a working\ncrypto import but a missing mem0ai import one line later.\n\nRefs: cognicore-dev/cognicore-env#135",
+        "tree": {
+          "sha": "5060721d82fb8699fd837df77b85ef082e500a25",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/trees/5060721d82fb8699fd837df77b85ef082e500a25"
+        },
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/commits/a2c3f1e2bd7b09883a668bdf9c1dab84c361d989",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/a2c3f1e2bd7b09883a668bdf9c1dab84c361d989",
+      "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/a2c3f1e2bd7b09883a668bdf9c1dab84c361d989",
+      "comments_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/a2c3f1e2bd7b09883a668bdf9c1dab84c361d989/comments",
+      "author": {
+        "login": "eddyflores100-lang",
+        "id": 259931436,
+        "node_id": "U_kgDOD349LA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/259931436?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eddyflores100-lang",
+        "html_url": "https://github.com/eddyflores100-lang",
+        "followers_url": "https://api.github.com/users/eddyflores100-lang/followers",
+        "following_url": "https://api.github.com/users/eddyflores100-lang/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eddyflores100-lang/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eddyflores100-lang/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eddyflores100-lang/subscriptions",
+        "organizations_url": "https://api.github.com/users/eddyflores100-lang/orgs",
+        "repos_url": "https://api.github.com/users/eddyflores100-lang/repos",
+        "events_url": "https://api.github.com/users/eddyflores100-lang/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eddyflores100-lang/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "eddyflores100-lang",
+        "id": 259931436,
+        "node_id": "U_kgDOD349LA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/259931436?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eddyflores100-lang",
+        "html_url": "https://github.com/eddyflores100-lang",
+        "followers_url": "https://api.github.com/users/eddyflores100-lang/followers",
+        "following_url": "https://api.github.com/users/eddyflores100-lang/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eddyflores100-lang/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eddyflores100-lang/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eddyflores100-lang/subscriptions",
+        "organizations_url": "https://api.github.com/users/eddyflores100-lang/orgs",
+        "repos_url": "https://api.github.com/users/eddyflores100-lang/repos",
+        "events_url": "https://api.github.com/users/eddyflores100-lang/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eddyflores100-lang/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "c75ca32e88f311970f92771bb0ce0aad0c6430d8",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/c75ca32e88f311970f92771bb0ce0aad0c6430d8",
+          "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/c75ca32e88f311970f92771bb0ce0aad0c6430d8"
+        }
+      ]
+    },
+    {
+      "sha": "a02c231cc01371cdc19a07a87c397f7193a4f143",
+      "node_id": "C_kwDOR5a-mNoAKGEwMmMyMzFjYzAxMzcxY2RjMTlhMDdhODdjMzk3ZjcxOTNhNGYxNDM",
+      "commit": {
+        "author": {
+          "name": "Eddy-AliceLabs",
+          "email": "eddyflores100-lang@users.noreply.github.com",
+          "date": "2026-09-29T05:31:58Z"
+        },
+        "committer": {
+          "name": "Eddy-AliceLabs",
+          "email": "eddyflores100-lang@users.noreply.github.com",
+          "date": "2026-09-29T05:31:58Z"
+        },
+        "message": "feat(crypto): reject floats in signed canonical schema (#135 followup)\n\nCloses item 3 of #135 that did not land in merge caf30da.\n\nImplements option 2 of chenhz01's proposal: exclusion of float values\nfrom the signed schema, not normalization. Rationale: no JSON\ncanonicalization spec (RFC 8785 JCS, OLPC Canonical JSON) agrees on a\ncanonical float representation across runtimes, and silent normalization\nis exactly the failure mode that defeated the reachability firing\nvector in PR #136.\n\nChanges:\n\n1. crypto.py:\n   - New exception class FloatInSignedSchemaError (TypeError subclass).\n   - New _reject_floats(obj) walker that raises on the first float at\n     any depth, with a JSONPath-style location in the message.\n   - canonicalize() now calls _reject_floats() before json.dumps, so\n     sign_bundle and verify_signature inherit the rejection\n     transitively. Booleans pass through (they subclass int, not\n     float, in Python).\n\n2. exporter.py:\n   - _entry_to_record() quantizes all float fields on MemoryEntry to\n     ints before placement on the wire:\n     * confidence/importance/relevance (float [0,1]) → basis points\n       [0,10000] (4 decimal precision)\n     * utility_score (signed float) → milli-units (3 decimal precision)\n     * timestamp/last_accessed (unix epoch float) → ms ints\n   - Wire field names are renamed to make quantization explicit\n     (confidence → confidence_basis_points, etc.).\n   - Out-of-range floats are clamped to the valid range, so a\n     corrupted in-memory value cannot produce an undetectable schema\n     violation on the wire.\n\n3. importer.py:\n   - New _dequantize_record() helper reverses the int→float mapping\n     before MemoryEntry.from_dict. In-memory representation stays\n     float (the runtime contract); only the signed wire is int.\n   - Malformed ints log a warning and fall back to dataclass defaults\n     rather than crashing the import.\n\n4. tests/test_mem0_canonical_float_reject.py (new, 20 tests, all green):\n   - TestCanonicalizeRejectsFloat (12 cases): top-level, integral,\n     nested-in-dict, in-list, in-tuple, negative, zero, nan, inf.\n     Plus negative case (clean int payload passes).\n   - TestSignBundleRejectsFloat (2 cases): rejection propagates\n     through sign_bundle and verify_signature.\n   - TestCrossLanguageFixtures (5 cases): consumes shared fixtures\n     under tests/fixtures/canonical_float_reject/ — these same\n     fixtures are consumed by mirror tests in the Rust and TypeScript\n     SDKs (pending) to assert symmetric cross-runtime rejection.\n   - TestRegressionGuard (1 case): asserts that int 1 and float 1.0\n     produce different canonical bytes — the silent-failure mode\n     that motivated the rule.\n\n5. tests/fixtures/canonical_float_reject/ (new):\n   - integral_float.json    — the motivating bug (1.0 vs 1)\n   - confidence_field.json  — typical ML confidence score\n   - nested_float.json       — float buried in nested dicts\n   - list_of_floats.json     — float in a list element\n   - clean_int.json          — negative case (must NOT be rejected)\n   - README.md               — fixture rationale + mirror test pointers\n\nTest results: 34 passed in tests/test_mem0_bridge.py + new file. The\nexisting 14 tests in test_mem0_bridge.py (acceptance criteria from\n#135/#136) continue to pass without modification, because the\nquantization is transparent to MemoryEntry's float contract.\n\nReported-by: chenhz01\nRefs: cognicore-dev/cognicore-env#135",
+        "tree": {
+          "sha": "813106234d1a0408698ba0363747d8e5ab2bc897",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/trees/813106234d1a0408698ba0363747d8e5ab2bc897"
+        },
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/commits/a02c231cc01371cdc19a07a87c397f7193a4f143",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/a02c231cc01371cdc19a07a87c397f7193a4f143",
+      "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/a02c231cc01371cdc19a07a87c397f7193a4f143",
+      "comments_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/a02c231cc01371cdc19a07a87c397f7193a4f143/comments",
+      "author": {
+        "login": "eddyflores100-lang",
+        "id": 259931436,
+        "node_id": "U_kgDOD349LA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/259931436?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eddyflores100-lang",
+        "html_url": "https://github.com/eddyflores100-lang",
+        "followers_url": "https://api.github.com/users/eddyflores100-lang/followers",
+        "following_url": "https://api.github.com/users/eddyflores100-lang/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eddyflores100-lang/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eddyflores100-lang/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eddyflores100-lang/subscriptions",
+        "organizations_url": "https://api.github.com/users/eddyflores100-lang/orgs",
+        "repos_url": "https://api.github.com/users/eddyflores100-lang/repos",
+        "events_url": "https://api.github.com/users/eddyflores100-lang/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eddyflores100-lang/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "eddyflores100-lang",
+        "id": 259931436,
+        "node_id": "U_kgDOD349LA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/259931436?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eddyflores100-lang",
+        "html_url": "https://github.com/eddyflores100-lang",
+        "followers_url": "https://api.github.com/users/eddyflores100-lang/followers",
+        "following_url": "https://api.github.com/users/eddyflores100-lang/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eddyflores100-lang/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eddyflores100-lang/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eddyflores100-lang/subscriptions",
+        "organizations_url": "https://api.github.com/users/eddyflores100-lang/orgs",
+        "repos_url": "https://api.github.com/users/eddyflores100-lang/repos",
+        "events_url": "https://api.github.com/users/eddyflores100-lang/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eddyflores100-lang/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "a2c3f1e2bd7b09883a668bdf9c1dab84c361d989",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/a2c3f1e2bd7b09883a668bdf9c1dab84c361d989",
+          "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/a2c3f1e2bd7b09883a668bdf9c1dab84c361d989"
+        }
+      ]
+    },
+    {
+      "sha": "eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "node_id": "C_kwDOR5a-mNoAKGVlYjNlMTM3ZmIwOGZhZGM2MzAwODg2ZmI5MjY4OGMxMzE2Yzg1NTQ",
+      "commit": {
+        "author": {
+          "name": "kaushal trivedi",
+          "email": "155625932+Kaushalt2004@users.noreply.github.com",
+          "date": "2026-09-29T06:23:58Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2026-09-29T06:23:58Z"
+        },
+        "message": "Merge pull request #138 from eddyflores100-lang/followup-135-canonical-float-deps-readme\n\nfix(135-followup): land the 3 accepted items that did not make merge caf30da",
+        "tree": {
+          "sha": "813106234d1a0408698ba0363747d8e5ab2bc897",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/trees/813106234d1a0408698ba0363747d8e5ab2bc897"
+        },
+        "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/git/commits/eeb3e137fb08fadc6300886fb92688c1316c8554",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqu1l+CRC1aQ7uu5UhlAAA6PIQAAJz8qKZKO0P3InmwPSQc+Vt\npbCuCVNw7pyXqtWkHyt4Lw32sDxETBP3B35kVwoPwg0EGaeYk2KimKwqUntjZ78f\nV7vV8Hxyl8EzaULA1T6Wm7EWzPrUfOxfYIlpoJQAc5JwdfZhW/TqgmCQ8Y/5N+pC\n9Vv+EMrJIV57qaR4PxDWmebfnkQo+hfKbvFG1DH9jzN2m6ANVQOnk3gz41uYnBwG\nk1Ce0hgw8DfpeOA/XpFpBXkdmN2U9dkZSTb+C+MUOorqnMFyrxMaZXY4/anM2okZ\noB+B6yQ8NtqVSAGi5zpoADd+tPZ5hM7P5dlnZEVnjDHjMpO09ulGm7IAl5QimePD\nTWKGsgFBWSdgtD4sRkChJoXCyR2/1nBKXd0LfZt1RixQnhVQhOT3N/fhGP2u3VJW\nGk1qQSEoaA27zVh2ldk28E6AIpG8eX8VvaCh3XwwEN/Gtz3Jriq+sQzWqfCUaR5x\n2UY4aY+nbtvL0TfhTiLLtht2gMbc2VXexcla/jfXJ1CBJd4wH/Y4sTb3fyxxOIvb\ny+pNZfBCsF7buYtZCHxjR4xc1wNBeil1Qxf4xrbpW8T8Pa2IGpO/PogJlOfSlXmz\nUyQfCY/N/bUtUDseN832qkKh3LrwgpUU8Z8zAe7Wo5asq2ujGQagenSTtsHGHITa\ncsn51cH0XeBCk82ZRhoL\n=9wgf\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 813106234d1a0408698ba0363747d8e5ab2bc897\nparent 4e4673503ad14a1fd05b5b4b77f39fc05167aeb4\nparent a02c231cc01371cdc19a07a87c397f7193a4f143\nauthor kaushal trivedi <155625932+Kaushalt2004@users.noreply.github.com> 1790663038 +0530\ncommitter GitHub <noreply@github.com> 1790663038 +0530\n\nMerge pull request #138 from eddyflores100-lang/followup-135-canonical-float-deps-readme\n\nfix(135-followup): land the 3 accepted items that did not make merge caf30da",
+          "verified_at": "2026-09-29T06:23:58Z"
+        }
+      },
+      "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "comments_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/eeb3e137fb08fadc6300886fb92688c1316c8554/comments",
+      "author": {
+        "login": "Kaushalt2004",
+        "id": 155625932,
+        "node_id": "U_kgDOCUapzA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/155625932?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Kaushalt2004",
+        "html_url": "https://github.com/Kaushalt2004",
+        "followers_url": "https://api.github.com/users/Kaushalt2004/followers",
+        "following_url": "https://api.github.com/users/Kaushalt2004/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Kaushalt2004/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Kaushalt2004/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Kaushalt2004/subscriptions",
+        "organizations_url": "https://api.github.com/users/Kaushalt2004/orgs",
+        "repos_url": "https://api.github.com/users/Kaushalt2004/repos",
+        "events_url": "https://api.github.com/users/Kaushalt2004/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Kaushalt2004/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4",
+          "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/4e4673503ad14a1fd05b5b4b77f39fc05167aeb4"
+        },
+        {
+          "sha": "a02c231cc01371cdc19a07a87c397f7193a4f143",
+          "url": "https://api.github.com/repos/cognicore-dev/cognicore-env/commits/a02c231cc01371cdc19a07a87c397f7193a4f143",
+          "html_url": "https://github.com/cognicore-dev/cognicore-env/commit/a02c231cc01371cdc19a07a87c397f7193a4f143"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sha": "e6021e6a437c46942f3ab8172b7cf8ba1e68d462",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/README.md",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/README.md",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/README.md?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -267,6 +267,7 @@ pip install cognicore-env[rl]      # RL training (gymnasium, PyTorch)\n pip install cognicore-env[memory]  # Semantic memory (sentence-transformers)\n pip install cognicore-env[llm]     # LLM agents (openai client)\n pip install cognicore-env[server]  # Live dashboard (fastapi, uvicorn)\n+pip install cognicore-env[mem0]    # mem0 transfer bundle (cryptography, mem0ai)\n pip install cognicore-env[dev]     # Testing (pytest, coverage)\n pip install cognicore-env[all]     # Everything\n ```\n@@ -319,7 +320,7 @@ CogniCore includes a **Claude plugin** that gives Claude persistent memory acros\n Transfer verified CogniCore memories to/from [mem0](https://github.com/mem0ai/mem0) with cryptographic integrity.\n \n ```bash\n-pip install cognicore-env cryptography\n+pip install cognicore-env[mem0]\n ```\n \n **Export** a sealed bundle (Ed25519-signed, deterministic canonical JSON):"
+    },
+    {
+      "sha": "a5a738281929babb3ff21e8e99cadb9f23e8a5db",
+      "filename": "cognicore/integrations/mem0/crypto.py",
+      "status": "modified",
+      "additions": 59,
+      "deletions": 0,
+      "changes": 59,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/cognicore%2Fintegrations%2Fmem0%2Fcrypto.py",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/cognicore%2Fintegrations%2Fmem0%2Fcrypto.py",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/cognicore%2Fintegrations%2Fmem0%2Fcrypto.py?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -12,6 +12,58 @@\n import json\n from typing import Any, Dict, Tuple\n \n+\n+class FloatInSignedSchemaError(TypeError):\n+    \"\"\"Raised when a ``float`` value is encountered in the signed schema.\n+\n+    Floats are forbidden because their byte-level representation differs\n+    across language runtimes (Python's ``repr`` produces ``\"1.0\"`` while\n+    ECMAScript's ``JSON.stringify`` produces ``\"1\"`` for integral floats),\n+    which would silently break the \"same bytes, same hash, same signature\"\n+    contract that the transfer bundle format depends on.\n+\n+    Callers must quantize to ``int`` (when the value is integral) or move\n+    the value into an unsigned metadata envelope outside the signed body.\n+\n+    Design choice: rejection (this class) over normalization, because\n+    normalization would require a canonical float representation that no\n+    existing JSON canonicalization spec (RFC 8785 JCS, OLPC Canonical JSON)\n+    agrees on across runtimes — and silent normalization is exactly the\n+    failure mode that defeated the reachability firing vector in PR #136.\n+\n+    Refs: cognicore-dev/cognicore-env#135 (item 3, option 2).\n+    \"\"\"\n+\n+\n+def _reject_floats(obj: Any, path: str = \"$\") -> None:\n+    \"\"\"Walk *obj* and raise on the first ``float`` encountered.\n+\n+    Boolean is a subclass of ``int`` in Python, but not of ``float``, so\n+    booleans pass through cleanly. Integers and strings are fine.\n+\n+    The path argument is used only for the error message; it tracks a\n+    JSONPath-style location so callers can identify *which* field needs\n+    to be quantized.\n+    \"\"\"\n+    if isinstance(obj, bool):\n+        return\n+    if isinstance(obj, float):\n+        raise FloatInSignedSchemaError(\n+            f\"float value at {path} is not allowed in the signed schema; \"\n+            f\"quantize to int (if integral) or move to unsigned metadata. \"\n+            f\"Reason: cross-language byte-level representation of floats \"\n+            f\"breaks the deterministic Ed25519 signature contract. \"\n+            f\"See FloatInSignedSchemaError.__doc__ for the design rationale.\"\n+        )\n+    if isinstance(obj, dict):\n+        for k, v in obj.items():\n+            _reject_floats(v, f\"{path}.{k}\")\n+        return\n+    if isinstance(obj, (list, tuple)):\n+        for i, v in enumerate(obj):\n+            _reject_floats(v, f\"{path}[{i}]\")\n+        return\n+\n try:\n     from cryptography.hazmat.primitives.asymmetric.ed25519 import (\n         Ed25519PrivateKey,\n@@ -47,7 +99,14 @@ def canonicalize(obj: Any) -> bytes:\n \n     Serializes *obj* with sorted keys and compact separators (',', ':'),\n     encoded as UTF-8 bytes suitable for deterministic Ed25519 signing.\n+\n+    Raises ``FloatInSignedSchemaError`` if any ``float`` value is present\n+    at any depth in *obj*. See that class's docstring for the rationale\n+    and the cross-language rejection contract.\n+\n+    Refs: cognicore-dev/cognicore-env#135 (item 3, option 2).\n     \"\"\"\n+    _reject_floats(obj)\n     return json.dumps(\n         obj,\n         sort_keys=True,"
+    },
+    {
+      "sha": "7c64b78448a2b273f3fd67c481c7cca9c9d2f325",
+      "filename": "cognicore/integrations/mem0/exporter.py",
+      "status": "modified",
+      "additions": 68,
+      "deletions": 1,
+      "changes": 69,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/cognicore%2Fintegrations%2Fmem0%2Fexporter.py",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/cognicore%2Fintegrations%2Fmem0%2Fexporter.py",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/cognicore%2Fintegrations%2Fmem0%2Fexporter.py?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -127,7 +127,35 @@ def _classify_consequence(entry: MemoryEntry) -> ConsequenceClass:\n \n \n def _entry_to_record(entry: MemoryEntry) -> Dict[str, Any]:\n-    \"\"\"Convert a MemoryEntry to a bundle-transportable record dict.\"\"\"\n+    \"\"\"Convert a MemoryEntry to a bundle-transportable record dict.\n+\n+    All float fields on :class:`MemoryEntry` are quantized to ints before\n+    placement on the signed wire. Floats are forbidden in the signed schema\n+    (see ``FloatInSignedSchemaError`` in ``crypto.py`` and issue #135 item\n+    3) because their byte-level representation differs across language\n+    runtimes (Python vs ECMAScript vs Rust), which would silently break\n+    the deterministic Ed25519 signature contract.\n+\n+    Quantization rules (reversed by the importer on read):\n+\n+    - ``confidence`` (float in [0.0, 1.0]) → ``confidence_basis_points``\n+      (int in [0, 10000], 4 decimal precision).\n+    - ``importance`` (float in [0.0, 1.0]) → ``importance_basis_points``\n+      (int in [0, 10000]).\n+    - ``relevance`` (float in [0.0, 1.0]) → ``relevance_basis_points``\n+      (int in [0, 10000]).\n+    - ``utility_score`` (float, unbounded) → ``utility_score_milli``\n+      (int, 3 decimal precision, signed).\n+    - ``timestamp`` (unix epoch float) → ``timestamp_ms`` (int milliseconds).\n+    - ``last_accessed`` (unix epoch float) → ``last_accessed_ms``\n+      (int milliseconds).\n+\n+    Out-of-range values are clamped to the valid range for bounded\n+    fields, so a corrupted float in memory cannot produce an undetectable\n+    schema violation on the wire.\n+\n+    Refs: cognicore-dev/cognicore-env#135 (item 3, option 2).\n+    \"\"\"\n     record = entry.to_dict()\n     # Strip internal / derived fields\n     meta = record.get(\"metadata\", {})\n@@ -138,6 +166,45 @@ def _entry_to_record(entry: MemoryEntry) -> Dict[str, Any]:\n     if orig_id:\n         record[\"entry_id\"] = orig_id\n     record[\"consequence_class\"] = _classify_consequence(entry).value\n+\n+    # ---- Quantize all float fields to int (signed-schema rule, #135 item 3) ----\n+\n+    # Probabilities in [0.0, 1.0] → basis points [0, 10000]\n+    for src_field, dst_field in (\n+        (\"confidence\", \"confidence_basis_points\"),\n+        (\"importance\", \"importance_basis_points\"),\n+        (\"relevance\", \"relevance_basis_points\"),\n+    ):\n+        val = record.pop(src_field, None)\n+        if val is not None:\n+            try:\n+                bp = int(round(float(val) * 10000))\n+            except (TypeError, ValueError):\n+                bp = 0\n+            record[dst_field] = max(0, min(10000, bp))\n+\n+    # Unbounded floats (signed) → milli-units (3 decimal precision)\n+    val = record.pop(\"utility_score\", None)\n+    if val is not None:\n+        try:\n+            record[\"utility_score_milli\"] = int(round(float(val) * 1000))\n+        except (TypeError, ValueError):\n+            record[\"utility_score_milli\"] = 0\n+\n+    # Unix-time floats → millisecond ints (preserves 3 decimal places of\n+    # sub-second precision, which is well below any clock jitter that\n+    # matters for memory custody).\n+    for src_field, dst_field in (\n+        (\"timestamp\", \"timestamp_ms\"),\n+        (\"last_accessed\", \"last_accessed_ms\"),\n+    ):\n+        val = record.pop(src_field, None)\n+        if val is not None:\n+            try:\n+                record[dst_field] = int(round(float(val) * 1000))\n+            except (TypeError, ValueError):\n+                record[dst_field] = 0\n+\n     return record\n \n "
+    },
+    {
+      "sha": "83100c7a8b59b58c9a112a6fbbf468e450492e55",
+      "filename": "cognicore/integrations/mem0/importer.py",
+      "status": "modified",
+      "additions": 70,
+      "deletions": 0,
+      "changes": 70,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/cognicore%2Fintegrations%2Fmem0%2Fimporter.py",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/cognicore%2Fintegrations%2Fmem0%2Fimporter.py",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/cognicore%2Fintegrations%2Fmem0%2Fimporter.py?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -82,6 +82,71 @@ def __init__(\n # ------------------------------------------------------------------\n \n \n+# Quantization rules — reverse of exporter._entry_to_record.\n+# See #135 item 3.\n+_BASIS_POINT_FIELDS = (\n+    (\"confidence_basis_points\", \"confidence\"),\n+    (\"importance_basis_points\", \"importance\"),\n+    (\"relevance_basis_points\", \"relevance\"),\n+)\n+_MILLI_FIELDS = ((\"utility_score_milli\", \"utility_score\"),)\n+_MS_FIELDS = (\n+    (\"timestamp_ms\", \"timestamp\"),\n+    (\"last_accessed_ms\", \"last_accessed\"),\n+)\n+\n+\n+def _dequantize_record(record: Dict[str, Any]) -> Dict[str, Any]:\n+    \"\"\"Reverse the int→float quantization done by the exporter.\n+\n+    The signed wire schema carries only int values (see #135 item 3).\n+    On import, we map them back to the float representation that the\n+    in-memory ``MemoryEntry`` expects. If a record already carries the\n+    float field directly (e.g. a bundle produced by an older exporter\n+    that pre-dates this rule), we leave it untouched — the float is\n+    still in memory, even though it should never have been on the wire.\n+\n+    Malformed int values log a warning and fall back to the dataclass\n+    default rather than crashing the entire import.\n+    \"\"\"\n+    out = dict(record)\n+\n+    for src, dst in _BASIS_POINT_FIELDS:\n+        if src in out and dst not in out:\n+            try:\n+                out[dst] = float(out[src]) / 10000.0\n+            except (TypeError, ValueError):\n+                logger.warning(\n+                    \"Malformed %s=%r on record %r; falling back to default %s\",\n+                    src, out[src], out.get(\"entry_id\", \"unknown\"), dst,\n+                )\n+                out.pop(src, None)\n+\n+    for src, dst in _MILLI_FIELDS:\n+        if src in out and dst not in out:\n+            try:\n+                out[dst] = float(out[src]) / 1000.0\n+            except (TypeError, ValueError):\n+                logger.warning(\n+                    \"Malformed %s=%r on record %r; falling back to default %s\",\n+                    src, out[src], out.get(\"entry_id\", \"unknown\"), dst,\n+                )\n+                out.pop(src, None)\n+\n+    for src, dst in _MS_FIELDS:\n+        if src in out and dst not in out:\n+            try:\n+                out[dst] = float(out[src]) / 1000.0\n+            except (TypeError, ValueError):\n+                logger.warning(\n+                    \"Malformed %s=%r on record %r; falling back to default %s\",\n+                    src, out[src], out.get(\"entry_id\", \"unknown\"), dst,\n+                )\n+                out.pop(src, None)\n+\n+    return out\n+\n+\n def _get_local_env_fingerprint() -> Dict[str, str]:\n     \"\"\"Capture the current environment's fingerprint.\"\"\"\n     return {\n@@ -290,6 +355,11 @@ def import_bundle(\n             continue\n \n         # Build MemoryEntry from record\n+        # Reverse the float→int quantization done by exporter._entry_to_record\n+        # so the in-memory representation stays float (the runtime contract).\n+        # See #135 item 3 — floats are forbidden only on the *signed* wire\n+        # schema, not in runtime memory.\n+        record = _dequantize_record(record)\n         entry = MemoryEntry.from_dict(record)\n \n         if not entry.metadata:"
+    },
+    {
+      "sha": "77cf4149ea0aab025c8f71b0c33e042fd579fcaf",
+      "filename": "pyproject.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/pyproject.toml",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/pyproject.toml",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/pyproject.toml?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -57,7 +57,7 @@ dev = [\n     \"mcp[cli]>=1.2.0,<2\",\n ]\n all = [\n-    \"cognicore-env[rl,rendering,memory,hf,llm,embeddings,server,mcp,langchain,crewai,openai-agents,memory-providers,extension,dev]\",\n+    \"cognicore-env[rl,rendering,memory,hf,llm,embeddings,server,mcp,langchain,crewai,openai-agents,mem0,memory-providers,extension,dev]\",\n ]\n \n [project.urls]"
+    },
+    {
+      "sha": "02b00f7b6772976d7769be77fcbc04fb1876e552",
+      "filename": "tests/fixtures/canonical_float_reject/README.md",
+      "status": "added",
+      "additions": 51,
+      "deletions": 0,
+      "changes": 51,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2FREADME.md",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2FREADME.md",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ffixtures%2Fcanonical_float_reject%2FREADME.md?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1,51 @@\n+# Cross-language canonical-JSON float rejection fixtures\n+\n+These fixtures are shared across the **Python**, **Rust**, and **TypeScript**\n+implementations of the CogniCore ↔ mem0 transfer bundle format. Each file is a\n+JSON document that the float-rejection rule must reject (or, for\n+`clean_int.json`, must accept).\n+\n+The rejection contract is **symmetric**: every runtime that signs bundle\n+payloads must refuse to canonicalize any document containing a `float` value\n+at any depth. The reason is that the byte-level representation of a float\n+differs across runtimes:\n+\n+- Python's `json.dumps(1.0)` → `\"1.0\"`\n+- ECMAScript's `JSON.stringify(1.0)` → `\"1\"`\n+- Rust's `serde_json::to_string(&1.0_f64)` → `\"1.0\"`\n+\n+If a runtime allowed floats through, the same logical payload would produce\n+**different Ed25519 signatures** in each runtime, defeating the\n+\"deterministic signature\" contract that the bundle format depends on.\n+\n+## Fixtures\n+\n+| File | Expected behavior | Why |\n+| --- | --- | --- |\n+| `integral_float.json` | **reject** | The motivating bug: `1.0` (Python) vs `1` (JS). |\n+| `confidence_field.json` | **reject** | A typical ML confidence score; the obvious case. |\n+| `nested_float.json` | **reject** | Float buried in nested dicts — guards against shallow walkers. |\n+| `list_of_floats.json` | **reject** | Float inside a list element — guards against dict-only walkers. |\n+| `clean_int.json` | **accept** | Negative case — must NOT trigger the rule (guards against over-eager rejection). |\n+\n+## Mirror tests\n+\n+Each consuming runtime ships a mirror test that loads these fixtures and\n+asserts the same expected behavior. The fixtures themselves must never be\n+modified without a coordinated bump across all three runtimes.\n+\n+- Python: `tests/test_mem0_canonical_float_reject.py::TestCrossLanguageFixtures`\n+- Rust: `alethech-rs/tests/canonical_float_reject.rs` (pending)\n+- TypeScript: `alethech-ts/test/canonical_float_reject.test.ts` (pending)\n+\n+## Origin\n+\n+The rule and the fixtures were introduced in PR followup to\n+[cognicore-dev/cognicore-env#135](https://github.com/cognicore-dev/cognicore-env/issues/135),\n+item 3 (option 2 — exclusion, not normalization).\n+\n+The choice of *exclusion over normalization* is deliberate: no JSON\n+canonicalization spec (RFC 8785 JCS, OLPC Canonical JSON) agrees on a\n+canonical float representation across runtimes, and silent normalization\n+is exactly the failure mode that defeated the reachability firing vector\n+in PR #136."
+    },
+    {
+      "sha": "15a262f3e3488bec8b8e66724b7430fd535dc0fb",
+      "filename": "tests/fixtures/canonical_float_reject/clean_int.json",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fclean_int.json",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fclean_int.json",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ffixtures%2Fcanonical_float_reject%2Fclean_int.json?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1 @@\n+{\"score\": 1, \"count\": 100, \"label\": \"clean_int\", \"flags\": [true, false]}"
+    },
+    {
+      "sha": "763298943ffb3d80464bdda8174d3c30c1663ef1",
+      "filename": "tests/fixtures/canonical_float_reject/confidence_field.json",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fconfidence_field.json",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fconfidence_field.json",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ffixtures%2Fcanonical_float_reject%2Fconfidence_field.json?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1 @@\n+{\"confidence\": 0.85, \"category\": \"evidence\", \"label\": \"confidence_field\"}"
+    },
+    {
+      "sha": "eff36e2dc3b644b8f1aee75c39b87759cc339a28",
+      "filename": "tests/fixtures/canonical_float_reject/integral_float.json",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fintegral_float.json",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fintegral_float.json",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ffixtures%2Fcanonical_float_reject%2Fintegral_float.json?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1 @@\n+{\"score\": 1.0, \"label\": \"integral_float\"}"
+    },
+    {
+      "sha": "eaaf1f17125e80985120d546485b71dcf54ca080",
+      "filename": "tests/fixtures/canonical_float_reject/list_of_floats.json",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Flist_of_floats.json",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Flist_of_floats.json",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ffixtures%2Fcanonical_float_reject%2Flist_of_floats.json?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1 @@\n+{\"scores\": [1, 2, 3.5, 4], \"label\": \"list_of_floats\"}"
+    },
+    {
+      "sha": "aad0549d429f0cb0f44a10aefb04d09236e09d29",
+      "filename": "tests/fixtures/canonical_float_reject/nested_float.json",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fnested_float.json",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ffixtures%2Fcanonical_float_reject%2Fnested_float.json",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ffixtures%2Fcanonical_float_reject%2Fnested_float.json?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1 @@\n+{\"outer\": {\"inner\": {\"deep\": 3.14, \"label\": \"nested_float\"}}}"
+    },
+    {
+      "sha": "9d4d3ebb3525a0615fc3b79f477d94ed17976cbe",
+      "filename": "tests/test_mem0_canonical_float_reject.py",
+      "status": "added",
+      "additions": 249,
+      "deletions": 0,
+      "changes": 249,
+      "blob_url": "https://github.com/cognicore-dev/cognicore-env/blob/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ftest_mem0_canonical_float_reject.py",
+      "raw_url": "https://github.com/cognicore-dev/cognicore-env/raw/eeb3e137fb08fadc6300886fb92688c1316c8554/tests%2Ftest_mem0_canonical_float_reject.py",
+      "contents_url": "https://api.github.com/repos/cognicore-dev/cognicore-env/contents/tests%2Ftest_mem0_canonical_float_reject.py?ref=eeb3e137fb08fadc6300886fb92688c1316c8554",
+      "patch": "@@ -0,0 +1,249 @@\n+\"\"\"Tests for the float-rejection rule in the signed canonical schema.\n+\n+Implements the cross-language rejection contract agreed in #135 item 3\n+(option 2 — exclusion, not normalization).\n+\n+The same fixture files under ``tests/fixtures/canonical_float_reject/``\n+are consumed by the Rust and TypeScript SDKs to assert symmetric\n+rejection. Python side: this file.\n+\n+Refs: cognicore-dev/cognicore-env#135\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import json\n+from pathlib import Path\n+\n+import pytest\n+\n+from cognicore.integrations.mem0.crypto import (\n+    FloatInSignedSchemaError,\n+    canonicalize,\n+    generate_keypair,\n+    sign_bundle,\n+    verify_signature,\n+)\n+\n+\n+FIXTURE_DIR = Path(__file__).parent / \"fixtures\" / \"canonical_float_reject\"\n+\n+\n+# ------------------------------------------------------------------\n+# Pure-rejection tests (no signing, no Ed25519)\n+# ------------------------------------------------------------------\n+\n+\n+class TestCanonicalizeRejectsFloat:\n+    \"\"\"The core rejection rule. Every float, anywhere, must raise.\"\"\"\n+\n+    def test_top_level_float_rejected(self):\n+        with pytest.raises(FloatInSignedSchemaError) as exc:\n+            canonicalize({\"confidence\": 0.85})\n+        assert \"confidence\" in str(exc.value)\n+        assert \"$.confidence\" in str(exc.value)\n+\n+    def test_integral_float_rejected(self):\n+        \"\"\"The bug that motivated the rule: 1.0 in Python vs 1 in JS.\"\"\"\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize({\"score\": 1.0})\n+\n+    def test_nested_float_in_dict_rejected(self):\n+        with pytest.raises(FloatInSignedSchemaError) as exc:\n+            canonicalize({\n+                \"outer\": {\n+                    \"inner\": {\n+                        \"deep\": 3.14,\n+                    },\n+                },\n+            })\n+        assert \"$.outer.inner.deep\" in str(exc.value)\n+\n+    def test_float_in_list_rejected(self):\n+        with pytest.raises(FloatInSignedSchemaError) as exc:\n+            canonicalize({\"scores\": [1, 2, 3.5, 4]})\n+        assert \"$.scores[2]\" in str(exc.value)\n+\n+    def test_float_in_tuple_rejected(self):\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize({\"coords\": (1.0, 2.0)})\n+\n+    def test_negative_float_rejected(self):\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize({\"delta\": -0.5})\n+\n+    def test_zero_float_rejected(self):\n+        \"\"\"``0.0`` is a float, not an int. Must still be rejected.\"\"\"\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize({\"weight\": 0.0})\n+\n+    def test_nan_and_inf_rejected(self):\n+        for v in (float(\"nan\"), float(\"inf\"), float(\"-inf\")):\n+            with pytest.raises(FloatInSignedSchemaError):\n+                canonicalize({\"v\": v})\n+\n+    def test_no_floats_passes_clean(self):\n+        \"\"\"Sanity: a clean int/str/bool/None dict canonicalizes normally.\"\"\"\n+        out = canonicalize({\n+            \"a\": 1,\n+            \"b\": \"string\",\n+            \"c\": True,\n+            \"d\": None,\n+            \"e\": [1, 2, 3],\n+            \"f\": {\"g\": 0},\n+        })\n+        assert isinstance(out, bytes)\n+        # Sorted-key canonical form: a,b,c,d,e,f order\n+        assert out == (\n+            b'{\"a\":1,\"b\":\"string\",\"c\":true,\"d\":null,\"e\":[1,2,3],\"f\":{\"g\":0}}'\n+        )\n+\n+    def test_bool_is_not_mistaken_for_float(self):\n+        \"\"\"bool subclasses int (not float) and must pass through cleanly.\"\"\"\n+        # Should not raise\n+        canonicalize({\"flag\": True, \"other\": False})\n+\n+    def test_int_is_not_rejected(self):\n+        \"\"\"Large ints are fine on the Python side. (Cross-language int\n+        range is a separate concern tracked in alethech issue #X.)\"\"\"\n+        canonicalize({\"big\": 2**53 + 1})\n+\n+    def test_error_is_typeerror_subclass(self):\n+        \"\"\"``FloatInSignedSchemaError`` must subclass TypeError so callers\n+        that already catch TypeError for JSON serialization issues keep\n+        working without code changes.\"\"\"\n+        with pytest.raises(TypeError):\n+            canonicalize({\"x\": 1.5})\n+\n+\n+# ------------------------------------------------------------------\n+# Integration: rejection flows through sign_bundle\n+# ------------------------------------------------------------------\n+\n+\n+class TestSignBundleRejectsFloat:\n+    \"\"\"sign_bundle calls canonicalize, so it must propagate the rejection.\"\"\"\n+\n+    def test_sign_bundle_rejects_float_payload(self):\n+        priv, _ = generate_keypair()\n+        with pytest.raises(FloatInSignedSchemaError):\n+            sign_bundle({\"confidence\": 0.9}, priv)\n+\n+    def test_verify_signature_does_not_silently_pass_on_float_payload(self):\n+        \"\"\"If a caller bypasses canonicalize and hand-crafts a signature\n+        over a float-bearing payload, verification must still reject.\n+\n+        We simulate this by attempting canonicalize on the float payload\n+        and asserting it raises BEFORE any signature check would have\n+        run. This guards against future refactors that move the\n+        _reject_floats call out of canonicalize.\n+        \"\"\"\n+        priv, pub = generate_keypair()\n+        bad_payload = {\"score\": 1.0}\n+\n+        # Cannot even canonicalize, so cannot sign.\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize(bad_payload)\n+\n+        # Therefore verify_signature on the same payload must also raise,\n+        # not return False. (Returning False would be a silent downgrade.)\n+        with pytest.raises(FloatInSignedSchemaError):\n+            verify_signature(bad_payload, \"dummy==\", pub)\n+\n+\n+# ------------------------------------------------------------------\n+# Cross-language fixture parity\n+# ------------------------------------------------------------------\n+\n+\n+class TestCrossLanguageFixtures:\n+    \"\"\"Shared fixtures with the Rust and TypeScript SDKs.\n+\n+    Each fixture file is a JSON document that *should* be rejected by the\n+    float rule. The Rust and TS sides have mirror tests that load the same\n+    files and assert rejection. If a runtime fails to reject, the cross-\n+    language signature contract is broken.\n+\n+    Fixtures live under tests/fixtures/canonical_float_reject/.\n+    \"\"\"\n+\n+    @pytest.fixture(autouse=True)\n+    def _ensure_fixtures_exist(self):\n+        if not FIXTURE_DIR.exists():\n+            pytest.skip(\n+                f\"fixture directory {FIXTURE_DIR} not yet populated; \"\n+                f\"run scripts/gen_canonical_float_fixtures.py\"\n+            )\n+\n+    def _load_fixture(self, name: str) -> dict:\n+        path = FIXTURE_DIR / name\n+        with path.open() as f:\n+            return json.load(f)\n+\n+    def test_fixture_integral_float_rejected(self):\n+        \"\"\"The motivating bug: integral float 1.0 vs int 1.\"\"\"\n+        obj = self._load_fixture(\"integral_float.json\")\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize(obj)\n+\n+    def test_fixture_confidence_field_rejected(self):\n+        obj = self._load_fixture(\"confidence_field.json\")\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize(obj)\n+\n+    def test_fixture_nested_float_rejected(self):\n+        obj = self._load_fixture(\"nested_float.json\")\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize(obj)\n+\n+    def test_fixture_list_of_floats_rejected(self):\n+        obj = self._load_fixture(\"list_of_floats.json\")\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize(obj)\n+\n+    def test_fixture_clean_int_payload_canonicalizes(self):\n+        \"\"\"Negative case: a clean int-only fixture must NOT be rejected.\n+        This guards against an over-eager walker that rejects ints too.\"\"\"\n+        obj = self._load_fixture(\"clean_int.json\")\n+        # Should not raise.\n+        out = canonicalize(obj)\n+        assert isinstance(out, bytes)\n+        assert b\".\" not in out  # no float decimal points\n+\n+\n+# ------------------------------------------------------------------\n+# Regression guard\n+# ------------------------------------------------------------------\n+\n+\n+class TestRegressionGuard:\n+    \"\"\"If someone removes _reject_floats from canonicalize, this fires.\n+\n+    The mechanism: assert that the canonical bytes of an int-only payload\n+    differ from the canonical bytes that Python *would* produce for the\n+    float version of the same payload. If floats were allowed, the two\n+    would have different byte lengths (int -> \"1\", float -> \"1.0\").\n+    \"\"\"\n+\n+    def test_int_and_float_payloads_differ_in_canonical_bytes(self):\n+        int_payload = {\"score\": 1}\n+        float_payload = {\"score\": 1.0}\n+\n+        int_bytes = canonicalize(int_payload)\n+        assert int_bytes == b'{\"score\":1}'\n+\n+        # The float version must raise, not produce b'{\"score\":1.0}'.\n+        with pytest.raises(FloatInSignedSchemaError):\n+            canonicalize(float_payload)\n+\n+        # The bytes the float version would have produced (if it didn't\n+        # raise) are NOT what we want to sign. This is the silent failure\n+        # mode that motivated the rule.\n+        would_be_float_bytes = json.dumps(\n+            float_payload,\n+            sort_keys=True,\n+            separators=(\",\", \":\"),\n+            ensure_ascii=True,\n+        ).encode(\"utf-8\")\n+        assert would_be_float_bytes == b'{\"score\":1.0}'\n+        assert int_bytes != would_be_float_bytes"
+    }
+  ]
+}

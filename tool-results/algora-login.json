@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://algora.io/auth/signup",
+    "name": "Sign up - Algora",
+    "snippet": "Create an account. Sign up to get started. Sign up as... Company Developer. Already have an account? Sign in now. By continuing, you agree to our terms and ... Missing:  bounty  hunter",
+    "host_name": "algora.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/auth/login",
+    "name": "Sign in - Algora",
+    "snippet": "Welcome back. Sign in to your account. Sign in as... Company Developer. Email. Sign in. Continue with GitHub. Don't have an account? Sign up now. Missing:  hunter  | Show results with:",
+    "host_name": "algora.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/onboarding/dev",
+    "name": "Developer - Algora",
+    "snippet": "Complete your signup. Continue with GitHub. or. Email. Continue with email. By continuing, you agree to our terms and privacy policy. Missing:  developer  hunter",
+    "host_name": "algora.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/algora/bounties",
+    "name": "Bounties - Algora",
+    "snippet": "Algora connects companies and engineers for full-time and contract work. ... Create new bounties by commenting /bounty $1000 on GitHub issues. Open. 0. Missing:  developer  hunter",
+    "host_name": "algora.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/rohan_sharma/get-ready-bounty-huntersss-algora-vs-opire-30jc",
+    "name": "Get ready Bounty Huntersss! Algora V/S Opire ❄️",
+    "snippet": "Bounty Hunters are those who look for a particular bounty, solve/fix it, and get awarded! Are you a bounty hunter or want to become one??",
+    "host_name": "dev.to",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

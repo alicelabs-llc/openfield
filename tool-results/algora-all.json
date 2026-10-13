@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://algora.io/algora/bounties",
+    "name": "Bounties - Algora",
+    "snippet": "Algora connects companies and engineers for full-time and contract work. ... Create new bounties by commenting /bounty $1000 on GitHub issues. Open. 0. Completed. Missing:  list  browse  find  claim",
+    "host_name": "algora.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/tscircuit/bounties",
+    "name": "Bounties - Algora",
+    "snippet": "Bounties. Create new bounties by commenting /bounty $1000 on GitHub issues. Open. 10. Completed. 707. $1. jlcsearch#92. Missing:  list  browse  find",
+    "host_name": "algora.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/comet-ml/bounties?status=open",
+    "name": "Bounties - Algora",
+    "snippet": "Bounties. Create new bounties by commenting /bounty $1000 on GitHub issues. Open. 2. Completed. 22. $50. opik#1010. [FR]: UI - Ability to Annotate multiple ... Missing:  list  browse  find",
+    "host_name": "algora.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/Dokploy/bounties?status=open",
+    "name": "Bounties - Algora",
+    "snippet": "Bounties. Create new bounties by commenting /bounty $1000 on GitHub issues. Open. 3. Completed. 0. $100. dokploy#1413. Organisation and Teams Management. Missing:  list  browse",
+    "host_name": "algora.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://algora.io/org/cal/bounties?status=open",
+    "name": "Bounties of cal - Algora",
+    "snippet": "Algora connects companies and engineers for full-time and contract work. ... Create new bounties by commenting /bounty $1000 on GitHub issues. Open. 2. Completed. Missing:  list  browse  find",
+    "host_name": "algora.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

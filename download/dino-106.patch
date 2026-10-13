@@ -1,0 +1,41 @@
+From b1efd1c0f0299f2d4ee7a488b7fc5becfb2acd7c Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Tue, 6 Oct 2026 23:26:19 +0000
+Subject: [PATCH] Declare `rust-version = "1.88"` in the workspace package
+
+Closes #106.
+
+`CONTRIBUTING.md` states that dino requires "Rust through rustup
+(stable, 1.88 or later: the workspace uses edition 2024 and let
+chains)", but the workspace `Cargo.toml` does not declare a
+`rust-version`. As a result, building with an older toolchain fails
+deep inside the build with confusing edition-2024 / let-chains
+errors instead of a clear up-front diagnostic.
+
+Setting `rust-version = "1.88"` in `[workspace.package]` propagates
+to every member crate via the standard `[package].rust-version`
+inheritance, so `cargo build` on Rust < 1.88 will fail fast with:
+
+    error: package 'dino' requires rustc 1.88 or newer
+    note: you are using 1.87.0 (etc.)
+
+No code change; build metadata only.
+---
+ Cargo.toml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index c40fed1..af222de 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -5,6 +5,7 @@ members = ["crates/*"]
+ [workspace.package]
+ version = "0.1.6"
+ edition = "2024"
++rust-version = "1.88"
+ license = "MIT"
+ 
+ [workspace.dependencies]
+-- 
+2.47.3
+

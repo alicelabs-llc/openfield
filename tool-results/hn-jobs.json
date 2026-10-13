@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://news.ycombinator.com/item?id=49922569",
+    "name": "Ask HN: Who is hiring? (October 2026) - Hacker News",
+    "snippet": "We're particularly interested in true full-stack engineers, with strong React / Typescript / CSS skills to complement comfort in a Python / ...",
+    "host_name": "news.ycombinator.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://news.ycombinator.com/item?id=49922568",
+    "name": "Ask HN: Who wants to be hired? (October 2026) - Hacker News",
+    "snippet": "I'm looking for an engineering role where working with customers is a regular part of the job. I'd like to understand their problems, help shape ...",
+    "host_name": "news.ycombinator.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://hnhiring.com/locations/remote",
+    "name": "Remote Jobs - October 2026 - HNHIRING",
+    "snippet": "CONTACT: careers@onechronos.com -- please send your resume and include the role name and “HackerNews” in the subject line (e.g. “Engineering Manager, ...",
+    "host_name": "hnhiring.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://hn-client.demo-by-discourse.com/t/ask-hn-who-is-hiring-october-2026/12717",
+    "name": "Ask HN: Who is hiring? (October 2026) - Hacker News",
+    "snippet": "We're hiring across compute, security, platform engineering, network and edge protocols, release engineering, network architecture, client ...",
+    "host_name": "hn-client.demo-by-discourse.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://hn.algolia.com/?dateRange=pastMonth&page=0&prefix=true&query=Who%27s%20hiring&sort=byPopularity&type=story",
+    "name": "Who's Hiring - All | Search powered by Algolia",
+    "snippet": "Browsing through the Ask Hn: Who Wants to be Hired and Who's Hiring, Ask HN: Who is hiring? (October 2026) Vast majority reference the hacker news post.",
+    "host_name": "hn.algolia.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

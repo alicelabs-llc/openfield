@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "github-automation": {
+      "version": "1.0.0",
+      "installedAt": 1791561722395,
+      "ownerHandle": "cloudcompile"
+    },
+    "bug-bounty": {
+      "version": "1.0.3",
+      "installedAt": 1791561747648,
+      "ownerHandle": "yang1002378395-cmyk"
+    },
+    "bounty-hunter-pro": {
+      "version": "1.0.0",
+      "installedAt": 1791561753744,
+      "ownerHandle": "lugave11"
+    },
+    "@scavio-ai/github-api": {
+      "version": "1.0.3",
+      "installedAt": 1791561781118,
+      "ownerHandle": "scavio-ai"
+    },
+    "github-pr-automation": {
+      "version": "1.0.0",
+      "installedAt": 1791561789299,
+      "ownerHandle": "thatgfsj"
+    },
+    "codeql-local-triage": {
+      "version": "1.0.7",
+      "installedAt": 1791561798233,
+      "ownerHandle": "elisabeth15501"
+    }
+  }
+}

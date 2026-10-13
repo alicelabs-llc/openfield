@@ -1,0 +1,61 @@
+{
+  "name": "VRFKYC",
+  "description": "Global AML, sanctions, PEP and adverse media screening API. Screen any person or company against 490+ datasets in seconds. Risk scoring, PDF reports, entity enrichment. By AliceLabs LLC.",
+  "url": "https://vrfkyc.com",
+  "contact": {
+    "email": "eddyflores100@gmail.com",
+    "company": "AliceLabs LLC",
+    "country": "US"
+  },
+  "api": {
+    "base_url": "https://vrfkyc.com/api",
+    "endpoints": {
+      "screen": {
+        "method": "POST",
+        "path": "/api/screen",
+        "description": "Screen a person or company against 490+ sanctions lists",
+        "request": {
+          "name": "string (required)",
+          "type": "Person | Company"
+        }
+      },
+      "report": {
+        "method": "POST",
+        "path": "/api/report",
+        "description": "Generate a PDF screening report"
+      },
+      "manifest": {
+        "method": "GET",
+        "path": "/api/manifest",
+        "description": "Get service manifest for AI agent discovery"
+      },
+      "mcp": {
+        "method": "POST",
+        "path": "/api/mcp",
+        "description": "MCP (Model Context Protocol) endpoint for AI agent integration",
+        "protocol": "JSON-RPC 2.0",
+        "tools": ["screen_person", "screen_company", "get_risk_score"]
+      }
+    }
+  },
+  "capabilities": [
+    "sanctions-screening",
+    "pep-check",
+    "adverse-media-screening",
+    "risk-scoring",
+    "entity-enrichment",
+    "pdf-report-generation",
+    "mcp-integration",
+    "agent-discovery"
+  ],
+  "data_sources": [
+    "OpenSanctions (490 datasets, 16M+ entities)",
+    "Wikidata (entity enrichment, bio, photos)",
+    "GDELT (235K+ news sources for adverse media)"
+  ],
+  "pricing": {
+    "free": "5 screenings/month",
+    "pro": "$99/month (100 screenings + PDF + API)",
+    "business": "$299/month (500 screenings + batch + multi-user)"
+  }
+}

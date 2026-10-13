@@ -1,0 +1,94 @@
+# VRFKYC — MCP Integration
+
+> Global AML, sanctions, PEP and adverse media screening via Model Context Protocol
+
+## MCP Endpoint
+
+```
+POST https://vrfkyc.com/api/mcp
+Content-Type: application/json
+```
+
+### Available Tools
+
+#### 1. `screen_person`
+Screen a person against 490+ global sanctions, PEP, and criminal lists.
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": {
+    "name": "screen_person",
+    "arguments": {
+      "name": "Vladimir Putin"
+    }
+  },
+  "id": 1
+}
+```
+
+Returns: risk_score (0-100), risk_level, risk_factors, sanctions_matches, datasets_checked, report_id
+
+#### 2. `screen_company`
+Screen a company against global sanctions and watchlists.
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": {
+    "name": "screen_company",
+    "arguments": {
+      "name": "Petroleos de Venezuela"
+    }
+  },
+  "id": 2
+}
+```
+
+#### 3. `get_risk_score`
+Get a 0-100 risk score for a person or company.
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": {
+    "name": "get_risk_score",
+    "arguments": {
+      "name": "John Smith",
+      "type": "Person"
+    }
+  },
+  "id": 3
+}
+```
+
+## Agent Discovery
+
+VRFKYC is discoverable by AI agents via:
+
+1. **`/api/manifest`** — JSON-LD + OpenAPI spec + MCP manifest
+2. **`/api/mcp`** — MCP JSON-RPC 2.0 endpoint
+3. **`/robots.txt`** — Allows GPTBot, Claude-Web, Google-Extended, PerplexityBot
+4. **`/ai-plugin.json`** — AI plugin manifest
+5. **`/llms.txt`** — LLM-readable documentation
+
+## Data Sources
+
+- OpenSanctions (490 datasets, 16M+ entities)
+- Wikidata (entity enrichment, bio, photos)
+- GDELT (235K+ news sources for adverse media)
+
+## Pricing
+
+- Free: 5 screenings/month
+- Pro: $99/month (100 screenings + PDF + API)
+- Business: $299/month (500 + batch + multi-user)
+
+## Contact
+
+- Email: eddyflores100@gmail.com
+- Company: AliceLabs LLC (US registered)
+- GitHub: https://github.com/eddyflores100-lang

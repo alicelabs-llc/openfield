@@ -1,0 +1,438 @@
+﻿2026-09-29T06:24:04.7425243Z Current runner version: '2.337.0'
+2026-09-29T06:24:04.7450882Z ##[group]Runner Image Provisioner
+2026-09-29T06:24:04.7451714Z Hosted Compute Agent
+2026-09-29T06:24:04.7452273Z Version: 20260828.587
+2026-09-29T06:24:04.7453074Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-29T06:24:04.7453805Z Build Date: 2026-08-28T16:44:25Z
+2026-09-29T06:24:04.7454958Z Worker ID: {4dd77301-871c-49f1-8cb6-39da3cec0da2}
+2026-09-29T06:24:04.7455688Z Azure Region: eastus2
+2026-09-29T06:24:04.7456238Z ##[endgroup]
+2026-09-29T06:24:04.7458140Z ##[group]Operating System
+2026-09-29T06:24:04.7458774Z Ubuntu
+2026-09-29T06:24:04.7459349Z 24.04.5
+2026-09-29T06:24:04.7459869Z LTS
+2026-09-29T06:24:04.7460376Z ##[endgroup]
+2026-09-29T06:24:04.7460966Z ##[group]Runner Image
+2026-09-29T06:24:04.7461639Z Image: ubuntu-24.04
+2026-09-29T06:24:04.7462247Z Version: 20260920.314.1
+2026-09-29T06:24:04.7463519Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-29T06:24:04.7465383Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-29T06:24:04.7466358Z ##[endgroup]
+2026-09-29T06:24:04.7467590Z ##[group]GITHUB_TOKEN Permissions
+2026-09-29T06:24:04.7469806Z Contents: read
+2026-09-29T06:24:04.7470510Z Metadata: read
+2026-09-29T06:24:04.7471164Z PullRequests: write
+2026-09-29T06:24:04.7471754Z ##[endgroup]
+2026-09-29T06:24:04.7474313Z Secret source: Actions
+2026-09-29T06:24:04.7475286Z Cache mode: write
+2026-09-29T06:24:04.7476331Z Prepare workflow directory
+2026-09-29T06:24:04.7811370Z Prepare all required actions
+2026-09-29T06:24:04.7860238Z Getting action download info
+2026-09-29T06:24:05.0346716Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-29T06:24:05.1322628Z Download action repository 'astral-sh/setup-uv@v3' (SHA:caf0cab7a618c569241d31dcd442f54681755d39)
+2026-09-29T06:24:05.3490161Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-09-29T06:24:05.4242051Z Download action repository 'actions/github-script@v7' (SHA:f28e40c7f34bde8b3046d885e986cb6290c5673b)
+2026-09-29T06:24:05.6949603Z Complete job name: test (3.11)
+2026-09-29T06:24:05.7731527Z ##[group]Run actions/checkout@v4
+2026-09-29T06:24:05.7732497Z with:
+2026-09-29T06:24:05.7733008Z   repository: cognicore-dev/cognicore-env
+2026-09-29T06:24:05.7737635Z   token: ***
+2026-09-29T06:24:05.7738144Z   ssh-strict: true
+2026-09-29T06:24:05.7738608Z   ssh-user: git
+2026-09-29T06:24:05.7739077Z   persist-credentials: true
+2026-09-29T06:24:05.7739592Z   clean: true
+2026-09-29T06:24:05.7740062Z   sparse-checkout-cone-mode: true
+2026-09-29T06:24:05.7740616Z   fetch-depth: 1
+2026-09-29T06:24:05.7741088Z   fetch-tags: false
+2026-09-29T06:24:05.7741565Z   show-progress: true
+2026-09-29T06:24:05.7742063Z   lfs: false
+2026-09-29T06:24:05.7742520Z   submodules: false
+2026-09-29T06:24:05.7743029Z   set-safe-directory: true
+2026-09-29T06:24:05.7743584Z   allow-unsafe-pr-checkout: false
+2026-09-29T06:24:05.7744717Z ##[endgroup]
+2026-09-29T06:24:05.8799152Z Syncing repository: cognicore-dev/cognicore-env
+2026-09-29T06:24:05.8802162Z ##[group]Getting Git version info
+2026-09-29T06:24:05.8803332Z Working directory is '/home/runner/work/cognicore-env/cognicore-env'
+2026-09-29T06:24:05.8805443Z [command]/usr/bin/git version
+2026-09-29T06:24:05.8903649Z git version 2.55.0
+2026-09-29T06:24:05.8935713Z ##[endgroup]
+2026-09-29T06:24:05.8949489Z Temporarily overriding HOME='/home/runner/work/_temp/641f6755-b2b9-41ea-acb8-b0b8932eb6c5' before making global git config changes
+2026-09-29T06:24:05.8952222Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-29T06:24:05.8954751Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cognicore-env/cognicore-env
+2026-09-29T06:24:05.9020734Z Deleting the contents of '/home/runner/work/cognicore-env/cognicore-env'
+2026-09-29T06:24:05.9025399Z ##[group]Initializing the repository
+2026-09-29T06:24:05.9031365Z [command]/usr/bin/git init /home/runner/work/cognicore-env/cognicore-env
+2026-09-29T06:24:05.9165062Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-29T06:24:05.9167011Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-29T06:24:05.9168791Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-29T06:24:05.9170275Z hint: call:
+2026-09-29T06:24:05.9171375Z hint:
+2026-09-29T06:24:05.9172315Z hint: 	git config --global init.defaultBranch <name>
+2026-09-29T06:24:05.9173460Z hint:
+2026-09-29T06:24:05.9175024Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-29T06:24:05.9176780Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-29T06:24:05.9178156Z hint:
+2026-09-29T06:24:05.9179035Z hint: 	git branch -m <name>
+2026-09-29T06:24:05.9180022Z hint:
+2026-09-29T06:24:05.9181199Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-29T06:24:05.9188474Z Initialized empty Git repository in /home/runner/work/cognicore-env/cognicore-env/.git/
+2026-09-29T06:24:05.9201147Z [command]/usr/bin/git remote add origin https://github.com/cognicore-dev/cognicore-env
+2026-09-29T06:24:05.9260639Z ##[endgroup]
+2026-09-29T06:24:05.9262211Z ##[group]Disabling automatic garbage collection
+2026-09-29T06:24:05.9264544Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-29T06:24:05.9302051Z ##[endgroup]
+2026-09-29T06:24:05.9303419Z ##[group]Setting up auth
+2026-09-29T06:24:05.9310480Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-29T06:24:05.9348520Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-29T06:24:05.9784636Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-29T06:24:05.9822696Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-29T06:24:06.0053701Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-29T06:24:06.0093787Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-29T06:24:06.0327659Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-29T06:24:06.0370754Z ##[endgroup]
+2026-09-29T06:24:06.0371730Z ##[group]Fetching the repository
+2026-09-29T06:24:06.0381027Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +eeb3e137fb08fadc6300886fb92688c1316c8554:refs/remotes/origin/main
+2026-09-29T06:24:08.0336368Z From https://github.com/cognicore-dev/cognicore-env
+2026-09-29T06:24:08.0337738Z  * [new ref]         eeb3e137fb08fadc6300886fb92688c1316c8554 -> origin/main
+2026-09-29T06:24:08.0340940Z ##[endgroup]
+2026-09-29T06:24:08.0341636Z ##[group]Determining the checkout info
+2026-09-29T06:24:08.0342680Z ##[endgroup]
+2026-09-29T06:24:08.0349232Z [command]/usr/bin/git sparse-checkout disable
+2026-09-29T06:24:08.0405957Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-29T06:24:08.0440610Z ##[group]Checking out the ref
+2026-09-29T06:24:08.0444375Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-09-29T06:24:09.1366002Z Updating files:  77% (550/710)
+2026-09-29T06:24:09.2142023Z Updating files:  78% (554/710)
+2026-09-29T06:24:09.2270319Z Updating files:  79% (561/710)
+2026-09-29T06:24:09.2810745Z Updating files:  80% (568/710)
+2026-09-29T06:24:09.3045141Z Updating files:  81% (576/710)
+2026-09-29T06:24:09.3860266Z Updating files:  82% (583/710)
+2026-09-29T06:24:09.5504589Z Updating files:  83% (590/710)
+2026-09-29T06:24:09.5524692Z Updating files:  84% (597/710)
+2026-09-29T06:24:09.5606403Z Updating files:  85% (604/710)
+2026-09-29T06:24:09.5607221Z Updating files:  86% (611/710)
+2026-09-29T06:24:09.5608169Z Updating files:  87% (618/710)
+2026-09-29T06:24:09.5608630Z Updating files:  88% (625/710)
+2026-09-29T06:24:09.5609062Z Updating files:  89% (632/710)
+2026-09-29T06:24:09.5609477Z Updating files:  90% (639/710)
+2026-09-29T06:24:09.5609964Z Updating files:  91% (647/710)
+2026-09-29T06:24:09.5610477Z Updating files:  92% (654/710)
+2026-09-29T06:24:09.5610915Z Updating files:  93% (661/710)
+2026-09-29T06:24:09.5611355Z Updating files:  94% (668/710)
+2026-09-29T06:24:09.5611825Z Updating files:  95% (675/710)
+2026-09-29T06:24:09.5612288Z Updating files:  96% (682/710)
+2026-09-29T06:24:09.5612800Z Updating files:  97% (689/710)
+2026-09-29T06:24:09.5613364Z Updating files:  98% (696/710)
+2026-09-29T06:24:09.5650327Z Updating files:  99% (703/710)
+2026-09-29T06:24:09.5651101Z Updating files: 100% (710/710)
+2026-09-29T06:24:09.5651951Z Updating files: 100% (710/710), done.
+2026-09-29T06:24:09.5685284Z Switched to a new branch 'main'
+2026-09-29T06:24:09.5692668Z branch 'main' set up to track 'origin/main'.
+2026-09-29T06:24:09.5731236Z ##[endgroup]
+2026-09-29T06:24:09.5783725Z [command]/usr/bin/git log -1 --format=%H
+2026-09-29T06:24:09.5813217Z eeb3e137fb08fadc6300886fb92688c1316c8554
+2026-09-29T06:24:09.6084814Z ##[group]Run astral-sh/setup-uv@v3
+2026-09-29T06:24:09.6085167Z with:
+2026-09-29T06:24:09.6085377Z   enable-cache: true
+2026-09-29T06:24:09.6085650Z   cache-dependency-glob: pyproject.toml
+2026-09-29T06:24:09.6085938Z   version: latest
+2026-09-29T06:24:09.6088645Z   github-token: ***
+2026-09-29T06:24:09.6088880Z   prune-cache: true
+2026-09-29T06:24:09.6089097Z ##[endgroup]
+2026-09-29T06:24:09.7508653Z Downloading uv from "https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-09-29T06:24:09.7523103Z (node:2268) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-29T06:24:09.7524794Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-29T06:24:10.1019877Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/36ce4aa4-85f1-4186-adba-384e5ea774e1 -f /home/runner/work/_temp/a0179faf-dc3c-45f8-b7b1-708657a8f7f5
+2026-09-29T06:24:10.5164891Z Added /opt/hostedtoolcache/uv/0.12.20/x86_64 to the path
+2026-09-29T06:24:10.5165564Z Added /home/runner/.local/bin to the path
+2026-09-29T06:24:10.5170399Z Successfully installed uv version 0.12.20
+2026-09-29T06:24:10.5191734Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-09-29T06:24:10.5192217Z Searching files using cache dependency glob: pyproject.toml
+2026-09-29T06:24:10.5218976Z /home/runner/work/cognicore-env/cognicore-env/pyproject.toml
+2026-09-29T06:24:10.5237091Z Found 1 files to hash.
+2026-09-29T06:24:10.5238489Z Trying to restore uv cache from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-0.12.20-1dd66d77a084974e7c92490a213b3f4aec388c4dafc27b770052e4662e8be2e9
+2026-09-29T06:24:10.6281449Z ##[warning]Failed to restore: Cache service responded with 400
+2026-09-29T06:24:10.6293423Z No GitHub Actions cache found for key: setup-uv-1-x86_64-unknown-linux-gnu-0.12.20-1dd66d77a084974e7c92490a213b3f4aec388c4dafc27b770052e4662e8be2e9
+2026-09-29T06:24:10.6464234Z ##[group]Run actions/setup-python@v5
+2026-09-29T06:24:10.6464562Z with:
+2026-09-29T06:24:10.6464777Z   python-version: 3.11
+2026-09-29T06:24:10.6465014Z   check-latest: false
+2026-09-29T06:24:10.6467675Z   token: ***
+2026-09-29T06:24:10.6467898Z   update-environment: true
+2026-09-29T06:24:10.6468149Z   allow-prereleases: false
+2026-09-29T06:24:10.6468386Z   freethreaded: false
+2026-09-29T06:24:10.6468593Z env:
+2026-09-29T06:24:10.6468828Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-09-29T06:24:10.6469144Z ##[endgroup]
+2026-09-29T06:24:10.7821673Z ##[group]Installed versions
+2026-09-29T06:24:10.7924439Z (node:2287) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-29T06:24:10.7925515Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-29T06:24:10.7926499Z Successfully set up CPython (3.11.16)
+2026-09-29T06:24:10.7927302Z ##[endgroup]
+2026-09-29T06:24:10.8124579Z ##[group]Run uv pip install --system ".[dev]"
+2026-09-29T06:24:10.8125242Z [36;1muv pip install --system ".[dev]"[0m
+2026-09-29T06:24:10.8126094Z [36;1muv pip install --system gymnasium stable-baselines3 torch numpy pytest-cov pytest-xdist[0m
+2026-09-29T06:24:10.8467197Z shell: /usr/bin/bash -e {0}
+2026-09-29T06:24:10.8467522Z env:
+2026-09-29T06:24:10.8467799Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-09-29T06:24:10.8468224Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:10.8468707Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+2026-09-29T06:24:10.8469170Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:10.8469597Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:10.8470007Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:10.8470415Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+2026-09-29T06:24:10.8470814Z ##[endgroup]
+2026-09-29T06:24:10.9552238Z Using Python 3.11.16 environment at: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:11.3202996Z Resolved 47 packages in 363ms
+2026-09-29T06:24:11.3251474Z    Building cognicore-env @ file:///home/runner/work/cognicore-env/cognicore-env
+2026-09-29T06:24:11.3625891Z Downloading pydantic-core (2.0MiB)
+2026-09-29T06:24:11.3635186Z Downloading numpy (16.1MiB)
+2026-09-29T06:24:11.3636123Z Downloading cryptography (4.5MiB)
+2026-09-29T06:24:11.3640823Z Downloading pygments (1.2MiB)
+2026-09-29T06:24:11.4794916Z  Downloaded pygments
+2026-09-29T06:24:11.4825029Z  Downloaded pydantic-core
+2026-09-29T06:24:11.5150045Z  Downloaded cryptography
+2026-09-29T06:24:11.6801997Z  Downloaded numpy
+2026-09-29T06:24:11.9691656Z       Built cognicore-env @ file:///home/runner/work/cognicore-env/cognicore-env
+2026-09-29T06:24:11.9816070Z Prepared 47 packages in 660ms
+2026-09-29T06:24:12.0177872Z Installed 47 packages in 35ms
+2026-09-29T06:24:12.0178455Z  + annotated-doc==0.0.5
+2026-09-29T06:24:12.0178946Z  + annotated-types==0.8.0
+2026-09-29T06:24:12.0179402Z  + anyio==4.15.1
+2026-09-29T06:24:12.0179765Z  + attrs==26.1.0
+2026-09-29T06:24:12.0180142Z  + certifi==2026.7.22
+2026-09-29T06:24:12.0180547Z  + cffi==2.1.1
+2026-09-29T06:24:12.0180953Z  + click==8.5.0
+2026-09-29T06:24:12.0181593Z  + cognicore-env==0.10.4 (from file:///home/runner/work/cognicore-env/cognicore-env)
+2026-09-29T06:24:12.0182355Z  + coverage==7.16.2
+2026-09-29T06:24:12.0182739Z  + cryptography==50.0.1
+2026-09-29T06:24:12.0183126Z  + execnet==2.1.2
+2026-09-29T06:24:12.0183479Z  + fastapi==0.141.1
+2026-09-29T06:24:12.0184019Z  + h11==0.16.0
+2026-09-29T06:24:12.0184375Z  + httpcore==1.0.9
+2026-09-29T06:24:12.0184766Z  + httpx==0.28.1
+2026-09-29T06:24:12.0185124Z  + httpx-sse==0.4.3
+2026-09-29T06:24:12.0185475Z  + idna==3.20
+2026-09-29T06:24:12.0185821Z  + iniconfig==2.3.0
+2026-09-29T06:24:12.0186220Z  + jsonschema==4.26.0
+2026-09-29T06:24:12.0186678Z  + jsonschema-specifications==2025.9.1
+2026-09-29T06:24:12.0187236Z  + markdown-it-py==4.2.0
+2026-09-29T06:24:12.0187677Z  + mcp==1.30.0
+2026-09-29T06:24:12.0188045Z  + mdurl==0.1.2
+2026-09-29T06:24:12.0188428Z  + numpy==2.4.6
+2026-09-29T06:24:12.0188810Z  + packaging==26.3
+2026-09-29T06:24:12.0189210Z  + pluggy==1.6.0
+2026-09-29T06:24:12.0189594Z  + pycparser==3.0
+2026-09-29T06:24:12.0189997Z  + pydantic==2.13.5
+2026-09-29T06:24:12.0190437Z  + pydantic-core==2.46.5
+2026-09-29T06:24:12.0190903Z  + pydantic-settings==2.15.0
+2026-09-29T06:24:12.0191357Z  + pygments==2.21.0
+2026-09-29T06:24:12.0191745Z  + pyjwt==2.15.1
+2026-09-29T06:24:12.0192103Z  + pytest==9.1.1
+2026-09-29T06:24:12.0192475Z  + pytest-cov==7.1.0
+2026-09-29T06:24:12.0193183Z  + pytest-xdist==3.8.0
+2026-09-29T06:24:12.0193607Z  + python-dotenv==1.2.3
+2026-09-29T06:24:12.0194217Z  + python-multipart==0.0.32
+2026-09-29T06:24:12.0194677Z  + referencing==0.37.0
+2026-09-29T06:24:12.0195092Z  + rich==15.0.0
+2026-09-29T06:24:12.0195431Z  + rpds-py==2026.6.3
+2026-09-29T06:24:12.0195656Z  + shellingham==1.5.4
+2026-09-29T06:24:12.0196084Z  + sse-starlette==3.5.0
+2026-09-29T06:24:12.0196320Z  + starlette==1.7.0
+2026-09-29T06:24:12.0196524Z  + typer==0.27.2
+2026-09-29T06:24:12.0196746Z  + typing-extensions==4.16.0
+2026-09-29T06:24:12.0197006Z  + typing-inspection==0.4.4
+2026-09-29T06:24:12.0197241Z  + uvicorn==0.54.0
+2026-09-29T06:24:12.0376175Z Using Python 3.11.16 environment at: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:12.1984898Z Resolved 43 packages in 159ms
+2026-09-29T06:24:12.2165415Z Downloading nvidia-cuda-cupti (10.2MiB)
+2026-09-29T06:24:12.2228880Z Downloading nvidia-cuda-runtime (2.1MiB)
+2026-09-29T06:24:12.2229942Z Downloading nvidia-cusparse (139.2MiB)
+2026-09-29T06:24:12.2234879Z Downloading torch (528.9MiB)
+2026-09-29T06:24:12.2235924Z Downloading networkx (2.0MiB)
+2026-09-29T06:24:12.2236676Z Downloading sympy (6.0MiB)
+2026-09-29T06:24:12.2237526Z Downloading nvidia-nvjitlink (40.5MiB)
+2026-09-29T06:24:12.2241914Z Downloading nvidia-nvshmem-cu13 (57.6MiB)
+2026-09-29T06:24:12.2245024Z Downloading nvidia-cudnn-cu13 (527.5MiB)
+2026-09-29T06:24:12.2248260Z Downloading nvidia-cuda-nvrtc (86.0MiB)
+2026-09-29T06:24:12.2252438Z Downloading nvidia-cublas (403.5MiB)
+2026-09-29T06:24:12.2275039Z Downloading nvidia-curand (56.8MiB)
+2026-09-29T06:24:12.2275540Z Downloading nvidia-nccl-cu13 (206.0MiB)
+2026-09-29T06:24:12.2280376Z Downloading nvidia-cusparselt-cu13 (162.3MiB)
+2026-09-29T06:24:12.2336523Z Downloading nvidia-cusolver (191.6MiB)
+2026-09-29T06:24:12.2338363Z Downloading triton (236.5MiB)
+2026-09-29T06:24:12.2340579Z Downloading nvidia-cufft (204.2MiB)
+2026-09-29T06:24:12.2342404Z Downloading nvidia-cufile (1.2MiB)
+2026-09-29T06:24:12.2455115Z Downloading cuda-bindings (6.8MiB)
+2026-09-29T06:24:12.3630695Z  Downloaded nvidia-cufile
+2026-09-29T06:24:12.4119702Z  Downloaded networkx
+2026-09-29T06:24:12.4309533Z  Downloaded nvidia-cuda-runtime
+2026-09-29T06:24:12.6373272Z  Downloaded sympy
+2026-09-29T06:24:12.6905363Z  Downloaded cuda-bindings
+2026-09-29T06:24:12.8272513Z  Downloaded nvidia-cuda-cupti
+2026-09-29T06:24:14.2235280Z  Downloaded nvidia-nvjitlink
+2026-09-29T06:24:14.7526929Z  Downloaded nvidia-nvshmem-cu13
+2026-09-29T06:24:14.7738361Z  Downloaded nvidia-curand
+2026-09-29T06:24:15.5434728Z  Downloaded nvidia-cuda-nvrtc
+2026-09-29T06:24:16.9390543Z  Downloaded nvidia-cusparse
+2026-09-29T06:24:17.4003557Z  Downloaded nvidia-cusparselt-cu13
+2026-09-29T06:24:17.9422350Z  Downloaded nvidia-cusolver
+2026-09-29T06:24:18.1332653Z  Downloaded nvidia-cufft
+2026-09-29T06:24:18.6226882Z  Downloaded nvidia-nccl-cu13
+2026-09-29T06:24:21.2675997Z  Downloaded triton
+2026-09-29T06:24:21.3787815Z  Downloaded nvidia-cublas
+2026-09-29T06:24:22.6460878Z  Downloaded torch
+2026-09-29T06:24:23.4356343Z  Downloaded nvidia-cudnn-cu13
+2026-09-29T06:24:23.7584166Z Prepared 31 packages in 11.55s
+2026-09-29T06:24:25.2117398Z Installed 31 packages in 1.45s
+2026-09-29T06:24:25.2117937Z  + cloudpickle==3.1.2
+2026-09-29T06:24:25.2118279Z  + cuda-bindings==13.4.3
+2026-09-29T06:24:25.2118528Z  + cuda-pathfinder==1.8.2
+2026-09-29T06:24:25.2118799Z  + cuda-toolkit==13.0.3.0
+2026-09-29T06:24:25.2119045Z  + farama-notifications==0.0.6
+2026-09-29T06:24:25.2119290Z  + filelock==4.0.6
+2026-09-29T06:24:25.2119576Z  + fsspec==2026.9.0
+2026-09-29T06:24:25.2119791Z  + gymnasium==1.3.0
+2026-09-29T06:24:25.2120003Z  + jinja2==3.1.6
+2026-09-29T06:24:25.2120210Z  + markupsafe==3.0.3
+2026-09-29T06:24:25.2120422Z  + mpmath==1.3.0
+2026-09-29T06:24:25.2120621Z  + networkx==3.6.1
+2026-09-29T06:24:25.2120836Z  + nvidia-cublas==13.1.1.3
+2026-09-29T06:24:25.2121078Z  + nvidia-cuda-cupti==13.0.85
+2026-09-29T06:24:25.2121326Z  + nvidia-cuda-nvrtc==13.0.88
+2026-09-29T06:24:25.2121574Z  + nvidia-cuda-runtime==13.0.96
+2026-09-29T06:24:25.2122154Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-09-29T06:24:25.2122398Z  + nvidia-cufft==12.0.0.61
+2026-09-29T06:24:25.2122629Z  + nvidia-cufile==1.15.1.6
+2026-09-29T06:24:25.2122859Z  + nvidia-curand==10.4.0.35
+2026-09-29T06:24:25.2123171Z  + nvidia-cusolver==12.0.4.66
+2026-09-29T06:24:25.2123414Z  + nvidia-cusparse==12.6.3.3
+2026-09-29T06:24:25.2124219Z  + nvidia-cusparselt-cu13==0.8.1
+2026-09-29T06:24:25.2124556Z  + nvidia-nccl-cu13==2.30.7
+2026-09-29T06:24:25.2124808Z  + nvidia-nvjitlink==13.4.92
+2026-09-29T06:24:25.2125052Z  + nvidia-nvshmem-cu13==3.4.5
+2026-09-29T06:24:25.2125292Z  + nvidia-nvtx==13.0.85
+2026-09-29T06:24:25.2125516Z  + stable-baselines3==2.9.0
+2026-09-29T06:24:25.2125742Z  + sympy==1.14.0
+2026-09-29T06:24:25.2125937Z  + torch==2.14.0
+2026-09-29T06:24:25.2126130Z  + triton==3.8.0
+2026-09-29T06:24:25.2206870Z ##[group]Run pytest tests/ -n auto -q --tb=short
+2026-09-29T06:24:25.2207276Z [36;1mpytest tests/ -n auto -q --tb=short[0m
+2026-09-29T06:24:25.2270900Z shell: /usr/bin/bash -e {0}
+2026-09-29T06:24:25.2271176Z env:
+2026-09-29T06:24:25.2271426Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-09-29T06:24:25.2271811Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:25.2272242Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+2026-09-29T06:24:25.2272672Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:25.2273068Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:25.2273459Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+2026-09-29T06:24:25.2274127Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+2026-09-29T06:24:25.2274498Z ##[endgroup]
+2026-09-29T06:24:38.5215055Z bringing up nodes...
+2026-09-29T06:24:38.5234615Z bringing up nodes...
+2026-09-29T06:24:38.5235005Z 
+2026-09-29T06:24:38.6015224Z ........................................................................ [  9%]
+2026-09-29T06:24:38.7688484Z ........................................................................ [ 18%]
+2026-09-29T06:24:38.8592965Z ........................................................................ [ 27%]
+2026-09-29T06:24:39.1061971Z ........................................................................ [ 36%]
+2026-09-29T06:24:39.4442939Z ........................................................................ [ 45%]
+2026-09-29T06:24:39.7564990Z ........................................................................ [ 55%]
+2026-09-29T06:24:39.9795062Z ........................................................................ [ 64%]
+2026-09-29T06:24:40.1225103Z ........................................................................ [ 73%]
+2026-09-29T06:24:41.4717866Z ...........................s............................................ [ 82%]
+2026-09-29T06:24:42.6895328Z ........................................................................ [ 91%]
+2026-09-29T06:24:48.9010579Z ................................................................         [100%]
+2026-09-29T06:24:48.9011340Z ==================================== ERRORS ====================================
+2026-09-29T06:24:48.9011890Z _________________ ERROR collecting tests/test_chatgpt_auth.py __________________
+2026-09-29T06:24:48.9013140Z ImportError while importing test module '/home/runner/work/cognicore-env/cognicore-env/tests/test_chatgpt_auth.py'.
+2026-09-29T06:24:48.9014339Z Hint: make sure your test modules/packages have valid Python names.
+2026-09-29T06:24:48.9014770Z Traceback:
+2026-09-29T06:24:48.9015249Z /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+2026-09-29T06:24:48.9015921Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-09-29T06:24:48.9016394Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-29T06:24:48.9016787Z tests/test_chatgpt_auth.py:14: in <module>
+2026-09-29T06:24:48.9017501Z     from cognicore.integrations.chatgpt import get_backend_for_user, cognicore_recall_experience, cognicore_record_experience
+2026-09-29T06:24:48.9018588Z cognicore/integrations/chatgpt.py:18: in <module>
+2026-09-29T06:24:48.9018985Z     from cognicore.experience import (
+2026-09-29T06:24:48.9019597Z E   ImportError: cannot import name 'ExperienceManager' from 'cognicore.experience' (unknown location)
+2026-09-29T06:24:48.9020354Z ______________ ERROR collecting tests/test_chatgpt_integration.py ______________
+2026-09-29T06:24:48.9021204Z ImportError while importing test module '/home/runner/work/cognicore-env/cognicore-env/tests/test_chatgpt_integration.py'.
+2026-09-29T06:24:48.9022007Z Hint: make sure your test modules/packages have valid Python names.
+2026-09-29T06:24:48.9022436Z Traceback:
+2026-09-29T06:24:48.9022909Z /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+2026-09-29T06:24:48.9024058Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-09-29T06:24:48.9024683Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-29T06:24:48.9025255Z tests/test_chatgpt_integration.py:7: in <module>
+2026-09-29T06:24:48.9025671Z     from cognicore.integrations.chatgpt import (
+2026-09-29T06:24:48.9026016Z cognicore/integrations/chatgpt.py:18: in <module>
+2026-09-29T06:24:48.9026336Z     from cognicore.experience import (
+2026-09-29T06:24:48.9026812Z E   ImportError: cannot import name 'ExperienceManager' from 'cognicore.experience' (unknown location)
+2026-09-29T06:24:48.9027419Z _______________ ERROR collecting tests/test_chatgpt_transport.py _______________
+2026-09-29T06:24:48.9028088Z ImportError while importing test module '/home/runner/work/cognicore-env/cognicore-env/tests/test_chatgpt_transport.py'.
+2026-09-29T06:24:48.9028723Z Hint: make sure your test modules/packages have valid Python names.
+2026-09-29T06:24:48.9029067Z Traceback:
+2026-09-29T06:24:48.9029461Z /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+2026-09-29T06:24:48.9029991Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-09-29T06:24:48.9030349Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-29T06:24:48.9030663Z tests/test_chatgpt_transport.py:3: in <module>
+2026-09-29T06:24:48.9031003Z     from cognicore.integrations.chatgpt import app
+2026-09-29T06:24:48.9031346Z cognicore/integrations/chatgpt.py:18: in <module>
+2026-09-29T06:24:48.9031678Z     from cognicore.experience import (
+2026-09-29T06:24:48.9032151Z E   ImportError: cannot import name 'ExperienceManager' from 'cognicore.experience' (unknown location)
+2026-09-29T06:24:48.9032681Z =============================== warnings summary ===============================
+2026-09-29T06:24:48.9033213Z ../../../../../opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/fastapi/testclient.py:1
+2026-09-29T06:24:48.9034037Z ../../../../../opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/fastapi/testclient.py:1
+2026-09-29T06:24:48.9034687Z ../../../../../opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/fastapi/testclient.py:1
+2026-09-29T06:24:48.9035333Z ../../../../../opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/fastapi/testclient.py:1
+2026-09-29T06:24:48.9036370Z   /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-09-29T06:24:48.9037299Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-09-29T06:24:48.9037579Z 
+2026-09-29T06:24:48.9039615Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-09-29T06:24:48.9040384Z =========================== short test summary info ============================
+2026-09-29T06:24:48.9041639Z ERROR tests/test_chatgpt_auth.py - ImportError while importing test module '/home/runner/work/cognicore-env/cognicore-env/tests/test_chatgpt_auth.py'.
+2026-09-29T06:24:48.9042956Z Hint: make sure your test modules/packages have valid Python names.
+2026-09-29T06:24:48.9044260Z Traceback:
+2026-09-29T06:24:48.9044951Z /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+2026-09-29T06:24:48.9045915Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-09-29T06:24:48.9046548Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-29T06:24:48.9047082Z tests/test_chatgpt_auth.py:14: in <module>
+2026-09-29T06:24:48.9048041Z     from cognicore.integrations.chatgpt import get_backend_for_user, cognicore_recall_experience, cognicore_record_experience
+2026-09-29T06:24:48.9048685Z cognicore/integrations/chatgpt.py:18: in <module>
+2026-09-29T06:24:48.9049014Z     from cognicore.experience import (
+2026-09-29T06:24:48.9049705Z E   ImportError: cannot import name 'ExperienceManager' from 'cognicore.experience' (unknown location)
+2026-09-29T06:24:48.9050671Z ERROR tests/test_chatgpt_integration.py - ImportError while importing test module '/home/runner/work/cognicore-env/cognicore-env/tests/test_chatgpt_integration.py'.
+2026-09-29T06:24:48.9051474Z Hint: make sure your test modules/packages have valid Python names.
+2026-09-29T06:24:48.9051820Z Traceback:
+2026-09-29T06:24:48.9052202Z /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+2026-09-29T06:24:48.9052737Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-09-29T06:24:48.9053090Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-29T06:24:48.9053407Z tests/test_chatgpt_integration.py:7: in <module>
+2026-09-29T06:24:48.9054118Z     from cognicore.integrations.chatgpt import (
+2026-09-29T06:24:48.9054601Z cognicore/integrations/chatgpt.py:18: in <module>
+2026-09-29T06:24:48.9054924Z     from cognicore.experience import (
+2026-09-29T06:24:48.9055406Z E   ImportError: cannot import name 'ExperienceManager' from 'cognicore.experience' (unknown location)
+2026-09-29T06:24:48.9056298Z ERROR tests/test_chatgpt_transport.py - ImportError while importing test module '/home/runner/work/cognicore-env/cognicore-env/tests/test_chatgpt_transport.py'.
+2026-09-29T06:24:48.9057067Z Hint: make sure your test modules/packages have valid Python names.
+2026-09-29T06:24:48.9057408Z Traceback:
+2026-09-29T06:24:48.9057791Z /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+2026-09-29T06:24:48.9058310Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-09-29T06:24:48.9058658Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-29T06:24:48.9058969Z tests/test_chatgpt_transport.py:3: in <module>
+2026-09-29T06:24:48.9059303Z     from cognicore.integrations.chatgpt import app
+2026-09-29T06:24:48.9059656Z cognicore/integrations/chatgpt.py:18: in <module>
+2026-09-29T06:24:48.9059980Z     from cognicore.experience import (
+2026-09-29T06:24:48.9060455Z E   ImportError: cannot import name 'ExperienceManager' from 'cognicore.experience' (unknown location)
+2026-09-29T06:24:48.9061668Z 783 passed, 1 skipped, 4 warnings, 3 errors in 21.36s
+2026-09-29T06:24:48.9566261Z ##[error]Process completed with exit code 1.
+2026-09-29T06:24:48.9692967Z Post job cleanup.
+2026-09-29T06:24:49.0574358Z [command]/usr/bin/git version
+2026-09-29T06:24:49.0617584Z git version 2.55.0
+2026-09-29T06:24:49.0658644Z Temporarily overriding HOME='/home/runner/work/_temp/feb3b1f0-2200-4238-ad60-7529f18a0b61' before making global git config changes
+2026-09-29T06:24:49.0660154Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-29T06:24:49.0665386Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cognicore-env/cognicore-env
+2026-09-29T06:24:49.0708994Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-29T06:24:49.0747389Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-29T06:24:49.0999101Z fatal: No url found for submodule path 'scratch_repo' in .gitmodules
+2026-09-29T06:24:49.1032066Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+2026-09-29T06:24:49.1229165Z Cleaning up orphan processes
+2026-09-29T06:24:49.1652819Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, astral-sh/setup-uv@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.ibm.com",
+    "name": "What Is Automation?",
+    "snippet": "Automation is the application of technology, programs, robotics, or processes to achieve outcomes with minimal human input.",
+    "host_name": "www.ibm.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "Automation",
+    "snippet": "Automation describes a wide range of technologies that reduce human intervention in processes, mainly by predetermining decision criteria, ... Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.redhat.com",
+    "name": "Understanding automation",
+    "snippet": "Jul 28, 2026 — Automation is the use of technology to perform tasks with reduced human assistance. Any industry that encounters repetitive tasks can use ... Read more",
+    "host_name": "www.redhat.com",
+    "rank": 2,
+    "date": "Jul 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.automationanywhere.com",
+    "name": "Automation Anywhere: The #1 Provider of Agentic Automation",
+    "snippet": "The industry's most advanced, most deployed agentic process automation system combines the power of AI, Automation , and RPA to deliver secure end-to-end ...",
+    "host_name": "www.automationanywhere.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.isa.org",
+    "name": "What is Automation? - ISA",
+    "snippet": "We define automation as \"the creation and application of technology to monitor and control the production and delivery of products and services .”",
+    "host_name": "www.isa.org",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

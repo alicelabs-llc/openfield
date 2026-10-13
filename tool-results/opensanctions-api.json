@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.opensanctions.org/Documentation",
+    "name": "Getting started with the API",
+    "snippet": "The OpenSanctions API does three things: / match screens people and companies against the database , /search provides full-text search, and /entities returns the ... Read more",
+    "host_name": "www.opensanctions.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.opensanctions.org/docs/api/matching",
+    "name": "The matching API",
+    "snippet": "This guide will show you how to use the / match endpoint to get more precise screening results using query-by-example to do multi-attribute lookups.",
+    "host_name": "www.opensanctions.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.opensanctions.org/docs/api/search",
+    "name": "The search API",
+    "snippet": "We recommend using the / match API function. When using the OpenSanctions API (or yente ), you can call the / search /<dataset> endpoint to conduct searches .",
+    "host_name": "www.opensanctions.org",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.opensanctions.org/api",
+    "name": "Screening API service",
+    "snippet": "The API lets you easily integrate OpenSanctions into your workflow . You can search the database and conduct batch screening to identify people or companies ...",
+    "host_name": "www.opensanctions.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.opensanctions.org/Articles",
+    "name": "Self-hosted and extensible: the OpenSanctions API",
+    "snippet": "Jun 7, 2022 — In this post, we'll explain how you can use our open source components to build a customized sanctions and PEPs matching service. KYC workflow. ...",
+    "host_name": "www.opensanctions.org",
+    "rank": 4,
+    "date": "Jun 7, 2022",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,679 @@
+﻿2026-09-29T23:55:44.4853472Z Current runner version: '2.337.0'
+2026-09-29T23:55:44.4891184Z ##[group]Runner Image Provisioner
+2026-09-29T23:55:44.4892707Z Hosted Compute Agent
+2026-09-29T23:55:44.4893754Z Version: 20260828.587
+2026-09-29T23:55:44.4894907Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-29T23:55:44.4896384Z Build Date: 2026-08-28T16:44:25Z
+2026-09-29T23:55:44.4897649Z Worker ID: {d0bb49ce-4768-48fc-9ac3-4fdf144c3997}
+2026-09-29T23:55:44.4898910Z Azure Region: eastus
+2026-09-29T23:55:44.4900385Z ##[endgroup]
+2026-09-29T23:55:44.4903200Z ##[group]Operating System
+2026-09-29T23:55:44.4904386Z Ubuntu
+2026-09-29T23:55:44.4905430Z 24.04.5
+2026-09-29T23:55:44.4906298Z LTS
+2026-09-29T23:55:44.4907292Z ##[endgroup]
+2026-09-29T23:55:44.4908247Z ##[group]Runner Image
+2026-09-29T23:55:44.4909358Z Image: ubuntu-24.04
+2026-09-29T23:55:44.4910678Z Version: 20260920.314.1
+2026-09-29T23:55:44.4913047Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-29T23:55:44.4916030Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-29T23:55:44.4917888Z ##[endgroup]
+2026-09-29T23:55:44.4920174Z ##[group]GITHUB_TOKEN Permissions
+2026-09-29T23:55:44.4923775Z Contents: write
+2026-09-29T23:55:44.4924937Z Metadata: read
+2026-09-29T23:55:44.4925926Z ##[endgroup]
+2026-09-29T23:55:44.4929058Z Secret source: Actions
+2026-09-29T23:55:44.4930886Z Cache mode: write
+2026-09-29T23:55:44.4932608Z Prepare workflow directory
+2026-09-29T23:55:44.5427158Z Prepare all required actions
+2026-09-29T23:55:44.5501131Z Getting action download info
+2026-09-29T23:55:44.7712795Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-29T23:55:44.9155446Z Download action repository 'actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2026-09-29T23:55:45.1083781Z Download action repository 'pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33' (SHA:dc37677b2e1c63e2034f94d8a5b11f265b73ba33)
+2026-09-29T23:55:45.2246973Z Download action repository 'softprops/action-gh-release@v2' (SHA:3bb12739c298aeb8a4eeaf626c5b8d85266b0e65)
+2026-09-29T23:55:45.4459135Z Getting action download info
+2026-09-29T23:55:45.5252041Z Download action repository 'actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405' (SHA:a309ff8b426b58ec0e2a45f0f869d46889d02405)
+2026-09-29T23:55:45.7210781Z Complete job name: release
+2026-09-29T23:55:45.7976723Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-29T23:55:45.7977786Z with:
+2026-09-29T23:55:45.7978252Z   repository: eddyflores100-lang/alethech
+2026-09-29T23:55:45.7982365Z   token: ***
+2026-09-29T23:55:45.7982806Z   ssh-strict: true
+2026-09-29T23:55:45.7983240Z   ssh-user: git
+2026-09-29T23:55:45.7983749Z   persist-credentials: true
+2026-09-29T23:55:45.7984254Z   clean: true
+2026-09-29T23:55:45.7984694Z   sparse-checkout-cone-mode: true
+2026-09-29T23:55:45.7985230Z   fetch-depth: 1
+2026-09-29T23:55:45.7985657Z   fetch-tags: false
+2026-09-29T23:55:45.7986103Z   show-progress: true
+2026-09-29T23:55:45.7986542Z   lfs: false
+2026-09-29T23:55:45.7986952Z   submodules: false
+2026-09-29T23:55:45.7987393Z   set-safe-directory: true
+2026-09-29T23:55:45.7988130Z ##[endgroup]
+2026-09-29T23:55:45.9027013Z Syncing repository: eddyflores100-lang/alethech
+2026-09-29T23:55:45.9030202Z ##[group]Getting Git version info
+2026-09-29T23:55:45.9031614Z Working directory is '/home/runner/work/alethech/alethech'
+2026-09-29T23:55:45.9033287Z [command]/usr/bin/git version
+2026-09-29T23:55:45.9128733Z git version 2.55.0
+2026-09-29T23:55:45.9155547Z ##[endgroup]
+2026-09-29T23:55:45.9174051Z Temporarily overriding HOME='/home/runner/work/_temp/c40dd952-8706-4f02-a517-38e851b5d945' before making global git config changes
+2026-09-29T23:55:45.9176594Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-29T23:55:45.9180569Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-29T23:55:45.9235150Z Deleting the contents of '/home/runner/work/alethech/alethech'
+2026-09-29T23:55:45.9239705Z ##[group]Initializing the repository
+2026-09-29T23:55:45.9245042Z [command]/usr/bin/git init /home/runner/work/alethech/alethech
+2026-09-29T23:55:45.9383990Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-29T23:55:45.9385619Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-29T23:55:45.9387342Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-29T23:55:45.9388707Z hint: call:
+2026-09-29T23:55:45.9389979Z hint:
+2026-09-29T23:55:45.9390931Z hint: 	git config --global init.defaultBranch <name>
+2026-09-29T23:55:45.9391727Z hint:
+2026-09-29T23:55:45.9392863Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-29T23:55:45.9393992Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-29T23:55:45.9394818Z hint:
+2026-09-29T23:55:45.9395257Z hint: 	git branch -m <name>
+2026-09-29T23:55:45.9395762Z hint:
+2026-09-29T23:55:45.9396425Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-29T23:55:45.9398048Z Initialized empty Git repository in /home/runner/work/alethech/alethech/.git/
+2026-09-29T23:55:45.9401814Z [command]/usr/bin/git remote add origin https://github.com/eddyflores100-lang/alethech
+2026-09-29T23:55:45.9509011Z ##[endgroup]
+2026-09-29T23:55:45.9513124Z ##[group]Disabling automatic garbage collection
+2026-09-29T23:55:45.9514909Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-29T23:55:45.9527707Z ##[endgroup]
+2026-09-29T23:55:45.9529028Z ##[group]Setting up auth
+2026-09-29T23:55:45.9537041Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-29T23:55:45.9573949Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-29T23:55:45.9968606Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-29T23:55:46.0005963Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-29T23:55:46.0236662Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-29T23:55:46.0278724Z ##[endgroup]
+2026-09-29T23:55:46.0280045Z ##[group]Fetching the repository
+2026-09-29T23:55:46.0290463Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +624b675051dcf9957efdf4987f94fed5e3d76040:refs/tags/v0.8.5
+2026-09-29T23:55:46.3823879Z From https://github.com/eddyflores100-lang/alethech
+2026-09-29T23:55:46.3825528Z  * [new ref]         624b675051dcf9957efdf4987f94fed5e3d76040 -> v0.8.5
+2026-09-29T23:55:46.3828727Z ##[endgroup]
+2026-09-29T23:55:46.3830429Z ##[group]Determining the checkout info
+2026-09-29T23:55:46.3831847Z ##[endgroup]
+2026-09-29T23:55:46.3838113Z [command]/usr/bin/git sparse-checkout disable
+2026-09-29T23:55:46.3893687Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-29T23:55:46.3926774Z ##[group]Checking out the ref
+2026-09-29T23:55:46.3931426Z [command]/usr/bin/git checkout --progress --force refs/tags/v0.8.5
+2026-09-29T23:55:46.4139161Z Note: switching to 'refs/tags/v0.8.5'.
+2026-09-29T23:55:46.4140686Z 
+2026-09-29T23:55:46.4141794Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-29T23:55:46.4144618Z changes and commit them, and you can discard any commits you make in this
+2026-09-29T23:55:46.4147245Z state without impacting any branches by switching back to a branch.
+2026-09-29T23:55:46.4148351Z 
+2026-09-29T23:55:46.4149186Z If you want to create a new branch to retain commits you create, you may
+2026-09-29T23:55:46.4151752Z do so (now or later) by using -c with the switch command. Example:
+2026-09-29T23:55:46.4152746Z 
+2026-09-29T23:55:46.4153175Z   git switch -c <new-branch-name>
+2026-09-29T23:55:46.4153866Z 
+2026-09-29T23:55:46.4154458Z Or undo this operation with:
+2026-09-29T23:55:46.4155214Z 
+2026-09-29T23:55:46.4155653Z   git switch -
+2026-09-29T23:55:46.4156229Z 
+2026-09-29T23:55:46.4157744Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-29T23:55:46.4160140Z 
+2026-09-29T23:55:46.4162250Z HEAD is now at 624b675 release: prepare v0.8.5 — first CI-trusted-publish release
+2026-09-29T23:55:46.4166742Z ##[endgroup]
+2026-09-29T23:55:46.4229434Z [command]/usr/bin/git log -1 --format=%H
+2026-09-29T23:55:46.4256954Z 624b675051dcf9957efdf4987f94fed5e3d76040
+2026-09-29T23:55:46.4673735Z ##[group]Run actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+2026-09-29T23:55:46.4675416Z with:
+2026-09-29T23:55:46.4676231Z   python-version: 3.12
+2026-09-29T23:55:46.4677164Z   check-latest: false
+2026-09-29T23:55:46.4687697Z   token: ***
+2026-09-29T23:55:46.4688566Z   update-environment: true
+2026-09-29T23:55:46.4689821Z   allow-prereleases: false
+2026-09-29T23:55:46.4690830Z ##[endgroup]
+2026-09-29T23:55:46.6148092Z ##[group]Installed versions
+2026-09-29T23:55:46.6261075Z (node:2230) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-29T23:55:46.6265559Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-29T23:55:46.6271036Z Successfully set up CPython (3.12.14)
+2026-09-29T23:55:46.6275015Z ##[endgroup]
+2026-09-29T23:55:46.6445686Z ##[group]Run pip install build sigstore
+2026-09-29T23:55:46.6446973Z [36;1mpip install build sigstore[0m
+2026-09-29T23:55:46.6844199Z shell: /usr/bin/bash -e {0}
+2026-09-29T23:55:46.6845235Z env:
+2026-09-29T23:55:46.6846245Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:46.6848022Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:55:46.6850056Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:46.6851627Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:46.6853186Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:46.6854749Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:55:46.6856077Z ##[endgroup]
+2026-09-29T23:55:49.0678245Z Collecting build
+2026-09-29T23:55:49.1184232Z   Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-09-29T23:55:49.1424461Z Collecting sigstore
+2026-09-29T23:55:49.1482541Z   Downloading sigstore-4.5.0-py3-none-any.whl.metadata (17 kB)
+2026-09-29T23:55:49.1665288Z Collecting packaging>=24.0 (from build)
+2026-09-29T23:55:49.1718631Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-09-29T23:55:49.1820961Z Collecting pyproject_hooks (from build)
+2026-09-29T23:55:49.1855185Z   Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-09-29T23:55:49.3839861Z Collecting cryptography>=42 (from sigstore)
+2026-09-29T23:55:49.3879685Z   Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+2026-09-29T23:55:49.4022571Z Collecting id>=1.1.0 (from sigstore)
+2026-09-29T23:55:49.4056173Z   Downloading id-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+2026-09-29T23:55:49.4339595Z Collecting pyasn1~=0.6 (from sigstore)
+2026-09-29T23:55:49.4387821Z   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+2026-09-29T23:55:49.5440040Z Collecting pydantic<3,>=2 (from sigstore)
+2026-09-29T23:55:49.5481018Z   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+2026-09-29T23:55:49.5748270Z Collecting pyjwt>=2.1 (from sigstore)
+2026-09-29T23:55:49.5786906Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+2026-09-29T23:55:49.6286547Z Collecting pyOpenSSL>=23.0.0 (from sigstore)
+2026-09-29T23:55:49.6324646Z   Downloading pyopenssl-26.4.0-py3-none-any.whl.metadata (22 kB)
+2026-09-29T23:55:49.6571099Z Collecting requests (from sigstore)
+2026-09-29T23:55:49.6607915Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-09-29T23:55:49.6928664Z Collecting rich<16,>=13 (from sigstore)
+2026-09-29T23:55:49.6964111Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-09-29T23:55:49.7079263Z Collecting rfc8785~=0.1.2 (from sigstore)
+2026-09-29T23:55:49.7116448Z   Downloading rfc8785-0.1.4-py3-none-any.whl.metadata (3.4 kB)
+2026-09-29T23:55:49.7324612Z Collecting rfc3161-client<1.1.0,>=1.0.3 (from sigstore)
+2026-09-29T23:55:49.7371509Z   Downloading rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+2026-09-29T23:55:49.7579973Z Collecting sigstore-models==0.0.6 (from sigstore)
+2026-09-29T23:55:49.7624510Z   Downloading sigstore_models-0.0.6-py3-none-any.whl.metadata (1.3 kB)
+2026-09-29T23:55:49.7746024Z Collecting sigstore-rekor-types==0.0.18 (from sigstore)
+2026-09-29T23:55:49.7798928Z   Downloading sigstore_rekor_types-0.0.18-py3-none-any.whl.metadata (13 kB)
+2026-09-29T23:55:49.7989402Z Collecting tuf<8,>=6 (from sigstore)
+2026-09-29T23:55:49.8054685Z   Downloading tuf-7.0.1-py3-none-any.whl.metadata (8.1 kB)
+2026-09-29T23:55:49.8244152Z Collecting platformdirs~=4.2 (from sigstore)
+2026-09-29T23:55:49.8278099Z   Downloading platformdirs-4.12.2-py3-none-any.whl.metadata (5.5 kB)
+2026-09-29T23:55:49.8449966Z Collecting typing-extensions>=4.14.1 (from sigstore-models==0.0.6->sigstore)
+2026-09-29T23:55:49.8485077Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-09-29T23:55:49.8649218Z Collecting annotated-types>=0.6.0 (from pydantic<3,>=2->sigstore)
+2026-09-29T23:55:49.8694749Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-09-29T23:55:50.5065285Z Collecting pydantic-core==2.46.5 (from pydantic<3,>=2->sigstore)
+2026-09-29T23:55:50.5106529Z   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-09-29T23:55:50.5246174Z Collecting typing-inspection>=0.4.2 (from pydantic<3,>=2->sigstore)
+2026-09-29T23:55:50.5279345Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-09-29T23:55:50.5423101Z Collecting email-validator>=2.0.0 (from pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore)
+2026-09-29T23:55:50.5458867Z   Downloading email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+2026-09-29T23:55:50.5835471Z Collecting markdown-it-py>=2.2.0 (from rich<16,>=13->sigstore)
+2026-09-29T23:55:50.5869055Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-09-29T23:55:50.6087885Z Collecting pygments<3.0.0,>=2.13.0 (from rich<16,>=13->sigstore)
+2026-09-29T23:55:50.6127851Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-09-29T23:55:50.6282129Z Collecting securesystemslib~=1.0 (from tuf<8,>=6->sigstore)
+2026-09-29T23:55:50.6441059Z   Downloading securesystemslib-1.5.1-py3-none-any.whl.metadata (4.9 kB)
+2026-09-29T23:55:50.6657793Z Collecting urllib3~=2.0 (from tuf<8,>=6->sigstore)
+2026-09-29T23:55:50.6695372Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-09-29T23:55:50.7675464Z Collecting cffi>=2.0.0 (from cryptography>=42->sigstore)
+2026-09-29T23:55:50.7930721Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-09-29T23:55:50.8064170Z Collecting pycparser (from cffi>=2.0.0->cryptography>=42->sigstore)
+2026-09-29T23:55:50.8105652Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-09-29T23:55:50.8247696Z Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore)
+2026-09-29T23:55:50.8283347Z   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+2026-09-29T23:55:50.8433078Z Collecting idna>=2.0.0 (from email-validator>=2.0.0->pydantic[email]<3,>=2->sigstore-rekor-types==0.0.18->sigstore)
+2026-09-29T23:55:50.8466653Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-09-29T23:55:50.8633723Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<16,>=13->sigstore)
+2026-09-29T23:55:50.8666639Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-09-29T23:55:50.9832658Z Collecting charset_normalizer<4,>=2 (from requests->sigstore)
+2026-09-29T23:55:50.9874440Z   Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+2026-09-29T23:55:51.0104201Z Collecting certifi>=2023.5.7 (from requests->sigstore)
+2026-09-29T23:55:51.0142382Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-09-29T23:55:51.0224175Z Downloading build-1.6.1-py3-none-any.whl (31 kB)
+2026-09-29T23:55:51.0278094Z Downloading sigstore-4.5.0-py3-none-any.whl (111 kB)
+2026-09-29T23:55:51.0344702Z Downloading sigstore_models-0.0.6-py3-none-any.whl (13 kB)
+2026-09-29T23:55:51.0398663Z Downloading sigstore_rekor_types-0.0.18-py3-none-any.whl (20 kB)
+2026-09-29T23:55:51.0453352Z Downloading platformdirs-4.12.2-py3-none-any.whl (32 kB)
+2026-09-29T23:55:51.0508547Z Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
+2026-09-29T23:55:51.0567934Z Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+2026-09-29T23:55:51.0693136Z Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-09-29T23:55:51.0960681Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 86.0 MB/s  0:00:00
+2026-09-29T23:55:51.1078474Z Downloading rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.4 MB)
+2026-09-29T23:55:51.1303481Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 114.5 MB/s  0:00:00
+2026-09-29T23:55:51.1339204Z Downloading rfc8785-0.1.4-py3-none-any.whl (9.2 kB)
+2026-09-29T23:55:51.1407186Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-09-29T23:55:51.1473695Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-09-29T23:55:51.1575648Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 126.6 MB/s  0:00:00
+2026-09-29T23:55:51.1623659Z Downloading tuf-7.0.1-py3-none-any.whl (56 kB)
+2026-09-29T23:55:51.1681549Z Downloading securesystemslib-1.5.1-py3-none-any.whl (876 kB)
+2026-09-29T23:55:51.1768799Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.4/876.4 kB 107.0 MB/s  0:00:00
+2026-09-29T23:55:51.1806645Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-09-29T23:55:51.1879826Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-09-29T23:55:51.1932462Z Downloading cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+2026-09-29T23:55:51.2154905Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 225.3 MB/s  0:00:00
+2026-09-29T23:55:51.2201279Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-09-29T23:55:51.2269045Z Downloading email_validator-2.3.0-py3-none-any.whl (35 kB)
+2026-09-29T23:55:51.2324760Z Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+2026-09-29T23:55:51.2387342Z Downloading id-1.6.1-py3-none-any.whl (14 kB)
+2026-09-29T23:55:51.2441484Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-09-29T23:55:51.2496613Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-09-29T23:55:51.2556171Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-09-29T23:55:51.2617247Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-09-29T23:55:51.2673812Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+2026-09-29T23:55:51.2728499Z Downloading pyopenssl-26.4.0-py3-none-any.whl (56 kB)
+2026-09-29T23:55:51.2803032Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-09-29T23:55:51.2873722Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-09-29T23:55:51.2933152Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-09-29T23:55:51.2987613Z Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-09-29T23:55:51.3041431Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-09-29T23:55:51.3115429Z Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+2026-09-29T23:55:51.3185299Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-09-29T23:55:51.5835713Z Installing collected packages: urllib3, typing-extensions, securesystemslib, rfc8785, pyproject_hooks, pyjwt, pygments, pycparser, pyasn1, platformdirs, packaging, mdurl, idna, dnspython, charset_normalizer, certifi, annotated-types, typing-inspection, tuf, requests, pydantic-core, markdown-it-py, id, email-validator, cffi, build, rich, pydantic, cryptography, sigstore-models, rfc3161-client, pyOpenSSL, sigstore-rekor-types, sigstore
+2026-09-29T23:55:54.3268413Z 
+2026-09-29T23:55:54.3302463Z Successfully installed annotated-types-0.8.0 build-1.6.1 certifi-2026.7.22 cffi-2.1.1 charset_normalizer-3.5.1 cryptography-50.0.1 dnspython-2.8.0 email-validator-2.3.0 id-1.6.1 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 packaging-26.3 platformdirs-4.12.2 pyOpenSSL-26.4.0 pyasn1-0.6.4 pycparser-3.0 pydantic-2.13.5 pydantic-core-2.46.5 pygments-2.21.0 pyjwt-2.15.1 pyproject_hooks-1.3.3 requests-2.34.2 rfc3161-client-1.0.9 rfc8785-0.1.4 rich-15.0.0 securesystemslib-1.5.1 sigstore-4.5.0 sigstore-models-0.0.6 sigstore-rekor-types-0.0.18 tuf-7.0.1 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0
+2026-09-29T23:55:54.4198266Z ##[group]Run python -m build
+2026-09-29T23:55:54.4198596Z [36;1mpython -m build[0m
+2026-09-29T23:55:54.4265727Z shell: /usr/bin/bash -e {0}
+2026-09-29T23:55:54.4265988Z env:
+2026-09-29T23:55:54.4266261Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:54.4266700Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:55:54.4267124Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:54.4267508Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:54.4267891Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:54.4268269Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:55:54.4268602Z ##[endgroup]
+2026-09-29T23:55:54.5981963Z * Creating isolated environment: venv+pip...
+2026-09-29T23:55:54.6215755Z * Installing packages in isolated environment:
+2026-09-29T23:55:54.6216599Z   - setuptools>=61.0
+2026-09-29T23:55:54.6217090Z   - wheel
+2026-09-29T23:55:55.5518957Z * Getting build dependencies for sdist...
+2026-09-29T23:55:56.1861800Z running egg_info
+2026-09-29T23:55:56.1877753Z creating alethech.egg-info
+2026-09-29T23:55:56.1878813Z writing alethech.egg-info/PKG-INFO
+2026-09-29T23:55:56.1900799Z writing dependency_links to alethech.egg-info/dependency_links.txt
+2026-09-29T23:55:56.1921085Z writing entry points to alethech.egg-info/entry_points.txt
+2026-09-29T23:55:56.1921696Z writing requirements to alethech.egg-info/requires.txt
+2026-09-29T23:55:56.1922223Z writing top-level names to alethech.egg-info/top_level.txt
+2026-09-29T23:55:56.1922728Z writing manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:56.1955199Z reading manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:56.1957000Z adding license file 'LICENSE'
+2026-09-29T23:55:56.1966057Z writing manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:56.2228003Z * Installed build dependency versions:
+2026-09-29T23:55:56.2228524Z   - setuptools==84.0.0
+2026-09-29T23:55:56.2228888Z   - wheel==0.48.0
+2026-09-29T23:55:56.2229214Z * Building sdist...
+2026-09-29T23:55:56.3780019Z running sdist
+2026-09-29T23:55:56.3780767Z running egg_info
+2026-09-29T23:55:56.3811199Z writing alethech.egg-info/PKG-INFO
+2026-09-29T23:55:56.3818511Z writing dependency_links to alethech.egg-info/dependency_links.txt
+2026-09-29T23:55:56.3821880Z writing entry points to alethech.egg-info/entry_points.txt
+2026-09-29T23:55:56.3825417Z writing requirements to alethech.egg-info/requires.txt
+2026-09-29T23:55:56.3827134Z writing top-level names to alethech.egg-info/top_level.txt
+2026-09-29T23:55:56.3889196Z reading manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:56.3896219Z adding license file 'LICENSE'
+2026-09-29T23:55:56.3906497Z writing manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:56.3909276Z running check
+2026-09-29T23:55:56.3942273Z creating alethech-0.8.5
+2026-09-29T23:55:56.3945808Z creating alethech-0.8.5/alethech
+2026-09-29T23:55:56.3950447Z creating alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3951501Z creating alethech-0.8.5/alethech/integrations
+2026-09-29T23:55:56.3952529Z creating alethech-0.8.5/alethech/integrations/langchain
+2026-09-29T23:55:56.3953275Z creating alethech-0.8.5/alethech/integrations/memex
+2026-09-29T23:55:56.3955566Z creating alethech-0.8.5/tests
+2026-09-29T23:55:56.3980733Z copying files to alethech-0.8.5...
+2026-09-29T23:55:56.3981676Z copying LICENSE -> alethech-0.8.5
+2026-09-29T23:55:56.3982209Z copying README.md -> alethech-0.8.5
+2026-09-29T23:55:56.3982767Z copying pyproject.toml -> alethech-0.8.5
+2026-09-29T23:55:56.3983403Z copying alethech/__init__.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3984131Z copying alethech/canonical.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3984848Z copying alethech/cli.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3985530Z copying alethech/crypto.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3986232Z copying alethech/objects.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3987202Z copying alethech/store.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3987932Z copying alethech/verify.py -> alethech-0.8.5/alethech
+2026-09-29T23:55:56.3988762Z copying alethech.egg-info/PKG-INFO -> alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3989984Z copying alethech.egg-info/SOURCES.txt -> alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3991024Z copying alethech.egg-info/dependency_links.txt -> alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3992097Z copying alethech.egg-info/entry_points.txt -> alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3993111Z copying alethech.egg-info/requires.txt -> alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3994171Z copying alethech.egg-info/top_level.txt -> alethech-0.8.5/alethech.egg-info
+2026-09-29T23:55:56.3995211Z copying alethech/integrations/__init__.py -> alethech-0.8.5/alethech/integrations
+2026-09-29T23:55:56.3996441Z copying alethech/integrations/langchain/__init__.py -> alethech-0.8.5/alethech/integrations/langchain
+2026-09-29T23:55:56.3997730Z copying alethech/integrations/memex/__init__.py -> alethech-0.8.5/alethech/integrations/memex
+2026-09-29T23:55:56.3998947Z copying alethech/integrations/memex/hook.py -> alethech-0.8.5/alethech/integrations/memex
+2026-09-29T23:55:56.4000203Z copying tests/test_056_bloqueantes.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4001009Z copying tests/test_070_audit_fixes.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4001792Z copying tests/test_anti_rollback.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4002609Z copying tests/test_conformance_vectors.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4003466Z copying tests/test_corruption_recovery.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4004332Z copying tests/test_hook_adversarial_040.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4005205Z copying tests/test_idempotency_fuzzing.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4006075Z copying tests/test_identity_adversarial.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4006909Z copying tests/test_identity_rev3.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4007776Z copying tests/test_import_export_adversarial.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4008647Z copying tests/test_import_hardening.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4009741Z copying tests/test_jcs_conformance.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4012314Z copying tests/test_memex_hook.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4013904Z copying tests/test_protocol.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4016164Z copying tests/test_revoked_key_reachability.py -> alethech-0.8.5/tests
+2026-09-29T23:55:56.4024438Z Writing alethech-0.8.5/setup.cfg
+2026-09-29T23:55:56.4026773Z Creating tar archive
+2026-09-29T23:55:56.4420539Z removing 'alethech-0.8.5' (and everything under it)
+2026-09-29T23:55:56.4988740Z * Building wheel from sdist
+2026-09-29T23:55:56.5185532Z * Creating isolated environment: venv+pip...
+2026-09-29T23:55:56.5205208Z * Installing packages in isolated environment:
+2026-09-29T23:55:56.5205874Z   - setuptools>=61.0
+2026-09-29T23:55:56.5206316Z   - wheel
+2026-09-29T23:55:57.2966088Z * Getting build dependencies for wheel...
+2026-09-29T23:55:57.7461993Z running egg_info
+2026-09-29T23:55:57.7478245Z writing alethech.egg-info/PKG-INFO
+2026-09-29T23:55:57.7487551Z writing dependency_links to alethech.egg-info/dependency_links.txt
+2026-09-29T23:55:57.7492106Z writing entry points to alethech.egg-info/entry_points.txt
+2026-09-29T23:55:57.7496391Z writing requirements to alethech.egg-info/requires.txt
+2026-09-29T23:55:57.7499523Z writing top-level names to alethech.egg-info/top_level.txt
+2026-09-29T23:55:57.7554649Z reading manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:57.7562075Z adding license file 'LICENSE'
+2026-09-29T23:55:57.7572124Z writing manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:57.7821405Z * Installed build dependency versions:
+2026-09-29T23:55:57.7821906Z   - setuptools==84.0.0
+2026-09-29T23:55:57.7822282Z   - wheel==0.48.0
+2026-09-29T23:55:57.7822910Z * Building wheel...
+2026-09-29T23:55:57.9385706Z running bdist_wheel
+2026-09-29T23:55:57.9451919Z running build
+2026-09-29T23:55:57.9452448Z running build_py
+2026-09-29T23:55:57.9469166Z creating build/lib/alethech
+2026-09-29T23:55:57.9471975Z copying alethech/cli.py -> build/lib/alethech
+2026-09-29T23:55:57.9475026Z copying alethech/objects.py -> build/lib/alethech
+2026-09-29T23:55:57.9477549Z copying alethech/crypto.py -> build/lib/alethech
+2026-09-29T23:55:57.9479854Z copying alethech/verify.py -> build/lib/alethech
+2026-09-29T23:55:57.9482529Z copying alethech/store.py -> build/lib/alethech
+2026-09-29T23:55:57.9484869Z copying alethech/__init__.py -> build/lib/alethech
+2026-09-29T23:55:57.9487089Z copying alethech/canonical.py -> build/lib/alethech
+2026-09-29T23:55:57.9490398Z creating build/lib/alethech/integrations
+2026-09-29T23:55:57.9492494Z copying alethech/integrations/__init__.py -> build/lib/alethech/integrations
+2026-09-29T23:55:57.9495536Z creating build/lib/alethech/integrations/memex
+2026-09-29T23:55:57.9525599Z copying alethech/integrations/memex/hook.py -> build/lib/alethech/integrations/memex
+2026-09-29T23:55:57.9526834Z copying alethech/integrations/memex/__init__.py -> build/lib/alethech/integrations/memex
+2026-09-29T23:55:57.9538565Z creating build/lib/alethech/integrations/langchain
+2026-09-29T23:55:57.9539920Z copying alethech/integrations/langchain/__init__.py -> build/lib/alethech/integrations/langchain
+2026-09-29T23:55:57.9540859Z running egg_info
+2026-09-29T23:55:57.9541280Z writing alethech.egg-info/PKG-INFO
+2026-09-29T23:55:57.9541971Z writing dependency_links to alethech.egg-info/dependency_links.txt
+2026-09-29T23:55:57.9542969Z writing entry points to alethech.egg-info/entry_points.txt
+2026-09-29T23:55:57.9545703Z writing requirements to alethech.egg-info/requires.txt
+2026-09-29T23:55:57.9547983Z writing top-level names to alethech.egg-info/top_level.txt
+2026-09-29T23:55:57.9576590Z reading manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:57.9583895Z adding license file 'LICENSE'
+2026-09-29T23:55:57.9594087Z writing manifest file 'alethech.egg-info/SOURCES.txt'
+2026-09-29T23:55:57.9630709Z installing to build/bdist.linux-x86_64/wheel
+2026-09-29T23:55:57.9631270Z running install
+2026-09-29T23:55:57.9701992Z running install_lib
+2026-09-29T23:55:57.9716467Z creating build/bdist.linux-x86_64/wheel
+2026-09-29T23:55:57.9719571Z creating build/bdist.linux-x86_64/wheel/alethech
+2026-09-29T23:55:57.9722231Z creating build/bdist.linux-x86_64/wheel/alethech/integrations
+2026-09-29T23:55:57.9724728Z creating build/bdist.linux-x86_64/wheel/alethech/integrations/memex
+2026-09-29T23:55:57.9726543Z copying build/lib/alethech/integrations/memex/hook.py -> build/bdist.linux-x86_64/wheel/./alethech/integrations/memex
+2026-09-29T23:55:57.9728800Z copying build/lib/alethech/integrations/memex/__init__.py -> build/bdist.linux-x86_64/wheel/./alethech/integrations/memex
+2026-09-29T23:55:57.9731167Z creating build/bdist.linux-x86_64/wheel/alethech/integrations/langchain
+2026-09-29T23:55:57.9733373Z copying build/lib/alethech/integrations/langchain/__init__.py -> build/bdist.linux-x86_64/wheel/./alethech/integrations/langchain
+2026-09-29T23:55:57.9735248Z copying build/lib/alethech/integrations/__init__.py -> build/bdist.linux-x86_64/wheel/./alethech/integrations
+2026-09-29T23:55:57.9736737Z copying build/lib/alethech/cli.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9739549Z copying build/lib/alethech/objects.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9741718Z copying build/lib/alethech/crypto.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9743620Z copying build/lib/alethech/verify.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9745796Z copying build/lib/alethech/store.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9747716Z copying build/lib/alethech/__init__.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9749973Z copying build/lib/alethech/canonical.py -> build/bdist.linux-x86_64/wheel/./alethech
+2026-09-29T23:55:57.9751256Z running install_egg_info
+2026-09-29T23:55:57.9766213Z Copying alethech.egg-info to build/bdist.linux-x86_64/wheel/./alethech-0.8.5-py3.12.egg-info
+2026-09-29T23:55:57.9775424Z running install_scripts
+2026-09-29T23:55:57.9786680Z creating build/bdist.linux-x86_64/wheel/alethech-0.8.5.dist-info/WHEEL
+2026-09-29T23:55:57.9792253Z creating '/home/runner/work/alethech/alethech/dist/.tmp-hnrn1x9l/alethech-0.8.5-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+2026-09-29T23:55:57.9795693Z adding 'alethech/__init__.py'
+2026-09-29T23:55:57.9800532Z adding 'alethech/canonical.py'
+2026-09-29T23:55:57.9819467Z adding 'alethech/cli.py'
+2026-09-29T23:55:57.9823317Z adding 'alethech/crypto.py'
+2026-09-29T23:55:57.9830842Z adding 'alethech/objects.py'
+2026-09-29T23:55:57.9835134Z adding 'alethech/store.py'
+2026-09-29T23:55:57.9846052Z adding 'alethech/verify.py'
+2026-09-29T23:55:57.9848726Z adding 'alethech/integrations/__init__.py'
+2026-09-29T23:55:57.9852698Z adding 'alethech/integrations/langchain/__init__.py'
+2026-09-29T23:55:57.9854979Z adding 'alethech/integrations/memex/__init__.py'
+2026-09-29T23:55:57.9861490Z adding 'alethech/integrations/memex/hook.py'
+2026-09-29T23:55:57.9865490Z adding 'alethech-0.8.5.dist-info/licenses/LICENSE'
+2026-09-29T23:55:57.9869863Z adding 'alethech-0.8.5.dist-info/METADATA'
+2026-09-29T23:55:57.9871622Z adding 'alethech-0.8.5.dist-info/WHEEL'
+2026-09-29T23:55:57.9873281Z adding 'alethech-0.8.5.dist-info/entry_points.txt'
+2026-09-29T23:55:57.9874841Z adding 'alethech-0.8.5.dist-info/top_level.txt'
+2026-09-29T23:55:57.9877996Z adding 'alethech-0.8.5.dist-info/RECORD'
+2026-09-29T23:55:57.9879305Z removing build/bdist.linux-x86_64/wheel
+2026-09-29T23:55:58.0486075Z Successfully built alethech-0.8.5.tar.gz and alethech-0.8.5-py3-none-any.whl
+2026-09-29T23:55:58.0695562Z ##[group]Run sigstore sign dist/*.whl dist/*.tar.gz
+2026-09-29T23:55:58.0695976Z [36;1msigstore sign dist/*.whl dist/*.tar.gz[0m
+2026-09-29T23:55:58.0696361Z [36;1m# Copy signatures and certificates to dist for upload[0m
+2026-09-29T23:55:58.0696740Z [36;1mcp dist/*.sig dist/*.pem . 2>/dev/null || true[0m
+2026-09-29T23:55:58.0697198Z [36;1mcp dist/*.whl.sig dist/*.whl.pem dist/*.tar.gz.sig dist/*.tar.gz.pem . 2>/dev/null || true[0m
+2026-09-29T23:55:58.0760924Z shell: /usr/bin/bash -e {0}
+2026-09-29T23:55:58.0761185Z env:
+2026-09-29T23:55:58.0761449Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:58.0761891Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:55:58.0762316Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:58.0762696Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:58.0763250Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:55:58.0763662Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:55:58.0763983Z ##[endgroup]
+2026-09-29T23:56:00.1175209Z [23:56:00] INFO     Transparency log entry created at index:         _cli.py:729
+2026-09-29T23:56:00.1175945Z                     3008486495                                                  
+2026-09-29T23:56:00.3976281Z            INFO     Transparency log entry created at index:         _cli.py:729
+2026-09-29T23:56:00.3976920Z                     3008486500                                                  
+2026-09-29T23:56:00.4020321Z Using ephemeral certificate:
+2026-09-29T23:56:00.4020803Z -----BEGIN CERTIFICATE-----
+2026-09-29T23:56:00.4021464Z MIIHTDCCBtKgAwIBAgIUOnsVbmYY+nJgado5kHoBHk+Y0a8wCgYIKoZIzj0EAwMw
+2026-09-29T23:56:00.4022405Z NzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRl
+2026-09-29T23:56:00.4023320Z cm1lZGlhdGUwHhcNMjYwOTI5MjM1NTU5WhcNMjYwOTMwMDAwNTU5WjAAMFkwEwYH
+2026-09-29T23:56:00.4024280Z KoZIzj0CAQYIKoZIzj0DAQcDQgAE0sO2mrGGDqt8wiV3jUt+9XmKF24BAvTS0dU8
+2026-09-29T23:56:00.4024804Z hZYKpNcC0BM3mHJtaWd9rL3SFA5kM2PH9YmwdVGCKf1+WWuVpKOCBfEwggXtMA4G
+2026-09-29T23:56:00.4025293Z A1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUnCjO
+2026-09-29T23:56:00.4025790Z U8Yq0j7tZJP1LslFcSFvmKAwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4Y
+2026-09-29T23:56:00.4026262Z ZD8wawYDVR0RAQH/BGEwX4ZdaHR0cHM6Ly9naXRodWIuY29tL2VkZHlmbG9yZXMx
+2026-09-29T23:56:00.4026728Z MDAtbGFuZy9hbGV0aGVjaC8uZ2l0aHViL3dvcmtmbG93cy9yZWxlYXNlLnltbEBy
+2026-09-29T23:56:00.4027205Z ZWZzL3RhZ3MvdjAuOC41MDkGCisGAQQBg78wAQEEK2h0dHBzOi8vdG9rZW4uYWN0
+2026-09-29T23:56:00.4027688Z aW9ucy5naXRodWJ1c2VyY29udGVudC5jb20wEgYKKwYBBAGDvzABAgQEcHVzaDA2
+2026-09-29T23:56:00.4028158Z BgorBgEEAYO/MAEDBCg2MjRiNjc1MDUxZGNmOTk1N2VmZGY0OTg3Zjk0ZmVkNWUz
+2026-09-29T23:56:00.4028636Z ZDc2MDQwMBUGCisGAQQBg78wAQQEB1JlbGVhc2UwKQYKKwYBBAGDvzABBQQbZWRk
+2026-09-29T23:56:00.4029120Z eWZsb3JlczEwMC1sYW5nL2FsZXRoZWNoMB4GCisGAQQBg78wAQYEEHJlZnMvdGFn
+2026-09-29T23:56:00.4029758Z cy92MC44LjUwOwYKKwYBBAGDvzABCAQtDCtodHRwczovL3Rva2VuLmFjdGlvbnMu
+2026-09-29T23:56:00.4030256Z Z2l0aHVidXNlcmNvbnRlbnQuY29tMG0GCisGAQQBg78wAQkEXwxdaHR0cHM6Ly9n
+2026-09-29T23:56:00.4030739Z aXRodWIuY29tL2VkZHlmbG9yZXMxMDAtbGFuZy9hbGV0aGVjaC8uZ2l0aHViL3dv
+2026-09-29T23:56:00.4031218Z cmtmbG93cy9yZWxlYXNlLnltbEByZWZzL3RhZ3MvdjAuOC41MDgGCisGAQQBg78w
+2026-09-29T23:56:00.4031697Z AQoEKgwoNjI0YjY3NTA1MWRjZjk5NTdlZmRmNDk4N2Y5NGZlZDVlM2Q3NjA0MDAd
+2026-09-29T23:56:00.4032167Z BgorBgEEAYO/MAELBA8MDWdpdGh1Yi1ob3N0ZWQwPgYKKwYBBAGDvzABDAQwDC5o
+2026-09-29T23:56:00.4032640Z dHRwczovL2dpdGh1Yi5jb20vZWRkeWZsb3JlczEwMC1sYW5nL2FsZXRoZWNoMDgG
+2026-09-29T23:56:00.4033466Z CisGAQQBg78wAQ0EKgwoNjI0YjY3NTA1MWRjZjk5NTdlZmRmNDk4N2Y5NGZlZDVl
+2026-09-29T23:56:00.4033936Z M2Q3NjA0MDAgBgorBgEEAYO/MAEOBBIMEHJlZnMvdGFncy92MC44LjUwGgYKKwYB
+2026-09-29T23:56:00.4034404Z BAGDvzABDwQMDAoxMzgwMzY3ODk2MDUGCisGAQQBg78wARAEJwwlaHR0cHM6Ly9n
+2026-09-29T23:56:00.4034884Z aXRodWIuY29tL2VkZHlmbG9yZXMxMDAtbGFuZzAZBgorBgEEAYO/MAERBAsMCTI1
+2026-09-29T23:56:00.4035603Z OTkzMTQzNjBtBgorBgEEAYO/MAESBF8MXWh0dHBzOi8vZ2l0aHViLmNvbS9lZGR5
+2026-09-29T23:56:00.4036104Z ZmxvcmVzMTAwLWxhbmcvYWxldGhlY2gvLmdpdGh1Yi93b3JrZmxvd3MvcmVsZWFz
+2026-09-29T23:56:00.4036582Z ZS55bWxAcmVmcy90YWdzL3YwLjguNTA4BgorBgEEAYO/MAETBCoMKDYyNGI2NzUw
+2026-09-29T23:56:00.4037047Z NTFkY2Y5OTU3ZWZkZjQ5ODdmOTRmZWQ1ZTNkNzYwNDAwFAYKKwYBBAGDvzABFAQG
+2026-09-29T23:56:00.4037554Z DARwdXNoMGIGCisGAQQBg78wARUEVAxSaHR0cHM6Ly9naXRodWIuY29tL2VkZHlm
+2026-09-29T23:56:00.4038043Z bG9yZXMxMDAtbGFuZy9hbGV0aGVjaC9hY3Rpb25zL3J1bnMvMzY2NDc3MzE4MDEv
+2026-09-29T23:56:00.4038515Z YXR0ZW1wdHMvMTAWBgorBgEEAYO/MAEWBAgMBnB1YmxpYzBaBgorBgEEAYO/MAEY
+2026-09-29T23:56:00.4038982Z BEwMSnJlcG86ZWRkeWZsb3JlczEwMC1sYW5nQDI1OTkzMTQzNi9hbGV0aGVjaEAx
+2026-09-29T23:56:00.4039720Z MzgwMzY3ODk2OnJlZjpyZWZzL3RhZ3MvdjAuOC41MIGJBgorBgEEAdZ5AgQCBHsE
+2026-09-29T23:56:00.4040204Z eQB3AHUA3T0wasbHETJjGR4cmWc3AqJKXrjePK3/h4pygC8p7o4AAAGg75i7LAAA
+2026-09-29T23:56:00.4040844Z BAMARjBEAiBk12MDnSGPCFS2Y+dmgwJSzVbyirLXVs5Db9SzcvnGewIgHPfJyKQs
+2026-09-29T23:56:00.4041316Z CmkBbXG1/1+CRFgcnK/z4u0ZJd7D6OLWWrEwCgYIKoZIzj0EAwMDaAAwZQIwazI2
+2026-09-29T23:56:00.4041767Z 1MbTNDwYHvUuKeXcRN5bkN50sm2+NzDDbHEkFc1/oj+x1Qie43zcEm3EWJ0QAjEA
+2026-09-29T23:56:00.4042222Z 6CzmIl4Zwp6FOjC473phLw+nlnxl5txGTdImjTm+y1rlSbfwxyDNdiTWTEg8XL2h
+2026-09-29T23:56:00.4042594Z -----END CERTIFICATE-----
+2026-09-29T23:56:00.4042743Z 
+2026-09-29T23:56:00.4042975Z Sigstore bundle written to dist/alethech-0.8.5-py3-none-any.whl.sigstore.json
+2026-09-29T23:56:00.4043464Z Sigstore bundle written to dist/alethech-0.8.5.tar.gz.sigstore.json
+2026-09-29T23:56:00.4781278Z ##[group]Run pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33
+2026-09-29T23:56:00.4781756Z with:
+2026-09-29T23:56:00.4781969Z   user: __token__
+2026-09-29T23:56:00.4782271Z   repository_url: https://upload.pypi.org/legacy/
+2026-09-29T23:56:00.4782622Z   packages_dir: dist
+2026-09-29T23:56:00.4782866Z   verify_metadata: true
+2026-09-29T23:56:00.4783131Z   skip_existing: false
+2026-09-29T23:56:00.4783368Z   verbose: true
+2026-09-29T23:56:00.4783583Z   print_hash: true
+2026-09-29T23:56:00.4783807Z   attestations: true
+2026-09-29T23:56:00.4784029Z env:
+2026-09-29T23:56:00.4784300Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4784758Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:56:00.4785202Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4785599Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4786020Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4786417Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:56:00.4786756Z ##[endgroup]
+2026-09-29T23:56:00.4846329Z ##[start-action display=Fail-fast in unsupported environments;id=__pypa_gh-action-pypi-publish.__run]
+2026-09-29T23:56:00.4855842Z ##[end-action id=__pypa_gh-action-pypi-publish.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-29T23:56:00.4858080Z ##[start-action display=Reset path if needed;id=__pypa_gh-action-pypi-publish.__run_2]
+2026-09-29T23:56:00.4882308Z ##[group]Run # Reset path if needed
+2026-09-29T23:56:00.4882630Z [36;1m# Reset path if needed[0m
+2026-09-29T23:56:00.4883018Z [36;1m# https://github.com/pypa/gh-action-pypi-publish/issues/112[0m
+2026-09-29T23:56:00.4883440Z [36;1mif [[ $PATH != *"/usr/bin"* ]]; then[0m
+2026-09-29T23:56:00.4883824Z [36;1m  echo "\$PATH=$PATH. Resetting \$PATH for GitHub Actions."[0m
+2026-09-29T23:56:00.4884305Z [36;1m  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"[0m
+2026-09-29T23:56:00.4884720Z [36;1m  echo "PATH=$PATH" >>"$GITHUB_ENV"[0m
+2026-09-29T23:56:00.4885025Z [36;1m  echo "$PATH" >>"$GITHUB_PATH"[0m
+2026-09-29T23:56:00.4885325Z [36;1m  echo "\$PATH reset. \$PATH=$PATH"[0m
+2026-09-29T23:56:00.4885604Z [36;1mfi[0m
+2026-09-29T23:56:00.4950729Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-29T23:56:00.4951093Z env:
+2026-09-29T23:56:00.4951376Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4951840Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:56:00.4952297Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4952707Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4953103Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.4953515Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:56:00.4953855Z ##[endgroup]
+2026-09-29T23:56:00.5046563Z ##[end-action id=__pypa_gh-action-pypi-publish.__run_2;outcome=success;conclusion=success;duration_ms=18]
+2026-09-29T23:56:00.5048864Z ##[start-action display=Discover pre-installed Python;id=__pypa_gh-action-pypi-publish.pre-installed-python]
+2026-09-29T23:56:00.5064361Z ##[group]Run # 🔎 Discover pre-installed Python
+2026-09-29T23:56:00.5064710Z [36;1m# 🔎 Discover pre-installed Python[0m
+2026-09-29T23:56:00.5065265Z [36;1mecho "python-path=$(command -v python3 || :)" | tee -a "${GITHUB_OUTPUT}"[0m
+2026-09-29T23:56:00.5122612Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-29T23:56:00.5122946Z env:
+2026-09-29T23:56:00.5123219Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5123649Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:56:00.5124064Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5124433Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5125002Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5125411Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:56:00.5125743Z ##[endgroup]
+2026-09-29T23:56:00.5214231Z python-path=/opt/hostedtoolcache/Python/3.12.14/x64/bin/python3
+2026-09-29T23:56:00.5237648Z ##[end-action id=__pypa_gh-action-pypi-publish.pre-installed-python;outcome=success;conclusion=success;duration_ms=18]
+2026-09-29T23:56:00.5242396Z ##[start-action display=Install Python 3;id=__pypa_gh-action-pypi-publish.new-python]
+2026-09-29T23:56:00.5247540Z ##[end-action id=__pypa_gh-action-pypi-publish.new-python;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-29T23:56:00.5254356Z ##[start-action display=Create Docker container action;id=__pypa_gh-action-pypi-publish.__run_3]
+2026-09-29T23:56:00.5287358Z ##[group]Run # Create Docker container action
+2026-09-29T23:56:00.5287681Z [36;1m# Create Docker container action[0m
+2026-09-29T23:56:00.5288484Z [36;1m/opt/hostedtoolcache/Python/3.12.14/x64/bin/python3 '/home/runner/work/_actions/pypa/gh-action-pypi-publish/dc37677b2e1c63e2034f94d8a5b11f265b73ba33/create-docker-action.py'[0m
+2026-09-29T23:56:00.5346519Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-29T23:56:00.5346856Z env:
+2026-09-29T23:56:00.5347115Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5347577Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:56:00.5348094Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5348489Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5348862Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5349242Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:56:00.5349860Z   REF: dc37677b2e1c63e2034f94d8a5b11f265b73ba33
+2026-09-29T23:56:00.5350168Z   REPO: pypa/gh-action-pypi-publish
+2026-09-29T23:56:00.5350432Z   REPO_ID: 1380367896
+2026-09-29T23:56:00.5350644Z ##[endgroup]
+2026-09-29T23:56:00.5702164Z ##[end-action id=__pypa_gh-action-pypi-publish.__run_3;outcome=success;conclusion=success;duration_ms=44]
+2026-09-29T23:56:00.5704489Z ##[start-action display=Run Docker container;id=__pypa_gh-action-pypi-publish.__self]
+2026-09-29T23:56:00.5822047Z ##[group]Run ./.github/.tmp/.generated-actions/run-pypi-publish-in-docker-container
+2026-09-29T23:56:00.5822488Z with:
+2026-09-29T23:56:00.5822674Z   user: __token__
+2026-09-29T23:56:00.5822924Z   repository-url: https://upload.pypi.org/legacy/
+2026-09-29T23:56:00.5823237Z   packages-dir: dist
+2026-09-29T23:56:00.5823448Z   verify-metadata: true
+2026-09-29T23:56:00.5823665Z   skip-existing: false
+2026-09-29T23:56:00.5823868Z   verbose: true
+2026-09-29T23:56:00.5824055Z   print-hash: true
+2026-09-29T23:56:00.5824250Z   attestations: true
+2026-09-29T23:56:00.5824442Z env:
+2026-09-29T23:56:00.5824687Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5825113Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-09-29T23:56:00.5825535Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5825908Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5826270Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-09-29T23:56:00.5826640Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-09-29T23:56:00.5827212Z ##[endgroup]
+2026-09-29T23:56:00.5965749Z ##[command]/usr/bin/docker run --name ghcriopypaghactionpypipublishdc37677b2e1c63e2034f94d8a5b11f265b73ba33_3fe850 --label fc7474 --workdir /github/workspace --rm -e "pythonLocation" -e "PKG_CONFIG_PATH" -e "Python_ROOT_DIR" -e "Python2_ROOT_DIR" -e "Python3_ROOT_DIR" -e "LD_LIBRARY_PATH" -e "INPUT_USER" -e "INPUT_PASSWORD" -e "INPUT_REPOSITORY-URL" -e "INPUT_PACKAGES-DIR" -e "INPUT_VERIFY-METADATA" -e "INPUT_SKIP-EXISTING" -e "INPUT_VERBOSE" -e "INPUT_PRINT-HASH" -e "INPUT_ATTESTATIONS" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "GITHUB_ACTION_PATH" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_ID_TOKEN_REQUEST_URL" -e "ACTIONS_ID_TOKEN_REQUEST_TOKEN" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_CACHE_MODE" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/alethech/alethech":"/github/workspace" ghcr.io/pypa/gh-action-pypi-publish:dc37677b2e1c63e2034f94d8a5b11f265b73ba33
+2026-09-29T23:56:00.7013806Z Unable to find image 'ghcr.io/pypa/gh-action-pypi-publish:dc37677b2e1c63e2034f94d8a5b11f265b73ba33' locally
+2026-09-29T23:56:00.8852387Z dc37677b2e1c63e2034f94d8a5b11f265b73ba33: Pulling from pypa/gh-action-pypi-publish
+2026-09-29T23:56:00.8853289Z f96fde5c7579: Pulling fs layer
+2026-09-29T23:56:00.8853780Z cd384decb927: Pulling fs layer
+2026-09-29T23:56:00.8854195Z 463aa101532a: Pulling fs layer
+2026-09-29T23:56:00.8854614Z 4a633c382b06: Pulling fs layer
+2026-09-29T23:56:00.8854939Z 7d25e6ce522b: Pulling fs layer
+2026-09-29T23:56:00.8855182Z 73aa50089b2f: Pulling fs layer
+2026-09-29T23:56:00.8855414Z 3f44ba4af573: Pulling fs layer
+2026-09-29T23:56:00.8855666Z e7cfcb60dbfb: Pulling fs layer
+2026-09-29T23:56:00.8855918Z 7e9f24617b6b: Pulling fs layer
+2026-09-29T23:56:00.8856149Z 6d9fe5224b4e: Pulling fs layer
+2026-09-29T23:56:00.8856387Z 533ef6f9b8fa: Pulling fs layer
+2026-09-29T23:56:00.8856615Z 3441c4cce8f1: Pulling fs layer
+2026-09-29T23:56:00.8856850Z 70fcbeac8774: Pulling fs layer
+2026-09-29T23:56:00.8857084Z 4f4fb700ef54: Pulling fs layer
+2026-09-29T23:56:00.8857306Z 73aa50089b2f: Waiting
+2026-09-29T23:56:00.8857509Z 3f44ba4af573: Waiting
+2026-09-29T23:56:00.8857714Z e7cfcb60dbfb: Waiting
+2026-09-29T23:56:00.8857909Z 7e9f24617b6b: Waiting
+2026-09-29T23:56:00.8858102Z 6d9fe5224b4e: Waiting
+2026-09-29T23:56:00.8858313Z 533ef6f9b8fa: Waiting
+2026-09-29T23:56:00.8858518Z 3441c4cce8f1: Waiting
+2026-09-29T23:56:00.8858710Z 4a633c382b06: Waiting
+2026-09-29T23:56:00.8858904Z 70fcbeac8774: Waiting
+2026-09-29T23:56:00.8859094Z 7d25e6ce522b: Waiting
+2026-09-29T23:56:00.8859284Z 4f4fb700ef54: Waiting
+2026-09-29T23:56:00.9540342Z cd384decb927: Verifying Checksum
+2026-09-29T23:56:00.9542333Z cd384decb927: Download complete
+2026-09-29T23:56:00.9828270Z 463aa101532a: Verifying Checksum
+2026-09-29T23:56:00.9829059Z 463aa101532a: Download complete
+2026-09-29T23:56:01.0081025Z 4a633c382b06: Download complete
+2026-09-29T23:56:01.0456700Z 7d25e6ce522b: Verifying Checksum
+2026-09-29T23:56:01.0458232Z 7d25e6ce522b: Download complete
+2026-09-29T23:56:01.0689344Z f96fde5c7579: Verifying Checksum
+2026-09-29T23:56:01.0690090Z f96fde5c7579: Download complete
+2026-09-29T23:56:01.0951716Z 3f44ba4af573: Verifying Checksum
+2026-09-29T23:56:01.0952244Z 3f44ba4af573: Download complete
+2026-09-29T23:56:01.1270606Z e7cfcb60dbfb: Verifying Checksum
+2026-09-29T23:56:01.1300538Z e7cfcb60dbfb: Download complete
+2026-09-29T23:56:01.1449193Z 7e9f24617b6b: Verifying Checksum
+2026-09-29T23:56:01.1460128Z 7e9f24617b6b: Download complete
+2026-09-29T23:56:01.1760100Z 6d9fe5224b4e: Verifying Checksum
+2026-09-29T23:56:01.1760715Z 6d9fe5224b4e: Download complete
+2026-09-29T23:56:01.2166217Z 533ef6f9b8fa: Download complete
+2026-09-29T23:56:01.2276322Z 3441c4cce8f1: Verifying Checksum
+2026-09-29T23:56:01.2279778Z 3441c4cce8f1: Download complete
+2026-09-29T23:56:01.2719236Z 70fcbeac8774: Verifying Checksum
+2026-09-29T23:56:01.2720825Z 70fcbeac8774: Download complete
+2026-09-29T23:56:01.2814138Z 4f4fb700ef54: Verifying Checksum
+2026-09-29T23:56:01.2815421Z 4f4fb700ef54: Download complete
+2026-09-29T23:56:01.2913570Z 73aa50089b2f: Verifying Checksum
+2026-09-29T23:56:01.2920268Z 73aa50089b2f: Download complete
+2026-09-29T23:56:02.6433913Z f96fde5c7579: Pull complete
+2026-09-29T23:56:03.4188891Z cd384decb927: Pull complete
+2026-09-29T23:56:04.0174240Z 463aa101532a: Pull complete
+2026-09-29T23:56:04.0304642Z 4a633c382b06: Pull complete
+2026-09-29T23:56:04.0401502Z 7d25e6ce522b: Pull complete
+2026-09-29T23:56:05.4701741Z 73aa50089b2f: Pull complete
+2026-09-29T23:56:05.4814171Z 3f44ba4af573: Pull complete
+2026-09-29T23:56:05.4898382Z e7cfcb60dbfb: Pull complete
+2026-09-29T23:56:05.4970426Z 7e9f24617b6b: Pull complete
+2026-09-29T23:56:05.5056083Z 6d9fe5224b4e: Pull complete
+2026-09-29T23:56:05.5143667Z 533ef6f9b8fa: Pull complete
+2026-09-29T23:56:05.5215647Z 3441c4cce8f1: Pull complete
+2026-09-29T23:56:05.5303465Z 70fcbeac8774: Pull complete
+2026-09-29T23:56:05.5383539Z 4f4fb700ef54: Pull complete
+2026-09-29T23:56:05.5421777Z Digest: sha256:a68d05519f6d7e47372aeaddab80b851b69afa89be179ec41775c72c4e3ab2d5
+2026-09-29T23:56:05.5433872Z Status: Downloaded newer image for ghcr.io/pypa/gh-action-pypi-publish:dc37677b2e1c63e2034f94d8a5b11f265b73ba33
+2026-09-29T23:56:07.5552249Z Checking dist/alethech-0.8.5-py3-none-any.whl: [32mPASSED[0m
+2026-09-29T23:56:07.5653093Z Checking dist/alethech-0.8.5-py3-none-any.whl.sigstore.json: [31mERROR   [0m InvalidDistribution: Unknown distribution format:                      
+2026-09-29T23:56:07.5654365Z          'alethech-0.8.5-py3-none-any.whl.sigstore.json'                        
+2026-09-29T23:56:07.6760029Z ##[end-action id=__pypa_gh-action-pypi-publish.__self;outcome=failure;conclusion=failure;duration_ms=7105]
+2026-09-29T23:56:07.6909313Z Post job cleanup.
+2026-09-29T23:56:07.6978579Z Post job cleanup.
+2026-09-29T23:56:07.7825489Z [command]/usr/bin/git version
+2026-09-29T23:56:07.7869151Z git version 2.55.0
+2026-09-29T23:56:07.7913402Z Temporarily overriding HOME='/home/runner/work/_temp/e5915f85-9267-4fa6-b9cc-9d0a9820d159' before making global git config changes
+2026-09-29T23:56:07.7914744Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-29T23:56:07.7918190Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alethech/alethech
+2026-09-29T23:56:07.7956696Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-29T23:56:07.7992028Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-29T23:56:07.8243457Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-29T23:56:07.8272716Z http.https://github.com/.extraheader
+2026-09-29T23:56:07.8285801Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-29T23:56:07.8327512Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-29T23:56:07.8786936Z Cleaning up orphan processes
+2026-09-29T23:56:07.9164260Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

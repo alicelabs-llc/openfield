@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://crates.io",
+    "name": "tree-sitter-tlaplus - crates.io: Rust Package Registry",
+    "snippet": "Oct 20, 2024 — This grammar is published as a Rust crate, Node.js package, and Python package. This repo is mirrored on sourcehut .",
+    "host_name": "crates.io",
+    "rank": 0,
+    "date": "Oct 20, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "DivitMittal/awesome: Personal Awesome list",
+    "snippet": "open -source software) sourcehut content is sourced. For support, contribution , bug reports, visit MuseScore.org. An extremely fast Python package and project ...",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://git.sr.ht",
+    "name": "~theo/eglot - sourcehut git",
+    "snippet": "M-x eglot can guess and work out-of-the-box with these servers: Javascript's TS & JS Language Server; Rust's rls; Python's pyls; Ruby's solargraph; Java's ... Read more",
+    "host_name": "git.sr.ht",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.fedoraproject.org",
+    "name": "Fedora Contributor Annual Survey :: Fedora Docs",
+    "snippet": "Fedora contributors and community members are those that participate in the project in any way, be it coding, bug testing, docs, graphic design, translations, ...",
+    "host_name": "docs.fedoraproject.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://daily.dev",
+    "name": "Best Git posts — January 2026",
+    "snippet": "Currently available for JavaScript with Python , Rust , and Go SDKs planned. Key workflows include. Debug Mode for complex bugs .",
+    "host_name": "daily.dev",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sourceforge.net",
+    "name": "AWS CodeCommit vs. sourcehut Comparison",
+    "snippet": "SourceHut is a suite of open source tools designed for efficient software development, offering Git and Mercurial hosting, mailing lists, bug tracking, ... Read more",
+    "host_name": "sourceforge.net",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://techonlinuxstuff.wordpress.com",
+    "name": "llm – Tech on linux",
+    "snippet": "The hardest part of moving from C to Rust is not learning Rust . It is the decades of battle-tested, carefully tuned C code that already exists — the code nobody ...",
+    "host_name": "techonlinuxstuff.wordpress.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://git.github.io",
+    "name": "Git Rev News Edition 129 (November 30th, 2025)",
+    "snippet": "PyDriller is a Python framework that helps developers in analyzing Git repositories. With PyDriller you can easily extract information about commits, developers ...",
+    "host_name": "git.github.io",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

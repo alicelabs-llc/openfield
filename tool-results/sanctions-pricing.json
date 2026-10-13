@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://en.wikipedia.org/wiki/Io_(moon)",
+    "name": "Io (moon)",
+    "snippet": "Io is the fourth-largest natural satellite in the Solar System, has the highest density and strongest surface gravity",
+    "host_name": "en.wikipedia.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.protocols.io",
+    "name": "Bring structure to your research - protocols.io",
+    "snippet": "Get a free 1-on-1 demo . Request a free personal demo to see how protocols.io can help with your specific research needs. Request a demo. Sign up for our ... Read more",
+    "host_name": "www.protocols.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://worldhealthorg.shinyapps.io/dengue_global",
+    "name": "Global Dengue Surveillance Dashboard",
+    "snippet": "No information is available for this page. Learn why",
+    "host_name": "worldhealthorg.shinyapps.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://science.nasa.gov/jupiter/jupiter-moons",
+    "name": "Io",
+    "snippet": "Jupiter's moon Io is the most volcanically active world in the solar system, with hundreds of volcanoes.",
+    "host_name": "science.nasa.gov",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.python.org/library",
+    "name": "io — Core tools for working with streams",
+    "snippet": "The io module provides Python's main facilities for dealing with various types of I/O. There are three main types of I/O: text I/O, binary I/O and raw I/O. ...",
+    "host_name": "docs.python.org",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

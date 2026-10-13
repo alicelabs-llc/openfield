@@ -1,0 +1,84 @@
+From 3a05be96e16b3f900c3235ddb679cf9d9c73dd1a Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100-lang@protonmail.com>
+Date: Tue, 6 Oct 2026 22:30:58 +0000
+Subject: [PATCH] file: Don't abort on invalid boolean metadata
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+nautilus_file_get_boolean_metadata() previously called g_error() when
+the stored value was neither "true" nor "false", which unconditionally
+aborts the process with SIGABRT. Since metadata is persistent and can
+be corrupted by external tooling (e.g. "gio set -t string"), a single
+malformed value makes the affected directory unopenable — Nautilus
+crashes every time the user navigates back to it.
+
+Replace g_error() with g_warning() so the invalid value is logged for
+debugging while the function falls back to the caller-supplied default.
+The function already had this fallback behavior in place (returning
+default_metadata on the very next line) — only the abort was wrong.
+
+Also include the offending value in the warning message to aid diagnosis.
+
+A regression test is added that writes a non-boolean string into a
+boolean metadata key and asserts that the getter returns the default
+value instead of aborting the test process.
+
+Closes #4323
+---
+ src/nautilus-file.c                   |  2 +-
+ test/displayless/test-file-metadata.c | 18 ++++++++++++++++++
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+
+diff --git a/src/nautilus-file.c b/src/nautilus-file.c
+index 3257a44..c5c155b 100644
+--- a/src/nautilus-file.c
++++ b/src/nautilus-file.c
+@@ -4126,7 +4126,7 @@ nautilus_file_get_boolean_metadata (NautilusFile *file,
+     }
+     else
+     {
+-        g_error ("boolean metadata with value other than true or false");
++        g_warning ("boolean metadata with value other than true or false: %s", value);
+         return default_metadata;
+     }
+ }
+diff --git a/test/displayless/test-file-metadata.c b/test/displayless/test-file-metadata.c
+index b306dc1..05ee3d6 100644
+--- a/test/displayless/test-file-metadata.c
++++ b/test/displayless/test-file-metadata.c
+@@ -34,6 +34,22 @@ test_file_metadata_str_set (void)
+     g_assert_cmpstr (nautilus_file_get_metadata (file, KEY_STR), ==, "value");
+ }
+ 
++static void
++test_file_metadata_bool_invalid_returns_default (void)
++{
++    g_autoptr (NautilusFile) file = nautilus_file_get_by_uri (TEST_FILE);
++
++    /* Write a non-boolean string into a boolean metadata key, mimicking
++     * corrupted/persistent metadata that previously caused SIGABRT in
++     * nautilus_file_get_boolean_metadata(). With the fix the function
++     * should log a warning and fall back to the default value instead
++     * of aborting the process. */
++    nautilus_file_set_metadata (file, KEY_BOOL, NAUTILUS_METADATA_STRING, "garbage");
++
++    g_assert_true (nautilus_file_get_boolean_metadata (file, KEY_BOOL, TRUE));
++    g_assert_false (nautilus_file_get_boolean_metadata (file, KEY_BOOL, FALSE));
++}
++
+ int
+ main (int   argc,
+       char *argv[])
+@@ -48,6 +64,8 @@ main (int   argc,
+                      test_file_metadata_bool_set_false);
+     g_test_add_func ("/file-metadata-str-set/default",
+                      test_file_metadata_str_set);
++    g_test_add_func ("/file-metadata-bool-invalid/default-fallback",
++                     test_file_metadata_bool_invalid_returns_default);
+ 
+     return g_test_run ();
+ }
+-- 
+2.47.3
+

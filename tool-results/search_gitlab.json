@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://gitlab.com",
+    "name": "Define approach to variants of Spanish in GitLab product",
+    "snippet": "Sep 10, 2024 — GitLab has been taking the approach of Spanish (International) a form known as \" Spanish International\" used to represent Latin American and ...",
+    "host_name": "gitlab.com",
+    "rank": 0,
+    "date": "Sep 10, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.gitlab.com",
+    "name": "Translating GitLab",
+    "snippet": "For managing the translation process, we use Crowdin. To contribute translations at translate. gitlab .com , you must create a Crowdin account. Read more",
+    "host_name": "docs.gitlab.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "I want to contribute for Spanish translation · Issue #781",
+    "snippet": "Aug 5, 2020 — You could edit the object in the i18n resource JSON file directly by providing English keys and corresponding Spanish values:",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "Aug 5, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.gitlab.com",
+    "name": "\"GitLab In Your Native Tongue\" as a category",
+    "snippet": "Jun 15, 2020 — My two concerns are: 1.) How can GitLab's moderation teams be sure thread get answered if they don't speak that particular language? 2.) We ... Read more",
+    "host_name": "forum.gitlab.com",
+    "rank": 3,
+    "date": "Jun 15, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://spac.regione.veneto.it",
+    "name": "Translation · I18n · Development · Help · GitLab",
+    "snippet": "If the language you are looking for is not available, open an issue. Select gitlab.pot to open the translation editor .",
+    "host_name": "spac.regione.veneto.it",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://costa.ls.fi.upm.es",
+    "name": "Translation · I18n · Development · Help · GitLab",
+    "snippet": "If the language you want is not available, open an issue. Select gitlab.pot to open the translation editor .",
+    "host_name": "costa.ls.fi.upm.es",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://microfluidics.utoronto.ca",
+    "name": "Externalization · I18n · Development · Help · GitLab",
+    "snippet": "Internationalization for GitLab . For working with internationalization ( i18n ), GNU gettext is used given it's the most used tool for this task and there are ... Read more",
+    "host_name": "microfluidics.utoronto.ca",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://gdeltproject.org",
+    "name": "The GDELT Project",
+    "snippet": "The GDELT Analysis Service is a free cloud-based service that offers a variety of tools and services to allow you to visualize, explore, and export both the ...",
+    "host_name": "gdeltproject.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts",
+    "name": "GDELT DOC 2.0 API Debuts!",
+    "snippet": "We are incredibly excited to announce today the debut of the new GDELT 2.0 DOC API, which is our full text search API.",
+    "host_name": "blog.gdeltproject.org",
+    "rank": 1,
+    "date": "Jun 20, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/alex9smith/gdelt-doc-api",
+    "name": "A Python client for the GDELT 2.0 Doc API",
+    "snippet": "A Python client to fetch data from the GDELT 2.0 Doc API. This allows for simpler, small-scale analysis of news coverage without having to deal with the ...",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/realtyapi/comments/1uhwd6f/best_free_news_apis_in_2026_tested_10_of_them_and",
+    "name": "Best free news APIs in 2026 — tested 10 of them and most",
+    "snippet": "- GDELT - Completely free and enormous, but research-grade. The cleanup and infrastructure are on you. - The Guardian / NYT - Very clean data, ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://gdeltproject.org/data.html",
+    "name": "Data: Querying, Analyzing and Downloading",
+    "snippet": "The GDELT Analysis Service is a free cloud-based service that offers a variety of tools and services to allow you to visualize, explore, and export both the ...",
+    "host_name": "gdeltproject.org",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

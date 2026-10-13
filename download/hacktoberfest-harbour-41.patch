@@ -1,0 +1,90 @@
+From 718c12b35829ed77d790af1b1a448dfff701b893 Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Wed, 7 Oct 2026 04:23:56 +0000
+Subject: [PATCH] persist: strip control characters and newlines from
+ push_history
+
+Closes #41.
+
+push_history() previously stored the trimmed query as-is, including any
+ASCII control characters embedded in it. Two failure modes resulted:
+
+1. A pasted multi-line query (e.g. "dune\r\nshogun") would corrupt the
+   on-disk history file: each entry is written one per line, so the
+   embedded newline silently split the single entry into two phantom
+   entries on the next load.
+
+2. Control bytes like ESC (\x1b), vertical tabs (\x0b), form feeds
+   (\x0c) and NUL (\0) made it into the history file and were echoed
+   back into the UI's history picker, occasionally messing up the
+   terminal that rendered them.
+
+Strip every char where char::is_control() returns true, except tab
+(\t) which is meaningful in pasted structured queries. Empty-after-
+sanitisation queries are dropped just like blank queries already are.
+
+Adds a regression test that pastes a multi-line query, an ESC-riddled
+query and a tab-containing query, asserting the resulting history is
+exactly what a user would expect: three entries, no phantom splits,
+tabs preserved.
+
+Tabs kept; everything else control stripped.
+---
+ src/persist.rs | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+
+diff --git a/src/persist.rs b/src/persist.rs
+index 7c6996d..abf5025 100644
+--- a/src/persist.rs
++++ b/src/persist.rs
+@@ -293,8 +293,19 @@ impl Store {
+         if query.is_empty() {
+             return Ok(());
+         }
+-        existing.retain(|q| q != query);
+-        existing.insert(0, query.to_owned());
++        // Strip ASCII control characters and newlines so they cannot corrupt
++        // the on-disk history file (one entry per line) or be used to inject
++        // extra phantom entries via a pasted multi-line query. Tabs and other
++        // horizontal whitespace are kept so queries like `foo\tbar` survive.
++        let sanitized: String = query
++            .chars()
++            .filter(|&c| c == '\t' || !c.is_control())
++            .collect();
++        if sanitized.is_empty() {
++            return Ok(());
++        }
++        existing.retain(|q| q != &sanitized);
++        existing.insert(0, sanitized);
+         existing.truncate(HISTORY_CAP);
+         self.save_history(existing)
+     }
+@@ -674,6 +685,25 @@ mod tests {
+         assert!(history.is_empty());
+     }
+ 
++    #[test]
++    fn control_chars_and_newlines_are_stripped_from_history() {
++        // A pasted multi-line query must not become two phantom entries.
++        // Carriage returns, line feeds, vertical tabs, form feeds, ESC and
++        // other ASCII control bytes are stripped so the on-disk history file
++        // (one entry per line) stays parseable. Tabs survive because users
++        // sometimes paste formatted queries.
++        let store = temp_store("ctrl");
++        let mut history = Vec::new();
++        store.push_history(&mut history, "dune\r\nshogun").unwrap();
++        store.push_history(&mut history, "asan\x1bne").unwrap(); // \x1b = ESC
++        store.push_history(&mut history, "tab\tsurvives").unwrap();
++        assert_eq!(
++            history,
++            vec!["tab\tsurvives", "dasne", "duneshogun"],
++            "control chars stripped, newlines do not split, tabs kept"
++        );
++    }
++
+     #[test]
+     fn corrupt_history_resets_quietly_but_visibly() {
+         let store = temp_store("badhistory");
+-- 
+2.47.3
+

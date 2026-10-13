@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://codeberg.org",
+    "name": "Codeberg logo almost invisible with forgejo-light theme #880",
+    "snippet": "This issue involves Codeberg's downstream modifications and settings and/or Codeberg's structures. An open issue or pull request to an upstream repository to ...",
+    "host_name": "codeberg.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://news.ycombinator.com",
+    "name": "I don't dislike Codeberg inherently, but it's not a \"true",
+    "snippet": "I don't dislike Codeberg inherently, but it's not a \"true\" GitHub replacement. It can handle a good chunk of GitHub repositories (namely those for well ... Read more",
+    "host_name": "news.ycombinator.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.codeberg.org",
+    "name": "Introducing Gitea 1.16 — Codeberg News",
+    "snippet": "Mar 2, 2022 — If you want to support Codeberg , feel free to check out the open community issues once the update is done (especially those that are looking for ... Read more",
+    "host_name": "blog.codeberg.org",
+    "rank": 2,
+    "date": "Mar 2, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openstreetmap.org",
+    "name": "OSMF should host a Forgejo/GitLab instance - Foundation",
+    "snippet": "Apr 23, 2024 — It heavily pushes paid version, with functionality deliberately removed/skipped from free trial open source version",
+    "host_name": "community.openstreetmap.org",
+    "rank": 3,
+    "date": "Apr 23, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://discuss.haiku-os.org",
+    "name": "Discussion about moving Haiku repositories from Github to",
+    "snippet": "Mar 3, 2025 — On codeberg Haiku inc manages the Haiku account, that could work. But contrary to disroot I don't have explicit permission, and since that repo ... Read more",
+    "host_name": "discuss.haiku-os.org",
+    "rank": 4,
+    "date": "Mar 3, 2025",
+    "favicon": ""
+  }
+]

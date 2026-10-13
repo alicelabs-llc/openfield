@@ -1,0 +1,98 @@
+From 70afb7ba67f606abd4f4a162945ec4154f794d45 Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Wed, 7 Oct 2026 00:20:24 +0000
+Subject: [PATCH] fix: prevent header collapse when balance text grows long
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Closes #7.
+
+When the balance amount reached 5+ digits (e.g. "-11 755,0 KZT"),
+the `txw_balance` TextView expanded horizontally with `wrap_content`
+width, pushing the `lyt_labels` LinearLayout (which also used
+`wrap_content`) past its content minimum. Because `lyt_labels` had no
+minimum guaranteed width, its child account-name TextView collapsed
+vertically — one character per line.
+
+Change the chain to use `match_constraint` (`0dp`) on both sides so
+the available header width is shared, and bound each side:
+
+- `lyt_labels`: `layout_width=0dp` with `constraintWidth_min=30dp`
+  and `constraintWidth_max=220dp`. The min guarantees the labels
+  keep enough room to render their text on one line; the max prevents
+  them from eating the balance side on wide screens.
+
+- `txw_balance`: `layout_width=0dp` with `constraintWidth_min=40dp`,
+  plus `ellipsize=end` and `maxLines=1`. The balance can no longer
+  grow indefinitely; if it ever exceeds the constrained width it
+  truncates cleanly with an ellipsis instead of squeezing the labels.
+
+- `txw_balance` `textAlignment=viewEnd` keeps the value visually
+  anchored next to the labels regardless of how much width it gets.
+
+Behavior tested mentally against the issue's reported scenarios:
+- Short balance "0,0 KZT": labels and balance fit, no change.
+- Long balance "-11 755,0 KZT": balance constrained, labels keep
+  min width, account name stays on one line.
+- Very long balance (> 220dp): balance ellipsizes with "…", labels
+  still readable.
+
+No code change; layout XML only.
+---
+ app/src/main/res/layout/activity_main.xml | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+index 2649ed0..b427739 100644
+--- a/app/src/main/res/layout/activity_main.xml
++++ b/app/src/main/res/layout/activity_main.xml
+@@ -35,7 +35,7 @@
+ 
+         <LinearLayout
+             android:id="@+id/lyt_labels"
+-            android:layout_width="wrap_content"
++            android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:elevation="@dimen/header_elevation"
+             android:orientation="vertical"
+@@ -47,7 +47,9 @@
+             app:layout_constraintEnd_toStartOf="@+id/txw_balance"
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent">
++            app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintWidth_min="30dp"
++            app:layout_constraintWidth_max="220dp">
+ 
+             <TextView
+                 android:id="@+id/txw_balance_label"
+@@ -74,12 +76,16 @@
+ 
+         <TextView
+             android:id="@+id/txw_balance"
+-            android:layout_width="wrap_content"
++            android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="@dimen/margin_standard"
+             android:elevation="@dimen/header_elevation"
+             android:textSize="32sp"
+             android:textStyle="bold"
++            android:ellipsize="end"
++            android:maxLines="1"
++            android:textAlignment="viewEnd"
++            app:layout_constrainedWidth="true"
+             app:amountString="@{viewModel.balance}"
+             app:currencyCode="@{viewModel.currency.currencyCode}"
+             app:forceSymbolAfter="@{viewModel.settings.forceSymbolAfter}"
+@@ -88,6 +94,7 @@
+             app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintStart_toEndOf="@+id/lyt_labels"
+             app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintWidth_min="40dp"
+             tools:text="8888.88 €" />
+ 
+         <com.google.android.material.button.MaterialButton
+-- 
+2.47.3
+

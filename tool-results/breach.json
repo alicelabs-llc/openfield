@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.avast.com",
+    "name": "Has Your Email Been Hacked? Free Data Leak Check",
+    "snippet": "Our data leak checker helps you find out if your email account is safe from cybercriminals . Do more to protect your online accounts today with a simple email ...",
+    "host_name": "www.avast.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.roboform.com",
+    "name": "Have I been hacked? Free data leak checker",
+    "snippet": "Check if your email has been exposed in a data breach with our free dark web scan. Get instant results and learn how to stay protected with 24/7 monitoring.",
+    "host_name": "www.roboform.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.atlancube.com",
+    "name": "How to Check If Your Passwords Have Been Leaked (2026",
+    "snippet": "Go to Have I Been Pwned ( haveibeenpwned .com), enter your email , and you'll see which breaches it has appeared in and what data was exposed.",
+    "host_name": "www.atlancube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "Have I Been Pwned Has a Free API — Check If Any Email",
+    "snippet": "Mar 24, 2026 — Have I Been Pwned (HIBP ) is the internet's largest database of breached credentials. Over 14 billion compromised accounts indexed. Read more",
+    "host_name": "dev.to",
+    "rank": 3,
+    "date": "Mar 24, 2026",
+    "favicon": ""
+  }
+]

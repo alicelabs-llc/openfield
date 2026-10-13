@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://codeberg.org",
+    "name": "Codeberg.org",
+    "snippet": "Codeberg is a non-profit community-led organization that aims to help free and open source projects prosper by giving them a safe and friendly home. Missing:  wanted  Python  Rust  2026",
+    "host_name": "codeberg.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://codeberg.org/Codeberg/Contributing/wiki/Projects",
+    "name": "Projects - Codeberg/Contributing",
+    "snippet": "Codeberg Projects. This document outlines Codeberg's projects and the teams responsible for running them, together with points of contact.",
+    "host_name": "codeberg.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/rust/comments/1wa6iml/looking_for_open_source_projects_to_contribute",
+    "name": "Looking for Open Source Projects to Contribute : r/rust - Reddit",
+    "snippet": "Hello everyone,. I'm trying to get a bit more experience with rust and would like to know if anyone can recommend a project to work on. Missing:  contributors  | Show results with:",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://codeberg.org/guix/guix/pulls",
+    "name": "Pull requests - guix/guix - Codeberg.org",
+    "snippet": "guix - Transactional package manager, declarative GNU/Linux distribution, reproducible deployment tool, and more!",
+    "host_name": "codeberg.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rustify.rs/articles/best-rust-open-source-projects-to-contribute-2026",
+    "name": "Best Rust Open Source Projects to Contribute to in 2026 - Rustify",
+    "snippet": "The best Rust open source projects for contributors in 2026, ranked by career impact, friendliness to newcomers, and what you'll actually learn. Missing:  Python  | Show results with:",
+    "host_name": "rustify.rs",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

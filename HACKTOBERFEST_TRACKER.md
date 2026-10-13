@@ -1,24 +1,31 @@
 # Hacktoberfest 2026 — Tracker
 
-**Estado al:** 2026-10-07 04:30 UTC
+**Estado al:** 2026-10-13 03:30 UTC
 **Cuenta GitHub:** @eddyflores100-lang
 **Cuenta GitLab:** @eddyflores100
 **Meta:** 4 PRs merged antes del 31 oct 2026
 
 ---
 
-## PRs en proceso (6)
+## ✅ PRs merged (1)
+
+| # | Plataforma | Proyecto | PR | Issue | Merge date | Lenguaje |
+|---|------------|----------|----|-------|------------|----------|
+| 1 | GitHub | meetdino/dino | #124 | #106 rust-version | 2026-10-07 | Rust |
+
+**Hacktoberfest cuenta:** 1/4 ✅
+
+## PRs en proceso (5)
 
 | # | Plataforma | Proyecto | MR/PR | Issue | Estado | Lenguaje |
 |---|------------|----------|-------|-------|--------|----------|
-| 1 | GitHub | meetdino/dino | #124 | #106 rust-version | ✅ Maintainer aprobó, bump 1.91 aplicado, esperando merge | Rust |
-| 2 | GitLab | OpenMW/openmw | !5667 | #9374 stormDirection | ✅ 11445 tests verdes, esperando aprobación | C++ |
+| 2 | GitLab | OpenMW/openmw | !5667 | #9374 stormDirection | ✅ MERGEABLE. Maintainer Assumeru sugirió migrar a Lua. Respondido + issue follow-up #9394 abierto (2026-10-13). Pipeline MANUAL. | C++ |
 | 3 | GitLab | inkscape/extensions | !738 | #634 Tspan | ❌ Cerrado (mi fix estaba mal) | Python |
-| 4 | GitLab | inkscape/extensions | !739 | #625 gutter | ✅ Pipeline SUCCESS, listo para merge | Python |
-| 5 | GitLab | inkscape/inkscape | !8203 | #5230 Twitter→X | ✅ Abierto, sin conflictos | C++ |
-| 6 | GitLab | fdroid/fdroidclient | !1786 | #3361 TalkBack | ✅ ktfmt aplicado, pipeline corriendo | Kotlin |
+| 4 | GitLab | inkscape/extensions | !739 | #625 gutter | ✅ Pipeline SUCCESS, NOT_APPROVED. Ping de review publicado (2026-10-13). | Python |
+| 5 | GitLab | inkscape/inkscape | !8203 | #5230 Twitter→X | (sin actualizar hoy — Cloudflare bloqueó verificación) | C++ |
+| 6 | GitLab | fdroid/fdroidclient | !1786 | #3361 TalkBack | ✅ Rebasing 2026-10-13: 3 commits rehechos sobre master 9bbfa19, force-push OK, pipeline RUNNING con sha 7fe864f9, MERGEABLE sin conflictos. | Kotlin |
 
-**Mergeables ya:** 4 (dino #124, OpenMW !5667, inkscape !739, fdroidclient !1786 cuando pipeline termine)
+**Mergeables ya:** 3 (OpenMW !5667, inkscape !739, fdroidclient !1786) + 1 mergeado (dino #124)
 
 ---
 

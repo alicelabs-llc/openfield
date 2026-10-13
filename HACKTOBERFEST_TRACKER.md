@@ -7,25 +7,34 @@
 
 ---
 
-## ✅ PRs merged (1)
+## ✅ PRs merged (2)
 
 | # | Plataforma | Proyecto | PR | Issue | Merge date | Lenguaje |
 |---|------------|----------|----|-------|------------|----------|
 | 1 | GitHub | meetdino/dino | #124 | #106 rust-version | 2026-10-07 | Rust |
+| 2 | GitLab | inkscape/extensions | !739 | #625 gutter | 2026-10-13 | Python |
 
-**Hacktoberfest cuenta:** 1/4 ✅
+**Hacktoberfest cuenta:** 2/4 ✅✅
 
-## PRs en proceso (5)
+## PRs en proceso (3 abiertos)
 
 | # | Plataforma | Proyecto | MR/PR | Issue | Estado | Lenguaje |
 |---|------------|----------|-------|-------|--------|----------|
-| 2 | GitLab | OpenMW/openmw | !5667 | #9374 stormDirection | ✅ MERGEABLE. Maintainer Assumeru sugirió migrar a Lua. Respondido + issue follow-up #9394 abierto (2026-10-13). Pipeline MANUAL. | C++ |
-| 3 | GitLab | inkscape/extensions | !738 | #634 Tspan | ❌ Cerrado (mi fix estaba mal) | Python |
-| 4 | GitLab | inkscape/extensions | !739 | #625 gutter | ✅ Pipeline SUCCESS, NOT_APPROVED. Ping de review publicado (2026-10-13). | Python |
-| 5 | GitLab | inkscape/inkscape | !8203 | #5230 Twitter→X | (sin actualizar hoy — Cloudflare bloqueó verificación) | C++ |
-| 6 | GitLab | fdroid/fdroidclient | !1786 | #3361 TalkBack | ✅ Rebasing 2026-10-13: 3 commits rehechos sobre master 9bbfa19, force-push OK, pipeline RUNNING con sha 7fe864f9, MERGEABLE sin conflictos. | Kotlin |
+| 3 | GitLab | OpenMW/openmw | !5667 | #9374 stormDirection | ✅ MERGEABLE. Conversación activa con Assumeru + follow-up issue #9394. | C++ |
+| 4 | GitLab | fdroid/fdroidclient | !1786 | #3361 TalkBack | ✅ MERGEABLE (post-rebase). Pipeline verde con sha 7fe864f9. | Kotlin |
+| 5 | GitHub | Ergane-Foundation/vajra | #37 | #29 macOS installer | 🟡 Feedback NamanmeetSingh aplicado en 6f356fc. start_macos.sh ya no llama install.sh + check Suricata. Esperando re-review. | Bash |
+| 6 | GitHub | Ishannaik/harbour | #57 | #41 control chars | 🟡 Feedback CodeRabbit aplicado en 8605d4c. Tabs/CR/LF reemplazados con espacios. Esperando re-review. | Rust |
 
-**Mergeables ya:** 3 (OpenMW !5667, inkscape !739, fdroidclient !1786) + 1 mergeado (dino #124)
+## Otros
+
+| # | Plataforma | Proyecto | Issue | Estado |
+|---|------------|----------|-------|--------|
+| - | GitLab | inkscape/extensions | !738 #634 Tspan | ❌ Cerrado (mi fix estaba mal) |
+| - | GitLab | inkscape/inkscape | !8203 #5230 Twitter→X | ⚪ Sin verificar hoy |
+| - | GitHub | NovaCode37/Prism-platform | #388 md5→sha256 | ❌ Asignado a otra persona (PR #530 cerrado, #550 cerrado duplicado) |
+| - | GitHub | NovaCode37/Prism-platform | #446 scan endpoint tests | 🟢 Comentado pidiendo asignación, plan enviado |
+
+**Mergeables ya:** 2 (OpenMW !5667, fdroid !1786) + 2 mergeados + 2 con feedback aplicado esperando re-review
 
 ---
 

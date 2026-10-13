@@ -120,3 +120,59 @@ Stage Summary:
   * Mañana (2026-10-14): revisar si fdroid pipeline terminó verde y si alguno de los 3 GitLab MRs mergeables fue mergeado.
   * Esta semana: enviar 1-2 PRs más desde GitHub (3 patches preparados: vajra #29, harbour #41, prism #388 — ver /home/z/my-project/download/hacktoberfest-*.patch).
   * Anti-ban: 1 PR/día/cuenta, no repetir repo sin respuesta maintainer.
+
+---
+Task ID: 7
+Agent: Super Z (main)
+Task: Enviar los PRs GitHub pendientes y reaccionar a feedback.
+
+Work Log:
+- Token GitHub recibido en chat. Verificado: usuario `eddyflores100-lang` (id 259931436).
+- Intento crear los 3 PRs (vajra, harbour, prism):
+  * **vajra #37**: ya existía (creado 2026-10-09 por el usuario). state=open, 1 comment.
+  * **harbour #57**: ya existía (creado 2026-10-09). state=open, 1 comment de CodeRabbit AI.
+  * **prism #550**: creado exitosamente (HTTP 201). URL: https://github.com/NovaCode37/Prism-platform/pull/550
+- **Investigación del PR previo cerrado en prism** (#530, cerrado por NovaCode37 el 2026-10-09): maintainer explicó que issue #388 ya estaba asignado a otra persona desde el 6 oct. Ofreció issue #446 como reemplazo.
+- **Decisión**: cerrar PR #550 (duplicado no deseado) con disculpa, y reclamar #446.
+  * PR #550 cerrado con comentario explicando (HTTP 200).
+  * Issue #446 comentado pidiendo asignación con plan detallado (HTTP 201, comment id 6136605337). Issue labels: hacktoberfest, help wanted, python. Sin asignados.
+
+- **harbour #57 — fix aplicado según feedback CodeRabbit**:
+  * Feedback original: mi implementación preservaba tabs pero el issue #41 pide reemplazar \\t/\\r/\\n con espacios.
+  * Branch local ya tenía el fix en commit 8605d4c (creado previamente pero no empujado al remote correctamente).
+  * Diff: `\\r | \\n | \\t` reemplazados con ' ' vía `.map()` antes del `.filter(!is_control())`.
+  * Test actualizado: `arrakis\\ndune` → `arrakis dune` (no `arrakisdune`). Cubre explícitamente el caso newline-between-words.
+  * Force-push confirmado: rama remota en 8605d4c con el fix.
+  * Comentario publicado en PR #57 explicando los cambios (HTTP 201, comment id 6136647721).
+
+- **vajra #37 — fix aplicado según feedback NamanmeetSingh**:
+  * Maintainer pidió: (1) remover el llamado a install.sh desde start_macos.sh, (2) agregar check de Suricata.
+  * Edité scripts/start_macos.sh: reemplacé el bloque Step 1 (que llamaba `./scripts/install.sh`) con un check directo de suricata + python3 en PATH. Si falta suricata, imprime `brew install suricata` y exit 1. Si falta python3, imprime URL de python.org y exit 1.
+  * Edité scripts/install.sh: actualicé el mensaje del Darwin guard para apuntar a start_macos.sh y mencionar brew install suricata.
+  * Validé con `bash -n` ambos scripts — sin errores.
+  * Commit `6f356fc start_macos: stop calling install.sh, check Suricata directly` (2 files, +54/-8).
+  * Push exitoso al fork. rama remota ahora en 6f356fc.
+  * Comentario publicado en PR #37 con diff completo y explicación (HTTP 201, comment id 6136680090).
+
+- **Verificación de GitLab MRs (a las ~02:00 UTC)**:
+  * **inkscape/extensions !739**: 🎉 **MERGED**. Maintainer doctormo respondió "I don't think you needed the extra bool on top of the value, but it's not enough of an issue to block" y mergeó. Segundo PR merged para Hacktoberfest.
+  * **fdroid/fdroidclient !1786**: abierto, **MERGEABLE**, sin conflictos, sin comentarios nuevos desde 2026-10-08. Pipeline sha 7fe864f9.
+  * **OpenMW/openmw !5667**: Cloudflare 403, no verificable esta vez. Sin cambios desde el último check (MERGEABLE, conversación con Assumeru activa, issue follow-up #9394 abierto).
+
+Stage Summary:
+- **Hacktoberfest status: 2/4 PRs merged oficialmente** ✅✅
+  1. dino #124 (Rust, GitHub, merged 2026-10-07)
+  2. inkscape/extensions !739 (Python, GitLab, merged 2026-10-13)
+- PRs en proceso activos:
+  * **vajra #37**: feedback aplicado, force-pushed, esperando re-review.
+  * **harbour #57**: feedback CodeRabbit aplicado, force-pushed, esperando re-review.
+  * **OpenMW !5667**: MERGEABLE, conversación activa con Assumeru + issue #9394.
+  * **fdroid !1786**: MERGEABLE, sin actividad nueva, esperando maintainer.
+- **Prism-platform #446**: reclamado, esperando asignación por NovaCode37.
+- **Prism #550**: cerrado como duplicado (issue ya asignado a otra persona).
+- Total acciones esta sesión: 3 notas en PRs, 1 PR creado y cerrado, 1 issue comentado, 1 comentario de disculpa, 1 commit en vajra, 1 force-push en harbour.
+- Scripts guardados: /home/z/my-project/scripts/create_github_prs.py, check_existing_prs.py, prism_pr_history.py, prism_pr550_close_and_apologize.py, prism_446_full.py, prism_446_claim.py, check_vajra_harbour.py, get_full_comments.py, verify_harbour_pr.py, vajra_pr_reply.py, check_gitlab_mrs_final.py.
+- Próximos pasos sugeridos:
+  * Monitorear respuestas de maintainers en vajra #37, harbour #57, OpenMW !5667, fdroid !1786.
+  * Si NovaCode37 asigna #446, empezar a bosquejar tests/test_scan_endpoints.py.
+  * Si vajra #37 o harbour #57 se mergean esta semana, llegamos a 4/4 PRs merged para Hacktoberfest.

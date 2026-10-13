@@ -57,3 +57,38 @@ Stage Summary:
 - inkscape !739 (https://gitlab.com/inkscape/extensions/-/merge_requests/739): opened, pipeline SUCCESS, NOT_APPROVED. Sin comentarios nuevos. Esperando revisión del maintainer (puede tardar días).
 - fdroid !1786 (https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1786): opened, pipeline SUCCESS, pero **detailed_merge_status=NEED_REBASE** — hay que rebase contra master. Sin comentarios nuevos desde 2026-10-08.
 - Archivos de script guardados: /home/z/my-project/scripts/check_mrs.py, check_fdroid.py, check_fdroid_notes.py (recuperables para futuras verificaciones).
+
+---
+Task ID: 5
+Agent: Super Z (main)
+Task: Ejecutar todas las acciones de seguimiento de los 3 MRs GitLab: (1) rebase fdroid !1786, (2) responder Assumeru en OpenMW !5667, (3) ping review en inkscape !739.
+
+Work Log:
+- **fdroid !1786 (NEED_REBASE → MERGEABLE)**:
+  - Clone shallow de master fdroid/fdroidclient en /home/z/my-project/contrib-fdroidclient/clone.
+  - Añadido remote `fork` apuntando a eddyflores100/fdroidclient con token oauth2.
+  - Fetch del branch `fix/3361-talkback-beta-checkbox` desde el fork.
+  - `git rebase origin/master` — limpio, sin conflictos. 3 commits rehechos sobre 9bbfa19 (master HEAD).
+  - Force-push `git push --force-with-lease fork fix/3361-talkback-beta-checkbox` — éxito tras 2 reintentos (Cloudflare bloqueaba al principio). Nuevo HEAD: 7fe864f905d4c4f1ef0bd9aaf6a09ceade9c628d.
+  - Verificación REST: `detailed_merge_status=mergeable`, `has_conflicts=false`. ✅
+
+- **OpenMW !5667 (respuesta a Assumeru)**:
+  - Publicada nota vía POST /projects/7107382/merge_requests/5667/notes.
+  - Contenido: posiciona la migración a Lua como scope separado. Ofrece abrir follow-up issue describiendo la migración C++→Lua (interfaces, ubicación del script, qué pasa con mStormDirection en C++). Mantiene el MR actual mergeable.
+  - HTTP 201, note id 4001508726.
+
+- **inkscape !739 (ping de review)**:
+  - Publicada nota vía POST /projects/5833962/merge_requests/739/notes.
+  - Contenido: ping cortés después de 6 días, menciona pipeline verde en commit e84e6fe8, ofrece hacer cambios si hay feedback.
+  - HTTP 201, note id 4001510133.
+
+- GitHub PR #124 (meetdino/dino): no se pudo verificar — rate limit anónimo y no había token GitHub configurado. No es accionable hoy mismo (PR se creó hoy), solo queda esperar.
+
+Stage Summary:
+- Los 3 MRs GitLab están ahora en estado accionable / mergeable / con thread activa:
+  * fdroid !1786 → **MERGEABLE**, pipeline esperándose que arranque con el nuevo sha.
+  * OpenMW !5667 → MERGEABLE, conversación con Assumeru reactivada con respuesta constructiva.
+  * inkscape !739 → ping de review publicado, pipeline verde.
+- Scripts guardados: /home/z/my-project/scripts/check_mrs.py, check_fdroid.py, check_fdroid_notes.py, check_all_mrs_rest.py, check_two_rest.py, post_openmw_reply.py, post_inkscape_ping.py.
+- Clone de fdroid persistido en /home/z/my-project/contrib-fdroidclient/clone con remotes `origin` y `fork` ya configurados — útil para futuras iteraciones.
+- Próximo check recomendado: en 48-72h ver si fdroid arranca pipeline nuevo y si inkscape/OpenMW responden.

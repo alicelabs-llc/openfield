@@ -1,6 +1,6 @@
 # Hacktoberfest 2026 — Tracker
 
-**Estado al:** 2026-10-13 03:30 UTC
+**Estado al:** 2026-10-13 04:30 UTC
 **Cuenta GitHub:** @eddyflores100-lang
 **Cuenta GitLab:** @eddyflores100
 **Meta:** 4 PRs merged antes del 31 oct 2026
@@ -16,25 +16,26 @@
 
 **Hacktoberfest cuenta:** 2/4 ✅✅
 
-## PRs en proceso (3 abiertos)
+## PRs en proceso (4 abiertos)
 
 | # | Plataforma | Proyecto | MR/PR | Issue | Estado | Lenguaje |
 |---|------------|----------|-------|-------|--------|----------|
-| 3 | GitLab | OpenMW/openmw | !5667 | #9374 stormDirection | ✅ MERGEABLE. Conversación activa con Assumeru + follow-up issue #9394. | C++ |
-| 4 | GitLab | fdroid/fdroidclient | !1786 | #3361 TalkBack | ✅ MERGEABLE (post-rebase). Pipeline verde con sha 7fe864f9. | Kotlin |
-| 5 | GitHub | Ergane-Foundation/vajra | #37 | #29 macOS installer | 🟡 Feedback NamanmeetSingh aplicado en 6f356fc. start_macos.sh ya no llama install.sh + check Suricata. Esperando re-review. | Bash |
-| 6 | GitHub | Ishannaik/harbour | #57 | #41 control chars | 🟡 Feedback CodeRabbit aplicado en 8605d4c. Tabs/CR/LF reemplazados con espacios. Esperando re-review. | Rust |
+| 3 | GitLab | OpenMW/openmw | !5667 | #9374 stormDirection | ✅ MERGEABLE. Conversación con Assumeru + follow-up issue #9394 abierto. | C++ |
+| 4 | GitLab | fdroid/fdroidclient | !1786 | #3361 TalkBack | ✅ MERGEABLE post-rebase. Pipeline verde sha 7fe864f9. Ping intentado (Cloudflare 403). | Kotlin |
+| 5 | GitHub | Ergane-Foundation/vajra | #37 | #29 macOS installer | 🟡 Feedback NamanmeetSingh aplicado en 6f356fc. Esperando re-review. | Bash |
+| 6 | GitHub | Ishannaik/harbour | #57 | #41 control chars | 🟡 Feedback CodeRabbit aplicado en 8605d4c. Esperando re-review. | Rust |
+| 7 | GitHub | NovaCode37/Prism-platform | #554 | #446 scan endpoint tests | 🆕 Acabo de crear. 27 tests en tests/test_scan_endpoints.py. Pasa localmente. | Python |
 
 ## Otros
 
 | # | Plataforma | Proyecto | Issue | Estado |
 |---|------------|----------|-------|--------|
 | - | GitLab | inkscape/extensions | !738 #634 Tspan | ❌ Cerrado (mi fix estaba mal) |
-| - | GitLab | inkscape/inkscape | !8203 #5230 Twitter→X | ⚪ Sin verificar hoy |
-| - | GitHub | NovaCode37/Prism-platform | #388 md5→sha256 | ❌ Asignado a otra persona (PR #530 cerrado, #550 cerrado duplicado) |
-| - | GitHub | NovaCode37/Prism-platform | #446 scan endpoint tests | 🟢 Comentado pidiendo asignación, plan enviado |
+| - | GitLab | inkscape/inkscape | !8203 #5230 Twitter→X | ❌ Cerrado (doctormo prefirió remover templates en !8204) |
+| - | GitHub | NovaCode37/Prism-platform | #388 md5→sha256 | ❌ Asignado a otra persona |
+| - | GitHub | NovaCode37/Prism-platform | #550 (PR) | ❌ Cerrado por duplicado con #530 |
 
-**Mergeables ya:** 2 (OpenMW !5667, fdroid !1786) + 2 mergeados + 2 con feedback aplicado esperando re-review
+**Mergeables ya:** 2 (OpenMW !5667, fdroid !1786) + 2 mergeados + 3 esperando re-review/CI
 
 ---
 

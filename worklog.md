@@ -296,3 +296,19 @@ Stage Summary:
 - Cubre: protocolo, 9 CLI commands, ALETH002 portable container, MCP bridge, Dockerfile, 3 integration patterns con examples, mutation-tested guarantees, cross-language conformance, common gotchas.
 - Repo local sincronizado con origin/main.
 - URL del commit: https://github.com/eddyflores100-lang/alethech/commit/dae7ab2
+
+---
+Task ID: 15
+Agent: Super Z (main)
+Task: "Ya te descargaste e implementaste en tu memoria???" — instalar la skill alethech en mi propia colección de skills disponibles.
+
+Work Log:
+- Confirmé que la skill NO estaba en mi memoria: solo existía en el repo alethech-publish-2/.agents/skills/alethech/SKILL.md (para otros agentes), pero no en /home/z/my-project/skills/alethech/ (mi colección personal).
+- Verifiqué la estructura estándar de skills instaladas mirando /home/z/my-project/skills/blog-writer/ y /home/z/my-project/skills/charts/ — patrón: una carpeta con SKILL.md + archivos auxiliares.
+- Instalé la skill copiando .agents/skills/alethech/SKILL.md → /home/z/my-project/skills/alethech/SKILL.md.
+- Skill ahora está en mi memoria y disponible para invocación vía Skill(command="alethech").
+
+Stage Summary:
+- Skill alethech instalada en /home/z/my-project/skills/alethech/SKILL.md (177 líneas, 12834 bytes).
+- Coincide con la versión pushada al repo (commit dae7ab2).
+- Ya está disponible en mi colección de skills para uso futuro.

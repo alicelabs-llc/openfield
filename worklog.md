@@ -256,3 +256,43 @@ Stage Summary:
   * fdroid !1786 — MERGEABLE pero token GitLab revocado, no verificable ahora.
 - Prism #554 + #446 perdidos (repo eliminado).
 - 18 PRs paralelos detectados en awesome-lists (no parte de este trabajo, pero podrían contar como Hacktoberfest si se mergean).
+
+---
+Task ID: 14
+Agent: Super Z (main)
+Task: "Busca el repo de aletech y descarga la skill e implementa las mejoras del repo"
+
+Work Log:
+- Encontré el repo alethech en /home/z/my-project/alethech-publish-2 (origin: github.com/eddyflores100-lang/alethech).
+- Detecté que local main estaba 7 commits detrás de origin/main. Hice `git stash` (working tree tenía cambios CRLF noise) + `git pull origin main`. Pull exitoso, ahora local está en 40d5c24 (HEAD de origin/main al iniciar).
+- Los 7 commits nuevos incluyen mejoras significativas:
+  * 88b2ab2 docker: Dockerfile para MCP stdio server
+  * 5292bf0 docs(ops): vigil integration + memory_writeback.sh
+  * 37593b2 docs(ops): audit/snapshot/drill integration + memory_audit_seal.sh
+  * 096f13d fix: offline search, signing-key binding, broken extension downloads (#12)
+  * a23685b publish: 0.9.5 extension + offline viewer downloads (#13)
+  * 86f71bd chore: server.json 0.9.2 → 0.9.5
+  * 40d5c24 examples: memory_vault.py + memory_recall.py + INTEGRATION-MEMORY.md
+
+- Restauré el SKILL.md del historial de git (commit 0a2367b que lo añadió, aba164e que lo eliminó durante rename fidelis→memex).
+- El archivo histórico describía el viejo `fidelis-memory` (un servidor de memoria BM25+dense vectors), que ya NO es lo que alethech hace. Lo reescribí completamente para reflejar el estado actual de alethech:
+  * Frontmatter actualizado: name=alethech, license=MIT, compatibility Python 3.10+, pip install alethech==0.9.5
+  * Descripción del protocolo actual: Ed25519-signed commits, hash-linked DAG, ALETH002 .aleth v2 con recovery slot
+  * 9 CLI commands documentados (init/commit/evidence/verify/export/import/migrate/key rotate/key revoke/search)
+  * MCP stdio bridge (alethech-mcp) con 2 tools (read-only, credentials stay configuration)
+  * Dockerfile para MCP server (Glama inspector-friendly)
+  * 3 integration patterns: memory_vault (two-layer signed chain + encrypted vault), vigil (fail-closed writeback), audit/snapshot/drill
+  * 8 mutation-tested guarantees con paths de tests
+  * Cross-language conformance table (Python/TS/Rust/WASM/Browser)
+  * Common gotchas actualizado a v0.9.5 (executable name, plain JSON store, key rotation semantics, .aleth v1 still readable, v0.9.5 fixes)
+  * URLs a repo, PyPI, MCP Registry, spec, threat model, conformance vectors, llms.txt, sitio interactivo
+
+- Commit dae7ab2 "docs(skills): restore and rewrite agent skill manifest for v0.9.5" (1 file, +177 líneas).
+- Push exitoso a origin/main: 40d5c24..dae7ab2.
+
+Stage Summary:
+- Skill restaurada y completamente reescrita en .agents/skills/alethech/SKILL.md (177 líneas).
+- Refleja estado actual de alethech v0.9.5 (no el viejo fidelis-memory).
+- Cubre: protocolo, 9 CLI commands, ALETH002 portable container, MCP bridge, Dockerfile, 3 integration patterns con examples, mutation-tested guarantees, cross-language conformance, common gotchas.
+- Repo local sincronizado con origin/main.
+- URL del commit: https://github.com/eddyflores100-lang/alethech/commit/dae7ab2

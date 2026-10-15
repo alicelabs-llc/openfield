@@ -351,3 +351,54 @@ Stage Summary:
   * `/home/z/my-project/skills/alethech/` — skill descomprimida con estructura completa (SKILL.md, _meta.json, skill-card.md, .clawhub/origin.json).
 - En cada boot del contenedor, start.sh detectará el `.alethech.usermark` y cargará la skill automáticamente.
 - `clawhub list` confirma que la skill está instalada y reconocida por el sistema.
+
+---
+Task ID: 17
+Agent: Super Z (main)
+Task: "Ok, ahora revisa que mas podemos hacer en otros lados, no en gitlab ni github" — buscar forjas alternativas.
+
+Work Log:
+- Investigé forjas alternativas a GitHub/GitLab:
+  * **Codeberg** (Forgejo) — API pública v1, sin auth para lectura. Muy activo en Europa.
+  * **SourceHut** — API GraphQL requiere auth; REST endpoints no expuestos públicamente en este momento (502 Bad Gateway).
+  * **Launchpad** — Ubuntu/Canonical; bugs mainly, no PR-based flow tradicional.
+  * **Bitbucket** — Atlassian; poco OSS moderno con Hacktoberfest.
+
+- **Búsqueda en Codeberg** (la forja más viable):
+  * 20 repos con topic `hacktoberfest` identificados, sorted por stars.
+  * Top repos viables:
+    - wafrn/wafrn (173⭐ TypeScript, pushed hoy) — Federated social media like Tumblr
+    - GeopJr/Tuba (88⭐ Vala, pushed hace 2 semanas) — Mastodon client for GNOME
+    - Calamares/calamares (63⭐ C++, pushed hace 1 mes) — Linux installer framework
+    - mfussenegger/nvim-lint (39⭐ Lua, pushed hoy) — Neovim linter plugin
+    - spade-lang/spade (30⭐ Rust, pushed hoy) — HDL language
+    - RIOT/RIOT (22⭐ C, pushed hoy) — IoT OS (mirror)
+    - castle-engine/castle-engine (12⭐ Pascal) — Game engine
+
+- **Issues analizados en detalle**:
+  * spade-lang/spade #185 "Type errors don't print expected in notes" — Good first issue, hacktoberfest label, 2 comments viejos de 2022, refactor del output de diagnostics.
+  * GeopJr/Tuba #1805 "Add remote instance local timeline browsing" — Enhancement, 0 comments, creado 6 oct.
+  * GeopJr/Tuba #1802 "Indication of hidden posts from blocked user within a thread" — Enhancement, 0 comments.
+  * **mfussenegger/nvim-lint #16** "`for_sarif` parser crashes on SARIF results entries without a `locations` field" — Bug, 0 comments, sugerencia de fix de 1 línea incluida en el issue (`for _, location in ipairs(result.locations or {}) do`). Lua, trivial. ⭐ El más accionable.
+  * mfussenegger/nvim-lint #17 "bandit: pass --ini so a project's .bandit is read" — Bug, 0 comments, sugerencia de fix incluida en el issue (cambiar args del linter).
+  * mfussenegger/nvim-lint #18 "Incorrect root detected by terraform linter" — Bug, 0 comments, más complejo.
+
+- **Verificación de políticas anti-LLM/AI**: Ninguno de los 3 top repos (nvim-lint, Tuba, spade) tiene CONTRIBUTING.md (HTTP 404). Sin políticas explícitas que prohíban AI. README sin restricciones AI tampoco.
+
+- **Actividad reciente verificada** (todos los top repos tienen commits recientes):
+  * mfussenegger/nvim-lint: 3 commits en sept/oct (incluyendo "Highlight that PRs should go to codeberg repo in readme" — importante: mantainer está moviendo PRs de GitHub a Codeberg).
+  * GeopJr/Tuba: 3 commits en sept (actividad regular).
+  * spade-lang/spade: commit de hoy (2026-10-09).
+
+Stage Summary:
+- **Mejores candidatos para PR en Codeberg** (no GitHub ni GitLab):
+  1. **mfussenegger/nvim-lint #16** — Bug Lua, fix de 1 línea ya sugerido en el issue body. Trivial, 0 comments, no controversy.
+  2. **mfussenegger/nvim-lint #17** — Bug Lua, fix sugerido en el issue (cambiar args de bandit). Trivial.
+  3. **GeopJr/Tuba #1805** — Feature request en Vala (más complejo).
+  4. **spade-lang/spade #185** — Rust, refactor de diagnostics output, pero issue de 2022 (puede estar stale).
+
+- **Importante sobre Hacktoberfest 2026**: El archivo HACKTOBERFEST_2026_REAL_RULES.md (local) sugiere que el formato cambió a "Open-Source AI Challenges" en DEV.to y ya NO cuenta PRs. Sin embargo, el tracker HACKTOBERFEST_TRACKER.md sigue contando PRs merged (3/4 actualmente). Las reglas reales de 2026 no están claras desde la documentación local. Asumiendo que el PR-based sigue siendo válido:
+  * Codeberg PRs cuentan si el repo tiene topic `hacktoberfest` o label `hacktoberfest-accepted`.
+  * Los 3 issues identificados arriba cumplen (todos tienen label hacktoberfest o están en repos con topic hacktoberfest).
+
+- **Scripts guardados**: find_codeberg_issues.py, investigate_libredb.py, investigate_libredb_v2.py, find_sourcehut.py, investigate_codeberg_top.py, read_top_codeberg_issues.py, check_ai_policies.py.

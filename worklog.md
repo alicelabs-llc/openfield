@@ -402,3 +402,63 @@ Stage Summary:
   * Los 3 issues identificados arriba cumplen (todos tienen label hacktoberfest o están en repos con topic hacktoberfest).
 
 - **Scripts guardados**: find_codeberg_issues.py, investigate_libredb.py, investigate_libredb_v2.py, find_sourcehut.py, investigate_codeberg_top.py, read_top_codeberg_issues.py, check_ai_policies.py.
+
+---
+Task ID: 18
+Agent: Super Z (main)
+Task: "Tengo un repo para cold email, en mis repos" — implementar mejoras en el repo de cold email (NexusCold).
+
+Work Log:
+- Identifiqué el repo NexusCold en la cuenta GitHub del usuario:
+  * `eddyflores100-lang/NexusCold` (Python, archivado como "respaldo histórico" según README)
+  * `alicelabs-llc/NexusCold` (repo activo, migrado)
+- Decidí trabajar contra `alicelabs-llc/NexusCold` (el repo actual).
+
+- Análisis del estado actual:
+  * 3 commits en main (initial commit + 2 license changes)
+  * Sin tests automatizados (solo scripts ad-hoc _test_import.py, test_debug.py, test_sources.py)
+  * Sin GitHub Actions / CI
+  * Sin requirements.txt (las deps estaban documentadas en README pero no en archivo)
+  * Sin __init__.py (no se puede importar como paquete)
+  * README solo 921 bytes (solo Windows, sin install Linux/macOS)
+  * 1 PR open de 2026-05-16 creado por Jules (google-labs-jules bot) — fixes GUI/scrapers, no relacionado con mi trabajo.
+
+- Acciones tomadas:
+  1. **Fork** creado: `eddyflores100-lang/NexusCold-1` (HTTP 202).
+  2. **Clone** del upstream a /home/z/my-project/contrib-nexuscold/upstream.
+  3. **Branch nueva**: `ci-tests-packaging`.
+  4. **41 tests pytest** en tests/:
+     - tests/test_enricher_core.py (35 tests): EnrichedCompany dataclass (defaults, 37-field contract), clean_email (skip-list, length, regex), clean_phone (US + international normalization), extract_domain, is_valid_website, get_cache_key (determinism), run_enrichment (empty input, optional callback/stop_flag).
+     - tests/test_email_warmer.py (2 tests): smoke imports.
+     - tests/test_imports.py (4 tests): module imports + callable entry points.
+     - tests/conftest.py: sys.path setup.
+  5. **GitHub Actions workflow** (.github/workflows/ci.yml): matrix Python 3.10/3.11/3.12 en ubuntu-latest, instala requirements.txt + pytest, corre la suite + smoke import gate.
+  6. **requirements.txt**: pins las 7 dependencias con versiones mínimas (customtkinter, openpyxl, requests, beautifulsoup4, aiohttp, pandas, brotli). Brotli era "the missing dep" según PR #1 de Jules — ahora explícito.
+  7. **__init__.py**: paquete importable, expone EnrichedCompany + run_enrichment como API pública.
+  8. **.gitignore expandido**: virtualenvs, IDE, build artifacts, credentials (.env nunca commiteado), OS noise.
+  9. **README.md reescrito** (165 líneas, era 30):
+     - Badges (Python version, license, CI, tests)
+     - Install Linux/macOS + Windows + binario precompilado
+     - Usage examples (GUI + como librería con `from enricher_core import ...`)
+     - Tests section: `pytest tests/ -v`
+     - Arquitectura de enricher_core.py (dataclass → helpers → cache → rate-limit → sources → AI heuristic → orchestration)
+     - Country-coverage table (USA EIN/sam.gov, UK Companies House, Brasil CNPJ, EU VAT, MX RFC, AU ABN, IN CIN, Latam RUC/RUT)
+     - Usage caveats (CAN-SPAM/GDPR/LGPD, robots.txt, legitimate email warming)
+
+- 1 iteración de fixes en los tests: 5 fallaron en la primera pasada porque asumí comportamientos que no eran los reales (clean_email no strip de 'mailto:', extract_domain devuelve subdomain completo, clean_phone normaliza US a '+1 (XXX) XXX-XXXX'). Corregí los tests para que coincidan con el comportamiento real.
+
+- Verificación final:
+  * pytest tests/ -v = 41 passed in 0.46s.
+  * Smoke imports OK.
+- Commit: `9659a072 ci: add pytest suite, GitHub Actions, requirements.txt, package init` (10 files changed, +547/-16).
+- Push exitoso al fork.
+- **PR #1 creado**: https://github.com/alicelabs-llc/NexusCold/pull/1
+  * state=open, draft=False
+  * **mergeable=True, mergeable_state=clean** ✅
+  * 10 files changed, +547/-16
+  * CI aún no arrancado (workflow recién creado, GitHub tarda en detectar el nuevo .github/workflows/ci.yml en el fork head).
+
+Stage Summary:
+- PR #1 en alicelabs-llc/NexusCold MERGEABLE + CLEAN. Tú eres maintainer del repo upstream, así que el merge depende solo de ti.
+- Repo ahora tiene: 41 tests, CI en GitHub Actions, requirements.txt, __init__.py, README profesional.
+- Scripts guardados: scripts/find_codeberg_issues.py, investigate_libredb.py, investigate_libredb_v2.py, find_sourcehut.py, investigate_codeberg_top.py, read_top_codeberg_issues.py, check_ai_policies.py, create_nexuscold_pr.py.

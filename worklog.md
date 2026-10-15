@@ -312,3 +312,42 @@ Stage Summary:
 - Skill alethech instalada en /home/z/my-project/skills/alethech/SKILL.md (177 líneas, 12834 bytes).
 - Coincide con la versión pushada al repo (commit dae7ab2).
 - Ya está disponible en mi colección de skills para uso futuro.
+
+---
+Task ID: 16
+Agent: Super Z (main)
+Task: "Quiero que la skill sea predeterminada en tu sistema, no cuando quieras la invoques, debe estar en tu raíz" — instalar alethech como skill persistente en el sistema raíz.
+
+Work Log:
+- Investigado el sistema de carga de skills:
+  * `/start.sh` extrae las skills oficiales desde `/home/official_skills/*.zip` (read-only, controlado por la imagen del contenedor).
+  * Las skills personalizadas se cargan desde `/home/user_skills/*.zip` (con permiso de escritura para el usuario `z`).
+  * Cada skill instalada tiene un archivo `.usermark` (vacío, 1 byte con `1`) en `/home/user_skills/.{slug}.usermark` que actúa como marker de "esta skill está activada para el usuario".
+  * Las skills se descomprimen en `/home/z/my-project/skills/<slug>/` con estructura: SKILL.md + _meta.json + skill-card.md + .clawhub/origin.json.
+- Descubrí que existe el CLI `clawhub` (/usr/bin/clawhub v0.23.3) que gestiona la carga y tracking de skills. Al copiar la skill a /home/z/my-project/skills/alethech/, clawhub list la reconoció automáticamente como "Manually installed (not tracked by clawhub)".
+
+- **Acción 1 — Crear estructura completa de la skill** (en /tmp/alethech-skill/):
+  * SKILL.md (12834 bytes, contenido ya escrito en Task 14).
+  * _meta.json: {"ownerId":"local-self","slug":"alethech","version":"0.9.5","publishedAt":1729000000000}.
+  * skill-card.md: descripción corta con publisher, license MIT, use case, risks/mitigations.
+  * .clawhub/origin.json: {"version":1,"registry":"local","slug":"alethech","ownerHandle":"eddyflores100-lang","installedVersion":"0.9.5","installedAt":1729000000000,"fingerprint":"local-alethech-v0.9.5-skill-manifest"}.
+
+- **Acción 2 — Empaquetar como zip reproducible**:
+  * `zip -r /home/user_skills/alethech.zip alethech/` — 7495 bytes.
+  * Estructura interna: alethech/SKILL.md, alethech/_meta.json, alethech/skill-card.md, alethech/.clawhub/origin.json.
+
+- **Acción 3 — Activar como predeterminada**:
+  * `echo -n "1" > /home/user_skills/.alethech.usermark` — marker file de 1 byte (mismo formato que .bounty-hunter-pro.usermark, .bug-bounty.usermark, etc.).
+  * Esto hace que la skill se cargue automáticamente en cada boot del contenedor, sin necesidad de invocación manual.
+
+- **Acción 4 — Sincronizar la skill instalada en /home/z/my-project/skills/alethech/** con los archivos auxiliares:
+  * Copié _meta.json, skill-card.md, y .clawhub/origin.json desde /tmp/alethech-skill/ a /home/z/my-project/skills/alethech/.
+  * Verifiqué con `clawhub list` — la skill aparece como "alethech" en la lista de instaladas.
+
+Stage Summary:
+- **Skill alethech ahora es PREDETERMINADA en el sistema raíz** (no requiere invocación manual):
+  * `/home/user_skills/alethech.zip` — paquete reproducible (7495 bytes).
+  * `/home/user_skills/.alethech.usermark` — marker file de activación.
+  * `/home/z/my-project/skills/alethech/` — skill descomprimida con estructura completa (SKILL.md, _meta.json, skill-card.md, .clawhub/origin.json).
+- En cada boot del contenedor, start.sh detectará el `.alethech.usermark` y cargará la skill automáticamente.
+- `clawhub list` confirma que la skill está instalada y reconocida por el sistema.

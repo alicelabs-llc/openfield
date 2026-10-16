@@ -462,3 +462,41 @@ Stage Summary:
 - PR #1 en alicelabs-llc/NexusCold MERGEABLE + CLEAN. Tú eres maintainer del repo upstream, así que el merge depende solo de ti.
 - Repo ahora tiene: 41 tests, CI en GitHub Actions, requirements.txt, __init__.py, README profesional.
 - Scripts guardados: scripts/find_codeberg_issues.py, investigate_libredb.py, investigate_libredb_v2.py, find_sourcehut.py, investigate_codeberg_top.py, read_top_codeberg_issues.py, check_ai_policies.py, create_nexuscold_pr.py.
+
+---
+Task ID: 19
+Agent: Super Z (main)
+Task: "86f56136e9bdbe4a6fe60d0b8f2e4c277f407590" — token Codeberg recibido, implementar PR en nvim-lint.
+
+Work Log:
+- Token verificado: usuario `eddyflores100` (id=1558921) en Codeberg.
+- Fork creado: `eddyflores100/nvim-lint` via POST /repos/mfussenegger/nvim-lint/forks (requirió Content-Type: application/json explícito).
+- Clone del fork a /home/z/my-project/contrib-nvim-lint/fork.
+- Add upstream remote + fetch master + create branch `fix/sarif-missing-locations`.
+
+- **Implementación del fix** (lua/lint/parser.lua línea 187):
+  * Línea original: `for _, location in ipairs(result.locations) do`  ← crash si `result.locations` es nil
+  * Línea arreglada: `for _, location in ipairs(result.locations or {}) do`
+  * Sugerido por el propio maintainer en el body del issue #16.
+
+- **3 tests nuevos en spec/parser_spec.lua** bajo `describe('for_sarif')`:
+  1. `parses a basic SARIF result with locations` — happy-path coverage (no existía antes).
+  2. `does not crash when a result has no 'locations' field (issue #16)` — regression test usando el JSON exacto del issue body (Verilator-style summary result + regular result). Verifica que el summary se skipcea silenciosamente y el regular se parsea.
+  3. `does not crash when run.results is missing entirely` — pins contract de notifications-only run.
+
+- Commit: `c65d433 fix(parser): guard result.locations in for_sarif (issue #16)` (2 files changed, +111/-1).
+- Push exitoso al fork.
+
+- **PR #20 creado via Codeberg API**: https://codeberg.org/mfussenegger/nvim-lint/pulls/20
+  * state=open, draft=False
+  * **mergeable=True** ✅
+  * Body detallado con root cause, fix, tests, reproduction JSON.
+
+Stage Summary:
+- **PR #20 en Codeberg mergeable=True** ✅
+- Fix de 1 línea (caracter `or {}` añadido) + 110 líneas de tests nuevos (3 casos).
+- Repo: mfussenegger/nvim-lint (39⭐ Lua, pushed hace 2 semanas).
+- Maintainer @mfussenegger es activo en el repo.
+- Este es el primer PR en una forja distinta a GitHub/GitLab — Codeberg (Forgejo).
+
+Scripts guardados: /home/z/my-project/scripts/create_nvimlint_pr.py

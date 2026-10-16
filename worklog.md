@@ -555,3 +555,57 @@ Stage Summary:
 - Candidato #3: wafrn/wafrn#769 (TS, locale date format) — 173⭐, alta visibilidad si se mergea.
 - Candidato #4: cmars/stigmerge#37 (Rust, docs) — good first issue etiquetado.
 - Scripts guardados: scan_codeberg_for_prs.py, scan_codeberg_v2.py, scan_codeberg_v3.py, scan_codeberg_v4.py, scan_codeberg_v5.py, read_top_candidates.py, read_more_candidates.py.
+
+---
+Task ID: 21
+Agent: Super Z (main)
+Task: "Hazlo" — implementar glical #8 (Align Public API For Timezone) en Gleam.
+
+Work Log:
+- Fork creado: eddyflores100/glical via API (HTTP 201).
+- Clone + add upstream + create branch `fix/align-timezone-public-api`.
+- Leyendo spec del issue #1: cada módulo debe tener `parse/1` que toma String y devuelve `Result(#(ModuleType, String), ModuleError)` + `to_string/1` que devuelve String.
+- Inspeccioné el código existente: timezone.gleam ya tiene `parse/2` interno (parser de líneas recursivo usado por calendar.gleam). NO se puede tener `parse/1` y `parse/2` con mismo nombre en Gleam (no overload). Renombré el nuevo a `parse_input/1` (el maintainer permite nombres equivalentes según issue #1).
+- Inspeccioné event.gleam y freebusy.gleam para entender el patrón `to_string/1` y los helpers `util.append_newline`, `util.append_option_property`, `util.name_string_map`.
+
+- **Implementación**:
+  * Nuevo `pub type TimezoneError { ParseError(String) }` — error type module-local.
+  * Nuevo `pub fn parse_input(input: String) -> Result(#(Timezone, String), TimezoneError)` — tokenize CRLF/LF, delegate to internal `parse/2`, wrap errors.
+  * Nuevo `pub fn to_string(tz: Timezone) -> String` — serialise VTIMEZONE + sub-components STANDARD/DAYLIGHT.
+  * Helpers privados: `standard_to_string`, `daylight_to_string`, `append_block_if_nonempty` (avoid stray blank lines on empty lists).
+  * Nuevos imports: `gleam/function`, `gleam/list`, `gleam/string`, `util`.
+
+- **Tests** (test/components/timezone_test.gleam, 8 casos, should-style per issue #2):
+  1. parse_input éxito en VTIMEZONE válida (RFC 5545 sec 3.6.5 example).
+  2. parse_input devuelve tail unconsumed después de END:VTIMEZONE.
+  3. parse_input rechaza input sin BEGIN:VTIMEZONE.
+  4. parse_input rechaza input vacío.
+  5. parse_input tolera LF-only (no solo CRLF).
+  6. to_string round-trip: parse_input → to_string → parse_input da timezone equivalente.
+  7. to_string en Timezone mínima (solo TZID) → string exacto esperado.
+  8. to_string serializa STANDARD sub-component con TZNAME → string exacto esperado.
+
+- Iteraciones:
+  1. Bug 1: puse `import gleam/function` al final del archivo — movido al inicio (Gleam requiere imports al principio).
+  2. Bug 2: originalmente usé `string.trim_right(line, "\\r")` pero esa función en Gleam stdlib 0.67 espera un String a trimar y un String con los chars — cambié a `string.ends_with + string.slice` explícito para claridad.
+  3. Bug 3: cuando `s.name` o `s.comment` son listas vacías, `string.join([], "\\r\\n")` devuelve "", y luego `<> "\\r\\n"` genera blank lines. Creé helper `append_block_if_nonempty` para evitar stray blank lines.
+  4. Bug 4: intenté crear PR con branch name equivocado — creé branch nueva y push exitoso.
+
+- Commit: `f0fca3e feat(timezone): align public API — parse_input/1 + to_string/1` (2 files, +291).
+- Push exitoso al fork.
+
+- **PR #9 creado via Codeberg API**: https://codeberg.org/gvasquez/glical/pulls/9
+  * state=open, draft=False
+  * **mergeable=True** ✅
+
+Stage Summary:
+- 2 PRs abiertos en Codeberg:
+  * PR #20 en nvim-lint (Lua, fix de 1 línea + tests) — mergeable, esperando review.
+  * PR #9 en glical (Gleam, feature nueva + 8 tests) — mergeable, esperando review.
+- Ambos respetan anti-ban:
+  * 1 PR por repo por día ✅
+  * Repos distintos (nvim-lint ≠ glical) ✅
+  * Maintainers activos (ambos pushed hoy) ✅
+  * Issues con 0 comments + 0 assignees ✅
+- Si ambos se mergean → 5/4 PRs merged para Hacktoberfest (2 GitHub + 1 GitLab + 2 Codeberg).
+- Scripts guardados: scan_codeberg_for_prs.py, scan_codeberg_v2.py a v5.py, read_top_candidates.py, read_more_candidates.py, create_glical_pr.py.

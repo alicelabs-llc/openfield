@@ -668,3 +668,69 @@ Stage Summary:
 - DEV.to Week 2 es el más inmediato — tienes hasta el 18 oct (en 2 días) para submit.
 - Escribí el `HACKTOBERFEST_2026_REAL_RULES.md` hace tiempo que documenta este formato — sigue siendo válido.
 - Scripts guardados: ninguno nuevo (los resultados están en worklog).
+
+---
+Task ID: 23
+Agent: Super Z (main)
+Task: "Haz el 4, oteo agebte ya esta en dev" — preparar el proyecto para el hackathon #4: Vultr: Agent Rush Hackathon (3-8 nov 2026, $9K+$5K).
+
+Work Log:
+- Investigé el hackathon correcto: **Vultr: Agent Rush Hackathon** (no "AI Genesis" — ese era TBA). El挑战 es "Blast Radius Zero: Safe Agent Execution on Vultr".
+  * Online Build: 3-8 nov 2026
+  * On-site phase: 8 nov 2026 (Salt Lake City, UT — opcional)
+  * Premio: $9,000 cash + $5,000 Vultr credits (1st: $5K+$3K, 2nd: $3K+$1K, 3rd: $1K+$1K)
+  * Cada participante: $200 in free Vultr credits
+- Spec clave: agente web que ejecuta trabajo REAL (código o browser) dentro de un sandbox en Vultr. "Verifiable output" es requerido.
+- Requisitos técnicos REQUIRED:
+  1. Vultr VM backend (orquestación central)
+  2. Vultr Serverless Inference para todos los LLM calls (OpenAI-compatible en https://api.vultrinference.com/v1)
+  3. Sandbox boundary (Docker container, OpenSandbox/gVisor/E2B como referencia)
+  4. (opcional) Vultr API para throwaway instances
+
+- **Decisión**: el proyecto se llamará **"alethech-agent-vault"** — combina alethech (mi existing project, MIT, MCP Registry listed) como la capa de provenance criptográfica. Cada acción del agente (plan, execute, retry, sandbox block) se firma en un DAG alethech → audit trail tamper-evidente. Esto cumple perfectamente el requerimiento de "verifiable output".
+
+- **Estructura del repo creada** en /home/z/my-project/alethech-agent-vault/:
+  * README.md (97 líneas): qué hace, arquitectura, quickstart, sandbox safety, demo containment moment
+  * Dockerfile.orchestrator + Dockerfile.sandbox: imágenes Docker listas
+  * docker-compose.yml: deploy single-command en Vultr VM
+  * requirements.txt: 9 deps (fastapi, uvicorn, openai, docker, alethech, pytest)
+  * .env.example: VULTR_INFERENCE_API_KEY, ALETHECH_STORE_PATH, sandbox config
+  * src/orchestrator/__init__.py
+  * src/orchestrator/sandbox.py (155 líneas): Docker wrapper con --network=none, --read-only, --memory=512m, --cpus=0.5, --cap-drop=ALL, --security-opt=no-new-privileges, --rm, user=agent. Lazy docker client init para tests sin docker.
+  * src/orchestrator/provenance.py (162 líneas): wrapper alethech con commit(memory_type, content) + evidence(tool, input, output). In-memory fallback cuando alethech no está instalado.
+  * src/orchestrator/agent.py (155 líneas): loop plan→execute→retry (max 3). LLM via OpenAI client apuntando a Vultr Serverless Inference. Heuristics de detección de unsafe patterns (rm -rf, os.system, socket.connect, etc.) → las registra como EvidenceCommit.
+  * src/orchestrator/routes.py (88 líneas): FastAPI con /submit, /status/{task_id}, /health.
+  * src/orchestrator/main.py: entrypoint para uvicorn
+  * src/web/index.html (130 líneas): web UI minimal con submit form + live audit trail view + warning box rojo cuando se detecta sandbox block
+  * tests/test_provenance.py (5 tests): commit shape, audit order, distinct ids, evidence wrapper, verify
+  * tests/test_routes.py (6 tests): health, submit, status, 404, validation (con mock_agent)
+  * tests/test_sandbox.py (6 tests): rm -rf blocked, network blocked, memory cap, read-only rootfs, tmpfs writable (REQUIERE Docker, skip con SKIP_DOCKER_TESTS=1)
+  * docs/ARCHITECTURE.md (139 líneas): diagrama ASCII completo + data flow por task + containment matrix (8 attack classes) + failure modes
+  * docs/DEMO_SCRIPT.md (82 líneas): guión del video de 2-3 min con el "containment moment" requerido (agente intenta rm -rf, sandbox bloquea, alethech firma el intento como EvidenceCommit)
+  * scripts/setup_vultr_vm.sh: provision Vultr VM from scratch (apt install docker, git clone, docker build, docker compose up)
+
+- **Tests verificados**: 11/11 pasan en 1.9s (5 provenance + 6 routes). Los 6 tests de sandbox se skip-an si no hay Docker (SKIP_DOCKER_TESTS=1).
+  * Iteración 1: openai no estaba instalado en el sandbox test → instalado.
+  * Iteración 2: docker module no estaba → instalado.
+  * Iteración 3: docker.from_env() fallaba al instanciar Sandbox porque Docker daemon no está disponible en este container → cambié a lazy init (`_ensure_client()`).
+  * Iteración 4: mock_agent devolvía task_id="test-task-id" fijo pero el endpoint guarda bajo uuid generado → cambié mock para usar side_effect que devuelve AgentResult con el task_id real pasado.
+
+- **Repo creado en GitHub**: https://github.com/eddyflores100-lang/alethech-agent-vault
+- **Commit inicial**: `init: alethech-agent-vault — verifiable agent execution on Vultr` (19 archivos, 1318 líneas).
+- Push exitoso.
+
+- **Plan completo del proyecto** guardado en /home/z/my-project/VULTR_AGENT_RUSH_PLAN.md (229 líneas): challenge, premios, arquitectura, timeline, registration steps, positioning (por qué gana).
+
+Stage Summary:
+- Repo listo: https://github.com/eddyflores100-lang/alethech-agent-vault
+- 11 tests pasando localmente.
+- Plan completo documentado en VULTR_AGENT_RUSH_PLAN.md.
+- Próximos pasos (lo que falta antes del kickoff Nov 3):
+  1. **Usuario debe registrarse** en lablab.ai (https://lablab.ai/ai-hackathons/vultr-hackathon) + Discord.
+  2. **Usuario debe crear cuenta Vultr** (https://www.vultr.com) — los $200 credit llegarán en el kickoff Nov 3.
+  3. Pre-build:_oct 17-29 — mejorar agent.py, agregar tests de integración end-to-end (con mock LLM), pulir frontend.
+  4. Oct 30-Nov 2: provisionar Vultr VM con setup_vultr_vm.sh, smoke test.
+  5. Nov 3 (kickoff): switch LLM endpoint a Vultr Serverless Inference, run real tasks.
+  6. Nov 4-6: pulir demo, grabar video, escribir submission.
+  7. Nov 7: submit final.
+- Anti-ban OK: esto es un hackathon, NO un PR a OSS existente — track distinto de los Hacktoberfest PRs.

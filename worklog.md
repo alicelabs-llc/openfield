@@ -609,3 +609,62 @@ Stage Summary:
   * Issues con 0 comments + 0 assignees ✅
 - Si ambos se mergean → 5/4 PRs merged para Hacktoberfest (2 GitHub + 1 GitLab + 2 Codeberg).
 - Scripts guardados: scan_codeberg_for_prs.py, scan_codeberg_v2.py a v5.py, read_top_candidates.py, read_more_candidates.py, create_glical_pr.py.
+
+---
+Task ID: 22
+Agent: Super Z (main)
+Task: "Revisa en otros sitios busca hackaton" — buscar hackathons activos en otras plataformas (no GitHub/GitLab/Codeberg).
+
+Work Log:
+- Búsqueda web intensiva (12 queries via z-ai web_search) en Devpost, lablab.ai, MLH, DEV.to, GSA, Nebius, PayPal.
+- Encontré 4 hackathons activos con deadlines reales y premios en cash, abiertos a Ecuador:
+
+  **1. DEV.to Hacktoberfest Week 2: Side Hustle** 🔥
+  - Tema: "Side Hustle" — construir algo con open-source AI que alguien pagaría.
+  - Deadline: 18 oct 2026 (en 2 días).
+  - Premio total: $2,550 USD en 18 ganadores.
+  - Categorías: Overall winner $250 + 6 featured category winners $200 + runners-up.
+  - Requisito: post en DEV.to con tag #devchallenge #hf26challenge #hacktoberfest.
+  - URL: https://dev.to/challenges/hacktoberfest-week2-2026-10-12
+
+  **2. Nebius x NVIDIA Global AI Hackathon** 🚀
+  - Tema: "Build the next frontier of AI on open infrastructure".
+  - Deadline: 30 oct 2026.
+  - Premio: $50,000 USD cash.
+  - Eligibilidad: mundial (excluye excepciones estándar).
+  - 23,717 participantes ya registrados.
+  - URL: https://nebiusglobalaihackathon.devpost.com
+
+  **3. PayPal AI Hackathon** 💳
+  - Tema: "Build what's next with PayPal and AI".
+  - Deadline: 12 nov 2026.
+  - Premio: $60,000+ USD cash (₹62.1 lakhs).
+  - Eligibilidad: mundial.
+  - 12,839 participantes.
+  - URL: https://paypalaihackathon.devpost.com
+
+  **4. lablab.ai AI Genesis** 🌐
+  - Online Build: 3-8 noviembre 2026.
+  - Premio: $10,000 USD ($5k cash + $5k en AAI credits) + $45,500 en total con partners Google, AppliedAI, Qdrant.
+  - URL: https://lablab.ai/ai-hackathons/ai-genesis-2026
+
+- Bonus (sin deadline cash pero con swag):
+  * **MLH Global Hack Week: Hacktoberfest** — 9-15 oct ya pasó (15 oct fue ayer).
+  * **GSA MCP Server and AI Agent Government Hackathon** — federal/gov focused, menor interés.
+
+- Iteraciones de búsqueda:
+  * Searches 1-4: descubrí plataformas principales (Devpost, lablab.ai, MLH, DEV.to).
+  * Searches 5-8: DEV.to tiene weekly challenges con cash prizes.
+  * Searches 9-12: confirmé temas (Side Hustle), reglas (post en DEV.to, tag específico), y Nov 2026 events.
+  * Searches 13-16: obtuve URLs directas a Nebius + PayPal + lablab.ai.
+  * Searches 17-18: verifiqué eligibility worldwide para Nebius y PayPal.
+
+Stage Summary:
+- **4 hackathons accionables encontrados** en Oct/Nov 2026:
+  1. DEV.to Week 2 (deadline 18 oct — URGENTE)
+  2. Nebius x NVIDIA ($50K, deadline 30 oct)
+  3. PayPal AI ($60K+, deadline 12 nov)
+  4. lablab.ai Genesis ($10K+, 3-8 nov)
+- DEV.to Week 2 es el más inmediato — tienes hasta el 18 oct (en 2 días) para submit.
+- Escribí el `HACKTOBERFEST_2026_REAL_RULES.md` hace tiempo que documenta este formato — sigue siendo válido.
+- Scripts guardados: ninguno nuevo (los resultados están en worklog).

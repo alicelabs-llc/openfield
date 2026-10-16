@@ -500,3 +500,58 @@ Stage Summary:
 - Este es el primer PR en una forja distinta a GitHub/GitLab — Codeberg (Forgejo).
 
 Scripts guardados: /home/z/my-project/scripts/create_nvimlint_pr.py
+
+---
+Task ID: 20
+Agent: Super Z (main)
+Task: "Busca qué podemos hacer ahí respetando antiban" — escanear Codeberg para más PRs respetando reglas anti-ban.
+
+Work Log:
+- Escaneé Codeberg buscando repos con topic hacktoberfest activos en últimos 7 días. Encontré 22 repos activos, 250 con topic hacktoberfest totales.
+- Apliqué criterios anti-ban estrictos:
+  1. No más de 1 PR por repo por día.
+  2. Repos activos (push en últimos 7 días).
+  3. Issues con 0 comments y 0 assignees.
+  4. Maintainer ha mergeado otros PRs recientemente (proxy: repo activo + topic hacktoberfest).
+  5. Evitar mirrors de GitHub (curl-mirror, RIOT, etc.).
+  6. Evitar issues con auto-generated titles (dependabot/renovate).
+  7. Scope claro y pequeño.
+
+- **Top candidatos identificados**:
+
+  **1. gvasquez/glical** (Gleam, 1⭐, pushed hoy):
+  - Issue #1 "Align Public API For All Modules" es la spec maestra. Define el pattern: cada módulo debe tener `parse/1 → Result(#(ModuleType, String), ModuleError)` y `to_string/1 → String`.
+  - 5 sub-issues idénticos en mecánica: #3 Calendar, #4 Journal, #5 To Do, #6 FreeBusy, #8 Timezone.
+  - Issue #2 "Improve Testing Coverage" — prefiere assert-style tests.
+  - Repo nuevo, maintainer está empujando commits hoy → alta probabilidad de merge rápido.
+  - Cuenta como antiban: pick 1 sub-issue (ej. #8 Timezone), no los 5 a la vez.
+  - **Ventaja**: como es Gleam (lenguaje nuevo), menos competencia, maintainer agradecerá contribuciones.
+
+  **2. wafrn/wafrn** (TypeScript, 173⭐, pushed hoy):
+  - #769 "schedule post dialog displays dates as month/day/year" — bug UI simple, locale-aware formatting. 0c, no assignee.
+  - #766 "Feature idea: assign nick to users" — feature request simple.
+  - #773 "Ability to change order of fediverse attachments" — enhancement UI.
+  - **Ventaja**: 173 stars = mucha visibilidad si se mergea. Repo activo, maintainer responsive.
+  - **Riesgo**: mucha competencia, códigobase grande.
+
+  **3. spade-lang/spade** (Rust, 30⭐, pushed hoy):
+  - #1183 "Techdebt: Remove documentation fields out of hir" — refactor claro.
+  - #1171 "I hate hir::TypeSpec" — refactor.
+  - **Riesgo**: compilador Rust HDL, complejidad alta. Mejor dejar para después.
+
+  **4. cmars/stigmerge** (Rust, 4⭐):
+  - #37 "Rust docs" — good first issue + help wanted. 0c, no assignee.
+  - Repo menos activo (push 2026-07-20), pero issue tagged good first issue.
+
+- **Decisión recomendada (respetando antiban)**:
+  - Ya tenemos PR #20 en nvim-lint esperando review — no tocar ese repo hoy.
+  - Pick glical #8 (Timezone) — repo pequeño, maintainer activo hoy, spec clara en issue #1.
+  - NO escoger wafrn a la vez (otro repo TS grande, mantén ritmo 1 PR/día/cuenta).
+  - Alternativamente: glical #2 (testing coverage) — más open-ended pero el maintainer explicitó preferencia por assert-style.
+
+Stage Summary:
+- Candidato #1: gvasquez/glical#8 (Gleam, Align Public API For Timezone) — 1⭐ repo nuevo, pushed hoy, spec clara.
+- Candidato #2: gvasquez/glical#2 (testing coverage) — más amplio pero bien especificado.
+- Candidato #3: wafrn/wafrn#769 (TS, locale date format) — 173⭐, alta visibilidad si se mergea.
+- Candidato #4: cmars/stigmerge#37 (Rust, docs) — good first issue etiquetado.
+- Scripts guardados: scan_codeberg_for_prs.py, scan_codeberg_v2.py, scan_codeberg_v3.py, scan_codeberg_v4.py, scan_codeberg_v5.py, read_top_candidates.py, read_more_candidates.py.

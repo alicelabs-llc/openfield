@@ -11,6 +11,7 @@
 
 const COMMAND_URL = "https://raw.githubusercontent.com/eddyflores100-lang/agent-bridge-relay/main/command.json";
 const POLL_INTERVAL_MS = 1500;
+const ALARM_NAME = "agent-bridge-poll";
 
 let polling = false;
 let pollTimer = null;
@@ -19,20 +20,44 @@ let activeTabId = null;
 let commandLog = [];
 
 // ============================================================================
+// Use chrome.alarms for persistent polling (survives SW restarts)
+// setInterval alone doesn't work in MV3 — Chrome kills the SW after 30s idle.
+// chrome.alarms wakes the SW back up.
+// ============================================================================
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === ALARM_NAME && polling) {
+    poll();
+  }
+});
+
+chrome.runtime.onStartup.addListener(() => {
+  // Restore polling state on browser restart
+  chrome.storage.local.get(["connected"], (data) => {
+    if (data.connected) {
+      startPolling();
+    }
+  });
+});
+
+// ============================================================================
 // Polling
 // ============================================================================
 
 async function startPolling() {
   if (polling) return;
   polling = true;
-  logToSidepanel("✅ Polling started");
+  logToSidepanel("✅ Polling started (chrome.alarms)");
   chrome.storage.local.set({ connected: true });
 
-  // Immediately fetch current state
-  await poll();
+  // Create a repeating alarm — this is the KEY fix: alarms survive SW restarts
+  await chrome.alarms.create(ALARM_NAME, { periodInMinutes: 0.025 }); // ~1.5s
 
-  // Then poll every 2s
+  // Also use setInterval as a fast-path (works while SW is alive)
   pollTimer = setInterval(poll, POLL_INTERVAL_MS);
+
+  // Immediate poll
+  await poll();
 }
 
 function stopPolling() {
@@ -41,6 +66,7 @@ function stopPolling() {
     clearInterval(pollTimer);
     pollTimer = null;
   }
+  chrome.alarms.clear(ALARM_NAME);
   chrome.storage.local.set({ connected: false });
   logToSidepanel("🔌 Polling stopped");
 }

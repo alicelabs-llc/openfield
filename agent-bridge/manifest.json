@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Agent Bridge — Secure Browser Control",
-  "version": "1.0.0",
-  "description": "Control your browser from anywhere via a private ntfy.sh channel. You stay in control — regenerate the channel ID any time.",
+  "version": "1.1.0",
+  "description": "Control your browser from anywhere via GitHub + webhook.site. No tokens, no ports, no ngrok. You stay in control.",
   "permissions": [
     "tabs",
     "scripting",

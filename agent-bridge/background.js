@@ -10,6 +10,7 @@
 // for the extension). The webhook.site URL is included in each command.
 
 const COMMAND_URL = "https://api.github.com/repos/eddyflores100-lang/agent-bridge-relay/contents/command.json";
+const RESPONSE_URL = "https://api.github.com/repos/eddyflores100-lang/agent-bridge-relay/contents/response.json";
 const GITHUB_TOKEN = "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";
 const POLL_INTERVAL_MS = 2000; // Fast poll while SW is alive
 const ALARM_NAME = "agent-bridge-poll";
@@ -143,15 +144,39 @@ async function poll() {
 // ============================================================================
 
 async function publishResponse(respUrl, obj) {
-  if (!respUrl) {
-    console.warn("[Agent Bridge] No resp_url in command, cannot publish response");
-    return;
-  }
+  // Write response to GitHub repo (response.json) instead of webhook.site
+  // This is more reliable — no external dependency
   try {
-    await fetch(respUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(obj),
+    const content = btoa(JSON.stringify(obj));
+    // Get current SHA of response.json (needed for update)
+    let sha = null;
+    try {
+      const resp = await fetch(RESPONSE_URL, {
+        headers: {
+          "Authorization": `token ${GITHUB_TOKEN}`,
+          "Accept": "application/vnd.github+json",
+        },
+      });
+      if (resp.ok) {
+        const data = await resp.json();
+        sha = data.sha;
+      }
+    } catch (e) { /* file might not exist yet */ }
+
+    const body = {
+      message: `response #${obj.id}: ${obj.action}`,
+      content,
+    };
+    if (sha) body.sha = sha;
+
+    await fetch(RESPONSE_URL, {
+      method: "PUT",
+      headers: {
+        "Authorization": `token ${GITHUB_TOKEN}`,
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
     });
   } catch (e) {
     console.error("[Agent Bridge] Failed to publish response:", e);

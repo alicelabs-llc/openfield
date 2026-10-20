@@ -125,58 +125,37 @@ def send_command(action, **args):
 
 
 def wait_for_response(cmd_seq, timeout=RESPONSE_TIMEOUT):
-    """Poll webhook.site for the response with matching id.
+    """Poll GitHub response.json for the response with matching id.
 
-    Only considers requests received AFTER this function was called, so
-    we don't pick up stale responses from previous commands.
+    The extension writes responses to response.json in the same repo.
+    We poll the GitHub API (no cache) every 1.5s until we find our response.
     """
-    start_time = time.time()
-    deadline = start_time + timeout
-    seen_ids = set()
+    deadline = time.time() + timeout
 
     while time.time() < deadline:
         try:
-            url = f"{WEBHOOK_API}?sorting=desc&per_page=10"
-            req = urllib.request.Request(url, method="GET")
-            with urllib.request.urlopen(req, context=_ctx, timeout=10) as resp:
-                data = json.loads(resp.read().decode())
+            status, data = gh_api("GET", "contents/response.json")
+            if status != 200:
+                time.sleep(1.5)
+                continue
 
-            requests_list = data.get("data", [])
-            for r in requests_list:
-                req_id = r.get("uuid")
-                if req_id in seen_ids:
-                    continue
-                seen_ids.add(req_id)
-                # Skip requests that arrived before we started waiting
-                created_at_str = r.get("created_at", "")
-                if created_at_str:
-                    try:
-                        # webhook.site returns ISO 8601 with microseconds
-                        from datetime import datetime, timezone
-                        created_at = datetime.fromisoformat(created_at_str.replace("Z", "+00:00"))
-                        # Compare as unix timestamps
-                        if created_at.timestamp() < start_time - 1:
-                            continue  # stale, skip
-                    except (ValueError, OSError):
-                        pass
-                try:
-                    body = json.loads(r.get("content", "{}"))
-                except (json.JSONDecodeError, TypeError):
-                    continue
-                if body.get("id") == cmd_seq:
-                    if body.get("ok"):
-                        result = body.get("result")
-                        if isinstance(result, (dict, list)):
-                            print(f"✓ {json.dumps(result, indent=2)[:600]}")
-                        else:
-                            print(f"✓ {result}")
+            content = base64.b64decode(data["content"]).decode()
+            body = json.loads(content)
+
+            if body.get("id") == cmd_seq:
+                if body.get("ok"):
+                    result = body.get("result")
+                    if isinstance(result, (dict, list)):
+                        print(f"✓ {json.dumps(result, indent=2)[:600]}")
                     else:
-                        print(f"✗ error: {body.get('error', 'unknown')}")
-                    return body
+                        print(f"✓ {result}")
+                else:
+                    print(f"✗ error: {body.get('error', 'unknown')}")
+                return body
         except Exception as e:
-            print(f"  poll error: {e}", file=sys.stderr)
+            pass  # response.json might not exist yet
 
-        time.sleep(RESPONSE_POLL_INTERVAL)
+        time.sleep(1.5)
 
     print("  ⏱ no response (timeout)")
     return None

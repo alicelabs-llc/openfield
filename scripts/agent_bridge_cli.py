@@ -72,9 +72,21 @@ def get_file_sha():
     return data.get("sha")
 
 
+def get_command_state():
+    """Read the current command sequence + file SHA from GitHub."""
+    status, data = gh_api("GET", f"contents/{COMMAND_FILE}")
+    content = base64.b64decode(data["content"]).decode()
+    cmd = json.loads(content)
+    return cmd.get("cmd_seq", 0), data.get("sha")
+
+
 def send_command(action, **args):
     """Write a command to the GitHub repo file. The extension polls and executes."""
     global _cmd_seq, _file_sha
+
+    # Always read the current state from GitHub to avoid sequence conflicts
+    if _file_sha is None:
+        _cmd_seq, _file_sha = get_command_state()
 
     _cmd_seq += 1
     cmd = {
@@ -88,8 +100,12 @@ def send_command(action, **args):
         json.dumps(cmd, indent=2).encode()
     ).decode()
 
-    if _file_sha is None:
-        _file_sha = get_file_sha()
+    # Always get the latest SHA before writing (avoids 409 conflict)
+    try:
+        _, latest = gh_api("GET", f"contents/{COMMAND_FILE}")
+        _file_sha = latest.get("sha", _file_sha)
+    except Exception:
+        pass
 
     status, resp = gh_api("PUT", f"contents/{COMMAND_FILE}", {
         "message": f"cmd #{_cmd_seq}: {action}",
@@ -109,13 +125,18 @@ def send_command(action, **args):
 
 
 def wait_for_response(cmd_seq, timeout=RESPONSE_TIMEOUT):
-    """Poll webhook.site for the response with matching id."""
-    deadline = time.time() + timeout
+    """Poll webhook.site for the response with matching id.
+
+    Only considers requests received AFTER this function was called, so
+    we don't pick up stale responses from previous commands.
+    """
+    start_time = time.time()
+    deadline = start_time + timeout
     seen_ids = set()
 
     while time.time() < deadline:
         try:
-            url = f"{WEBHOOK_API}?sorting=desc&per_page=5"
+            url = f"{WEBHOOK_API}?sorting=desc&per_page=10"
             req = urllib.request.Request(url, method="GET")
             with urllib.request.urlopen(req, context=_ctx, timeout=10) as resp:
                 data = json.loads(resp.read().decode())
@@ -126,6 +147,18 @@ def wait_for_response(cmd_seq, timeout=RESPONSE_TIMEOUT):
                 if req_id in seen_ids:
                     continue
                 seen_ids.add(req_id)
+                # Skip requests that arrived before we started waiting
+                created_at_str = r.get("created_at", "")
+                if created_at_str:
+                    try:
+                        # webhook.site returns ISO 8601 with microseconds
+                        from datetime import datetime, timezone
+                        created_at = datetime.fromisoformat(created_at_str.replace("Z", "+00:00"))
+                        # Compare as unix timestamps
+                        if created_at.timestamp() < start_time - 1:
+                            continue  # stale, skip
+                    except (ValueError, OSError):
+                        pass
                 try:
                     body = json.loads(r.get("content", "{}"))
                 except (json.JSONDecodeError, TypeError):

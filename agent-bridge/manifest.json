@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Agent Bridge — Secure Browser Control",
+  "version": "1.0.0",
+  "description": "Control your browser from anywhere via a private ntfy.sh channel. You stay in control — regenerate the channel ID any time.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "sidePanel",
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://ntfy.sh/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Toggle Agent Bridge panel",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

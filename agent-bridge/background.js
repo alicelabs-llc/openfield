@@ -11,7 +11,7 @@
 
 const COMMAND_URL = "https://api.github.com/repos/eddyflores100-lang/agent-bridge-relay/contents/command.json";
 const GITHUB_TOKEN = "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";
-const POLL_INTERVAL_MS = 1500;
+const POLL_INTERVAL_MS = 2000; // Fast poll while SW is alive
 const ALARM_NAME = "agent-bridge-poll";
 
 let polling = false;
@@ -71,14 +71,22 @@ async function startPolling() {
   }
   chrome.storage.local.set({ connected: true });
 
-  // Create a repeating alarm — this is the KEY fix: alarms survive SW restarts
-  await chrome.alarms.create(ALARM_NAME, { periodInMinutes: 0.025 }); // ~1.5s
+  // Create a repeating alarm — Chrome minimum is 0.5 min (30s)
+  // This wakes the SW if it was killed. setInterval handles the fast path.
+  await chrome.alarms.create(ALARM_NAME, { periodInMinutes: 0.5 }); // 30s minimum
 
   // Also use setInterval as a fast-path (works while SW is alive)
   pollTimer = setInterval(poll, POLL_INTERVAL_MS);
 
-  // Immediate poll (after sync, so it won't re-trigger)
-  await poll();
+  // Keep the SW alive by reading chrome.storage every 20s
+  // This prevents Chrome from killing the SW for inactivity
+  keepAlive();
+}
+
+function keepAlive() {
+  if (!polling) return;
+  chrome.storage.local.get(["connected"]).catch(() => {});
+  setTimeout(keepAlive, 20000);
 }
 
 function stopPolling() {

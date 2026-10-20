@@ -9,8 +9,8 @@
 // The extension needs NO credentials. The GitHub repo is public (read-only
 // for the extension). The webhook.site URL is included in each command.
 
-const COMMAND_URL = "https://cdn.jsdelivr.net/gh/eddyflores100-lang/agent-bridge-relay@main/command.json";
-const POLL_INTERVAL_MS = 2000;
+const COMMAND_URL = "https://raw.githubusercontent.com/eddyflores100-lang/agent-bridge-relay/main/command.json";
+const POLL_INTERVAL_MS = 1500;
 
 let polling = false;
 let pollTimer = null;
@@ -47,7 +47,9 @@ function stopPolling() {
 
 async function poll() {
   try {
-    const resp = await fetch(COMMAND_URL, { cache: "no-store" });
+    // Cache-buster: append a timestamp so the browser + CDN always fetch fresh
+    const url = COMMAND_URL + "?t=" + Date.now();
+    const resp = await fetch(url, { cache: "no-store" });
     if (!resp.ok) {
       console.error("[Agent Bridge] Poll failed:", resp.status);
       return;
@@ -55,7 +57,7 @@ async function poll() {
     const cmd = await resp.json();
 
     // Check if this is a new command
-    if (cmd.cmd_seq && cmd.cmd_seq > lastCmdSeq) {
+    if (cmd.cmd_seq !== undefined && cmd.cmd_seq > lastCmdSeq) {
       lastCmdSeq = cmd.cmd_seq;
       await handleCommand(cmd);
     }

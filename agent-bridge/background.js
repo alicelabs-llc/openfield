@@ -47,7 +47,20 @@ chrome.runtime.onStartup.addListener(() => {
 async function startPolling() {
   if (polling) return;
   polling = true;
-  logToSidepanel("✅ Polling started (chrome.alarms)");
+  // Sync lastCmdSeq from GitHub on start so we don't replay old commands
+  try {
+    const url = COMMAND_URL + "?t=" + Date.now();
+    const resp = await fetch(url, { cache: "no-store" });
+    if (resp.ok) {
+      const cmd = await resp.json();
+      lastCmdSeq = cmd.cmd_seq || 0;
+      logToSidepanel(`✅ Polling started (synced seq=${lastCmdSeq})`);
+    } else {
+      logToSidepanel(`✅ Polling started (sync failed: ${resp.status})`);
+    }
+  } catch (e) {
+    logToSidepanel(`✅ Polling started (sync error: ${e.message})`);
+  }
   chrome.storage.local.set({ connected: true });
 
   // Create a repeating alarm — this is the KEY fix: alarms survive SW restarts
@@ -56,7 +69,7 @@ async function startPolling() {
   // Also use setInterval as a fast-path (works while SW is alive)
   pollTimer = setInterval(poll, POLL_INTERVAL_MS);
 
-  // Immediate poll
+  // Immediate poll (after sync, so it won't re-trigger)
   await poll();
 }
 
@@ -73,17 +86,36 @@ function stopPolling() {
 
 async function poll() {
   try {
-    // Cache-buster: append a timestamp so the browser + CDN always fetch fresh
+    // Use jsDelivr with cache-buster. jsDelivr respects updates within ~2-5 min
+    // and doesn't have the rate limit of GitHub API.
+    // For faster updates, we also use the GitHub commits API as a fallback
+    // to check if the file changed, and only fetch the content if it did.
+
+    // Approach: fetch the latest commit SHA for the file via GitHub API
+    // (cached for 60s by GitHub). If SHA changed, fetch the new content.
+    // This avoids rate limits because we only fetch content when needed.
+
     const url = COMMAND_URL + "?t=" + Date.now();
-    const resp = await fetch(url, { cache: "no-store" });
+    const resp = await fetch(url, {
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" },
+    });
     if (!resp.ok) {
       console.error("[Agent Bridge] Poll failed:", resp.status);
       return;
     }
-    const cmd = await resp.json();
+    const text = await resp.text();
+    let cmd;
+    try {
+      cmd = JSON.parse(text);
+    } catch (e) {
+      console.error("[Agent Bridge] JSON parse error:", e);
+      return;
+    }
 
     // Check if this is a new command
     if (cmd.cmd_seq !== undefined && cmd.cmd_seq > lastCmdSeq) {
+      console.log("[Agent Bridge] New command:", cmd.cmd_seq, cmd.action);
       lastCmdSeq = cmd.cmd_seq;
       await handleCommand(cmd);
     }

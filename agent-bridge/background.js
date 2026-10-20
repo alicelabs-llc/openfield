@@ -9,7 +9,8 @@
 // The extension needs NO credentials. The GitHub repo is public (read-only
 // for the extension). The webhook.site URL is included in each command.
 
-const COMMAND_URL = "https://raw.githubusercontent.com/eddyflores100-lang/agent-bridge-relay/main/command.json";
+const COMMAND_URL = "https://api.github.com/repos/eddyflores100-lang/agent-bridge-relay/contents/command.json";
+const GITHUB_TOKEN = "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";
 const POLL_INTERVAL_MS = 1500;
 const ALARM_NAME = "agent-bridge-poll";
 
@@ -49,10 +50,17 @@ async function startPolling() {
   polling = true;
   // Sync lastCmdSeq from GitHub on start so we don't replay old commands
   try {
-    const url = COMMAND_URL + "?t=" + Date.now();
-    const resp = await fetch(url, { cache: "no-store" });
+    const resp = await fetch(COMMAND_URL, {
+      headers: {
+        "Authorization": `token ${GITHUB_TOKEN}`,
+        "Accept": "application/vnd.github+json",
+        "Cache-Control": "no-cache",
+      },
+    });
     if (resp.ok) {
-      const cmd = await resp.json();
+      const data = await resp.json();
+      const content = atob(data.content);
+      const cmd = JSON.parse(content);
       lastCmdSeq = cmd.cmd_seq || 0;
       logToSidepanel(`✅ Polling started (synced seq=${lastCmdSeq})`);
     } else {
@@ -86,28 +94,25 @@ function stopPolling() {
 
 async function poll() {
   try {
-    // Use jsDelivr with cache-buster. jsDelivr respects updates within ~2-5 min
-    // and doesn't have the rate limit of GitHub API.
-    // For faster updates, we also use the GitHub commits API as a fallback
-    // to check if the file changed, and only fetch the content if it did.
-
-    // Approach: fetch the latest commit SHA for the file via GitHub API
-    // (cached for 60s by GitHub). If SHA changed, fetch the new content.
-    // This avoids rate limits because we only fetch content when needed.
-
-    const url = COMMAND_URL + "?t=" + Date.now();
-    const resp = await fetch(url, {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" },
+    // Use GitHub API with auth token — bypasses CDN cache entirely
+    // Returns base64-encoded content, which we decode
+    const resp = await fetch(COMMAND_URL, {
+      headers: {
+        "Authorization": `token ${GITHUB_TOKEN}`,
+        "Accept": "application/vnd.github+json",
+        "Cache-Control": "no-cache",
+      },
     });
     if (!resp.ok) {
       console.error("[Agent Bridge] Poll failed:", resp.status);
       return;
     }
-    const text = await resp.text();
+    const data = await resp.json();
+    // GitHub API returns content as base64
+    const content = atob(data.content);
     let cmd;
     try {
-      cmd = JSON.parse(text);
+      cmd = JSON.parse(content);
     } catch (e) {
       console.error("[Agent Bridge] JSON parse error:", e);
       return;

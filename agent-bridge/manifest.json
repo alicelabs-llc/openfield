@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Agent Bridge — Secure Browser Control",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Control your browser from anywhere via GitHub + webhook.site. No tokens, no ports, no ngrok. You stay in control.",
   "permissions": [
     "tabs",

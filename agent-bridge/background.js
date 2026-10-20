@@ -27,18 +27,19 @@ let commandLog = [];
 // ============================================================================
 
 chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name === ALARM_NAME && polling) {
+  if (alarm.name === ALARM_NAME) {
+    // Always poll on alarm — don't check `polling` var (it resets on SW restart)
     poll();
   }
 });
 
-chrome.runtime.onStartup.addListener(() => {
-  // Restore polling state on browser restart
-  chrome.storage.local.get(["connected"], (data) => {
-    if (data.connected) {
-      startPolling();
-    }
-  });
+// On SW restart (Chrome kills SW after 30s idle), restore polling from storage
+// This runs every time the SW context is created
+chrome.storage.local.get(["connected"], (data) => {
+  if (data.connected && !polling) {
+    console.log("[Agent Bridge] SW restarted — restoring polling");
+    startPolling();
+  }
 });
 
 // ============================================================================

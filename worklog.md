@@ -868,3 +868,68 @@ Stage Summary:
 - 1 PR CLOSED con feedback útil: toolhive-catalog #1619 (resubmit posible)
 - 9 PRs siguen OPEN esperando maintainer (3 con respuesta previa, 6 sin review)
 - Recomendación: ping cortés después de 7 días para los OPEN silentes (Oct 23 → Oct 30).
+
+---
+Task ID: 42
+Agent: Super Z (main)
+Task: Ejecutar las 3 acciones en paralelo: resubmit toolhive, ping clapper+parabola, cerrar Devpost Amazon.
+
+Work Log:
+
+### 1) Resubmit toolhive-catalog — DONE (entry preparado)
+
+**Issue detectada del PR cerrado #1619:**
+- rdimitrov cerró porque: "hosted endpoint mostly exposes marketplace and catalog tools, while the entry describes trust and credential verification that only the stdio package provides. We also still couldn't locate the implementation behind the hosted endpoint, and the latest commit breaks the `_meta` structure."
+
+**Fix aplicado:**
+- Verifiqué los 15 tools REALES del endpoint https://marketnow.site/api/mcp via WebFetch del repo source.
+- Construí entry alineando 100% tools descritos ↔ tools reales del remote.
+- `_meta` structure corregida siguiendo el schema remote server example del repo.
+- Source URL: https://github.com/eddyflores100-lang/marketnow (público, MIT-ish — el repo dice "AL code is PROPRIETARY — property of AliceLabs LLC", lo cual puede ser otro blocker; ver nota abajo).
+- License: el repo NO es open source (proprietario). Esto puede ser un segundo blocker para toolhive-catalog. El catálogo acepta remotos de cualquier source, pero algunos maintainers piden OSS license para tools de security/trust.
+
+**Archivo creado:** /home/z/my-project/toolhive-resubmit/io.github.eddyflores100-lang.marketnow.json
+**Pings text file:** /home/z/my-project/download/ping-texts.md (3 ping texts listos para pegar)
+
+**Bloqueador para PUSH automático:** No tengo GitHub PAT accesible en este entorno (token file vacío). Para que el PR se cree automáticamente, necesito:
+- Opción A: Usuario me pasa nuevo PAT (`ghp_...`) → hago fork + commit + push + PR via API.
+- Opción B: Usuario lo hace manual: fork stacklok/toolhive-catalog, copiar el archivo JSON a `registries/toolhive/servers/io.github.eddyflores100-lang.marketnow.json`, abrir PR con body "Resubmit per rdimitrov feedback: aligned tools list with actual remote endpoint, fixed _meta structure, linked source repo."
+
+### 2) Pings a bounties vivos — DONE (texts preparados)
+
+Sin GitHub PAT no puedo POST comments via API. Textos guardados en /home/z/my-project/download/ping-texts.md:
+- jbilcke-hf/clapper #163 ($1,050 bounty) — ping cortés mencionando el bounty tag, screenshot en PR desc, ofrece rebase.
+- Parabola-org/parabola #131 ($105 bounty) — ping cortés, menciona tests pass + scoped changes.
+- Ishannaik/harbour #57 — ping cortés (CodeRabbit ya approved Oct 9).
+
+### 3) Cierre del capítulo Devpost Amazon Hackathon — DONE
+
+**Diagnóstico final:**
+- Deadline real: Oct 23, 2026 @ 19:00 UTC = 14:00 Guayaquil.
+- Hora de detección: 13:52 Guayaquil → 8 min restantes.
+- Imposible construir+submit en 8 min (necesita MCP server Streamable HTTP funcional + demo video + Devpost login).
+- No existía proyecto Alexa+ construido en el workspace (alethech-agent-vault era para Vultr Nov 3).
+- Sin credenciales Devpost ni GitHub PAT accesible en este entorno.
+
+**Lección documentada para futuros hackathones Devpost:**
+1. Detectar el email de hackathon → INMEDIATAMENTE clasificar:
+   - ¿Track requiere build nuevo o PR existente?
+   - ¿Tengo cuenta Devpost?
+   - ¿Tengo acceso al repo que cumple los requisitos?
+2. Si la respuesta a cualquiera es "no" y faltan <2h → no intentar.
+3. Si faltan >24h → priorizar.
+4. Mantener un README de "submissions listas para hackathon" con 2-3 proyectos modulares que encajen en tracks comunes (MCP server, OSS PR, AWS Bedrock app).
+
+**Redirección de energía:**
+La energía invertida se redirige a:
+- Vultr Agent Rush Hackathon (Nov 3-8, $14K) — scaffold listo, 11 tests passing.
+- 3 bounties vivos con pings preparados (clapper $1,050 + parabola $105 + harbour).
+- Resubmit toolhive-catalog (entry listo, awaiting PAT or manual push).
+- 9 PRs Hacktoberfest activos + 1 merged hoy (useagent #84).
+
+Stage Summary:
+- Resubmit entry toolhive preparado y validado (15 tools, _meta structure correcta). Espera PAT o push manual.
+- 3 ping texts listos en /home/z/my-project/download/ping-texts.md.
+- Capítulo Devpost Amazon cerrado con lecciones documentadas.
+- Energía redirigida a Vultr (Nov 3) + 3 bounties vivos + 9 PRs Hacktoberfest activos.
+- Blocker principal para avanzar: necesito GitHub PAT fresco para automatizar pings y resubmit.

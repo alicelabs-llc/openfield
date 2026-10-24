@@ -1349,3 +1349,25 @@ Stage Summary:
   * GitHub alethech-agent-vault: github.com/eddyflores100-lang/alethech-agent-vault
   * GitLab alethech-agent-vault: gitlab.com/eddyflores100/alethech-agent-vault
   * GitHub mailhand-aws-cds: github.com/eddyflores100-lang/mailhand-aws-cds (no se usará)
+
+---
+Task ID: 51
+Agent: Super Z (main)
+Task: Corregir datos del form Devpost — usuario dijo "corrije" y "continua" mostrando screenshot de Devpost con Project Story Markdown editor. La estructura real NO es Overview/Details/Team/Images/Submit como dije antes, sino la estructura estándar Devpost: Project name + tagline + Project Story (Markdown 7 secciones template) + Built With + custom questions.
+
+Work Log:
+- Leído worklog.md y verificado estado real del repo alethech-agent-vault
+- Leído README.md y docs/ARCHITECTURE.md para tener datos exactos: 41 tests, FastAPI orchestrator, Docker sandbox con 8 flags, alethech provenance DAG, GitLab Duo integration (webhook_bridge, duo_extension, mr_creator, verify_cli), containment matrix 8 attack classes
+- Corregido: entregado Project Story Markdown completo (7 secciones) con datos reales del proyecto
+- Guardado en /home/z/my-project/download/DEVPOST_PROJECT_STORY.md
+- Incluidos también: project name, tagline, tags (4), URLs (GitLab primary + GitHub mirror), Built With checkboxes, custom questions (Path B / Supervised / Stages) para los campos adicionales del form Devpost
+
+Stage Summary:
+- Archivo: /home/z/my-project/download/DEVPOST_PROJECT_STORY.md
+- Project Story listo para copy-paste en Devpost editor
+- Project name: alethech-agent-vault (Verifiable Agents on GitLab Duo)
+- Tagline: Sandboxed AI agents on GitLab Duo with tamper-evident provenance — verify the chain, not the LLM.
+- Tags: gitlab, ai-agents, security, provenance
+- Primary URL: https://gitlab.com/eddyflores100/alethech-agent-vault
+- Track: Path B (Agentic Engineering, Supervised)
+- Pendiente: video 3-min + submit final antes de Oct 27 13:00 UTC

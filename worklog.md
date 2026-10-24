@@ -1371,3 +1371,23 @@ Stage Summary:
 - Primary URL: https://gitlab.com/eddyflores100/alethech-agent-vault
 - Track: Path B (Agentic Engineering, Supervised)
 - Pendiente: video 3-min + submit final antes de Oct 27 13:00 UTC
+
+---
+Task ID: 9
+Agent: main (Z.ai)
+Task: Hacktoberfest 2026 — revisar cuenta DEV.to del usuario y plan para conseguir 4 stickers más (tiene 11/15, sin poder asistir a Fests presenciales)
+
+Work Log:
+- Verificado API key DEV.to (JKTqE35XNwxTtSihCddbdqym) → usuario edison_flores_6d2cd381b13 (Edison Flores)
+- Descargados 100 artículos propios vía /api/articles/me/all → 12 publicados en octubre 2026
+- Identificadas entradas a challenges: Touch Grass (Week1, Oct9), Sloth + SlothPay (Week2/3, Oct20), Overnight Chores (Week3, Oct24) — todas con tags devchallenge+hf26challenge
+- Extraído el libro de stickers completo desde los bundles JS de hacktoberfest.com (27 SVGs → 24 coleccionables): signin, address, livestream-launch, livestreams-1/3/5, dev-launch-weekend, dev-week-1/2/3/4, ghw, ghw-livestream, ghw-points-15/30/75, dev-relay, dev-connect, discord, digitalocean, survey-pre, survey-post, fest, host-fest
+- Extraídas las descripciones exactas de cada actividad desde el JS (labels + details)
+- Calendario restante confirmado: Week 3 cierra Oct 25 23:59 PDT; Week 4 abre Oct 26 7:00 AM y cierra Oct 31 23:59 PDT; livestreams Oct 29 (Ollama) y Oct 30 (OpenCodeStream) con códigos de check-in en pantalla; survey-post por email al cerrar octubre
+- GHW corrió Oct 9-15 (ya pasó); Weekend Challenge y Weeks 1-2 ya pasaron
+- Los únicos stickers aún ganables online: dev-week-4, livestreams (Oct29/30), dev-connect, discord, digitalocean, dev-relay, survey-post = hasta 8 disponibles; faltan solo 4
+
+Stage Summary:
+- PLAN: (1) CRÍTICO: vincular DEV→MyMLH (dev-connect) porque es como se acreditan las entradas a challenges; (2) verificar/conseguir discord, digitalocean, dev-relay; (3) publicar Week 4 Oct 26-31 (hay 7 drafts listos); (4) asistir a 2 livestreams Oct 29-30 con check-in; (5) survey-post cuando llegue el email
+- Máximo online = 22 de 24 (2 son presenciales); con 11 ya tiene el pack (3) y el holográfico (10); a 15 entra al raffle Completionist (camiseta o Arduino Uno Q)
+- Artifacts: /home/z/my-project/scripts/devto_articles.json, hf_online.html, hf_schedule.html, hf_activities.html, hf_all_chunks.js, hf_schedule_chunk.js

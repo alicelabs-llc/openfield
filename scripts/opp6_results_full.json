@@ -1,0 +1,647 @@
+[
+  {
+    "table_idx": 2,
+    "owner": "commaai",
+    "repo": "opendbc",
+    "num": 2017,
+    "amount": "$3,000",
+    "url": "https://github.com/commaai/opendbc/issues/2017",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "enhancement"
+      ],
+      "title": "[$3000 bounty] BYD port",
+      "comments": 41,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-18T14:56:46Z",
+      "created_at": "2025-03-20T15:48:20Z",
+      "bounty_signal": {
+        "label": false,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 3,
+    "owner": "osmesirius-ship-it",
+    "repo": "daxda-next-gen",
+    "num": 39,
+    "amount": "$5,000",
+    "url": "https://github.com/osmesirius-ship-it/daxda-next-gen/issues/39",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "bounty-claim",
+        "level-1",
+        "bounty-mmpibench"
+      ],
+      "title": "[PAYOUT CLAIM] [bounty-mmpibench] [BOUNTY] [$5000] [AGENTIC] [AI] DAXDA MMPIBench Memetic Penetration Depth \u2013 Anthropic Alignment Evaluation ($5,000)",
+      "comments": 0,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-12T17:05:08Z",
+      "created_at": "2026-10-12T17:05:06Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": true,
+        "algora": true,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 4,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 3830,
+    "amount": "$1,500",
+    "url": "https://github.com/tursodatabase/turso/issues/3830",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "simulator",
+        "core",
+        "translation/planning",
+        "vdbe",
+        "Storage",
+        "\ud83d\udcb0 Rewarded"
+      ],
+      "title": "Don't allow autovacuum to be flipped on non-empty databases",
+      "comments": 7,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2025-10-28T12:48:35Z",
+      "updated_at": "2026-01-04T23:06:48Z",
+      "created_at": "2025-10-24T12:54:17Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 5,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 5092,
+    "amount": "$2,500",
+    "url": "https://github.com/tursodatabase/turso/issues/5092",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "simulator",
+        "core",
+        "translation/planning",
+        "\ud83d\udcb0 Rewarded"
+      ],
+      "title": "Fix corruption errors caused by stale cursor positioning + add upsert support to simulator",
+      "comments": 9,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2026-02-11T07:05:34Z",
+      "updated_at": "2026-02-21T01:04:32Z",
+      "created_at": "2026-02-09T16:08:04Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 7,
+    "owner": "Sifchain",
+    "repo": "sifnode",
+    "num": 503,
+    "amount": "$1,000",
+    "url": "https://github.com/Sifchain/sifnode/issues/503",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "bounty"
+      ],
+      "title": "[sifnode] $1000 bounty for implementing Azure AKS support for sifnode",
+      "comments": 6,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-23T01:23:14Z",
+      "created_at": "2021-01-15T18:45:35Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 8,
+    "owner": "Sifchain",
+    "repo": "sifnode",
+    "num": 524,
+    "amount": "$1,000",
+    "url": "https://github.com/Sifchain/sifnode/issues/524",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "bounty"
+      ],
+      "title": "[sifnode] $1000 bounty for implementing Google Cloud support for sifnode #503",
+      "comments": 12,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-23T01:35:15Z",
+      "created_at": "2021-01-19T02:29:31Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 9,
+    "owner": "teamleaderleo",
+    "repo": "bot-observatory",
+    "num": 45,
+    "amount": "$1,000",
+    "url": "https://github.com/teamleaderleo/bot-observatory/issues/45",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [],
+      "title": "Enclosure 028 \u2014 The $500 Deductible That Became a Bounty",
+      "comments": 1,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-12T06:20:23Z",
+      "created_at": "2026-08-27T20:09:46Z",
+      "bounty_signal": {
+        "label": false,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 10,
+    "owner": "commaai",
+    "repo": "opendbc",
+    "num": 1175,
+    "amount": "$1,000",
+    "url": "https://github.com/commaai/opendbc/issues/1175",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "car",
+        "hyundai",
+        "car port"
+      ],
+      "title": "[$1000 bounty] Kia EV9 lateral port",
+      "comments": 7,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-12T23:32:31Z",
+      "created_at": "2024-04-23T06:14:27Z",
+      "bounty_signal": {
+        "label": false,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 11,
+    "owner": "commaai",
+    "repo": "opendbc",
+    "num": 1833,
+    "amount": "$1,000",
+    "url": "https://github.com/commaai/opendbc/issues/1833",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "enhancement",
+        "rivian"
+      ],
+      "title": "[$1000 bounty +community] Rivian: read set speed",
+      "comments": 9,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-06-12T15:48:23Z",
+      "created_at": "2025-02-24T18:28:58Z",
+      "bounty_signal": {
+        "label": false,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 12,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 4493,
+    "amount": "$800",
+    "url": "https://github.com/tursodatabase/turso/issues/4493",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "core",
+        "Storage",
+        "\ud83d\udcb0 Rewarded"
+      ],
+      "title": "Track WAL state in savepoints for proper rollback",
+      "comments": 7,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2026-01-07T12:36:34Z",
+      "updated_at": "2026-01-07T12:43:14Z",
+      "created_at": "2026-01-07T09:04:56Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 14,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 4879,
+    "amount": "$1,000",
+    "url": "https://github.com/tursodatabase/turso/issues/4879",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "simulator",
+        "\ud83d\udcb0 Rewarded"
+      ],
+      "title": "sim: generate unique constraints and verify statement rolls back correctly on failure",
+      "comments": 12,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2026-01-30T14:58:05Z",
+      "updated_at": "2026-02-06T20:13:10Z",
+      "created_at": "2026-01-26T18:09:12Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 15,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 6626,
+    "amount": "$1,000",
+    "url": "https://github.com/tursodatabase/turso/issues/6626",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "simulator",
+        "core",
+        "mvcc",
+        "translation/planning",
+        "vdbe",
+        "Storage",
+        "cli",
+        "\ud83d\udcb0 Rewarded",
+        "fossier:needs-review"
+      ],
+      "title": "Add savepoint rollback DST coverage and fix rollback cache invalidation",
+      "comments": 12,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2026-04-30T08:01:01Z",
+      "updated_at": "2026-05-12T16:55:23Z",
+      "created_at": "2026-04-29T23:49:27Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 16,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 3436,
+    "amount": "$500",
+    "url": "https://github.com/tursodatabase/turso/issues/3436",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "core",
+        "translation/planning",
+        "vdbe",
+        "\ud83d\udcb0 Rewarded"
+      ],
+      "title": "Fix self-insert with nested subquery",
+      "comments": 4,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2025-10-01T05:56:16Z",
+      "updated_at": "2025-10-03T20:34:40Z",
+      "created_at": "2025-09-29T21:16:52Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 17,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 2049,
+    "amount": "$500",
+    "url": "https://github.com/tursodatabase/turso/issues/2049",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "simulator",
+        "ci-actions",
+        "\ud83d\udcb0 Rewarded"
+      ],
+      "title": "Updates to the simulator",
+      "comments": 5,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2025-07-16T08:03:46Z",
+      "updated_at": "2025-11-02T09:43:43Z",
+      "created_at": "2025-07-11T06:07:52Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 20,
+    "owner": "perria080925-bot",
+    "repo": "agente-bountie",
+    "num": 1,
+    "amount": "$500",
+    "url": "https://github.com/perria080925-bot/agente-bountie/issues/1",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [],
+      "title": "[AGENTE] Checklist submission bounty Mermail ($500 USDC)",
+      "comments": 3,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-23T15:54:13Z",
+      "created_at": "2026-09-27T14:39:06Z",
+      "bounty_signal": {
+        "label": false,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 21,
+    "owner": "NEXAITECHAU",
+    "repo": "gh-disc-54891-tenstorrent-tt-metal",
+    "num": 1,
+    "amount": "$2,000",
+    "url": "https://github.com/NEXAITECHAU/gh-disc-54891-tenstorrent-tt-metal/issues/1",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [],
+      "title": "[NEX Agent] [NEX Agent] [Bounty $2000] CosyVoice2 (HiFT Vocoder + iSTFT + Streaming Pipeline",
+      "comments": 0,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-08-30T21:48:59Z",
+      "created_at": "2026-08-30T21:48:59Z",
+      "bounty_signal": {
+        "label": false,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 22,
+    "owner": "Senthemodder",
+    "repo": "aquarium-of-gullibles",
+    "num": 1,
+    "amount": "$1,250",
+    "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/1",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "help wanted",
+        "bounty",
+        "algorithm"
+      ],
+      "title": "[Bounty: $1,250] Optimize Subgraph Isomorphism to Strict O(N) Deterministic Space-Time Complexity",
+      "comments": 6,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-01T02:09:18Z",
+      "created_at": "2026-09-10T03:05:50Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  },
+  {
+    "table_idx": 24,
+    "owner": "tursodatabase",
+    "repo": "turso",
+    "num": 6583,
+    "amount": "$200",
+    "url": "https://github.com/tursodatabase/turso/issues/6583",
+    "pass2_verdict": "DEAD",
+    "pass2_detail": {
+      "state": "closed",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "simulator",
+        "core",
+        "Storage",
+        "\ud83d\udcb0 Rewarded",
+        "fossier:needs-review"
+      ],
+      "title": "core/storage: fix WAL savepoint rollback corruption after cache spill",
+      "comments": 6,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": true,
+      "closed_at": "2026-04-28T05:46:28Z",
+      "updated_at": "2026-04-29T20:47:20Z",
+      "created_at": "2026-04-27T17:43:27Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": false,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true,
+      "why_dead": "state=closed"
+    }
+  },
+  {
+    "table_idx": 28,
+    "owner": "flowdriveai",
+    "repo": "flowpilot",
+    "num": 46,
+    "amount": "$100",
+    "url": "https://github.com/flowdriveai/flowpilot/issues/46",
+    "pass2_verdict": "LIVE",
+    "pass2_detail": {
+      "state": "open",
+      "assignee": null,
+      "assignees": [],
+      "labels": [
+        "bounty"
+      ],
+      "title": "BOUNTY $100: Research about usb host mode on android and reasons and fix for why `missed cycles` happen.",
+      "comments": 7,
+      "locked": false,
+      "lock_reason": null,
+      "is_pr": false,
+      "closed_at": null,
+      "updated_at": "2026-10-03T10:23:49Z",
+      "created_at": "2023-08-19T18:06:24Z",
+      "bounty_signal": {
+        "label": true,
+        "dollar": true,
+        "algora": false,
+        "issuehunt": false
+      },
+      "has_any_signal": true
+    }
+  }
+]

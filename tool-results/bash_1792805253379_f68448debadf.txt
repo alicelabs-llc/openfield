@@ -1,0 +1,677 @@
+291366 /tmp/opp_wave2/itch_active.html
+291366 /tmp/opp_wave2/itch_ended.html
+Active jams (filtered): 672
+  • Trijam #393: The 3 hour game jam | 2026-10-09→2026-10-12 | https://itch.io/jam/trijam-393
+  • Mini Jam 221: Autumn | 2026-10-09→2026-10-12 | https://itch.io/jam/mini-jam-221-autumn
+  • thatgamejam #02💜 | 2026-10-24→2026-11-08 | https://itch.io/jam/thatgamejam02
+  • LittleJS Jam 3 | 2026-10-02→2026-11-02 | https://itch.io/jam/littlejs-jam
+  • Official 2026 Unity Game Jam | 2026-11-05→2026-11-14 | https://itch.io/jam/official-unity-game-jam-2026
+  • LÖVE Jam 2026 [B-SIDE] | 2026-11-06→2026-11-16 | https://itch.io/jam/lve-jam-2026-b-side
+  • GDevelop BIG Game Jam #10 | 2026-11-06→2026-11-15 | https://itch.io/jam/gdevelop-big-game-jam-10
+  • 2026 Epic AI MegaJam | 2026-11-12→2026-11-16 | https://itch.io/jam/2026-epic-ai-megajam
+  • Metroidvania Month Finale | 2026-11-16→2026-12-16 | https://itch.io/jam/metroidvania-month-34
+  • GBJAM 15 | 2027-09-10→2027-09-20 | https://itch.io/jam/gbjam-15
+  • COMPJAM 2026/2 | 2026-09-25→2026-09-26 | https://itch.io/jam/2nd-compjam
+  • Game Jam Ostrava 2026 podzim | 2026-09-27→2026-09-27 | https://itch.io/jam/game-jam-ostrava-2026-podzim
+  • KSU GDDC Fall Jam 2026 | 2026-09-26→2026-09-27 | https://itch.io/jam/ksu-gddc-fall-jam-2026
+  • Alberta Game Jam 2026 | 2026-09-26→2026-09-28 | https://itch.io/jam/alberta-game-jam-2026
+  • GDS 72 Hour Asset Jam | 2026-09-25→2026-09-28 | https://itch.io/jam/gds-72-hour-asset-jam
+  • Global Quantum Game Jam 2026 | 2026-09-25→2026-09-28 | https://itch.io/jam/quantum-game-jam-2026
+  • IGDA NJIT Fall Game Jam 2026 | 2026-09-25→2026-09-30 | https://itch.io/jam/igda-njit-f26-jam
+  • Kindling Jam | 2026-09-25→2026-09-28 | https://itch.io/jam/kindling-jam
+  • Jamathon 2026 [$15,000 of Prizes!] | 2026-09-26→2026-09-27 | https://itch.io/jam/jamathon26
+  • Trijam #391: The 3 hour game jam | 2026-09-25→2026-09-28 | https://itch.io/jam/trijam-391
+  • 🍯Devs That Jam 36-hour Challenge #30 ($500 in prizes!) | 2026-09-26→2026-09-27 | https://itch.io/jam/dtj36-30
+  • Seven of Hearts (52/52/52 Week 39) | 2026-09-24→2026-10-01 | https://itch.io/jam/52-seven-of-hearts
+  • Jam Jar - Auckland Games Week Game Jam | 2026-09-26→2026-09-27 | https://itch.io/jam/jam-jar-2026
+  • Aristos Interactive Jam #8 | 2026-09-25→2026-09-28 | https://itch.io/jam/aristos-interactive-jam-8
+  • USYD Game Design Society Jam | 2026-09-29→2026-10-02 | https://itch.io/jam/usyd-game-design-society-jam
+  • Mini Jam 220: Crystal | 2026-09-25→2026-09-28 | https://itch.io/jam/mini-jam-220-crystal
+  • Lame Jam #67 | 2026-09-25→2026-09-28 | https://itch.io/jam/lame-jam-67
+  • Take Your Time | 2026-09-25→2026-10-03 | https://itch.io/jam/take-your-time
+  • L5lua Community Jam | 2026-09-25→2026-10-03 | https://itch.io/jam/l5lua-community-jam
+  • THE T-LANDER GAME JAM #1 | 2026-09-28→2026-10-01 | https://itch.io/jam/tlandergamejam
+  • CodeWisp September Game jam | 2026-09-25→2026-10-01 | https://itch.io/jam/codewisp-september2026
+  • TwineJam - A Story in Mail (Epistolary) - VOTING NOW OPEN! | 2026-09-25→2026-09-27 | https://itch.io/jam/twine-only-a-story-in-mail
+  • mehu jam 23: EPITAPH / MOLD | 2026-10-02→2026-10-04 | https://itch.io/jam/mehu-jam-23
+  • Cozy Fall Jam 2026 🍂 | 2026-09-24→2026-09-27 | https://itch.io/jam/cozy-fall-jam-2026
+  • Somethingish Game Jam | 2026-09-25→2026-10-02 | https://itch.io/jam/somethingish-game-jam
+  • TriGameDev Monthly Game Jam #8 | 2026-09-25→2026-09-27 | https://itch.io/jam/trigamedev-monthly-game-jam-8
+  • Game Jam des Puys 2026 | 2026-09-25→2026-10-04 | https://itch.io/jam/game-jam-des-puys-2026
+  • JAMA Jam - October 2026 | 2026-10-02→2026-10-04 | https://itch.io/jam/jama-jam-october-2026
+  • Wholesome Games Game Jam 2026 | 2026-10-03→2026-10-05 | https://itch.io/jam/wholesome-games-game-jam-2026
+  • MDEV 26 Game Jam | 2026-09-25→2026-10-05 | https://itch.io/jam/mdev-2026
+  • Portfolio Builders Jam - Week #92 | 2026-09-28→2026-10-05 | https://itch.io/jam/portfolio-builders-jam-week-92
+  • 游戏制作过程 (Fashao Meng Game Jam) 2026 | 2026-10-02→2026-10-05 | https://itch.io/jam/fashao-meng-game-jam-2026
+  • Architect 4 : An Iterative Development Framework | 2026-09-25→2026-10-05 | https://itch.io/jam/architect-4-an-iterative-development-framework
+  • SA GAME JAM 2026 | 2026-10-02→2026-10-05 | https://itch.io/jam/sa-game-jam-2026
+  • IIITN Game Jam - Tantrafiesta 2026 | 2026-09-24→2026-10-05 | https://itch.io/jam/tf-iiitn-game-jam-2026
+  • Game Jam DJD | 2026-10-05→2026-10-06 | https://itch.io/jam/game-jam-djd
+  • Colorado Game Jam 2026.1 | 2026-09-26→2026-09-29 | https://itch.io/jam/colorado-game-jam
+  • Slapjam AI - The World's Largest AI Game Jam | 2026-09-28→2026-09-30 | https://itch.io/jam/slapjam-ai-1
+  • Trijam #392: The 3 hour game jam | 2026-10-02→2026-10-05 | https://itch.io/jam/trijam-392
+  • Orléans GameJam#4 | 2026-10-02→2026-10-07 | https://itch.io/jam/orlans-gamejam4
+  • Crack It ($100 in prizes) | 2026-10-01→2026-10-07 | https://itch.io/jam/anitya-world-jam-crack-it
+  • King of Hearts (52/52/52 Week 40) | 2026-10-01→2026-10-08 | https://itch.io/jam/52-king-of-hearts
+  • Texas Game Jam 2026 | 2026-09-26→2026-09-28 | https://itch.io/jam/texas-game-jam-2026
+  • Project 2 - 361 - F26 | 2026-10-06→2026-10-08 | https://itch.io/jam/project-2-361-f26
+  • Chilly Asset GameJam | 2026-09-28→2026-10-01 | https://itch.io/jam/chilly-asset-gamejam-
+  • Coffee Jam 2026 | 2026-09-25→2026-10-01 | https://itch.io/jam/coffee-jam-2026
+  • Godot India Community Mini Jam | 2026-10-01→2026-10-04 | https://itch.io/jam/gic-mini-jam
+  • Newbie Game Jam #1 | 2026-09-29→2026-10-08 | https://itch.io/jam/newbie-game-jam-1
+  • Game Jam des Rendez-Vous de l'Histoire 2026 | 2026-09-25→2026-09-27 | https://itch.io/jam/game-jam-des-rendez-vous-de-lhistoire-2026
+  • Micro Jam 066: Toxic ($200+ Prizes!) | 2026-10-03→2026-10-05 | https://itch.io/jam/micro-jam-066
+  • University of Waterloo Fall 2026 Game Jam | 2026-10-01→2026-10-04 | https://itch.io/jam/university-of-waterloo-fall-2026-game-jam
+  • Weekly Note Music Composing Jam #53 (THE WAITING ROOM) | 2026-09-25→2026-10-03 | https://itch.io/jam/weekly-note-music-composing-jam-53
+  • GAME LAB JAM 1:RETRO | 2026-10-02→2026-10-06 | https://itch.io/jam/game-lab-jam-1
+  • BGC Game Jam - Edición I | 2026-09-30→2026-10-09 | https://itch.io/jam/bgcgamejam
+  • GameRex 2026 | 2026-10-07→2026-10-09 | https://itch.io/jam/gamerex-2026
+  • ✨Horror Hatch #1 | 2026-10-01→2026-10-06 | https://itch.io/jam/horror-hatch-21-day-challenge-1
+  • GAME JAM Usb 2026 | 2026-10-01→2026-10-08 | https://itch.io/jam/game-jam-usb-2026
+  • Car Racing 2D | 2026-10-01→2026-10-08 | https://itch.io/jam/beta-car-racing-2d-
+  • Eclipse Publishing Game Jam | 2026-10-01→2026-10-05 | https://itch.io/jam/eclipse-publishingjam
+  • Connected Game Jam #2 | 2026-09-25→2026-09-28 | https://itch.io/jam/connected-game-jam-2-cntrlr
+  • Koni's Glitch Jam WITH PRIZE (Steam gift)🏆 | 2026-09-30→2026-10-10 | https://itch.io/jam/konis-glitch-jam
+  • Game Dev Arena Game Jam | 2026-10-02→2026-10-04 | https://itch.io/jam/game-dev-arena-game-jam
+  • GDH Game Jam #4 | 2026-10-09→2026-10-11 | https://itch.io/jam/game-jam-hof-4
+  • Hardcore Punk Jam #5 | 2026-10-09→2026-10-11 | https://itch.io/jam/hardcore-punk-jam-5
+  • 🎮 WonderJam UQAC Automne 2026 | 2026-10-09→2026-10-11 | https://itch.io/jam/-wonderjam-uqac-automne-2026
+  • Summer Games Weekly Jam #1 | 2026-10-09→2026-10-11 | https://itch.io/jam/summergames-weekly-jam-1
+  • Mental Health Game Jam | 2026-10-10→2026-10-11 | https://itch.io/jam/mental-health-game-jam
+  • Ship Your Game Jam 2026 | 2026-10-04→2026-10-11 | https://itch.io/jam/ship-your-game-jam-2026
+  • GB Pixel Art Jam 2026 | 2026-10-09→2026-10-11 | https://itch.io/jam/gb-pixel-art-jam-2026
+  • VGDC Fall 26 Lightning Game Jam | 2026-10-11→2026-10-12 | https://itch.io/jam/vgdc-fall-26-lightning-game-jam
+  • v3Expo's Game Jam ($100 prize) | 2026-10-04→2026-10-10 | https://itch.io/jam/v3expos-world-famous-game-jam-2
+  • Cosmic Jam 2026 | 2026-10-11→2026-10-12 | https://itch.io/jam/cosmic-jam-2026
+  • Chat GPT 6 Astra created games | 2026-10-05→2026-10-12 | https://itch.io/jam/chat-gpt-6-astra-created-games
+  • Gosu Game Jam 10 | 2026-09-25→2026-10-05 | https://itch.io/jam/gosu-game-jam-10
+  • 🎵✈️🌍 Music Jam: Travel RPG #2 - The Feeling of Flight | 2026-09-28→2026-10-05 | https://itch.io/jam/music-travel-rpg-2
+  • [60$ value prize!] Retro Game Jam 👾🎮 | 2026-09-29→2026-10-08 | https://itch.io/jam/60-value-prize-retro-game-jam
+  • Vocaloid Music Jam (Cash Prizes) | 2026-09-25→2026-10-04 | https://itch.io/jam/vocaloid-music-jam
+  • Portfolio Builders Jam - Week #93 | 2026-10-05→2026-10-12 | https://itch.io/jam/portfolio-builders-jam-week-93
+  • Noob Novel VN Jam | 2026-09-25→2026-10-05 | https://itch.io/jam/noob-novel-jam
+  • Composer Jam #23 | 2026-10-09→2026-10-12 | https://itch.io/jam/composer-jam-23
+  • Vierfacher Questpresso | 2026-09-28→2026-10-04 | https://itch.io/jam/vierfacher-questpresso
+  • GameotronGameJam | 2026-10-09→2026-10-11 | https://itch.io/jam/gameotrongamejam
+  • Super Free AI Game jam  #1 | 2026-09-30→2026-10-10 | https://itch.io/jam/super-free-ai-game-jam-1
+  • EPX Studio Game Jam | 2026-10-10→2026-10-14 | https://itch.io/jam/epx-studio-game-jam
+  • Jame Gam #62 | 2026-10-04→2026-10-11 | https://itch.io/jam/jame-gam-62
+  • Dullajam | 2026-10-01→2026-10-14 | https://itch.io/jam/dullajam
+  • Don't Fall ($100 in prizes) | 2026-10-08→2026-10-14 | https://itch.io/jam/anitya-world-jam-dont-fall
+  • Community Jam | 2026-10-11→2026-10-14 | https://itch.io/jam/community-jam-111026
+  • Ctrl+AI+Jam Week 01 — [$50 CASH Prize] | 2026-10-10→2026-10-12 | https://itch.io/jam/ctrl-ai-jam
+  • Ten of Spades (52/52/52 Week 41) | 2026-10-08→2026-10-15 | https://itch.io/jam/52-ten-of-spades
+  • RPGM 16 Concept Jam | 2026-10-01→2026-10-15 | https://itch.io/jam/rpgm-16-concept-jam
+  • Jamference: AI Game Jam Hack 1 | 2026-10-02→2026-10-09 | https://itch.io/jam/jamference-ai-game-jam-hack-1
+  • Spiders x Tornados | 2026-10-07→2026-10-14 | https://itch.io/jam/spiders-x-tornados
+  • Ultimate AI-Powered Game Jam #5 | 2026-10-09→2026-10-12 | https://itch.io/jam/ultimate-ai-powered-game-jam-5
+  • Llama Jam: Nightmare | 2026-10-02→2026-10-12 | https://itch.io/jam/llama-nightmare
+  • Almaty GameDev Jam Project 1 | 2026-09-29→2026-10-11 | https://itch.io/jam/almaty-gamedev-jam-project-1
+  • Art Center Game Jam Fall 2026 | 2026-10-09→2026-10-12 | https://itch.io/jam/art-center-game-jam-fall-2026
+  • Megamitts' Mega Jam 19: Super Skills | 2026-09-30→2026-10-15 | https://itch.io/jam/megamitts-mega-jam-19
+  • Scratch Game Jam #23 | 2026-09-25→2026-10-09 | https://itch.io/jam/scratch-game-jam-23
+  • Clecio Gamedev JAM Especial de Aniversário | 2026-09-26→2026-10-10 | https://itch.io/jam/clecio-gamedev-jam-09
+  • VGP: Arcade Game 2026-27 | 2026-09-28→2026-10-16 | https://itch.io/jam/vgp-arcade-game-2026-27
+  • MED1 GameJam 2026 | 2026-10-12→2026-10-16 | https://itch.io/jam/med1-gamejam-2026
+  • 🍪 Cookie Jam #5 [$30k + CASH] | 2026-10-03→2026-10-10 | https://itch.io/jam/cookie-jam-5
+  • Weekly Note Music Composing Jam #54 (TO SPACE) | 2026-10-02→2026-10-10 | https://itch.io/jam/weekly-note-music-composing-jam-54
+  • Stockton University Game Jam #4 | 2026-10-09→2026-10-16 | https://itch.io/jam/stockton-university-game-jam-4
+  • GameDev Insiders - Spooky Jam | 2026-10-09→2026-10-12 | https://itch.io/jam/spooky-jam26
+  • Finnish College Jam #11 | 2026-10-05→2026-10-09 | https://itch.io/jam/finnish-college-jam-11
+  • Jam-a-Nym #1 | 2026-10-02→2026-10-11 | https://itch.io/jam/jam-a-nym-1
+  • Tuesday the 13th Jam | 2026-10-13→2026-10-14 | https://itch.io/jam/tuesday-the-13th-jam
+  • Firestarter Jam 2026 | 2026-09-28→2026-10-02 | https://itch.io/jam/firestarter-jam-2026
+  • Christian PadreLudos Jam 7 | 2026-10-05→2026-10-10 | https://itch.io/jam/christian-padreludos-jam-7
+  • Creatively Weird Jam | 2026-10-01→2026-10-17 | https://itch.io/jam/creatively-weird-jam
+  • the campfire team game jam | 2026-10-11→2026-10-16 | https://itch.io/jam/the-campfire-team-game-jam
+  • Halloween Bear Jam Fall 2026 | 2026-10-10→2026-10-12 | https://itch.io/jam/halloween-bear-jam-fall-2026
+  • GDA October Game Jam: Alien | 2026-10-08→2026-10-14 | https://itch.io/jam/gda-october-jam
+  • Uncrank'd Cozy Playdate Autumn Jam | 2026-10-01→2026-10-18 | https://itch.io/jam/uncrankd-autumn-jam
+  • Game Dev Linz x Cloudflight Jam 2026 | 2026-10-09→2026-10-11 | https://itch.io/jam/game-dev-linz-x-cloudflight-jam-2026
+  • 龙大造游节2026 · 再来一局 · Loongdum Dare 2026 · One More Round | 2026-10-05→2026-10-08 | https://itch.io/jam/loongdum-dare-2026-jam
+  • The 98s Game Jam | 2026-10-07→2026-10-15 | https://itch.io/jam/the-98s-game-jam
+  • TAGAP Arcade Game Jam | 2026-10-16→2026-10-18 | https://itch.io/jam/tagap-arcade-game-jam
+  • DreamLayer Jam ($200 + Free Credits) | 2026-10-02→2026-10-13 | https://itch.io/jam/dreamlayer-jam-1
+  • GMI Game Jam 2026 | 2026-10-07→2026-10-11 | https://itch.io/jam/gmi-game-jam-2026
+  • ✨ Horror Hatch #2 PRIZES 🏆 | 2026-10-06→2026-10-13 | https://itch.io/jam/horror-hatch-21-day-challenge-2
+  • UNESCO SOILSCAPE Hackathon - South-East Europe | 2026-10-16→2026-10-18 | https://itch.io/jam/soilscape-hackathon-unesco
+  • Keyboard Game Jam | 2026-10-01→2026-10-16 | https://itch.io/jam/keyboard-game-jam
+  • Sports Jam | 2026-10-13→2026-10-16 | https://itch.io/jam/sports-jam-wdttg
+  • OLC CodeJam 2026 | 2026-09-25→2026-10-04 | https://itch.io/jam/olc-codejam-2026
+  • SUGAMING JAM 2026 | 2026-10-16→2026-10-18 | https://itch.io/jam/sugaming-jam-2026
+  • Linux open source game jam! | 2026-10-12→2026-10-17 | https://itch.io/jam/linux-game-jam
+  • GDSC Fall 2026 Game Jam - LOOP | 2026-10-16→2026-10-18 | https://itch.io/jam/gdsc-fall-2026-game-jam
+  • Summer Games Weekly Jam | 2026-10-12→2026-10-18 | https://itch.io/jam/summer-weekly-jam-2
+  • [NSFW] Katsis V Jam #4 | 2026-09-25→2026-10-11 | https://itch.io/jam/katsis-v-jam-4
+  • SSU Games - Fall 2026 - Jam | 2026-10-09→2026-10-18 | https://itch.io/jam/ssu-games-fall-2026-jam
+  • Octojam 2026 : Stunjam Edition | 2026-10-16→2026-10-18 | https://itch.io/jam/octojam-2026-stunjam-edition
+  • GDAC Fall Game Jam 2026 | 2026-10-17→2026-10-19 | https://itch.io/jam/gdac-fall-game-jam-2026
+  • Micro Jam 067: Windows ($350+ Prizes!) | 2026-10-17→2026-10-19 | https://itch.io/jam/micro-jam-067
+  • Utah Indie Game Jam+ 2026 | 2026-10-17→2026-10-19 | https://itch.io/jam/utah-indie-game-jam-2026
+  • 🎵🇯🇵🍣 Music Jam: Travel RPG #3 - Convenience Store Anthem | 2026-10-05→2026-10-12 | https://itch.io/jam/music-travel-rpg-3
+  • Portfolio Builders Jam - Week #94 | 2026-10-12→2026-10-19 | https://itch.io/jam/portfolio-builders-jam-week-94
+  • ✨ Horror Hatch #3 PRIZES 🏆 | 2026-10-11→2026-10-16 | https://itch.io/jam/horror-hatch-21-day-challenge-3
+  • GameForward GameJam: Mythos Collide | 2026-10-15→2026-10-19 | https://itch.io/jam/gameforward-mythos-collide
+  • GameDev.tv Halloween Jam 2026 | 2026-10-02→2026-10-12 | https://itch.io/jam/gamedevtv-halloween-jam-2026
+  • 1-DAY JAM #4 + Prizes | 2026-10-16→2026-10-17 | https://itch.io/jam/1-day-jam-4
+  • CULTWARE GAME JAMTOBER | 2026-10-05→2026-10-19 | https://itch.io/jam/cultware-game-jamtober
+  • Patch Notes v2.0 | 2026-10-09→2026-10-12 | https://itch.io/jam/patch-notes
+  • Women Game Jam | 2026 | 2026-10-16→2026-10-21 | https://itch.io/jam/women-game-jam-2026
+  • Mini Jame Gam #60 | 2026-10-16→2026-10-18 | https://itch.io/jam/mini-jame-gam-60
+  • Trijam #394: The 3 hour game jam | 2026-10-16→2026-10-19 | https://itch.io/jam/trijam-394
+  • HG Therapy Café Jam | 2026-10-15→2026-10-19 | https://itch.io/jam/hg-therapy-caf-jam
+  • Ctrl+AI+Jam Week 02 | 2026-10-17→2026-10-19 | https://itch.io/jam/ctrl-ai-jam-2
+  • Seven of Spades (52/52/52 Week 42) | 2026-10-15→2026-10-22 | https://itch.io/jam/52-seven-of-spades
+  • Deep Space Jam | 2026-10-04→2026-10-18 | https://itch.io/jam/deep-space-jam
+  • SMALL SCOPE JAM | 2026-10-11→2026-10-18 | https://itch.io/jam/small-scope-jam-
+  • THE CHICAGHOUL from BEYOND the STARS | 2026-10-03→2026-10-20 | https://itch.io/jam/the-chicaghoul-from-beyond-the-stars
+  • PHL Game Jam 2026 | 2026-10-09→2026-10-19 | https://itch.io/jam/philly-game-jam-2026
+  • Pixel Game Maker Awards | Season 9 | 2026-10-16→2026-10-23 | https://itch.io/jam/pixel-game-maker-awards
+  • Midnight Autumn Game Jam | 2026-10-12→2026-10-20 | https://itch.io/jam/midnight-autumn
+  • PlasJam #2 | 1-Button Jam | 2026-10-12→2026-10-19 | https://itch.io/jam/plasjam-2-1-button-jam
+  • ✨ Horror Hatch #4 PRIZES 🏆 | 2026-10-16→2026-10-20 | https://itch.io/jam/horror-hatch-21-day-challenge-4
+  • Jam-O-Lantern 2026 | 2026-10-10→2026-10-23 | https://itch.io/jam/jam-o-lantern-2026
+  • The Block House Haunted Halloween Game Jam [Prizes] | 2026-10-02→2026-10-19 | https://itch.io/jam/bh-halloween-game-jam
+  • Frankenjam 3 Go Crazy and Lazy | 2026-10-17→2026-10-24 | https://itch.io/jam/frankenjam-3-go-crazy-and-lazy
+  • Windmills Jam #1 | 2026-10-16→2026-10-24 | https://itch.io/jam/windmills-jam
+  • Weekly Note Composing Jam #55 | 2026-10-10→2026-10-16 | https://itch.io/jam/weekly-note-composing-jam-55
+  • Weekly Note Music Composing Jam #56 | 2026-10-16→2026-10-24 | https://itch.io/jam/weekly-note-music-composing-jam-56
+  • AI Games Jam | 2026-10-24→2026-11-15 | https://itch.io/jam/ai-games-jam-2026
+  • The People's Radio Jam - #4 | 2026-10-01→2026-10-24 | https://itch.io/jam/the-peoples-radio-jam-4
+  • Wylie Fold-Along — World Origami Days 2026 | 2026-10-24→2026-11-11 | https://itch.io/jam/wylie-fold-along-world-origami-days-2026
+  • POWER UP! Game Jam for Women 2026 | 2026-10-24→2026-10-27 | https://itch.io/jam/power-up-game-jam-for-women-2026
+  • Fail/Safe Game Jam 2026 | 2026-10-10→2026-10-24 | https://itch.io/jam/failsafe-game-jam-2026
+  • Terror Jam 2026 - A Halloween Game Jam [$1K+ in prizes!] | 2026-10-10→2026-10-24 | https://itch.io/jam/terror-jam-2026-a-halloween-game-jam
+  • 🎃Devs That Jam 36-hour Challenge #31: Spooky Edition ($200 prize!) | 2026-10-24→2026-10-25 | https://itch.io/jam/dtj36-31
+  • Ghost Shop Jam | 2026-10-24→2026-11-01 | https://itch.io/jam/ghost-shop-jam
+  • Trick or Theme Jam: Halloween Special | 2026-10-24→2026-10-31 | https://itch.io/jam/trick-or-theme-jam
+  • Out of the Drawer Jam | 2026-10-14→2026-10-17 | https://itch.io/jam/out-of-the-drawer-jam
+  • Dev&Play Jam 2026 | 2026-10-24→2026-10-31 | https://itch.io/jam/devplay-jam-2026
+  • Halloween Game Jam 2026 | 2026-10-24→2026-11-01 | https://itch.io/jam/halloween-game-jam-2026
+  • 2026_2rd_AIGameJam:keyword:Multi-camera | 2026-10-21→2026-10-24 | https://itch.io/jam/2026-2rd-aigamejam-multi-camera
+  • Jame Gam #63 Halloween Edition | 2026-10-24→2026-10-30 | https://itch.io/jam/jame-gam-63-halloween-edition
+  • Programalixo Gamejam #5 - Especial de Halloween | 2026-10-13→2026-10-24 | https://itch.io/jam/programalixo-gamejam-5
+  • 31WEEN GAME JAM | 2026-10-09→2026-10-24 | https://itch.io/jam/31ween-game-jam
+  • Comfy Jam: Autumn 🎃 [+ $Prizes] | 2026-10-02→2026-10-17 | https://itch.io/jam/comfy-jam-autumn-2026
+  • Synty Spooky Jam - October 2026 | 2026-10-14→2026-10-21 | https://itch.io/jam/synty-spooky-jam-oct26
+  • Game Jam Madrid Crea, 8ª edición | 2026-10-16→2026-10-24 | https://itch.io/jam/game-jam-madrid-crea-8-edicin
+  • Retro Pixel Jam | 2026-10-24→2026-10-31 | https://itch.io/jam/retro-pixel-jam
+  • Culture Bytes Mini-Jam #3 | 2026-10-24→2026-10-31 | https://itch.io/jam/culture-bytes-mini-jam-3
+  • Mcfluff's Zero Hour Game Jam 2026 | 2026-10-25→2026-10-25 | https://itch.io/jam/mcfluffs-zero-hour-game-jam
+  • Falling Sun | 2026-10-25→2026-10-26 | https://itch.io/jam/falling-sun
+  • The Otter Chaos Jam - Thogreer's Anniversary Celebration | 2026-07-31→2026-10-25 | https://itch.io/jam/otter-chaos-jam
+  • 🎵🇯🇵🚅 Music Jam: Travel RPG #4 - Next Stop (Train Station Jingles) | 2026-10-12→2026-10-16 | https://itch.io/jam/music-travel-rpg-4
+  • Minuit-jam | 2026-10-23→2026-10-25 | https://itch.io/jam/minuit
+  • Game Jam Europe (€200 Cash Prize - 24 Hours) | 2026-10-17→2026-10-25 | https://itch.io/jam/game-jam-europe-starting
+  • A Lil Horror GameJam 2026 ☠️🎃 | 2026-10-25→2026-10-30 | https://itch.io/jam/a-lil-horror-gamejam-2026
+  • OFFICIAL AI GAME JAM | 2026-10-25→2026-11-06 | https://itch.io/jam/official-ai-game-jam
+  • Historically Accurate Game Jam 13 | 2026-10-16→2026-10-25 | https://itch.io/jam/historically-accurate-game-jam-13
+  • 8-BIT END PAINT  JAM | 2026-10-15→2026-10-25 | https://itch.io/jam/8-bit-jam-
+  • ケモゲー1Week #1 | 2026-10-10→2026-10-17 | https://itch.io/jam/kemo-game-1week-1
+  • Horsetail Valley Folklore Collection | 2026-09-07→2026-10-25 | https://itch.io/jam/horsetail-valley-folklore-collection
+  • 🎶 Community Music Challenge 🎶 | 2026-10-23→2026-10-25 | https://itch.io/jam/community-music-challenge
+  • DinkDevs 2026 | 2026-10-23→2026-10-25 | https://itch.io/jam/dinkdevs-2026
+  • NO PASAJAM! - Jam against fascism | 2026-10-18→2026-10-25 | https://itch.io/jam/nopasajam
+  • Indie Jam | 2026-10-18→2026-10-22 | https://itch.io/jam/indie-jam-2
+  • Octobre Numérique 2026 Game Jam | 2026-10-21→2026-10-25 | https://itch.io/jam/octobre-numrique-2026-game-jam
+  • Spooky 2D Jam '26 👻 | 2026-10-16→2026-10-18 | https://itch.io/jam/spooky2djam26
+  • GameotronGameJam #2 | 2026-10-22→2026-10-25 | https://itch.io/jam/gameotrongamejam2
+  • Redot Halloween Jam | 2026-10-16→2026-10-25 | https://itch.io/jam/redot-halloween-jam
+  • Summer Games Weekly Jam | 2026-10-19→2026-10-25 | https://itch.io/jam/summer-games-weekly-jam-3
+  • IGDA October SCREAM JAM | 2026-10-23→2026-10-25 | https://itch.io/jam/clarkscreamjam
+  • GDOD Autumn Game Jam | 2026-10-23→2026-10-25 | https://itch.io/jam/gdod-autumn-game-jam
+  • Godot Wild Jam #98 | 2026-10-09→2026-10-18 | https://itch.io/jam/godot-wild-jam-98
+  • UndesJam #3 : indie game is coming! | 2026-10-22→2026-10-25 | https://itch.io/jam/undesjam
+  • ✨ Horror Hatch #5 PRIZES 🏆 | 2026-10-20→2026-10-25 | https://itch.io/jam/horror-hatch-21-day-challenge-5
+  • the jame gam game jam (for teenagers!) | 2026-10-22→2026-10-25 | https://itch.io/jam/jame-gam-game-jam
+  • 2026 Fargo Game Jam | 2026-10-23→2026-10-25 | https://itch.io/jam/2026-fargo-game-jam
+  • 🇳🇱 Dutch Game Jam #6 - Fall 2026 | 2026-10-17→2026-10-25 | https://itch.io/jam/dutch-game-jam-6-fall-2026
+  • Transitional Jam 2 | 2026-10-20→2026-10-25 | https://itch.io/jam/transitional-jam-2
+  • Horror Comics Jam 2026 | 2026-08-31→2026-10-25 | https://itch.io/jam/horror-comics-jam-2026
+  • 🌴 4. KIT GameJam: DattelJam | 2026-10-02→2026-10-04 | https://itch.io/jam/dattel-kit-gamejam
+  • Gamecodeur Community Gamejam #4 | 2026-10-10→2026-10-25 | https://itch.io/jam/gamecodeur-community-gamejam-4
+  • Villa Maria College presents BGSJamXXII | 2026-10-23→2026-10-25 | https://itch.io/jam/villa-maria-college-presents-bgsjamxxii
+  • Pumpkin Smash 2026 | 2026-10-23→2026-10-25 | https://itch.io/jam/pumpkin-smash-2026
+  • NoovaArt 1yr Jam! | 2026-09-30→2026-10-25 | https://itch.io/jam/1-year-anniversay-jam
+  • GameCraft Oct 23, 2026 Game Jam - "Something's Watching" | 2026-10-23→2026-10-25 | https://itch.io/jam/gamecraft-oct-23-2026-game-jam
+  • NSFW MiniJam #34 | 2026-10-09→2026-10-18 | https://itch.io/jam/nsfw-minijam-34
+  • Toohey Gaming: After Midnight Jam | 2026-10-17→2026-10-26 | https://itch.io/jam/toohey-gaming
+  • GameJam 2026 - UPC | 2026-10-23→2026-10-26 | https://itch.io/jam/gamejam-2026-upc
+  • Untitled Game Jam #134 | 2026-10-09→2026-10-19 | https://itch.io/jam/untitled-game-jam-134
+  • the anything goes jam #1 - dice | 2026-10-17→2026-10-26 | https://itch.io/jam/the-anything-goes-jam-1
+  • Jamfest Fall 2026 | 2026-10-23→2026-10-26 | https://itch.io/jam/jamfest-fall-2026
+  • TEETH TEETH TEETH Halloween Jam '26 | 2026-10-10→2026-10-26 | https://itch.io/jam/teeth-teeth-teeth-halloween-jam-26
+  • Shorty Jam | 2026-10-23→2026-10-26 | https://itch.io/jam/shorty-jam
+  • Coding Club November Game Jam | 2026-10-26→2026-11-22 | https://itch.io/jam/coding-club-november-game-jam
+  • Mini Jam 222: Enchanted | 2026-10-23→2026-10-26 | https://itch.io/jam/mini-jam-222-enchanted
+  • 🎮 CALI GAME JAM #4 Edición Colombia Solidaria 2026 | 2026-10-17→2026-10-26 | https://itch.io/jam/cali-game-jam-4-edicion-colombia-solidaria-2026
+  • Pmkn Jam | 2026-10-26→2026-10-31 | https://itch.io/jam/pmkn-jam
+  • Earend's Bad UI Game Jam | 2026-10-26→2026-11-09 | https://itch.io/jam/earends-bad-ui-game-jam
+  • 🎵🎧🇯🇵 Music Jam: Travel RPG #6 - A Hip-Hop Broadcast | 2026-10-19→2026-10-26 | https://itch.io/jam/music-travel-rpg-6
+  • IADE Game Jam | 2026-10-26→2026-10-29 | https://itch.io/jam/iade-game-jam
+  • Trijam #395: The 3 hour game jam | 2026-10-23→2026-10-26 | https://itch.io/jam/trijam-395
+  • IGU Fall Jam 2026 | 2026-10-12→2026-10-26 | https://itch.io/jam/igufalljam2026
+  • Mausritter Autumn Jam | 2026-10-26→2026-11-10 | https://itch.io/jam/mausritter-autumn-jam
+  • Portfolio Builders Jam - Week #95 | 2026-10-19→2026-10-26 | https://itch.io/jam/portfolio-builders-jam-week-95
+  • Portfolio Builders Jam - Week #96 | 2026-10-26→2026-11-02 | https://itch.io/jam/portfolio-builders-jam-week-96
+  • Albright College Fall 2026 Game Jam | 2026-10-17→2026-10-26 | https://itch.io/jam/albright-college
+  • 1-BIT JAM 15 + Prizes | 2026-10-26→2026-11-02 | https://itch.io/jam/1-bit-jam-15
+  • All Tools Allowed #3 — A Critics Arcade AI Game Jam | 2026-10-23→2026-10-26 | https://itch.io/jam/all-tools-allowed-3
+  • DeeJam | 2026-10-16→2026-10-19 | https://itch.io/jam/deejam
+  • 🎵👻💜 Music Jam: Travel RPG #7 - A Love Song for Ghosts | 2026-10-26→2026-11-02 | https://itch.io/jam/music-travel-rpg-7
+  • Solo Dev jam 13 | 2026-10-23→2026-10-26 | https://itch.io/jam/solo-dev-jam-13
+  • Friendslop Jam | 2026-10-26→2026-11-01 | https://itch.io/jam/friendslop
+  • Hallo-Horror Jam 2026 | 2026-09-05→2026-10-26 | https://itch.io/jam/hallo-horror-jam-2026
+  • Aristos Interactive Jam #9 | 2026-10-23→2026-10-26 | https://itch.io/jam/aristos-interactive-jam-9
+  • ДЖЕМ "4 ЖАНРА" | 2026-08-20→2026-10-26 | https://itch.io/jam/-4-zhanra
+  • New Wierd Game Jam except it's fall | 2026-10-27→2026-11-01 | https://itch.io/jam/new-wierd-game-jam-fall
+  • Nightmare on Dev Street: The Halloween Shift | 2026-10-14→2026-10-27 | https://itch.io/jam/nightmare-on-dev-street-the-halloween-shift
+  • Trick Or Treat Game Jam 2026 | 2026-09-14→2026-10-27 | https://itch.io/jam/gddc-fall-26-game-jam
+  • Megagame Game Jam 2026 | 2026-08-17→2026-10-27 | https://itch.io/jam/mggj26
+  • 🎵🇯🇵🛗 Music Jam: Travel RPG #5 - Futuristic Elevator (No Elevator, No Life) | 2026-10-15→2026-10-20 | https://itch.io/jam/music-travel-rpg-5
+  • Bezi Jam 14 [$400 Prizes] | SOMETHING WICKED | 2026-10-23→2026-10-27 | https://itch.io/jam/bezi-jam-14
+  • Ostravsky Game Jam 2026 | 2026-10-27→2026-10-28 | https://itch.io/jam/ostravsky-game-jam-2026
+  • Precision OST Jam #2 🎯🎵 | 2026-10-20→2026-10-27 | https://itch.io/jam/precision-ost-jam-2
+  • Planet Game Jam #20 | 2026-10-17→2026-10-28 | https://itch.io/jam/planet-game-jam-20
+  • Writers Summer 2026 | 2026-06-03→2026-10-28 | https://itch.io/jam/writers-summer-2026
+  • Spooktober Romance Game Jam | 2026-10-01→2026-10-28 | https://itch.io/jam/spooktober-romance-game-jam
+  • The Halloween Jam 2026 | 2026-10-01→2026-10-14 | https://itch.io/jam/the-halloween-jam-2026
+  • THIS IS HALLOWEEN JAM | 2026-10-21→2026-10-28 | https://itch.io/jam/this-is-halloween-jam
+  • GAME HORROR jam | 2026-10-18→2026-10-28 | https://itch.io/jam/game-horror-jam
+  • Various Skate Games | 2026-10-14→2026-10-28 | https://itch.io/jam/skate-games
+  • witchcraft jam🎃($100 + prizes) | 2026-10-21→2026-10-28 | https://itch.io/jam/witchcraft-jam
+  • AECC Natuween Jam 2026 | 2026-10-21→2026-10-28 | https://itch.io/jam/aecc-natuween-jam-2026
+  • Kiosune Studio Jam #2: Foxes & Frights | 2026-10-14→2026-10-28 | https://itch.io/jam/kiosune-jam-2-foxes-and-frights
+  • Anitya World Jam ($2700 in prizes) | 2026-09-09→2026-10-28 | https://itch.io/jam/anitya-world-jam-2700-in-prizes
+  • Eight of Spades (A 52/52/52 Jam) | 2026-10-22→2026-10-29 | https://itch.io/jam/52-eight-of-spades
+  • Clemson Game Development: October 2026 Game Jam | 2026-10-07→2026-10-22 | https://itch.io/jam/clemson-game-development-october-2026-game-jam
+  • ThinkyCon Jam 2026 | 2026-10-29→2026-11-09 | https://itch.io/jam/thinkycon-jam-2026
+  • Naturéales - le JdR féerique | 2026-10-29→2026-12-06 | https://itch.io/jam/natureales
+  • Jamference: AI Game Jam Hack 2 | 2026-10-16→2026-10-23 | https://itch.io/jam/jamference-ai-game-jam-hack-2
+  • Slapjam #2 | 2026-10-29→2026-10-31 | https://itch.io/jam/slapjam-ai-2
+  • SEN Halloween 72H Jam | 2026-10-29→2026-11-01 | https://itch.io/jam/sen-halloween-72h-jam-2026
+  • 🦐🦐 Chili Code Jam #5 | 2026-10-22→2026-10-29 | https://itch.io/jam/chili-code-jam-5
+  • Desert Bus for Hope 2026 Game Jam | 2026-10-24→2026-10-29 | https://itch.io/jam/dbgj2026
+  • VR IS DEAD Halloween Jam 2026 | 2026-10-01→2026-10-23 | https://itch.io/jam/xr-is-dead-halloween-jam-2026
+  • UNCG Fall Game Jam | 2026-10-01→2026-10-29 | https://itch.io/jam/uncg-fall-2026-game-jam
+  • Beginner's Jam Halloween 2026 | 2026-10-22→2026-10-29 | https://itch.io/jam/beginners-jam-halloween-2026
+  • Untitled Game Jam #135 | 2026-10-30→2026-11-09 | https://itch.io/jam/untitled-game-jam-135
+  • Seattle Indies Halloween Game Jam 2026 | 2026-10-23→2026-10-30 | https://itch.io/jam/seattle-indies-halloween-game-jam-2026
+  • Game Jam Crie Games – Edição Iguapé | 2026-09-11→2026-10-30 | https://itch.io/jam/crie-games-iguape-2026
+  • Kennebec Spooky Jam 2026 | 2026-10-15→2026-10-30 | https://itch.io/jam/kennebec-spooky-jam-2026
+  • Autumn Lisp Game Jam 2026 | 2026-10-30→2026-11-09 | https://itch.io/jam/autumn-lisp-game-jam-2026
+  • 24-Hour TTRPG Jam | 2026-10-30→2026-10-31 | https://itch.io/jam/24-hour-ttrpg-jam
+  • Improve My Game Jam 47 | 2026-10-30→2026-11-07 | https://itch.io/jam/improve-my-game-jam-47
+  • JEff the Killer!!!! SPOOKY HALLOWEEN JAM | 2026-10-30→2026-11-01 | https://itch.io/jam/jeff-the-killer-spooky-halloween-jam
+  • Jamference: AI Game Jam Hack 3 | 2026-10-30→2026-11-06 | https://itch.io/jam/jamference-ai-game-jam-hack-3
+  • Android jam | 2026-10-22→2026-10-30 | https://itch.io/jam/android-game-jam-ahmed
+  • GoedWare Game Jam Halloween Part 3 👻(+ prizes 🏆) | 2026-10-30→2026-11-03 | https://itch.io/jam/goedware-game-jam-halloween-3
+  • Trijam #396: The 3 hour game jam | 2026-10-30→2026-11-02 | https://itch.io/jam/trijam-396
+  • Thailand Horror Jam 2026 | 2026-10-23→2026-10-30 | https://itch.io/jam/thailand-horror-jam-2026
+  • Bad Plan Horror Jam | 2026-10-16→2026-10-30 | https://itch.io/jam/bad-plan-horror-jam
+  • brainCloud Jam | 2026-10-16→2026-10-30 | https://itch.io/jam/braincloud-jam
+  • 2026 International Digital Coding Competition | 2026-09-14→2026-10-30 | https://itch.io/jam/international-digital-coding-competition
+  • Puzzle Games | 2026-08-31→2026-10-30 | https://itch.io/jam/puzzle-games-gg
+  • Puzzle Games | 2026-09-30→2026-10-30 | https://itch.io/jam/puzzle-games-
+  • Core Mechanics Challenge 2026 Fall | 2026-10-30→2026-11-09 | https://itch.io/jam/core-mechanics-challenge-2026-fall
+  • 🎃Setfire Halloween Jam | 2026-10-30→2026-11-02 | https://itch.io/jam/setfire-halloween-jam
+  • SBS MTSF 26 GAME JAM | 2026-10-20→2026-10-30 | https://itch.io/jam/sbs-mtsf-26-game-jam
+  • JAMLLOWEEN 2 | 2026-10-30→2026-11-07 | https://itch.io/jam/jamlloween
+  • Strategy Board Game Jam | 2026-10-15→2026-10-30 | https://itch.io/jam/board-statuergy-games-jam
+  • THE LOST PS2 JAM | 2026-10-30→2026-11-21 | https://itch.io/jam/the-lost-ps2-jam
+  • Picocomputer 6502 - October 2026 | 2026-10-09→2026-10-30 | https://itch.io/jam/rp6502
+  • ЧРЕВАТЫЙ ДЖЕМ | 2026-10-30→2026-11-01 | https://itch.io/jam/chrevo-jam
+  • Game Jam Plus - MT 26/27 | 2026-10-16→2026-10-19 | https://itch.io/jam/game-jam-plus-mt-26-27
+  • TriGameDev Monthly Game Jam #9 - Spooky Edition | 2026-10-30→2026-11-01 | https://itch.io/jam/trigamedev-monthly-game-jam-9
+  • EFPSE Halloween Jam 2026 | 2026-09-28→2026-10-30 | https://itch.io/jam/efpse-halloween-jam-2026
+  • SCREAM JAM 2026 | 2026-10-16→2026-10-23 | https://itch.io/jam/scream-jam-2026
+  • Horror Game Jam ( GORE) | 2026-10-19→2026-10-30 | https://itch.io/jam/horror-game-jam-gore-
+  • Construct French Game Jam  d'Halloween(#CFGJH1) | 2026-10-01→2026-10-30 | https://itch.io/jam/cfglh1
+  • TINY JAM – October 26 | 2026-09-30→2026-10-30 | https://itch.io/jam/tiny-jam-10-26
+  • 🧛‍♂️ Vampire Horror Jam 3D 🦇 Vol. 3: Halloween Edition 🎃 | 2026-10-01→2026-10-30 | https://itch.io/jam/vampire-horror-jam-3d-vol-3-halloween-edition
+  • Retro Programmers United for Obscure Systems - Sinclair QL session | 2026-04-30→2026-10-30 | https://itch.io/jam/rpufos-sinclair-ql
+  • HORRORJAM 2026 | 2026-10-01→2026-10-30 | https://itch.io/jam/horrorjam-2026
+  • Master Jam 9 - Master.D | 2026-10-23→2026-10-30 | https://itch.io/jam/master-jam-9-masterd
+  • Proof of Play Game Jam | 2026-10-02→2026-10-31 | https://itch.io/jam/cgsandbox-proof-of-play
+  • Micro Jam 068: Evolution ($350+ Prizes!) | 2026-10-31→2026-11-02 | https://itch.io/jam/micro-jam-068
+  • Fake Game Monster Glossary | 2026-10-06→2026-10-31 | https://itch.io/jam/fake-game-monster-glossary-
+  • HOUDINI Mag Halloween Jam | 2026-10-01→2026-10-31 | https://itch.io/jam/houdini-mag-halloween-jam
+  • 2D Pixel art island Game jam! | 2026-09-30→2026-10-31 | https://itch.io/jam/2d-pixel-art-island-game-jam
+  • THE HENSJAM | 2026-10-17→2026-10-31 | https://itch.io/jam/hensjam
+  • AI Browser Game Jam 5 | 2026-10-17→2026-10-31 | https://itch.io/jam/ai-jam-5
+  • RGDC Jam 2026 + [$ Prizes] | 2026-10-01→2026-10-31 | https://itch.io/jam/rgdc-gamejam2026
+  • Small Scope Jam Revived | 2026-10-12→2026-10-31 | https://itch.io/jam/small-scope-jam-revived
+  • Pages' Whimsy Writing Jam Theme: "CLOCK" | 2026-10-16→2026-10-19 | https://itch.io/jam/pages-whimsy-writing-jam
+  • Spooktober Hallow Style Jam #5 | 2026-10-01→2026-10-31 | https://itch.io/jam/spooktober-hallow-style-jam-5
+  • Digital Pet Jam | 2026-09-25→2026-10-31 | https://itch.io/jam/digital-pet-jam
+  • Halloween Prompt Jam 2026 | 2026-10-10→2026-10-31 | https://itch.io/jam/halloweenpromptjam
+  • VGP: Action Game 2026-27 | 2026-10-12→2026-10-31 | https://itch.io/jam/vgp-action-game-2026-27
+  • $300 in Prizes *US* || The WORST Game Jam | 2026-10-14→2026-10-31 | https://itch.io/jam/your-worst-ideas
+  • Yandere Sweet Lovers Game Jam! | 2026-06-14→2026-10-31 | https://itch.io/jam/yandere-sweet-lovers-game-jam
+  • Chug Some Water Jam | 2026-10-31→2026-11-15 | https://itch.io/jam/chug-some-water-jam
+  • 3D modelling Jam #14 | 2026-10-16→2026-10-31 | https://itch.io/jam/3d-modelling-jam-14
+  • Teen Game Jam #1 | 2026-10-21→2026-10-31 | https://itch.io/jam/teengame-jam-1
+  • ROCKETS! SPOOKY themed (2026) | 2026-10-18→2026-10-31 | https://itch.io/jam/rockets-spooky-themed-2026
+  • One Month - One Game #2 | 2026-10-01→2026-10-31 | https://itch.io/jam/one-month-one-game-2
+  • NovemBird 2026 | 2026-10-31→2026-12-01 | https://itch.io/jam/novembird
+  • Retro Horror Jam 2026 | 2026-10-31→2026-11-15 | https://itch.io/jam/retro-horror-jam-2026
+  • Devtober 2026 | 2026-09-30→2026-10-31 | https://itch.io/jam/devtober-2026
+  • Transformation Game Jam 2026 | 2026-10-31→2026-11-30 | https://itch.io/jam/tf26
+  • Ultimate AI-Powered Game Jam #6 | 2026-10-15→2026-10-31 | https://itch.io/jam/ultimate-ai-powered-game-jam-6
+  • Orctober OSR Jam | 2026-09-30→2026-10-31 | https://itch.io/jam/orctober
+  • PequiJam 2026 - 4ª Edição | 2026-10-31→2026-11-08 | https://itch.io/jam/pequijam2026
+  • Decker VN Jam | 2026-08-22→2026-10-31 | https://itch.io/jam/deckervnjam
+  • ECTOCOMP 2026 | 2026-10-01→2026-10-31 | https://itch.io/jam/ectocomp-2026
+  • EdenSpark Game Jam #4 | 2026-10-01→2026-10-31 | https://itch.io/jam/edenspark-game-jam-4
+  • Crashtober BASIC Game Jam 2026 | 2026-10-01→2026-10-31 | https://itch.io/jam/crashtober-game-jam
+  • UPGRADE Game Jam #FA26 | 2026-10-31→2026-11-01 | https://itch.io/jam/upgrade-game-jam-fa26
+  • Game Dev Romania: Halloween Jam 2026 | 2026-10-19→2026-10-31 | https://itch.io/jam/game-dev-romania-halloween-jam-2026
+  • The Liquidy Jam! | 2026-10-31→2026-11-03 | https://itch.io/jam/the-liquidy-jam
+  • Pinuwuk's Lil Guy Game Jam: Ghost | 2026-10-01→2026-10-19 | https://itch.io/jam/lilguygamejam-ghost
+  • One Game a Month #64 | 2026-10-02→2026-10-31 | https://itch.io/jam/one-game-a-month-64
+  • The Last TTRPG Jam 2026 | 2026-10-16→2026-10-31 | https://itch.io/jam/last-ttrpg-jam-2026
+  • Roblox Horror October Jam | 2026-10-01→2026-10-31 | https://itch.io/jam/roblox-october-jam
+  • Game Jam 2026 AD | 2026-10-20→2026-10-31 | https://itch.io/jam/game-jam-2026-ad
+  • Furry Games and Dev Jam #6 (NSFW) | 2026-10-01→2026-10-31 | https://itch.io/jam/furry-games-and-dev-jam-6-nsfw
+  • 1Bitober 2026 - Art & Music Jam | 2026-10-01→2026-10-31 | https://itch.io/jam/1bitober2026
+  • Furry Games and Dev Jam #6 (SFW) | 2026-10-01→2026-10-31 | https://itch.io/jam/furry-games-and-dev-jam-6-sfw
+  • YoungMindsOnline Game jam | 2026-10-07→2026-10-31 | https://itch.io/jam/youngmindsonline-game-jam
+  • Bevy Jam #8 | 2026-10-31→2026-11-08 | https://itch.io/jam/bevy-jam-8
+  • JUDAH JAM 3 | 2026-10-01→2026-10-31 | https://itch.io/jam/judah-jam-3
+  • Solo Jam 2026 | 2026-10-17→2026-10-31 | https://itch.io/jam/solo-jam-2026
+  • MDJam 2026 | 2026-10-01→2026-10-31 | https://itch.io/jam/mdjam26
+  • B1T Jam 🎃 6 | 2026-10-31→2026-11-10 | https://itch.io/jam/b1t-jam-6
+  • FNaF Visual Novel Game Jam | 2026-10-02→2026-10-31 | https://itch.io/jam/fnaf-visual-novel-game-jam
+  • Reksiowy PoDzem Growy 2(026): Grzebiemy w Sloikach! | 2026-10-22→2026-10-31 | https://itch.io/jam/rpdg-2026
+  • SNES DEV Game Jam 2026 | 2026-07-31→2026-10-31 | https://itch.io/jam/snes-dev-game-jam-2026
+  • ¡Qué Nivel, Maribel! - Blockout Jam | 2026-09-30→2026-10-31 | https://itch.io/jam/que-nivel-maribel
+  • JagJam 2026 | 2026-05-03→2026-10-31 | https://itch.io/jam/jagjam-2026
+  • DENPA NARRATIVES JAM | 2026-10-31→2027-01-12 | https://itch.io/jam/denpa-narratives-jam
+  • Duel Game Jam October 2026 | 2026-09-30→2026-10-31 | https://itch.io/jam/duel-game-jam-october-2026
+  • ivfsf Halloween Game Jam 2026 | 2026-09-30→2026-10-31 | https://itch.io/jam/ivfsf-halloween-game-jam-2026
+  • Solovember 2026 | 2026-10-31→2026-12-01 | https://itch.io/jam/solovember2026
+  • The Bare-Bones Jam | 2026-09-30→2026-10-31 | https://itch.io/jam/bare-bones-jam-26
+  • Weihnachtsmarkt - GameJam 2026 | 2026-10-31→2026-12-31 | https://itch.io/jam/weihnachtsmarkt-gamejam-2026
+  • Level Up Jam | 2026-10-16→2026-10-31 | https://itch.io/jam/level-up-jam1
+  • Halloween 2026: A Witch’s Familiar | 2026-10-17→2026-10-31 | https://itch.io/jam/halloween-2026-a-witchs-familiar
+  • Bump In The Night Jam | 2026-10-01→2026-10-31 | https://itch.io/jam/bump-in-the-night-jam
+  • Folklore Jam 2026 | 2026-09-30→2026-10-31 | https://itch.io/jam/folklorejam26
+  • Megamitts' Halloween Hijinks 2026 | 2026-10-15→2026-10-31 | https://itch.io/jam/megamitts-halloween-hijinks-2026
+  • Megamitts' Mega Jam 20: Tic-Tac-Toerag! | 2026-11-01→2026-11-15 | https://itch.io/jam/megamitts-mega-jam-20
+  • Continue Your Game 15 | 2026-11-01→2026-12-01 | https://itch.io/jam/cyg-15
+  • Newhome Public Autumn Jam 2026 | 2026-11-01→2026-11-08 | https://itch.io/jam/newhome-public-autumn-jam-2026
+  • Innovation Jam #1 | 2026-09-30→2026-11-01 | https://itch.io/jam/greenynekos-innovation-jam
+  • WOMEN's GAME FEST (2026) | 2026-03-01→2026-11-01 | https://itch.io/jam/wgf2026
+  • Continue Your Game 14 | 2026-09-30→2026-11-01 | https://itch.io/jam/cyg-14
+  • Vedant Open Game Jam 2026 | 2026-11-01→2026-11-11 | https://itch.io/jam/vedantopengamejam2026
+  • Alphaytc game Jam #1 | 2026-10-06→2026-11-01 | https://itch.io/jam/alphaytc-game-jam-1
+  • Cozy Jam (Spooky Edition) | 2026-10-17→2026-11-01 | https://itch.io/jam/cozy-jam-spooky
+  • MigJam #44 - $15 Winner Judge by Mig | 2026-10-02→2026-11-01 | https://itch.io/jam/migjam-44
+  • Accountability Jam: October 2026 | 2026-10-01→2026-11-01 | https://itch.io/jam/accountability-jam-october-2026
+  • Godotsusto jam | 2026-10-01→2026-11-01 | https://itch.io/jam/godotsusto-jam
+  • Revival Jam 2026 | 2026-10-02→2026-10-19 | https://itch.io/jam/revival-jam-2026
+  • Osvaldo Gamejam | 2026-10-21→2026-11-01 | https://itch.io/jam/osvaldo-gamejam
+  • Wolf RPG Editor Game Jam #2 | 2026-11-01→2026-12-01 | https://itch.io/jam/wolf-rpg-editor-game-jam-2
+  • Special Interest JAM | 2026-11-01→2026-12-01 | https://itch.io/jam/special-interest-jam
+  • 7-Day Strategy Game Jam | 2026-11-01→2026-11-08 | https://itch.io/jam/the-strategy-game-jam-2026
+  • Beyond Decay Horror TTRPG Jam | 2026-09-01→2026-11-01 | https://itch.io/jam/beyond-decay-horror-ttrpg-jam
+  • The Second TTRPG Manifesto Jam | 2026-06-15→2026-11-01 | https://itch.io/jam/ttrpg-manifesto-2
+  • Together TTRPG Jam 2026 | 2026-01-01→2026-11-01 | https://itch.io/jam/tttrpg-jam
+  • HU's Game Dev. Club, October 2026 Game Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/hus-game-dev-club-october-2026-game-jam
+  • NOIR-VEMBER TTRPG JAM | 2026-11-01→2026-12-01 | https://itch.io/jam/noirvember-ttrpg-jam
+  • Farm Harvest Game Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/farm-harvest-game-jam
+  • Skeleton Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/skeleton-jam
+  • Halloween Decoration Monster Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/hdmj
+  • Raise Your Voice Jam 2026 | 2026-11-01→2026-12-21 | https://itch.io/jam/raise-2026
+  • DIS October 2026 Mutual Feedback Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/dis-october-2026-feedback-jam
+  • Game-like Jam 12 | 2026-11-01→2026-12-01 | https://itch.io/jam/gamelike-jam-012
+  • PrinterJam 2026 | 2026-11-01→2026-12-01 | https://itch.io/jam/printerjam2026
+  • National Game Design Month 2026 | 2026-11-01→2026-12-02 | https://itch.io/jam/national-game-design-month-2026
+  • Science Fantasy Jam | 2026-06-01→2026-11-01 | https://itch.io/jam/scifanjam
+  • Spoopy Jam 8: The Ocho | 2026-10-01→2026-11-01 | https://itch.io/jam/spoopy-jam-8
+  • B.C. Compliant - Primitive Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/bc-compliant-primitive-jam
+  • Robotic Romance Jam 2026 | 2026-11-01→2026-12-17 | https://itch.io/jam/robotic-romance-2026
+  • PiCoSteveMo 4 | 2026-11-01→2026-12-01 | https://itch.io/jam/picostevemo-4
+  • Lewdverse Festival  December 2026 | 2026-11-01→2026-12-14 | https://itch.io/jam/lewdverse
+  • Playtest & Feedback Exchange Jam #9 | 2026-09-19→2026-11-01 | https://itch.io/jam/playtest-feedback-exchange-jam-9
+  • Education and Romance Game Jam | 2026-11-01→2026-11-29 | https://itch.io/jam/romance-education-game-jam
+  • LIMINAL HORROR SUMMER JAM 2026 | 2026-07-10→2026-11-01 | https://itch.io/jam/liminal-horror-summer-jam-2026
+  • Ashabea's Horror CREATIVE Jam | 2026-08-31→2026-11-01 | https://itch.io/jam/ashabeas-hcj
+  • BIPOC Vamp Jam #2 | 2026-09-01→2026-11-01 | https://itch.io/jam/bipocvampday-2026
+  • Eternal TTRPG Jam - October 2026 - Underground | 2026-10-01→2026-11-01 | https://itch.io/jam/eternal-ttrpg-jam-october-2026-underground
+  • Week Sauce (October 2026) | 2026-10-01→2026-11-01 | https://itch.io/jam/weeksauce-58
+  • Trans Otome Jam | 2026-11-01→2026-12-01 | https://itch.io/jam/trans-otome-jam
+  • Week Sauce (November 2026) | 2026-11-01→2026-12-01 | https://itch.io/jam/weeksauce-59
+  • Nightmare Anthology - October Game Jam | 2026-10-01→2026-11-01 | https://itch.io/jam/nightmare-anthology-jam
+  • Boomer Shooter 2026 | 2026-10-18→2026-11-01 | https://itch.io/jam/boomer-shooter-2026
+  • PIGSquad does 0h Game Jam 2026 | 2026-11-01→2026-11-01 | https://itch.io/jam/pigsquad0hgamejam2026
+  • Sprigs & Kindling Jam 2026 | 2026-11-01→2026-12-01 | https://itch.io/jam/sprigs-kindling-jam-2026
+  • The "normal game jams in ohio be like" game jam | 2026-10-01→2026-11-01 | https://itch.io/jam/the-normal-game-jams-in-ohio-be-like-game-jam
+  • Checkpoint Game Jam for Indonesia, Malaysia, the Philippines & Singapore | 2026-10-15→2026-11-01 | https://itch.io/jam/checkpoint-game-jam
+  • The Big Gay Comic Jam 2026 | 2026-11-01→2026-12-01 | https://itch.io/jam/the-big-gay-comic-jam
+  • Made With Visionaire Jam 3 | 2026-10-15→2026-11-01 | https://itch.io/jam/made-with-visionaire-jam-3
+  • Haiku Jam  with Prizes | 2026-10-01→2026-11-01 | https://itch.io/jam/haiku-jam
+  • Kart for a Cause: Paid Creator Bundle + Mario Kart Tournament | 2026-11-01→2027-01-01 | https://itch.io/jam/kart-for-a-cause
+  • Minimalist TTRPG Jam 5 | 2026-09-01→2026-11-01 | https://itch.io/jam/minimalist-ttrpg-jam-5
+  • Bound Jam 2026 | 2026-10-01→2026-11-01 | https://itch.io/jam/bound-jam-2026
+  • mini map jam | 2026-11-01→2027-02-01 | https://itch.io/jam/mini-map-jam
+  • Cold Case Jam 2026 | 2026-11-01→2026-12-31 | https://itch.io/jam/cold-case-jam-2026
+  • 🇫🇷[100€] Indie Park Game Jam #6 | 2026-11-01→2026-11-30 | https://itch.io/jam/indie-park-game-jam-6
+  • C23 C++26 SFML3.1.0 Game Jam | 2026-11-01→2027-01-31 | https://itch.io/jam/c23-c26-sfml310-game-jam
+  • S-Kill-Up Horror Game Jam 2026 | 2026-11-01→2026-11-05 | https://itch.io/jam/s-kill-up-horror-2026
+  • Game Assets  Bundle!! | 2026-10-01→2026-11-01 | https://itch.io/jam/game-assets-bundle
+  • Game Off 2026 | 2026-11-01→2026-12-01 | https://itch.io/jam/game-off-2026
+  • HEJ 2026 Október | 2026-10-07→2026-11-01 | https://itch.io/jam/hej-2026-oktber
+  • Spooky Egg Jam: Resurection | 2026-08-31→2026-11-01 | https://itch.io/jam/spooky-egg-jam-4
+  • 🏃‍Sprint 18 | 2026-10-16→2026-11-01 | https://itch.io/jam/sprint-18
+  • 10 KILOBYTES JAM | 2026-10-02→2026-11-02 | https://itch.io/jam/10-kilobytes-jam-
+  • UofT GDDC Fall 2026 Game Jam | 2026-10-23→2026-11-02 | https://itch.io/jam/gddc-fall-2026-game-jam
+  • Retro Autumn game jam🍂🍁, all ages and skill levels | 2026-09-28→2026-11-02 | https://itch.io/jam/autumn-game-jam-2026-everyone-retro
+  • Backseating Allowed Jam 2026 | 2026-10-23→2026-11-02 | https://itch.io/jam/backseating-allowed-jam-2026
+  • Collaborative Derelict Jam 2026 | 2026-10-02→2026-11-02 | https://itch.io/jam/sci-fi-derelict-jam-2026
+  • Architect 6 : An Iterative Development Framework | 2026-10-23→2026-11-02 | https://itch.io/jam/architect-6-an-iterative-development-framework
+  • Ranked: Creepy Pasta Game Jam | 2026-11-02→2026-11-16 | https://itch.io/jam/ranked-creepy-pasta-game-jam
+  • Face Your Fears | 2026-10-01→2026-11-02 | https://itch.io/jam/face-your-fears
+  • Colorful Love JAM 2026 | 2026-07-01→2026-11-02 | https://itch.io/jam/colorful-love-jam
+  • Portfolio Builders Jam - Week #97 | 2026-11-02→2026-11-09 | https://itch.io/jam/portfolio-builders-jam-week-97
+  • Jam in the Woods | 2026-10-05→2026-11-02 | https://itch.io/jam/jam-in-the-woods
+  • GDC 2026 Cuisine Game Jam | 2026-10-12→2026-11-02 | https://itch.io/jam/gdc-2026-cuisine-game-jam
+  • Halloween Jack-O-Jam | 2026-10-19→2026-11-03 | https://itch.io/jam/dmg-halloween-jam-26
+  • Hexcrawloween 2 | 2026-10-01→2026-11-03 | https://itch.io/jam/hexcrawloween-2
+  • Educational Jam #5 | 2026-11-03→2026-11-07 | https://itch.io/jam/edu-jam-5
+  • GameCraft 2026 | 2026-10-12→2026-10-19 | https://itch.io/jam/gamecraft6
+  • Out of boredom: Raldi Game Jam III (THE FINAL ONE) | 2026-08-13→2026-11-03 | https://itch.io/jam/out-of-boredom-raldi-game-jam-iii-holy-fuck
+  • Game Gauntlet - SIM Jam ($1,500 in Cash Prizes, Online, Worldwide) | 2026-09-23→2026-11-04 | https://itch.io/jam/game-gauntlet-sim-jam
+  • VGDC Fall 26 Template Jam | 2026-10-22→2026-11-05 | https://itch.io/jam/vgdc-fall-26-template-jam
+  • The Transhet Jam #2 | 2026-08-01→2026-11-05 | https://itch.io/jam/the-transhet-jam-2
+  • 20 Games Challenge - Autumn Jam 2026! | 2026-11-05→2026-11-23 | https://itch.io/jam/20gameschallenge-autumn-2026
+  • Indiepocalypse Issue #84 (Paying Anthology) | 2026-10-02→2026-11-05 | https://itch.io/jam/indiepocalypse-issue-84-paying-anthology
+  • چھٹیاں ہیں تو گیم جیم | 2026-11-06→2026-11-09 | https://itch.io/jam/chutti
+  • KILL YOUR DARLINGS Mini Jam No. 2 | 2026-11-06→2026-11-09 | https://itch.io/jam/kill-your-darlings-mini-jam-no-2
+  • Hoosier Conservation Jam | 2026-11-06→2026-11-08 | https://itch.io/jam/hoosier-conservation-jam
+  • Future Game Makers Jam 2026 #2 | 2026-11-06→2026-11-08 | https://itch.io/jam/future-game-makers-jam-2026-2
+  • Spooky Jam 2026 | 2026-11-06→2026-11-08 | https://itch.io/jam/spooky-game-jam-26
+  • Pizza Jam (✨Pizza Prize!✨) | 2026-11-06→2026-11-15 | https://itch.io/jam/pizza-jam-pizza-prize-17
+  • GBRetroDev'26: Heroes of ASM 3 | 2026-10-18→2026-11-06 | https://itch.io/jam/gbretrodev26
+  • Game/Music Jam 2026 | 2026-11-07→2026-11-14 | https://itch.io/jam/gmjam2026
+  • 17ª Game Jam UNIVALI | 2026-11-07→2026-11-08 | https://itch.io/jam/17-game-jam-univali
+  • ShroomJam 2026 | 2026-11-07→2026-11-14 | https://itch.io/jam/shroomjam-2026
+  • Tribute to DOSBox - Gamejam | 2026-08-07→2026-11-07 | https://itch.io/jam/tribute-to-dosbox
+  • GCPL Choose Your Own Game Jam 2026, 2-Week Edition | 2026-11-07→2026-11-23 | https://itch.io/jam/gcpl-choose-your-own-game-jam-2026-2-week-edition
+  • GCPL Choose Your Own Game Jam 2026, 48-Hour Edition | 2026-11-07→2026-11-09 | https://itch.io/jam/gcpl-choose-your-own-game-jam-2026-48-hour-edition
+  • Reciprocity Game Jam | 2026-05-08→2026-11-07 | https://itch.io/jam/reciprocity-game-jam
+  • Lesbian Vampire Jam 2 | 2026-08-20→2026-11-09 | https://itch.io/jam/lesbian-vampire-jam-2
+  • Cairn Community Megadungeon Jam - Round Two | 2026-10-17→2026-11-09 | https://itch.io/jam/cairn-community-megadungeon-jam-round-two
+  • Sound Game Jam 2026 | 2026-10-09→2026-11-09 | https://itch.io/jam/soundgamejam2026
+  • California Clash 2026 | 2026-10-03→2026-10-12 | https://itch.io/jam/california-clash-2026
+  • VGP/ANI: Collaboration Game 2026-27 | 2026-11-09→2027-01-08 | https://itch.io/jam/vgpani-collaboration-game-2026-27
+  • ⛏ Dwarves Jam ⛏ | 2026-09-23→2026-11-09 | https://itch.io/jam/dwarves-jam
+  • Month of Horror #2: Withering Away | 2026-10-07→2026-11-09 | https://itch.io/jam/month-of-horror-2
+  • RPG Maker RTP Challenge #2 | 2026-10-21→2026-11-09 | https://itch.io/jam/rpg-maker-rtp-challenge-2
+  • Christian PadreLudos Jam 8 | 2026-11-09→2026-11-14 | https://itch.io/jam/christian-padreludos-jam-8
+  • Portfolio Builders Jam - Week #98 | 2026-11-09→2026-11-16 | https://itch.io/jam/portfolio-builders-jam-week-98
+  • Plural Visual Novel Jam | 2026-09-11→2026-11-09 | https://itch.io/jam/plural-jam
+  • One Month - One Game #3 | 2026-11-10→2026-11-30 | https://itch.io/jam/one-month-one-game-3
+  • Denpa VN Jam 2026 | 2026-09-29→2026-11-11 | https://itch.io/jam/denpa-vn-jam-2026
+  • Norman Mailer Mail-in Game Jam | 2026-09-25→2026-11-11 | https://itch.io/jam/norman-mailer-mail-in-game-jam
+  • MPUP Jam 1: Hello World | 2026-11-11→2026-12-12 | https://itch.io/jam/mpup-1
+  • Ventilastation × The Overkill JAM | 2026-10-14→2026-11-11 | https://itch.io/jam/ventilastation-overkill-jam
+  • GMI Winter Jam 2026 | 2026-11-11→2026-11-25 | https://itch.io/jam/gmi-winter-jam-2026
+  • IDEA419 Game Jam | 2026-10-22→2026-11-11 | https://itch.io/jam/idea419-game-jam
+  • The Washerwoman Potlatch | 2026-11-12→2026-11-19 | https://itch.io/jam/the-washerwoman-potlatch
+  • Prototipagem 3D - Jogos Digitais - UNISINOS 2026/2 | 2026-11-12→2026-11-27 | https://itch.io/jam/prototipagem-3d-jogos-digitais-unisinos-20262
+  • Medusalaire Jam | 2026-09-09→2026-11-12 | https://itch.io/jam/medusalaire-jam
+  • KOKOTÖNA - What ALWAYS was here | 2026-10-12→2026-11-13 | https://itch.io/jam/kokotona-wawh
+  • NECROVENGE Community Zine #01 | 2026-11-13→2026-12-31 | https://itch.io/jam/necrovenge-community-jam-01
+  • Mini Jame Gam #61 | 2026-11-13→2026-11-15 | https://itch.io/jam/mini-jame-gam-61
+  • Ultimate AI-Powered Game Jam #7 | 2026-11-13→2026-11-16 | https://itch.io/jam/ultimate-ai-powered-game-jam-7
+  • The S.A.M Game Jam 2026 | 2026-11-13→2026-11-23 | https://itch.io/jam/the-sam-game-jam-2026
+  • NaroJam 3 | 2026-11-13→2026-11-15 | https://itch.io/jam/narojam26
+  • Tiny Spell Jam 2026 | 2026-11-13→2026-11-23 | https://itch.io/jam/tiny-spell-jam-2026
+  • Fall Game jam 2026 | 2026-11-13→2026-11-15 | https://itch.io/jam/liu-fall-game-jam-2026
+  • Low Effort Jam 26 | 2026-11-13→2026-11-20 | https://itch.io/jam/low-effort-jam-26
+  • Pencil, Chisel, Code! #6 | 2026-11-13→2026-11-15 | https://itch.io/jam/pencil-chisel-code-6
+  • Godot Wild Jam #99 | 2026-11-13→2026-11-22 | https://itch.io/jam/godot-wild-jam-99
+  • DevLUp Fall Game Jam '26 | 2026-11-13→2026-11-15 | https://itch.io/jam/devlup-fall-game-jam-26
+  • Micro Jam 070: Circus ($300+ Prizes) | 2026-11-14→2026-11-16 | https://itch.io/jam/micro-jam-070
+  • Micro Jam 069: Halloween ($350+ Prizes!) | 2026-11-14→2026-11-16 | https://itch.io/jam/micro-jam-069
+  • "Finish Your Game" Jam 2026 | 2026-11-14→2026-12-01 | https://itch.io/jam/finishyourgamejam2026
+  • DURF Jam 6 | 2026-10-14→2026-11-14 | https://itch.io/jam/durf-jam-6
+  • Radist's Jam #1 | 2026-11-14→2026-11-21 | https://itch.io/jam/radist-jam-1
+  • GAMERella Game Jam 2026 | 2026-11-14→2026-11-16 | https://itch.io/jam/gamerella2026
+  • Make it Real Visual Novel Jam  | #Drawtober / Analog Art Challenge | 2026-09-17→2026-11-14 | https://itch.io/jam/make-it-real
+  • Jam Against The Darkness | 2026-10-15→2026-11-15 | https://itch.io/jam/jam-against-the-darkness
+  • RPG Mania XVI | 2026-10-15→2026-11-15 | https://itch.io/jam/rpg-mania-xvi
+  • 🌶️ Genderfreak Jam 🌶️ | 2026-08-15→2026-11-15 | https://itch.io/jam/genderfreak-jam
+  • AMSGJ 2026 | 2026-10-15→2026-11-15 | https://itch.io/jam/amsgj-2026
+  • Through Your Eyes: First-Person Game Jam | 2026-10-15→2026-11-15 | https://itch.io/jam/through-your-eyes-first-person-game-jam
+  • O.D.I.N. Field File Jam | 2026-10-16→2026-11-15 | https://itch.io/jam/odin-field-file-jam
+  • HOLLOWS CROSSOVER ENTITY GAME JAM 2026 | 2026-10-19→2026-11-15 | https://itch.io/jam/hollows-jam-2026
+  • Superheroes for Jeff | 2026-09-01→2026-11-16 | https://itch.io/jam/superheroes-for-jeff
+  • MVM 33 - Super edition | 2026-08-16→2026-11-16 | https://itch.io/jam/metroidvania-month-super-33
+  • Zoud GameLab [Up to $140K in Dev Funding] | 2026-10-15→2026-11-16 | https://itch.io/jam/zoud-gamelab
+  • 🏃‍Sprint 19 | 2026-11-16→2026-12-01 | https://itch.io/jam/sprint-19
+  • OPR Mission Jam #3 | 2026-11-16→2026-11-22 | https://itch.io/jam/oprmj3
+  • 20 Second Game Jam 2026 | 2026-10-23→2026-11-17 | https://itch.io/jam/20-second-game-jam-2026
+  • Prowincjonalny Liminalny Dżem | 2026-09-04→2026-11-17 | https://itch.io/jam/liminalna-prowincja
+  • GameJamPlus 26/27 - 11th Edition | 2026-10-16→2026-11-18 | https://itch.io/jam/gamejamplus-2627
+  • Month of Horror #3: Endless Ocean | 2026-11-18→2026-12-21 | https://itch.io/jam/month-of-horror-3
+  • the insane raldi gamejam! | 2026-10-19→2026-11-19 | https://itch.io/jam/the-insane-raldi-gamejam
+  • F*** PERFECT ART JAM! | 2026-10-01→2026-11-19 | https://itch.io/jam/f-perfect-art-jam
+  • 【台灣大專遊戲開發社聯合 GameJam 0th】 | 2026-11-19→2026-11-22 | https://itch.io/jam/tugj-0th
+  • Touhou Fan Game Jam 17 | 2026-11-19→2026-11-22 | https://itch.io/jam/touhou-jam-17
+  • Hi Dream Jam | 2026-09-20→2026-11-20 | https://itch.io/jam/hi-dream-jam
+  • This Should Be A Game Jam 02: John Carpenter's Halloweenless Hallowe'en | 2026-10-19→2026-11-20 | https://itch.io/jam/this-should-be-a-game-jam-02
+  • Imaginary Game Mini Jam | November 2026 | 2026-11-20→2026-11-23 | https://itch.io/jam/imaginary-game-mini-jam-november-2026
+  • Tragedy Jam | 2026-11-20→2026-12-21 | https://itch.io/jam/tragedy-jam
+  • Turkey Jam 2026 | 2026-11-20→2026-11-25 | https://itch.io/jam/turkeyjam
+  • Good horror jam #2 | 2026-10-20→2026-11-20 | https://itch.io/jam/good-horror-jam2
+  • Concurso de Cartas Custom PTCG CVUL | 2026-10-16→2026-11-21 | https://itch.io/jam/concurso-cartas-custom-ptcg-cvul
+  • Character Design Game Jam [$300+ Prizes!] | 2026-10-21→2026-11-22 | https://itch.io/jam/character-design-game-jam
+  • 2026 OST Album Jam - Reprise | 2026-11-23→2026-12-17 | https://itch.io/jam/2026-ost-album-jam-reprise
+  • Fucu99 Game Jam | 2026-11-25→2026-12-05 | https://itch.io/jam/fucu99-game-jam
+  • RPG Maker RTP Challenge: Another RMW Forum Closure Edition | 2026-11-25→2026-12-14 | https://itch.io/jam/rpg-maker-rtp-challenge-another-rmw-forum-closure-edition
+  • Bezi Jam 15 [$400 Prizes] - UNREAL | 2026-11-27→2026-12-01 | https://itch.io/jam/bezi-jam-15
+  • Creepy Cozy Solstice Game Jam | 2026-11-27→2026-12-15 | https://itch.io/jam/creepy-cozy-solstice-game-jam
+  • Hackathon SOILSCAPE, Italia 2026 | 2026-11-27→2026-11-29 | https://itch.io/jam/soilscape-italia-2026
+  • Pixel Forge MEGA JAM | $30k  Prizes + Cash ! | 2026-11-28→2026-12-08 | https://itch.io/jam/pixel-forge-mega-jam
+  • Jam for All BASIC Dialects (#8) | 2026-11-30→2026-12-31 | https://itch.io/jam/jam-for-all-basic-dialects-8
+  • Open World Jam 2 | 2026-11-30→2027-02-28 | https://itch.io/jam/open-world-jam-2
+  • 3x3x3 Jam | 2026-11-30→2026-12-03 | https://itch.io/jam/3x3x3-jam
+  • Design Jam #2 | 2026-12-01→2026-12-07 | https://itch.io/jam/design-jam-2
+  • poetry jam | 2026-12-01→2026-12-15 | https://itch.io/jam/poetry-jam
+  • Transmedia Jam #1 : Humans versus AI | 2026-12-01→2026-12-10 | https://itch.io/jam/transmedia-jam-1
+  • Jingle Jam prizes !worth 5 dollar!and 500rupees! | 2026-12-01→2026-12-15 | https://itch.io/jam/jingle-bell-jam
+  • PIXEL-DECK JAM #1 | 2026-12-01→2026-12-08 | https://itch.io/jam/-pixel-deck-jam-1
+  • Creatively Weird Jam (2) | 2026-12-01→2026-12-12 | https://itch.io/jam/creatively-weird-jam-2
+  • Uplifting Game Jam -  CASH PRIZES $$ | 2026-12-01→2026-12-14 | https://itch.io/jam/uplifting-game-jam-cash-prizes-10
+  • The Point | 2026-12-01→2026-12-15 | https://itch.io/jam/point
+  • Craftpix Indie Jam #2-2026 | 2026-12-03→2026-12-13 | https://itch.io/jam/craftpix-indie-jam-2-2026
+  • The Eye Jam III: Folk Horror | 2026-12-03→2026-12-13 | https://itch.io/jam/the-eye-jam3
+  • Get Tilted! - an Alt Ctrl Game Jam | 2026-12-04→2026-12-08 | https://itch.io/jam/get-tilted
+  • Wrapped Up 2026 | 2026-12-04→2026-12-20 | https://itch.io/jam/wrapped-up-2026
+  • UDC Jam #40 | 2026-12-04→2026-12-14 | https://itch.io/jam/udc-jam-40
+  • 1-BIT JAM 16 | 2026-12-07→2026-12-14 | https://itch.io/jam/1-bit-jam-16
+  • Mini Jame Gam #62 | 2026-12-11→2026-12-13 | https://itch.io/jam/mini-jame-gam-62
+  • b3agz Jam 2026 | 2026-12-11→2026-12-18 | https://itch.io/jam/b3agz-jam-2026
+  • Grassroots Game Jam 2026 | 2026-12-11→2026-12-21 | https://itch.io/jam/grassroots-game-jam-2026
+  • Godot Wild Jam #100 | 2026-12-11→2026-12-20 | https://itch.io/jam/godot-wild-jam-100
+  • Jame Gam Christmas Edition | 2026-12-16→2026-12-23 | https://itch.io/jam/jame-gam-christmas-edition
+  • Meaningful Games Jam 2026.2: Mini Edition! | 2026-12-16→2026-12-20 | https://itch.io/jam/meaningful-games-jam-2026-2-mini-edition
+  • 🏃‍Sprint 20 | 2026-12-16→2027-01-01 | https://itch.io/jam/sprint-20
+  • Girls Game Jam 2026 | 2026-12-19→2026-12-20 | https://itch.io/jam/girls-game-jam-2026
+  • WINTER BOB GAME JAM 2026 | 2026-12-19→2026-12-26 | https://itch.io/jam/bob-game-jam-2026
+  • Glam Jam III | 2026-12-31→2027-01-31 | https://itch.io/jam/glam-jam-iii
+  • 2027 Annual Jam | 2026-12-31→2027-12-31 | https://itch.io/jam/2027-annual-jam
+  • GDKO 2027 Round 1 | 2027-01-01→2027-01-15 | https://itch.io/jam/gdko-2027-round-1
+  • Union Made Jam 2027 | 2027-01-01→2027-02-01 | https://itch.io/jam/union-made-jam-2027
+  • 4 PAGE COMIC JAM 2027 | 2027-01-05→2027-02-05 | https://itch.io/jam/4-page-comic-jam-2027
+  • Month of Horror #4: Tortured Artist | 2027-01-06→2027-02-08 | https://itch.io/jam/month-of-horror-4
+  • MEAT on MARS | 2027-01-08→2027-01-13 | https://itch.io/jam/meat-on-mars
+  • Furry Game Jam #3 -  Winter Edition 2026 | 2027-01-08→2027-01-18 | https://itch.io/jam/furries
+  • Comfy Jam: Winter🗻 | 2027-01-09→2027-01-23 | https://itch.io/jam/comfy-jam-winter-2027
+  • RPG Maker Themed Game Jam #18: Adventurer's Guild | 2027-01-13→2027-03-15 | https://itch.io/jam/rpg-maker-themed-game-jam-18
+  • RPG Maker Horror Game Jam #18: Cursed Hotel | 2027-01-13→2027-03-15 | https://itch.io/jam/rpg-maker-horror-game-jam-18
+  • 5 Minute Horror Jam | 2027-01-17→2027-02-08 | https://itch.io/jam/5-minute-horror-jam
+  • Pirate Software - Game Jam 20 | 2027-01-17→2027-01-31 | https://itch.io/jam/pirate
+  • 1-BIT JAM 17 | 2027-01-18→2027-01-25 | https://itch.io/jam/1-bit-jam-17
+  • VGP: Multiplayer Game 2026-27 | 2027-01-19→2027-02-06 | https://itch.io/jam/vgp-multiplayer-game-2026-27
+  • Historically Accurate Game Jam 14 | 2027-01-22→2027-01-31 | https://itch.io/jam/historically-accurate-game-jam-14
+  • Valen'Py - Solodev Ren'Py Jam | 2027-02-02→2027-02-14 | https://itch.io/jam/valenpy-2027
+  • Games for Blind Gamers 6 | 2027-02-05→2027-03-08 | https://itch.io/jam/games-for-blind-gamers-6
+  • Twists and Revelations! | 2027-02-05→2027-02-15 | https://itch.io/jam/twists-and-revelations
+  • VGP: Contribution Game 2026-27 | 2027-02-08→2027-02-27 | https://itch.io/jam/vgp-contribution-game-2026-27
+  • Superb Owl Jam | 2027-02-14→2027-02-14 | https://itch.io/jam/superb-owl-jam
+  • Brackeys Game Jam 2027.1 | 2027-02-14→2027-02-21 | https://itch.io/jam/brackeys-17
+  • Month of Horror #5: Art of Divination | 2027-02-17→2027-03-22 | https://itch.io/jam/month-of-horror-5
+  • ⸸BLACK METAL JAM⸸ | 2027-02-19→2027-02-26 | https://itch.io/jam/black-metal-jam
+  • KIRO GAME JAM FR | 2027-02-20→2027-02-27 | https://itch.io/jam/kiro-game-jam-fr
+  • Jam Academy 2027 - France | 2027-03-01→2027-03-04 | https://itch.io/jam/jam-academy-2027-france
+  • Jam Academy 2027 - Tahiti | 2027-03-01→2027-03-05 | https://itch.io/jam/jam-academy-2027-tahiti
+  • 1-BIT JAM 18 | 2027-03-08→2027-03-15 | https://itch.io/jam/1-bit-jam-18
+  • Yuri Comic Jam 2027 | 2027-04-01→2027-06-01 | https://itch.io/jam/yuri-comic-jam-2027
+  • Plug Jam 2027 | 2027-04-06→2027-04-16 | https://itch.io/jam/plug-jam-2027
+  • Gamedev.js Jam 2027 | 2027-04-13→2027-04-26 | https://itch.io/jam/gamedevjs-2027
+  • RPG Maker Horror Game Jam #19: Secret Garden | 2027-04-14→2027-06-14 | https://itch.io/jam/rpg-maker-horror-game-jam-19
+  • RPG Maker Themed Game Jam #19: Star-crossed Lovers | 2027-04-14→2027-06-14 | https://itch.io/jam/rpg-maker-themed-game-jam-19
+  • 🌃FeverDream🌠 GAME JAM | 2027-04-20→2027-05-21 | https://itch.io/jam/feverdream-game-jam4
+  • 1-BIT JAM 19 | 2027-04-26→2027-05-03 | https://itch.io/jam/1-bit-jam-19
+  • The Glitch Storm: May 2027 | 2027-05-01→2027-05-15 | https://itch.io/jam/the-glitch-storm-2027may
+  • UIWare: Orange — Game Jam | 2027-06-01→2027-08-31 | https://itch.io/jam/uiware-orange-game-jam
+  • 🎮⚡ Z4597 ANNUAL GAME JAM 2027⚡🎮 | 2027-07-09→2027-07-23 | https://itch.io/jam/z4597annualgamejam2026
+  • Retro Summer #32BitJam | 2027-07-17→2027-08-02 | https://itch.io/jam/retro-summer
+  • GMTK Game Jam 2027 | 2027-08-11→2027-08-15 | https://itch.io/jam/gmtk-2027
+  • GMI Game Jam 2027 | 2027-08-12→2027-08-16 | https://itch.io/jam/gmi-game-jam-2027
+  • Christmas Party Jam 2027 | 2027-09-30→2027-12-01 | https://itch.io/jam/christmas-party-jam-2027
+  • Raise Your Voice Jam 2027 | 2027-11-01→2027-12-01 | https://itch.io/jam/raise-2027
+  • Design Jam #3 | 2027-12-01→2027-12-07 | https://itch.io/jam/design-jam-3
+  • 2028 Annual Jam | 2027-12-31→2028-12-31 | https://itch.io/jam/2028-annual-jam
+  • AGDG DEMO DAY 78 | 2028-03-03→2028-03-06 | https://itch.io/jam/agdg-demo-day-78
+  • 2029 Annual Jam | 2028-12-31→2029-12-31 | https://itch.io/jam/2029-annual-jam
+  • OST Composing Jam NEWSLETTER | 2029-12-31→2039-12-31 | https://itch.io/jam/ostcompjam
+  • 2030 Annual Jam | 2029-12-31→2030-12-31 | https://itch.io/jam/2030-annual-jam
+  • __jam | 2030-04-01→2040-04-01 | https://itch.io/jam/underscore-jam
+  • 2031 Annual Jam | 2030-12-31→2031-12-31 | https://itch.io/jam/2031-annual-jam
+  • AGDG DEMO DAY 100 | 2031-10-05→2031-10-09 | https://itch.io/jam/agdg-demo-day-100
+  • 2032 Annual Jam | 2031-12-31→2032-12-31 | https://itch.io/jam/2032-annual-jam
+  • 2033 Annual Jam | 2032-12-31→2033-12-31 | https://itch.io/jam/2033-annual-jam
+  • 2034 Annual Jam | 2033-12-31→2034-12-31 | https://itch.io/jam/2034-annual-jam
+  • 2035 Annual Jam | 2034-12-31→2035-12-31 | https://itch.io/jam/2035-annual-jam
+  • 2036 Annual Jam | 2035-12-31→2036-12-31 | https://itch.io/jam/2036-annual-jam
+  • 2037 Annual Jam | 2036-12-31→2037-12-31 | https://itch.io/jam/2037-annual-jam
+  • 2038 Annual Jam | 2037-12-31→2038-12-31 | https://itch.io/jam/2038-annual-jam
+  • 2039 Annual Jam | 2038-12-31→2039-12-31 | https://itch.io/jam/2039-annual-jam
+  • 2040 Annual Jam | 2039-12-31→2040-12-31 | https://itch.io/jam/2040-annual-jam
+  • 2041 Annual Jam | 2040-12-31→2041-12-31 | https://itch.io/jam/2041-annual-jam
+  • 2042 Annual Jam | 2041-12-31→2042-12-31 | https://itch.io/jam/2042-annual-jam
+  • 2043 Annual Jam | 2042-12-31→2043-12-31 | https://itch.io/jam/2043-annual-jam
+  • 2044 Annual Jam | 2043-12-31→2044-12-31 | https://itch.io/jam/2044-annual-jam
+  • 2045 Annual Jam | 2044-12-31→2045-12-31 | https://itch.io/jam/2045-annual-jam
+  • 2046 Annual Jam | 2045-12-31→2046-12-31 | https://itch.io/jam/2046-annual-jam
+  • 2047 Annual Jam | 2046-12-31→2047-12-31 | https://itch.io/jam/2047-annual-jam
+  • 2048 Annual Jam | 2047-12-31→2048-12-31 | https://itch.io/jam/2048-annual-jam
+  • 2049 Annual Jam | 2048-12-31→2049-12-31 | https://itch.io/jam/2049-annual-jam
+  • 2050 Annual Jam | 2049-12-31→2050-12-31 | https://itch.io/jam/2050-annual-jam
+  • Four Games Game Jam 2069 ($500 in Prizes) | 2069-01-01→2069-01-02 | https://itch.io/jam/four-games-game-jam-2069
+
+Active with prize (verified): 0

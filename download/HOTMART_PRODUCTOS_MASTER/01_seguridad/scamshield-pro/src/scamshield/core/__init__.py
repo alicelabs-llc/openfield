@@ -1,0 +1,1 @@
+"""ScamShield Pro — Core package."""

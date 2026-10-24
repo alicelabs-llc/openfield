@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  facturapro:
+    build: .
+    ports:
+      - "8001:8001"
+    env_file: [.env]
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

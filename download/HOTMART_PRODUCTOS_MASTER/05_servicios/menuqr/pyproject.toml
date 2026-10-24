@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "menuqr"
+version = "1.0.0"
+description = "Menús digitales con QR para restaurantes. Self-hosted, multi-idioma, sin mensualidad."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Eddy Flores", email = "eddyflores100@gmail.com" }]
+keywords = ["qr", "menu", "restaurant", "digital menu", "self-hosted"]
+dependencies = [
+    "fastapi>=0.115", "uvicorn[standard]>=0.34", "click>=8.1", "rich>=13.9",
+    "pydantic>=2.10", "pydantic-settings>=2.7", "httpx[http2]>=0.28",
+    "qrcode>=8.0", "pillow>=11.0", "jinja2>=3.1",
+    "python-multipart>=0.0.20", "diskcache>=5.6",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.25"]
+
+[project.scripts]
+menuqr = "menuqr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

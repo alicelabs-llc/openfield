@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "postfactory"
+version = "1.0.0"
+description = "Generador de contenido para redes sociales con IA. Post generators, hashtags, calendar. Self-hosted."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Eddy Flores", email = "eddyflores100@gmail.com" }]
+keywords = ["social media", "content generator", "ai", "instagram", "linkedin", "twitter"]
+dependencies = [
+    "fastapi>=0.115", "uvicorn[standard]>=0.34", "click>=8.1", "rich>=13.9",
+    "pydantic>=2.10", "pydantic-settings>=2.7", "httpx[http2]>=0.28",
+    "pillow>=11.0", "diskcache>=5.6", "tenacity>=9.0",
+    "jinja2>=3.1", "python-multipart>=0.0.20",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.25"]
+
+[project.scripts]
+postfactory = "postfactory.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

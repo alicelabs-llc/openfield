@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FacturaPro — Facturación electrónica SRI Ecuador + CFDI México</title>
+<meta name="description" content="Facturador electrónico self-hosted: Ecuador SRI v2.34 + México CFDI 4.0. XML firmado, PDF imprimible, API REST. Lifetime deal $97.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1424;--card:#0f1d35;--border:#1f3057;--text:#e6ecf5;--muted:#7a8aa8;--accent:#5d8bff;--accent2:#0af;--gold:#ffb020;--grad:linear-gradient(135deg,#5d8bff 0%,#0af 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,20,36,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.brand .logo{width:32px;height:32px;background:var(--grad);border-radius:8px;display:grid;place-items:center;color:#0a1424;font-weight:900;font-size:18px}
+.cta{background:var(--grad);color:#0a1424;padding:10px 18px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block}
+.nav nav{display:flex;gap:28px;align-items:center}
+.nav nav a{color:var(--muted);font-weight:500;font-size:14px}
+
+.hero{padding:80px 0 60px;text-align:center;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 0%,rgba(93,139,255,.12),transparent 70%)}
+.hero h1{font-size:52px;line-height:1.1;letter-spacing:-.03em;font-weight:900;margin-bottom:20px;position:relative}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:680px;margin:0 auto 36px;position:relative}
+.hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-lg{padding:14px 26px;font-size:16px;font-weight:700;border-radius:10px;border:none;cursor:pointer}
+.btn-lg.primary{background:var(--grad);color:#0a1424}
+.btn-lg.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(93,139,255,.1);border:1px solid rgba(93,139,255,.3);padding:6px 12px;border-radius:999px;font-size:13px;color:var(--accent);font-weight:500;margin-bottom:20px}
+
+.flags{display:flex;gap:24px;justify-content:center;margin-top:40px;font-size:14px;color:var(--muted)}
+.flags span{display:inline-flex;align-items:center;gap:8px}
+.flags .flag{font-size:32px}
+
+section{padding:80px 0}
+.section-head{text-align:center;margin-bottom:50px}
+.section-head .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:transform .2s,border-color .2s}
+.feature:hover{transform:translateY(-4px);border-color:var(--accent)}
+.feature .icon{width:48px;height:48px;border-radius:10px;background:rgba(93,139,255,.1);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
+.feature h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.feature p{color:var(--muted);font-size:14.5px}
+
+.code-block{background:#050b18;border:1px solid var(--border);border-radius:10px;padding:24px;font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.7;overflow-x:auto;color:#c9d1f0}
+.code-block .key{color:#5d8bff}
+.code-block .str{color:#a5d6ff}
+.code-block .comment{color:#7a8aa8;font-style:italic}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:34px 30px;position:relative;transition:transform .2s}
+.price:hover{transform:translateY(-4px)}
+.price.featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 60px rgba(93,139,255,.2)}
+.price .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--grad);color:#0a1424;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.price h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.price .amount{font-size:42px;font-weight:900;margin-bottom:6px}
+.price .amount small{font-size:14px;color:var(--muted);font-weight:500}
+.price ul{list-style:none;padding:0;margin:0 0 28px}
+.price ul li{padding:8px 0 8px 28px;position:relative;font-size:14px}
+.price ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.price .btn{display:block;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--border);background:var(--card);color:var(--text)}
+.price.featured .btn{background:var(--grad);color:#0a1424;border-color:transparent}
+
+.compare{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:40px}
+.compare table{width:100%;border-collapse:collapse}
+.compare th,.compare td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--border)}
+.compare th{background:#0d1b30;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.compare td{font-size:14.5px}
+.compare .yes{color:var(--accent);font-weight:700}
+.compare .no{color:var(--muted)}
+.compare .highlight{background:rgba(93,139,255,.05)}
+
+footer{background:#050b18;border-top:1px solid var(--border);padding:40px 0 24px;margin-top:60px;text-align:center;color:var(--muted);font-size:13px}
+
+@media(max-width:900px){.hero h1{font-size:36px}.features,.pricing-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a href="#" class="brand">
+      <span class="logo">F</span>
+      <span>Factura<span style="color:var(--accent)">Pro</span></span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#compare">Comparativa</a>
+      <a href="#pricing">Precios</a>
+      <a href="#pricing" class="cta">Comprar $97</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="badge">Self-hosted · Ecuador SRI v2.34 · México CFDI 4.0</div>
+    <h1>Facturación electrónica<br><span class="grad">self-hosted</span> para LatAm</h1>
+    <p class="lead">Ecuador SRI + México CFDI 4.0 en un solo producto. Genera XML firmado, PDF imprimible, envía al SRI/PAC. Sin mensualidad.</p>
+    <div class="actions">
+      <a href="#pricing" class="cta btn-lg primary">⚡ Lifetime $97 →</a>
+      <a href="#how" class="btn-lg secondary">Ver demo código</a>
+    </div>
+    <div class="flags">
+      <span><span class="flag">🇪🇨</span> Ecuador SRI v2.34</span>
+      <span><span class="flag">🇲🇽</span> México CFDI 4.0</span>
+      <span><span class="flag">🇨🇴</span> Colombia (próximo)</span>
+      <span><span class="flag">🇵🇪</span> Perú (roadmap)</span>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Features</div>
+      <h2>Todo el flujo de facturación electrónica<br>en una sola API</h2>
+      <p>No reinventes la rueda. FacturaPro cubre desde la generación del XML hasta la autorización del SRI/PAC.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">📄</div>
+        <h3>XML SRI + CFDI</h3>
+        <p>Genera XML válido para SRI Ecuador v2.34 (esquema offline) y CFDI 4.0 SAT México. Cumple con la ficha técnica oficial.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔐</div>
+        <h3>Firma XAdES-EPES</h3>
+        <p>Firma digital con certificado .p12/.pfx. Envelope XAdES completo listo para producción SRI.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🎨</div>
+        <h3>PDF imprimible</h3>
+        <p>Template corporativo con ReportLab. Emisor, cliente, detalles, totales, clave de acceso, ambiente.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🚀</div>
+        <h3>Envío SRI/PAC</h3>
+        <p>Cliente SOAP para SRI Ecuador con retries. Cliente REST para PAC México (SW SAPIen, Facturama, BuzonE).</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔑</div>
+        <h3>Clave de acceso</h3>
+        <p>Generación automática de clave SRI de 49 dígitos con dígito verificador módulo 11. Validación incluida.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛡️</div>
+        <h3>Self-hosted</h3>
+        <p>Tus facturas nunca salen de tu servidor. Sin enviar datos sensibles a terceros. GDPR/Ley Protección Datos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:#050b18">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2>5 endpoints. Una factura autorizada.</h2>
+      <p>Flujo completo: crear → firmar → enviar → autorizar → descargar PDF.</p>
+    </div>
+    <div class="code-block">
+<span class="comment"># 1. Crear factura (genera XML + PDF + clave de acceso)</span>
+curl -X POST http://localhost:8001/v1/factura/create \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{"cliente":{"ruc_cedula":"1712345670001","razon_social":"CLIENTE SAC","tipo_identificacion":"04"},
+      "detalles":[{"codigo_principal":"P001","descripcion":"Servicio","cantidad":2,"precio_unitario":100,"iva_tarifa":15}]}'</span>
+
+<span class="comment"># Response:</span>
+{
+  <span class="key">"clave_acceso"</span>: <span class="str">"251020240101001234567001200100100123456780000016"</span>,
+  <span class="key">"secuencial"</span>: <span class="str">"001001000000001"</span>,
+  <span class="key">"totales"</span>: {<span class="key">"importe_total"</span>: <span class="str">"230.00"</span>},
+  <span class="key">"xml_path"</span>: <span class="str">"~/.facturapro/data/facturas/.../factura.xml"</span>,
+  <span class="key">"pdf_path"</span>: <span class="str">"~/.facturapro/data/facturas/.../factura.pdf"</span>
+}
+
+<span class="comment"># 2. Firmar XML (XAdES-EPES envelope)</span>
+curl -X POST http://localhost:8001/v1/factura/sign \
+  -d <span class="str">'{"xml":"<factura>...</factura>"}'</span>
+
+<span class="comment"># 3. Enviar al SRI (Ecuador) / PAC (México)</span>
+curl -X POST http://localhost:8001/v1/factura/send-sri \
+  -d <span class="str">'{"xml_signed_b64":"..."}'</span>
+<span class="comment"># → {"success": true, "estado": "RECIBIDA"}</span>
+
+<span class="comment"># 4. Poll por autorización</span>
+curl http://localhost:8001/v1/factura/authorize/251020240101001234567001200100100123456780000016
+<span class="comment"># → {"success": true, "estado": "AUTORIZADO", "numero_autorizacion": "..."}</span>
+
+<span class="comment"># 5. Descargar PDF</span>
+curl -o factura.pdf http://localhost:8001/v1/factura/pdf/CLAVE_ACCESO
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Comparativa</div>
+      <h2>¿Por qué FacturaPro<br>en vez de Alegra, Aneta o Facturador Cloud?</h2>
+      <p>Mismas características, sin costos recurrentes, sin enviar datos de tus clientes a terceros.</p>
+    </div>
+    <div class="compare">
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>FacturaPro</th>
+            <th>Alegra</th>
+            <th>Aneta (EC)</th>
+            <th>Facturador Cloud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modelo de precio</td>
+            <td class="highlight yes">$97-$297 lifetime</td>
+            <td>$19-$79/mes</td>
+            <td>$20-$50/mes</td>
+            <td>$20/mes</td>
+          </tr>
+          <tr>
+            <td>Multi-país (SRI + CFDI)</td>
+            <td class="highlight yes">✓</td>
+            <td class="no">✗ (uno por cuenta)</td>
+            <td class="no">✗ solo Ecuador</td>
+            <td class="no">✗ solo Argentina</td>
+          </tr>
+          <tr>
+            <td>Self-hosted</td>
+            <td class="highlight yes">✓</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Código fuente</td>
+            <td class="highlight yes">✓</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Facturas ilimitadas</td>
+            <td class="highlight yes">✓</td>
+            <td>Limitadas por plan</td>
+            <td>Limitadas</td>
+            <td>Limitadas</td>
+          </tr>
+          <tr>
+            <td>API REST</td>
+            <td class="highlight yes">✓</td>
+            <td>✓</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Firma XAdES-EPES</td>
+            <td class="highlight yes">✓ incluida</td>
+            <td class="no">✗ black-box</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background:#050b18">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Precios</div>
+      <h2>Pago único. Sin suscripción.</h2>
+      <p>Garantía 7 días. Soporte email directo con el autor.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price">
+        <h3>Starter</h3>
+        <div class="amount">$97<small> USD</small></div>
+        <ul>
+          <li>1 emisor</li>
+          <li>Ambiente pruebas + producción</li>
+          <li>100 facturas/mes</li>
+          <li>XML + PDF + Dashboard</li>
+          <li>6 meses soporte email</li>
+        </ul>
+        <a href="#" class="btn">Comprar $97</a>
+      </div>
+      <div class="price featured">
+        <div class="tag">MÁS POPULAR</div>
+        <h3>Business</h3>
+        <div class="amount">$197<small> USD</small></div>
+        <ul>
+          <li>3 emisores</li>
+          <li>Ambiente producción</li>
+          <li>Facturas ilimitadas</li>
+          <li>Multi-moneda</li>
+          <li>API REST + webhooks</li>
+          <li>Marca blanca</li>
+          <li>12 meses soporte email</li>
+        </ul>
+        <a href="#" class="btn">Comprar $197</a>
+      </div>
+      <div class="price">
+        <h3>Multi</h3>
+        <div class="amount">$297<small> USD</small></div>
+        <ul>
+          <li>Emisores ilimitados</li>
+          <li>Multi-empresa</li>
+          <li>Multi-país simultáneo</li>
+          <li>Bulk endpoints</li>
+          <li>Onboarding 1:1 (2h)</li>
+          <li>24 meses soporte prioritario</li>
+        </ul>
+        <a href="#" class="btn">Comprar $297</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:40px;color:var(--muted);font-size:14px">
+      💳 Tarjeta / PayPal / Cripto · 📧 Licencia en 5 min · 🔁 Garantía 7 días
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Eddy Flores · FacturaPro · Lifetime license · eddyflores100@gmail.com
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "facturapro"
+version = "1.0.0"
+description = "Facturación electrónica SRI (Ecuador) + CFDI 4.0 (México) self-hosted. Genera XML firmado, PDF imprimible, envía al PAC/SRI."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Eddy Flores", email = "eddyflores100@gmail.com" }]
+keywords = ["facturacion", "sri", "cfdi", "sat", "ecuador", "mexico", "electronic-invoice", "xml"]
+dependencies = [
+    "fastapi>=0.115", "uvicorn[standard]>=0.34", "click>=8.1", "rich>=13.9",
+    "pydantic>=2.10", "pydantic-settings>=2.7", "lxml>=5.3", "xmlsig>=0.4",
+    "cryptography>=44.0", "reportlab>=4.2", "httpx[http2]>=0.28",
+    "diskcache>=5.6", "jinja2>=3.1", "python-multipart>=0.0.20",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.25"]
+
+[project.scripts]
+facturapro = "facturapro.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

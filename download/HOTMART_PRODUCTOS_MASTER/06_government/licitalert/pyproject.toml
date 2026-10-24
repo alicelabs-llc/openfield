@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "licitalert"
+version = "1.0.0"
+description = "Alertas de licitaciones públicas. Monitorea SECOP (Colombia), Compras Públicas (Ecuador), CompraNet (México). Self-hosted."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Eddy Flores", email = "eddyflores100@gmail.com" }]
+keywords = ["licitaciones", "public procurement", "secop", "compranet", "alertas"]
+dependencies = [
+    "fastapi>=0.115", "uvicorn[standard]>=0.34", "click>=8.1", "rich>=13.9",
+    "pydantic>=2.10", "pydantic-settings>=2.7", "httpx[http2]>=0.28",
+    "beautifulsoup4>=4.12", "lxml>=5.3", "diskcache>=5.6",
+    "tenacity>=9.0", "apscheduler>=3.10", "jinja2>=3.1", "python-multipart>=0.0.20",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.25"]
+
+[project.scripts]
+licitalert = "licitalert.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

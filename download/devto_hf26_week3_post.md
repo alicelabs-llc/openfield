@@ -2,7 +2,7 @@
 title: "I let an AI agent do my overnight chores — but every step is signed so I can prove it didn't go rogue"
 published: true
 description: "How I built a slow-but-verifiable agent runner with sandboxed execution + tamper-evident provenance, so I can sleep while the agent works and audit it in the morning."
-tags: [devchallenge, hf26challenge, hacktoberfest, ai, mcp, security, agents, showdev]
+tags: [devchallenge, hf26challenge, hacktoberfest, showdev]
 canonical_url: "https://github.com/eddyflores100-lang/alethech-agent-vault"
 ---
 

@@ -1,0 +1,4 @@
+GitLab URL: https://gitlab.com/eddyflores100/alethech-agent-vault
+HTTP clone: https://gitlab.com/eddyflores100/alethech-agent-vault.git
+Visibility: public
+Default branch: main

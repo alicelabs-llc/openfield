@@ -15,7 +15,7 @@ import sys
 import urllib.request
 import urllib.error
 
-GITLAB_TOKEN = "glpat-gupt0wt_EfWmH99u8NGm6WM6MQpvOjEKdTpranZqbQ8.01.1716a5win"
+GITLAB_TOKEN = "glpat-NJNDB08yWG41Xskk0G-mRmM6MQpvOjEKdTpranZqbQ8.01.171wudi4a"
 GITLAB_URL = "https://gitlab.com"
 NAMESPACE = "eddyflores100-lang"  # try this; will fall back to user namespace
 REPO_NAME = "alethech-agent-vault"

@@ -1391,3 +1391,25 @@ Stage Summary:
 - PLAN: (1) CRÍTICO: vincular DEV→MyMLH (dev-connect) porque es como se acreditan las entradas a challenges; (2) verificar/conseguir discord, digitalocean, dev-relay; (3) publicar Week 4 Oct 26-31 (hay 7 drafts listos); (4) asistir a 2 livestreams Oct 29-30 con check-in; (5) survey-post cuando llegue el email
 - Máximo online = 22 de 24 (2 son presenciales); con 11 ya tiene el pack (3) y el holográfico (10); a 15 entra al raffle Completionist (camiseta o Arduino Uno Q)
 - Artifacts: /home/z/my-project/scripts/devto_articles.json, hf_online.html, hf_schedule.html, hf_activities.html, hf_all_chunks.js, hf_schedule_chunk.js
+
+---
+Task ID: 10
+Agent: main (Z.ai)
+Task: Crear 10 playbooks completos de productos de software para vender en Hotmart (con competidores verificados, estilo copiado, diagramas y plan de lanzamiento)
+
+Work Log:
+- Investigación web de competidores reales con precios: Whaticket ($49-109/mes), Wati ($119/mes), Callbell, Tecca ($24), Dátil ($8-34/mes), Contifico, Factuplan, Quipuy, Apify ($0.20-1.50/1K), Prisync ($99-399/mes), AgendaPro ($9-199/mes), Predis.ai, Treggio/BuenaCarta, portales SECOP Colombia
+- Definidos 10 productos: WAOrder, FacturaEC, LeadMiner, PriceRadar, ScamGuard (prototipo existente), CitaYa, ReviewReply, PostFactory, MenuQR, LicitAlert
+- Skill PDF cargada (ruta Report): leídos report.md completo + fonts.md + palette.md + cover.md completo + charts.md + pagination.md + overflow.md
+- Paleta fija Template 07 Crystal Blue (documentada); cover Template 07 validado con poster_validate + cover_validate (0 solapamientos) y renderizado con html2poster.js --width 794px
+- 10 diagramas de arquitectura generados con Playwright+CSS a 2x (1800px) en download/HOTMART_10_PRODUCTOS/diagramas/ (bandas Entradas/Núcleo/Gestión, español, baja saturación)
+- Body ReportLab con TocDocTemplate + multiBuild: TOC automático clicable, 12 capítulos (resumen + 10 productos + plan maestro), tablas con Paragraph cells + repeatRows, CondPageBreak para H1, callouts de métricas, embed_image con ratio
+- Corregidos: comillas anidadas en content_a, numeración de capítulos (productos = cap 2-11), bulletFontName Helvetica→FreeSerif, normalización A4 estricta del cover (0.2pt)
+- QA final: 0 errores, 11 checks pasados, 38 páginas; warnings cosméticos (cover asimétrico por diseño, callouts anidados)
+- Generadas 10 landings .md listas para pegar en Hotmart en download/HOTMART_10_PRODUCTOS/landings/
+
+Stage Summary:
+- Entregable principal: download/HOTMART_10_PRODUCTOS/PLAYBOOK_10_PRODUCTOS_HOTMART.pdf (38 páginas, 1.6MB, vectorial, TOC clicable)
+- Extras: 10 diagramas PNG 2x + 10 landings markdown + HTML del cover reutilizable
+- Datos clave verificados: precios reales de 12+ competidores; priorización en 5 oleadas (ScamGuard primero por MVP de 3 días, WAOrder como bandera); proyección conservadora $3K MRR con 5 productos activos
+- Scripts persistidos en scripts/hotmart10/ (gen_diagrams, gen_report, content_a, content_b, gen_landings, merge, cover.html) para iteraciones futuras

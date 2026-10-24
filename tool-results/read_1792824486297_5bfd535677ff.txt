@@ -1,0 +1,503 @@
+   120→   599→**Pipeline (Report route):**
+   121→   600→1. Generate **body PDF** via ReportLab (start with TOC or content - **no cover in story[]**)  
+   122→   601→2. Generate **cover HTML** following `typesetting/cover.md` 5-template system  
+   123→   602→3. **Run `poster_validate.py check-html` on cover HTML** — fix any ERRORs before rendering (overflow:hidden, font fallback, etc.)  
+   124→   603→4. **Run `cover_validate.js` on cover HTML** — detects text-vs-decorative-line overlaps. Non-zero exit = must fix before proceeding.
+   125→   604→   ```bash
+   126→   605→   node "$PDF_SKILL_DIR/scripts/cover_validate.js" cover.html
+   127→   606→   ```
+   128→   607→5. Render cover HTML → single-page PDF via Playwright (`html2poster.js`) — **NOT `html2pdf-next.js`** (which converts absolute→static and destroys cover layout). **⚠️ MUST pass `--width 794px` for A4 documents** (A4 = 210mm = 794px @96dpi). Without this, `html2poster.js` defaults to 720px (=540pt), which is narrower than A4 (595pt) and causes page size mismatch after merging with the body PDF.  
+   129→   608→6. **Merge: insert cover as page 0** of body PDF using pypdf → output single final PDF
+   130→   609→
+   131→   610→> **Why not ReportLab covers?** ReportLab is excellent for structured content (tables, paragraphs, flowables) but painful for visual design (geometric accents, precise absolute positioning, web fonts). HTML/CSS handles these natively. One cover system, one visual standard, zero inconsistency.
+   132→   611→
+   133→   612→**⚠️ Cover page is DEFAULT ON for all Report-route documents ≥ 3 pages.**
+   134→   613→
+   135→   614→The Report route handles formal, structured documents. Readers expect a professional cover. **Always generate a cover unless the document type is explicitly excluded below.**
+   136→   615→
+   137→   616→**ALWAYS add a cover page (default behavior):**
+   138→   617→- Research reports, experiment reports, lab reports, analysis reports
+   139→   618→- White papers, industry analysis, market research
+   140→   619→- Business proposals, project plans, feasibility studies
+   141→   620→- Technical documentation, product manuals, user guides
+   142→   621→- Annual reports, financial summaries, quarterly reviews
+   143→   622→- Any formal document ≥ 3 pages that will be shared externally or submitted
+   144→   623→
+   145→   624→**NEVER add a cover page (explicit exclusions only):**
+   146→   625→- **Resumes / CVs** - recruiters want content immediately
+   147→   626→- **Letters / memos** - single-page or short-form
+   148→   627→- **Forms / checklists / invoices** - functional documents
+   149→   628→- **Internal notes / meeting minutes** - brevity over presentation
+   150→   629→- **Documents ≤ 2 pages** - cover would be disproportionate
+   151→   630→- **User explicitly said "no cover"**
+   152→   631→
+   153→   632→**Rule of thumb:** If it's a report, analysis, proposal, or any formal document ≥ 3 pages → **add a cover**. When in doubt, add the cover. It's easier to remove a cover the user didn't want than to miss one they expected.
+   154→   633→
+   155→   634→#### Step 1: Generate Body PDF (ReportLab, no cover)
+   156→   635→
+   157→   636→Build the ReportLab document starting directly with TOC or first section. **Do NOT include any cover page in the `story[]` list.**
+   158→   637→
+   159→   638→```python
+   160→   639→# Body PDF - starts with TOC or first section, NO cover
+   161→   640→story = []
+   162→   641→
+   163→   642→# ⚠️ If document has TOC: use TocDocTemplate + multiBuild (see TOC Gate above)
+   164→   643→# If no TOC: use SimpleDocTemplate + build
+   165→   644→
+   166→   645→# WITH TOC (most reports):
+   167→   646→# doc = TocDocTemplate(output, pagesize=A4, ...)
+   168→   647→# story.append(toc)
+   169→   648→# story.append(PageBreak())
+   170→   649→# story.append(first_section_content)
+   171→   650→# doc.multiBuild(story)
+   172→   651→
+   173→   652→# WITHOUT TOC:
+   174→   653→# doc = SimpleDocTemplate(output, pagesize=A4, ...)
+   175→   654→# story.append(first_section_content)
+   176→   655→# doc.build(story)
+   177→   656→```
+   178→   657→
+   179→   658→#### Step 2: Generate Cover PDF via html2poster.js
+   180→   659→
+   181→   660→```bash
+   182→   661→# ALWAYS use html2poster.js for cover rendering (NOT html2pdf-next.js)
+   183→   662→# Cover pages use position:absolute layout — html2pdf-next.js pre-render hooks
+   184→   663→# convert absolute→static and destroy the layout. html2poster.js preserves it.
+   185→   664→node "$PDF_SKILL_DIR/scripts/html2poster.js" cover.html --output cover.pdf --width 794px
+   186→   665→```
+   187→   666→
+   188→   667→Or from Python:
+   189→   668→```python
+   190→   669→import subprocess, os
+   191→   670→
+   192→   671→def render_cover(html_path, pdf_path):
+   193→   672→    """Render HTML cover to PDF via html2poster.js.
+   194→   673→    
+   195→   674→    ⚠️ ALWAYS use html2poster.js for covers (NOT html2pdf-next.js).
+   196→   675→    Cover HTML uses position:absolute for layout. html2pdf-next.js pre-render
+   197→   676→    hooks convert absolute→static to prevent multi-page overlap, which
+   198→   677→    destroys cover layouts. html2poster.js preserves absolute positioning.
+   199→   678→    """
+   200→   679→    scripts_dir = os.path.expanduser('~/.openclaw/workspace/skills/pdf/scripts')
+   201→   680→    subprocess.run([
+   202→   681→        'node', os.path.join(scripts_dir, 'html2poster.js'),
+   203→   682→        html_path, '--output', pdf_path,
+   204→   683→        '--width', '794px',
+   205→   684→    ], check=True)
+   206→   685→```
+   207→   686→
+   208→   687→**Insertion script (single output PDF):**
+   209→   688→```python
+   210→   689→from pypdf import PdfReader, PdfWriter
+   211→   690→
+   212→   691→A4_W, A4_H = 595.28, 841.89  # A4 in points
+   213→   692→
+   214→   693→def normalize_page_to_a4(page):
+   215→   694→    """Scale a page to A4 if its dimensions don't match."""
+   216→   695→    box = page.mediabox
+   217→   696→    w, h = float(box.width), float(box.height)
+   218→   697→    if abs(w - A4_W) > 2 or abs(h - A4_H) > 2:
+   219→   698→        page.scale_to(A4_W, A4_H)
+   220→   699→    return page
+   221→   700→
+   222→   701→def insert_cover(cover_pdf, body_pdf, output_pdf):
+   223→   702→    """Insert cover as first page of body PDF → single output file."""
+   224→   703→    writer = PdfWriter()
+   225→   704→    # Cover as page 1
+   226→   705→    cover_page = PdfReader(cover_pdf).pages[0]
+   227→   706→    writer.add_page(normalize_page_to_a4(cover_page))
+   228→   707→    # Body pages follow
+   229→   708→    for page in PdfReader(body_pdf).pages:
+   230→   709→        writer.add_page(normalize_page_to_a4(page))
+   231→   710→    writer.add_metadata({'/Title': 'Report Title', '/Author': 'Z.ai', '/Creator': 'Z.ai'})
+   232→   711→    with open(output_pdf, 'wb') as f:
+   233→   712→        writer.write(f)
+   234→   713→```
+   235→   714→
+   236→   715→> **⚠️ Size pitfall:** Playwright `page.pdf(width='794px', height='1123px')` output PDF dimensions may differ from A4 (595.28×841.89pt) by 1-2pt. **Do not use PIL Image.save('x.pdf')** for PNG→PDF conversion — DPI mapping causes severe size errors. You must call `normalize_page_to_a4()` to unify dimensions before insertion.
+   237→   716→
+   238→   717→**Cover HTML template reference**: See `typesetting/cover.md` for the complete 5-Layout System with variants, typography scale, and bounding box rules.
+   239→   718→
+   240→   719→**→ MUST READ: `typesetting/cover.md`** — read the complete 5-Layout System with variants, typography scale, and bounding box rules before writing any cover HTML.
+   241→   720→
+   242→   721→**Cover design rules (summary - see cover.md for details):**
+   243→   722→- Page size: `width: 794px; height: 1123px` (A4 at 96dpi)
+   244→   723→- `body { margin: 0; padding: 0; overflow: hidden; }` - REQUIRED to avoid white borders
+   245→   724→- Load Google Fonts via `<link href="..." rel="stylesheet">` in `<head>` (NOT `@import url(...)` in CSS — `@import` must be first rule or is silently ignored) — Playwright fetches them at render time
+   246→   725→- **Background must be white or very light** (`#fff` / `#fafafa` / `#f5f8fb`), no dark solid backgrounds or gradient backgrounds
+   247→   726→- Primary color used only for text, lines, geometric accents - never as large-area background
+   248→   727→- Sophistication = whitespace + typography + restrained geometric accents
+   249→   728→
+   250→   729→**Cover Constitution (5-Layout System):**
+   251→   730→- **Pick a layout (01/03/04/06/07)** from `typesetting/cover.md` that matches the document tone. No global default - every selection must be a deliberate design decision.
+   252→   731→- **Maximum 4 components** on any cover. Typical recipe: Title + subtitle + 1 geometric accent + metadata.
+   253→   732→- **Typography Scale**: Title ≈ 45pt, Subtitle ≈ 25pt, Meta ≥ 18pt (never below 14pt). Tiny text = FAIL.
+   254→   733→- **Background layer (optional)**: See `typesetting/cover-backgrounds.md` for 3 recipes (A=极简弧线, B=工程十字轴+立柱, C=锐角切割+出血文字). Background renders BELOW all foreground content at 2-5% opacity.
+   255→   734→- **Mandatory `<br>` chunking**: Title MUST break every 2-4 words (CJK) or 3-5 words (English). Single-line title = FAIL.
+   256→   735→- **Bounding Box spatial dispersion**: Group elements into 2-3 bounding boxes at opposite regions (e.g., top-left + bottom-right). Never cluster everything into middle 40%.
+   257→   736→- **Safe Zone**: 12% top/bottom, 14% left/right padding on cover pages.
+   258→   737→- **No body text on cover**: Cover = title + subtitle + date + optional geometric decoration. All content goes to page 2+.
+   259→   738→- **Cover page isolation**: Cover NEVER shares a page with TOC or body content. In Report route this is inherent (separate PDFs merged via pypdf). If output shows cover + TOC on same page = **critical bug**, regenerate immediately.
+   260→   739→
+   261→   740→### Alignment and Typography
+   262→   741→- **CJK body**: Use `TA_LEFT` + 2-char indent. Headings: no indent.
+   263→   742→- **Font sizes**: Body 11pt, subheadings 14pt, headings 18-20pt
+   264→   743→- **Line height**: 1.5-1.6 (leading at **1.4x font size minimum**, recommended 1.5x for CJK)
+   265→   744→  - CJK characters are taller than Latin - 1.2x causes cramped lines
+   266→   745→  - Quick reference: 10pt→14pt min/18pt rec; 14pt→20pt min/22pt rec; 36pt→50pt min/54pt rec
+   267→   746→- ** Prohibited: fixed `rowHeights` in Table()**. Use `TOPPADDING` / `BOTTOMPADDING` to control row spacing. Fixed rowHeights cause content overflow clipping - the text renders but gets invisibly cut off.
+   268→   747→- **CRITICAL: Alignment Selection Rule**:
+   269→   748→  - Use `TA_JUSTIFY` only when ALL of:
+   270→   749→    * Text is predominantly English (≥ 90%)
+   271→   750→    * Column width is sufficiently wide (A4 single-column body)
+   272→   751→    * Font: Western fonts (FreeSerif)
+   273→   752→    * Chinese content: None or negligible
+   274→   753→  - Otherwise, always default to `TA_LEFT`
+   275→   754→  - For Chinese text, always add `wordWrap='CJK'` to ParagraphStyle
+   276→   755→
+   277→   756→### Style Configuration
+   278→   757→* Normal paragraph: `spaceBefore=0`, `spaceAfter=6-12`
+   279→   758→* Headings: `spaceBefore=12-18`, `spaceAfter=6-12`
+   280→   759→* **Headings must be bold**: Use `<b></b>` tags in Paragraph
+   281→   760→* Table captions: `spaceBefore=3`, `spaceAfter=6`, `alignment=TA_CENTER`
+   282→   761→* **CRITICAL**: For Chinese text, always add `wordWrap='CJK'` to ParagraphStyle
+   283→   762→
+   284→   763→---
+   285→   764→
+   286→   765→## Table Formatting
+   287→   766→
+   288→   767→### Standard Table Color Scheme (MUST USE for ALL tables)
+   289→   768→
+   290→   769→> **Colors MUST come from the `palette.cascade` output (Step 2).** The values below are variable names - they are populated by the cascade palette, never hardcoded.
+   291→   770→
+   292→   771→```python
+   293→   772→# Colors from palette.cascade (Step 2) — NEVER hardcode hex values
+   294→   773→# Table header uses HEADER_FILL (M tier, S ≤ 0.30) — NOT ACCENT (XS tier, too vivid)
+   295→   774→TABLE_HEADER_COLOR = HEADER_FILL          # M tier — low-sat, blends with document body
+   296→   775→TABLE_HEADER_TEXT  = colors.white          # White text for header (fixed)
+   297→   776→TABLE_ROW_EVEN     = colors.white          # White for even rows
+   298→   777→TABLE_ROW_ODD      = TABLE_STRIPE          # L tier — very subtle same-hue stripe
+   299→   778→```
+   300→   779→
+   301→   780→> **⚠️ Why NOT `ACCENT` for table headers?** `ACCENT` is XS tier (S = 0.50-0.75), designed for tiny elements like badges and tags. Table headers occupy 5-20% of visual area (M tier). Using high-saturation `ACCENT` on table headers creates jarring color blocks that clash with the low-saturation body. `HEADER_FILL` (S ≤ 0.30) is specifically designed for this area ratio.
+   302→   781→
+   303→   782→### Table Rules
+   304→   783→- Caption must be centered, added immediately after the table
+   305→   784→- Entire table must be centered on the page
+   306→   785→- **Header Row**: Dark background (from palette `HEADER_FILL`, M tier), white bold text
+   307→   786→- **Cell Margins**: Left/Right at least 120-200 twips
+   308→   787→- **Alignment**: Each body element within the same table must be aligned the same method
+   309→   788→- **Color consistency**: All tables in one PDF must use the same `HEADER_FILL` + `TABLE_STRIPE` scheme
+   310→   789→- **Spacing**: `Spacer(1, 18)` → Table → `Spacer(1, 6)` → Caption → `Spacer(1, 18)`
+   311→   790→
+   312→   791→### Table Centering Enforcement (MANDATORY)
+   313→   792→
+   314→   793→**Every table MUST be horizontally centered on the page. No exceptions.**
+   315→   794→
+   316→   795→```python
+   317→   796→# ReportLab: ALWAYS set hAlign='CENTER'
+   318→   797→table = Table(data, colWidths=col_widths, hAlign='CENTER')
+   319→   798→
+   320→   799→# Width rule: table total width should be 85-100% of available content width
+   321→   800→available_width = doc.width  # or page_width - left_margin - right_margin
+   322→   801→table_width = sum(col_widths)
+   323→   802→if table_width < available_width * 0.85:
+   324→   803→    # Scale up columns proportionally to fill space
+   325→   804→    scale = (available_width * 0.90) / table_width
+   326→   805→    col_widths = [w * scale for w in col_widths]
+   327→   806→
+   328→   807→# ❌ WRONG — no hAlign (defaults to LEFT, table drifts left)
+   329→   808→table = Table(data, colWidths=[100, 200, 150])
+   330→   809→
+   331→   810→# ✅ RIGHT — explicit centering
+   332→   811→table = Table(data, colWidths=[100, 200, 150], hAlign='CENTER')
+   333→   812→```
+   334→   813→
+   335→   814→**LaTeX equivalent:**
+   336→   815→```latex
+   337→   816→\begin{table}[htbp]
+   338→   817→  \centering  % MANDATORY
+   339→   818→  \begin{tabular}{...}
+   340→   819→  ...
+   341→   820→  \end{tabular}
+   342→   821→\end{table}
+   343→   822→```
+   344→   823→
+   345→   824→### Table Cell Content Rule (MANDATORY - NON-NEGOTIABLE)
+   346→   825→
+   347→   826→**ALL text content in table cells MUST be wrapped in `Paragraph()`. NO EXCEPTIONS.**
+   348→   827→
+   349→   828→❌ **PROHIBITED** - Plain strings:
+   350→   829→```python
+   351→   830→data = [
+   352→   831→    ['<b>Header</b>', 'Value'],           # Bold won't render!
+   353→   832→    ['Pressure', '1.01 × 10<super>5</super>'],  # Superscript won't work!
+   354→   833→]
+   355→   834→```
+   356→   835→
+   357→   836→✅ **REQUIRED** - All text in Paragraph:
+   358→   837→```python
+   359→   838→data = [
+   360→   839→    [Paragraph('<b>Header</b>', header_style), Paragraph('Value', header_style)],
+   361→   840→    [Paragraph('Pressure', cell_style), Paragraph('1.01 × 10<super>5</super>', cell_style)],
+   362→   841→]
+   363→   842→```
+   364→   843→
+   365→   844→**The ONLY exception**: `Image()` objects can be placed directly in table cells.
+   366→   845→
+   367→   846→### Units with Exponents (CRITICAL)
+   368→   847→- PROHIBITED: `W/m2`, `kg/m3`, `m/s2` (plain text exponents)
+   369→   848→- RIGHT: `Paragraph('W/m<super>2</super>', style)`, `Paragraph('kg/m<super>3</super>', style)`
+   370→   849→
+   371→   850→### Numeric Values in Tables (CRITICAL)
+   372→   851→- Large numbers MUST use scientific notation: `Paragraph('-1.246 × 10<super>8</super>', style)` not `-124600000`
+   373→   852→- Small decimals MUST use scientific notation: `Paragraph('2.5 × 10<super>-3</super>', style)` not `0.0025`
+   374→   853→- Threshold: Use scientific notation when |value| ≥ 10000 or |value| ≤ 0.001
+   375→   854→
+   376→   855→### Complete Table Example
+   377→   856→```python
+   378→   857→from reportlab.platypus import Table, TableStyle, Paragraph, Image
+   379→   858→from reportlab.lib.styles import ParagraphStyle
+   380→   859→from reportlab.lib import colors
+   381→   860→from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT, TA_JUSTIFY
+   382→   861→
+   383→   862→header_style = ParagraphStyle(
+   384→   863→    name='TableHeader', fontName='FreeSerif', fontSize=11,
+   385→   864→    textColor=colors.white, alignment=TA_CENTER
+   386→   865→)
+   387→   866→cell_style = ParagraphStyle(
+   388→   867→    name='TableCell', fontName='FreeSerif', fontSize=10,
+   389→   868→    textColor=colors.black, alignment=TA_CENTER
+   390→   869→)
+   391→   870→
+   392→   871→data = [
+   393→   872→    [Paragraph('<b>Parameter</b>', header_style),
+   394→   873→     Paragraph('<b>Unit</b>', header_style),
+   395→   874→     Paragraph('<b>Value</b>', header_style)],
+   396→   875→    [Paragraph('Temperature', cell_style),
+   397→   876→     Paragraph('°C', cell_style),
+   398→   877→     Paragraph('25.5', cell_style)],
+   399→   878→    [Paragraph('Pressure', cell_style),
+   400→   879→     Paragraph('Pa', cell_style),
+   401→   880→     Paragraph('1.01 × 10<super>5</super>', cell_style)],
+   402→   881→    [Paragraph('Density', cell_style),
+   403→   882→     Paragraph('kg/m<super>3</super>', cell_style),
+   404→   883→     Paragraph('1.225', cell_style)],
+   405→   884→]
+   406→   885→
+   407→   886→table = Table(data, colWidths=[120, 80, 100])
+   408→   887→# ⚠️ Above uses hardcoded widths - OK for this 3-col example (120+80+100=300 < available ~460pt).
+   409→   888→# For real tables, ALWAYS calculate from available_width. See "Table Width Management" below.
+   410→   889→table.setStyle(TableStyle([
+   411→   890→    ('BACKGROUND', (0, 0), (-1, 0), ACCENT),           # Header: palette accent
+   412→   891→    ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+   413→   892→    ('BACKGROUND', (0, 1), (-1, 1), colors.white),
+   414→   893→    ('BACKGROUND', (0, 2), (-1, 2), BG_SURFACE),       # Odd row: palette surface
+   415→   894→    ('BACKGROUND', (0, 3), (-1, 3), colors.white),
+   416→   895→    ('GRID', (0, 0), (-1, -1), 0.5, TEXT_MUTED),       # Grid: palette muted
+   417→   896→    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+   418→   897→    ('LEFTPADDING', (0, 0), (-1, -1), 8),
+   419→   898→    ('RIGHTPADDING', (0, 0), (-1, -1), 8),
+   420→   899→    ('TOPPADDING', (0, 0), (-1, -1), 6),
+   421→   900→    ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+   422→   901→]))
+   423→   902→```
+   424→   903→
+   425→   904→### Table Width Management (⚠️ Prevent Table Overflow)
+   426→   905→
+   427→   906→**Most common table bug: columns overflow the right page margin because colWidths are hardcoded without checking available space.**
+   428→   907→
+   429→   908→**Iron Rule: The sum of all colWidths MUST NOT exceed `available_width`.**
+   430→   909→
+   431→   910→```python
+   432→   911→from reportlab.lib.pagesizes import A4
+   433→   912→from reportlab.lib.units import inch
+   434→   913→
+   435→   914→page_width = A4[0]  # 595.28pt
+   436→   915→left_margin = 1.0 * inch   # 72pt (adjust to your doc's actual margins)
+   437→   916→right_margin = 1.0 * inch  # 72pt
+   438→   917→available_width = page_width - left_margin - right_margin  # ≈ 451pt
+   439→   918→
+   440→   919→# ─── Method 1: Proportional widths (RECOMMENDED) ───
+   441→   920→# Define column ratios, auto-scale to fit available_width
+   442→   921→col_ratios = [0.25, 0.40, 0.20, 0.15]  # must sum to 1.0
+   443→   922→col_widths = [r * available_width for r in col_ratios]
+   444→   923→table = Table(data, colWidths=col_widths)
+   445→   924→
+   446→   925→# ─── Method 2: Fixed + flex columns ───
+   447→   926→# Some columns have fixed width (numbers, dates), rest fills remaining space
+   448→   927→fixed_cols = {0: 80, 3: 60}  # col 0 = 80pt, col 3 = 60pt
+   449→   928→fixed_total = sum(fixed_cols.values())
+   450→   929→flex_count = 4 - len(fixed_cols)  # total columns minus fixed
+   451→   930→flex_width = (available_width - fixed_total) / flex_count
+   452→   931→col_widths = []
+   453→   932→for i in range(4):
+   454→   933→    col_widths.append(fixed_cols.get(i, flex_width))
+   455→   934→table = Table(data, colWidths=col_widths)
+   456→   935→
+   457→   936→# ─── Method 3: Let ReportLab auto-calculate (simplest, less control) ───
+   458→   937→# Pass colWidths=None - ReportLab auto-sizes based on content
+   459→   938→# ⚠️ Risk: may still overflow if content is too wide
+   460→   939→table = Table(data)  # no colWidths
+   461→   940→```
+   462→   941→
+   463→   942→**Checklist before adding any table:**
+   464→   943→1. Calculate `available_width` from your actual page size and margins
+   465→   944→2. Sum all colWidths - must be ≤ `available_width`
+   466→   945→3. For CJK text: characters are wider than Latin - budget ~12pt per CJK char at 10pt font
+   467→   946→4. If a column has long text (descriptions, policies), use Paragraph() wrapping inside cells (not plain strings) - plain strings don't wrap and will overflow
+   468→   947→5. Test with the longest expected content in each column
+   469→   948→
+   470→   949→**Common mistake - plain strings don't wrap:**
+   471→   950→```python
+   472→   951→# ❌ Plain string: will overflow if text is long
+   473→   952→data = [['Policy Name', 'Very long description that keeps going and going']]
+   474→   953→# ✅ Paragraph: wraps within column width
+   475→   954→from reportlab.platypus import Paragraph
+   476→   955→from reportlab.lib.styles import getSampleStyleSheet
+   477→   956→styles = getSampleStyleSheet()
+   478→   957→cell_style = styles['Normal']
+   479→   958→data = [[Paragraph('Policy Name', cell_style),
+   480→   959→         Paragraph('Very long description that keeps going and going', cell_style)]]
+   481→   960→```
+   482→   961→
+   483→   962→```
+   484→   963→Do you need auto-TOC?
+   485→   964→├─ YES → Use TocDocTemplate + doc.multiBuild(story)
+   486→   965→└─ NO → Use SimpleDocTemplate + doc.build(story)
+   487→   966→```
+   488→   967→
+   489→   968→| Requirement | DocTemplate | Build Method |
+   490→   969→|-------------|-------------|--------------|
+   491→   970→| Multi-page with TOC | `TocDocTemplate` | `multiBuild()` |
+   492→   971→| Single-page or no TOC | `SimpleDocTemplate` | `build()` |
+   493→   972→| With Cross-References (no TOC) | `SimpleDocTemplate` | `build()` |
+   494→   973→| Both TOC + Cross-References | `TocDocTemplate` | `multiBuild()` |
+   495→   974→
+   496→   975→**⚠️ CRITICAL**:
+   497→   976→- `multiBuild()` is ONLY needed when using `TableOfContents`
+   498→   977→- Using `build()` with `TocDocTemplate` = TOC won't work
+   499→   978→- Using `multiBuild()` without `TocDocTemplate` = unnecessary overhead
+   500→   979→
+   501→   980→---
+   502→   981→
+   503→   982→## Rich Text Formatting
+   504→   983→
+   505→   984→### Prerequisites
+   506→   985→To use `<b>`, `<super>`, `<sub>` tags, you **must**:
+   507→   986→1. Register fonts via `registerFont()`
+   508→   987→2. Call `registerFontFamily()` to link normal/bold/italic variants
+   509→   988→3. Wrap all tagged text in `Paragraph()` objects
+   510→   989→
+   511→   990→**CRITICAL**: These tags ONLY work inside `Paragraph()` objects. Plain strings will NOT render them.
+   512→   991→
+   513→   992→### Preventing Unwanted Line Breaks
+   514→   993→
+   515→   994→```python
+   516→   995→# Use non-breaking space to prevent breaking
+   517→   996→text = Paragraph("Professors (K.G.\u00A0Palepu) proposed...", style)
+   518→   997→
+   519→   998→# Use wordWrap='CJK' for proper Chinese typography
+   520→   999→styles.add(ParagraphStyle(name='BodyStyle', fontName='Noto Sans SC', fontSize=10.5,
+   521→  1000→    leading=18, alignment=TA_LEFT, wordWrap='CJK'))
+   522→  1001→
+   523→  1002→# Use <br/> for intentional line breaks (NOT \n)
+   524→  1003→text = Paragraph("Line 1<br/>Line 2<br/>Line 3", style)
+   525→  1004→```
+   526→  1005→
+   527→  1006→---
+   528→  1007→
+   529→  1008→## Auto-Generated Table of Contents
+   530→  1009→
+   531→  1010→### ❌ FORBIDDEN: Manual Table of Contents
+   532→  1011→**NEVER manually create TOC with hardcoded page numbers.**
+   533→  1012→
+   534→  1013→### ⚠️ MANDATORY: TOC requires a cover page
+   535→  1014→**Unless the user explicitly requests no cover, if a document has a Table of Contents, it MUST have a cover page.** Structure: Cover (page 1) → TOC (page 2) → Content (page 3+). Do not generate a TOC without a preceding cover page.
+   536→  1015→
+   537→  1016→### ✅ ALWAYS use auto-generated TOC:
+   538→  1017→
+   539→  1018→```python
+   540→  1019→from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak, Spacer
+   541→  1020→from reportlab.platypus.tableofcontents import TableOfContents
+   542→  1021→from reportlab.lib.utils import simpleSplit
+   543→  1022→import hashlib
+   544→  1023→
+   545→  1024→class TocDocTemplate(SimpleDocTemplate):
+   546→  1025→    def afterFlowable(self, flowable):
+   547→  1026→        if hasattr(flowable, 'bookmark_name'):
+   548→  1027→            level = getattr(flowable, 'bookmark_level', 0)
+   549→  1028→            text = getattr(flowable, 'bookmark_text', '')
+   550→  1029→            key = getattr(flowable, 'bookmark_key', '')
+   551→  1030→            # MUST pass key as 4th element - without it, TOC entries won't have clickable links
+   552→  1031→            self.notify('TOCEntry', (level, text, self.page, key))
+   553→  1032→
+   554→  1033→doc = TocDocTemplate("document.pdf", pagesize=letter)
+   555→  1034→story = []
+   556→  1035→
+   557→  1036→toc = TableOfContents()
+   558→  1037→toc.levelStyles = [
+   559→  1038→    ParagraphStyle(name='TOCHeading1', fontSize=14, leftIndent=20, fontName='FreeSerif'),
+   560→  1039→    ParagraphStyle(name='TOCHeading2', fontSize=12, leftIndent=40, fontName='FreeSerif'),
+   561→  1040→]
+   562→  1041→story.append(Paragraph("<b>Table of Contents</b>", styles['Title']))
+   563→  1042→story.append(toc)
+   564→  1043→story.append(PageBreak())
+   565→  1044→
+   566→  1045→def add_heading(text, style, level=0):
+   567→  1046→    # Generate a unique bookmark key for this heading
+   568→  1047→    key = 'h_%s' % hashlib.md5(text.encode()).hexdigest()[:8]
+   569→  1048→    p = Paragraph('<a name="%s"/>%s' % (key, text), style)
+   570→  1049→    p.bookmark_name = text
+   571→  1050→    p.bookmark_level = level
+   572→  1051→    p.bookmark_text = text
+   573→  1052→    p.bookmark_key = key  # This key enables clickable TOC links
+   574→  1053→    return p
+   575→  1054→
+   576→  1055→# ⚠️ Orphan Heading Prevention (NOT a page break rule)
+   577→  1056→# If an H1 heading would appear in the bottom 15% of the page with no room
+   578→  1057→# for at least a few lines of content, push it to the next page.
+   579→  1058→# This is NOT "every H1 starts a new page" — it only triggers when the heading
+   580→  1059→# would be orphaned at the very bottom.
+   581→  1060→available_height = A4[1] - top_margin - bottom_margin
+   582→  1061→H1_ORPHAN_THRESHOLD = available_height * 0.15  # ~100pt ≈ 3.5cm — enough for heading + 2 lines
+   583→  1062→
+   584→  1063→def add_major_section(text, style):
+   585→  1064→    """Add an H1-level heading with orphan prevention (NOT forced page break)."""
+   586→  1065→    return [
+   587→  1066→        CondPageBreak(H1_ORPHAN_THRESHOLD),  # Only break if heading would be orphaned at page bottom
+   588→  1067→        add_heading(text, style, level=0),
+   589→  1068→    ]
+   590→  1069→
+   591→  1070→story.extend(add_major_section("Chapter 1: Introduction", styles['Heading1']))
+   592→  1071→# ... content ...
+   593→  1072→
+   594→  1073→doc.multiBuild(story)  # MUST use multiBuild for TOC
+   595→  1074→```
+   596→  1075→
+   597→  1076→**⚠️ CRITICAL TOC LINK RULES:**
+   598→  1077→1. `afterFlowable` MUST pass `key` as the 4th element in the notify tuple - without it, TOC entries have no clickable links
+   599→  1078→2. `add_heading` MUST set `bookmark_key` AND embed `<a name="key"/>` in the Paragraph text - this creates the link destination
+   600→  1079→3. The key must be unique per heading - use a hash of the heading text
+   601→  1080→
+   602→  1081→### TOC with Leader Dots (Copy-Paste Ready)
+   603→  1082→
+   604→  1083→**⚠️ WARNING**: This manual approach creates a visual-only TOC. It has **NO clickable links** and **NO auto-updated page numbers**. Use the auto-generated TOC above (TocDocTemplate + multiBuild) whenever possible. Only use this leader-dots approach if you need very specific visual styling that the auto TOC cannot provide - and even then, prefer the auto approach.
+   605→  1084→
+   606→  1085→For a professional TOC with leader dots connecting titles to page numbers:
+   607→  1086→
+   608→  1087→```python
+   609→  1088→from reportlab.lib.pagesizes import A4
+   610→  1089→from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, PageBreak
+   611→  1090→from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+   612→  1091→from reportlab.lib import colors
+   613→  1092→from reportlab.lib.units import inch
+   614→  1093→
+   615→  1094→# Setup
+   616→  1095→doc = SimpleDocTemplate("report.pdf", pagesize=A4,
+   617→  1096→                       leftMargin=0.75*inch, rightMargin=0.75*inch)
+   618→  1097→styles = getSampleStyleSheet()
+   619→  1098→styles['Heading1'].fontName = 'FreeSerif'
+   620→  1099→styles['Heading1'].textColor = colors.black
+   621→
+   622→[showing lines 480-1099 of 1704; use offset=1100 with limit to continue reading]

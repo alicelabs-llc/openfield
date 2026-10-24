@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Carlito','Liberation Sans',Arial,sans-serif; background:#f5f8fc; }
+.canvas { width:900px; padding:26px 28px 30px; background:#f5f8fc; }
+.band { background:#edf2f9; border:1px solid #c0d0e2; border-radius:12px; padding:14px 16px 16px; }
+.band-label { font-size:12px; font-weight:700; letter-spacing:2.5px; color:#2d7ab3; text-transform:uppercase; margin-bottom:10px; }
+.nodes { display:flex; flex-wrap:wrap; gap:12px; max-width:100%%; }
+.node { flex:1 1 0; min-width:170px; max-width:100%%; background:#ffffff; border:1px solid #c0d0e2; border-radius:10px; padding:12px 14px; }
+.node.core { border-left:4px solid #2d7ab3; }
+.node h4 { font-size:17.5px; font-weight:700; color:#142840; line-height:1.25; margin-bottom:5px; }
+.node p { font-size:13.5px; color:#5a7a96; line-height:1.35; overflow-wrap:break-word; }
+.flow { display:flex; justify-content:center; align-items:center; gap:10px; padding:10px 0; }
+.flow .arrow { width:0; height:0; border-left:9px solid transparent; border-right:9px solid transparent; border-top:11px solid #2d7ab3; }
+.flow .chip { background:#ffffff; border:1px solid #c0d0e2; color:#1a4a7a; font-size:13.5px; font-weight:700; border-radius:999px; padding:4px 14px; }
+</style></head><body><div class="canvas"><div class="band"><div class="band-label">ENTRADAS</div><div class="nodes"><div class="node core"><h4>Clientes que compran por WhatsApp</h4><p>Piden sin apps ni registros: todo dentro del chat que ya usan.</p></div><div class="node"><h4>Catálogo y carrito en el chat</h4><p>El bot muestra productos, precios y arma el pedido solo.</p></div></div></div><div class="flow"><div class="chip">mensajes entrantes · respuesta en segundos</div><div class="arrow"></div></div><div class="band"><div class="band-label">NÚCLEO DEL PRODUCTO</div><div class="nodes"><div class="node core"><h4>Bot Engine (FastAPI)</h4><p>Flujos de pedido, preguntas frecuentes con IA, asignación a humano si hace falta.</p></div><div class="node"><h4>Cobro en el flujo</h4><p>Link de pago, transferencia o pago contra entrega confirmado en el chat.</p></div></div></div><div class="flow"><div class="chip">pedido confirmado</div><div class="arrow"></div></div><div class="band"><div class="band-label">GESTIÓN Y SALIDAS</div><div class="nodes"><div class="node core"><h4>Panel del negocio</h4><p>Pedidos del día, clientes frecuentes y horarios pico en un solo lugar.</p></div><div class="node"><h4>Base de datos de pedidos y CRM</h4><p>Historial por cliente para reventa y promociones.</p></div><div class="node"><h4>Alertas y recordatorios</h4><p>Aviso de nuevo pedido, confirmación de entrega y seguimiento.</p></div></div></div></div></body></html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Carlito','Liberation Sans',Arial,sans-serif; background:#f5f8fc; }
+.canvas { width:900px; padding:26px 28px 30px; background:#f5f8fc; }
+.band { background:#edf2f9; border:1px solid #c0d0e2; border-radius:12px; padding:14px 16px 16px; }
+.band-label { font-size:12px; font-weight:700; letter-spacing:2.5px; color:#2d7ab3; text-transform:uppercase; margin-bottom:10px; }
+.nodes { display:flex; flex-wrap:wrap; gap:12px; max-width:100%%; }
+.node { flex:1 1 0; min-width:170px; max-width:100%%; background:#ffffff; border:1px solid #c0d0e2; border-radius:10px; padding:12px 14px; }
+.node.core { border-left:4px solid #2d7ab3; }
+.node h4 { font-size:17.5px; font-weight:700; color:#142840; line-height:1.25; margin-bottom:5px; }
+.node p { font-size:13.5px; color:#5a7a96; line-height:1.35; overflow-wrap:break-word; }
+.flow { display:flex; justify-content:center; align-items:center; gap:10px; padding:10px 0; }
+.flow .arrow { width:0; height:0; border-left:9px solid transparent; border-right:9px solid transparent; border-top:11px solid #2d7ab3; }
+.flow .chip { background:#ffffff; border:1px solid #c0d0e2; color:#1a4a7a; font-size:13.5px; font-weight:700; border-radius:999px; padding:4px 14px; }
+</style></head><body><div class="canvas"><div class="band"><div class="band-label">ENTRADAS</div><div class="nodes"><div class="node core"><h4>Portal público SERCOP</h4><p>Procesos de compra pública publicados, datos abiertos oficiales.</p></div></div></div><div class="flow"><div class="chip">rastreo diario</div><div class="arrow"></div></div><div class="band"><div class="band-label">NÚCLEO DEL PRODUCTO</div><div class="nodes"><div class="node core"><h4>Clasificador semántico</h4><p>Interpreta rubros NPU y detecta procesos que calzan con el perfil del proveedor.</p></div><div class="node"><h4>Motor de alertas</h4><p>Filtra por monto, cantón y fecha de cierre; elimina duplicados.</p></div></div></div><div class="flow"><div class="chip">oportunidad calificada</div><div class="arrow"></div></div><div class="band"><div class="band-label">GESTIÓN Y SALIDAS</div><div class="nodes"><div class="node core"><h4>Alertas email / Telegram</h4><p>Notificación al momento de la publicación del proceso relevante.</p></div><div class="node"><h4>Dashboard de oportunidades</h4><p>Pipeline con plazos, montos y estado de cada proceso.</p></div><div class="node"><h4>Reportes de seguimiento</h4><p>Histórico de procesos vistos, presentados y adjudicados.</p></div></div></div></div></body></html>

@@ -1,0 +1,606 @@
+=== USER ===
+Username: edison_flores_6d2cd381b13
+Name: Edison Flores
+Joined: Jul  2, 2026
+Org username: None
+
+=== MY ARTICLES (100) ===
+  - [False] Test draft
+    URL: https://dev.to/edison_flores_6d2cd381b13/test-draft-l12-temp-slug-7835570
+    Published: None
+    Tags: ['test']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @reneza — your 30-line runtime interception hook is now in UTA, he
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-reneza-your-30-line-runtime-interception-hook-is-now-in-uta-heres-what-changed-578a-temp-slug-7940651
+    Published: None
+    Tags: ['mcp', 'runtime', 'security', 'aiagents']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @kordless — you're right about ACP, I'm renaming it to AEP
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-kordless-youre-right-about-acp-im-renaming-it-to-aep-26ak-temp-slug-4496601
+    Published: None
+    Tags: ['mcp', 'aiagents', 'protocol', 'naming']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @topstar_ai — thanks for the interest, here's where we are (and wh
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-topstarai-thanks-for-the-interest-heres-where-we-are-and-where-were-going-4c65-temp-slug-1657010
+    Published: None
+    Tags: ['aiagents', 'mcp', 'trust', 'hiring']
+    Reactions: 0 | Comments: 0
+
+  - [False] Escaneé 9,248 servidores MCP. Esto es lo que encontré sobre seguridad 
+    URL: https://dev.to/edison_flores_6d2cd381b13/escanee-9248-servidores-mcp-esto-es-lo-que-encontre-sobre-seguridad-de-agentes-10j5-temp-slug-7499483
+    Published: None
+    Tags: ['mcp', 'aiagents', 'security', 'es']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @nazar-boyko — you're right, layers 3-4 don't catch zero-days. Her
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-nazar-boyko-youre-right-layers-3-4-dont-catch-zero-days-heres-what-does-2hl9-temp-slug-1271734
+    Published: None
+    Tags: ['security', 'mcp', 'aiagents', 'behavioral']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @jkming — CA key compromise: what we ship today and what's still o
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-jkming-ca-key-compromise-what-we-ship-today-and-whats-still-on-the-roadmap-3jac-temp-slug-3519183
+    Published: None
+    Tags: ['security', 'cryptography', 'aiagents', 'trust']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @alexshev — package safety and runtime safety are different proble
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-alexshev-package-safety-and-runtime-safety-are-different-problems-and-uta-ships-both-g1j-temp-slug-6630498
+    Published: None
+    Tags: ['mcp', 'security', 'runtime', 'aiagents']
+    Reactions: 0 | Comments: 0
+
+  - [False] Re: @custralis — you were right about --network none, here's the full 
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-custralis-you-were-right-about-network-none-heres-the-full-docker-hardening-checklist-5gm5-temp-slug-6596427
+    Published: None
+    Tags: ['mcp', 'docker', 'security', 'gvisor']
+    Reactions: 0 | Comments: 0
+
+  - [False] Test
+    URL: https://dev.to/edison_flores_6d2cd381b13/test-dp-temp-slug-5914103
+    Published: None
+    Tags: []
+    Reactions: 0 | Comments: 0
+
+  - [False] Test
+    URL: https://dev.to/edison_flores_6d2cd381b13/test-4pn4-temp-slug-2573156
+    Published: None
+    Tags: []
+    Reactions: 0 | Comments: 0
+
+  - [False] The Viral Loop That Wasn't: How We Closed the Agent Magnet Gap
+    URL: https://dev.to/edison_flores_6d2cd381b13/the-viral-loop-that-wasnt-how-we-closed-the-agent-magnet-gap-abn-temp-slug-5701063
+    Published: None
+    Tags: ['mcp', 'aiagents', 'marketplace', 'buildinpublic']
+    Reactions: 0 | Comments: 0
+
+  - [False] The Viral Loop That Wasn't: How We Closed the Agent Magnet Gap
+    URL: https://dev.to/edison_flores_6d2cd381b13/the-viral-loop-that-wasnt-how-we-closed-the-agent-magnet-gap-16n0-temp-slug-7344336
+    Published: None
+    Tags: ['mcp', 'aiagents', 'marketplace', 'buildinpublic']
+    Reactions: 0 | Comments: 0
+
+  - [False] Test Draft
+    URL: https://dev.to/edison_flores_6d2cd381b13/test-draft-3g6i-temp-slug-150631
+    Published: None
+    Tags: []
+    Reactions: 0 | Comments: 0
+
+  - [True] I let an AI agent do my overnight chores — but every step is signed so
+    URL: https://dev.to/edison_flores_6d2cd381b13/i-let-an-ai-agent-do-my-overnight-chores-but-every-step-is-signed-so-i-can-prove-it-didnt-go-cco
+    Published: 2026-10-24T01:03:21.079Z
+    Tags: ['devchallenge', 'hf26challenge', 'hacktoberfest', 'showdev']
+    Reactions: 0 | Comments: 0
+
+  - [True] My Agent Kept Forgetting Everything. So I Built a Sloth — a Zero-LLM M
+    URL: https://dev.to/edison_flores_6d2cd381b13/my-agent-kept-forgetting-everything-so-i-built-a-sloth-a-zero-llm-memory-that-never-re-explains-20g1
+    Published: 2026-10-20T23:57:20.166Z
+    Tags: ['devchallenge', 'hf26challenge', 'aiagents', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] SlothPay: the sloth that pays for you - fail-closed agent payments wit
+    URL: https://dev.to/edison_flores_6d2cd381b13/slothpay-the-sloth-that-pays-for-you-fail-closed-agent-payments-with-a-local-gemma-3-1kkc
+    Published: 2026-10-20T19:14:02.913Z
+    Tags: ['devchallenge', 'hf26challenge', 'ai', 'python']
+    Reactions: 0 | Comments: 0
+
+  - [True] AliceLabs is open for agent-native funding — live x402 revenue rails, 
+    URL: https://dev.to/edison_flores_6d2cd381b13/alicelabs-is-open-for-agent-native-funding-live-x402-revenue-rails-4-public-treasuries-3a20
+    Published: 2026-10-14T22:17:26.278Z
+    Tags: ['ai', 'webdev', 'crypto', 'showdev']
+    Reactions: 0 | Comments: 0
+
+  - [True] A fake recruiter sent me a job offer that ended in my terminal — the t
+    URL: https://dev.to/edison_flores_6d2cd381b13/a-fake-recruiter-sent-me-a-job-offer-that-ended-in-my-terminal-the-trojan-is-still-live-2okf
+    Published: 2026-10-09T00:33:33.938Z
+    Tags: ['security', 'malware', 'phishing', 'infosec']
+    Reactions: 2 | Comments: 3
+
+  - [True] Touch Grass: Verified Field Notes From Your Hike (Hacktoberfest Week 1
+    URL: https://dev.to/edison_flores_6d2cd381b13/touch-grass-verified-field-notes-from-your-hike-hacktoberfest-week-1-16pl
+    Published: 2026-10-09T00:30:41.782Z
+    Tags: ['devchallenge', 'hf26challenge', 'hacktoberfest', 'touchgrass']
+    Reactions: 1 | Comments: 0
+
+  - [True] Listed in Awesome-Agent-Memory: what the maintainer audited, and what 
+    URL: https://dev.to/edison_flores_6d2cd381b13/listed-in-awesome-agent-memory-what-the-maintainer-audited-and-what-the-listing-actually-pays-2ogk
+    Published: 2026-10-04T00:39:50.978Z
+    Tags: ['ai', 'opensource', 'github', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] v1.7.0 shipped: adversarial window sampling, generated mutants, and th
+    URL: https://dev.to/edison_flores_6d2cd381b13/v170-shipped-adversarial-window-sampling-generated-mutants-and-the-survivor-list-published-28kf
+    Published: 2026-10-03T22:43:21.995Z
+    Tags: ['security', 'ai', 'opensource', 'testing']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: @anp2network — all three critiques land: the single-point fixture,
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-all-three-critiques-land-the-single-point-fixture-the-memorizer-turned-around-9g5
+    Published: 2026-10-03T22:21:39.598Z
+    Tags: ['security', 'ai', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] Three merged PRs in an MCP security scanner: the review that found my 
+    URL: https://dev.to/edison_flores_6d2cd381b13/three-merged-prs-in-an-mcp-security-scanner-the-review-that-found-my-bug-and-two-more-3887
+    Published: 2026-10-03T21:21:41.517Z
+    Tags: ['mcp', 'security', 'supplychain', 'python']
+    Reactions: 0 | Comments: 0
+
+  - [True] One bug class, four fusion modes: finding cache corruption in QueryFus
+    URL: https://dev.to/edison_flores_6d2cd381b13/one-bug-class-four-fusion-modes-finding-cache-corruption-in-queryfusionretriever-1h0h
+    Published: 2026-10-03T21:21:09.218Z
+    Tags: ['python', 'llamaindex', 'debugging', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] First third-party interop evidence: live Agent Trust Cards over RFC 94
+    URL: https://dev.to/edison_flores_6d2cd381b13/first-third-party-interop-evidence-live-agent-trust-cards-over-rfc-9421-conformance-v140-3jm8
+    Published: 2026-10-03T17:39:42.943Z
+    Tags: ['security', 'ai', 'opensource', 'discuss']
+    Reactions: 0 | Comments: 0
+
+  - [True] We got into the official MCP Registry — the parts the docs don't cover
+    URL: https://dev.to/edison_flores_6d2cd381b13/we-got-into-the-official-mcp-registry-the-parts-the-docs-dont-cover-9fh
+    Published: 2026-09-29T17:16:00.150Z
+    Tags: ['mcp', 'modelcontextprotocol', 'aiagents', 'security']
+    Reactions: 1 | Comments: 0
+
+  - [True] I built a cryptographic protocol for agent memory — and an auditor fou
+    URL: https://dev.to/edison_flores_6d2cd381b13/i-built-a-cryptographic-protocol-for-agent-memory-and-an-auditor-found-my-tests-were-lying-4264
+    Published: 2026-09-29T01:22:52.027Z
+    Tags: ['ai', 'programming', 'python', 'security']
+    Reactions: 1 | Comments: 0
+
+  - [True] Re: @anp2network — round 5: the dormant branch fired 9,400 times today
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-round-5-the-dormant-branch-fired-9400-times-today-grinding-measured-13-ms-499h
+    Published: 2026-09-27T21:01:54.187Z
+    Tags: ['security', 'ai', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: Anima — the 401-on-initialize problem, measured across 6,249 MCP e
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anima-the-401-on-initialize-problem-measured-across-6249-mcp-endpoints-56a3
+    Published: 2026-09-23T00:39:48.938Z
+    Tags: ['mcp', 'ai', 'security', 'measurement']
+    Reactions: 0 | Comments: 0
+
+  - [True] Verificado en marzo no es evidencia sobre abril: 4 lecciones de diseño
+    URL: https://dev.to/edison_flores_6d2cd381b13/verificado-en-marzo-no-es-evidencia-sobre-abril-4-lecciones-de-diseno-para-bundles-de-confianza-4plb
+    Published: 2026-09-21T00:18:34.037Z
+    Tags: ['spanish', 'ai', 'security', 'mcp']
+    Reactions: 0 | Comments: 0
+
+  - [True] 「検証済み」は「今も有効」を意味しない — エージェント間のトラストバンドル設計で学んだ4つの教訓
+    URL: https://dev.to/edison_flores_6d2cd381b13/jian-zheng-ji-mi-hajin-moyou-xiao-woyi-wei-sinai-ezientojian-notorasutobandorushe-ji-dexue-nda4tunojiao-xun-2c0h
+    Published: 2026-09-21T00:17:02.308Z
+    Tags: ['japanese', 'ai', 'security', 'mcp']
+    Reactions: 0 | Comments: 0
+
+  - [True] Your AI agent connects to MCP servers it has never met. Verify them fi
+    URL: https://dev.to/edison_flores_6d2cd381b13/your-ai-agent-connects-to-mcp-servers-it-has-never-met-verify-them-first-for-free-76f
+    Published: 2026-09-20T03:17:24.715Z
+    Tags: ['ai', 'security', 'mcp', 'aiagents']
+    Reactions: 0 | Comments: 0
+
+  - [True] MCP servers run code with your credentials. Here's the 60-second gate 
+    URL: https://dev.to/edison_flores_6d2cd381b13/mcp-servers-run-code-with-your-credentials-heres-the-60-second-gate-i-put-in-front-of-them-242h
+    Published: 2026-09-19T18:47:03.513Z
+    Tags: ['mcp', 'ai', 'security', 'javascript']
+    Reactions: 0 | Comments: 0
+
+  - [True] VIGÍA ML: Gas-Well Predictive Monitoring That Runs Entirely in the Bro
+    URL: https://dev.to/edison_flores_6d2cd381b13/vigia-ml-gas-well-predictive-monitoring-that-runs-entirely-in-the-browser-tensorflowjs-react-2coa
+    Published: 2026-09-19T05:01:10.204Z
+    Tags: ['javascript', 'machinelearning', 'react', 'showdev']
+    Reactions: 1 | Comments: 0
+
+  - [True] Re: @alexshev — revocation, the signed checkpoint, and bounded freshne
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-alexshev-revocation-the-signed-checkpoint-and-bounded-freshness-are-live-45c3
+    Published: 2026-09-16T00:42:16.459Z
+    Tags: ['security', 'ai', 'opensource', 'discuss']
+    Reactions: 0 | Comments: 0
+
+  - [True] We audited our own MCP server across five registries — and found three
+    URL: https://dev.to/edison_flores_6d2cd381b13/we-audited-our-own-mcp-server-across-five-registries-and-found-three-ghost-entries-560h
+    Published: 2026-09-13T16:21:55.316Z
+    Tags: ['mcp', 'security', 'ai', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] Pre-auth discoverability in MCP: what the numbers say, and what a dire
+    URL: https://dev.to/edison_flores_6d2cd381b13/pre-auth-discoverability-in-mcp-what-the-numbers-say-and-what-a-directory-sees-1pbd
+    Published: 2026-09-13T07:59:11.958Z
+    Tags: ['mcp', 'ai', 'security', 'api']
+    Reactions: 0 | Comments: 0
+
+  - [True] The ingestion queue was public. 48 hours later it's empty: +1,097 MCP 
+    URL: https://dev.to/edison_flores_6d2cd381b13/the-ingestion-queue-was-public-48-hours-later-its-empty-1097-mcp-servers-66496-67593-240j
+    Published: 2026-09-11T20:12:20.167Z
+    Tags: ['mcp', 'ai', 'security', 'webdev']
+    Reactions: 0 | Comments: 0
+
+  - [True] Every MCP server in our index now has a public page — 66,496 of them, 
+    URL: https://dev.to/edison_flores_6d2cd381b13/every-mcp-server-in-our-index-now-has-a-public-page-66496-of-them-all-crawlable-mej
+    Published: 2026-09-11T18:23:59.155Z
+    Tags: ['mcp', 'ai', 'security', 'webdev']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: @anp2network — round 4: the freshness reference is a release chain
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-round-4-the-freshness-reference-is-a-release-chain-r1-r2-already-exercised-hi4
+    Published: 2026-09-11T15:54:29.585Z
+    Tags: ['security', 'ai', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] 8,535 66,496: how we indexed every MCP server on GitHub, npm and PyPI 
+    URL: https://dev.to/edison_flores_6d2cd381b13/8535-66496-how-we-indexed-every-mcp-server-on-github-npm-and-pypi-and-deleted-2910-fake-1hfa
+    Published: 2026-09-11T05:29:17.169Z
+    Tags: ['mcp', 'ai', 'security', 'opensource']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: @anp2network — round 3: the bound is a distribution, the mutants a
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-round-3-the-bound-is-a-distribution-the-mutants-are-generated-the-log-is-in-2mbi
+    Published: 2026-09-10T22:01:58.148Z
+    Tags: ['security', 'ai', 'opensource', 'testing']
+    Reactions: 0 | Comments: 1
+
+  - [True] Re: @topstar_ai (Luis Cruz) — yes: three concrete contribution paths (
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-lucruz-yes-three-concrete-contribution-paths-and-one-honest-answer-about-budget-aj0
+    Published: 2026-09-10T17:44:35.354Z
+    Tags: ['opensource', 'ai', 'python']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: @anp2network — both bugs fixed in v1.3.3, your repro rerun, and th
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-both-bugs-fixed-in-v133-your-repro-rerun-and-the-runner-is-now-the-tested-28lj
+    Published: 2026-09-10T17:44:10.971Z
+    Tags: ['security', 'ai', 'opensource']
+    Reactions: 0 | Comments: 1
+
+  - [True] MarketNow is now the largest security-gated MCP index — 66,496 index-c
+    URL: https://dev.to/edison_flores_6d2cd381b13/marketnow-is-now-the-largest-security-gated-mcp-index-66496-index-certified-servers-130845-19ld
+    Published: 2026-09-10T04:54:26.565Z
+    Tags: ['ai', 'security', 'opensource', 'devtools']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa 有了可信代理协议，Mastercard 有了可验证意图。但它们都没给你的那一层（中文版）
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-you-liao-ke-xin-dai-li-xie-yi-mastercard-you-liao-ke-yan-zheng-yi-tu-dan-ta-men-du-mei-gei-ni-de-na-ceng-zhong-wen-ban--n4g
+    Published: 2026-09-09T05:02:24.619Z
+    Tags: ['ai', 'security', 'agents', 'zh']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa có Trusted Agent Protocol. Mastercard có Verifiable Intent. Đây l
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-co-trusted-agent-protocol-mastercard-co-verifiable-intent-day-la-lop-ma-khong-ben-nao-cung-16kg
+    Published: 2026-09-09T05:02:00.996Z
+    Tags: ['ai', 'security', 'agents', 'vi']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa'nın bir Trusted Agent Protocol'ü, Mastercard'ın Verifiable Intent
+    URL: https://dev.to/edison_flores_6d2cd381b13/visanin-bir-trusted-agent-protocolu-mastercardin-verifiable-intenti-var-ikisinin-de-size-2o27
+    Published: 2026-09-09T05:01:38.111Z
+    Tags: ['ai', 'security', 'agents', 'tr']
+    Reactions: 0 | Comments: 0
+
+  - [True] У Visa есть протокол доверенных агентов. У Mastercard — Verifiable Int
+    URL: https://dev.to/edison_flores_6d2cd381b13/u-visa-iest-protokol-dovieriennykh-aghientov-u-mastercard-verifiable-intent-vot-sloi-kotorogho-nie-hed
+    Published: 2026-09-09T05:01:14.883Z
+    Tags: ['ai', 'security', 'agents', 'ru']
+    Reactions: 0 | Comments: 0
+
+  - [True] A Visa tem um protocolo de agentes confiáveis. A Mastercard tem Verifi
+    URL: https://dev.to/edison_flores_6d2cd381b13/a-visa-tem-um-protocolo-de-agentes-confiaveis-a-mastercard-tem-verifiable-intent-aqui-esta-a-3g8d
+    Published: 2026-09-09T05:00:51.970Z
+    Tags: ['ai', 'security', 'agents', 'pt']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa는 Trusted Agent Protocol이 있고 Mastercard는 Verifiable Intent가 있다. 둘 
+    URL: https://dev.to/edison_flores_6d2cd381b13/visaneun-trusted-agent-protocoli-issgo-mastercardneun-verifiable-intentga-issda-dul-da-juji-anhneun-reieoga-yeogi-issda-hangugeo-om5
+    Published: 2026-09-09T05:00:29.249Z
+    Tags: ['ai', 'security', 'agents', 'ko']
+    Reactions: 1 | Comments: 0
+
+  - [True] VisaはTrusted Agent Protocolを、MastercardはVerifiable Intentを持っている。どちらもくれ
+    URL: https://dev.to/edison_flores_6d2cd381b13/visahatrusted-agent-protocolwo-mastercardhaverifiable-intentwochi-tuteiru-dotiramokurenaireiyagakokoniaruri-ben-yu-ban--3bnc
+    Published: 2026-09-09T05:00:06.163Z
+    Tags: ['ai', 'security', 'agents', 'ja']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa ha un protocollo per agenti affidabili. Mastercard ha la Verifiab
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-ha-un-protocollo-per-agenti-affidabili-mastercard-ha-la-verifiable-intent-ecco-il-layer-che-21f5
+    Published: 2026-09-09T04:59:43.113Z
+    Tags: ['ai', 'security', 'agents', 'it']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa punya Trusted Agent Protocol. Mastercard punya Verifiable Intent.
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-punya-trusted-agent-protocol-mastercard-punya-verifiable-intent-inilah-lapisan-yang-tidak-7bd
+    Published: 2026-09-09T04:59:19.886Z
+    Tags: ['ai', 'security', 'agents', 'id']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa के पास Trusted Agent Protocol है और Mastercard के पास Verifiable 
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-ke-paas-trusted-agent-protocol-hai-aur-mastercard-ke-paas-verifiable-intent-vh-leyr-jo-donon-men-4ofd
+    Published: 2026-09-09T04:58:57.088Z
+    Tags: ['ai', 'security', 'agents', 'hindi']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa a un protocole d'agents de confiance. Mastercard a la Verifiable 
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-a-un-protocole-dagents-de-confiance-mastercard-a-la-verifiable-intent-voici-la-couche-4g19
+    Published: 2026-09-09T04:58:33.830Z
+    Tags: ['ai', 'security', 'agents', 'fr']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa tiene un protocolo de agentes de confianza. Mastercard tiene Veri
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-tiene-un-protocolo-de-agentes-de-confianza-mastercard-tiene-verifiable-intent-esta-es-la-2blc
+    Published: 2026-09-09T04:58:11.093Z
+    Tags: ['ai', 'security', 'agents', 'spanish']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa hat ein Trusted-Agent-Protokoll. Mastercard hat Verifiable Intent
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-hat-ein-trusted-agent-protokoll-mastercard-hat-verifiable-intent-hier-ist-die-schicht-die-1072
+    Published: 2026-09-09T04:57:48.324Z
+    Tags: ['ai', 'security', 'agents', 'de']
+    Reactions: 0 | Comments: 0
+
+  - [True] ‏فيزا لديها بروتوكول للوكلاء الموثوقين، وماستركارد لديها Verifiable In
+    URL: https://dev.to/edison_flores_6d2cd381b13/fyz-ldyh-brwtwkwl-llwkl-lmwthwqyn-wmstrkrd-ldyh-verifiable-intent-whdhh-hy-ltbq-lty-l-51kl
+    Published: 2026-09-09T04:57:25.566Z
+    Tags: ['ai', 'security', 'agents', 'ar']
+    Reactions: 0 | Comments: 0
+
+  - [True] Visa Has a Trusted Agent Protocol. Mastercard Has Verifiable Intent. H
+    URL: https://dev.to/edison_flores_6d2cd381b13/visa-has-a-trusted-agent-protocol-mastercard-has-verifiable-intent-heres-the-layer-neither-one-5g41
+    Published: 2026-09-09T03:10:55.402Z
+    Tags: ['ai', 'security', 'agents', 'api']
+    Reactions: 0 | Comments: 2
+
+  - [True] Re: @anp2network — generated. The accept side is no longer one card (v
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-generated-the-accept-side-is-no-longer-one-card-vectors-v130-5f5
+    Published: 2026-09-08T18:09:48.634Z
+    Tags: ['security', 'ai', 'opensource', 'discuss']
+    Reactions: 0 | Comments: 1
+
+  - [True] I built a free scam checker that runs entirely in your browser (no API
+    URL: https://dev.to/edison_flores_6d2cd381b13/i-built-a-free-scam-checker-that-runs-entirely-in-your-browser-no-api-no-server-3g7b
+    Published: 2026-09-05T00:29:26.540Z
+    Tags: ['webdev', 'security', 'ai', 'tools']
+    Reactions: 0 | Comments: 0
+
+  - [True] MCP servers have a trust problem. Here's how to fix it.
+    URL: https://dev.to/edison_flores_6d2cd381b13/mcp-servers-have-a-trust-problem-heres-how-to-fix-it-4165
+    Published: 2026-09-05T00:29:10.821Z
+    Tags: ['ai', 'mcp', 'security', 'agents']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to verify any AI agent credential in under 10 lines of code
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-verify-any-ai-agent-credential-in-under-10-lines-of-code-1meh
+    Published: 2026-09-05T00:28:54.978Z
+    Tags: ['ai', 'tutorial', 'agents', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] Why OAuth is not enough for AI agent trust
+    URL: https://dev.to/edison_flores_6d2cd381b13/why-oauth-is-not-enough-for-ai-agent-trust-5daf
+    Published: 2026-09-04T23:31:01.697Z
+    Tags: ['ai', 'security', 'oauth']
+    Reactions: 0 | Comments: 0
+
+  - [True] 5 real use cases for AI agent credential verification (with code)
+    URL: https://dev.to/edison_flores_6d2cd381b13/5-real-use-cases-for-ai-agent-credential-verification-with-code-3ckb
+    Published: 2026-09-04T23:30:07.907Z
+    Tags: ['ai', 'agents', 'security', 'tutorial']
+    Reactions: 0 | Comments: 0
+
+  - [True] Your AI recommended a store. Is it a scam? (Free API, no auth, transpa
+    URL: https://dev.to/edison_flores_6d2cd381b13/your-ai-recommended-a-store-is-it-a-scam-free-api-no-auth-transparent-heuristics-1god
+    Published: 2026-09-04T00:07:27.680Z
+    Tags: ['ai', 'security', 'agents', 'webdev']
+    Reactions: 0 | Comments: 0
+
+  - [True] AI agents can now verify any credential in 1 API call (free, no auth, 
+    URL: https://dev.to/edison_flores_6d2cd381b13/ai-agents-can-now-verify-any-credential-in-1-api-call-free-no-auth-cors-open-37a3
+    Published: 2026-09-03T23:38:42.664Z
+    Tags: ['ai', 'agents', 'mcp', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: anp2network — checks confirmed, signed tag correction accepted, Re
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-checks-confirmed-signed-tag-correction-accepted-rekor-path-scoped-2lla
+    Published: 2026-09-01T19:31:36.790Z
+    Tags: ['security', 'ai', 'opensource', 'discuss']
+    Reactions: 0 | Comments: 0
+
+  - [True] Re: community — answers to 12 unanswered comments across 9 articles
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-community-answers-to-12-unanswered-comments-across-9-articles-4p36
+    Published: 2026-09-01T18:57:13.748Z
+    Tags: ['ai', 'security', 'opensource', 'discuss']
+    Reactions: 0 | Comments: 6
+
+  - [True] Re: @anp2network — you were right on all three counts. Here's the curr
+    URL: https://dev.to/edison_flores_6d2cd381b13/re-anp2network-you-were-right-on-all-three-counts-heres-the-current-state-3hfa
+    Published: 2026-09-01T16:32:23.262Z
+    Tags: ['security', 'ai', 'devops', 'opensource']
+    Reactions: 0 | Comments: 1
+
+  - [True] Universal Trust Adapter: Das USB-C der Vertrauensstellung zwischen KI-
+    URL: https://dev.to/edison_flores_6d2cd381b13/universal-trust-adapter-das-usb-c-der-vertrauensstellung-zwischen-ki-agenten-auf-deutsch-52k5
+    Published: 2026-09-01T16:13:02.053Z
+    Tags: ['ai', 'german', 'security', 'agents']
+    Reactions: 0 | Comments: 0
+
+  - [True] Sécuriser les agents IA avec un pipeline de vérification en 12 étapes
+    URL: https://dev.to/edison_flores_6d2cd381b13/securiser-les-agents-ia-avec-un-pipeline-de-verification-en-12-etapes-1ahg
+    Published: 2026-09-01T16:12:00.809Z
+    Tags: ['french', 'security', 'ai', 'cryptography']
+    Reactions: 0 | Comments: 0
+
+  - [True] Universal Trust Adapter : le USB-C de la confiance entre agents IA (en
+    URL: https://dev.to/edison_flores_6d2cd381b13/universal-trust-adapter-le-usb-c-de-la-confiance-entre-agents-ia-en-francais-3ojk
+    Published: 2026-09-01T16:10:59.831Z
+    Tags: ['ai', 'french', 'security', 'agents']
+    Reactions: 0 | Comments: 0
+
+  - [True] Como verificar credenciais de agentes de IA: um guia técnico em portug
+    URL: https://dev.to/edison_flores_6d2cd381b13/como-verificar-credenciais-de-agentes-de-ia-um-guia-tecnico-em-portugues-3clk
+    Published: 2026-09-01T16:09:58.443Z
+    Tags: ['portuguese', 'ai', 'cryptography', 'tutorial']
+    Reactions: 0 | Comments: 0
+
+  - [True] Universal Trust Adapter: o USB-C da confiança entre agentes de IA (em 
+    URL: https://dev.to/edison_flores_6d2cd381b13/universal-trust-adapter-o-usb-c-da-confianca-entre-agentes-de-ia-em-portugues-1hcl
+    Published: 2026-09-01T16:08:56.864Z
+    Tags: ['ai', 'portuguese', 'security', 'agents']
+    Reactions: 0 | Comments: 0
+
+  - [True] Universal Trust Adapter: el USB-C de la confianza entre agentes IA (en
+    URL: https://dev.to/edison_flores_6d2cd381b13/universal-trust-adapter-el-usb-c-de-la-confianza-entre-agentes-ia-en-espanol-1glk
+    Published: 2026-09-01T16:07:56.003Z
+    Tags: ['ai', 'spanish', 'security', 'agents']
+    Reactions: 0 | Comments: 0
+
+  - [True] Cómo verifico 8 formatos de credenciales con una sola API (ATC, JWT, W
+    URL: https://dev.to/edison_flores_6d2cd381b13/como-verifico-8-formatos-de-credenciales-con-una-sola-api-atc-jwt-w3c-vc-a2a-eat-ai-zta-mcp-1obd
+    Published: 2026-09-01T16:06:16.024Z
+    Tags: ['spanish', 'ai', 'api', 'interoperability']
+    Reactions: 0 | Comments: 0
+
+  - [True] Anatomía de un pipeline de verificación de 12 etapas para credenciales
+    URL: https://dev.to/edison_flores_6d2cd381b13/anatomia-de-un-pipeline-de-verificacion-de-12-etapas-para-credenciales-de-agentes-ia-2dcp
+    Published: 2026-09-01T16:06:14.793Z
+    Tags: ['security', 'spanish', 'ai', 'cryptography']
+    Reactions: 0 | Comments: 0
+
+  - [True] UTA — the universal trust layer for ALL AI agents (not just one)
+    URL: https://dev.to/edison_flores_6d2cd381b13/uta-the-universal-trust-layer-for-all-ai-agents-not-just-one-1fa6
+    Published: 2026-09-01T14:26:47.372Z
+    Tags: ['aiagents', 'mcp', 'trust', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to add trust verification to LangChain agents
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-langchain-agents-1jli
+    Published: 2026-09-01T14:25:40.810Z
+    Tags: ['langchain', 'aiagents', 'security', 'trust']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to add trust verification to CrewAI agents
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-crewai-agents-5f18
+    Published: 2026-09-01T14:25:35.003Z
+    Tags: ['crewai', 'aiagents', 'security', 'trust']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to add trust verification to OpenHands MCP servers
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-openhands-mcp-servers-18nk
+    Published: 2026-09-01T14:24:28.463Z
+    Tags: ['openhands', 'mcp', 'aiagents', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to add trust verification to Aider's MCP servers
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-aiders-mcp-servers-5b4o
+    Published: 2026-09-01T14:24:22.321Z
+    Tags: ['aider', 'mcp', 'aiagents', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to add trust verification to Continue.dev MCP servers
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-continuedev-mcp-servers-o5l
+    Published: 2026-09-01T14:23:16.220Z
+    Tags: ['continue', 'mcp', 'aiagents', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] How to add trust verification to Cursor's MCP servers in 5 minutes
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-cursors-mcp-servers-in-5-minutes-132c
+    Published: 2026-09-01T14:23:10.558Z
+    Tags: ['cursor', 'mcp', 'aiagents', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] Cline发布了Agent Plugins — 为什么需要信任验证
+    URL: https://dev.to/edison_flores_6d2cd381b13/clinefa-bu-liao-agent-plugins-wei-shi-yao-xu-yao-xin-ren-yan-zheng-51in
+    Published: 2026-09-01T13:56:15.934Z
+    Tags: ['cline', 'mcp', 'aiagents', 'zh']
+    Reactions: 0 | Comments: 0
+
+  - [True] ClineがAgent Pluginsをリリース — 信頼検証が必要な理由
+    URL: https://dev.to/edison_flores_6d2cd381b13/clinegaagent-pluginsworirisu-xin-lai-jian-zheng-gabi-yao-nali-you-2954
+    Published: 2026-09-01T13:56:09.761Z
+    Tags: ['cline', 'mcp', 'aiagents', 'ja']
+    Reactions: 0 | Comments: 0
+
+  - [True] Cline lanzó Agent Plugins — por qué necesitan verificación de confianz
+    URL: https://dev.to/edison_flores_6d2cd381b13/cline-lanzo-agent-plugins-por-que-necesitan-verificacion-de-confianza-503k
+    Published: 2026-09-01T13:54:46.334Z
+    Tags: ['cline', 'mcp', 'aiagents', 'es']
+    Reactions: 0 | Comments: 0
+
+  - [True] Cline just shipped Agent Plugins — here's why they need trust verifica
+    URL: https://dev.to/edison_flores_6d2cd381b13/cline-just-shipped-agent-plugins-heres-why-they-need-trust-verification-4oaj
+    Published: 2026-09-01T13:54:45.484Z
+    Tags: ['cline', 'mcp', 'aiagents', 'security']
+    Reactions: 0 | Comments: 0
+
+  - [True] Training an LSTM, an autoencoder and a fault classifier entirely in th
+    URL: https://dev.to/edison_flores_6d2cd381b13/training-an-lstm-an-autoencoder-and-a-fault-classifier-entirely-in-the-browser-the-architecture-1pgf
+    Published: 2026-08-31T04:12:14.766Z
+    Tags: ['ai', 'programming', 'webdev', 'productivity']
+    Reactions: 1 | Comments: 0
+
+  - [True] How to add trust verification to Cline (autonomous coding agent) in 5 
+    URL: https://dev.to/edison_flores_6d2cd381b13/how-to-add-trust-verification-to-cline-autonomous-coding-agent-in-5-minutes-4l4a
+    Published: 2026-08-31T01:49:27.998Z
+    Tags: ['mcp', 'aiagents', 'security', 'cline']
+    Reactions: 0 | Comments: 0
+
+  - [True] v5.4 + v6.0 shipped — attack chain detection, data flow tracking, cros
+    URL: https://dev.to/edison_flores_6d2cd381b13/v54-v60-shipped-attack-chain-detection-data-flow-tracking-cross-agent-trust-and-memory-2g5i
+    Published: 2026-08-31T00:31:43.153Z
+    Tags: ['mcp', 'aiagents', 'security', 'trust']
+    Reactions: 0 | Comments: 0
+
+  - [True] J'ai scanné 9 248 serveurs MCP. Voici ce que j'ai découvert sur la séc
+    URL: https://dev.to/edison_flores_6d2cd381b13/jai-scanne-9-248-serveurs-mcp-voici-ce-que-jai-decouvert-sur-la-securite-des-agents-180e
+    Published: 2026-08-29T16:05:36.445Z
+    Tags: ['mcp', 'aiagents', 'security', 'fr']
+    Reactions: 0 | Comments: 0
+
+  - [True] Saya memindai 9.248 server MCP. Berikut temuan saya tentang keamanan a
+    URL: https://dev.to/edison_flores_6d2cd381b13/saya-memindai-9248-server-mcp-berikut-temuan-saya-tentang-keamanan-agen-4nal
+    Published: 2026-08-29T16:04:00.122Z
+    Tags: ['mcp', 'aiagents', 'security', 'id']
+    Reactions: 0 | Comments: 0
+
+  - [True] 9,248개의 MCP 서버를 스캔했습니다. 에이전트 보안에 대한 발견.
+    URL: https://dev.to/edison_flores_6d2cd381b13/9248gaeyi-mcp-seobeoreul-seukaenhaessseubnida-eijeonteu-boane-daehan-balgyeon-5gj7
+    Published: 2026-08-29T16:03:54.147Z
+    Tags: ['mcp', 'aiagents', 'security', 'ko']
+    Reactions: 0 | Comments: 0
+
+  - [True] Ich habe 9.248 MCP-Server gescannt. Hier ist, was ich über die Sicherh
+    URL: https://dev.to/edison_flores_6d2cd381b13/ich-habe-9248-mcp-server-gescannt-hier-ist-was-ich-uber-die-sicherheit-der-agenten-gefunden-habe-35jg
+    Published: 2026-08-29T16:02:25.731Z
+    Tags: ['mcp', 'aiagents', 'security', 'de']
+    Reactions: 0 | Comments: 0
+
+  - [True] Tôi đã quét 9.248 máy chủ MCP. Dưới đây là những gì tôi phát hiện về b
+    URL: https://dev.to/edison_flores_6d2cd381b13/toi-da-quet-9248-may-chu-mcp-duoi-day-la-nhung-gi-toi-phat-hien-ve-bao-mat-agent-245i
+    Published: 2026-08-29T16:01:17.666Z
+    Tags: ['mcp', 'aiagents', 'security', 'vi']
+    Reactions: 0 | Comments: 0
+
+  - [True] 9.248 MCP sunucusu taramam: İşte ajan güvenliği hakkında bulduklarım.
+    URL: https://dev.to/edison_flores_6d2cd381b13/9248-mcp-sunucusu-taramam-iste-ajan-guvenligi-hakkinda-bulduklarim-1jpk
+    Published: 2026-08-29T16:01:13.703Z
+    Tags: ['mcp', 'aiagents', 'security', 'tr']
+    Reactions: 0 | Comments: 0

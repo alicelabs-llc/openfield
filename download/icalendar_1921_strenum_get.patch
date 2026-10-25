@@ -1,0 +1,105 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sun, 25 Oct 2026 22:00:00 +0000
+Subject: [PATCH] Add StrEnum.get() classmethod for safe value lookup (#1921)
+
+Adds a `.get(value, default=None)` classmethod to `StrEnum` so
+callers can look up enum members without raising `ValueError` for
+unknown strings. Mirrors `dict.get` semantics.
+
+Closes #1921.
+
+---
+ src/icalendar/enums.py              |  35 ++++++++++
+ src/icalendar/tests/test_enum_get.py | 56 ++++++++++++++++
+ 2 files changed, 91 insertions(+)
+ create mode 100644 src/icalendar/tests/test_enum_get.py
+
+diff --git a/src/icalendar/enums.py b/src/icalendar/enums.py
+index 1111111..2222222 100644
+--- a/src/icalendar/enums.py
++++ b/src/icalendar/enums.py
+@@ -1,5 +1,7 @@
+ """Enum definitions for icalendar."""
+
++from __future__ import annotations
++from typing import Any, overload
+ from enum import Enum
+
+
+@@ -172,9 +174,42 @@ class StrEnum(str, Enum):
+         """
+         return self.value
+
++    @overload
++    @classmethod
++    def get(cls, value: str) -> "StrEnum | None": ...
++
++    @overload
++    @classmethod
++    def get(cls, value: str, default: Any) -> Any: ...
++
++    @classmethod
++    def get(cls, value: str, default: Any = None) -> Any:
++        """Return the enum member matching ``value`` or ``default``.
++
++        Behaves like :meth:`dict.get`. Returns ``None`` (or the supplied
++        ``default``) when ``value`` is not a valid member, instead of
++        raising ``ValueError``.
++        """
++        try:
++            return cls(value)
++        except ValueError:
++            return default
++
++
+ class PARTSTAT(StrEnum):
+     """Enum for PARTSTAT from :rfc:`5545`.
+diff --git a/src/icalendar/tests/test_enum_get.py b/src/icalendar/tests/test_enum_get.py
+new file mode 100644
+index 0000000..3333333
+--- /dev/null
++++ b/src/icalendar/tests/test_enum_get.py
+@@ -0,0 +1,56 @@
++"""Tests for ``StrEnum.get`` classmethod (#1921)."""
++import pytest
++from icalendar import PARTSTAT
++
++
++class TestStrEnumGet:
++    def test_get_valid_value_returns_member(self):
++        assert PARTSTAT.get("ACCEPTED") is PARTSTAT.ACCEPTED
++        assert PARTSTAT.get("NEEDS-ACTION") is PARTSTAT.NEEDS_ACTION
++
++    def test_get_invalid_value_returns_none_by_default(self):
++        assert PARTSTAT.get("no-value") is None
++        assert PARTSTAT.get("") is None
++
++    def test_get_invalid_value_returns_default(self):
++        assert PARTSTAT.get("no-value", "fallback") == "fallback"
++        assert PARTSTAT.get("no-value", PARTSTAT.NEEDS_ACTION) is PARTSTAT.NEEDS_ACTION
++
++    def test_get_does_not_raise(self):
++        try:
++            PARTSTAT.get("anything-weird-!@#")
++        except ValueError:
++            pytest.fail("StrEnum.get() should not raise ValueError")
++
++    def test_get_with_member_instance_returns_same_member(self):
++        assert PARTSTAT.get(PARTSTAT.ACCEPTED) is PARTSTAT.ACCEPTED
++
++    def test_get_with_str_default(self):
++        assert PARTSTAT.get("invalid", "default-string") == "default-string"
++        assert PARTSTAT.get("invalid", 42) == 42
++        assert PARTSTAT.get("invalid", None) is None
++
++    def test_get_preserves_str_subclass_behavior(self):
++        result = PARTSTAT.get("ACCEPTED")
++        assert str(result) == "ACCEPTED"
++        assert result == "ACCEPTED"
++
++    def test_documentation_example(self):
++        assert PARTSTAT.get("no-value") is None
++        assert PARTSTAT.get("no-value", "other-value") == "other-value"
+-- 
+2.39.3

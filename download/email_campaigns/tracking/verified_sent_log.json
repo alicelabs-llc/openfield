@@ -1,0 +1,33 @@
+{
+  "sent_at": "2026-10-25T16:13:35.409082+00:00",
+  "from": "contacto@alicelabs.site",
+  "total": 5,
+  "failed": 0,
+  "prospects": [
+    {
+      "name": "City of Loveland, CO",
+      "to": "dan.coldiron@cityofloveland.org",
+      "status": "sent"
+    },
+    {
+      "name": "West Valley Water District",
+      "to": "lgranados@wvwd.org",
+      "status": "sent"
+    },
+    {
+      "name": "C&D Municipal Sales",
+      "to": "sales@c-dmunicipal.com",
+      "status": "sent"
+    },
+    {
+      "name": "Brooksville Main Street",
+      "to": "chairman@welovebvl.org",
+      "status": "sent"
+    },
+    {
+      "name": "Moffat Economic Development Authority",
+      "to": "info@moffateda.org",
+      "status": "sent"
+    }
+  ]
+}

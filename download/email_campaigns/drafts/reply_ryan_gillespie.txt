@@ -1,0 +1,44 @@
+From: contacto@alicelabs.site
+To: sec@optitransfer.ch
+Subject: Re: x402 conformance checks for universal-trust-adapter
+
+Hi Ryan,
+
+Yes, please run x402-conformance against universal-trust-adapter. Thanks for
+asking first — much appreciated.
+
+Endpoint:  https://marketnow.site/api/trust
+Protocol: x402 v2, USDC on Base (mainnet) and Base Sepolia (testnet)
+Source:   https://github.com/alicelabs-llc/universal-trust-adapter
+README:   https://github.com/alicelabs-llc/universal-trust-adapter#readme
+Live at:  pinned commit f0a3c2e (current main as of Oct 26, 2026)
+
+Two things that will help:
+
+1. The verify-only F-checks are the right level — /api/trust is a paid
+   trust-verification endpoint, not a facilitator, so the S/F families that
+   hit /supported, /verify and /settle on a facilitator do not map 1:1. The
+   P-checks (passive 402 challenge, no payment header sent, no signing, no
+   POST) and the R-checks (binding, path traversal, retries) are the ones
+   that matter most for us.
+
+2. If you would rather build it on loopback as one of your self-hosted
+   columns (PR #73 / #95-#96 in atsp-protocol/x402-conformance), the
+   monorepo at /uta-monorepo in the repo above starts with `pnpm dev`
+   against Base Sepolia with a throwaway key — no hosted instance needed,
+   no operator permission needed. That path is fine with us too.
+
+Whatever you find, please send the report to contacto@alicelabs.site (this
+address) and CC security@alicelabs.site for the disclosure record. We will
+honor the 90-day window in your SECURITY.md.
+
+One ask: if anything in the report touches the trust-card signing or
+revocation logic (Ed25519 / RFC 8785 JCS), please flag it as
+security-profile and send it privately before any public row is published,
+so we can patch before disclosure. Same rule you already follow for the
+self-hosted columns.
+
+Thanks again,
+Edison Flores Guerra
+AliceLabs LLC
+contacto@alicelabs.site · alicelabs.site

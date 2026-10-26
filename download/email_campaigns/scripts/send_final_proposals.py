@@ -27,7 +27,20 @@ PIXEL_URL = "https://alicelabs.site/api/email/track"
 CAMPAIGN_ID = "alicelabs_final"
 TRACKING_DIR = Path("/home/z/my-project/download/email_campaigns/tracking")
 RECIPIENTS_LOG = TRACKING_DIR / f"recipients_{CAMPAIGN_ID}.json"
+DEAD_ADDRESSES_LOG = TRACKING_DIR / "dead_addresses.json"
 TRACKING_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def load_dead_addresses() -> set:
+    """Return the set of email addresses that bounced or are unreachable.
+    Scripts MUST skip these and never re-send to them."""
+    if not DEAD_ADDRESSES_LOG.exists():
+        return set()
+    try:
+        data = json.loads(DEAD_ADDRESSES_LOG.read_text(encoding="utf-8"))
+        return {d["email"].lower().strip() for d in data.get("dead", []) if d.get("email")}
+    except Exception:
+        return set()
 
 
 def make_recipient_id(email: str) -> str:
@@ -309,6 +322,14 @@ def main():
     batch_size = 5
     delay = 35
     batch_pause = 60
+
+    dead = load_dead_addresses()
+    if dead:
+        before = len(PROSPECTS)
+        PROSPECTS[:] = [p for p in PROSPECTS if p["to"].lower().strip() not in dead]
+        skipped = before - len(PROSPECTS)
+        if skipped:
+            print(f"   ⚠️  Skipping {skipped} dead address(es) from dead_addresses.json")
 
     print(f"📤 AliceLabs Final Proposal Sender")
     print(f"   From: {SENDER} via Hostinger SMTP (DKIM active)")

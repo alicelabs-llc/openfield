@@ -1,0 +1,65 @@
+From: contacto@alicelabs.site
+To: procurement.WWF@wwf.id
+Subject: Re: Proposal: WebGIS & Digital Monitoring Platform — AliceLabs LLC
+
+Dear Procurement Team,
+
+Thank you for the confirmation and the detailed instructions. We have
+downloaded the full Tender Document from the link provided (Tender Doc —
+WebGIS & Digital Monitoring Platform Development — Signed AEP-R1) and have
+reviewed the requirements carefully, including Section VIII (Kualifikasi)
+and Section X.D (Dokumen Bisnis & Legal).
+
+We must be transparent with you before the deadline, rather than submit a
+proposal that would fail administrative evaluation:
+
+AliceLabs LLC is a Wyoming-registered US company. After reading the
+Syarat Mutlak and Dokumen Bisnis & Legal in full, it is our understanding
+that this RFP requires an Indonesian legal entity with:
+
+  - NIB (Nomor Induk Berusaha) with KBLI relevant to computer programming,
+    computer consultancy, or data processing
+  - NPWP badan / company tax ID
+  - SKT Pajak (Surat Keterangan Terdaftar)
+  - Akta Pendirian and Akta Perubahan Terakhir (notarized in Indonesia)
+  - Bank account in the provider's name
+
+We do not hold any of these documents, and we will not pretend otherwise or
+submit a proposal that cannot meet them honestly.
+
+We are writing to ask two things, before the 2 November 15:00 GMT+7
+deadline:
+
+1. Is there any path for an international consortium (Section VIII point 2
+   of the tender allows consortium bids) where AliceLabs LLC partners with
+   an Indonesian legal entity that holds NIB + NPWP? If so, we would need
+   your written confirmation that this is acceptable, since Section X.D
+   appears to require the documents from the lead entity.
+
+2. If a consortium arrangement is not acceptable for this RFP, we would
+   like to be considered for future WWF-Indonesia procurements where an
+   international technology partner is in scope (for example, software
+   development partnerships that do not require an Indonesian business
+   license, or where WWF-International is the contracting party). We have
+   experience with the technology stack referenced in Section III.19
+   (Laravel/PHP, React.js, PostgreSQL/PostGIS, GDAL, S3-compatible
+   storage) and with SSO Microsoft Entra ID, RBAC, and OGC standards.
+
+If the answer to (1) is yes and you can confirm consortium eligibility by
+return email, we will submit a complete proposal — technical (in Bahasa
+Indonesia, max 10 pages) and financial (under Rp 400,000,000) plus the
+returnable forms signed and stamped as PDF — before the 2 November
+deadline.
+
+We will also plan to attend the Pre-Bid Conference on 27 October via the
+Zoom link in the tender document.
+
+Thank you for considering this question in advance of the deadline. We
+prefer to be honest now and not waste your evaluators' time.
+
+Sincerely,
+
+Edison Flores Guerra
+AliceLabs LLC
+Wyoming, USA
+contacto@alicelabs.site · alicelabs.site

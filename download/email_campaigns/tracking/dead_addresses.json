@@ -1,0 +1,36 @@
+{
+  "_comment": "Addresses that bounced or are unreachable. Scripts must SKIP these and never re-send.",
+  "_updated": "2026-10-27",
+  "dead": [
+    {
+      "email": "abennett@cityhpil.com",
+      "name": "City of Highland Park, IL",
+      "reason": "550 blocked by Barracuda Networks (cityhpil.com)",
+      "first_seen": "2026-10-25"
+    },
+    {
+      "email": "jguiney@ippf.org",
+      "name": "IPPF",
+      "reason": "550 blocked by Barracuda Networks (ippf.org)",
+      "first_seen": "2026-10-25"
+    },
+    {
+      "email": "procurement@wavetransit.com",
+      "name": "Wave Transit",
+      "reason": "550 Recipient address rejected: Access denied (Outlook/EXO)",
+      "first_seen": "2026-10-25"
+    },
+    {
+      "email": "info@fas.org",
+      "name": "Federation of American Scientists",
+      "reason": "550 NoSuchUser — mailbox does not exist",
+      "first_seen": "2026-10-25"
+    },
+    {
+      "email": "procurement@northfieldhealth.org.uk",
+      "name": "Northfield Health",
+      "reason": "Host not found — domain does not resolve",
+      "first_seen": "2026-10-25"
+    }
+  ]
+}

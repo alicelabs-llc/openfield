@@ -6,16 +6,49 @@ with alicelabs.site as the ONLY website referenced (no marketnow)
 
 14 emails with verified direct addresses, 35s delay, batches of 5
 """
-import smtplib, ssl, sys, time, json
+import smtplib, ssl, sys, time, json, hashlib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime, timezone
+from pathlib import Path
 
 SMTP_HOST = "smtp.hostinger.com"
 SMTP_PORT = 465
 SENDER = "contacto@alicelabs.site"
 PASSWORD = "Emm@darla201500"
 SITE = "alicelabs.site"
+
+# --- Open-tracking pixel -----------------------------------------------------
+# Public base URL of the tracking endpoint. The Next.js route at
+# src/app/api/email/track/route.ts serves a 1x1 transparent GIF and logs the
+# hit to download/email_campaigns/tracking/opens.jsonl. Each email gets a
+# unique 8-char recipient id so opens can be attributed back to a prospect.
+PIXEL_URL = "https://alicelabs.site/api/email/track"
+CAMPAIGN_ID = "alicelabs_final"
+TRACKING_DIR = Path("/home/z/my-project/download/email_campaigns/tracking")
+RECIPIENTS_LOG = TRACKING_DIR / f"recipients_{CAMPAIGN_ID}.json"
+TRACKING_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def make_recipient_id(email: str) -> str:
+    """Deterministic 8-char hex id from the recipient email + campaign id.
+    Same email in the same campaign yields the same id, so re-runs are
+    idempotent and don't pollute the recipients map."""
+    h = hashlib.sha256(f"{CAMPAIGN_ID}:{email.lower().strip()}".encode()).hexdigest()
+    return h[:8]
+
+
+def pixel_img(rid: str) -> str:
+    url = f"{PIXEL_URL}?c={CAMPAIGN_ID}&r={rid}"
+    return (
+        f'<img src="{url}" width="1" height="1" alt="" '
+        f'style="display:none;width:0;height:0;max-height:0;max-width:0;'
+        f'overflow:hidden;border:0;outline:none;">'
+    )
+
+
+def save_recipient_map(mapping: dict) -> None:
+    RECIPIENTS_LOG.write_text(json.dumps(mapping, indent=2), encoding="utf-8")
 
 PROSPECTS = [
     # --- Batch 1: Oct 30 deadlines (3) ---
@@ -193,7 +226,8 @@ PROSPECTS = [
 ]
 
 
-def make_html(p):
+def make_html(p, rid=None):
+    pixel = pixel_img(rid) if rid else ""
     return f"""<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -248,6 +282,7 @@ def make_html(p):
 <p style="margin:8px 0 0;color:#444;font-size:12px;">Reply "unsubscribe" to stop receiving emails</p>
 </td></tr>
 </table></td></tr></table>
+{pixel}
 </body></html>"""
 
 
@@ -279,13 +314,28 @@ def main():
     print(f"   From: {SENDER} via Hostinger SMTP (DKIM active)")
     print(f"   Website: {SITE} (NO marketnow)")
     print(f"   Total: {len(PROSPECTS)} | Language: ALL English")
+    print(f"   Pixel: {PIXEL_URL} (campaign={CAMPAIGN_ID})")
     print(f"   Dry run: {dry}")
     print()
 
     sent = 0; failed = 0; results = []
+    recipient_map = {}
+    if RECIPIENTS_LOG.exists():
+        try:
+            recipient_map = json.loads(RECIPIENTS_LOG.read_text(encoding="utf-8"))
+        except Exception:
+            recipient_map = {}
 
     for i, p in enumerate(PROSPECTS):
-        html = make_html(p)
+        rid = make_recipient_id(p["to"])
+        recipient_map[rid] = {
+            "email": p["to"],
+            "name": p["name"],
+            "subject": p["subject"],
+            "campaign": CAMPAIGN_ID,
+            "sent_at": datetime.now(timezone.utc).isoformat(),
+        }
+        html = make_html(p, rid=rid)
 
         if dry:
             print(f"  ⏭️  [{i+1}/{len(PROSPECTS)}] {p['name']} → {p['to']} | {p['deadline']}")
@@ -308,12 +358,13 @@ def main():
     print(f"\n📊 {sent} sent · {failed} failed · From: {SENDER}")
 
     if not dry and sent > 0:
-        log = {"sent_at":datetime.now(timezone.utc).isoformat(),"from":SENDER,"total":sent,"failed":failed,"prospects":results}
-        from pathlib import Path
+        log = {"sent_at":datetime.now(timezone.utc).isoformat(),"from":SENDER,"total":sent,"failed":failed,"prospects":results,"campaign":CAMPAIGN_ID,"pixel_url":PIXEL_URL}
         log_path = Path("/home/z/my-project/download/email_campaigns/tracking/final_sent_log.json")
         log_path.parent.mkdir(parents=True, exist_ok=True)
         log_path.write_text(json.dumps(log, indent=2), encoding="utf-8")
         print(f"📝 Log: {log_path}")
+        save_recipient_map(recipient_map)
+        print(f"📇 Recipients map: {RECIPIENTS_LOG} ({len(recipient_map)} ids)")
 
     return 0 if failed == 0 else 1
 

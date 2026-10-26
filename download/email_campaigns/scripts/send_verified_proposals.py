@@ -4,7 +4,7 @@ send_verified_proposals.py — Sends personalized English proposals
 from contacto@alicelabs.site via Hostinger SMTP
 in batches of 5 with 35s delays
 """
-import smtplib, ssl, sys, time, json
+import smtplib, ssl, sys, time, json, hashlib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -16,6 +16,31 @@ SENDER = "contacto@alicelabs.site"
 PASSWORD = "Emm@darla201500"
 HTML_DIR = Path("/home/z/my-project/download/email_campaigns/html_verified")
 HTML_DIR.mkdir(parents=True, exist_ok=True)
+
+# --- Open-tracking pixel -----------------------------------------------------
+PIXEL_URL = "https://alicelabs.site/api/email/track"
+CAMPAIGN_ID = "alicelabs_verified"
+TRACKING_DIR = Path("/home/z/my-project/download/email_campaigns/tracking")
+RECIPIENTS_LOG = TRACKING_DIR / f"recipients_{CAMPAIGN_ID}.json"
+TRACKING_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def make_recipient_id(email: str) -> str:
+    h = hashlib.sha256(f"{CAMPAIGN_ID}:{email.lower().strip()}".encode()).hexdigest()
+    return h[:8]
+
+
+def pixel_img(rid: str) -> str:
+    url = f"{PIXEL_URL}?c={CAMPAIGN_ID}&r={rid}"
+    return (
+        f'<img src="{url}" width="1" height="1" alt="" '
+        f'style="display:none;width:0;height:0;max-height:0;max-width:0;'
+        f'overflow:hidden;border:0;outline:none;">'
+    )
+
+
+def save_recipient_map(mapping: dict) -> None:
+    RECIPIENTS_LOG.write_text(json.dumps(mapping, indent=2), encoding="utf-8")
 
 PROSPECTS = [
     {"to": "nominating@camws.org", "name": "CAMWS",
@@ -141,7 +166,8 @@ PROSPECTS = [
 ]
 
 
-def generate_email_html(p):
+def generate_email_html(p, rid=None):
+    pixel = pixel_img(rid) if rid else ""
     return f"""<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -196,6 +222,7 @@ def generate_email_html(p):
 <p style="margin:8px 0 0;color:#444;font-size:12px;">Reply "unsubscribe" to stop receiving emails</p>
 </td></tr>
 </table></td></tr></table>
+{pixel}
 </body></html>"""
 
 
@@ -229,12 +256,27 @@ def main():
     print(f"📤 AliceLabs Verified Proposal Sender")
     print(f"   From: {SENDER} via Hostinger SMTP")
     print(f"   Total: {len(prospects)} | Batch: {batch} | Delay: {delay}s | Dry: {dry}")
+    print(f"   Pixel: {PIXEL_URL} (campaign={CAMPAIGN_ID})")
     print()
 
     sent = 0; failed = 0; results = []
+    recipient_map = {}
+    if RECIPIENTS_LOG.exists():
+        try:
+            recipient_map = json.loads(RECIPIENTS_LOG.read_text(encoding="utf-8"))
+        except Exception:
+            recipient_map = {}
 
     for i, p in enumerate(prospects):
-        html = generate_email_html(p)
+        rid = make_recipient_id(p["to"])
+        recipient_map[rid] = {
+            "email": p["to"],
+            "name": p["name"],
+            "subject": p["subject"],
+            "campaign": CAMPAIGN_ID,
+            "sent_at": datetime.now(timezone.utc).isoformat(),
+        }
+        html = generate_email_html(p, rid=rid)
         # Save HTML
         fname = f"{i+1+start:02d}_{p['name'].lower().replace(' ','_').replace('/','_')}.html"
         (HTML_DIR / fname).write_text(html, encoding="utf-8")
@@ -262,8 +304,10 @@ def main():
     if not dry and sent > 0:
         log = Path("/home/z/my-project/download/email_campaigns/tracking/verified_sent_log.json")
         log.parent.mkdir(parents=True, exist_ok=True)
-        log.write_text(json.dumps({"sent_at":datetime.now(timezone.utc).isoformat(),"from":SENDER,"total":sent,"failed":failed,"prospects":results}, indent=2), encoding="utf-8")
+        log.write_text(json.dumps({"sent_at":datetime.now(timezone.utc).isoformat(),"from":SENDER,"total":sent,"failed":failed,"prospects":results,"campaign":CAMPAIGN_ID,"pixel_url":PIXEL_URL}, indent=2), encoding="utf-8")
         print(f"📝 Log: {log}")
+        save_recipient_map(recipient_map)
+        print(f"📇 Recipients map: {RECIPIENTS_LOG} ({len(recipient_map)} ids)")
     return 0 if failed == 0 else 1
 
 if __name__ == "__main__":

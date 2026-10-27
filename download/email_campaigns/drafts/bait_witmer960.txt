@@ -1,0 +1,146 @@
+To: witmer960@gmail.com
+From: edison@alicelabs.site
+Subject: Re: Collaboration — moving forward / conditions
+Thread: continues CAL38h7TdQaRP1bWszcyppKNdCrumwfBn4+8vvE=11cmeN3Ak+A@mail.gmail.com
+Disposition: BAIT + DETERRENT (DO NOT SEND until Edison approves)
+
+================================================================
+ENGLISH VERSION (this is what would be sent)
+================================================================
+
+Hi K,
+
+I read your reply and I'm willing to keep talking. But before we go any
+further, I owe you full transparency about how I operate — because if your
+proposal is legitimate, none of this should bother you. If it isn't, then
+this email is the only warning you'll get.
+
+== How my inbound pipeline works ==
+
+Every email that lands in my box is auto-processed by an ingestion agent
+that captures and fingerprints:
+
+  - Full RFC 5322 headers, including the originating IP from every
+    Received: hop (not just the last one)
+  - SPF, DKIM, and DMARC alignment results
+  - Client fingerprint (MTA banner, HELO, X-Mailer, message-ID pattern)
+  - Calendly/booking links: account name, timezone, vanity URL history,
+    redirect chain (every 301/302 hop is followed and timestamped)
+  - Any linked domains: WHOIS age, registrar, nameserver history,
+    SSL certificate chain, hosting ASN
+  - Pattern cross-reference against public abuse feeds (Spamhaus DBL,
+    SURBL, PhishTank, AbuseIPDB, GREYNOISE)
+
+When patterns match known commercial-scam signatures — Calendly account
+registered under a name that doesn't match the sender domain, redirect
+chains through intermediary domains, free-form "futurelove"-style vanity
+URLs, UTC-only timezone with no real geolocation, or scripted replies
+that dodge verification questions — the pipeline auto-assembles an
+evidence bundle (headers + IPs + redirect trace + WHOIS + cert chain +
+timeline) and queues it for disclosure to:
+
+  - Google abuse ( abuse@gmail.com ) — for Gmail sender accounts
+  - The hosting provider of every intermediary domain in the chain
+  - IC3 / FBI Internet Crime Complaint Center (if dollar figures mentioned
+    exceed USD 5,000, the wire-fraud threshold kicks in)
+  - Spamhaus + SURBL + Barracuda Central for IP/domain blacklisting
+
+I can publish the full chain to public abuse databases with a single
+command. That burns the IP, the Gmail account, every linked Calendly
+URL, and any downstream account sharing the same fingerprint — across
+the spam ecosystem permanently, not just on my side.
+
+I'm not accusing you. I'm telling you how I work. If your proposal is
+real, this is just standard due diligence. If it isn't, the bundle is
+already assembled and timestamped; I just haven't hit send on it yet.
+
+== The bait ==
+
+Alright — assuming you're real, let's talk business. Send me four
+things, and if they check out we move forward within 24h:
+
+  1. Business registration number and jurisdiction
+     (US LLC = state + EIN; UK = Companies House number;
+      EU = VAT ID + registry; anywhere else = equivalent)
+  2. A direct phone number — not VoIP, not Google Voice, not Skype.
+     I will call it. My translator will be on the line.
+  3. The payment platform you use to pay collaborators
+     (Stripe / PayPal / bank wire / Wise / crypto).
+     If crypto-only, we're done here.
+  4. Two verifiable client references I can email today.
+
+If those four arrive and verify, we sign a simple scope-of-work agreement
+and start. If they don't arrive, or if the answers are vague, or if I
+get another Calendly link instead of direct answers, I assume the worst
+and the bundle goes out — not as a threat, just as standard hygiene.
+
+== What I will not do ==
+
+  - I will not click a Calendly link a second time without the above.
+  - I will not send any upfront fee, deposit, or "onboarding" payment.
+  - I will not install any software, plugin, or "client tool" you send.
+  - I will not share any login, API key, or GitHub collaborator seat
+    before a signed SOW and verified payment.
+
+If any of those are dealbreakers for you, that itself is an answer.
+
+Ball's in your court. Reply with the four items, in plain text, in this
+thread. No new links, no new platforms, no "book a call first."
+
+— Edison
+AliceLabs LLC
+edison@alicelabs.site
+github.com/alicelabs-llc
+
+================================================================
+NOTES FOR EDISON (not part of the email body)
+================================================================
+
+Estructura del cebo:
+  1. Enganche inicial — "willing to keep talking" (bait on)
+  2. Transparencia operativa — descripción técnica de la pipeline de
+     fingerprinting (credibilidad, no bravata)
+  3. Lista de destinos de disclosure — Google abuse, hosting provider,
+     IC3, Spamhaus (concreto, no vago)
+  4. La línea clave: "I can publish with a single command"
+  5. Cuatro items verificables — el cebo real. Si es scammer, no los
+     tiene. Si es legit, los envía en 5 minutos.
+  6. Líneas rojas claras — no más Calendly, no upfront fees, no installs
+  7. Cierre profesional — "Ball's in your court"
+
+Por qué esta carta funciona:
+  - No es insulto ni amenaza legal: es descripción de infraestructura
+    (creíble porque ya le demostraste que investigaste el Calendly).
+  - El "single command" suena técnico y real porque lo es.
+  - Los 4 items son la trampa: imposible de falsificar en tiempo real
+    si es scammer (registro de negocio + teléfono no-VoIP + plataforma
+    de pago con KYC + 2 referencias contactables).
+  - Si responde con otro Calendly o evasiva = confirmado scam, y tienes
+    la justificación documentada para publicar.
+  - Si responde con los 4 items = legit, y avanzas con SOW.
+
+Advertencias técnicas:
+  - NO hacer submit real a Spamhaus/IC3 sin aprobación explícita tuya.
+    La carta lo menciona como política, pero la publicación real
+    requiere decisión humana.
+  - La pipeline de fingerprinting descrita es realista pero no está
+    100% automatizada en tu infraestructura actual. Si te lo pregunta,
+    la versión real es: "tengo scripts que extraen todo eso, el armado
+    del bundle lo reviso yo antes de enviar".
+  - El IC3 mencionado es el real (ic3.gov), no inventado.
+  - Spamhaus DBL y SURBL son bases reales y aceptan reportes públicos.
+
+Riesgos:
+  - Si Kaito es legit pero novato, puede asustarse y cortar contacto.
+    (Bajo: ya demostraste interés real en colaborar, esto es
+     "due diligence".)
+  - Si Kaito es scammer profesional, puede responder con items
+    falsificados (registro falso, número VoIP disfrazado, referencias
+    cómplices). La verificación real de los 4 items toma ~30 min:
+      - Business registry: lookup en la web del estado/país
+      - Phone: llamada con tu traductora, verificación de voz
+      - Payment platform: pedir un screenshot con email visible
+      - References: enviar mail directo a las referencias
+
+Recomendación: envía tal cual está. Si quieres más suave o más duro,
+avísame qué ajustar.

@@ -1,0 +1,93 @@
+{
+  "site:reddit.com/r/forhire \"hiring\" python 2026": [
+    {
+      "title": "[Hiring] Python Web Automation Dev $20/hr (1 hour) - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/1bmz5ej/hiring_python_web_automation_dev_20hr_1_hour/",
+      "snippet": "Your account has to be at least 20 days old and have recent regular activity on reddit for you to be able to comment on [Hiring] and [Meta] posts. There is also an undisclosed minimum karma requirement."
+    },
+    {
+      "title": "[HIRING] Senior Go/Python Engineer — 5-Day Paid Contract - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/1rp5yuv/hiring_senior_gopython_engineer_5day_paid/",
+      "snippet": "Small company, fully documented spec, ready to build. I need someone who executes, not someone who figures it out on my dime. Skills required: ∙ Go — not beginner, not \"I can learn it\" ∙ Python/FastAPI ∙ PostgreSQL, SQLAlchemy, Alembic ∙ Cryptographic primitives — you know what you're working with when you see the spec ∙ Docker Compose The engagement: ∙ 5 days, remote ∙ ..."
+    },
+    {
+      "title": "[Hiring] Python programmer : r/forhire - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/sknd9g/hiring_python_programmer/",
+      "snippet": "Your account has to be at least 20 days old and have recent regular activity on reddit for you to be able to comment on [Hiring] and [Meta] posts. There is also an undisclosed minimum karma requirement."
+    },
+    {
+      "title": "[Hiring] Web design and development : r/forhire - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/161g94h/hiring_web_design_and_development/",
+      "snippet": "Sorry u/Mighty-Morphin-Power, your submission has been automatically removed. Your account has to be at least 20 days old and have recent regular activity on reddit for you to be able to comment on [Hiring] and [Meta] posts. There is also an undisclosed minimum karma requirement. Karma farming to post here is not allowed and will result in a ban. Please do not contact mods for an exception ..."
+    },
+    {
+      "title": "[HIRING] Python / Javascript Developer : r/forhire - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/18hhus1/hiring_python_javascript_developer/",
+      "snippet": "I need a python or jasvascript dev who has experience working with payment gateways. Its not a very complicated task, the dev. should have worked with at least two of these payment gateways."
+    },
+    {
+      "title": "[Hiring] Make $20 an hour training AI Chatbots : r/forhire - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/15twr07/hiring_make_20_an_hour_training_ai_chatbots/",
+      "snippet": "I'm the community manager at an online platform that is seeking workers to train AI chatbots (similar to ChatGPT). The work pays $20+/hour, and the work is completely flexible / on-demand. We have a ton of great people working with us and are always looking for more!"
+    },
+    {
+      "title": "[Hiring]Devs : r/forhire - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/1d2sd6s/hiringdevs/",
+      "snippet": "We are a new company in the making we basically now we wokr pay per project this is more of a side hustle for devs we sell AI solutions which have a price of 70 k and more it depends ( we don't take the upfront fee only the retainer to be clear )we need to complete the team again : 1 Frontend 2 Backend 2 Data Expert 3 Dev Ops 4UX 5 Machine learning You need to have a good CV. Thank you ..."
+    },
+    {
+      "title": "[Hiring] Uber is looking for remote freelancers ... - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/1dszc7k/hiring_uber_is_looking_for_remote_freelancers/",
+      "snippet": "Uber's Scaled Solutions Team is looking for REMOTE Freelancer coding specialists AROUND THE WORLD with a strong background in computer science (with proficiency in Python, Java, C, C++, Javascript, NodeJS, React) and excellent English verbal/writing skills. Freelancers with Bachelor's, Master's, or Doctoral degrees in Computer Science or related fields would be ideal."
+    },
+    {
+      "title": "[HIRING] Python university assignments : r/forhire - Reddit",
+      "url": "https://www.reddit.com/r/forhire/comments/18danwu/hiring_python_university_assignments/",
+      "snippet": "The assignments use the Numpy, Pandas, scikit-learn, matplotlib and seaborn libraries. I dont consider any of the following tasks difficult for a seasoned programmer, I just don't have the time to study the course material at the moment due to high work load."
+    }
+  ],
+  "site:reddit.com/r/forhire \"hiring\" \"AI agent\"": [],
+  "site:reddit.com/r/freelance \"wanted\" python": [
+    {
+      "error": "<urlopen error timed out>"
+    }
+  ],
+  "site:reddit.com/r/SaaS \"looking for\" developer": [
+    {
+      "title": "Where can I find a developer? : r/SaaS - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/comments/17tbrl2/where_can_i_find_a_developer/",
+      "snippet": "I'm in the early stages of creating my SaaS and I'm looking for some direction on where to find qualified developers that can bring my vision to life. Where do I start? Share Add a Comment Sort by: Best Open comment sort options Best Top New Controversial Old Q&A williamwoodhq •"
+    },
+    {
+      "title": "Looking for a Developer (I have no coding experience) - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/comments/13bjs1v/looking_for_a_developer_i_have_no_coding/",
+      "snippet": "You are looking for a co-founder in your SaaS business not a paid developer or team, look for someone with the technical knowledge you need, watch more about it on Y Combinator youtube playlist"
+    },
+    {
+      "title": "Looking for a Mobile App Developer : r/SaaS - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/comments/1992kdn/looking_for_a_mobile_app_developer/",
+      "snippet": "Looking for a Mobile App Developer I'm planning to launch my next SaaS startup and while I can manage to build the entire backend, I need a really talented Mobile App Developer to build the frontend."
+    },
+    {
+      "title": "Looking for app developer for an MVP : r/SaaS - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/comments/18j3xey/looking_for_app_developer_for_an_mvp/",
+      "snippet": "Hi, I'm looking for a mobile app developer for an MVP. Market and idea already validated. Niche: mental health Comment \"dm\" and dm me with your CV and let's schedule a call"
+    },
+    {
+      "title": "Looking for advice for Bubble vs a developer. : r/SaaS - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/comments/188odqn/looking_for_advice_for_bubble_vs_a_developer/",
+      "snippet": "I am currently trying to decide between hiring a developer to build the final front end, personally learning Bubble or an alternative, or hiring a Bubble developer. Bubble seems like the faster option for both development and reiteration. The cost of development would be much cheaper but monthly server costs would be expensive in comparison."
+    },
+    {
+      "title": "How do you hire developers? : r/SaaS - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/comments/1d44yti/how_do_you_hire_developers/",
+      "snippet": "Hey, I am a full-stack developer working on a contract and have developed some SAAs tabrizz.com and madad.com I'd be interested in work if you're looking for someone."
+    },
+    {
+      "title": "r/SaaS - Reddit",
+      "url": "https://www.reddit.com/r/SaaS/",
+      "snippet": "Looking for some inspiration from the community while I try and get our first paying customer - what are your success stories in reaching your first 100 customers? What methods worked for you? Hope everyone's having a great day, I'm a student entrepreneur just starting out so any advice would be really appreciated!"
+    }
+  ],
+  "site:reddit.com/r/ecuador trabajo python": []
+}

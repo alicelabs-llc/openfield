@@ -1,0 +1,35 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] fix: include emoji reactions in channel history (#47)
+
+When fetching channel history, emoji reactions were missing on
+retrieved messages (live messages worked fine). The history fetch
+path was using `messages` endpoint without the `with_reactions`
+query parameter.
+
+Closes #47.
+
+---
+ slidcord/discord/channel.py | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/slidcord/discord/channel.py b/slidcord/discord/channel.py
+index 1111111..2222222 100644
+--- a/slidcord/discord/channel.py
++++ b/slidcord/discord/channel.py
+@@ -234,7 +234,11 @@ async def fetch_history(self, limit: int = 50, before: Optional[str] = None):
+             params["before"] = before
+         if limit:
+             params["limit"] = limit
+-        msgs = await self.discord.request_json("GET", f"/channels/{self.discord_id}/messages", params=params)
++        msgs = await self.discord.request_json(
++            "GET",
++            f"/channels/{self.discord_id}/messages",
++            params={**params, "with_reactions": True},
++        )
+         for msg in msgs:
+             reactions = msg.get("reactions", [])
+             # Map reaction data to the same shape as live messages
+-- 
+2.39.3 (Apple Git-128)

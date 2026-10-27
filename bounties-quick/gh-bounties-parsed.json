@@ -1,0 +1,279 @@
+[
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13602",
+    "title": "feat(payments): enforce strict createPaymentSchema and input bounds validation (#13601)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T21:03:27Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13600",
+    "title": "feat(proposals): enforce strict createProposalSchema and ZodError HTTP 400 envelope (#13599)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T18:23:38Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13598",
+    "title": "feat(jobs): add PATCH /api/jobs/:id/status endpoint for explicit job lifecycle transitions (#13597)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T18:01:58Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13596",
+    "title": "fix(auth): require fullName in registration to match User model (#13595)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T17:58:16Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13594",
+    "title": "fix(api): generate collision-resistant server-owned payment IDs in paymentService (#13593)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T17:56:38Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13592",
+    "title": "fix(api): return HTTP 400 JSON envelope for malformed JSON request bodies (#13591)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T17:55:22Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13590",
+    "title": "fix(api): return JSON envelope for rate-limit 429 responses (#13589)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T17:54:20Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13588",
+    "title": "fix(config): resolve TODO and implement Prisma PostgreSQL connection lifecycle in db.js (#13587)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T17:19:43Z"
+  },
+  {
+    "repo": "SecureBananaLabs/bug-bounty",
+    "url": "https://github.com/SecureBananaLabs/bug-bounty/pull/13586",
+    "title": "feat(utils): implement prototype-safe fault-tolerant JSON parser safeJsonParse (#13585)",
+    "state": "open",
+    "bounty_max": 800,
+    "all_amounts": [
+      800
+    ],
+    "created_at": "2026-10-23T17:18:23Z"
+  },
+  {
+    "repo": "oll4com/spaceapp",
+    "url": "https://github.com/oll4com/spaceapp/pull/278",
+    "title": "feat(dev-stack): orchestrate local stack from source with pinned compose templates (#65)",
+    "state": "open",
+    "bounty_max": 450,
+    "all_amounts": [
+      450
+    ],
+    "created_at": "2026-10-23T19:08:10Z"
+  },
+  {
+    "repo": "oll4com/spaceapp",
+    "url": "https://github.com/oll4com/spaceapp/pull/280",
+    "title": "test(worker): run every Temporal workflow in a real time-skipping sandbox and gate replay determinism (#60)",
+    "state": "open",
+    "bounty_max": 400,
+    "all_amounts": [
+      400
+    ],
+    "created_at": "2026-10-23T20:30:35Z"
+  },
+  {
+    "repo": "rc0/mairix",
+    "url": "https://github.com/rc0/mairix/pull/50",
+    "title": "fix: resolve #29 - Non-ASCII queries (UTF-8)?",
+    "state": "open",
+    "bounty_max": 150,
+    "all_amounts": [
+      150
+    ],
+    "created_at": "2026-10-23T23:01:54Z"
+  },
+  {
+    "repo": "hifriendbot/agentwallet-mcp",
+    "url": "https://github.com/hifriendbot/agentwallet-mcp/issues/20",
+    "title": "Bounty payout status \u2014 Medium report credited 2026-10-14 (mgal.ghifari04)",
+    "state": "open",
+    "bounty_max": 150,
+    "all_amounts": [
+      150
+    ],
+    "created_at": "2026-10-23T18:37:42Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4080",
+    "title": "[Bounty] \ud83d\udccb 2 open bounties right now",
+    "state": "open",
+    "bounty_max": 150,
+    "all_amounts": [
+      150,
+      50
+    ],
+    "created_at": "2026-10-22T20:02:23Z"
+  },
+  {
+    "repo": "habibdxb01/bounty-watcher",
+    "url": "https://github.com/habibdxb01/bounty-watcher/issues/8",
+    "title": "\ud83d\udccb 2 open bounties right now",
+    "state": "open",
+    "bounty_max": 150,
+    "all_amounts": [
+      150,
+      50
+    ],
+    "created_at": "2026-10-22T15:00:27Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4107",
+    "title": "[Bounty] USDC-quoted pairs not having the correct marketcap displayed in tools",
+    "state": "open",
+    "bounty_max": 100,
+    "all_amounts": [
+      100
+    ],
+    "created_at": "2026-10-23T20:20:52Z"
+  },
+  {
+    "repo": "blake-guthrie/GLASS",
+    "url": "https://github.com/blake-guthrie/GLASS/issues/1",
+    "title": "USDC-quoted pairs not having the correct marketcap displayed in tools",
+    "state": "open",
+    "bounty_max": 100,
+    "all_amounts": [
+      100
+    ],
+    "created_at": "2026-10-23T19:03:20Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4104",
+    "title": "feat(shell): add ShellDriverSh fallback to /bin/sh when SHELL not set (#1895)",
+    "state": "open",
+    "bounty_max": 75,
+    "all_amounts": [
+      75
+    ],
+    "created_at": "2026-10-23T18:15:02Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4103",
+    "title": "feat(examples): recovery flow for post-burn failures in wallet demo (#1902)",
+    "state": "open",
+    "bounty_max": 75,
+    "all_amounts": [
+      75
+    ],
+    "created_at": "2026-10-23T18:10:46Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4102",
+    "title": "feat(website): improve landing page accessibility and motion handling (#1900)",
+    "state": "open",
+    "bounty_max": 75,
+    "all_amounts": [
+      75
+    ],
+    "created_at": "2026-10-23T18:07:22Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4101",
+    "title": "chore(smoke): harden testnet-smoke with retries, exit codes, and step summary (#1898)",
+    "state": "open",
+    "bounty_max": 60,
+    "all_amounts": [
+      60
+    ],
+    "created_at": "2026-10-23T18:05:09Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4100",
+    "title": "docs: add comprehensive failure modes and recovery guide (#1899)",
+    "state": "open",
+    "bounty_max": 60,
+    "all_amounts": [
+      60
+    ],
+    "created_at": "2026-10-23T18:03:30Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4106",
+    "title": "docs: fix typo in README from Welcom to Welcome (#4061)",
+    "state": "open",
+    "bounty_max": 50,
+    "all_amounts": [
+      50
+    ],
+    "created_at": "2026-10-23T18:19:59Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/pull/4105",
+    "title": "test(base): cover String/CString API and fix pop_front (#4081)",
+    "state": "open",
+    "bounty_max": 50,
+    "all_amounts": [
+      50
+    ],
+    "created_at": "2026-10-23T18:18:11Z"
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4081",
+    "title": "[Bounty] \u0417\u0430\u0434\u0430\u0447\u0430: \u0414\u043e\u043f\u0438\u0441\u0430\u0442\u044c \u0442\u0435\u0441\u0442\u044b",
+    "state": "open",
+    "bounty_max": 50,
+    "all_amounts": [
+      50
+    ],
+    "created_at": "2026-10-22T23:17:32Z"
+  }
+]

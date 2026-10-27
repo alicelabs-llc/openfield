@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <?xml-stylesheet type="text/xsl" href="https://www.freelancer.com/content/rss.xsl" ?>
+            <rss version="2.0" xmlns:coop="http://www.google.com/coop/namespace">
+                <channel>
+                    <title>Freelancer - New Projects filtered by Keyword</title>
+                    <link>https://www.freelancer.com/</link>
+                    <description>Latest projects filtered by Keyword published at Freelancer.</description>
+                    <language>en-us</language>
+                    <pubDate>Fri, 23 Oct 2026 19:01:25 -0400</pubDate>
+                    <lastBuildDate>Fri, 23 Oct 2026 19:01:25 -0400</lastBuildDate>
+                    <docs>http://feedvalidator.org/docs/rss2.html</docs>
+                    <generator>Freelancer Generator 1.0</generator>
+                    <managingEditor>webmaster@freelancer.com</managingEditor>
+                    <webMaster>webmaster@freelancer.com</webMaster>
+                    <copyright>Copyright 2004-2026, Freelancer</copyright>
+                    <image>
+                        <url>https://www.freelancer.com/img/freelancercom.jpg</url>
+                        <title>Freelancer</title>
+                        <link>https://www.freelancer.com</link>
+                    </image>
+                    
+            <item>
+                <title><![CDATA[App Prediction Bot Development]]></title>
+                <link>https://www.freelancer.com/projects/machine-learning/App-Prediction-Bot-Development.html</link>
+                <description><![CDATA[I need a self-contained prediction bot that plugs straight into my existing mobile app and delivers accurate forecasts in real time. The core job is to design the model, build the backend service, and... (Budget: $250 - $750 AUD, Jobs: API Development, Docker, FastAPI, JavaScript, Machine Learning (ML), Mobile App Development, Node.js, Python)]]></description>
+                <pubDate>Fri, 23 Oct 2026 16:19:43 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40783611</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[API Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[JavaScript]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Machine Learning (ML)]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Mobile App Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<coop:keyword><![CDATA[API Development]]></coop:keyword>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[JavaScript]]></coop:keyword>
+<coop:keyword><![CDATA[Machine Learning (ML)]]></coop:keyword>
+<coop:keyword><![CDATA[Mobile App Development]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[need mobile app development]]></coop:keyword>
+<coop:keyword><![CDATA[i have an android application i need a guy who can develop the iphone app]]></coop:keyword>
+<coop:keyword><![CDATA[i have created an app where you can sell stuff and chat directly with the seller i need a logo for this app to be used on the ap]]></coop:keyword>
+<coop:keyword><![CDATA[i need 1 mobile app]]></coop:keyword>
+<coop:keyword><![CDATA[i need a 3d animated logo of 3d animations game design and development]]></coop:keyword>
+<coop:keyword><![CDATA[i need a android game app built]]></coop:keyword>
+<coop:keyword><![CDATA[i need a business development manager for web development project]]></coop:keyword>
+<coop:keyword><![CDATA[i need a business development profesional in perth]]></coop:keyword>
+<coop:keyword><![CDATA[i need a cheap app developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need a christmas and new year ecard for my prague czech republic based travel business the text needs to be editable i will ne]]></coop:keyword>
+<coop:keyword><![CDATA[i need a chrome app developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need a coder for a app demo]]></coop:keyword>
+<coop:keyword><![CDATA[i need a developer who can help me develop my app]]></coop:keyword>
+<coop:keyword><![CDATA[i need a logo designed hero carrying girl (not much detail here) with two words below with a little design in the text]]></coop:keyword>
+<coop:keyword><![CDATA[i need someone in malaysia to download a malaysian only app and document its interface for me]]></coop:keyword>
+<coop:keyword><![CDATA[i need you to fill in a spreadsheet with data its an easy task to enter the data in excel sheet]]></coop:keyword>
+<coop:keyword><![CDATA[looking for a developer to to further develop an existing mobile app west beach]]></coop:keyword>
+<coop:keyword><![CDATA[I need a logo for a site where you can sell FUT (FIFA Ultimate Team) accounts. The name of the site is Sell FUT Accounts.]]></coop:keyword>
+<coop:keyword><![CDATA[I need a banner for our health supplement website which sells vitamins, herbs and health products. The current website is at pur]]></coop:keyword>
+<coop:keyword><![CDATA[I need a website, android &amp; iphone app to be build. Wireframe is already made.  It needs design and development. CMS preference ]]></coop:keyword>
+<coop:keyword>project 40783611</coop:keyword>
+<coop:keyword><![CDATA[App Prediction Bot Development]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Build Historical Market Data API]]></title>
+                <link>https://www.freelancer.com/projects/fastapi/Build-Historical-Market-Data-API.html</link>
+                <description><![CDATA[## Python Backend Developer Needed: Historical Market Data API (FastAPI, WebSockets, Parquet)  We are looking for an experienced **Python backend developer** to build a production-ready historical market-data API for a commercial  platform... (Budget: $750 - $1500 USD, Jobs: API Development, Docker, FastAPI, MySQL, PostgreSQL, Python, REST API, Software Architecture)]]></description>
+                <pubDate>Fri, 23 Oct 2026 16:00:30 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40783590</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[API Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[MySQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PostgreSQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[REST API]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Software Architecture]]></category>
+<coop:keyword><![CDATA[API Development]]></coop:keyword>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[MySQL]]></coop:keyword>
+<coop:keyword><![CDATA[PostgreSQL]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[REST API]]></coop:keyword>
+<coop:keyword><![CDATA[Software Architecture]]></coop:keyword>
+<coop:keyword><![CDATA[stock market live data api asx]]></coop:keyword>
+<coop:keyword><![CDATA[looking experienced joomla developer good feedbacks cleaning website]]></coop:keyword>
+<coop:keyword><![CDATA[free stock market data api]]></coop:keyword>
+<coop:keyword><![CDATA[yahoo financial data api market summary]]></coop:keyword>
+<coop:keyword><![CDATA[stock market data api]]></coop:keyword>
+<coop:keyword><![CDATA[looking experienced typo3 developer]]></coop:keyword>
+<coop:keyword><![CDATA[experienced web developer needed build site]]></coop:keyword>
+<coop:keyword><![CDATA[facebook api developer needed]]></coop:keyword>
+<coop:keyword><![CDATA[google market data api]]></coop:keyword>
+<coop:keyword><![CDATA[api developer needed]]></coop:keyword>
+<coop:keyword><![CDATA[google market data api java]]></coop:keyword>
+<coop:keyword><![CDATA[mcx live market data api]]></coop:keyword>
+<coop:keyword><![CDATA[we looking for business developer]]></coop:keyword>
+<coop:keyword><![CDATA[cryptocurrency historical data api]]></coop:keyword>
+<coop:keyword><![CDATA[coinmarketcap historical data api]]></coop:keyword>
+<coop:keyword><![CDATA[nse historical data api]]></coop:keyword>
+<coop:keyword><![CDATA[historical traffic data api]]></coop:keyword>
+<coop:keyword><![CDATA[market data api]]></coop:keyword>
+<coop:keyword><![CDATA[historical weather data api]]></coop:keyword>
+<coop:keyword><![CDATA[google finance historical data api]]></coop:keyword>
+<coop:keyword>project 40783590</coop:keyword>
+<coop:keyword><![CDATA[Build Historical Market Data API]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Build White-Label CPaaS Platform]]></title>
+                <link>https://www.freelancer.com/projects/full-stack-development/Build-White-Label-CPaaS-Platform.html</link>
+                <description><![CDATA[Job Title:  Full-Stack Developer Required to Build a Custom White-Label CPaaS Platform (SMS, Meta WhatsApp, Voice Call, RCS)  Project Description:  We are a registered Telemarketer (TM) looking for an... (Budget: ₹75000 - ₹150000 INR, Jobs: Android, API Development, Full Stack Development, Java, Node.js, PHP, React.js, Software Architecture)]]></description>
+                <pubDate>Fri, 23 Oct 2026 15:39:07 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40783566</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Android]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[API Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Full Stack Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Java]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PHP]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[React.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Software Architecture]]></category>
+<coop:keyword><![CDATA[Android]]></coop:keyword>
+<coop:keyword><![CDATA[API Development]]></coop:keyword>
+<coop:keyword><![CDATA[Full Stack Development]]></coop:keyword>
+<coop:keyword><![CDATA[Java]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[PHP]]></coop:keyword>
+<coop:keyword><![CDATA[React.js]]></coop:keyword>
+<coop:keyword><![CDATA[Software Architecture]]></coop:keyword>
+<coop:keyword><![CDATA[build white label website]]></coop:keyword>
+<coop:keyword><![CDATA[white label ppc platform]]></coop:keyword>
+<coop:keyword><![CDATA[create white label deal platform]]></coop:keyword>
+<coop:keyword><![CDATA[build white label travel website]]></coop:keyword>
+<coop:keyword><![CDATA[white label influencer platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label vod platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label beacon platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label classifieds platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label classified platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label geofencing platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label telemedicine platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label ibeacon platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label lending platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label advertising platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label crowdfunding platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label tracking platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label marketplace platform]]></coop:keyword>
+<coop:keyword><![CDATA[white label ecommerce platform]]></coop:keyword>
+<coop:keyword><![CDATA[full stack developer required skills]]></coop:keyword>
+<coop:keyword>project 40783566</coop:keyword>
+<coop:keyword><![CDATA[Build White-Label CPaaS Platform]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Senior Python AI Engineer for Football team Mobile App]]></title>
+                <link>https://www.freelancer.com/projects/fastapi/Senior-Python-Engineer-for-Football.html</link>
+                <description><![CDATA[## Project Overview  We’re looking for an experienced **Senior Python Full Stack Engineer with AI integration experience** to help build a modern mobile application for a professional football team.  The... (Budget: $250 - $750 USD, Jobs: Azure, CI/CD, Docker, FastAPI, Flask, Java, Node.js, Python, React.js, REST API)]]></description>
+                <pubDate>Fri, 23 Oct 2026 13:38:40 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40783426</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Azure]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[CI/CD]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Flask]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Java]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[React.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[REST API]]></category>
+<coop:keyword><![CDATA[Azure]]></coop:keyword>
+<coop:keyword><![CDATA[CI/CD]]></coop:keyword>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Flask]]></coop:keyword>
+<coop:keyword><![CDATA[Java]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[React.js]]></coop:keyword>
+<coop:keyword><![CDATA[REST API]]></coop:keyword>
+<coop:keyword><![CDATA[football team management sql project]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project proposal writing]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project resource hours]]></coop:keyword>
+<coop:keyword><![CDATA[html mobile app project]]></coop:keyword>
+<coop:keyword><![CDATA[voip mobile app project]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project timeline]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project development excel]]></coop:keyword>
+<coop:keyword><![CDATA[html5 mobile app project]]></coop:keyword>
+<coop:keyword><![CDATA[Mobile App project management]]></coop:keyword>
+<coop:keyword><![CDATA[titanium mobile app project]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project]]></coop:keyword>
+<coop:keyword><![CDATA[create a football team logo app android]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project plan example]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project description]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project manager job description]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app development overview]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project plan]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project manager salary]]></coop:keyword>
+<coop:keyword><![CDATA[mobile app project name]]></coop:keyword>
+<coop:keyword>project 40783426</coop:keyword>
+<coop:keyword><![CDATA[Senior Python AI Engineer for Football team Mobile App]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[React &amp; Python Business Dashboard]]></title>
+                <link>https://www.freelancer.com/projects/postgresql/React-Python-Business-Dashboard.html</link>
+                <description><![CDATA[I need a full-stack web app built with React JS on the front end and Python on the back end that works seamlessly as both an internal website and a responsive PWA. The goal is a unified business dashboard that lets me oversee every operational area without bouncing between different tools... (Budget: ₹12500 - ₹37500 INR, Jobs: AngularJS, API Development, Chart.js, Django, Docker, FastAPI, Full Stack Development, JavaScript, PostgreSQL, Python)]]></description>
+                <pubDate>Fri, 23 Oct 2026 02:40:49 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40782543</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[AngularJS]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[API Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Chart.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Django]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Full Stack Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[JavaScript]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PostgreSQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<coop:keyword><![CDATA[AngularJS]]></coop:keyword>
+<coop:keyword><![CDATA[API Development]]></coop:keyword>
+<coop:keyword><![CDATA[Chart.js]]></coop:keyword>
+<coop:keyword><![CDATA[Django]]></coop:keyword>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Full Stack Development]]></coop:keyword>
+<coop:keyword><![CDATA[JavaScript]]></coop:keyword>
+<coop:keyword><![CDATA[PostgreSQL]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[design a simple logo for namecard and letterhead my company is in the financial advisory business so i need something that is :]]></coop:keyword>
+<coop:keyword><![CDATA[design a simple logo for namecard and letterhead my company is in the financial advisory business so i need something that is]]></coop:keyword>
+<coop:keyword><![CDATA[do i need a web developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need 1 mobile app]]></coop:keyword>
+<coop:keyword><![CDATA[i need 1000 wordpress sites built]]></coop:keyword>
+<coop:keyword><![CDATA[i need a character that has him caracteriscas counter-strike player plays with the awp weapon use of green razer headset  a keyb]]></coop:keyword>
+<coop:keyword><![CDATA[i need a cheap app developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need a chrome app developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need a web design for an online store that basically specialises in the sales of agricultural products such as poultry product]]></coop:keyword>
+<coop:keyword><![CDATA[im syarting a small business do i need a graphic designer for logo]]></coop:keyword>
+<coop:keyword><![CDATA[i have a business idea but need a web designer]]></coop:keyword>
+<coop:keyword><![CDATA[i have small business and i need accountant to come and audit]]></coop:keyword>
+<coop:keyword><![CDATA[i have two million i need to start business so i need advice]]></coop:keyword>
+<coop:keyword><![CDATA[business card I need a business card designed. Front and back in full color.  We are a roofing &amp; exteriors company. The business]]></coop:keyword>
+<coop:keyword><![CDATA[I need a web developer to build a business review website]]></coop:keyword>
+<coop:keyword><![CDATA[small business do i need a website]]></coop:keyword>
+<coop:keyword><![CDATA[i need a mobile app for my business]]></coop:keyword>
+<coop:keyword><![CDATA[i need a web page for my business]]></coop:keyword>
+<coop:keyword><![CDATA[small business do i need a cpa]]></coop:keyword>
+<coop:keyword><![CDATA[do i need a web app]]></coop:keyword>
+<coop:keyword>project 40782543</coop:keyword>
+<coop:keyword><![CDATA[React &amp; Python Business Dashboard]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[FORGEAI &ndash; Complete Existing MVP of an Engineering Decision Intelligence Platform (Next.js + FastAPI)]]></title>
+                <link>https://www.freelancer.com/projects/ui-design/FORGEAI-Complete-Existing-MVP.html</link>
+                <description><![CDATA[# Project Overview  I am building **FORGEAI – Engineering Decision Intelligence (EDI)**, a B2B software platform designed to improve engineering workflow verification, quality control, evidence traceability, and work-package readiness in industrial infrastructure projects... (Budget: ₹1500 - ₹12500 INR, Jobs: Android, API Integration, App Design, Data Visualization, Flutter, Google Firebase, JavaScript, Mobile App Development, React Native, UI / User Interface)]]></description>
+                <pubDate>Thu, 22 Oct 2026 19:58:32 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40782067</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Android]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[API Integration]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[App Design]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Data Visualization]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Flutter]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Google Firebase]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[JavaScript]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Mobile App Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[React Native]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[UI / User Interface]]></category>
+<coop:keyword><![CDATA[Android]]></coop:keyword>
+<coop:keyword><![CDATA[API Integration]]></coop:keyword>
+<coop:keyword><![CDATA[App Design]]></coop:keyword>
+<coop:keyword><![CDATA[Data Visualization]]></coop:keyword>
+<coop:keyword><![CDATA[Flutter]]></coop:keyword>
+<coop:keyword><![CDATA[Google Firebase]]></coop:keyword>
+<coop:keyword><![CDATA[JavaScript]]></coop:keyword>
+<coop:keyword><![CDATA[Mobile App Development]]></coop:keyword>
+<coop:keyword><![CDATA[React Native]]></coop:keyword>
+<coop:keyword><![CDATA[UI / User Interface]]></coop:keyword>
+<coop:keyword><![CDATA[complete existing website]]></coop:keyword>
+<coop:keyword><![CDATA[electronic engineering artificial intelligence freelance india]]></coop:keyword>
+<coop:keyword><![CDATA[i am looking for an inturnship for mechanical engineering]]></coop:keyword>
+<coop:keyword><![CDATA[i want to find the cv of an engineering inspector]]></coop:keyword>
+<coop:keyword><![CDATA[where i can find a person to make a engineering drawing]]></coop:keyword>
+<coop:keyword><![CDATA[engineering decision matrix]]></coop:keyword>
+<coop:keyword><![CDATA[software used in civil engineering ppt]]></coop:keyword>
+<coop:keyword><![CDATA[complete modern amazon clone: angular 5 and node.js download]]></coop:keyword>
+<coop:keyword><![CDATA[sheridan software development and network engineering reddit]]></coop:keyword>
+<coop:keyword><![CDATA[software development and network engineering]]></coop:keyword>
+<coop:keyword><![CDATA[civil engineering quality control interview questions]]></coop:keyword>
+<coop:keyword><![CDATA[systems engineering artificial intelligence]]></coop:keyword>
+<coop:keyword><![CDATA[complete asp net mvc 5 and core mvc indepth with project]]></coop:keyword>
+<coop:keyword><![CDATA[ideas to improve engineering department]]></coop:keyword>
+<coop:keyword><![CDATA[how to improve engineering design quality]]></coop:keyword>
+<coop:keyword><![CDATA[how to improve engineering department]]></coop:keyword>
+<coop:keyword><![CDATA[software used in civil engineering pdf]]></coop:keyword>
+<coop:keyword><![CDATA[the complete guide to django rest framework and vue js]]></coop:keyword>
+<coop:keyword><![CDATA[add next js to existing project]]></coop:keyword>
+<coop:keyword><![CDATA[software engineering project overview]]></coop:keyword>
+<coop:keyword>project 40782067</coop:keyword>
+<coop:keyword><![CDATA[FORGEAI &ndash; Complete Existing MVP of an Engineering Decision Intelligence Platform (Next.js + FastAPI)]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Full-Stack AI Web App]]></title>
+                <link>https://www.freelancer.com/projects/full-stack-development/Full-Stack-Web-App-40780755.html</link>
+                <description><![CDATA[I need an experienced engineer who can take an AI-powered web application from concept to production. The core of the project is building a modern, scalable application that leverages machine-learning models to deliver real-time intelligence through a clean, responsive interface... (Budget: $30 - $250 USD, Jobs: Amazon Web Services, CI/CD, Docker, FastAPI, Full Stack Development, Node.js, NoSQL Couch & Mongo, Python)]]></description>
+                <pubDate>Thu, 22 Oct 2026 02:47:15 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40780755</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Amazon Web Services]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[CI/CD]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Full Stack Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[NoSQL Couch & Mongo]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<coop:keyword><![CDATA[Amazon Web Services]]></coop:keyword>
+<coop:keyword><![CDATA[CI/CD]]></coop:keyword>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Full Stack Development]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[NoSQL Couch & Mongo]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[web app development need team member asap]]></coop:keyword>
+<coop:keyword><![CDATA[i need a freelancer for web developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need an engineer to help me with the design and description for a patent]]></coop:keyword>
+<coop:keyword><![CDATA[i need distributor medicine software (web based)]]></coop:keyword>
+<coop:keyword><![CDATA[i need distributor medicine software web based]]></coop:keyword>
+<coop:keyword><![CDATA[i need to find a web designer]]></coop:keyword>
+<coop:keyword><![CDATA[i need to find a web developer for a task]]></coop:keyword>
+<coop:keyword><![CDATA[i need to get my web design]]></coop:keyword>
+<coop:keyword><![CDATA[i need to hire a web content writer in nyc]]></coop:keyword>
+<coop:keyword><![CDATA[i need to hire a web designer using cms]]></coop:keyword>
+<coop:keyword><![CDATA[what categories of freelancers i need for starting my web design studio]]></coop:keyword>
+<coop:keyword><![CDATA[i need a job as web developer]]></coop:keyword>
+<coop:keyword><![CDATA[advertisements for web app developer need]]></coop:keyword>
+<coop:keyword><![CDATA[i am a web designer i need a job]]></coop:keyword>
+<coop:keyword><![CDATA[i m a web developer i need to outsource seo]]></coop:keyword>
+<coop:keyword><![CDATA[i need a proffetional in web desining]]></coop:keyword>
+<coop:keyword><![CDATA[i need a tutor for web design]]></coop:keyword>
+<coop:keyword><![CDATA[i need codes for designing web site pdf file]]></coop:keyword>
+<coop:keyword><![CDATA[i need to ask a web developer a question]]></coop:keyword>
+<coop:keyword><![CDATA[what do i need to build a web app]]></coop:keyword>
+<coop:keyword>project 40780755</coop:keyword>
+<coop:keyword><![CDATA[Full-Stack AI Web App]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[PerfGuard AI Agent Development]]></title>
+                <link>https://www.freelancer.com/projects/ai-agents/PerfGuard-Agent-Development.html</link>
+                <description><![CDATA[Here are the full details:  What PerfGuard Agent does:  Developer opens a GitHub PR PerfGuard automatically scans the changed code AI identifies performance risks (slow queries, memory leaks, N+1 problems)... (Budget: $10 - $30 CAD, Jobs: Agentic AI, AI Agents, AI Development)]]></description>
+                <pubDate>Wed, 21 Oct 2026 14:10:30 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40779952</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Agentic AI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Agents]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Development]]></category>
+<coop:keyword><![CDATA[Agentic AI]]></coop:keyword>
+<coop:keyword><![CDATA[AI Agents]]></coop:keyword>
+<coop:keyword><![CDATA[AI Development]]></coop:keyword>
+<coop:keyword><![CDATA[what does website design and development cost]]></coop:keyword>
+<coop:keyword><![CDATA[what does a business development manager do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a business development specialist do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a business development director do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a hotel front desk agent do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a business development officer do]]></coop:keyword>
+<coop:keyword><![CDATA[what does development and peace do]]></coop:keyword>
+<coop:keyword><![CDATA[what does an insurance agent do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a sales development representative do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a client development specialist do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a clearing agent do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a freight broker agent do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a content development manager do]]></coop:keyword>
+<coop:keyword><![CDATA[what does store development mean]]></coop:keyword>
+<coop:keyword><![CDATA[what does a travel agent do]]></coop:keyword>
+<coop:keyword><![CDATA[what does an illustration agent do]]></coop:keyword>
+<coop:keyword><![CDATA[what does a modeling agent do]]></coop:keyword>
+<coop:keyword><![CDATA[the new new product development game what does it mean to create built-in instability]]></coop:keyword>
+<coop:keyword><![CDATA[what does a partner development manager do]]></coop:keyword>
+<coop:keyword><![CDATA[what does the automatic download setting automatically block outlook]]></coop:keyword>
+<coop:keyword>project 40779952</coop:keyword>
+<coop:keyword><![CDATA[PerfGuard AI Agent Development]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[AI Sentence-Level Plagiarism Tool]]></title>
+                <link>https://www.freelancer.com/projects/natural-language-processing/Sentence-Level-Plagiarism-Tool.html</link>
+                <description><![CDATA[The project is to build a web-based plagiarism checker that can ingest large documents (10,000+ words) in PDF or DOCX format, scan every sentence, highlight any matches it finds, and instantly generate an English-only rephrased version that preserves the author’s intent... (Budget: ₹12500 - ₹37500 INR, Jobs: Docker, FastAPI, Frontend Development, GPT-3, Natural Language Processing, Node.js, Python, Web Development)]]></description>
+                <pubDate>Wed, 21 Oct 2026 12:35:58 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40779813</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Frontend Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[GPT-3]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Natural Language Processing]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Web Development]]></category>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Frontend Development]]></coop:keyword>
+<coop:keyword><![CDATA[GPT-3]]></coop:keyword>
+<coop:keyword><![CDATA[Natural Language Processing]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Web Development]]></coop:keyword>
+<coop:keyword><![CDATA[project description web based application]]></coop:keyword>
+<coop:keyword><![CDATA[project report web based crm application]]></coop:keyword>
+<coop:keyword><![CDATA[build web based data entry application aspnet]]></coop:keyword>
+<coop:keyword><![CDATA[build web based data entry form]]></coop:keyword>
+<coop:keyword><![CDATA[build web based interface sip client]]></coop:keyword>
+<coop:keyword><![CDATA[build web based fleet management system]]></coop:keyword>
+<coop:keyword><![CDATA[bid job build web based pages]]></coop:keyword>
+<coop:keyword><![CDATA[build web based applications java stock chart getafreelancer]]></coop:keyword>
+<coop:keyword><![CDATA[build web based applications java stock chart getfreelancer]]></coop:keyword>
+<coop:keyword><![CDATA[build web based database inventory]]></coop:keyword>
+<coop:keyword><![CDATA[php code build web based scraper]]></coop:keyword>
+<coop:keyword><![CDATA[project build website based supplied template text]]></coop:keyword>
+<coop:keyword><![CDATA[project descriptions web based projects]]></coop:keyword>
+<coop:keyword><![CDATA[project manager web based]]></coop:keyword>
+<coop:keyword><![CDATA[project work web based shopping php]]></coop:keyword>
+<coop:keyword><![CDATA[project management web based extjs]]></coop:keyword>
+<coop:keyword><![CDATA[looking build web based rock paper scissor game]]></coop:keyword>
+<coop:keyword><![CDATA[build web based sql database inventory]]></coop:keyword>
+<coop:keyword><![CDATA[spring tool suite project build error non-resolvable parent pom]]></coop:keyword>
+<coop:keyword>project 40779813</coop:keyword>
+<coop:keyword><![CDATA[AI Sentence-Level Plagiarism Tool]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[AI Agents for School Automation]]></title>
+                <link>https://www.freelancer.com/projects/ai-agents/Agents-for-School-Automation.html</link>
+                <description><![CDATA[I’m building a cloud-based platform that lets schools and colleges hand off routine academic and administrative work to practical AI agents. The first release will centre on AI agents and, more specifically,... (Budget: ₹37500 - ₹75000 INR, Jobs: AI Agents, AI Development, Data Analysis, FastAPI, Python, Pytorch, REST API, Tensorflow)]]></description>
+                <pubDate>Wed, 21 Oct 2026 00:35:59 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40778859</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Agents]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Data Analysis]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Pytorch]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[REST API]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Tensorflow]]></category>
+<coop:keyword><![CDATA[AI Agents]]></coop:keyword>
+<coop:keyword><![CDATA[AI Development]]></coop:keyword>
+<coop:keyword><![CDATA[Data Analysis]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Pytorch]]></coop:keyword>
+<coop:keyword><![CDATA[REST API]]></coop:keyword>
+<coop:keyword><![CDATA[Tensorflow]]></coop:keyword>
+<coop:keyword><![CDATA[i`m boat traducion espa]]></coop:keyword>
+<coop:keyword><![CDATA[i`m looking designer]]></coop:keyword>
+<coop:keyword><![CDATA[i`m robot yahoo script]]></coop:keyword>
+<coop:keyword><![CDATA[hello name kids next door i`m number]]></coop:keyword>
+<coop:keyword><![CDATA[i`m using dolphin smart builder]]></coop:keyword>
+<coop:keyword><![CDATA[i`m looking php script rent villa]]></coop:keyword>
+<coop:keyword><![CDATA[i`m trying voice input flash]]></coop:keyword>
+<coop:keyword><![CDATA[school automation]]></coop:keyword>
+<coop:keyword><![CDATA[school automation system demo swf]]></coop:keyword>
+<coop:keyword><![CDATA[cloud based platform oztern]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a cloud software developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m scared of law school]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home lyrics]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home bahai]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home school daze lyrics]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home trecek-king]]></coop:keyword>
+<coop:keyword><![CDATA[how do i know if i'm eligible for traffic school california]]></coop:keyword>
+<coop:keyword><![CDATA[i'm working on a building]]></coop:keyword>
+<coop:keyword><![CDATA[i 'm going to school hani]]></coop:keyword>
+<coop:keyword>project 40778859</coop:keyword>
+<coop:keyword><![CDATA[AI Agents for School Automation]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Python GenAI Image Recognition Platform]]></title>
+                <link>https://www.freelancer.com/projects/ai-model-development/Python-GenAI-Image-Recognition-Platform.html</link>
+                <description><![CDATA[I’m building a production-ready image-recognition web app that works exclusively with photographs. The core tasks are facial recognition and general image classification; object detection could be added later, but it is not part of this first milestone... (Budget: ₹100 - ₹400 INR, Jobs: AI Model Development, JavaScript, Machine Learning (ML), Python, Pytorch, Software Architecture, Tensorflow, Web Scraping)]]></description>
+                <pubDate>Tue, 20 Oct 2026 03:04:13 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40777273</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Model Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[JavaScript]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Machine Learning (ML)]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Pytorch]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Software Architecture]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Tensorflow]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Web Scraping]]></category>
+<coop:keyword><![CDATA[AI Model Development]]></coop:keyword>
+<coop:keyword><![CDATA[JavaScript]]></coop:keyword>
+<coop:keyword><![CDATA[Machine Learning (ML)]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Pytorch]]></coop:keyword>
+<coop:keyword><![CDATA[Software Architecture]]></coop:keyword>
+<coop:keyword><![CDATA[Tensorflow]]></coop:keyword>
+<coop:keyword><![CDATA[Web Scraping]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web designer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web to answer my engineer hw]]></coop:keyword>
+<coop:keyword><![CDATA[i m a freelance researcher and need an online community platform]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for an editor on a freelance basis the work will mainly consist of editing or creating showreels final cut adobe pre]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer envato]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer job in ca]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer worcestershire]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for one web developer]]></coop:keyword>
+<coop:keyword><![CDATA[ideas for building your first web app]]></coop:keyword>
+<coop:keyword><![CDATA[what should i use to build my web app]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home lyrics]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home bahai]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home school daze lyrics]]></coop:keyword>
+<coop:keyword><![CDATA[i'm building me a home trecek-king]]></coop:keyword>
+<coop:keyword><![CDATA[what do i need to build a web app]]></coop:keyword>
+<coop:keyword><![CDATA[i'm looking for a web designer]]></coop:keyword>
+<coop:keyword><![CDATA[i want to build a web app]]></coop:keyword>
+<coop:keyword><![CDATA[what should i use to build a web app]]></coop:keyword>
+<coop:keyword><![CDATA[building a progressive web app]]></coop:keyword>
+<coop:keyword>project 40777273</coop:keyword>
+<coop:keyword><![CDATA[Python GenAI Image Recognition Platform]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Python Developer Needed: Multi-User Web Scraping &amp; Lead Generation Platform (Django, Celery, PostgreSQL) -- 2]]></title>
+                <link>https://www.freelancer.com/projects/postgresql/Python-Developer-Needed-Multi-User-40776249.html</link>
+                <description><![CDATA[Python Developer Needed: Multi-User Web Scraping &amp; Lead Generation Platform (Django, Celery, PostgreSQL)  Post: We are building a secure, multi-user web platform that collects business and recruitment data from public sources and delivers clean, ready-to-use records to each user... (Budget: $30 - $250 USD, Jobs: Celery, Django, Elasticsearch, Excel, Lead Generation, PostgreSQL, Python, Redis, SaaS Development, Web Scraping)]]></description>
+                <pubDate>Mon, 19 Oct 2026 12:46:01 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40776249</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Celery]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Django]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Elasticsearch]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Excel]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Lead Generation]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PostgreSQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Redis]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[SaaS Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Web Scraping]]></category>
+<coop:keyword><![CDATA[Celery]]></coop:keyword>
+<coop:keyword><![CDATA[Django]]></coop:keyword>
+<coop:keyword><![CDATA[Elasticsearch]]></coop:keyword>
+<coop:keyword><![CDATA[Excel]]></coop:keyword>
+<coop:keyword><![CDATA[Lead Generation]]></coop:keyword>
+<coop:keyword><![CDATA[PostgreSQL]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Redis]]></coop:keyword>
+<coop:keyword><![CDATA[SaaS Development]]></coop:keyword>
+<coop:keyword><![CDATA[Web Scraping]]></coop:keyword>
+<coop:keyword><![CDATA[multi user web builder]]></coop:keyword>
+<coop:keyword><![CDATA[multi user web site]]></coop:keyword>
+<coop:keyword><![CDATA[multi user web galleries cms]]></coop:keyword>
+<coop:keyword><![CDATA[web multi user drawing application]]></coop:keyword>
+<coop:keyword><![CDATA[php web scraping expert needed]]></coop:keyword>
+<coop:keyword><![CDATA[web based file manager multi user]]></coop:keyword>
+<coop:keyword><![CDATA[multi user web based drawing app]]></coop:keyword>
+<coop:keyword><![CDATA[bangalore based web developer needed]]></coop:keyword>
+<coop:keyword><![CDATA[web scraping job python]]></coop:keyword>
+<coop:keyword><![CDATA[free multi user web design]]></coop:keyword>
+<coop:keyword><![CDATA[multi user web templates]]></coop:keyword>
+<coop:keyword><![CDATA[iphone web developer needed]]></coop:keyword>
+<coop:keyword><![CDATA[web developer needed dubai]]></coop:keyword>
+<coop:keyword><![CDATA[multi user admin managed web template]]></coop:keyword>
+<coop:keyword><![CDATA[multi user web cam]]></coop:keyword>
+<coop:keyword><![CDATA[needed network multi user excel]]></coop:keyword>
+<coop:keyword><![CDATA[python developer needed]]></coop:keyword>
+<coop:keyword><![CDATA[web scraping for lead generation]]></coop:keyword>
+<coop:keyword>project 40776249</coop:keyword>
+<coop:keyword><![CDATA[Python Developer Needed: Multi-User Web Scraping &amp; Lead Generation Platform (Django, Celery, PostgreSQL) -- 2]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[GenAI Python Full Stack Developer  -- 2]]></title>
+                <link>https://www.freelancer.com/projects/rest-api/GenAI-Python-Full-Stack-Developer.html</link>
+                <description><![CDATA[Required skills: Python, FastAPI, REST API development, Generative AI, LLM integration, prompt engineering, document and email processing, structured data extraction, PostgreSQL, SQLAlchemy, and Docker... (Budget: ₹12500 - ₹37500 INR, Jobs: Agentic AI, Containerization, Database Management, Docker, FastAPI, Microsoft Graph, PostgreSQL, Python, Redis, REST API)]]></description>
+                <pubDate>Mon, 19 Oct 2026 02:17:28 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40775398</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Agentic AI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Containerization]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Database Management]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Docker]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Microsoft Graph]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PostgreSQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Redis]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[REST API]]></category>
+<coop:keyword><![CDATA[Agentic AI]]></coop:keyword>
+<coop:keyword><![CDATA[Containerization]]></coop:keyword>
+<coop:keyword><![CDATA[Database Management]]></coop:keyword>
+<coop:keyword><![CDATA[Docker]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Microsoft Graph]]></coop:keyword>
+<coop:keyword><![CDATA[PostgreSQL]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Redis]]></coop:keyword>
+<coop:keyword><![CDATA[REST API]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer resume]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer salary in india]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer job]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer course]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer course free]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer salary]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer skills]]></coop:keyword>
+<coop:keyword><![CDATA[how to become python full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer course in bangalore]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer jobs]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer interview questions]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer course in hyderabad]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer courses]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer course syllabus]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer course content]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer syllabus]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer pdf]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer job description]]></coop:keyword>
+<coop:keyword><![CDATA[python full stack developer book]]></coop:keyword>
+<coop:keyword>project 40775398</coop:keyword>
+<coop:keyword><![CDATA[GenAI Python Full Stack Developer  -- 2]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Website Customer Chat Bot]]></title>
+                <link>https://www.freelancer.com/projects/chatbot-development/Website-Customer-Chat-Bot.html</link>
+                <description><![CDATA[I want to add a customer-service chat widget to my website that can greet visitors, answer common questions automatically, and route them to a contact form when the bot can’t find a match. The focus for... (Budget: $15 - $25 USD, Jobs: Chatbot Development, HTML, JavaScript, NLP, Node.js, Python, Web Development)]]></description>
+                <pubDate>Mon, 19 Oct 2026 00:39:36 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40774331</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Chatbot Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[HTML]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[JavaScript]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[NLP]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Web Development]]></category>
+<coop:keyword><![CDATA[Chatbot Development]]></coop:keyword>
+<coop:keyword><![CDATA[HTML]]></coop:keyword>
+<coop:keyword><![CDATA[JavaScript]]></coop:keyword>
+<coop:keyword><![CDATA[NLP]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Web Development]]></coop:keyword>
+<coop:keyword><![CDATA[want add shipping service website]]></coop:keyword>
+<coop:keyword><![CDATA[want add bse nse stock ticker website]]></coop:keyword>
+<coop:keyword><![CDATA[i want someone to make me a website]]></coop:keyword>
+<coop:keyword><![CDATA[i need seo consulting service for my website]]></coop:keyword>
+<coop:keyword><![CDATA[i want a customer support virtual assistant]]></coop:keyword>
+<coop:keyword><![CDATA[i want content writer to develop my website in chennai]]></coop:keyword>
+<coop:keyword><![CDATA[i want someone to build me a website]]></coop:keyword>
+<coop:keyword><![CDATA[i want to buy design for my website]]></coop:keyword>
+<coop:keyword><![CDATA[i want to design and create a website]]></coop:keyword>
+<coop:keyword><![CDATA[i want to edit and design my website]]></coop:keyword>
+<coop:keyword><![CDATA[i want to get service for web design]]></coop:keyword>
+<coop:keyword><![CDATA[i want to give service of any company's online business]]></coop:keyword>
+<coop:keyword><![CDATA[i want to know how to design website]]></coop:keyword>
+<coop:keyword><![CDATA[i want to open my own translation website]]></coop:keyword>
+<coop:keyword><![CDATA[i want to someone to change my website design]]></coop:keyword>
+<coop:keyword><![CDATA[I have an existing website that i want to transfer over into Wordpress website using the Divi Theme from Elegant Themes. I requi]]></coop:keyword>
+<coop:keyword><![CDATA[Hello wonderful designers! I need a website mockup created for a new website for my agency. I want it to be AMAZING and I need y]]></coop:keyword>
+<coop:keyword><![CDATA[I want someone to design a corporate website mock up for Construction Machinery Rental company, both desktop and mobile websites]]></coop:keyword>
+<coop:keyword><![CDATA[I want someone to design a corporate website mock up for Construction Machinery Rental company,]]></coop:keyword>
+<coop:keyword><![CDATA[i want to build my own business website]]></coop:keyword>
+<coop:keyword>project 40774331</coop:keyword>
+<coop:keyword><![CDATA[Website Customer Chat Bot]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Intelligent AI/ML Document Analysis &amp; QA Platform]]></title>
+                <link>https://www.freelancer.com/projects/react-js/Intelligent-Document-Analysis-Platform.html</link>
+                <description><![CDATA[# Build an AI-Powered Document Analysis &amp; Q&amp;A Platform (Python, LLM, RAG)  **Project Type:** Fixed Price   **Budget:** $1,500 USD   **Timeline:** 3 Weeks   **Experience Level:**  Expert  ### Project Description... (Budget: $250 - $750 USD, Jobs: FastAPI, Git, JavaScript, LangChain, Python, React.js, Software Architecture, Vector Databases)]]></description>
+                <pubDate>Mon, 19 Oct 2026 00:07:00 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40775210</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Git]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[JavaScript]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[LangChain]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[React.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Software Architecture]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Vector Databases]]></category>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Git]]></coop:keyword>
+<coop:keyword><![CDATA[JavaScript]]></coop:keyword>
+<coop:keyword><![CDATA[LangChain]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[React.js]]></coop:keyword>
+<coop:keyword><![CDATA[Software Architecture]]></coop:keyword>
+<coop:keyword><![CDATA[Vector Databases]]></coop:keyword>
+<coop:keyword><![CDATA[writing document analysis]]></coop:keyword>
+<coop:keyword><![CDATA[ai ml]]></coop:keyword>
+<coop:keyword><![CDATA[written document analysis worksheet answers]]></coop:keyword>
+<coop:keyword><![CDATA[written document analysis worksheet pdf]]></coop:keyword>
+<coop:keyword><![CDATA[ai ml dl ppt]]></coop:keyword>
+<coop:keyword><![CDATA[edge to core ai ml]]></coop:keyword>
+<coop:keyword><![CDATA[spark ml sentiment analysis]]></coop:keyword>
+<coop:keyword><![CDATA[document analysis pdf]]></coop:keyword>
+<coop:keyword><![CDATA[ai legal document review]]></coop:keyword>
+<coop:keyword><![CDATA[ai document analysis]]></coop:keyword>
+<coop:keyword><![CDATA[ai ml jobs]]></coop:keyword>
+<coop:keyword><![CDATA[document analysis research method pdf]]></coop:keyword>
+<coop:keyword><![CDATA[best amp futures platform]]></coop:keyword>
+<coop:keyword><![CDATA[blockchain ai ml iot]]></coop:keyword>
+<coop:keyword><![CDATA[ai ml consulting]]></coop:keyword>
+<coop:keyword><![CDATA[ai stock market analysis]]></coop:keyword>
+<coop:keyword><![CDATA[document analysis case study]]></coop:keyword>
+<coop:keyword><![CDATA[ai ml dl]]></coop:keyword>
+<coop:keyword><![CDATA[ai ml developer]]></coop:keyword>
+<coop:keyword><![CDATA[intelligent document analysis]]></coop:keyword>
+<coop:keyword>project 40775210</coop:keyword>
+<coop:keyword><![CDATA[Intelligent AI/ML Document Analysis &amp; QA Platform]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[SaaS Product Development]]></title>
+                <link>https://www.freelancer.com/projects/full-stack-development/SaaS-Product-Development.html</link>
+                <description><![CDATA[Full-Stack SaaS Developer Needed to Build a Complete Web Platform.   **Project Type:** SaaS Product Development   **Engagement:** Fixed Price or Hourly   **Experience Level:** Expert   **Project Stage:**... (Budget: $250 - $750 USD, Jobs: AngularJS, API Integration, Cloud Computing, Full Stack Development, Next.js, Node.js, NoSQL Couch & Mongo, Python, React.js, SaaS Development)]]></description>
+                <pubDate>Sun, 18 Oct 2026 10:09:24 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40774340</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[AngularJS]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[API Integration]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Cloud Computing]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Full Stack Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Next.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Node.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[NoSQL Couch & Mongo]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[React.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[SaaS Development]]></category>
+<coop:keyword><![CDATA[AngularJS]]></coop:keyword>
+<coop:keyword><![CDATA[API Integration]]></coop:keyword>
+<coop:keyword><![CDATA[Cloud Computing]]></coop:keyword>
+<coop:keyword><![CDATA[Full Stack Development]]></coop:keyword>
+<coop:keyword><![CDATA[Next.js]]></coop:keyword>
+<coop:keyword><![CDATA[Node.js]]></coop:keyword>
+<coop:keyword><![CDATA[NoSQL Couch & Mongo]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[React.js]]></coop:keyword>
+<coop:keyword><![CDATA[SaaS Development]]></coop:keyword>
+<coop:keyword><![CDATA[experienced web developer needed build site]]></coop:keyword>
+<coop:keyword><![CDATA[full stack developer ios]]></coop:keyword>
+<coop:keyword><![CDATA[find a full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[freelance full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[full stack developer freelance]]></coop:keyword>
+<coop:keyword><![CDATA[Full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[looking for mid senior full stack developer johannesburg]]></coop:keyword>
+<coop:keyword><![CDATA[how to find a full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[rend a coder full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[technical full stack developer freelance]]></coop:keyword>
+<coop:keyword><![CDATA[corso full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[curso mean full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[experienced full stack developer freelancer]]></coop:keyword>
+<coop:keyword><![CDATA[find full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[freelance full stack developer developer]]></coop:keyword>
+<coop:keyword><![CDATA[freelance full stack developer hamilton ontario]]></coop:keyword>
+<coop:keyword><![CDATA[full stack developer needed]]></coop:keyword>
+<coop:keyword><![CDATA[skills needed to be a full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[what is needed to be a full stack developer]]></coop:keyword>
+<coop:keyword><![CDATA[software development engineer vs full stack developer]]></coop:keyword>
+<coop:keyword>project 40774340</coop:keyword>
+<coop:keyword><![CDATA[SaaS Product Development]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[AI Product Image Classification App]]></title>
+                <link>https://www.freelancer.com/projects/data-mining/Product-Image-Classification-App.html</link>
+                <description><![CDATA[I need an end-to-end application that can automatically classify product images into their correct categories. The input will always be standard product photos; no medical or satellite data is involved... (Budget: ₹750 - ₹1250 INR, Jobs: Data Mining, Data Processing, Deep Learning, Machine Learning (ML), Python, Pytorch, Tensorflow, Web Scraping)]]></description>
+                <pubDate>Sun, 18 Oct 2026 05:36:24 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40774033</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[Data Mining]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Data Processing]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Deep Learning]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Machine Learning (ML)]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Pytorch]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Tensorflow]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Web Scraping]]></category>
+<coop:keyword><![CDATA[Data Mining]]></coop:keyword>
+<coop:keyword><![CDATA[Data Processing]]></coop:keyword>
+<coop:keyword><![CDATA[Deep Learning]]></coop:keyword>
+<coop:keyword><![CDATA[Machine Learning (ML)]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[Pytorch]]></coop:keyword>
+<coop:keyword><![CDATA[Tensorflow]]></coop:keyword>
+<coop:keyword><![CDATA[Web Scraping]]></coop:keyword>
+<coop:keyword><![CDATA[i need an architectural stamp for permit for the city of gaithersburg]]></coop:keyword>
+<coop:keyword><![CDATA[i need an engineer to help me with the design and description for a patent]]></coop:keyword>
+<coop:keyword><![CDATA[i need application developer]]></coop:keyword>
+<coop:keyword><![CDATA[i need to find a professional typist in the st ouis area]]></coop:keyword>
+<coop:keyword><![CDATA[as a secretary i need a book that will help at the office in writing memoradum and other letters]]></coop:keyword>
+<coop:keyword><![CDATA[weaving product made by myself i need design]]></coop:keyword>
+<coop:keyword><![CDATA[do i need an appointment to get consulted at the immigration office]]></coop:keyword>
+<coop:keyword><![CDATA[do i need a phd to do research in the classics]]></coop:keyword>
+<coop:keyword><![CDATA[i need a list of ux designers in the south of england to send a design brief too]]></coop:keyword>
+<coop:keyword><![CDATA[i need a logo and images]]></coop:keyword>
+<coop:keyword><![CDATA[i need an office general chrome in austin the phone number]]></coop:keyword>
+<coop:keyword><![CDATA[virtual assistant do i need to give my personal informations to the client jhong hilario]]></coop:keyword>
+<coop:keyword><![CDATA[I need to design 3 (three) mockups for the website.]]></coop:keyword>
+<coop:keyword><![CDATA[hello i have 54 images for models that i need to clear background  its depend to the image sometimes its need to clear all backg]]></coop:keyword>
+<coop:keyword><![CDATA[I need a logo done that will suite the theme of the following website.]]></coop:keyword>
+<coop:keyword><![CDATA[I need a logo designed. I need a logo for my brand name : \ The Tucky\  ]]></coop:keyword>
+<coop:keyword><![CDATA[I need a website designed. We would like the website www.shoptechy.co.uk redesigned in PhotoShop (built on NopCommerce).]]></coop:keyword>
+<coop:keyword><![CDATA[i need 2 t-shirt to designed for the staff]]></coop:keyword>
+<coop:keyword><![CDATA[I need a logo for my photography work. The logo should clearly say \ D]]></coop:keyword>
+<coop:keyword><![CDATA[product image zoom app shopify]]></coop:keyword>
+<coop:keyword>project 40774033</coop:keyword>
+<coop:keyword><![CDATA[AI Product Image Classification App]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Build AI Travel Copilot Chat]]></title>
+                <link>https://www.freelancer.com/projects/api-developmet/Build-Travel-Copilot-Chat.html</link>
+                <description><![CDATA[I’m looking for a full-stack developer to create an AI Travel Copilot chat that shines at suggesting destinations. The engine must prioritize popular tourist spots and immediately enrich each proposal with relevant cultural experiences so users feel they’ve met a well-informed local... (Budget: $15 - $25 USD, Jobs: API Development, FastAPI, Graphic Design, HTML, LangChain, Next.js, PHP, Website Design)]]></description>
+                <pubDate>Sat, 17 Oct 2026 12:32:29 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40773096</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[API Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Graphic Design]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[HTML]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[LangChain]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Next.js]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PHP]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Website Design]]></category>
+<coop:keyword><![CDATA[API Development]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Graphic Design]]></coop:keyword>
+<coop:keyword><![CDATA[HTML]]></coop:keyword>
+<coop:keyword><![CDATA[LangChain]]></coop:keyword>
+<coop:keyword><![CDATA[Next.js]]></coop:keyword>
+<coop:keyword><![CDATA[PHP]]></coop:keyword>
+<coop:keyword><![CDATA[Website Design]]></coop:keyword>
+<coop:keyword><![CDATA[i`m looking designer]]></coop:keyword>
+<coop:keyword><![CDATA[i`m looking php script rent villa]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a artist]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a bookkeeper for my small company]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a cloud software developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a computer coder]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a content editor]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a developer startup]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a dress designers list]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a excel teacher]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a gasmask designer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a good autocad student]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a grant writer in nj]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a graphic designer in the inland empire]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a graphic designer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a manufacturing technician]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a marketing consultant nj]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for an editor on a freelance basis the work will mainly consist of editing or creating showreels final cut adobe pre]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a programmer to build my website]]></coop:keyword>
+<coop:keyword>project 40773096</coop:keyword>
+<coop:keyword><![CDATA[Build AI Travel Copilot Chat]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Full-Stack Web Developer Needed in Chennai]]></title>
+                <link>https://www.freelancer.com/projects/full-stack-development/Full-Stack-Web-Developer-Needed-40772795.html</link>
+                <description><![CDATA[Freelancer Required: Full-Stack Web Developer  I’m looking for a capable full-stack web developer based in Chennai to help build and deploy a web-based platform. The ideal candidate should have experience... (Budget: ₹1500 - ₹12500 INR, Jobs: API Development, Backend Development, Database Design, FastAPI, Frontend Development, Full Stack Development, MySQL, PostgreSQL, Python)]]></description>
+                <pubDate>Sat, 17 Oct 2026 07:53:24 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40772795</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[API Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Backend Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Database Design]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[FastAPI]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Frontend Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Full Stack Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[MySQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[PostgreSQL]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<coop:keyword><![CDATA[API Development]]></coop:keyword>
+<coop:keyword><![CDATA[Backend Development]]></coop:keyword>
+<coop:keyword><![CDATA[Database Design]]></coop:keyword>
+<coop:keyword><![CDATA[FastAPI]]></coop:keyword>
+<coop:keyword><![CDATA[Frontend Development]]></coop:keyword>
+<coop:keyword><![CDATA[Full Stack Development]]></coop:keyword>
+<coop:keyword><![CDATA[MySQL]]></coop:keyword>
+<coop:keyword><![CDATA[PostgreSQL]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[i am looking for a developer for javascript]]></coop:keyword>
+<coop:keyword><![CDATA[i am looking for a developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a cloud software developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a developer startup]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web designer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web to answer my engineer hw]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking hire a dedicated php developer freelance]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for an app developer]]></coop:keyword>
+<coop:keyword><![CDATA[back end developer needed for dot net i am looking for developer to work my server back end and also to add features]]></coop:keyword>
+<coop:keyword><![CDATA[hi i am looking for a developer who can adjust an existing website laravel 4]]></coop:keyword>
+<coop:keyword><![CDATA[i am looking for android developer]]></coop:keyword>
+<coop:keyword><![CDATA[i am looking for php developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m a freelance android developer]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a freelancer to set up my blog]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer envato]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer job in ca]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for a web developer worcestershire]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for freelancer to help me write my online interview for a magazine]]></coop:keyword>
+<coop:keyword><![CDATA[i m looking for one web developer]]></coop:keyword>
+<coop:keyword>project 40772795</coop:keyword>
+<coop:keyword><![CDATA[Full-Stack Web Developer Needed in Chennai]]></coop:keyword>
+
+            </item>
+            <item>
+                <title><![CDATA[Logistics &amp; Multi-AI Integration Developer]]></title>
+                <link>https://www.freelancer.com/projects/ai-development/Logistics-Multi-Integration-Developer.html</link>
+                <description><![CDATA[Title: Independent Full-Time Remote Developer (Logistics Tech &amp; Multi-AI Integration) – India Only Job Description: I am looking to hire one individual independent software engineer based in India for a long-term, remote role... (Budget: $250 - $750 USD, Jobs: AI Agents, AI Automation, AI Development, AI Integration, AI Model Development, AI Workflow Automation, Backend Development, Database Management, Logistics, Python)]]></description>
+                <pubDate>Sat, 17 Oct 2026 07:37:31 -0400</pubDate>
+                <guid isPermaLink="false">Freelancer_project_40772781</guid>
+                <category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Agents]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Automation]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Integration]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Model Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[AI Workflow Automation]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Backend Development]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Database Management]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Logistics]]></category>
+<category domain="https://www.freelancer.com/jobs/"><![CDATA[Python]]></category>
+<coop:keyword><![CDATA[AI Agents]]></coop:keyword>
+<coop:keyword><![CDATA[AI Automation]]></coop:keyword>
+<coop:keyword><![CDATA[AI Development]]></coop:keyword>
+<coop:keyword><![CDATA[AI Integration]]></coop:keyword>
+<coop:keyword><![CDATA[AI Model Development]]></coop:keyword>
+<coop:keyword><![CDATA[AI Workflow Automation]]></coop:keyword>
+<coop:keyword><![CDATA[Backend Development]]></coop:keyword>
+<coop:keyword><![CDATA[Database Management]]></coop:keyword>
+<coop:keyword><![CDATA[Logistics]]></coop:keyword>
+<coop:keyword><![CDATA[Python]]></coop:keyword>
+<coop:keyword><![CDATA[moneybooker integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[google checkout integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[2checkout integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[website developer title insurance]]></coop:keyword>
+<coop:keyword><![CDATA[cre loaded shopping cart integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[multi site integration]]></coop:keyword>
+<coop:keyword><![CDATA[expedia hotel integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[cashu integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[php mysql developer needed jaipur full time]]></coop:keyword>
+<coop:keyword><![CDATA[escrow payment gateway integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[hire a software developer in chennai full time]]></coop:keyword>
+<coop:keyword><![CDATA[looking for individual independent artist freelance]]></coop:keyword>
+<coop:keyword><![CDATA[wit ai freelance developer]]></coop:keyword>
+<coop:keyword><![CDATA[integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[big multi national web developer in delhi ncr]]></coop:keyword>
+<coop:keyword><![CDATA[game developer vacancy freelancer full time]]></coop:keyword>
+<coop:keyword><![CDATA[hire wordpress payment gateway integration developer]]></coop:keyword>
+<coop:keyword><![CDATA[net integration developer contractor south africa]]></coop:keyword>
+<coop:keyword><![CDATA[paypal integration developer freelance]]></coop:keyword>
+<coop:keyword>project 40772781</coop:keyword>
+<coop:keyword><![CDATA[Logistics &amp; Multi-AI Integration Developer]]></coop:keyword>
+
+            </item>
+                </channel>
+            </rss>

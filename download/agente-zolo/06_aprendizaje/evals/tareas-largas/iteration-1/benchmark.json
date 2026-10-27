@@ -1,0 +1,9 @@
+{
+  "skill": "tareas-largas",
+  "iteration": 1,
+  "train_score": 1.0,
+  "test_score": 1.0,
+  "train_queries": 12,
+  "test_queries": 8,
+  "timestamp": "2026-10-25T02:55:14.777982+00:00"
+}

@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sanity Challenge - DEV Challenge - DEV Community</title>
+    
+  <link rel="canonical" href="https://dev.to/challenges/sanity-2026-09-16" />
+  <meta name="description" content="Sanity Challenge - DEV Challenge — DEV Community">
+  <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dev.to/challenges/sanity-2026-09-16" />
+  <meta property="og:title" content="Sanity Challenge - DEV Challenge — DEV Community" />
+  <meta property="og:image" content="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/page/social_image/1258/0fd180e4-adf5-4a6a-aec6-bb131f5be731.png">
+  <meta property="og:description" content="Sanity Challenge" />
+  <meta property="og:site_name" content="DEV Community" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:title" content="Sanity Challenge - DEV Challenge — DEV Community">
+  <meta name="twitter:description" content="Sanity Challenge">
+  <meta name="twitter:image:src" content="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/page/social_image/1258/0fd180e4-adf5-4a6a-aec6-bb131f5be731.png">
+
+      <meta name="last-updated" content="2026-10-22 17:52:35 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1792691555">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://assets.dev.to/assets/minimal-748d75fcbcdf614051d6bdeef40d5a93f94d3263852b1e1e88c87711a84f3679.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/views-d827dd1b7ae893ade296ffb0d04531be38453c07b79dbfca9a7cfb39455a7607.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/crayons-11de7dc631b0aee5df5d618a8dff12f00c997e4f4e3e4ad66a1efb1041affb47.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://assets.dev.to/assets/base-100a864db24db122c33208d7e07291e0c75c7bba72b3b6e70e657433696f6faf.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/application-27ce60a34345c0be1a6050009b893dd48223a17d69c0b932a87578e637c41beb.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/baseInitializers-b84685845718082fd04dcdf9cad0c14222f12f0d9889d2bd2431e594abc769f4.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/baseTracking-72a6d524cdf9aea517a8bbc18f8e57c791fd563c348bbfc9428a31d39ae4054e.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/followButtons-a4f30bdc9d999c4b9db199da360a75710cfb62e8f28c7d937a8d21384b4ff402.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/eventSignupButtons-d7be454dd15c446a3bd5f62b1ea9a91085c9a1c22e76fd9056002bb721293652.js" defer="defer"></script>
+
+        <meta name="search-script" content="https://assets.dev.to/assets/Search-e2d8d395cc09cff5f6a9824912500efec1bcfba25b04aedd7399263f7a5332d1.js">
+      <meta name="mermaid-script" content="https://assets.dev.to/assets/mermaidRenderer-2799dd717da288d72e5de9448cc9c0f0495ad4e3277ba9b7c0911fd32a8efcf3.js">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://media2.dev.to/dynamic/image/width=32,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" />
+      <link rel="apple-touch-icon" href="https://media2.dev.to/dynamic/image/width=180,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://media2.dev.to/dynamic/image/width=152,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://media2.dev.to/dynamic/image/width=180,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://media2.dev.to/dynamic/image/width=167,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link href="https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" rel="icon" sizes="192x192" />
+      <link href="https://media2.dev.to/dynamic/image/width=128,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <link rel="describedby" href="https://dev.to/llms.txt" type="text/plain" title="Guidance for AI agents" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://media2.dev.to/dynamic/image/width=512,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" />
+      <meta property="forem:domain" content="dev.to" />
+    <style>
+body:has(.pageslug-aie) #topbar {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) and (pointer: coarse) {
+  /* Target WebKit/Blink specific behaviors */
+  @supports (-webkit-app-region: none) {
+    body:has(.pageslug-aie) .dc-page {
+      padding-top: 56px !important;
+    }
+  }
+}
+
+body:not(.hidden-shell) .pageslug-aie {
+    margin-top: -56px !important;
+}
+
+/* ==========================================================================
+   THE 418 CHALLENGE: THEME-AWARE RETRO EDITION
+   ========================================================================== */
+.articletag-418challenge {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif !important;
+  cursor: crosshair !important;
+}
+
+/* Destroy modern rounded corners and add brutal borders */
+.articletag-418challenge .crayons-card,
+.articletag-418challenge .crayons-article__main,
+.articletag-418challenge .crayons-article__header {
+  border-radius: 0 !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Typography specifics */
+.articletag-418challenge h1,
+.articletag-418challenge h2,
+.articletag-418challenge h3 {
+  text-transform: uppercase !important;
+}
+
+/* Fake <marquee> effect for the main article title */
+.articletag-418challenge h1.fs-3xl {
+  animation: retro-slide 5s linear infinite alternate;
+  overflow: visible;
+}
+
+/* Spin those avatars */
+.articletag-418challenge .crayons-article__header__meta img {
+  border-radius: 0 !important; 
+  animation: retro-spin 5s linear infinite;
+}
+
+/* Obnoxious tags */
+.articletag-418challenge .crayons-tag {
+  border-radius: 0 !important;
+  font-weight: 900 !important;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+.articletag-418challenge .crayons-tag:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+/* --------------------------------------------------------------------------
+   2. LIGHT THEME (Windows 95 / Office 97 Vibes)
+   -------------------------------------------------------------------------- */
+body:not(.dark-theme) .articletag-418challenge {
+  background-color: #008080 !important; /* Win95 Teal Desktop */
+}
+
+body:not(.dark-theme) .articletag-418challenge .crayons-card,
+body:not(.dark-theme) .articletag-418challenge .crayons-article__main,
+body:not(.dark-theme) .articletag-418challenge .crayons-article__header {
+  background-color: #c0c0c0 !important; /* Classic dialog gray */
+  color: #000000 !important;
+  border: 4px outset #ffffff !important;
+  box-shadow: 8px 8px 0px #000000 !important;
+}
+
+body:not(.dark-theme) .articletag-418challenge h1,
+body:not(.dark-theme) .articletag-418challenge h2,
+body:not(.dark-theme) .articletag-418challenge h3 {
+  color: #ff0000 !important;
+  text-shadow: 2px 2px 0px #ffff00 !important;
+  border-bottom: 3px dashed #0000ff !important;
+}
+
+body:not(.dark-theme) .articletag-418challenge a,
+body:not(.dark-theme) .articletag-418challenge .crayons-link {
+  color: #0000ff !important; /* Standard unvisited blue */
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+body:not(.dark-theme) .articletag-418challenge a:hover,
+body:not(.dark-theme) .articletag-418challenge .crayons-link:hover {
+  background-color: #ffff00 !important;
+  color: #ff0000 !important;
+}
+
+body:not(.dark-theme) .articletag-418challenge .crayons-tag {
+  background: #ffff00 !important;
+  color: #ff0000 !important;
+  border: 2px dotted #0000ff !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. DARK THEME (1999 Hacker / Deep GeoCities Vibes)
+   -------------------------------------------------------------------------- */
+body.dark-theme .articletag-418challenge {
+  background-color: #000000 !important;
+  /* Dumb CSS: A scrolling, eye-bleeding neon green hacker grid with CRT scanlines */
+  background-image: 
+    linear-gradient(transparent 50%, rgba(0, 255, 0, 0.25) 50%), 
+    linear-gradient(90deg, rgba(0, 255, 0, 0.5) 1px, transparent 1px), 
+    linear-gradient(rgba(0, 255, 0, 0.5) 1px, transparent 1px) !important;
+  background-size: 100% 4px, 20px 20px, 20px 20px !important;
+  animation: retro-pan 60s linear infinite !important;
+}
+
+body.dark-theme .articletag-418challenge .crayons-card,
+body.dark-theme .articletag-418challenge .crayons-article__main,
+body.dark-theme .articletag-418challenge .crayons-article__header {
+  background-color: #111111 !important;
+  color: #00ff00 !important; /* Terminal Green */
+  border: 4px outset #555555 !important;
+  box-shadow: 8px 8px 0px #ff00ff !important; /* Hot pink shadow */
+}
+
+body.dark-theme .articletag-418challenge h1,
+body.dark-theme .articletag-418challenge h2,
+body.dark-theme .articletag-418challenge h3 {
+  color: #ff00ff !important; /* Magenta headers */
+  text-shadow: 2px 2px 0px #00ffff !important; /* Cyan shadow */
+  border-bottom: 3px dashed #00ff00 !important;
+}
+
+body.dark-theme .articletag-418challenge a,
+body.dark-theme .articletag-418challenge .crayons-link {
+  color: #00ffff !important; /* Cyan links */
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+body.dark-theme .articletag-418challenge a:hover,
+body.dark-theme .articletag-418challenge .crayons-link:hover {
+  background-color: #ff00ff !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .articletag-418challenge .crayons-tag {
+  background: #000000 !important;
+  color: #00ff00 !important;
+  border: 2px dotted #ff00ff !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. ANIMATIONS
+   -------------------------------------------------------------------------- */
+@keyframes retro-spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes retro-slide {
+  0% { transform: translateX(-2%); }
+  100% { transform: translateX(2%); }
+}
+
+@keyframes retro-pan {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  /* Numbers must be multiples of the background-size (4px and 20px) to loop perfectly */
+  100% { background-position: 0 100px, 40px 40px, 40px 40px; }
+}
+
+/* --------------------------------------------------------------------------
+   5. BONUS: CAUTION TAPE REACTION BAR
+   -------------------------------------------------------------------------- */
+.articletag-418challenge .crayons-article-actions {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffff00,
+    #ffff00 10px,
+    #000000 10px,
+    #000000 20px
+  ) !important;
+  border: 4px solid #ff0000 !important;
+  border-radius: 0 !important;
+}
+
+.articletag-418challenge .crayons-article-actions button {
+  background:black;
+  color: #ff00ff !important;
+}
+
+.articletag-418challenge .crayons-article-actions .crayons-reaction__count {
+    color: #ff00ff !important;
+    font-weight: bold !important;
+}
+
+.articletag-418challenge .crayons-icon:not(.crayons-icon--default) * {
+    fill: #ffff00 !important;
+}
+
+.articletag-418challenge .c-embed .crayons-btn--primary {
+  color: #00ff00 !important;
+}
+
+.articletag-418challenge .popover-billboard {
+margin-bottom: 0 !important;
+}
+
+.crayons-story__contentpreview .ltag__link--embedded {
+margin-top: 0 !important;
+}
+
+.subscription-icon {
+    max-height: 16px !important;
+    display: inline-block !important;
+}
+
+@media screen and (min-width: 950px) {
+    .event-show-layout {
+        margin-top: 24px !important;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    .event-show-layout {
+        padding: 11px !important;
+    }
+}
+
+
+</style>
+  </head>
+    <body
+      class="sans-serif-article-body default-header"
+      data-user-status="logged-out"
+      data-is-root-subforem="false"
+        data-subforem-id="1"
+      data-side-nav-visible="true"
+      data-community-name="DEV Community"
+      data-subscription-icon="https://assets.dev.to/assets/subscription-icon-805dfa7ac7dd660f07ed8d654877270825b07a92a03841aa99a1093bd00431b2.png"
+      data-community-leader-icon="https://assets.dev.to/assets/community-leader-icon-b72c9e74eff54916e5c46c962f47ba40c9f611a71f8b157511f9613f69c0001b.svg"
+      data-locale="en"
+      data-honeybadger-key="hbp_nqu4Y66HuEKlD6YRGssZuRQnPOjDm50J8Zkr"
+      data-deployed-at="2026-10-22T16:23:05Z"
+      data-latest-commit-id="df62d39d1d0cc7e59d6c43c13f5539b185d2151b"
+      data-ga-tracking="UA-71991109-1"
+      data-cookie-banner-user-context="logged_out_only"
+      data-cookie-banner-platform-context="off"
+      data-algolia-id="PRSOBFP46H"
+      data-algolia-search-key="9aa7d31610cba78851c9b1f63776a9dd"
+      data-algolia-display="true"
+      data-dynamic-url-component="bmar11"
+      data-ga4-tracking-id="G-TYEM8Y3JN3"
+      data-global-feature-flags-enabled="data_update_scripts onboarding_newsletter_content schedule_articles moderator_role display_ad_tags replace_unicorn_with_jump_to_comments article_id_adjusted_weight cloudflare_preferred_for_hosted_images multiple_reactions subscriber_icon ab_experiment_feed_strategy use_stories_endpoint digest_subject_testing digest_results_count_testing consistent_rendering discover_and_following_tabs hero_billboard onboarding_drip_emails algolia_frontend hide_onboarding_task_card optimize_article_tag_query dev_core_user_sync personalized_email_digests customerio_email_delivery community_favorites"
+      data-style-fingerprint="c939ca9c3f">
+      
+      <script>
+        if (navigator.userAgent === 'ForemWebView/1' || window.frameElement) {
+          document.body.classList.add("hidden-shell");
+        }
+        window.Forem = window.Forem || {};
+        window.Forem.revealBillboardPlacement = window.Forem.revealBillboardPlacement || function (placementArea) {
+          (window.Forem.queuedBillboardPlacementReveals = window.Forem.queuedBillboardPlacementReveals || []).push(placementArea);
+        };
+          if (new Date() > new Date("2026-02-04T09:00:00-05:00")) {
+            document.body.dataset.sideNavVisible = "false";
+          } 
+      </script>
+
+      <link rel="stylesheet" href="https://assets.dev.to/assets/minimal-748d75fcbcdf614051d6bdeef40d5a93f94d3263852b1e1e88c87711a84f3679.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/views-d827dd1b7ae893ade296ffb0d04531be38453c07b79dbfca9a7cfb39455a7607.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/crayons-11de7dc631b0aee5df5d618a8dff12f00c997e4f4e3e4ad66a1efb1041affb47.css" media="all" id="secondary-crayons-stylesheet" />
+
+      <div id="body-styles">
+        <style>
+          :root {
+            --accent-brand-lighter-rgb: 86, 105, 285;
+            --accent-brand-rgb: 64, 78, 211;
+            --accent-brand-darker-rgb: 51, 62, 169;
+          }
+        </style>
+      </div>
+      <div id="audiocontent" data-podcast="">
+        
+      </div>
+      <div class="navigation-progress" id="navigation-progress"></div>
+
+<header id="topbar" class="crayons-header topbar print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a2umdqxan2vqqqlm8ck0fah6apohlts3" class="crayons-icon"><title id="a2umdqxan2vqqqlm8ck0fah6apohlts3">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home" >
+    <img class="site-logo__img"
+         src="https://media2.dev.to/dynamic/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+         style="aspect-ratio: 10 / 8"
+         alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input id="search-input" class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px right-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8bu5e5491h06n8bcv1q1jw491lqfoy6" aria-hidden="true" class="crayons-icon"><title id="a8bu5e5491h06n8bcv1q1jw491lqfoy6">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+
+            <a class="crayons-header--search-brand-indicator" href="https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                Powered by Algolia
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="24" height="24" viewBox="0 0 500 500.34" role="img" aria-labelledby="a6jdbsvvfmtczd3xe1qn7mb4as95hbat" aria-hidden="true" class="crayons-icon"><title id="a6jdbsvvfmtczd3xe1qn7mb4as95hbat">Search</title>
+  <defs></defs><path class="cls-1" d="M250,0C113.38,0,2,110.16,.03,246.32c-2,138.29,110.19,252.87,248.49,253.67,42.71,.25,83.85-10.2,120.38-30.05,3.56-1.93,4.11-6.83,1.08-9.52l-23.39-20.74c-4.75-4.22-11.52-5.41-17.37-2.92-25.5,10.85-53.21,16.39-81.76,16.04-111.75-1.37-202.04-94.35-200.26-206.1,1.76-110.33,92.06-199.55,202.8-199.55h202.83V407.68l-115.08-102.25c-3.72-3.31-9.43-2.66-12.43,1.31-18.47,24.46-48.56,39.67-81.98,37.36-46.36-3.2-83.92-40.52-87.4-86.86-4.15-55.28,39.65-101.58,94.07-101.58,49.21,0,89.74,37.88,93.97,86.01,.38,4.28,2.31,8.28,5.53,11.13l29.97,26.57c3.4,3.01,8.8,1.17,9.63-3.3,2.16-11.55,2.92-23.6,2.07-35.95-4.83-70.39-61.84-127.01-132.26-131.35-80.73-4.98-148.23,58.18-150.37,137.35-2.09,77.15,61.12,143.66,138.28,145.36,32.21,.71,62.07-9.42,86.2-26.97l150.36,133.29c6.45,5.71,16.62,1.14,16.62-7.48V9.49C500,4.25,495.75,0,490.51,0H250Z"></path>
+</svg>
+
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="https://dev.to/enter?signup_subforem=1" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="https://dev.to/enter?signup_subforem=1&amp;state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aiag88x3h6oljr6ehj3nk7lwm9t1odng" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="aiag88x3h6oljr6ehj3nk7lwm9t1odng">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+      <div id="active-broadcast" class="broadcast-wrapper"></div>
+<div id="page-content" class="wrapper stories stories-show pageslug-challenges__SLASH__sanity-2026-09-16" data-current-page="stories-show">
+  <div id="page-content-inner" data-internal-nav="false" data-viewable-id="1258" data-viewable-type="Page">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="https://assets.dev.to/assets/homePage-c2269deb55fc7056f5ad5f9d868fa426d53d28bfc8f8491074ae0960186b9d40.js" defer="defer"></script>
+<main id="main-content">
+    
+    <link data-no-instant id="pages-css" href="https://dev.to/page/assets_stylesheets_pages" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<style id="transition-reset">
+  .notransition *,
+  .notransition *:before,
+  .notransition *:after {
+    transition: none !important;
+    animation: none !important;
+  }
+</style>
+<div id="custom" class="twp notransition tw-text-base tw-leading-normal tw-text-black dark:tw-text-zinc-50"
+  data-no-instant>
+  <script>
+    // set tw dark theme when DEV dark theme detected
+    if (document.body.classList.contains('dark-theme')) {
+      document.getElementById('custom').classList.add('tw-dark')
+    }
+
+    function loadCss() {
+      const cssLink = document.getElementById('pages-css');
+      const customElement = document.getElementById('custom');
+      
+      // Hide the element initially
+      customElement.style.visibility = 'hidden';
+
+      // Check if the stylesheet is already loaded
+      if (cssLink.sheet) {
+        customElement.style.visibility = 'visible';
+        customElement.classList.remove('notransition');
+      } else {
+        // Add the load event listener
+        cssLink.addEventListener('load', function () {
+          customElement.style.visibility = 'visible';
+          customElement.classList.remove('notransition');
+        });
+
+        // Fallback to timeout
+        setTimeout(() => {
+          customElement.style.visibility = 'visible';
+          customElement.classList.remove('notransition');
+        }, 1000);
+      }
+    }
+
+    if (typeof InstantClick !== "undefined") {
+      InstantClick.on('change', () => {
+        loadCss();
+      });
+    } else {
+      loadCss();
+    }
+  </script>
+
+  
+<div class="tw-bg-white dark:tw-bg-black">
+  <div class="tw-container xl:tw-max-w-6xl tw-m-auto tw-space-y-6 tw-p-2 md:tw-p-5">
+    <div>
+  <style>
+  #custom .challenge-page {
+    --challenge-ink: #18181b;
+    --challenge-muted: #52525b;
+    --challenge-surface: #ffffff;
+    --challenge-soft: #fafafa;
+    --challenge-line: #d4d4d8;
+    --challenge-shadow: #18181b;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.5rem, 6vw, 4.5rem);
+    padding-bottom: clamp(4rem, 8vw, 7rem);
+    color: var(--challenge-ink);
+  }
+
+  #custom.tw-dark .challenge-page {
+    --challenge-ink: #fafafa;
+    --challenge-muted: #a1a1aa;
+    --challenge-surface: #18181b;
+    --challenge-soft: #18181b;
+    --challenge-line: #3f3f46;
+    --challenge-shadow: #52525b;
+  }
+
+  #custom .challenge-breadcrumb {
+    padding-top: 0.25rem;
+    background: transparent;
+  }
+
+  #custom .challenge-breadcrumb__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--challenge-muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  #custom .challenge-breadcrumb a {
+    color: var(--challenge-muted);
+    text-decoration: none;
+  }
+
+  #custom .challenge-breadcrumb a:hover,
+  #custom .challenge-breadcrumb a:focus {
+    color: #3b49df;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  #custom .challenge-breadcrumb__current {
+    color: var(--challenge-ink);
+  }
+
+  #custom .challenge-hero {
+    overflow: hidden;
+    width: 100%;
+    border: 2px solid var(--challenge-ink);
+    border-radius: 1rem;
+    background: var(--challenge-surface);
+    box-shadow: 6px 6px 0 var(--challenge-shadow);
+  }
+
+  #custom .challenge-hero img {
+    width: 100%;
+  }
+
+  #custom .challenge-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 21rem;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+    background: transparent;
+  }
+
+  #custom .challenge-overview__main {
+    min-width: 0;
+  }
+
+  #custom .challenge-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem 2rem;
+  }
+
+  #custom .challenge-title-row h1 {
+    max-width: 16ch;
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1.04;
+  }
+
+  #custom .challenge-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  #custom .challenge-subtitle {
+    max-width: 42rem;
+    margin: 1.25rem 0 0;
+    color: var(--challenge-muted);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.5;
+  }
+
+  #custom .challenge-status-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  #custom .challenge-status {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 2.5rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--challenge-line);
+    border-radius: 999px;
+    background: var(--challenge-soft);
+    font-size: 0.9rem;
+  }
+
+  #custom .challenge-description {
+    min-width: 0;
+    max-width: 48rem;
+    margin-top: 2rem;
+    overflow-wrap: anywhere;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  #custom .challenge-sidebar {
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem;
+    border: 2px solid var(--challenge-ink);
+    border-radius: 1rem;
+    background: var(--challenge-soft);
+    box-shadow: 4px 4px 0 var(--challenge-shadow);
+  }
+
+  #custom .challenge-sidebar__section + .challenge-sidebar__section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--challenge-line);
+  }
+
+  #custom .challenge-sidebar h2 {
+    margin: 0 0 0.8rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  #custom .challenge-sidebar ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+  }
+
+  #custom .challenge-sidebar li {
+    line-height: 1.45;
+  }
+
+  #custom .challenge-sidebar__badges {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  #custom .challenge-sidebar__badges figure {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  #custom .challenge-sidebar__badges img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+
+  #custom .challenge-sidebar__badges figcaption {
+    color: var(--challenge-muted);
+    font-size: 0.75rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  #custom .challenge-content-section {
+    width: 100%;
+    padding-top: clamp(1.75rem, 4vw, 2.5rem);
+    border-top: 2px solid var(--challenge-line);
+    background: transparent;
+  }
+
+  #custom .challenge-content-section > h2 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  #custom .challenge-panel {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--challenge-line);
+    border-radius: 1rem;
+    background: var(--challenge-soft);
+  }
+
+  #custom .challenge-panel + .challenge-panel {
+    margin-top: 1rem;
+  }
+
+  #custom .challenge-prompt,
+  #custom .challenge-split-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(13rem, 16rem);
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  #custom .challenge-panel h3 {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  #custom .challenge-panel__aside {
+    min-width: 0;
+    padding-left: clamp(1.5rem, 3vw, 2rem);
+    border-left: 1px solid var(--challenge-line);
+  }
+
+  #custom .challenge-panel__aside h4 {
+    margin: 0 0 0.65rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  #custom .challenge-panel__aside ul {
+    list-style: disc;
+    margin: 0 0 1.5rem 1.25rem;
+  }
+
+  #custom .challenge-panel__aside li + li {
+    margin-top: 0.3rem;
+  }
+
+  #custom .challenge-copy {
+    max-width: 52rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Opt-in content components.  Pages use them by class name in their description or
+     data, so challenges that don't are unaffected. */
+
+  /* A callout card, in the sidebar's style. */
+  #custom .challenge-callout {
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--challenge-ink);
+    border-radius: 1rem;
+    background: var(--challenge-soft);
+    box-shadow: 4px 4px 0 var(--challenge-shadow);
+  }
+
+  #custom .challenge-callout p {
+    margin: 0;
+  }
+
+  /* A Hacktoberfest-branded card, in hacktoberfest.com's colours and button style
+     (hacktoberfest-2026-frontend/src/styles/tokens.js, components/Button.js). */
+  #custom .challenge-hf-card {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border: 2px solid #10201d;
+    border-radius: 1rem;
+    color: #f7f7f2;
+    background: #3d5f58;
+    box-shadow: 4px 4px 0 #10201d;
+  }
+
+  #custom .challenge-hf-card p {
+    margin: 0;
+    color: #f7f7f2;
+  }
+
+  #custom .challenge-hf-card a:not(.challenge-hf-button) {
+    color: #f5b726;
+    text-decoration: underline;
+  }
+
+  #custom .challenge-hf-card__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem !important;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  #custom .challenge-hf-card__pixels {
+    display: inline-flex;
+    gap: 3px;
+  }
+
+  #custom .challenge-hf-card__pixels span {
+    width: 9px;
+    height: 9px;
+    background: #f5b726;
+  }
+
+  #custom .challenge-hf-card__pixels span:nth-child(2) {
+    background: #8bb2de;
+  }
+
+  #custom .challenge-hf-card__pixels span:nth-child(3) {
+    background: #e97b77;
+  }
+
+  #custom .challenge-hf-card__lede {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  #custom .challenge-hf-card__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 1.25rem;
+  }
+
+  #custom .challenge-hf-card__chip {
+    display: inline-flex;
+    align-items: center;
+    height: 2.75rem;
+    padding: 0 0.85rem;
+    border-radius: 0.5rem;
+    background: #f7f7f2;
+  }
+
+  /* The description's image rule adds vertical margins; logos need none. */
+  #custom .challenge-hf-card__chip img {
+    display: block;
+    max-width: none;
+    margin: 0;
+  }
+
+  #custom .challenge-hf-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.1rem;
+  }
+
+  #custom .challenge-hf-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 10px 20px;
+    border: 2px solid #10201d;
+    color: #10201d;
+    background: #e97b77;
+    box-shadow: 5px 5px 0 #671912;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+
+  #custom .challenge-hf-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #671912;
+  }
+
+  #custom .challenge-hf-button--secondary {
+    border-color: rgba(255, 255, 255, 0.72);
+    color: #f7f7f2;
+    background: transparent;
+    box-shadow: 5px 5px 0 #2e4742;
+  }
+
+  #custom .challenge-hf-button--secondary:hover {
+    color: #10201d;
+    background: #f7f7f2;
+    box-shadow: 3px 3px 0 #2e4742;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #custom .challenge-hf-button {
+      transition: none;
+    }
+  }
+
+  /* Challenge hubs (a landing page for a series of challenges, e.g. /challenges/hf26). */
+  /* Hub prompt panel: no prize box, so the judging criteria sit in a compact card
+     centred in the column instead of leaving it half empty. */
+  #custom .challenge-prompt--hub {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+  }
+
+  #custom .challenge-prompt--hub .challenge-panel__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: clamp(1.5rem, 3vw, 2rem);
+    border-left: 0;
+  }
+
+  #custom .challenge-prompt--hub .challenge-panel__aside > div {
+    padding: 1.25rem 1.25rem 1.1rem;
+    border: 2px solid var(--challenge-ink);
+    border-radius: 1rem;
+    background: var(--challenge-surface);
+    box-shadow: 4px 4px 0 var(--challenge-shadow);
+  }
+
+  #custom .challenge-prompt--hub .challenge-panel__aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: hub-criteria;
+  }
+
+  #custom .challenge-prompt--hub .challenge-panel__aside li {
+    display: flex;
+    gap: 0.6rem;
+    line-height: 1.35;
+    counter-increment: hub-criteria;
+  }
+
+  #custom .challenge-prompt--hub .challenge-panel__aside li + li {
+    margin-top: 0.6rem;
+  }
+
+  #custom .challenge-prompt--hub .challenge-panel__aside li::before {
+    content: counter(hub-criteria);
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    color: #10201d;
+    background: #f5b726;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  #custom .challenge-hub-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.75rem;
+    color: var(--challenge-muted);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  #custom .challenge-hub-follow-row {
+    margin: 0.75rem 0 0;
+  }
+
+  #custom .challenge-hub-follow {
+    color: var(--challenge-ink);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  #custom .challenge-hub-schedule {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #custom .challenge-hub-schedule > li {
+    display: flex;
+    min-width: 0;
+    margin: 0;
+  }
+
+  #custom .challenge-hub-card {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid var(--challenge-ink);
+    border-radius: 1rem;
+    color: var(--challenge-ink);
+    background: var(--challenge-soft);
+    box-shadow: 4px 4px 0 var(--challenge-shadow);
+    text-decoration: none;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+
+  #custom .challenge-hub-card:hover,
+  #custom .challenge-hub-card:focus-visible {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--challenge-shadow);
+  }
+
+  #custom .challenge-hub-card--live {
+    color: #f7f7f2;
+    background: #3d5f58;
+  }
+
+  #custom .challenge-hub-card--closed {
+    opacity: 0.7;
+  }
+
+  #custom .challenge-hub-card__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  #custom .challenge-hub-card__label {
+    font-weight: 800;
+  }
+
+  #custom .challenge-hub-status {
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #10201d;
+    background: #e4e4e7;
+  }
+
+  #custom .challenge-hub-status--live {
+    background: #f5b726;
+  }
+
+  #custom .challenge-hub-status--upcoming {
+    background: #d7e5f4;
+  }
+
+  #custom .challenge-hub-card__theme {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  #custom .challenge-hub-card__theme--tbd {
+    font-style: italic;
+    opacity: 0.75;
+  }
+
+  #custom .challenge-hub-card__dates {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+
+  #custom .challenge-hub-card__winners {
+    margin-top: -0.25rem;
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+
+  #custom .challenge-hub-card__nowrap {
+    display: block;
+    white-space: nowrap;
+  }
+
+  #custom .challenge-hub-card__cta {
+    margin-top: auto;
+    padding-top: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 63.99rem) {
+    #custom .challenge-hub-schedule {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 40rem) {
+    #custom .challenge-hub-schedule {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #custom .challenge-hub-card {
+      transition: none;
+    }
+  }
+
+  /* A compact schedule table that keeps dates on one line. */
+  #custom .challenge-schedule-wrap {
+    overflow-x: auto;
+    margin: 0 0 1rem;
+  }
+
+  #custom .challenge-schedule {
+    width: 100%;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  #custom .challenge-schedule th,
+  #custom .challenge-schedule td {
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  #custom .challenge-schedule th,
+  #custom .challenge-schedule td {
+    white-space: nowrap;
+  }
+
+  #custom .challenge-schedule__tbd {
+    color: var(--challenge-muted);
+    font-style: italic;
+  }
+
+  /* A two-column list of links. */
+  #custom .challenge-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem 2rem;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* A heading that groups prize categories, with a one-line prize summary. */
+  #custom .challenge-prize-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    margin: 0 0 0.75rem;
+  }
+
+  #custom .challenge-panel + .challenge-prize-group {
+    margin-top: 2rem;
+  }
+
+  #custom .challenge-prize-group h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+  }
+
+  #custom .challenge-prize-group p {
+    margin: 0;
+    color: var(--challenge-muted);
+  }
+
+  #custom .challenge-prize-categories-note {
+    margin: 1rem 0 0;
+    color: var(--challenge-muted);
+    font-style: italic;
+  }
+
+  /* Prize category panels with a partner logo tile on the left (Hacktoberfest 2026),
+     styled like the hacktoberfest.com sponsor wall. */
+  #custom .challenge-prize-category {
+    grid-template-columns: minmax(0, 1fr) minmax(10rem, 12rem);
+    gap: 1.25rem;
+    padding: 1rem;
+  }
+
+  #custom .challenge-prize-category + .challenge-prize-category {
+    margin-top: 0.75rem;
+  }
+
+  #custom .challenge-prize-category__main {
+    display: grid;
+    grid-template-columns: 12.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  #custom .challenge-prize-category__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 6.5rem;
+    padding: 0.75rem;
+    border: 2px solid #1b1b1b;
+    border-radius: 1rem;
+    background: #f7f6f1;
+  }
+
+  #custom .challenge-prize-category__logos img {
+    display: block;
+    margin: 0;
+    min-width: 0;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #custom .challenge-prize-category h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.15rem;
+  }
+
+  #custom .challenge-prize-category p {
+    margin: 0;
+  }
+
+  #custom .challenge-prize-category .challenge-panel__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.25rem;
+  }
+
+  #custom .challenge-prize-category .challenge-panel__aside h4 {
+    margin-bottom: 0.35rem;
+  }
+
+  #custom .challenge-sponsor-card {
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border-left: 0.5rem solid #3b49df;
+    border-radius: 0.75rem;
+    background: var(--challenge-soft);
+  }
+
+  #custom .challenge-sponsor-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  #custom .challenge-sponsor-card .content {
+    line-height: 1.55;
+  }
+
+  #custom .faq-content {
+    max-width: none;
+  }
+
+  #custom .faq-content:not(.faq-content--enhanced) > h3 {
+    margin: 2.25rem 0 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--challenge-line);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  #custom .faq-content:not(.faq-content--enhanced) > h3:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  #custom .faq-content:not(.faq-content--enhanced) > h4 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  #custom .faq-content--enhanced {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #custom .faq-group {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.32fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 5vw, 4rem);
+    padding: 2rem 0;
+    border-top: 1px solid var(--challenge-line);
+  }
+
+  #custom .faq-group:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  #custom .faq-group--uncategorized {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #custom .faq-group__title {
+    margin: 0.15rem 0 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  #custom .faq-group__items {
+    min-width: 0;
+  }
+
+  #custom .faq-item {
+    border-top: 1px solid var(--challenge-line);
+  }
+
+  #custom .faq-item:first-of-type {
+    border-top: 0;
+  }
+
+  #custom .faq-item summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2rem;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  #custom .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #custom .faq-item summary:focus-visible {
+    border-radius: 0.25rem;
+    outline: 3px solid #3b49df;
+    outline-offset: 0.2rem;
+  }
+
+  #custom .faq-item summary h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 750;
+    line-height: 1.25;
+  }
+
+  #custom .faq-item summary::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--challenge-line);
+    border-radius: 50%;
+    background:
+      linear-gradient(currentColor, currentColor) center / 0.75rem 2px no-repeat,
+      linear-gradient(currentColor, currentColor) center / 2px 0.75rem no-repeat;
+    color: var(--challenge-muted);
+    transition: transform 150ms ease, border-color 150ms ease, color 150ms ease;
+  }
+
+  #custom .faq-item summary:hover::after,
+  #custom .faq-item summary:focus-visible::after {
+    border-color: #3b49df;
+    color: #3b49df;
+  }
+
+  #custom .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  #custom .faq-item__answer {
+    max-width: 46rem;
+    padding: 0 3rem 1.25rem 0;
+    color: var(--challenge-muted);
+    line-height: 1.55;
+  }
+
+  #custom .faq-item__answer > :first-child {
+    margin-top: 0;
+  }
+
+  #custom .faq-item__answer > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #custom .faq-item summary::after {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 63.99rem) {
+    #custom .challenge-overview,
+    #custom .challenge-prompt,
+    #custom .challenge-split-content {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    #custom .challenge-panel__aside {
+      padding-top: 1.5rem;
+      padding-left: 0;
+      border-top: 1px solid var(--challenge-line);
+      border-left: 0;
+    }
+
+    #custom .challenge-prize-category .challenge-panel__aside {
+      padding-top: 0.75rem;
+      padding-left: 0;
+    }
+
+    #custom .challenge-prompt--hub {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    #custom .challenge-prompt--hub .challenge-panel__aside {
+      padding-top: 0;
+      padding-left: 0;
+      border-top: 0;
+    }
+
+    #custom .challenge-prize-category__main {
+      grid-template-columns: 10rem minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    #custom .faq-group {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    #custom .challenge-schedule th,
+    #custom .challenge-schedule td {
+      padding: 0.45rem 0.5rem;
+    }
+
+    #custom .challenge-schedule td:nth-child(2) {
+      white-space: normal;
+    }
+
+    #custom .challenge-link-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    #custom .challenge-prize-category__main {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+
+    #custom .challenge-prize-category__logos {
+      height: 5.5rem;
+    }
+  }
+
+  @media (max-width: 29.99rem) {
+    #custom .challenge-title-row h1 {
+      max-width: 100%;
+    }
+
+    #custom .challenge-actions,
+    #custom .challenge-actions > * {
+      width: 100%;
+    }
+
+    #custom .challenge-actions a,
+    #custom .challenge-actions button {
+      justify-content: center;
+      text-align: center;
+    }
+
+    #custom .faq-item__answer {
+      padding-right: 0;
+    }
+  }
+</style>
+
+<div x-data="challenge('Mon Oct 05 2026 06:59:59 GMT+0000 (Coordinated Universal Time)', 'Ended')" class="challenge-page">
+  
+  <section class="challenge-breadcrumb">
+    <nav aria-label="Breadcrumbs">
+      <div class="challenge-breadcrumb__items">
+        <a href="/challenges">
+          Challenges
+        </a>
+        <span aria-hidden="true">→</span>
+        <span class="challenge-breadcrumb__current">
+          Sanity Challenge
+        </span>
+      </div>
+    </nav>
+  </section>
+  
+  <section class="challenge-hero">
+    <img class="tw-block tw-w-full dark:tw-hidden tw-aspect-[512/215] tw-object-cover"
+      src="https://media2.dev.to/dynamic/image/width=1300/https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/8qptafdf7dce5me4ffqe.png" alt="Sanity Challenge">
+    <img class="tw-w-full tw-hidden dark:tw-block tw-aspect-[512/215] tw-object-cover"
+      src="https://media2.dev.to/dynamic/image/width=1300/https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/8qptafdf7dce5me4ffqe.png" alt="Sanity Challenge">
+  </section>
+  
+  
+  
+  <section class="tw-bg-white dark:tw-bg-black tw-w-full">
+    <div class="tw-relative tw-overflow-hidden tw-rounded-lg tw-shadow-xl tw-border-2" style="border-color: #18a035;">
+        <div class="tw-absolute tw-inset-0" style="background-color: #e6f7ea;"></div>
+        <div class="tw-relative tw-p-8 tw-text-black">
+          <div class="tw-flex tw-items-start tw-justify-between tw-mb-0">
+            <div>
+              <p class="tw-text-sm tw-uppercase tw-tracking-wider tw-mb-4 tw-font-bold" style="color: #0d5818;">CHALLENGE RESULTS</p>
+              <h3 class="tw-text-3xl tw-font-bold">🏆 Winners Announced! 🎊</h3>
+            </div>
+            <svg class="tw-w-20 tw-h-20" fill="currentColor" viewBox="0 0 20 20" style="color: #18a035;">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+          </div>
+          <a href="https://dev.to/devteam/congrats-to-the-sanity-challenge-winners-1140" class="tw-inline-flex tw-items-center tw-gap-2 tw-text-white tw-px-6 tw-py-3 tw-rounded-lg tw-font-semibold tw-transition-all hover:tw-gap-3 tw-mt-6" style="background-color: #18a035;">
+            Read Announcement
+            <svg class="tw-w-5 tw-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+  </section>
+  
+  
+  <section class="challenge-overview">
+    
+    <div class="challenge-overview__main" x-data="eventSignup('challenges', 'sanity-2026-09-16')">
+      
+      <div>
+        
+        <div class="challenge-title-row">
+          <h1>
+            Sanity Challenge
+          </h1>
+          <div class="challenge-actions">
+            
+            
+            
+              
+              <a href="/t/sanitychallenge" class="tw-font-semibold tw-text-dolphin hover:tw-text-dolphin-dark tw-ease-in-out tw-duration-300 ">
+  View Entries
+  <svg class="tw-inline tw-w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.171 9.49897L0.498914 9.49891L0.500003 7.5L9.08455 7.49892L15.1703 7.49857L9.80686 2.13517L11.2211 0.720952L18.9992 8.49913L11.2211 16.2773L9.80686 14.8631L15.171 9.49897Z" fill="currentColor"></path>
+    </svg>
+</a>
+            
+            
+          </div>
+        </div>
+        
+        <div x-show="showAuthError" x-transition 
+             class="tw-bg-zinc-100 tw-border tw-border-zinc-300 tw-text-zinc-800 dark:tw-bg-zinc-800 dark:tw-border-zinc-600 dark:tw-text-zinc-200 tw-px-4 tw-py-3 tw-rounded-md tw-flex tw-items-center tw-justify-between">
+          <div class="tw-flex tw-items-center tw-gap-2">
+            <svg class="tw-w-5 tw-h-5 tw-flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="tw-text-sm tw-font-medium">
+              Please <a href="/enter?state=new-user" class="tw-underline tw-font-semibold hover:tw-text-zinc-900 dark:hover:tw-text-zinc-100">sign in</a> to follow this challenge
+            </span>
+          </div>
+          <button type="button" @click="showAuthError = false" class="tw-text-zinc-600 dark:tw-text-zinc-400 hover:tw-text-zinc-800 dark:hover:tw-text-zinc-200" aria-label="Close alert">
+            <svg class="tw-w-4 tw-h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <p class="challenge-subtitle">Build an AI agent on structured content, or vibe-code an app with Sanity behind it.</p>
+        
+      </div>
+      
+      
+      <div class="challenge-status-row">
+        <div class="challenge-status">
+          <span class="tw-text-black dark:tw-text-zinc-50 tw-font-bold tw-mr-1 tw-text-nowrap">Challenge Status:</span>
+          <svg x-show="!ended" class="tw-inline-block tw-w-2.5 tw-ml-1.5 tw-mr-1 #tw-text-[#b3b5b3]" viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" fill="currentColor" ></circle>
+          </svg>
+          <svg x-show="ended" class="tw-inline-block tw-w-2.5 tw-ml-1.5 tw-mr-1 #tw-text-[#b3b5b3]" viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="50" fill="#b3b5b3" ></circle>
+          </svg>
+          <span x-show="!ended" class="tw-text-black dark:tw-text-zinc-50 tw-italic">Ended</span>
+          <span x-cloak x-show="ended" class="tw-text-black dark:tw-text-zinc-50 tw-italic">Ended</span>
+        </div>
+        
+        <a href="/challenges" class="tw-font-semibold tw-text-dolphin hover:tw-text-dolphin-dark tw-ease-in-out tw-duration-300 tw-inline-block">
+  Join our next Challenge
+  <svg class="tw-inline tw-w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.171 9.49897L0.498914 9.49891L0.500003 7.5L9.08455 7.49892L15.1703 7.49857L9.80686 2.13517L11.2211 0.720952L18.9992 8.49913L11.2211 16.2773L9.80686 14.8631L15.171 9.49897Z" fill="currentColor"></path>
+    </svg>
+</a>
+        
+      </div>
+      
+      
+      
+      <div class="content challenge-description">
+        <p>We're excited to announce our newest challenge with <a href="https://www.sanity.io/">Sanity</a>!</p>
+<p><a href="https://dev.to/challenges/sanity-2026-09-16">The Sanity Challenge</a> runs September 18 to October 4. Build an AI agent on structured content, or vibe-code an app with Sanity behind it. <strong>$2,500 in prizes.</strong></p>
+<p><strong>New to Sanity?</strong> Sanity is the AI Content Operating System. Your content lives in the Content Lake as JSON documents, with schemas you define in TypeScript and query with GROQ. You can use Sanity to build anything that you can imagine with structured content as your starting point.</p>
+<p>Read on to learn more.</p>
+
+      </div>
+      
+      
+    </div>
+    
+    <aside class="challenge-sidebar" aria-label="Challenge details">
+      
+      <div class="challenge-sidebar__section">
+        <h2>Key Dates</h2>
+        <ul class="tw-space-y-0.5">
+          <li><span class="tw-text-black dark:tw-text-zinc-50 tw-font-bold">Contest start:</span>
+            <span class="tw-italic">
+              September 18, 2026
+            </span>
+          </li>
+          <li><span class="tw-text-black dark:tw-text-zinc-50 tw-font-bold">Submissions due:</span>
+            <span class="tw-italic">October 04, 2026</span>
+          </li>
+          
+          <li><span class="tw-text-black dark:tw-text-zinc-50 tw-font-bold">Winners announced:</span>
+            <span class="tw-italic">October 22, 2026</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="challenge-sidebar__section">
+      <h2>Badge Rewards</h2>
+      <div class="challenge-sidebar__badges">
+        
+        <figure>
+          <img src="https://media2.dev.to/dynamic/image/width=300/https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/t38huxkbphwyjoznmuz0.png" alt="Sanity Challenge Winner Badge">
+          <figcaption class="tw-text-black dark:tw-text-zinc-50 tw-text-wrap tw-text-sm tw-text-center">
+            Sanity Challenge Winner Badge</figcaption>
+        </figure>
+        
+        <figure>
+          <img src="https://media2.dev.to/dynamic/image/width=300/https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/tl48ys5tb0qpp9zsh3i0.png" alt="Sanity Challenge Completion Badge">
+          <figcaption class="tw-text-black dark:tw-text-zinc-50 tw-text-wrap tw-text-sm tw-text-center">
+            Sanity Challenge Completion Badge</figcaption>
+        </figure>
+        
+      </div>
+      </div>
+      
+      
+      <div class="challenge-sidebar__section">
+        <h2>Find Out More</h2>
+        <p class="tw-text-black dark:tw-text-zinc-50 tw-text-wrap">Ask questions and share your ideas on the
+          Sanity Challenge Launch Post.</p>
+  
+        <a href="https://dev.to/devteam/join-the-sanity-challenge-2500-in-prizes-for-five-winners-514m" class="tw-font-semibold tw-text-dolphin hover:tw-text-dolphin-dark tw-ease-in-out tw-duration-300 tw-inline-block">
+  View Launch Post
+  <svg class="tw-inline tw-w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.171 9.49897L0.498914 9.49891L0.500003 7.5L9.08455 7.49892L15.1703 7.49857L9.80686 2.13517L11.2211 0.720952L18.9992 8.49913L11.2211 16.2773L9.80686 14.8631L15.171 9.49897Z" fill="currentColor"></path>
+    </svg>
+</a>
+      </div>
+      
+    </aside>
+  </section>
+
+  
+  
+
+  
+  
+
+
+  
+  <section class="challenge-content-section">
+    <div class="challenge-sponsor-card">
+      <h2>Sponsored by Sanity</h2>
+      <div class="content tw-text-zinc-700 dark:tw-text-zinc-300"><p>Sanity is the AI Content Operating System. Your content lives in the Content Lake as JSON documents, with schemas you define in TypeScript and query with GROQ.</p>
+</div>
+      
+        <div class="tw-mt-4">
+          <a href="https://www.sanity.io/" 
+             target="_blank" rel="noopener"
+             class="tw-inline-flex tw-items-center tw-text-dolphin hover:tw-text-dolphin-dark tw-font-medium">
+            Learn More →
+          </a>
+        </div>
+      
+    </div>
+  </section>
+
+
+
+
+  
+  
+  
+  
+  <section id="prompts" class="challenge-content-section">
+    <h2>
+      Challenge Prompts
+    </h2>
+    
+    <div class="challenge-panel challenge-prompt">
+      <div>
+        <h3>
+          Path One: Ship an Agent That Queries Real Content
+        </h3>
+        
+        <div class="content">
+          <p>Build an agent, then point it at a Sanity Context MCP endpoint backed by a Knowledge Base. Any agent framework, hosted anywhere.</p>
+<p>Build anything that needs an answer it can't afford to get wrong. A board game companion that knows the errata contradicts the rulebook. A better interface to your favorite open-source docs. A eurorack planner that knows what actually fits in your case. An award-travel agent that untangles which transfer partner story is current. A car repair agent? A camera gear-head compendium? The sky is the limit.</p>
+<p>Point Sanity Context at a website, a set of files, or your own Sanity content, and it distills a navigable Knowledge Base your agent reads through MCP. Every entry stays linked to the source it came from. When two sources contradict each other, both claims surface side by side with their sources, and the decision you make carries across future builds. It all lives in your Sanity Dashboard.</p>
+<p>The strongest submissions will show an agent that only works because the content was structured. If a keyword search would have gotten you the same answer, aim higher.</p>
+<p><strong>Note:</strong> Knowledge Bases are in beta and currently index up to 150 documents. Design for that budget, or point your agent at your full dataset through a Context MCP endpoint with embeddings enabled. Both count for Path One.</p>
+
+        </div>
+        
+        
+        
+        <a href="https://dev.to/new?prefill=---%0Atitle%3A%20%0Apublished%3A%20%0Atags%3A%20devchallenge%2C%20sanitychallenge%2C%20sanity%2C%20ai%0A---%0A%0A%2AThis%20is%20a%20submission%20for%20the%20%5BSanity%20Challenge%2C%20Path%20One%3A%20Ship%20an%20Agent%20That%20Queries%20Real%20Content%5D%28https%3A%2F%2Fdev.to%2Fchallenges%2Fsanity-2026-09-16%29%2A%0A%0A%23%23%20What%20I%20Built%0A%3C%21--%20Provide%20an%20overview%20of%20your%20project%20and%20what%20problem%20it%20solves%20or%20experience%20it%20creates.%20--%3E%0A%0A%23%23%20Demo%0A%3C%21--%20Embed%20a%20video%20walkthrough%20or%20share%20a%20link%20to%20your%20deployed%20project.%20--%3E%0A%0A%23%23%20Code%0A%3C%21--%20Embed%20or%20share%20a%20link%20to%20your%20repository.%20--%3E%0A%0A%23%23%20How%20I%20Used%20Sanity%0A%3C%21--%20Explain%20how%20your%20agent%20reads%20and%20queries%20content%20stored%20in%20Sanity.%20What%20did%20you%20point%20Sanity%20Context%20at%20to%20build%20your%20Knowledge%20Base%2C%20which%20Sanity%20Context%20tools%20did%20you%20use%2C%20and%20what%20did%20the%20agent%20actually%20do%20with%20the%20content%20it%20retrieved%3F%20--%3E%0A%0A%23%23%20Sanity%20Project%20Details%0A%3C%21--%20Required%3A%20share%20your%20Sanity%20project%20ID%20or%20a%20link%20to%20a%20public%20dataset%20URL%20so%20the%20Sanity%20team%20can%20see%20how%20you%20modeled%20and%20used%20your%20structured%20content.%20--%3E%0A%0A%23%23%20Agent%20Session%0A%3C%21--%20Optional%20but%20encouraged%3A%20upload%20your%20transcript%20at%20https%3A%2F%2Fdev.to%2Fagent_sessions%2Fnew%2C%20curate%20or%20slice%20the%20parts%20worth%20showing%2C%20and%20embed%20it%20right%20here.%20Supported%20tools%20include%20Claude%20Code%2C%20Gemini%20CLI%2C%20Codex%2C%20GitHub%20Copilot%20CLI%2C%20and%20Pi.%20--%3E%0A%3C%21--%20Sessions%20are%20unlisted%20by%20default%2C%20so%20hit%20Make%20Public%20before%20you%20publish%20or%20judges%20won%27t%20be%20able%20to%20open%20it.%20Check%20your%20transcript%20for%20keys%20and%20sensitive%20data%20first.%20--%3E%0A%0A%3C%21--%20Don%27t%20forget%20to%20add%20a%20cover%20image%20if%20you%20want%21%20--%3E%0A%0A%3C%21--%20Team%20Submissions%3A%20Please%20pick%20one%20member%20to%20publish%20the%20submission%20and%20credit%20teammates%20by%20listing%20their%20DEV%20usernames%20directly%20in%20the%20body%20of%20the%20post.%20--%3E%0A%0A%3C%21--%20Thanks%20for%20participating%21%20--%3E" class="tw-font-semibold tw-text-dolphin hover:tw-text-dolphin-dark tw-ease-in-out tw-duration-300 tw-inline-block tw-mt-4 tw-border tw-border-solid tw-border-zinc-300 tw-px-4 tw-py-2 tw-rounded-md hover:tw-border-dolphin tw-transition-colors">
+  Submission Template
+  <svg class="tw-inline tw-w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.171 9.49897L0.498914 9.49891L0.500003 7.5L9.08455 7.49892L15.1703 7.49857L9.80686 2.13517L11.2211 0.720952L18.9992 8.49913L11.2211 16.2773L9.80686 14.8631L15.171 9.49897Z" fill="currentColor"></path>
+    </svg>
+</a>
+        
+        
+      </div>
+      <div class="challenge-panel__aside">
+        <div>
+          <h4>Judging Criteria</h4>
+          <ul>
+            
+            <li>Meaningful use of Sanity Context and structured content</li>
+            
+            <li>Technical implementation and code quality</li>
+            
+            <li>Use of Knowledge Bases</li>
+            
+            <li>Usability</li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="challenge-panel challenge-prompt">
+      <div>
+        <h3>
+          Path Two: Vibe-Code Something Strange
+        </h3>
+        
+        <div class="content">
+          <p>Prompt your way to a working app. Any AI-native IDE, Next.js or Astro on the front, Sanity behind it.</p>
+<p>This one is judged on the build as much as the result. How deep did you get into Sanity's features? Did you customize the interface? Build a new component to turn videos into gifs? Create a workflow that kicks off an external API call? A rough app with an honest writeup beats a polished one with three sentences.</p>
+<p><strong>Bonus points for reaching past the Studio</strong>. Two things we'd especially like to see prompted into existence:</p>
+<ul>
+<li><strong>App SDK</strong>: build a custom app on top of your content, with real-time data and your own interface, instead of another read-only frontend.</li>
+<li><strong>Workflows</strong>: model a process (content reviews, translations, and so on) as data next to the content, so an agent can move a draft forward and a person can approve it through the same transitions.</li>
+</ul>
+<p>Neither is required. A submission that uses one well will stand out from a pile of blog templates.</p>
+
+        </div>
+        
+        
+        
+        <a href="https://dev.to/new?prefill=---%0Atitle%3A%20%0Apublished%3A%20%0Atags%3A%20devchallenge%2C%20sanitychallenge%2C%20sanity%2C%20ai%0A---%0A%0A%2AThis%20is%20a%20submission%20for%20the%20%5BSanity%20Challenge%2C%20Path%20Two%3A%20Vibe-Code%20Something%20Strange%5D%28https%3A%2F%2Fdev.to%2Fchallenges%2Fsanity-2026-09-16%29%2A%0A%0A%23%23%20What%20I%20Built%0A%3C%21--%20Tell%20us%20about%20the%20app%20you%20prompted%20into%20existence.%20What%20does%20it%20do%20and%20who%20is%20it%20for%3F%20--%3E%0A%0A%23%23%20Demo%0A%3C%21--%20Share%20a%20link%20to%20your%20deployed%20project%20and%20include%20a%20video%20walkthrough%20or%20screenshots.%20--%3E%0A%0A%23%23%20Code%0A%3C%21--%20Embed%20or%20share%20a%20link%20to%20your%20repository.%20--%3E%0A%0A%23%23%20My%20Build%20Process%0A%3C%21--%20This%20is%20the%20heart%20of%20your%20submission.%20Which%20AI-native%20IDE%20did%20you%20use%3F%20Share%20the%20prompts%20that%20worked%2C%20the%20ones%20that%20didn%27t%2C%20where%20the%20model%20got%20stuck%2C%20and%20how%20you%20course-corrected.%20If%20you%20reached%20past%20the%20Studio%20into%20the%20App%20SDK%20or%20Workflows%2C%20tell%20us%20how%20that%20went.%20--%3E%0A%0A%23%23%20Sanity%20Project%20Details%0A%3C%21--%20Required%3A%20share%20your%20Sanity%20project%20ID%20or%20a%20link%20to%20a%20public%20dataset%20URL%20so%20the%20Sanity%20team%20can%20see%20how%20you%20modeled%20and%20used%20your%20structured%20content.%20--%3E%0A%0A%23%23%20Agent%20Session%0A%3C%21--%20Optional%20but%20encouraged%3A%20upload%20your%20transcript%20at%20https%3A%2F%2Fdev.to%2Fagent_sessions%2Fnew%2C%20curate%20or%20slice%20the%20parts%20worth%20showing%2C%20and%20embed%20it%20right%20here.%20Supported%20tools%20include%20Claude%20Code%2C%20Gemini%20CLI%2C%20Codex%2C%20GitHub%20Copilot%20CLI%2C%20and%20Pi.%20--%3E%0A%3C%21--%20Sessions%20are%20unlisted%20by%20default%2C%20so%20hit%20Make%20Public%20before%20you%20publish%20or%20judges%20won%27t%20be%20able%20to%20open%20it.%20Check%20your%20transcript%20for%20keys%20and%20sensitive%20data%20first.%20--%3E%0A%0A%3C%21--%20Don%27t%20forget%20to%20add%20a%20cover%20image%20if%20you%20want%21%20--%3E%0A%0A%3C%21--%20Team%20Submissions%3A%20Please%20pick%20one%20member%20to%20publish%20the%20submission%20and%20credit%20teammates%20by%20listing%20their%20DEV%20usernames%20directly%20in%20the%20body%20of%20the%20post.%20--%3E%0A%0A%3C%21--%20Thanks%20for%20participating%21%20--%3E" class="tw-font-semibold tw-text-dolphin hover:tw-text-dolphin-dark tw-ease-in-out tw-duration-300 tw-inline-block tw-mt-4 tw-border tw-border-solid tw-border-zinc-300 tw-px-4 tw-py-2 tw-rounded-md hover:tw-border-dolphin tw-transition-colors">
+  Submission Template
+  <svg class="tw-inline tw-w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.171 9.49897L0.498914 9.49891L0.500003 7.5L9.08455 7.49892L15.1703 7.49857L9.80686 2.13517L11.2211 0.720952L18.9992 8.49913L11.2211 16.2773L9.80686 14.8631L15.171 9.49897Z" fill="currentColor"></path>
+    </svg>
+</a>
+        
+        
+      </div>
+      <div class="challenge-panel__aside">
+        <div>
+          <h4>Judging Criteria</h4>
+          <ul>
+            
+            <li>Quality and honesty of the build process writeup</li>
+            
+            <li>Functionality of the finished app</li>
+            
+            <li>Thoughtfulness of the schema behind it</li>
+            
+            <li>Creativity and originality</li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    
+  </section>
+  
+  
+  
+  
+  
+  <section class="challenge-content-section">
+    <h2>
+      How To Participate
+    </h2>
+    <div class="challenge-copy">
+        <div class="content">
+          <p>Publish a post on DEV using the prompt submission templates above and be sure to include the required challenge tag <a href="https://dev.to/t/sanitychallenge">#sanitychallenge</a>. You may submit to both paths, but you must create a separate post for each.</p>
+<p>If your app requires logging in, please provide testing credentials in your submission and/or instructions on how to best test your application for judges.</p>
+<p><strong>Every submission needs to include your Sanity project ID or a link to a public dataset URL</strong> so the Sanity team can see how you modeled and used your structured content. Submissions without it may be considered incomplete.</p>
+<p><strong>Optional but encouraged: embed your agent session.</strong> Upload a transcript from Claude Code, Gemini CLI, Codex, GitHub Copilot CLI, or Pi, curate or slice the parts worth showing, and drop it straight into your post via the <a href="https://dev.to/agent_sessions/new">Agent Sessions uploader</a>. Uploads are unlisted by default, so use the Make Public button or judges won't be able to open your session — and check your transcript for keys and sensitive data before publishing.</p>
+
+        </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  <section class="challenge-content-section">
+    <h2>
+      Helpful Links &amp; Resources
+    </h2>
+    <div class="challenge-panel challenge-split-content">
+      <div>
+        <div class="content">
+          <ul>
+<li><a href="https://www.sanity.io/docs/ai/sanity-context">Sanity Context</a>: required reading for the agent path</li>
+<li><a href="https://sanity.io/learn">Day One with Sanity</a>: the guided course, start here if you're new</li>
+<li><a href="https://sanity.io/docs">Sanity docs</a>: schemas, GROQ, Studio</li>
+<li><a href="https://www.sanity.io/docs/workflows/cookbook">Workflows</a>: AI content pipelines, coordinated releases, and more</li>
+<li><a href="https://www.sanity.io/docs/ai/sanity-context-knowledge-bases">Knowledge Bases</a>: getting started with Knowledge Bases</li>
+<li><a href="https://www.sanity.io/docs/app-sdk/sdk-introduction">App SDK</a>: for the bonus path</li>
+<li>Framework quickstarts: <a href="https://www.sanity.io/docs/next-js-quickstart">Next.js</a>, <a href="https://www.sanity.io/docs/astro-quickstart">Astro</a>, <a href="https://www.sanity.io/docs/nuxt-js-quickstart">Nuxt</a>, <a href="https://www.sanity.io/docs/react-router-quickstart">React Router</a></li>
+<li><a href="https://snty.link/community">Sanity Discord</a>: the Sanity team is in there, including a #mcp-server channel</li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  
+  
+  <section class="challenge-content-section" aria-labelledby="challenge-faq-heading">
+    <h2 id="challenge-faq-heading">Frequently Asked Questions</h2>
+    <div class="content faq-content">
+      <h3 id="Participation" tabindex="-1">Participation</h3>
+<h4 id="Can-I-submit-to-both-paths" tabindex="-1">Can I submit to both paths?</h4>
+<p>Yes, you may submit to both Path One and Path Two, but you must publish a separate post for each.</p>
+<h4 id="Can-I-submit-more-than-once-to-the-same-path" tabindex="-1">Can I submit more than once to the same path?</h4>
+<p>No, only one submission per path is allowed. This is to encourage quality over quantity.</p>
+<h4 id="Can-I-work-on-a-team" tabindex="-1">Can I work on a team?</h4>
+<p>Yes, you can work on teams of up to four people.</p>
+<ul>
+<li>If you collaborate with anyone, you'll need to list their DEV handles in your submission post so we can award a badge to your entire team! <strong>Please only publish one submission per team.</strong></li>
+<li>DEV does not handle prize-splitting, so in the event that your submission wins, you will need to split the prize amongst yourselves. Thank you for understanding!</li>
+</ul>
+<h4 id="How-old-do-I-have-to-be-to-participate" tabindex="-1">How old do I have to be to participate?</h4>
+<p>Participants need to be 18+ in order to participate.</p>
+<h4 id="If-I-live-in-X-am-I-eligible-to-participate" tabindex="-1">If I live in X, am I eligible to participate?</h4>
+<p>For eligibility rules, see our <a href="https://dev.to/page/official-hackathon-rules">official challenge rules</a>.</p>
+<h3 id="Submission" tabindex="-1">Submission</h3>
+<h4 id="Can-my-submission-include-open-source-code" tabindex="-1">Can my submission include open source code?</h4>
+<p>Riffing on open source code and borrowing and improving on previous work/ideas is encouraged but it's important your changes are significant enough to ensure your submission is valid.</p>
+<h4 id="What-happens-if-my-submission-is-considered-plagiarized-or-invalid" tabindex="-1">What happens if my submission is considered plagiarized or invalid?</h4>
+<p>Anything deemed to be plagiarism will not be eligible for prizes. Incidental plagiarism may simply result in your disqualification from the challenge (regardless of the number of other valid submissions you have published). Egregious plagiarism will result in your suspension from DEV entirely. Any non-generic, non-trivial usage of prior work, including open source code must be credited in your submission.</p>
+<h4 id="Do-submissions-have-to-be-in-English" tabindex="-1">Do submissions have to be in English?</h4>
+<p>Non-english submissions are eligible for a completion badge but not eligible for prizes due to the current limitations of our judges. We will not be judging on mastery of the English language, so please don't let this deter you from submitting if you are not a native English speaker! We hope to evolve this in the future to be more accommodating.</p>
+<h4 id="Can-I-use-AI" tabindex="-1">Can I use AI?</h4>
+<p>Use of AI is allowed as long as all other rules are followed. We want to give you a chance to show off your skills in realistic scenarios. If you use AI tools to help you achieve your submission, all the power to you.</p>
+<h3 id="Judging-and-Prizing" tabindex="-1">Judging and Prizing</h3>
+<h4 id="Can-there-be-ties" tabindex="-1">Can there be ties?</h4>
+<p>In the event of a tie in scoring between judges, the judges will select the entry that received the highest number of positive reactions on their DEV post to determine the winner.</p>
+<h4 id="How-will-I-know-if-I-won" tabindex="-1">How will I know if I won?</h4>
+<p>Winners will be announced in a DEV post on the winner announcement date noted in our key dates section.</p>
+<h4 id="When-will-I-receive-my-DEV-badge" tabindex="-1">When will I receive my DEV badge?</h4>
+<p>Both participation and winner badges will be awarded, in most cases, the same day as the winner announcement.</p>
+<h4 id="When-will-I-receive-my-prizes" tabindex="-1">When will I receive my prizes?</h4>
+<p>The DEV Team will contact you via the email associated with your DEV profile within, at most, 10 business days of the announcement date to share the details of claiming your prizes.</p>
+<h4 id="What-steps-do-I-need-to-take-to-receive-my-cash-prize" tabindex="-1">What steps do I need to take to receive my cash prize?</h4>
+<p>The winner (including each member of a team) may be required to sign and return an affidavit of eligibility and publicity/liability release, and provide any additional tax filing information (such as a W-9, social security number or Federal tax ID number) within seven (7) business days following the date of your first email notification.</p>
+
+    </div>
+  </section>
+  
+  
+  
+  <section class="challenge-content-section">
+    <h2>
+      Sanity Challenge Rules </h2>
+    <div class="content">
+      <p>NO PURCHASE NECESSARY. Open only to 18+. Contest entry period ends October 4, 2026 at 11:59 PM PDT. Contest is void where prohibited or restricted by law or regulation. All entries must be submitted during the contest period. For Official Rules, see <a href="https://dev.to/page/sanity-challenge-v26-09-16-contest-rules">Sanity Challenge Contest Rules</a> and <a href="https://dev.to/page/official-hackathon-rules">General Contest Official Rules</a>.</p>
+
+    </div>
+  </section>
+  
+</div>
+
+<script>
+
+  function enhanceChallengeFaq() {
+    document.querySelectorAll('.faq-content:not(.faq-content--enhanced)').forEach((faq, faqIndex) => {
+      const children = Array.from(faq.children);
+
+      if (!children.some((child) => child.tagName === 'H4')) return;
+
+      faq.replaceChildren();
+      faq.classList.add('faq-content--enhanced');
+
+      let group;
+      let groupIndex = 0;
+      let items;
+      let answer;
+
+      const createGroup = (heading) => {
+        group = document.createElement(heading ? 'section' : 'div');
+        group.className = 'faq-group';
+        items = document.createElement('div');
+        items.className = 'faq-group__items';
+
+        if (heading) {
+          heading.id ||= `challenge-faq-${faqIndex}-${groupIndex}`;
+          heading.classList.add('faq-group__title');
+          group.setAttribute('aria-labelledby', heading.id);
+          group.append(heading);
+        } else {
+          group.classList.add('faq-group--uncategorized');
+        }
+
+        group.append(items);
+        faq.append(group);
+        groupIndex += 1;
+        answer = null;
+      };
+
+      children.forEach((child) => {
+        if (child.tagName === 'H3') {
+          createGroup(child);
+          return;
+        }
+
+        if (!group) createGroup();
+
+        if (child.tagName === 'H4') {
+          const item = document.createElement('details');
+          const summary = document.createElement('summary');
+          answer = document.createElement('div');
+
+          item.className = 'faq-item';
+          answer.className = 'faq-item__answer';
+          summary.append(child);
+          item.append(summary, answer);
+          items.append(item);
+          return;
+        }
+
+        if (answer) {
+          answer.append(child);
+        } else {
+          items.append(child);
+        }
+      });
+    });
+  }
+
+  enhanceChallengeFaq();
+
+  window.challenge = function(endDateString, calculatedStatus) {
+    const endDate = new Date(endDateString);
+    const difference = endDate - new Date();
+    const ended = (calculatedStatus === 'Ended' || difference <= 0);
+
+    return {
+      ended: ended,
+    }
+  }
+
+  window.eventSignup = function(nameSlug, varSlug) {
+    return {
+      isSignedUp: false,
+      nameSlug: nameSlug,
+      varSlug: varSlug,
+      loading: true,
+      showAuthError: false,
+      userSignedIn: false,
+
+      init() {
+        
+
+        this.userSignedIn = !!document.head.querySelector('meta[name="user-signed-in"][content="true"]') || !!document.body.getAttribute('data-user');
+        this.fetchStatus();
+      },
+
+      fetchStatus() {
+        if (!this.userSignedIn) {
+          this.loading = false;
+          return;
+        }
+        fetch('/events/' + this.nameSlug + '/' + this.varSlug + '/signup_status')
+          .then(res => {
+            if (!res.ok) throw new Error('Status check failed');
+            return res.json();
+          })
+          .then(data => {
+            this.isSignedUp = data.signed_up;
+            this.loading = false;
+          })
+          .catch(err => {
+            console.error('Error fetching signup status:', err);
+            this.loading = false;
+          });
+      },
+
+      toggleSignup() {
+        if (!this.userSignedIn) {
+          window.location.href = '/enter?return_to=' + encodeURIComponent(window.location.pathname + window.location.search);
+          return;
+        }
+        
+        this.loading = true;
+        const tokenMeta = document.querySelector("meta[name='csrf-token']");
+        const csrfToken = tokenMeta ? tokenMeta.getAttribute('content') : '';
+
+        fetch('/events/' + this.nameSlug + '/' + this.varSlug + '/signup.json', {
+          method: this.isSignedUp ? 'DELETE' : 'POST',
+          headers: {
+            'X-CSRF-Token': csrfToken,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Signup toggle failed');
+          return res.json();
+        })
+        .then(data => {
+          this.isSignedUp = data.signed_up;
+          this.$dispatch('notify', this.isSignedUp ? "You've successfully signed up for this challenge!" : "You've unregistered from this challenge.");
+        })
+        .catch(err => {
+          console.error('Error during event signup:', err);
+          this.showAuthError = true;
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+      }
+    }
+  }
+
+  
+
+    
+      
+      
+    
+
+    window.following = function() {
+      const tagName = "sanitychallenge";
+      return {
+        isFollowing: false,
+        tagId: 484422,
+        showAuthError: false,
+
+        
+        init() {
+          const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+              if (mutation.type === 'attributes' && mutation.attributeName === 'data-user') {
+                const newUserData = mutation.target.getAttribute('data-user');
+                const newUser = JSON.parse(newUserData);
+                const followedTags = JSON.parse(newUser.followed_tags);
+                const challengeTag = followedTags.find((tag) => {return (tag.name === tagName)});
+                this.isFollowing = !!challengeTag;
+              }
+            });
+          });
+
+          const config = { attributes: true, attributeFilter: ['data-user'] };
+          observer.observe(document.body, config);
+        },
+        
+        toggleFollow() {
+          const verb = this.isFollowing ? 'unfollow' : 'follow';
+          const data = {
+            explicit_points: 1,
+            followable_id: this.tagId,
+            followable_type: 'Tag',
+            verb: verb
+          };
+
+          fetch('/follows', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content')
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => {
+            if (response.ok) {
+              this.isFollowing = !this.isFollowing;
+              this.$dispatch('notify',this.isFollowing ? 'Following #sanitychallenge' : 'Unfollowing #sanitychallenge')
+            } else if (response.status === 401) {
+              // User is not authenticated
+              this.showAuthError = true;
+            } else {
+              console.error('Failed to toggle follow state');
+              this.showAuthError = true;
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            this.showAuthError = true;
+          });
+        }
+      };
+    }
+
+    
+</script>
+
+  <div x-data="snackbar()" x-transition x-show="trigger" @notify.window="show($event.detail)" @notify-error.window="showError($event.detail)" 
+       :class="isError ? 'tw-bg-red-600' : 'tw-bg-zinc-900'" 
+       class="tw-fixed tw-left-8 tw-bottom-8 tw-rounded-md tw-text-zinc-50 tw-py-2 tw-px-4"
+       style="display: none;">
+    <span x-text="message"></span>
+    <button type="button" @click="trigger = false" class="tw-ml-2 tw-rounded-md tw-p-2 tw-font-semibold tw-text-zinc-50 hover:tw-bg-zinc-800">
+      Dismiss
+    </button>
+  </div>
+</div>
+
+<script>
+  function snackbar() {
+    return {
+      trigger: false,
+      message: '',
+      timeoutId: '',
+      isError: false,
+      show: function(message) {
+        clearTimeout(this.timeOutId);
+        this.message = message;
+        this.isError = false;
+        this.trigger = true;
+
+        this.timeOutId = setTimeout(() => {
+          this.trigger = false;
+        },5000)
+      },
+      showError: function(message) {
+        clearTimeout(this.timeOutId);
+        this.message = message;
+        this.isError = true;
+        this.trigger = true;
+
+        this.timeOutId = setTimeout(() => {
+          this.trigger = false;
+        },5000)
+      }
+    };
+  }
+</script>
+
+  </div>
+</div>
+
+</div>
+
+
+    
+  
+</main>
+<div class="js-billboard-container pb-4 crayons-layout__comments-billboard" data-async-url="/bmar11/page_fixed_bottom?page_id=1258"></div>
+<script src="https://assets.dev.to/assets/billboard-7b17e25e09e8bb9e61c53725e496452194b09586f2aa90ef933bdbdae5b2d2c4.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/pageFunctionality-29aef04e1487af25148b0061244c993bdf0d3a0eac17acc3008c19a2e45de762.js" defer="defer"></script>
+
+    <div id="runtime-banner-container"></div>
+    <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;image_upload_server_error&quot;:&quot;A server error has occurred!&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;,&quot;search_placeholder&quot;:&quot;Search...&quot;,&quot;search_find_related_posts&quot;:&quot;Find related posts...&quot;,&quot;search_powered_by&quot;:&quot;Powered by Algolia&quot;,&quot;search_submit_search&quot;:&quot;Submit search for advanced filtering.&quot;,&quot;search_displaying_recommendations&quot;:&quot;Displaying Algolia Recommendations — Start typing to search&quot;,&quot;article_form_save_changes&quot;:&quot;Save changes&quot;,&quot;article_form_schedule&quot;:&quot;Schedule&quot;,&quot;article_form_publish&quot;:&quot;Publish&quot;,&quot;article_form_loading_preview&quot;:&quot;Loading preview&quot;,&quot;article_form_preview_loaded&quot;:&quot;Preview loaded&quot;,&quot;article_form_co_authors&quot;:&quot;Co-authors&quot;,&quot;article_form_co_authors_description&quot;:&quot;Add up to 4 co-authors from %{org_name}.&quot;,&quot;article_form_co_authors_placeholder&quot;:&quot;Add up to 4...&quot;,&quot;article_form_co_author_invitations_description&quot;:&quot;Invite people who follow you. They&#39;ll be credited once they accept from their notifications.&quot;,&quot;article_form_co_author_invitations_placeholder&quot;:&quot;Search your followers...&quot;,&quot;article_form_co_author_invitations_declined&quot;:&quot;Declined: %{names}&quot;,&quot;article_form_co_author_invitation_new&quot;:&quot;Invite on save&quot;,&quot;article_form_co_author_invitation_pending&quot;:&quot;Pending&quot;,&quot;article_form_co_author_invitation_accepted&quot;:&quot;Accepted&quot;,&quot;article_form_co_author_invitation_edit&quot;:&quot;Edit %{name}&quot;,&quot;article_form_co_author_invitation_remove&quot;:&quot;Remove %{name}&quot;,&quot;comments_preview&quot;:&quot;Preview&quot;,&quot;comments_continue_editing&quot;:&quot;Continue editing&quot;,&quot;survey_enter_response&quot;:&quot;Enter your response here...&quot;,&quot;survey_thank_you_response&quot;:&quot;Thank you for your response.&quot;,&quot;survey_thank_you_completing&quot;:&quot;Thank you for completing the survey!&quot;,&quot;dashboard_analytics_readers&quot;:&quot;Readers&quot;,&quot;dashboard_analytics_avg_read_time&quot;:&quot;avg. read time %{seconds}s&quot;,&quot;dashboard_analytics_comments&quot;:&quot;Comments&quot;,&quot;dashboard_analytics_reactions&quot;:&quot;Reactions&quot;,&quot;dashboard_analytics_unique_reactors&quot;:&quot;from %{count} unique users&quot;,&quot;dashboard_analytics_bookmarks&quot;:&quot;Bookmarks&quot;,&quot;dashboard_analytics_followers&quot;:&quot;New Followers&quot;,&quot;top_contributors_empty&quot;:&quot;No engagers found for this period.&quot;,&quot;top_contributors_reactions&quot;:&quot;reactions&quot;,&quot;top_contributors_comments&quot;:&quot;comments&quot;,&quot;top_contributors_weight_note&quot;:&quot;Comments carry more weight&quot;,&quot;follower_engagement_ratio&quot;:&quot;%{ratio}% of followers engaged&quot;,&quot;follower_engagement_detail&quot;:&quot;(%{engaged} of %{total})&quot;,&quot;dashboard_analytics_no_data&quot;:&quot;No data available for this period&quot;,&quot;dashboard_analytics_no_referrers&quot;:&quot;No traffic sources yet&quot;,&quot;stats_by&quot;:&quot;by&quot;,&quot;editor_new_title&quot;:&quot;New post title here...&quot;,&quot;editor_body_placeholder&quot;:&quot;Write your post content here...&quot;,&quot;tags_field_label&quot;:&quot;Add up to 4 tags&quot;,&quot;tags_field_placeholder&quot;:&quot;Add up to 4 tags...&quot;,&quot;counted_organization&quot;:{&quot;one&quot;:&quot;%{count} organization&quot;,&quot;other&quot;:&quot;%{count} organizations&quot;},&quot;counted_user&quot;:{&quot;one&quot;:&quot;%{count} person&quot;,&quot;other&quot;:&quot;%{count} people&quot;},&quot;not_following&quot;:&quot;You&#39;re not following anyone&quot;,&quot;following_everyone&quot;:&quot;You&#39;re following %{details} (everyone)&quot;,&quot;you_are_following&quot;:&quot;You&#39;re following&quot;,&quot;and&quot;:&quot;and&quot;}}}"></div>
+  </div>
+</div>
+    
+
+<footer id="footer" class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+
+
+
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A space to discuss and keep up software development and manage your software career
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/challenges">
+      DEV Challenges
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/readinglist">
+      Reading List
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/++">
+      DEV++
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/deved">
+      DEV Education Tracks
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/help">
+      DEV Help
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/advertise">
+      Advertise on DEV
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/organizations">
+      Organization Accounts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/showcase">
+      DEV Showcase
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com/">
+      DEV Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://mlh.io/">
+      MLH
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of Use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2026.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://media2.dev.to/dynamic/image/width=190,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="https://dev.to/enter?signup_subforem=1" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="https://dev.to/enter?signup_subforem=1&amp;state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://assets.dev.to/assets/signupModalShortcuts-26d9b060053ea01474ae33d1e545700ae8416b0baf9f40c401957e81dd1ece4e.js" defer="defer"></script>
+
+    <div id="cookie-consent"></div>
+  <div id="reaction-category-resources" class="hidden" aria-hidden="true">
+    <img data-name="Like" data-slug="like" data-position="1" src="https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+    <img data-name="Unicorn" data-slug="unicorn" data-position="2" src="https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+    <img data-name="Exploding Head" data-slug="exploding_head" data-position="3" src="https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="18" height="18" />
+    <img data-name="Raised Hands" data-slug="raised_hands" data-position="4" src="https://assets.dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="18" height="18" />
+    <img data-name="Fire" data-slug="fire" data-position="5" src="https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="18" height="18" />
+</div>
+
+    <script>
+  var userSignedIn = false;
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initAuth();
+  } else {
+    document.addEventListener('DOMContentLoaded', initAuth);
+  }
+
+  function initAuth() {
+      var paramToken = new URLSearchParams(window.location.search).get('jwt');
+
+      if (paramToken && !userSignedIn) {
+        authenticateUser(paramToken);
+      } else {
+        var iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = 'https://forem.com/auth_pass/iframe?passed_domain=' + encodeURIComponent(window.location.origin || (window.location.protocol + '//' + window.location.host));
+
+        document.body.appendChild(iframe);
+
+        window.addEventListener('message', function(event) {
+          if (event.origin !== 'https://forem.com' && event.origin !== window.location.origin) {
+            return;
+          }
+
+          var data = event.data;
+
+          if (data.authenticated && !userSignedIn) {
+            authenticateUser(data.token);
+          } else if(data.authenticated && window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+            window.ReactNativeWebView.postMessage(JSON.stringify({
+              action: 'login',
+              token: data.token,
+            }));
+          }
+        });
+      }
+
+      function authenticateUser(token) {
+        fetch('/auth_pass/token_login', {
+          method: 'POST',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': getMetaContent('csrf-token'),
+          },
+          body: JSON.stringify({ token: token }),
+        })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          if (data.success) {
+            if (document.head.querySelector('meta[name="user-signed-in"][content="false"]')) {
+              // Reload the page to update the user's state
+              location.reload();
+            }
+          }
+        })
+        .catch(function(error) {
+          console.error('Error during authentication:', error);
+        });
+      }
+
+      function getMetaContent(name) {
+        var element = document.querySelector('meta[name="' + name + '"]');
+        return element ? element.getAttribute('content') : '';
+      }
+  }
+</script>
+
+  
+  
+  
+  </body>
+  </html>

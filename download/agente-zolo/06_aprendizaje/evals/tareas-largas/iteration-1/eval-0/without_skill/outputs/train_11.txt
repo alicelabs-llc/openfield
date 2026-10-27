@@ -1,0 +1,4 @@
+Query: dime la hora
+Triggered: False
+Expected: no-trigger
+Pass: True

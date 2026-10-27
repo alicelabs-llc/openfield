@@ -1,0 +1,129 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] test: add TestValue_Raw table-driven test (#460)
+
+Adds the missing `TestValue_Raw` test that mirrors the existing
+`TestObject_Raw` and `TestArray_Raw` tests.
+
+Covers:
+- nil value
+- bool value
+- number (int, float) values
+- string value
+- object value
+- array value
+- nested structures
+
+Closes #460.
+
+---
+ value_test.go | 88 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 88 insertions(+)
+
+diff --git a/value_test.go b/value_test.go
+index 1111111..2222222 100644
+--- a/value_test.go
++++ b/value_test.go
+@@ -245,6 +245,94 @@ func TestArray_Raw(t *testing.T) {
+ 	})
+ }
+ 
++func TestValue_Raw(t *testing.T) {
++	t.Parallel()
++
++	tests := []struct {
++		name    string
++		make    func(t *testing.T) *httpexpect.Value
++		want    interface{}
++		wantErr bool
++	}{
++		{
++			name: "nil",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `null`)
++			},
++			want: nil,
++		},
++		{
++			name: "bool true",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `true`)
++			},
++			want: true,
++		},
++		{
++			name: "bool false",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `false`)
++			},
++			want: false,
++		},
++		{
++			name: "int",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `42`)
++			},
++			want: float64(42),
++		},
++		{
++			name: "float",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `3.14`)
++			},
++			want: 3.14,
++		},
++		{
++			name: "string",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `"hello"`)
++			},
++			want: "hello",
++		},
++		{
++			name: "object",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `{"foo": "bar"}`)
++			},
++			want: map[string]interface{}{"foo": "bar"},
++		},
++		{
++			name: "array",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `[1, 2, 3]`)
++			},
++			want: []interface{}{float64(1), float64(2), float64(3)},
++		},
++		{
++			name: "nested",
++			make: func(t *testing.T) *httpexpect.Value {
++				return httpexpect.NewValue(t, `{"a": [1, {"b": true}]}`)
++			},
++			want: map[string]interface{}{
++				"a": []interface{}{
++					float64(1),
++					map[string]interface{}{"b": true},
++				},
++			},
++		},
++	}
++
++	for _, tc := range tests {
++		t.Run(tc.name, func(t *testing.T) {
++			t.Parallel()
++			value := tc.make(t)
++			raw := value.Raw()
++			if tc.wantErr {
++				return // expecting an error reported via chain
++			}
++			if !reflect.DeepEqual(raw, tc.want) {
++				t.Errorf("Raw() = %#v, want %#v", raw, tc.want)
++			}
++		})
++	}
++}
++
+ // ... existing tests below ...
+ 
+-- 
+2.39.3 (Apple Git-128)

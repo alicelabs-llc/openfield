@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="GzkxF2NMHUFcGR8LCxlQdTcjOxEYKnkElmnf24mw6-MryZ96oDJY-B3J">
+
+    <title data-suffix=" | Algora">Turso Challenge | Algora</title>
+
+      <meta name="twitter:title" content="Turso Challenge">
+      <meta property="og:title" content="Turso Challenge">
+
+
+      <meta name="description" content="Turso rewrote SQLite in Rust - find a bug to win $1,000!">
+      <meta name="twitter:description" content="Turso rewrote SQLite in Rust - find a bug to win $1,000!">
+      <meta property="og:description" content="Turso rewrote SQLite in Rust - find a bug to win $1,000!">
+
+    <meta name="twitter:image:src" content="https://algora.io/images/challenges/limbo/og.png">
+    <meta property="og:image" content="https://algora.io/images/challenges/limbo/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+      <meta property="og:url" content="https://algora.io/challenges/turso">
+
+    <meta name="twitter:site" content="@algoraio">
+    <meta property="og:site_name" content="Algora">
+    <meta property="og:type" content="website">
+
+    
+
+      <link rel="canonical" href="https://algora.io/challenges/turso">
+
+    <link rel="icon" href="/favicon-4d1310e26d20fa51d2c2dbbf7ba46bdb.ico?vsn=d">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/logo-192px-3af980e2ae655a21129079b00a574a8c.png?vsn=d">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/logo-512px-13f745e9640e7882366719848ac4b85e.png?vsn=d">
+    <link rel="apple-touch-icon" sizes="192x192" href="/images/logo-192px-3af980e2ae655a21129079b00a574a8c.png?vsn=d">
+    <link rel="apple-touch-icon" sizes="512x512" href="/images/logo-512px-13f745e9640e7882366719848ac4b85e.png?vsn=d">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link phx-track-static rel="stylesheet" href="/assets/app-93a028e47ae41af79e883654fb1de8f0.css?vsn=d">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap">
+    </noscript>
+    <script defer phx-track-static type="text/javascript" src="/assets/app-81c9d30fb4e76fca0c9ae39691e824af.js?vsn=d">
+    </script>
+    <script async data-exclude="/preferences/**" src="https://plausible.io/js/pa-K2_PRCUzHnAdNVAIVrSLM.js">
+    </script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+  </head>
+  <body class="dark">
+    <div id="phx-GOFKhUvG9Yh1RELR" data-phx-main data-phx-session="SFMyNTY.g2gDaAJhBnQAAAAIdwJpZG0AAAAUcGh4LUdPRktoVXZHOVloMVJFTFJ3B3Nlc3Npb250AAAAAHcEdmlld3clRWxpeGlyLkFsZ29yYVdlYi5DaGFsbGVuZ2VzLkxpbWJvTGl2ZXcKcGFyZW50X3BpZHcDbmlsdwZyb3V0ZXJ3F0VsaXhpci5BbGdvcmFXZWIuUm91dGVydwhyb290X3BpZHcDbmlsdwlyb290X3ZpZXd3JUVsaXhpci5BbGdvcmFXZWIuQ2hhbGxlbmdlcy5MaW1ib0xpdmV3EWxpdmVfc2Vzc2lvbl9uYW1ldwpvbmJvYXJkaW5nbgYAi_f4aqEBYgABUYA.sWb9vT48I-MYb8M1YwEaePGl6QKHiDHrUoNnkfgiof4" data-phx-static="SFMyNTY.g2gDaAJhBnQAAAADdwJpZG0AAAAUcGh4LUdPRktoVXZHOVloMVJFTFJ3BWZsYXNodAAAAAB3CmFzc2lnbl9uZXdqbgYAi_f4aqEBYgABUYA.w152HEJ3Le-b1gi7iFEBKnioaEPqXt337epkK00oLFQ"><main>
+  
+
+
+  <style>
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+</style>
+
+<div class="relative bg-background dot-grid">
+  <div class="absolute top-0 z-10 w-full">
+    <header class="absolute inset-x-0 top-0 z-50">
+  <nav class="flex px-6 py-4 container items-center justify-between max-w-[100rem] lg:px-8 lg:py-6 mx-auto" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/" data-phx-link="redirect" data-phx-link-state="push" aria-label="Algora">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.14 39.42" fill="currentColor" class="fill-current text-foreground w-auto h-8">
+  <g>
+    <path d="M19.25 9v19.24H16v-2.37a9.63 9.63 0 1 1 0-14.51V9ZM16 18.63A6.32 6.32 0 1 0 9.64 25 6.32 6.32 0 0 0 16 18.63ZM22.29 0h3.29v28.24h-3.29ZM47.6 34.27v.07a5.41 5.41 0 0 1-.69 2.52 4.78 4.78 0 0 1-1.39 1.54 5.61 5.61 0 0 1-3.25 1H34a5.21 5.21 0 0 1-3.88-1.5 6.25 6.25 0 0 1-1.53-4.2l3.29.11a2.58 2.58 0 0 0 .62 1.83 2 2 0 0 0 1.5.47h8.29c1.68 0 2-1.1 2-1.75a2 2 0 0 0-2-1.76h-8.2a5.35 5.35 0 0 1-5.52-5.51 6.07 6.07 0 0 1 1.24-3.62 9.5 9.5 0 0 1-1.31-4.86A9.62 9.62 0 0 1 38.11 9a9.72 9.72 0 0 1 5.37 1.61A5.78 5.78 0 0 1 47.53 9v3.28a2.54 2.54 0 0 0-1.72.63 9.67 9.67 0 0 1 1.86 5.7 9.79 9.79 0 0 1-5.44 8.7 10 10 0 0 1-4.16.91 9.75 9.75 0 0 1-6.07-2.1 3 3 0 0 0-.18.95 2.08 2.08 0 0 0 2.23 2.27h8.18a5.61 5.61 0 0 1 3.25 1.05 5.45 5.45 0 0 1 2.12 3.88ZM31.78 18.63a6.46 6.46 0 0 0 .84 3.15 5.88 5.88 0 0 0 1.43 1.71A6.34 6.34 0 0 0 38.11 25a6.26 6.26 0 0 0 6.32-6.32 6.27 6.27 0 0 0-2.16-4.71 6.2 6.2 0 0 0-4.16-1.61 6.35 6.35 0 0 0-6.33 6.27ZM68.54 18.63A9.63 9.63 0 1 1 58.93 9a9.62 9.62 0 0 1 9.61 9.63Zm-9.61-6.32a6.32 6.32 0 1 0 6.32 6.32 6.35 6.35 0 0 0-6.32-6.32ZM80.35 14.1h-3.28a1.9 1.9 0 0 0-.4-1.31 2 2 0 0 0-1.28-.48 1.83 1.83 0 0 0-2 1.57v14.36h-3.27V9h3.29v.4a5.24 5.24 0 0 1 1.9-.4 5.47 5.47 0 0 1 3.62 1.35 5 5 0 0 1 1.42 3.75ZM100.14 9v19.24h-3.29v-2.37a9.63 9.63 0 1 1 0-14.51V9Zm-3.29 9.64A6.32 6.32 0 1 0 90.53 25a6.32 6.32 0 0 0 6.32-6.37Z">
+    </path>
+  </g>
+</svg>
+</a>
+    </div>
+    <!-- Desktop nav -->
+    
+
+    <div class="flex items-center justify-end gap-4 lg:flex-1">
+      <a href="tel:+16504202207" class="hidden lg:flex items-center justify-center text-sm text-foreground/80 hover:text-foreground">
+        <span class="tabler-phone size-5 shrink-0"></span>
+        <span class="ml-1 shrink-0 font-medium">1-650-420-2207</span>
+      </a>
+      
+  <a href="https://cal.com/ioannisflo" class="hidden px-4 py-2 rounded-lg border-background/20 bg-foreground text-background transition-colors whitespace-nowrap items-center justify-center font-semibold shadow text-sm h-9 focus-visible:outline-background focus-visible:ring-ring focus-visible:outline-none focus-visible:ring-1 lg:inline-flex disabled:cursor-not-allowed disabled:opacity-50 disabled:opacity-75 hover:border-background/40 hover:bg-foreground/90 border phx-submit-loading:opacity-75" rel="noopener" target="_blank">
+    
+        Schedule a call
+      
+  </a>
+
+      
+      <!-- Mobile menu button -->
+      <div class="flex lg:hidden">
+        <button type="button" class="rounded-md p-2.5 text-muted-foreground hover:text-foreground" onclick="document.getElementById('mobile-menu').classList.remove('hidden'); document.body.classList.add('overflow-hidden')">
+          <span class="sr-only">Open main menu</span>
+          <span class="tabler-menu h-6 w-6"></span>
+        </button>
+      </div>
+      
+      
+    </div>
+  </nav>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 z-50"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-border scrollbar-thin">
+      <!-- Mobile menu content -->
+      <div class="flex items-center justify-between">
+        <a href="/" data-phx-link="redirect" data-phx-link-state="push" aria-label="Algora">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.14 39.42" fill="currentColor" class="fill-current text-foreground w-auto h-8">
+  <g>
+    <path d="M19.25 9v19.24H16v-2.37a9.63 9.63 0 1 1 0-14.51V9ZM16 18.63A6.32 6.32 0 1 0 9.64 25 6.32 6.32 0 0 0 16 18.63ZM22.29 0h3.29v28.24h-3.29ZM47.6 34.27v.07a5.41 5.41 0 0 1-.69 2.52 4.78 4.78 0 0 1-1.39 1.54 5.61 5.61 0 0 1-3.25 1H34a5.21 5.21 0 0 1-3.88-1.5 6.25 6.25 0 0 1-1.53-4.2l3.29.11a2.58 2.58 0 0 0 .62 1.83 2 2 0 0 0 1.5.47h8.29c1.68 0 2-1.1 2-1.75a2 2 0 0 0-2-1.76h-8.2a5.35 5.35 0 0 1-5.52-5.51 6.07 6.07 0 0 1 1.24-3.62 9.5 9.5 0 0 1-1.31-4.86A9.62 9.62 0 0 1 38.11 9a9.72 9.72 0 0 1 5.37 1.61A5.78 5.78 0 0 1 47.53 9v3.28a2.54 2.54 0 0 0-1.72.63 9.67 9.67 0 0 1 1.86 5.7 9.79 9.79 0 0 1-5.44 8.7 10 10 0 0 1-4.16.91 9.75 9.75 0 0 1-6.07-2.1 3 3 0 0 0-.18.95 2.08 2.08 0 0 0 2.23 2.27h8.18a5.61 5.61 0 0 1 3.25 1.05 5.45 5.45 0 0 1 2.12 3.88ZM31.78 18.63a6.46 6.46 0 0 0 .84 3.15 5.88 5.88 0 0 0 1.43 1.71A6.34 6.34 0 0 0 38.11 25a6.26 6.26 0 0 0 6.32-6.32 6.27 6.27 0 0 0-2.16-4.71 6.2 6.2 0 0 0-4.16-1.61 6.35 6.35 0 0 0-6.33 6.27ZM68.54 18.63A9.63 9.63 0 1 1 58.93 9a9.62 9.62 0 0 1 9.61 9.63Zm-9.61-6.32a6.32 6.32 0 1 0 6.32 6.32 6.35 6.35 0 0 0-6.32-6.32ZM80.35 14.1h-3.28a1.9 1.9 0 0 0-.4-1.31 2 2 0 0 0-1.28-.48 1.83 1.83 0 0 0-2 1.57v14.36h-3.27V9h3.29v.4a5.24 5.24 0 0 1 1.9-.4 5.47 5.47 0 0 1 3.62 1.35 5 5 0 0 1 1.42 3.75ZM100.14 9v19.24h-3.29v-2.37a9.63 9.63 0 1 1 0-14.51V9Zm-3.29 9.64A6.32 6.32 0 1 0 90.53 25a6.32 6.32 0 0 0 6.32-6.37Z">
+    </path>
+  </g>
+</svg>
+</a>
+        <button type="button" class="rounded-md p-2.5 text-muted-foreground hover:text-foreground" onclick="document.getElementById('mobile-menu').classList.add('hidden'); document.body.classList.remove('overflow-hidden')">
+          <span class="sr-only">Close menu</span>
+          <span class="tabler-x h-6 w-6"></span>
+        </button>
+      </div>
+
+      <div class="mt-6 flow-root">
+        <div class="-my-6">
+          
+          <div class="space-y-4 py-6">
+            <a href="https://cal.com/ioannisflo" class="w-full md:w-auto flex items-center rounded-lg border border-gray-500 py-2 pl-2 pr-3.5 text-xs text-foreground/90 hover:text-foreground transition-colors hover:border-gray-400" rel="noopener">
+              <span class="tabler-calendar-clock size-4"></span>
+              <span class="ml-1.5">Schedule a call</span>
+            </a>
+            <a href="tel:+16504202207" class="w-full md:w-auto flex items-center rounded-lg border border-gray-500 py-2 pl-2 pr-3.5 text-xs text-foreground/90 hover:text-foreground transition-colors hover:border-gray-400">
+              <span class="tabler-phone size-4"></span> <span class="font-bold ml-1">US</span>
+              <span class="ml-1">+1 (650) 420-2207</span>
+            </a>
+            <a href="tel:+306973184144" class="w-full md:w-auto flex items-center rounded-lg border border-gray-500 py-2 pl-2 pr-3.5 text-xs text-foreground/90 hover:text-foreground transition-colors hover:border-gray-400">
+              <span class="tabler-phone size-4"></span>
+              <span class="font-bold ml-1">EU</span>
+              <span class="ml-1">+30 (697) 318-4144</span>
+            </a>
+          </div>
+          <div class="py-6 space-y-8">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-foreground">
+                <a href="/customers" data-phx-link="redirect" data-phx-link-state="push" class="hover:text-foreground/80 transition-colors">
+                  Customer stories
+                </a>
+              </p>
+              <ul role="list" class="mt-4 space-y-3">
+                <li>
+                  <a href="/customers/coderabbit" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    CodeRabbit
+                  </a>
+                </li><li>
+                  <a href="/customers/comfy" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    ComfyUI
+                  </a>
+                </li><li>
+                  <a href="/customers/firecrawl" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    Firecrawl
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-foreground">
+                Connect
+              </p>
+              <ul role="list" class="mt-4 space-y-3">
+                <li>
+                  <a href="https://www.youtube.com/watch?v=ZXz74ZewxwY&amp;list=PLRIG8mKLBXFotOxF234rEIREidMRh98Hv&amp;t=229s" class="text-sm text-muted-foreground hover:text-foreground transition-colors" rel="noopener" target="_blank">
+                    OSS Founder Podcast
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/algora-io" class="text-sm text-muted-foreground hover:text-foreground transition-colors" rel="noopener" target="_blank">
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/algoraio" class="text-sm text-muted-foreground hover:text-foreground transition-colors" rel="noopener" target="_blank">
+                    X (Twitter)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/company/algorapbc" class="text-sm text-muted-foreground hover:text-foreground transition-colors" rel="noopener" target="_blank">
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-foreground">
+                Company
+              </p>
+              <ul role="list" class="mt-4 space-y-3">
+                <li>
+                  <a href="/privacy" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="/brand" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    Brand
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  </div>
+
+  <main class="relative z-0">
+    <article>
+      <div class="text-white">
+        <div class="relative z-20">
+          <section class="mb-24 md:mb-36 min-h-[calc(100svh-36px)] md:min-h-0">
+            <div class="relative z-20 mx-auto max-w-[100rem] px-6 lg:px-8">
+              <div class="max-w-5xl pt-24 2xl:pt-72">
+                <a rel="noopener" target="_blank" href="https://turso.tech" class="inline-flex items-center bg-[#1b252e]/75 hover:bg-[#11181f] ring-1 ring-[#4ff7d3] hover:ring-[#75ffe1] py-2 px-4 rounded-full font-medium text-[#4ff7d3]/90 hover:text-[#4ff7d3] text-sm sm:text-base transition-colors">
+                  Challenge brought to you by
+                  <img src="/images/wordmarks/turso-aqua-3dceef269786f940390181f11c9e8025.svg?vsn=d" alt="Turso" class="ml-1 h-6 sm:h-7" style="aspect-ratio: 821/240;">
+                </a>
+                <h1 class="font-display mt-6 mb-2 text-[1.4rem] font-black tracking-tighter mix-blend-exclusion sm:text-5xl/[3rem] md:text-6xl/[4rem] lg:text-7xl/[5rem]">
+                  Turso is rewriting SQLite in Rust<br>
+                  <span style="background: radial-gradient(53.44% 245.78% at 13.64% 46.56%, rgb(110, 231, 183) 0%, rgb(45, 212, 191) 100%) text; -webkit-text-fill-color: transparent;">
+                    Find a bug to win <span class="font-display">$1,000</span>
+                  </span>
+                </h1>
+                <p class="max-w-xl xl:max-w-2xl mt-4 text-base font-medium tracking-tight text-white/90 shadow-black [text-shadow:_0_1px_0_var(--tw-shadow-color)] md:mt-6 md:text-lg md:text-white/80">
+                  SQLite, while legendary, has remained closed to community contributions. We at Turso are changing that by building a modern
+                  SQLite alternative in Rust - one that's open source and community-driven. Our goal isn't just features, but
+                  rock-solid reliability through <a href="https://turso.tech/blog/introducing-limbo-a-complete-rewrite-of-sqlite-in-rust" class="font-semibold text-white" style="border-bottom: 2px solid white">Deterministic Simulation Testing</a>. <br><br>
+                  We are so confident in the long-term ability of the DST to find the rarest bugs that even at the current early stage, we are offering cash bounties for those who can find cases where a bug survived this testing. During the alpha phase of the project, we still expect some bugs to exist, and we'll offer
+                  <span class="font-display font-bold text-foreground">$1,000</span>
+                  for any bugs that lead to data loss or data corruption. As our releases progress, we will continuously expand the scope of bugs and size of the bounty.
+                </p>
+              </div>
+            </div>
+            <div class="hidden lg:block top-[0px] absolute inset-0 z-10 h-[calc(100svh-0px)] md:h-[750px] 2xl:h-[900px] bg-gradient-to-r from-background from-1% to-transparent to-[69%]">
+            </div>
+            <div class="hidden lg:block top-[0px] absolute inset-0 z-10 h-[calc(100svh-0px)] md:h-[750px] 2xl:h-[900px] bg-gradient-to-t from-background from-1% to-transparent to-[30%]">
+            </div>
+            <div class="hidden lg:block top-[0px] absolute inset-0 z-10 h-[calc(100svh-0px)] md:h-[750px] 2xl:h-[900px] bg-gradient-to-b from-background from-1% to-transparent to-[30%]">
+            </div>
+            <div class="block lg:hidden top-[0px] absolute inset-0 z-10 h-[calc(100svh-0px)] md:h-[750px] 2xl:h-[900px] bg-gradient-to-b from-background from-1% to-transparent to-100%">
+            </div>
+            <div class="block lg:hidden top-[0px] absolute inset-0 z-10 h-[calc(100svh-0px)] md:h-[750px] 2xl:h-[900px] bg-gradient-to-t from-background from-1% to-transparent to-100%">
+            </div>
+            <div class="top-[0px] absolute inset-0 z-0 h-[calc(100svh-0px)] md:h-[750px] 2xl:h-[900px]">
+              <img src="/images/challenges/limbo/bg-f0544bd5ea146a92469edc4aaf0e93fd.webp?vsn=d" alt="Background" class="h-full w-full object-cover object-[60%_100%] md:object-[50%_100%] lg:object-[40%_100%] xl:object-[29%_100%] 2xl:object-[20%_100%]" style="aspect-ratio: 4096/1326;">
+            </div>
+          </section>
+          <section id="leaderboard" class="relative md:mb-18 mb-12 xl:pt-20 2xl:pt-52 overflow-hidden">
+            
+            <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+              <div class="absolute -left-48 w-[500px] h-[500px] rounded-full bg-[#1ebba2]/5 blur-[90px]">
+              </div>
+              <div class="absolute -right-48 w-[500px] h-[500px] rounded-full bg-[#1ebba2]/5 blur-[90px]">
+              </div>
+            </div>
+            <div class="relative z-50 mx-auto max-w-7xl px-6 pt-6 lg:px-8">
+              <h2 class="font-display flex justify-center text-4xl font-black leading-none tracking-tighter mix-blend-exclusion md:text-7xl mb-8 md:mb-12">
+                Leaderboard
+              </h2>
+              <div class="overflow-hidden rounded-xl border border-white/15">
+                <table class="w-full caption-bottom text-sm">
+                  <thead>
+                    <tr class="border-b border-white/15">
+                      <th scope="col" class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        Rank
+                      </th>
+                      <th scope="col" class="px-4 py-3 pl-[4.25rem] text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        Contributor
+                      </th>
+                      <th scope="col" class="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        Total Earned
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#1</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/Pavan-Nambi" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/92514129?s=80&amp;v=4" alt="Pavan-Nambi" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              <img src="/images/crown-e9ac5a28e087107528fda13b6e4ea070.png?vsn=d" alt="Crown" loading="lazy" class="absolute -top-4 -ml-1 left-1/2 -translate-x-1/2 w-6 h-6 -rotate-12">
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                Pavan Nambi 🇮🇳
+                              </div>
+                              <div class="text-sm text-gray-400">@Pavan-Nambi</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $2,500
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/5092" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #5092
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Fix corruption errors caused by stale cursor positioning + add upsert support to simulator
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $1,000
+                            </div>
+                          </td>
+                        </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/4879" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #4879
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                sim: generate unique constraints and verify statement rolls back correctly on failure
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $800
+                            </div>
+                          </td>
+                        </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/4493" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #4493
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Track WAL state in savepoints for proper rollback
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $200
+                            </div>
+                          </td>
+                        </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/3830" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #3830
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Don&#39;t allow autovacuum to be flipped on non-empty databases
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $500
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#2</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/LeMikaelF" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/22927506?s=80&amp;v=4" alt="LeMikaelF" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                Mikaël Francoeur 🇨🇦
+                              </div>
+                              <div class="text-sm text-gray-400">@LeMikaelF</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $1,500
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/3830" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #3830
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Don&#39;t allow autovacuum to be flipped on non-empty databases
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $500
+                            </div>
+                          </td>
+                        </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/3436" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #3436
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Fix self-insert with nested subquery
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $1,000
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#3</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/webhop123" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/250899629?s=80&amp;v=4" alt="webhop123" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                Yassine Elyaakoub 🇲🇦
+                              </div>
+                              <div class="text-sm text-gray-400">@webhop123</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $1,000
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/6626" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #6626
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Add savepoint rollback DST coverage and fix rollback cache invalidation
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $1,000
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#4</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/ddwalias" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/55247256?s=80&amp;v=4" alt="ddwalias" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                DANG HOANG DUY 🇻🇳
+                              </div>
+                              <div class="text-sm text-gray-400">@ddwalias</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $800
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/3894" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #3894
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Fix ptrmap data corruption with pre-initialize autovacuum database
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $800
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#5</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/alpaylan" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/19610315?s=80&amp;v=4" alt="alpaylan" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                Alperen Keleş 🇺🇸
+                              </div>
+                              <div class="text-sm text-gray-400">@alpaylan</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $500
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/2049" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #2049
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Updates to the simulator
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $500
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#6</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/echoumcp1" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/101858583?s=80&amp;v=4" alt="echoumcp1" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                Ethan Chou 🇺🇸
+                              </div>
+                              <div class="text-sm text-gray-400">@echoumcp1</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $500
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/2106" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #2106
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                Simulator - Error: failed with error: &#39;corrupted database, stack is bigger than expected&#39;
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $500
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                      <tr class="border-t border-white/10 bg-white/[2%] hover:bg-white/[4%] transition-colors">
+                        <td class="px-4 py-4 align-middle w-12">
+                          <div class="font-mono text-gray-400">#7</div>
+                        </td>
+                        <td class="px-4 py-4 align-middle">
+                          <a href="https://github.com/benzaid32" class="flex items-center gap-3 hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                            <div class="relative shrink-0">
+                              <img src="https://avatars.githubusercontent.com/u/63548324?s=80&amp;v=4" alt="benzaid32" loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-white/10">
+                              
+                            </div>
+                            <div>
+                              <div class="font-medium text-white">
+                                Ben Zaid 🇲🇦
+                              </div>
+                              <div class="text-sm text-gray-400">@benzaid32</div>
+                            </div>
+                          </a>
+                        </td>
+                        <td class="px-4 py-4 align-middle text-right">
+                          <div class="font-display font-bold text-[#4ff7d3]">
+                            $200
+                          </div>
+                        </td>
+                      </tr>
+                      
+                        <tr class="border-t border-white/5 bg-black/30 hover:bg-black/40 transition-colors">
+                          <td class="px-4 py-2.5 align-middle"></td>
+                          <td class="px-4 py-2.5 align-middle pl-5">
+                            <a href="https://github.com/tursodatabase/turso/issues/6583" class="hover:opacity-80 transition-opacity" rel="noopener" target="_blank">
+                              <span class="text-sm text-gray-500">
+                                #6583
+                              </span>
+                              <span class="ml-1 text-sm text-gray-300">
+                                core/storage: fix WAL savepoint rollback corruption after cache spill
+                              </span>
+                            </a>
+                            
+                          </td>
+                          <td class="px-4 py-2.5 align-middle text-right">
+                            <div class="font-display text-sm font-medium text-muted-foreground">
+                              $200
+                            </div>
+                          </td>
+                        </tr>
+                      
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="relative my-24 md:my-36">
+            <div class="absolute inset-0 z-10 bg-background/60 flex items-center justify-center rounded-xl">
+              <div class="text-center px-6">
+                <div class="inline-flex items-center gap-2 rounded-full border border-[#4ff7d3]/30 bg-emerald-800/90 px-5 py-2 text-base font-semibold text-[#4ff7d3] mb-4">
+                  Challenge Completed
+                </div>
+                <p class="text-xl sm:text-3xl font-semibold text-white mb-1">
+                  Submissions are closed
+                </p>
+                <p class="text-sm sm:text-lg font-medium text-white/80">
+                  All bounties have been awarded to the winners
+                </p>
+              </div>
+            </div>
+            <div class="relative mx-auto max-w-7xl px-6 pt-6 lg:px-8">
+              <h2 class="font-display flex justify-center text-4xl font-black leading-none tracking-tighter mix-blend-exclusion md:text-7xl">
+                How to participate
+              </h2>
+              <p class="text-center mt-4 text-base font-medium text-gray-400">
+                Got questions?
+                <a target="_blank" class="font-semibold text-[#4ff7d3] hover:text-[#75ffe1] transition-colors" href="https://discord.gg/jgjmyYgHwB">
+                  Join us on Discord
+                </a>
+              </p>
+              <div class="mt-10 md:mt-14 mx-auto max-w-5xl space-y-4">
+                
+                <div class="group relative flex gap-4 rounded-xl border border-white/10 bg-white/[3%] p-5 transition-colors hover:border-[#4ff7d3]/30 hover:bg-white/[5%]">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#4ff7d3]/30 bg-[#4ff7d3]/10 font-mono text-sm font-bold text-[#4ff7d3]">
+                    1
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white mb-1">Set up your environment</div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                      Follow the
+                      <a rel="noopener" target="_blank" class="font-medium text-[#4ff7d3] hover:text-[#75ffe1] transition-colors" href="https://github.com/tursodatabase/turso/blob/main/CONTRIBUTING.md">
+                        CONTRIBUTING.md guide
+                      </a>
+                      to build the Turso CLI locally. You'll need Rust installed and the repo cloned.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="group relative flex gap-4 rounded-xl border border-white/10 bg-white/[3%] p-5 transition-colors hover:border-[#4ff7d3]/30 hover:bg-white/[5%]">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#4ff7d3]/30 bg-[#4ff7d3]/10 font-mono text-sm font-bold text-[#4ff7d3]">
+                    2
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white mb-1">Understand the DST framework</div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                      Explore the
+                      <a rel="noopener" target="_blank" class="font-medium text-[#4ff7d3] hover:text-[#75ffe1] transition-colors" href="https://github.com/tursodatabase/turso/tree/main/simulator">
+                        simulator directory
+                      </a>
+                      to learn how Turso's Deterministic Simulation Testing works and what kinds of bugs it currently detects.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="group relative flex gap-4 rounded-xl border border-white/10 bg-white/[3%] p-5 transition-colors hover:border-[#4ff7d3]/30 hover:bg-white/[5%]">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#4ff7d3]/30 bg-[#4ff7d3]/10 font-mono text-sm font-bold text-[#4ff7d3]">
+                    3
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white mb-1">Find a data corruption bug</div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                      Improve the simulator to expose a bug that slipped through. A qualifying bug causes data loss or corruption that cannot be recovered by a future patch in features enabled by default in the latest release.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="group relative flex gap-4 rounded-xl border border-[#4ff7d3]/20 bg-[#4ff7d3]/[4%] p-5 transition-colors hover:border-[#4ff7d3]/40 hover:bg-[#4ff7d3]/[7%]">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#4ff7d3]/40 bg-[#4ff7d3]/15 font-mono text-sm font-bold text-[#4ff7d3]">
+                    4
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="font-semibold text-white">
+                        Submit a PR with your simulator improvements
+                      </span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                      Open a pull request adding the DST scenarios that catch the bug. Once your PR is merged, you receive an
+                      <span class="font-semibold text-[#4ff7d3]">$800</span>
+                      reward. Experimental or gated features are not eligible.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="group relative flex gap-4 rounded-xl border border-[#4ff7d3]/20 bg-[#4ff7d3]/[4%] p-5 transition-colors hover:border-[#4ff7d3]/40 hover:bg-[#4ff7d3]/[7%]">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#4ff7d3]/40 bg-[#4ff7d3]/15 font-mono text-sm font-bold text-[#4ff7d3]">
+                    5
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="font-semibold text-white">Fix the bug</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                      Patch the underlying issue you uncovered and earn an additional
+                      <span class="font-semibold text-[#4ff7d3]">$200</span>
+                      bringing the total reward to <span class="font-semibold text-[#4ff7d3]">$1,000</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="mx-auto my-24 max-w-7xl md:my-36">
+            <h2 class="font-display flex justify-center text-4xl font-black leading-none tracking-tighter mix-blend-exclusion md:text-7xl">
+              Media
+            </h2>
+            <div class="mx-auto grid gap-6 px-6 sm:grid-cols-2 lg:px-8">
+              <a class="block pt-6 md:pt-12" href="https://www.youtube.com/watch?v=c9SM0Ra_o84">
+                <div class="relative z-30 mx-auto max-w-7xl">
+                  <div class="relative mx-auto">
+                    <div class="group/card h-full border border-white/10 bg-black md:gap-8 group relative flex-1 overflow-hidden rounded-xl bg-cover shadow-[0px_3.26536px_2.21381px_0px_rgba(69,_10,_10,_0.08),_0px_7.84712px_5.32008px_0px_rgba(69,_10,_10,_0.11),_0px_14.77543px_10.01724px_0px_rgba(69,_10,_10,_0.14),_0px_26.35684px_17.86905px_0px_rgba(69,_10,_10,_0.16),_0px_49.29758px_33.42209px_0px_rgba(69,_10,_10,_0.19),_0px_118px_80px_0px_rgba(69,_10,_10,_0.27)] ring-2 ring-red-500 hover:no-underline">
+                      <div class="grid h-6 grid-cols-[1fr_auto_1fr] overflow-hidden border-b border-gray-800 ">
+                        <div class="ml-2 flex items-center gap-1">
+                          <div class="h-2 w-2 rounded-full bg-red-400"></div>
+                          <div class="h-2 w-2 rounded-full bg-yellow-400"></div>
+                          <div class="h-2 w-2 rounded-full bg-green-400"></div>
+                        </div>
+                        <div class="flex items-center justify-center">
+                          <div class="text-xs text-gray-400">youtube.com</div>
+                        </div>
+                        <div></div>
+                      </div>
+                      <div class="relative flex aspect-[16/9] h-full w-full items-center justify-center text-balance bg-gray-950 text-center text-xl font-medium text-red-100 sm:text-2xl">
+                        <img src="https://i.ytimg.com/vi/c9SM0Ra_o84/maxresdefault.jpg" width="1280" height="720" loading="lazy" alt="Turso is rewriting SQLite in Rust | Glauber Costa">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="block pt-6 md:pt-12" href="https://www.youtube.com/watch?v=PPjXM8G8ax0">
+                <div class="relative z-30 mx-auto max-w-7xl">
+                  <div class="relative mx-auto">
+                    <div class="group/card h-full border border-white/10 bg-black md:gap-8 group relative flex-1 overflow-hidden rounded-xl bg-cover shadow-[0px_3.26536px_2.21381px_0px_rgba(69,_10,_10,_0.08),_0px_7.84712px_5.32008px_0px_rgba(69,_10,_10,_0.11),_0px_14.77543px_10.01724px_0px_rgba(69,_10,_10,_0.14),_0px_26.35684px_17.86905px_0px_rgba(69,_10,_10,_0.16),_0px_49.29758px_33.42209px_0px_rgba(69,_10,_10,_0.19),_0px_118px_80px_0px_rgba(69,_10,_10,_0.27)] ring-2 ring-red-500 hover:no-underline">
+                      <div class="grid h-6 grid-cols-[1fr_auto_1fr] overflow-hidden border-b border-gray-800 ">
+                        <div class="ml-2 flex items-center gap-1">
+                          <div class="h-2 w-2 rounded-full bg-red-400"></div>
+                          <div class="h-2 w-2 rounded-full bg-yellow-400"></div>
+                          <div class="h-2 w-2 rounded-full bg-green-400"></div>
+                        </div>
+                        <div class="flex items-center justify-center">
+                          <div class="text-xs text-gray-400">youtube.com</div>
+                        </div>
+                        <div></div>
+                      </div>
+                      <div class="relative flex aspect-[16/9] h-full w-full items-center justify-center text-balance bg-gray-950 text-center text-xl font-medium text-red-100 sm:text-2xl">
+                        <img src="/images/challenges/limbo/primeagen-4fd7dfc1ebfc765d0cd8d0690e9e2b1e.webp?vsn=d" width="1280" height="720" loading="lazy" alt="The SQLite Rewrite In Rust">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+          <section class="md:mb-18 mb-12">
+            <div class="relative z-50 mx-auto max-w-7xl px-6 pt-6 lg:px-8">
+              <h2 class="font-display flex justify-center text-4xl font-black leading-none tracking-tighter mix-blend-exclusion md:text-7xl">
+                Discussions
+              </h2>
+              <div class="mt-6 md:mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <a href="https://news.ycombinator.com/item?id=42378843" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-lg border border-border bg-background transition-all hover:border-[#37363d]">
+                  <img src="/images/challenges/limbo/hn-post-8bd5421040d8da6e4ec1d41651672dee.webp?vsn=d" width="653" height="145" loading="lazy" alt="Hacker News discussion" class="w-full object-cover">
+                </a>
+                <a href="https://www.reddit.com/r/programming/comments/1hb6vg1/introducing_limbo_a_complete_rewrite_of_sqlite_in/" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-lg border border-border bg-background transition-all hover:border-[#37363d]">
+                  <img src="/images/challenges/limbo/reddit-post-8c415097da8e260faa8dfa6c79334624.webp?vsn=d" width="902" height="192" loading="lazy" alt="Reddit discussion" class="w-full object-cover">
+                </a>
+              </div>
+              <div class="mx-auto mt-6 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-foreground sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+                <figure class="rounded-2xl bg-card shadow-lg border-2 border-border hover:border-[#37363d] transition-colors sm:col-span-2 xl:col-start-2 xl:row-end-1">
+                  <a href="https://www.reddit.com/r/programming/comments/1hb6vg1/introducing_limbo_a_complete_rewrite_of_sqlite_in/" rel="noopener" target="_blank">
+                    <blockquote class="p-6 text-lg font-semibold tracking-tight text-foreground sm:p-12 sm:text-xl/8 whitespace-pre-line -mt-16">
+                      <p>
+                        SQLite is the most well tested software on Earth, any rewrite WILL contain bugs that don't exist in SQLite.
+
+                        Not only has SQLite been tested to run on almost any conceivable device, but its testsuite must be able to reproduce the issue before any bug is closed. This together with its 20 yr+ age makes SQLite closest to perfection of any program written.
+
+                        Making it "more secure" using Rust simply doesn't make sense when you're competing with perfection.
+                      </p>
+                    </blockquote>
+                    <figcaption class="flex items-center gap-x-2 p-6 sm:p-12 -mt-12 md:-mt-24">
+                      <span class="tabler-brand-reddit size-6"></span>
+                      <div>
+                        <div class="font-semibold text-foreground">Dako1905</div>
+                      </div>
+                    </figcaption>
+                  </a>
+                </figure>
+                <div class="space-y-8 xl:contents xl:space-y-0">
+                  <div class="space-y-8 xl:row-span-2">
+                    <figure class="rounded-2xl bg-card p-6 shadow-lg border-2 border-border hover:border-[#37363d] transition-colors">
+                      <a href="https://news.ycombinator.com/item?id=42378843" rel="noopener" target="_blank">
+                        <blockquote class="text-foreground whitespace-pre-line -mt-12">
+                          <p>
+                            Given the code quality and rigid testing, SQLite is probably the last project that should be rewritten. It'd be great to see all other C code rewritten first!
+                          </p>
+                        </blockquote>
+                        <figcaption class="flex items-center gap-x-2">
+                          <span class="tabler-brand-ycombinator size-6"></span>
+                          <div>
+                            <div class="font-semibold text-foreground">
+                              danieljanes
+                            </div>
+                          </div>
+                        </figcaption>
+                      </a>
+                    </figure>
+                    <figure class="rounded-2xl bg-card p-6 shadow-lg border-2 border-border hover:border-[#37363d] transition-colors">
+                      <a href="https://news.ycombinator.com/item?id=42378843" rel="noopener" target="_blank">
+                        <blockquote class="text-foreground whitespace-pre-line -mt-12">
+                          <p>
+                            This is going to sound pedantic, but SQLite is not Open Source. It's Public Domain. The distinction is subtle, but it is important.
+                          </p>
+                        </blockquote>
+                        <figcaption class="flex items-center gap-x-2">
+                          <span class="tabler-brand-ycombinator size-6"></span>
+                          <div>
+                            <div class="font-semibold text-foreground">
+                              bruce511
+                            </div>
+                          </div>
+                        </figcaption>
+                      </a>
+                    </figure>
+                  </div>
+                </div>
+                <div class="space-y-8 xl:contents xl:space-y-0">
+                  <div class="space-y-8 xl:row-span-2">
+                    <figure class="rounded-2xl bg-card p-6 shadow-lg border-2 border-border hover:border-[#37363d] transition-colors">
+                      <a href="https://www.reddit.com/r/programming/comments/1hb6vg1/introducing_limbo_a_complete_rewrite_of_sqlite_in/" rel="noopener" target="_blank">
+                        <blockquote class="text-foreground whitespace-pre-line -mt-12">
+                          <p>
+                            > SQLite's test suite is proprietary
+
+                            huh TIL. Kinda makes sense, but also kinda sucks. So if you try to contribute to SQLite you can't run the tests yourself to see if you broke anything?"
+                          </p>
+                        </blockquote>
+                        <figcaption class="flex items-center gap-x-2">
+                          <span class="tabler-brand-reddit size-6"></span>
+                          <div>
+                            <div class="font-semibold text-foreground">
+                              larikang
+                            </div>
+                          </div>
+                        </figcaption>
+                      </a>
+                    </figure>
+                    <figure class="rounded-2xl bg-card p-6 shadow-lg border-2 border-border hover:border-[#37363d] transition-colors">
+                      <a href="https://www.reddit.com/r/programming/comments/1hb6vg1/introducing_limbo_a_complete_rewrite_of_sqlite_in/" rel="noopener" target="_blank">
+                        <blockquote class="text-foreground whitespace-pre-line -mt-12">
+                          <p>
+                            well you can't contribute to SQLite, the code is "open-source" but the project is maintained by a set number of people
+                          </p>
+                        </blockquote>
+                        <figcaption class="flex items-center gap-x-2">
+                          <span class="tabler-brand-reddit size-6"></span>
+                          <div>
+                            <div class="font-semibold text-foreground">
+                              PhyToonToon
+                            </div>
+                          </div>
+                        </figcaption>
+                      </a>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="mx-auto mt-24 max-w-7xl md:mt-36">
+            <div class="relative z-50 mx-auto max-w-7xl px-6 pt-6 lg:px-8">
+              <div class="grid grid-cols-1 gap-6 md:gap-12 sm:grid-cols-2">
+                <div class="flex flex-col gap-6 md:gap-12">
+                  <h2 class="font-display text-4xl font-black leading-none tracking-tighter mix-blend-exclusion md:text-7xl">
+                    Start contributing
+                  </h2>
+                  <div class="flex gap-4 sm:gap-6">
+                    <a href="https://discord.gg/jgjmyYgHwB" class="rounded-xl border-2 border-[#1ebba2] p-3 text-[#4ff7d3] transition-colors hover:border-[#4ff7d3] hover:text-[#75ffe1] sm:p-5" rel="noopener" target="_blank">
+                      <span class="sr-only">Discord</span>
+                      <span class="tabler-brand-discord-filled h-6 w-6 sm:h-12 sm:w-12"></span>
+                    </a>
+                    <a href="https://x.com/tursodatabase" class="rounded-xl border-2 border-[#1ebba2] p-3 text-[#4ff7d3] transition-colors hover:border-[#4ff7d3] hover:text-[#75ffe1] sm:p-5" rel="noopener" target="_blank">
+                      <span class="sr-only">X (formerly Twitter)</span>
+                      <span class="tabler-brand-x h-6 w-6 sm:h-12 sm:w-12"></span>
+                    </a>
+                    <a href="https://github.com/tursodatabase/turso" class="rounded-xl border-2 border-[#1ebba2] p-3 text-[#4ff7d3] transition-colors hover:border-[#4ff7d3] hover:text-[#75ffe1] sm:p-5" rel="noopener" target="_blank">
+                      <span class="sr-only">GitHub</span>
+                      <svg class="inline-block align-middle w-6 h-6 sm:w-12 sm:h-12" viewBox="-2 -2 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 0C5.37017 0 0 5.50708 0 12.306C0 17.745 3.44015 22.3532 8.20626 23.9849C8.80295 24.0982 9.02394 23.7205 9.02394 23.3881C9.02394 23.0935 9.01657 22.3229 9.00921 21.2956C5.67219 22.0359 4.96501 19.6487 4.96501 19.6487C4.41989 18.2285 3.63168 17.8508 3.63168 17.8508C2.54144 17.0878 3.71271 17.1029 3.71271 17.1029C4.91344 17.1936 5.55433 18.372 5.55433 18.372C6.62247 20.2531 8.36096 19.7092 9.04604 19.3919C9.15654 18.5987 9.46593 18.0548 9.80479 17.745C7.13812 17.4353 4.33886 16.3777 4.33886 11.6638C4.33886 10.3192 4.80295 9.2238 5.57643 8.36261C5.4512 8.05288 5.03867 6.79887 5.69429 5.1067C5.69429 5.1067 6.7035 4.77432 8.99447 6.36827C9.95212 6.09632 10.9761 5.96034 12 5.95279C13.0166 5.95279 14.0479 6.09632 15.0055 6.36827C17.2965 4.77432 18.3057 5.1067 18.3057 5.1067C18.9613 6.79887 18.5488 8.05288 18.4236 8.36261C19.1897 9.2238 19.6538 10.3192 19.6538 11.6638C19.6538 16.3928 16.8471 17.4278 14.1731 17.7375C14.6004 18.1152 14.9908 18.8706 14.9908 20.0189C14.9908 21.6657 14.9761 22.9877 14.9761 23.3957C14.9761 23.728 15.1897 24.1058 15.8011 23.9849C20.5672 22.3532 24 17.745 24 12.3135C24 5.50708 18.6298 0 12 0Z">
+  </path>
+</svg>
+                    </a>
+                    <a href="https://www.youtube.com/@tursodatabase" class="rounded-xl border-2 border-[#1ebba2] p-3 text-[#4ff7d3] transition-colors hover:border-[#4ff7d3] hover:text-[#75ffe1] sm:p-5" rel="noopener" target="_blank">
+                      <span class="sr-only">YouTube</span>
+                      <span class="tabler-brand-youtube-filled h-6 w-6 sm:h-12 sm:w-12"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/turso" class="rounded-xl border-2 border-[#1ebba2] p-3 text-[#4ff7d3] transition-colors hover:border-[#4ff7d3] hover:text-[#75ffe1] sm:p-5">
+                      <span class="sr-only">LinkedIn</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 sm:h-12 sm:w-12">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <a rel="noopener" target="_blank" href="https://github.com/tursodatabase/turso" class="group/card h-full border border-white/10 bg-black md:gap-8 group relative flex-1 overflow-hidden rounded-xl bg-cover shadow-[0px_3.26536px_2.21381px_0px_rgba(84,_58,_42,_0.08),_0px_7.84712px_5.32008px_0px_rgba(84,_58,_42,_0.11),_0px_14.77543px_10.01724px_0px_rgba(84,_58,_42,_0.14),_0px_26.35684px_17.86905px_0px_rgba(84,_58,_42,_0.16),_0px_49.29758px_33.42209px_0px_rgba(84,_58,_42,_0.19),_0px_118px_80px_0px_rgba(84,_58,_42,_0.27)] hover:no-underline">
+                  <img src="https://fly.storage.tigris.dev/algora-console/repositories/tursodatabase/turso/og.png" alt="Turso" loading="lazy" class="rounded-lg aspect-[2/1] w-full h-full bg-muted">
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+  <div class="bg-black">
+    <footer aria-labelledby="footer-heading" class="relative mt-16 overflow-hidden">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+
+  <div class="relative pt-16 px-6 container border-white/10 lg:px-8 border-t mx-auto">
+    <div>
+      <div class="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        
+        <div class="sm:col-span-1">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            <a href="/" data-phx-link="redirect" data-phx-link-state="push" aria-label="Algora">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.14 39.42" fill="currentColor" class="fill-current text-white w-auto h-6 md:h-8">
+  <g>
+    <path d="M19.25 9v19.24H16v-2.37a9.63 9.63 0 1 1 0-14.51V9ZM16 18.63A6.32 6.32 0 1 0 9.64 25 6.32 6.32 0 0 0 16 18.63ZM22.29 0h3.29v28.24h-3.29ZM47.6 34.27v.07a5.41 5.41 0 0 1-.69 2.52 4.78 4.78 0 0 1-1.39 1.54 5.61 5.61 0 0 1-3.25 1H34a5.21 5.21 0 0 1-3.88-1.5 6.25 6.25 0 0 1-1.53-4.2l3.29.11a2.58 2.58 0 0 0 .62 1.83 2 2 0 0 0 1.5.47h8.29c1.68 0 2-1.1 2-1.75a2 2 0 0 0-2-1.76h-8.2a5.35 5.35 0 0 1-5.52-5.51 6.07 6.07 0 0 1 1.24-3.62 9.5 9.5 0 0 1-1.31-4.86A9.62 9.62 0 0 1 38.11 9a9.72 9.72 0 0 1 5.37 1.61A5.78 5.78 0 0 1 47.53 9v3.28a2.54 2.54 0 0 0-1.72.63 9.67 9.67 0 0 1 1.86 5.7 9.79 9.79 0 0 1-5.44 8.7 10 10 0 0 1-4.16.91 9.75 9.75 0 0 1-6.07-2.1 3 3 0 0 0-.18.95 2.08 2.08 0 0 0 2.23 2.27h8.18a5.61 5.61 0 0 1 3.25 1.05 5.45 5.45 0 0 1 2.12 3.88ZM31.78 18.63a6.46 6.46 0 0 0 .84 3.15 5.88 5.88 0 0 0 1.43 1.71A6.34 6.34 0 0 0 38.11 25a6.26 6.26 0 0 0 6.32-6.32 6.27 6.27 0 0 0-2.16-4.71 6.2 6.2 0 0 0-4.16-1.61 6.35 6.35 0 0 0-6.33 6.27ZM68.54 18.63A9.63 9.63 0 1 1 58.93 9a9.62 9.62 0 0 1 9.61 9.63Zm-9.61-6.32a6.32 6.32 0 1 0 6.32 6.32 6.35 6.35 0 0 0-6.32-6.32ZM80.35 14.1h-3.28a1.9 1.9 0 0 0-.4-1.31 2 2 0 0 0-1.28-.48 1.83 1.83 0 0 0-2 1.57v14.36h-3.27V9h3.29v.4a5.24 5.24 0 0 1 1.9-.4 5.47 5.47 0 0 1 3.62 1.35 5 5 0 0 1 1.42 3.75ZM100.14 9v19.24h-3.29v-2.37a9.63 9.63 0 1 1 0-14.51V9Zm-3.29 9.64A6.32 6.32 0 1 0 90.53 25a6.32 6.32 0 0 0 6.32-6.37Z">
+    </path>
+  </g>
+</svg>
+</a>
+          </h3>
+          <ul role="list" class="mt-6 space-y-3">
+            <li class="text-sm font-medium text-muted-foreground">
+              Algora PBC © 2026
+            </li>
+            <li>
+              <a href="https://cal.com/ioannisflo" class="flex items-center text-sm text-muted-foreground hover:text-white transition-colors" rel="noopener">
+                <span class="tabler-calendar-clock size-3 md:size-4"></span>
+                <span class="ml-1.5">Schedule a call</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+16504202207" class="flex items-center text-sm text-muted-foreground hover:text-white transition-colors" target="_blank">
+                <span class="tabler-phone size-3 md:size-4"></span>
+                <span class="font-bold ml-1 hidden md:inline">US</span>
+                <span class="ml-1">+1 (650) 420-2207</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+306973184144" class="flex items-center text-sm text-muted-foreground hover:text-white transition-colors" target="_blank">
+                <span class="tabler-phone size-3 md:size-4"></span>
+                <span class="font-bold ml-1 hidden md:inline">EU</span>
+                <span class="ml-1">+30 (697) 318-4144</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="sm:col-span-1">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            <a href="/customers" data-phx-link="redirect" data-phx-link-state="push" class="hover:text-white/80 transition-colors">
+              Customer stories
+            </a>
+          </h3>
+          <ul role="list" class="mt-6 space-y-3">
+            <li>
+              <a href="/customers/coderabbit" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                CodeRabbit
+              </a>
+            </li><li>
+              <a href="/customers/comfy" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                ComfyUI
+              </a>
+            </li><li>
+              <a href="/customers/firecrawl" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                Firecrawl
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        
+
+        
+        <div class="sm:col-span-1">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            Connect
+          </h3>
+          <ul role="list" class="mt-6 space-y-3">
+            <li>
+              <a href="https://www.youtube.com/watch?v=ZXz74ZewxwY&amp;list=PLRIG8mKLBXFotOxF234rEIREidMRh98Hv&amp;t=229s" class="text-sm text-muted-foreground hover:text-white transition-colors" rel="noopener" target="_blank">
+                OSS Founder Podcast
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/algora-io" class="text-sm text-muted-foreground hover:text-white transition-colors" rel="noopener" target="_blank">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/algoraio" class="text-sm text-muted-foreground hover:text-white transition-colors" rel="noopener" target="_blank">
+                X (Twitter)
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/company/algorapbc" class="text-sm text-muted-foreground hover:text-white transition-colors" rel="noopener" target="_blank">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="sm:col-span-1">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            Company
+          </h3>
+          <ul role="list" class="mt-6 space-y-3">
+            <li>
+              <a href="/privacy" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="/terms" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="/brand" data-phx-link="redirect" data-phx-link-state="push" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                Brand
+              </a>
+            </li>
+            <li>
+              <a href="/llms.txt" class="text-sm text-muted-foreground hover:text-white transition-colors">
+                llms.txt
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mt-12 relative w-full left-1/2 -translate-x-1/2 h-[28vw] overflow-hidden pointer-events-none select-none">
+      <div class="absolute inset-x-0 top-0 w-full min-h-[36vw]" style="background: url(/images/patterns/footer-wordmark-heatmap-e71b768e4b4e49e0f5e0b9e5bc76cc5e.svg?vsn=d) center top / 100% auto no-repeat; opacity: 0.4">
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</div>
+</main></div>
+    <div id="capture" phx-hook="Capture" data-token="phc_nDyZ681jxQhmzhZcpxCKPdFEPGWzEEvV4vsb4Qd3Ia" data-host="https://algora.io/ingest">
+    </div>
+  </body>
+</html>

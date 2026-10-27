@@ -1,0 +1,6 @@
+node_modules/
+logs/
+output/
+state/lastRun.json
+assets/avatar*.png
+.env

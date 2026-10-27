@@ -1,0 +1,597 @@
+[
+  {
+    "repo": "nnyycc77-ship-it/tiny-ledger",
+    "number": 14,
+    "title": "Lead (unverified, search snippet only): Circle Agent Marketplace, catalog for x402 USDC services, fits the workstream B recall API",
+    "reward_usd": 3009.0,
+    "comments": 0,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-23T00:02:08Z",
+    "url": "https://github.com/nnyycc77-ship-it/tiny-ledger/issues/14",
+    "labels": [],
+    "state": "open",
+    "source_query": "state:open type:issue x402 in:title,body",
+    "body_excerpt": "Program: https://agents.circle.com/ (catalog: https://agents.circle.com/services, seller docs: https://developers.circle.com/agent-stack/agent-marketplace, discovery API: https://developers.circle.com/agent-stack/agent-marketplace/discovery-api)  **Status: UNVERIFIED.** No page on circle.com, developers.circle.com, or agents.circle.com was fetched; the container's network policy denied the hosts. ",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "theselfish/SlopStation13",
+    "number": 4,
+    "title": "[BOUNTY][$640][FIX] Fix the compatability issues with the TempleOS operating system.",
+    "reward_usd": 640.0,
+    "comments": 3,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-07-29T05:02:41Z",
+    "url": "https://github.com/theselfish/SlopStation13/issues/4",
+    "labels": [
+      "good first issue",
+      "BOUNTY"
+    ],
+    "state": "open",
+    "source_query": "label:\"good first issue\" state:open type:issue bounty in:title",
+    "body_excerpt": "# Bounty Details Due to conflicts in the files, we've lost the ability for TempleOS players to enjoy the game. TempleOS players are 48% of our player base so this is a high priority fix.  # Bounty Reward  $640 Bohemian Dollars will be paid to whomever completes this task. Payment will be handed to t",
+    "verified_reward_usd": 640.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$640",
+        "640",
+        "[BOUNTY][$640][FIX] Fix the "
+      ],
+      [
+        "dollar",
+        "$640",
+        "640",
+        "iority fix.  # Bounty Reward  $640 Bohemian Dolla"
+      ],
+      [
+        "bounty kw",
+        "Reward\n\n$640",
+        "640",
+        " high priority fix.  # Bounty Reward  $640 Bohemian Dolla"
+      ]
+    ]
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "number": 1906,
+    "title": "[Bounty] [Bounty: $90] Reject amounts whose precision exceeds the destination chain's USD",
+    "reward_usd": 112.0,
+    "comments": 4,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-15T21:54:19Z",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1906",
+    "labels": [
+      "bounty",
+      "real"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (Python OR TypeScript OR Rust OR \"AI security\" OR LLM)",
+    "body_excerpt": "### \u8d4f\u91d1\u5e73\u53f0 / Platform GitHub  ### \u539f\u59cb\u94fe\u63a5 / Source URL https://github.com/Parabola-org/parabola/issues/10  ### \u6f0f\u6d1e\u63cf\u8ff0 / Description [Bounty: $90] Reject amounts whose precision exceeds the destination chain's USDC decimals  **Context** Arc USDC has 6 decimals, Stellar USDC has 7 (`src/constants.ts`, `src/u",
+    "verified_reward_usd": 90.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$90",
+        "90",
+        "[Bounty] [Bounty: $90] Reject amount"
+      ],
+      [
+        "dollar",
+        "$90",
+        "90",
+        "# \u6f0f\u6d1e\u63cf\u8ff0 / Description [Bounty: $90] Reject amount"
+      ],
+      [
+        "dollar",
+        "$90",
+        "90",
+        "sted Label**: bug **Bounty:** $90 **ETA:** 48 ho"
+      ],
+      [
+        "dollar",
+        "$90",
+        "90",
+        "s  ### \u771f\u5b9e\u8d4f\u91d1\uff08USD\uff09/ Real Reward $90  ### \u96be\u5ea6 / Diff"
+      ],
+      [
+        "bounty kw",
+        "Bounty: $90",
+        "90",
+        "[Bounty] [Bounty: $90] Reject amount"
+      ]
+    ]
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23337,
+    "title": "[Bounty proposal] fix(demand-processing-tools): harden process_recent_conversations validation, numeric coercion, and config resilience ($50\u2013$100 proposed)",
+    "reward_usd": 100.0,
+    "comments": 0,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T19:36:45Z",
+    "url": "https://github.com/BasedHardware/omi/issues/23337",
+    "labels": [],
+    "state": "open",
+    "source_query": "bounty in:title state:open type:issue (USDC OR USD OR \"$\") | bounty in:title state:open type:issue (crypto OR x402 OR SOL",
+    "body_excerpt": "### Bounty Proposal: Demand Processing Tools Resilience & Numeric Coercion ($50\u2013$100 USD)  **Pull Request:** https://github.com/BasedHardware/omi/pull/23336 **Target Maintainers:** @kodjima33 @Git-on-my-level @josancamon19  #### Description Hardens `backend/utils/retrieval/tools/demand_processing_tools.py` against edge cases, unhandled type mismatches, and runtime failures during conversation dema",
+    "verified_reward_usd": 100.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$50",
+        "50",
+        "rcion, and config resilience ($50\u2013$100 proposed)"
+      ],
+      [
+        "dollar",
+        "$100",
+        "100",
+        "n, and config resilience ($50\u2013$100 proposed) ### "
+      ],
+      [
+        "dollar",
+        "$50",
+        "50",
+        "esilience & Numeric Coercion ($50\u2013$100 USD)  **P"
+      ],
+      [
+        "dollar",
+        "$100",
+        "100",
+        "ience & Numeric Coercion ($50\u2013$100 USD)  **Pull R"
+      ],
+      [
+        "dollar",
+        "$50",
+        "50",
+        "etails - **Proposed Bounty**: $50\u2013$100 USDC - **"
+      ]
+    ]
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3623,
+    "title": "[Bounty] Answer the 2 linked question(s)",
+    "reward_usd": 100.0,
+    "comments": 3,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-21T12:18:22Z",
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3623",
+    "labels": [
+      "ready",
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O | state:open type:issue label:bounty (MCP OR agent OR trust OR",
+    "body_excerpt": "<!-- misakanet-question-bounty:anchor-3610 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n",
+    "verified_reward_usd": 0.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "This is a `zero-bounty` task: $0.** The reward "
+      ],
+      [
+        "bounty kw",
+        "reward 100",
+        "100",
+        " this issue commenting <code>/reward 100</code> (replac"
+      ]
+    ]
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3728,
+    "title": "[Bounty] Answer the 2 linked question(s)",
+    "reward_usd": 100.0,
+    "comments": 4,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T12:19:39Z",
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3728",
+    "labels": [
+      "ready",
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O | state:open type:issue label:bounty (MCP OR agent OR trust OR",
+    "body_excerpt": "<!-- misakanet-question-bounty:anchor-3659 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3726,
+    "title": "[Bounty] Answer the 3 linked question(s)",
+    "reward_usd": 100.0,
+    "comments": 4,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T12:19:36Z",
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726",
+    "labels": [
+      "ready",
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O | state:open type:issue label:bounty (MCP OR agent OR trust OR",
+    "body_excerpt": "<!-- misakanet-question-bounty:anchor-3662 --> # [Bounty] Answer the 3 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n",
+    "verified_reward_usd": 0.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "This is a `zero-bounty` task: $0.** The reward "
+      ],
+      [
+        "bounty kw",
+        "reward 100",
+        "100",
+        " this issue commenting <code>/reward 100</code> (replac"
+      ]
+    ]
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3624,
+    "title": "[Bounty] Answer the 2 linked question(s)",
+    "reward_usd": 100.0,
+    "comments": 4,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-21T12:18:23Z",
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3624",
+    "labels": [
+      "ready",
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O | label:bounty state:open type:issue (Python OR TypeScript OR  | state:open type:issue label:bounty (MCP OR agent OR trust OR",
+    "body_excerpt": "<!-- misakanet-question-bounty:anchor-3384 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n",
+    "verified_reward_usd": 0.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "This is a `zero-bounty` task: $0.** The reward "
+      ],
+      [
+        "bounty kw",
+        "reward 100",
+        "100",
+        " this issue commenting <code>/reward 100</code> (replac"
+      ]
+    ]
+  },
+  {
+    "repo": "aiforuseac4-blockchain/agent-wallet-review-bounty",
+    "number": 1,
+    "title": "[Upcoming 0.99 USDC bounty \u00b7 Node.js] Build a safer Base wallet transaction review CLI",
+    "reward_usd": 99.0,
+    "comments": 1,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-08-01T08:08:44Z",
+    "url": "https://github.com/aiforuseac4-blockchain/agent-wallet-review-bounty/issues/1",
+    "labels": [
+      "help wanted",
+      "good first issue"
+    ],
+    "state": "open",
+    "source_query": "label:\"good first issue\" state:open type:issue bounty in:title",
+    "body_excerpt": "# Build a deterministic Base agent-wallet transaction review CLI  ## Funding status  This child task is being prepared for [Agent Bounties #649](https://github.com/NSPG13/agent-bounties/issues/649). It is not yet created or funded on Base. Do not start paid work until this issue is updated with the ",
+    "verified_reward_usd": 99.0,
+    "match_evidence": [
+      [
+        "N USDC",
+        "99 USDC",
+        "99",
+        "[Upcoming 0.99 USDC bounty \u00b7 Node."
+      ],
+      [
+        "N USDC",
+        "99 USDC",
+        "99",
+        "ctly 1.00 Base native USDC: 0.99 USDC solver reward "
+      ],
+      [
+        "N USDC",
+        "01 USDC",
+        "01",
+        "0.99 USDC solver reward and 0.01 USDC verifier rewar"
+      ],
+      [
+        "N USDC",
+        "01 USDC",
+        "01",
+        "The solver will also need a 0.01 USDC claim bond gov"
+      ]
+    ]
+  },
+  {
+    "repo": "OpenAIMP/cfagent",
+    "number": 1076,
+    "title": "[CAPABILITIES] Missing capabilities: lifecycle email, cfpay A2A payment acceptance, cancellation/refunds, and related gaps",
+    "reward_usd": 50.0,
+    "comments": 1,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T21:10:57Z",
+    "url": "https://github.com/OpenAIMP/cfagent/issues/1076",
+    "labels": [],
+    "state": "open",
+    "source_query": "state:open type:issue x402 in:title,body",
+    "body_excerpt": "## Agent #ceo-aimp  ## Purpose  Single tracking issue for user-facing capabilities verified as missing in code. Each item states what exists today (so the gap is precise, not assumed) and what is missing. Nothing below is implemented; items marked PROPOSED in `docs/architecture/security/email-communications.md` and `identity-lifecycle.md` are the design inputs for Part A.   ## UPDATE 2026-10-22 \u2014 ",
+    "verified_reward_usd": 50.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "yments.ts`): OPTIONS_SCREENER $0.05 (60/min), M"
+      ],
+      [
+        "dollar",
+        "$0",
+        "0",
+        ".05 (60/min), MARKET_RESEARCH $0.10 (30/min), S"
+      ],
+      [
+        "dollar",
+        "$0",
+        "0",
+        "$0.10 (30/min), STOCK_SIGNALS $0.02 (120/min), "
+      ],
+      [
+        "dollar",
+        "$50",
+        "50",
+        "is a LOCAL LEDGER simulation ($50 starting credi"
+      ],
+      [
+        "dollar",
+        "$50",
+        "50",
+        " (none defined; the simulated $50 wallet credit "
+      ]
+    ]
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23307,
+    "title": "[Bounty proposal] fix(notification-tools): harden manage_daily_summary_tool validation, hour coercion, and config extraction ( proposed)",
+    "reward_usd": 50.0,
+    "comments": 2,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T14:15:36Z",
+    "url": "https://github.com/BasedHardware/omi/issues/23307",
+    "labels": [],
+    "state": "open",
+    "source_query": "bounty in:title state:open type:issue (USDC OR USD OR \"$\") | bounty in:title state:open type:issue (crypto OR x402 OR SOL",
+    "body_excerpt": "### Summary  In `backend/utils/retrieval/tools/notification_settings_tools.py`, `manage_daily_summary_tool` can crash with unhandled `TypeError` exceptions during chat turns when an LLM passes `hour` as a string (e.g. `hour=\"22\"`), with `AttributeError` when `action` is non-string or None, or fail configuration resolution when alternative user ID formats (`uid`, top-level `user_id`) are supplied. ",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23305,
+    "title": "[Bounty proposal] fix(graph-tools): harden traverse_knowledge_graph_tool validation, hops coercion, and config extraction ( proposed)",
+    "reward_usd": 50.0,
+    "comments": 2,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T14:06:05Z",
+    "url": "https://github.com/BasedHardware/omi/issues/23305",
+    "labels": [],
+    "state": "open",
+    "source_query": "bounty in:title state:open type:issue (USDC OR USD OR \"$\") | bounty in:title state:open type:issue (crypto OR x402 OR SOL",
+    "body_excerpt": "### Summary  In `backend/utils/retrieval/tools/graph_tools.py`, `traverse_knowledge_graph_tool` can fail with unhandled `TypeError` exceptions during chat turns when an LLM passes `hops` as a string (e.g. `hops=\"2\"`), or when empty/whitespace entities and alternative config formats (`uid`, top-level `user_id`) are supplied.  ### Key Issues & Fixes  1. **String `hops` TypeError**: `_normalize_hops`",
+    "verified_reward_usd": 50.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$50",
+        "50",
+        " Bounty  - Proposed Bounty: **$50** (software ha"
+      ]
+    ]
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23328,
+    "title": "[Bounty proposal] fix(preference-tools): harden save_user_preference_tool validation, user_stated coercion, and config resilience ($50 proposed)",
+    "reward_usd": 50.0,
+    "comments": 3,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-22T17:37:32Z",
+    "url": "https://github.com/BasedHardware/omi/issues/23328",
+    "labels": [],
+    "state": "open",
+    "source_query": "bounty in:title state:open type:issue (USDC OR USD OR \"$\") | bounty in:title state:open type:issue (crypto OR x402 OR SOL",
+    "body_excerpt": "### Summary In `backend/utils/retrieval/tools/preference_tools.py`, `save_user_preference_tool` interacts with the LLM conversational agent to store and update user preferences. Several critical edge-case failure modes were identified:  1. **Empty / non-string preference crashes or pollutes ledger**:    When called with empty strings, whitespace-only, `None`, or non-string objects (e.g. dicts/ints",
+    "verified_reward_usd": 50.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$50",
+        "50",
+        "rcion, and config resilience ($50 proposed) ### "
+      ],
+      [
+        "dollar",
+        "$50",
+        "50",
+        "ssing).  **Proposed Bounty**: $50 USDC **Payout "
+      ],
+      [
+        "N USDC",
+        "50 USDC",
+        "50",
+        "sing).  **Proposed Bounty**: $50 USDC **Payout Walle"
+      ]
+    ]
+  },
+  {
+    "repo": "lizTheDeveloper/privacy-the-game",
+    "number": 402,
+    "title": "[find opt-out] Partners Credit and Verification Solutions: find the official opt-out route",
+    "reward_usd": 0.0,
+    "comments": 0,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-19T17:08:03Z",
+    "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/402",
+    "labels": [
+      "bounty",
+      "bounty: medium",
+      "data-brokers"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (signature OR verification OR Ed25519 OR \"key agreement\")",
+    "body_excerpt": "**What**: Find Partners Credit and Verification Solutions's official opt-out or \"do not sell\" route, or show that none exists.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the dataset is cited by journalists, so a wrong or dead link costs real people r",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "lizTheDeveloper/privacy-the-game",
+    "number": 353,
+    "title": "[find opt-out] Accuity Asset Verification Services Inc.: find the official opt-out route",
+    "reward_usd": 0.0,
+    "comments": 0,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-19T17:04:27Z",
+    "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/353",
+    "labels": [
+      "bounty",
+      "bounty: medium",
+      "data-brokers"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (signature OR verification OR Ed25519 OR \"key agreement\")",
+    "body_excerpt": "**What**: Find Accuity Asset Verification Services Inc.'s official opt-out or \"do not sell\" route, or show that none exists.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the dataset is cited by journalists, so a wrong or dead link costs real people rea",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "patrickkellyyoung-ai/swarm-agora-mcp",
+    "number": 1,
+    "title": "[BOUNTY #1] MoE Routing Gate Normalization across High-Dimensional Token Projections",
+    "reward_usd": 0.0,
+    "comments": 1,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-19T02:57:25Z",
+    "url": "https://github.com/patrickkellyyoung-ai/swarm-agora-mcp/issues/1",
+    "labels": [
+      "help wanted",
+      "good first issue",
+      "bounty",
+      "bot-task"
+    ],
+    "state": "open",
+    "source_query": "label:\"good first issue\" state:open type:issue bounty in:title | label:\"help wanted\" state:open type:issue bounty in:title (M",
+    "body_excerpt": "### \ud83e\udd16 Autonomous Agent Bounty  **Reward:** 2 Swarm Query Credits   **Category:** Model Architecture / Tensor Mathematics   **Host:** WhisperAI Studio Swarm Agora Council  #### Problem Statement: Analyze and verify unit-norm `cheap_embed` positive prompt vectors when projecting hidden states into rou",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "jflournoy/for-funsies",
+    "number": 4,
+    "title": "[Bounty: 1 GSD + 2 GSD if built] Propose new features aligned with the vision of this repository",
+    "reward_usd": 0.0,
+    "comments": 1,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-08-07T21:42:46Z",
+    "url": "https://github.com/jflournoy/for-funsies/issues/4",
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "good first issue",
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:\"good first issue\" state:open type:issue bounty in:title",
+    "body_excerpt": "This repository is AI-driven. There is no human roadmap and there is not going to be one. **What this project becomes is decided by the agents working on it.** That is the entire experiment.  So: what should this thing do?  ## The bounty  **1 GSD per proposal that gets labeled `accepted`.** Plus **2",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "amiller/bounty-arcade",
+    "number": 5,
+    "title": "[flight] Run recording and replay",
+    "reward_usd": 0.0,
+    "comments": 2,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-21T16:02:11Z",
+    "url": "https://github.com/amiller/bounty-arcade/issues/5",
+    "labels": [
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | state:open type:issue label:bounty \"$500\" OR \"$1000\" OR \"$20 | state:open type:issue label:bounty (MCP OR agent OR trust OR",
+    "body_excerpt": "**App:** `apps/flight` **Amount:** not yet funded **Base commit:** `5c76d40` **Checker:** [`bounties/flight-replay/check.yml`](https://github.com/amiller/bounty-arcade/blob/8232383/bounties/flight-replay/check.yml) at `8232383`, run with `node check.mjs bounties/flight-replay/check.yml <patch>` in t",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "amiller/bounty-arcade",
+    "number": 4,
+    "title": "[flight] Fuel",
+    "reward_usd": 0.0,
+    "comments": 2,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-21T16:02:10Z",
+    "url": "https://github.com/amiller/bounty-arcade/issues/4",
+    "labels": [
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | state:open type:issue label:bounty \"$500\" OR \"$1000\" OR \"$20 | state:open type:issue label:bounty (MCP OR agent OR trust OR",
+    "body_excerpt": "**App:** `apps/flight` **Amount:** not yet funded **Base commit:** `5c76d40` **Checker:** [`bounties/flight-fuel/check.yml`](https://github.com/amiller/bounty-arcade/blob/8232383/bounties/flight-fuel/check.yml) at `8232383`, run with `node check.mjs bounties/flight-fuel/check.yml <patch>` in the dev",
+    "verified_reward_usd": 0.0,
+    "match_evidence": []
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3622,
+    "title": "[Bounty] Answer the 2 linked question(s)",
+    "reward_usd": 0.0,
+    "comments": 2,
+    "assigned": false,
+    "assignee_login": null,
+    "created_at": "2026-10-21T12:18:20Z",
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3622",
+    "labels": [
+      "ready",
+      "bounty"
+    ],
+    "state": "open",
+    "source_query": "state:open type:issue label:bounty (MCP OR agent OR trust OR Ed25519) sort:created",
+    "body_excerpt": "<!-- misakanet-question-bounty:anchor-3612 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is nothing to link the asker to, and the answer has to be written by someone who saw the failure.  - #36",
+    "verified_reward_usd": 0.0,
+    "match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "This is a `zero-bounty` task: $0.** The reward "
+      ]
+    ]
+  }
+]

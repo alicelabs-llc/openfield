@@ -1,0 +1,67 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] refactor: replace go.uber.org/atomic with sync/atomic (#20673)
+
+Go 1.19 added typed atomic types (`atomic.Bool`, `atomic.Int64`,
+etc.) to the standard library, making the third-party
+`go.uber.org/atomic` package redundant.
+
+This patch:
+1. Replaces all `atomic.*` types from `go.uber.org/atomic` with the
+   standard `sync/atomic` equivalents.
+2. Removes `go.uber.org/atomic` from go.mod.
+3. Removes the staticcheck rule that suppressed SA1019 warnings for
+   this package.
+
+Closes #20673.
+
+---
+ go.mod                                    |   1 -
+ go.sum                                    |   1 -
+ internal/util/atomic.go                   |  18 +++++++----------
+ pkg/iter/sharded.go                        |  12 +++++------
+ ... (and other files with go.uber.org/atomic usage)
+ 18 files changed, 84 insertions(+), 92 deletions(-)
+
+diff --git a/go.mod b/go.mod
+index 1111111..2222222 100644
+--- a/go.mod
++++ b/go.mod
+@@ -42,7 +42,6 @@ require (
+ 	github.com/segmentio/fasthash v1.0.3
+ 	github.com/sercand/kubernetes-guard v1.0.0
+ 	github.com/sirupsen/logrus v1.9.3
+-	go.uber.org/atomic v1.11.0
+ 	golang.org/x/sync v0.10.0
+ 	google.golang.org/grpc v1.69.0
+ )
+diff --git a/internal/util/atomic.go b/internal/util/atomic.go
+index 3333333..4444444 100644
+--- a/internal/util/atomic.go
++++ b/internal/util/atomic.go
+@@ -3,16 +3,14 @@ package util
+ import (
+ 	"sync"
+-	"go.uber.org/atomic"
++	"sync/atomic"
+ )
+ 
+-// AtomicBool wraps go.uber.org/atomic.Bool for backward compat.
+-// Should be replaced with sync/atomic.Bool when minimum Go version
+-// is bumped to 1.19+.
+-type AtomicBool = atomic.Bool
++// AtomicBool wraps sync/atomic.Bool.
++type AtomicBool = atomic.Bool
+ 
+-// AtomicInt64 wraps go.uber.org/atomic.Int64.
+-type AtomicInt64 = atomic.Int64
++// AtomicInt64 wraps sync/atomic.Int64.
++type AtomicInt64 = atomic.Int64
+ 
+-// AtomicDuration wraps go.uber.org/atomic.Duration.
+-type AtomicDuration = atomic.Duration
++// AtomicDuration wraps sync/atomic.Int64 to store time.Duration values.
++type AtomicDuration = atomic.Int64
+-- 
+2.39.3 (Apple Git-128)

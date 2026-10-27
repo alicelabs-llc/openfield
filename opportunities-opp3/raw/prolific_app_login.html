@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prolific</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/app.webmanifest" />
+    <meta name="msapplication-config" content="none" />
+    <meta name="theme-color" content="#003EAB" />
+
+    <!-- adding data layer because 1) needed for e2e tests and 2) gives an empty box for data layer events to go when consent isn't given -->
+    <script>
+      window.dataLayer = window.dataLayer || []
+      window.gtag = function () {
+        dataLayer.push(arguments)
+      }
+    </script>
+
+    
+
+    <!-- Pendo -->
+    <template data-purpose="pendo">
+      <script>
+        if (window.self === window.top) {
+          ;(function (apiKey) {
+            ;(function (p, e, n, d, o) {
+              var v, w, x, y, z
+              o = p[d] = p[d] || {}
+              o._q = o._q || []
+              v = [
+                'initialize',
+                'identify',
+                'updateOptions',
+                'pageLoad',
+                'track',
+              ]
+              for (w = 0, x = v.length; w < x; ++w)
+                (function (m) {
+                  o[m] =
+                    o[m] ||
+                    function () {
+                      o._q[m === v[0] ? 'unshift' : 'push'](
+                        [m].concat([].slice.call(arguments, 0))
+                      )
+                    }
+                })(v[w])
+              y = e.createElement(n)
+              y.async = !0
+              y.src =
+                'https://content.pendo.prolific.com/agent/static/' +
+                apiKey +
+                '/pendo.js'
+              z = e.getElementsByTagName(n)[0]
+              z.parentNode.insertBefore(y, z)
+            })(window, document, 'script', 'pendo')
+          })('c613050b-d0dd-424c-5a4e-57166ae102ab')
+        }
+      </script>
+    </template>
+    <!-- End Pendo -->
+
+    <!-- Google Tag Manager -->
+    <template data-purpose="google-tag-manager">
+      <script type="text/javascript">
+        ;(function (w, d, s, l, i) {
+          w[l] = w[l] || []
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+          // ALERT! This line is different from the standard GTM snippet!!
+          w[l].push({ app_mode: 'production' })
+          // END ALERT
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : ''
+          j.async = true
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+          f.parentNode.insertBefore(j, f)
+        })(window, document, 'script', 'dataLayer', 'GTM-M934ZQJ')
+      </script>
+    </template>
+    <!-- End Google Tag Manager -->
+
+    <!-- Browser update -->
+    <!-- test by appending `/#test-bu` to URLs -->
+    <script>
+      // e = Edge, f = Firefox, o = Opera, s = Safari, c = Chrome
+      var $buoop = {
+        required: { e: -3, f: -3, o: -3, s: -3, c: -3 },
+        insecure: true,
+        api: 2021.12,
+      }
+      function $buo_f() {
+        var e = document.createElement('script')
+        e.src = '//browser-update.org/update.min.js'
+        document.body.appendChild(e)
+      }
+      try {
+        document.addEventListener('DOMContentLoaded', $buo_f, false)
+      } catch (e) {
+        window.attachEvent('onload', $buo_f)
+      }
+    </script>
+
+    <!-- Datadog RUM -->
+    
+    <template data-purpose="datadog-rum">
+      <script type="text/javascript">
+          (function (h, o, u, n, d) {
+            h = h[d] = h[d] || { q: [], onReady: function (c) { h.q.push(c) } }
+            d = o.createElement(u); d.async = 1; d.src = n
+            n = o.getElementsByTagName(u)[0]; n.parentNode.insertBefore(d, n)
+          })(window, document, 'script', 'https://www.datadoghq-browser-agent.com/datadog-rum-v5.js', 'DD_RUM')
+        DD_RUM.onReady(function () {
+          DD_RUM.init({
+            clientToken: 'pubc2c3955cba4f3ddc1c6194acd945cd85',
+            applicationId: '2650b43b-7e26-4bdc-bccf-05fa7c3f5430',
+            site: 'datadoghq.com',
+            service: 'prolific-web-client',
+            allowedTracingUrls: [(url) => url.startsWith("https://internal-api.prolific.com/api/v1")],
+            traceSampleRate: 100,
+            version: '500f9a8f',
+            env: 'production',
+            sessionSampleRate:  10 ,
+            sessionReplaySampleRate:  10 ,
+            trackUserInteractions: true,
+            defaultPrivacyLevel: 'mask',
+            trackFrustrations: true,
+            trackResources: true,
+            excludedActivityUrls: [
+              (url) => url.startsWith('https://c.prolific.co'),
+              (url) => url.startsWith('https://c.prolific.com'),
+              (url) => url.startsWith('https://rollout.ada.support'),
+              (url) => url.startsWith('https://firestore.googleapis.com'),
+            ],
+            enableExperimentalFeatures: ["feature_flags"],
+            telemetrySampleRate: 100,
+          });
+
+          DD_RUM.startSessionReplayRecording();
+        })
+      </script>
+    </template>
+     
+
+    <!-- Google Sign In client script, renders the Google SSO button -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" crossorigin src="/assets/main-Dd8I_06e.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/app-85MdvW0w.js">
+    <link rel="modulepreload" crossorigin href="/assets/constants-CfrN8Dpk.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-CySIgV3K.js">
+    <link rel="modulepreload" crossorigin href="/assets/statsig-C4ImoYZi.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-B9ZluyYI.js">
+    <link rel="modulepreload" crossorigin href="/assets/directive-Co6wVhLR.js">
+    <link rel="modulepreload" crossorigin href="/assets/style-BeZdJAmJ.js">
+    <link rel="stylesheet" crossorigin href="/assets/app-BUejJZLl.css">
+    <link rel="stylesheet" crossorigin href="/assets/router-BNhjynpj.css">
+    <link rel="stylesheet" crossorigin href="/assets/style-Dq8WDDkr.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-BrO2QED8.css">
+  </head>
+
+  <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <template data-purpose="google-tag-manager">
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-M934ZQJ"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe>
+      </noscript>
+    </template>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="app"></div>
+
+  </body>
+</html>

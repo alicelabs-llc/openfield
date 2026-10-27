@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Alethech Portable Memory",
+  "version": "0.9.1",
+  "description": "Capture reviewed chats and create, open and verify encrypted .aleth memory locally.",
+  "action": {
+    "default_title": "Alethech Memory",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "brain.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

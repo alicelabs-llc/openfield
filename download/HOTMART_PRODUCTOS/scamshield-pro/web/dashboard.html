@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>ScamShield Pro Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e1a;--card:#131a2e;--border:#26314f;--text:#e6ecf5;--muted:#7a8aa8;--accent:#00d97e;--danger:#ff4d4f;--warn:#ffb020}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;padding:24px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+header h1{font-size:24px;font-weight:800}
+header .badge{background:rgba(0,217,126,.1);border:1px solid rgba(0,217,126,.3);padding:5px 12px;border-radius:6px;color:var(--accent);font-size:13px}
+.scan-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;display:flex;gap:10px}
+.scan-box input{flex:1;background:#0f1525;border:1px solid var(--border);border-radius:8px;padding:12px;color:var(--text);font-size:14px;font-family:inherit}
+.scan-box input:focus{outline:none;border-color:var(--accent)}
+.scan-box button{background:var(--accent);color:#0a0e1a;border:none;border-radius:8px;padding:0 24px;font-weight:700;cursor:pointer}
+.results{display:grid;grid-template-columns:300px 1fr;gap:24px}
+.score-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;text-align:center;position:sticky;top:24px;align-self:start}
+.score-card .big{font-size:72px;font-weight:900;line-height:1;font-family:'JetBrains Mono',monospace}
+.score-card .label{margin-top:8px;font-size:14px;font-weight:700;text-transform:uppercase}
+.score-card .rec{margin-top:16px;font-size:13px;color:var(--muted);line-height:1.5}
+.checks{display:flex;flex-direction:column;gap:10px}
+.check{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px}
+.check .ico{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:14px;flex-shrink:0}
+.check.pass .ico{background:rgba(0,217,126,.15);color:var(--accent)}
+.check.fail .ico{background:rgba(255,77,79,.15);color:var(--danger)}
+.check .info{flex:1}
+.check .info .name{font-weight:700;font-size:14px}
+.check .info .msg{color:var(--muted);font-size:13px;margin-top:3px}
+.check .sev{font-size:11px;padding:3px 8px;border-radius:4px;font-weight:700;text-transform:uppercase}
+.sev.critical{background:rgba(255,77,79,.2);color:var(--danger)}
+.sev.high{background:rgba(255,138,61,.2);color:#ff8a3d}
+.sev.medium{background:rgba(255,176,32,.2);color:var(--warn)}
+.sev.low,.sev.info{background:rgba(0,217,126,.15);color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <h1>🛡️ ScamShield Pro Dashboard</h1>
+  <span class="badge">API: <span id="api-status">checking...</span></span>
+</header>
+
+<div class="scan-box">
+  <input id="url-input" type="text" placeholder="https://example.com" value="https://github.com">
+  <button id="scan-btn">Analizar URL</button>
+</div>
+
+<div class="results">
+  <div class="score-card">
+    <div class="big" id="score" style="color:var(--muted)">--</div>
+    <div class="label" id="verdict">Sin escanear</div>
+    <div class="rec" id="rec">Ingresa una URL y haz clic en Analizar</div>
+    <div style="margin-top:18px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace" id="meta"></div>
+  </div>
+  <div class="checks" id="checks-list">
+    <div style="color:var(--muted);padding:40px;text-align:center">Los resultados aparecerán aquí</div>
+  </div>
+</div>
+
+<script>
+async function checkHealth() {
+  try {
+    const r = await fetch('/healthz');
+    const d = await r.json();
+    document.getElementById('api-status').textContent = '✓ ' + d.version;
+    document.getElementById('api-status').style.color = 'var(--accent)';
+  } catch(e) {
+    document.getElementById('api-status').textContent = '✗ offline';
+    document.getElementById('api-status').style.color = 'var(--danger)';
+  }
+}
+checkHealth();
+
+async function scan() {
+  const url = document.getElementById('url-input').value.trim();
+  if (!url) return;
+  const btn = document.getElementById('scan-btn');
+  btn.textContent = 'Escaneando...';
+  btn.disabled = true;
+  try {
+    const r = await fetch('/v1/scan', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({url: url, fetch_content: false})
+    });
+    if (!r.ok) {
+      const err = await r.text();
+      alert('Error: ' + err);
+      return;
+    }
+    const data = await r.json();
+    render(data);
+  } catch(e) {
+    alert('No se pudo conectar al backend. ¿Está corriendo el servidor?');
+  } finally {
+    btn.textContent = 'Analizar URL';
+    btn.disabled = false;
+  }
+}
+
+function render(data) {
+  const ts = data.trust_score;
+  const color = ts.value >= 81 ? '#00d97e' : ts.value >= 61 ? '#4cd964' : ts.value >= 41 ? '#ffb020' : ts.value >= 21 ? '#ff8a3d' : '#ff4d4f';
+  const scoreEl = document.getElementById('score');
+  scoreEl.textContent = ts.value;
+  scoreEl.style.color = color;
+  document.getElementById('verdict').textContent = ts.verdict.replace(/_/g,' ');
+  document.getElementById('rec').textContent = data.trust_score.verdict + ': ' + (
+    ts.value >= 81 ? 'High confidence to proceed.'
+    : ts.value >= 61 ? 'Reasonable to proceed. Use a credit card.'
+    : ts.value >= 41 ? 'Verify physical address and independent reviews.'
+    : ts.value >= 21 ? 'Avoid transactions.'
+    : 'Do not visit. Do not enter any personal information.'
+  );
+  document.getElementById('meta').innerHTML =
+    'IP: ' + (data.ip_address||'N/A') + '<br>' +
+    'Country: ' + (data.server_country||'N/A') + '<br>' +
+    'Domain age: ' + (data.domain_age_days||'?') + ' días<br>' +
+    'SSL: ' + (data.ssl_valid ? '✓' : '✗') + '<br>' +
+    'Duration: ' + data.duration_ms + ' ms<br>' +
+    'Confidence: ' + ts.confidence + '%';
+
+  const list = document.getElementById('checks-list');
+  list.innerHTML = '';
+  for (const c of data.checks) {
+    const el = document.createElement('div');
+    el.className = 'check ' + (c.passed ? 'pass' : 'fail');
+    el.innerHTML = `
+      <div class="ico">${c.passed ? '✓' : '✗'}</div>
+      <div class="info">
+        <div class="name">${c.name}</div>
+        <div class="msg">${c.message}</div>
+      </div>
+      <span class="sev ${c.severity}">${c.severity}</span>
+    `;
+    list.appendChild(el);
+  }
+}
+
+document.getElementById('scan-btn').addEventListener('click', scan);
+document.getElementById('url-input').addEventListener('keydown', e => { if (e.key === 'Enter') scan(); });
+window.addEventListener('load', () => scan());
+</script>
+</body>
+</html>

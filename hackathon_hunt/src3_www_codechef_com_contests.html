@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://www.codechef.com/favicon.ico" type="image/x-icon"/>
+    <title>Coding contests & Challenges</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content='Practice in the CodeChef monthly coding contests, and master competitive programming. Get all the information about the rated coding challenges hosted every week.'/>
+    <meta name="og:image" content="https://cdn.codechef.com/sites/all/themes/abessive/cc-logo.png"/>
+    <meta name="og:type" content="website"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://www.codechef.com/contests">
+    <script src="https://accounts.google.com/gsi/client" async type="c94862cf6b42390f56fc3fe8-text/javascript"></script>
+    
+    
+    <link rel="prefetch" href="https://cdn.codechef.com/images/cc-logo.svg" as="image" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto+Mono:wght@100;300;400;500;700&family=Fustat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Initial loader classes -->
+  <style>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loadingIcon {
+      border: 0.4em solid rgba(0, 0, 0, 0.0);
+      border-top: 0.4em solid #2A67B1;
+      border-radius: 50%;
+      width: 4em;
+      height: 4em;
+      animation: spin 1s linear infinite;
+      color: #2A67B1;
+    }
+
+    .loading {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgb(108, 116, 134);
+      background: inherit;
+      z-index: 100;
+      position: absolute;
+    }
+
+    .message {
+      padding: 16px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    /* Dark Mode styles */
+    .loader-icon-dark {
+      border-top: 0.4em solid #5780b0;
+    }
+    .dark {
+      background: #1d1e23;
+      color: rgb(255 255 255 / 60%);
+    }
+  </style>
+  <script type="c94862cf6b42390f56fc3fe8-text/javascript">
+
+    const languageIdeRoutes = [
+      'python', 'java', 'cpp', 'c', 'pypy', 'csharp', 'javascript', 'go', 'php', 'kotlin', 'rust', 'r', 'sql', 'html',
+      'oracledb', 'react'
+    ];
+    
+    if (
+      (['faq', 'pro', 'contests'].includes(window.location.pathname.split('/').filter(Boolean).pop())) ||
+      (['learn', 'games', 'viewsolution',
+        'submit', 'practice', 'dashboard', 'getting-started', 'college-program', 'practice-old',
+        'roadmap', 'blogs', 'roadmaps', 'blogs', 'skill-tests', 'ide', 'mobile'
+      ].includes(window.location.pathname.split('/').filter(Boolean)[0])) ||
+      (['submit'].includes(window.location.pathname.split('/').filter(Boolean)[1])) ||
+      (['status'].includes(window.location.pathname.split('/').filter(Boolean).slice(-2, -1).pop())) || [
+        // Regex to match the practice and contest submit routes
+        /^\/(submit\/([A-Z]+[A-Z0-9_]*)+|problems\/([A-Z]+[A-Z0-9_]*)+|([A-Z]+[A-Z0-9_]*)+\/submit\/([A-Z]+[A-Z0-9_]*)+|([A-Z]+[A-Z0-9_]*)+\/problems\/([A-Z]+[A-Z0-9_]*)+)$/
+      ].some((regexp) => (regexp.test(window.location.pathname))) ||
+      (languageIdeRoutes.some(lang => window.location.pathname.includes(`${lang}-online-compiler`)))
+    ) {
+      const metaElement = document.createElement('meta');
+      metaElement.setAttribute('name', 'viewport');
+      metaElement.setAttribute('content', 'width=device-width, initial-scale=1');
+      document.head.appendChild(metaElement);
+    }
+
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TV5X2M');
+  </script>
+  <script type="c94862cf6b42390f56fc3fe8-module" crossorigin src="/build/react2/assets/index-BFuS5tq7.js"></script>
+  <link rel="modulepreload" crossorigin href="/build/react2/assets/__commonjsHelpers__-BosuxZz1.js">
+  <link rel="modulepreload" crossorigin href="/build/react2/assets/vendor-mui-BOxa_6jF.js">
+  <link rel="modulepreload" crossorigin href="/build/react2/assets/vendor-sweetalert2-CokzRhbv.js">
+  <link rel="stylesheet" crossorigin href="/build/react2/assets/index-8JvKpkpw.css">
+</head>
+
+<body style="">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="initialLoadingComponent" class="loading fullPage notranslate light">
+    <div class="loadingIcon loader-icon-light"></div>
+    <span id="initialLoadingMessage" class="message light"></span>
+  </div>
+  <div id="root"></div>
+  <script type="c94862cf6b42390f56fc3fe8-text/javascript">
+    // Payment Scripts
+    if (['pro', 'getting-started', 'dashboard', 'roadmap'].includes(window.location.pathname.split('/')[1])) {
+      const razorPay = document.createElement('script');
+      razorPay.setAttribute('src', 'https://checkout.razorpay.com/v1/checkout.js');
+      document.head.appendChild(razorPay);
+
+      // const instamojo = document.createElement('script');
+      // instamojo.setAttribute('src', 'https://js.instamojo.com/v1/checkout.js');
+      // document.head.appendChild(instamojo);
+
+    }
+    const scriptElement = document.createElement('script');
+    scriptElement.setAttribute('src',
+            "/sites/all/modules/codechef_alerts/codechef_alerts.js?v=e4d0e04e7288c13d5006f3fb80a52934"
+    );
+    scriptElement.setAttribute('async', '');
+    document.body.appendChild(scriptElement);
+  </script>
+  <script type="c94862cf6b42390f56fc3fe8-text/javascript" async src="/sites/all/themes/mallow/src/js/cookies.js?v=85c15e68fefb83260af7eb66813136cd"></script>
+  <script type="c94862cf6b42390f56fc3fe8-text/javascript">
+    const loadingMessages = [
+      'Transform every day with the habit of learning',
+      'Explored our courses yet? Enroll now! Over 500k learners have already enrolled.',
+      'Pro tip: Facing a challenge while solving problem? Tap into AI Help',
+      'Set the pace, set the goal, Maintain your streak by solving problem everyday',
+      'Set your own goal to finish each modules',
+      'Pro tip: Pseudo code first, then code with ease.',
+      'Coding is not difficult, you need to try hard enough',
+      '1% better everyday can lead to big results.',
+      'Hard work and consistency is the only way to success',
+      'Don\'t stop until you are in the top 1%',
+      'Becoming the best coder is easy! Just keep doing CodeChef.',
+      'Compete in the XP Weekly Leaderboard and see where you rank!',
+    ];
+    const randomIndex = Math.floor(Math.random() * loadingMessages.length);
+    document.getElementById('initialLoadingMessage').innerText = loadingMessages[randomIndex];
+  </script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="c94862cf6b42390f56fc3fe8-|49" defer></script></body>
+
+</html>
+<script type="c94862cf6b42390f56fc3fe8-text/javascript">
+    window.CDN_URL = 'https://cdn.codechef.com';
+    window.csrfToken = "d11f03d49f9a799862381a4d363395351bd3762dd61d82e22b2822d5d1dbee09";
+    window.APPS_URL = 'https://www.codechef-apps.com';
+    window.DISCUSS_URL = 'https://discuss.codechef.com';
+    window.tawkPropertyId = '668d037a7a36f5aaec9634a5';
+    window.widgetId = '1i2bdb6dt';
+    try {
+        window.codeChefUserData = {"status":"success","user":{"username":"","uid":0,"email":"","profileImage":null,"profileImagePath":"https:\/\/cdn.codechef.com\/sites\/all\/themes\/abessive\/images\/user_default_thumb.jpg","oauth_buttons":null,"oauthData":null,"html_handle":null,"userRatingStar":"0","userRatingStarColor":"black","isAdmin":false,"isContentAdmin":false,"isCollegeSupportAdmin":false,"isHACAdmin":false,"canLockProblems":false,"hasAnySpecialPermission":false,"isPremiumUser":false,"isVerifiedUser":true,"user_consented_privacy_policy_version":null,"user_consented_privacy_policy_on":null,"current_privacy_policy_version":null,"visitedContests":[],"rating":-1,"userStarHtml":"","proDiscount":null,"theme":"dark","fullName":null,"pro_plan":null,"sale":{"saleEndDateIST":"2026-10-23 05:59:59","saleTitle":"FLASH SALE","saleDescription":"CODECHEF FLASH SALE IS ACTIVE","isSaleOngoing":false,"saleDaysLeft":-0,"saleEndDateUTC":"2026-10-23T00:29:59"},"isUserPartOfAnyUserGroup":false,"userSelectedProgrammingLanguage":"","country":null,"isNumberVerified":false,"isJobProfileComplete":false,"league":0,"credits":0,"aiChatLanguage":"English"},"time":1792796888,"ip":"8.212.10.159","adStrip":null};
+    } catch (e) {
+        window.codeChefUserData = {};
+    }
+    try {
+        window.userMessages = {"status":"success","messages":null};
+    } catch (e) {
+        window.userMessages = {};
+    }
+</script>
+
+    <div id="g_id_onload"
+       data-client_id="239412980790-t66g30lvvdcs9u1q0l8tha23599ltt1j.apps.googleusercontent.com"
+       data-login_uri="https://www.codechef.com/onetap"
+       >
+    </div>
+    

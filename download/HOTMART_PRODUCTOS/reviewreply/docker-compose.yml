@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  reviewreply:
+    build: .
+    ports: ["8006:8006"]
+    env_file: [.env]
+    volumes: ["./data:/app/data"]
+    restart: unless-stopped

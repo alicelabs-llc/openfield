@@ -1,0 +1,1 @@
+{"errors":[{"status":401,"detail":"No credentials were provided. Authenticate with HTTP Basic auth, using your API username as the username and your API token as the password."}]}

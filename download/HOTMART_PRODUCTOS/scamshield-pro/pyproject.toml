@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scamshield-pro"
+version = "1.0.0"
+description = "Detect malicious URLs, phishing sites, and scam domains with a single API call. Self-hosted, 30+ heuristics, 0-100 trust score."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Commercial — Single-User Lifetime License" }
+authors = [{ name = "Eddy Flores", email = "eddyflores100@gmail.com" }]
+keywords = [
+    "phishing", "fraud", "url-scanner", "security", "trust-score",
+    "scam-detection", "blocklist", "threat-intel", "fastapi"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "click>=8.1",
+    "rich>=13.9",
+    "httpx[http2]>=0.28",
+    "dnspython>=2.7",
+    "python-whois>=0.9",
+    "tldextract>=5.1",
+    "cryptography>=44.0",
+    "pydantic>=2.10",
+    "pydantic-settings>=2.7",
+    "diskcache>=5.6",
+    "tenacity>=9.0",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.3",
+    "python-multipart>=0.0.20",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.25", "respx>=0.22"]
+
+[project.scripts]
+scamshield = "scamshield.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/eddyflores100-lang/scamshield-pro"
+Documentation = "https://github.com/eddyflores100-lang/scamshield-pro#readme"
+Repository = "https://github.com/eddyflores100-lang/scamshield-pro"
+Issues = "https://github.com/eddyflores100-lang/scamshield-pro/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

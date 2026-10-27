@@ -1,0 +1,336 @@
+[
+  {
+    "title": "Senior Software Engineer — Python, React & AI, Camden Kelly Staffing",
+    "link": "https://www.python.org/jobs/8181/",
+    "description_excerpt": "Rowlett, TX, United States About the Role We are seeking a Senior Software Engineer with strong Python development skills, React experience, and practical experience integrating AI capabilities into software applications. You will contribute across the application stack, building backend services with Django and Flask, developing React interfaces, and designing reliable PostgreSQL databases. You should also have hands-on experience with AI integrations or AI agents that interact with tools, APIs, or application data. What You’ll Do Design, build, and maintain Python applications and backend se",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "docker",
+      "security",
+      "automation",
+      "backend"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python",
+      "docker",
+      "security",
+      "automation"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "Senior Python Engineer (Barcelona-based / Relocation support to Barcelona), Manychat",
+    "link": "https://www.python.org/jobs/8180/",
+    "description_excerpt": "Barcelona, Spain Senior Python Engineer, Billing & Accounts Manychat builds AI-powered automations that help creators and brands engage with their audiences on Instagram, Messenger, WhatsApp and TikTok. We are 400+ people across three continents behind the leading platform for conversational growth. As a Senior Python Engineer you will create the Python foundation for Manychat's Billing: payments, payment provider integrations, anti-fraud and local regulatory compliance, all tied to the pricing model every feature depends on. There is no roadmap yet, so you will design systems end to end, make",
+    "matched_skills": [
+      "python",
+      "docker",
+      "automation",
+      "backend",
+      "contract"
+    ],
+    "core_hits": [
+      "python",
+      "docker",
+      "automation"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "Software Engineer, AI Coding Tasks, Askable",
+    "link": "https://www.python.org/jobs/8178/",
+    "description_excerpt": "Remote, None, Global We're looking for experienced software engineers to build AI coding tasks from a codebase they know well. US$1,000 per task, and you can do as many tasks as you want. You turn a real change from a repository you know into a task that today's best AI coding models struggle with: hard for the models, but fair for a skilled engineer. Your tasks are used to measure and train AI coding models. Remote, any location. US$1,000 per task that passes review. Minimum of one task a week, about 10 hours a week. How it works Apply. Complete a short screener interview and upload your resu",
+    "matched_skills": [
+      "python",
+      "docker",
+      "security",
+      "contract"
+    ],
+    "core_hits": [
+      "python",
+      "docker",
+      "security"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "Python Backend Engineer, Uvik Software",
+    "link": "https://www.python.org/jobs/8174/",
+    "description_excerpt": "Tallinn, Harju County, Estonia Location: USA & LATAM | Remote Employment Type: Contractor, Full-time What You’ll Do: Design, develop, and maintain backend services and RESTful APIs using Python, Flask, or FastAPI Build clean, maintainable, and scalable solutions following Python best practices and PEP8 Work with SQL databases, particularly PostgreSQL Develop unit and integration tests using Pytest Create and maintain API documentation using Swagger/OpenAPI, Insomnia, or similar tools Integrate Large Language Models (LLMs) and AI-powered functionality into backend applications Work with Git-bas",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "docker",
+      "gitlab",
+      "automation",
+      "backend",
+      "contract"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python",
+      "docker",
+      "gitlab",
+      "automation"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "Senior Python Developer, Adzuna",
+    "link": "https://www.python.org/jobs/8131/",
+    "description_excerpt": "Remote (within 2 hours of London timezone), Remote Contract type: Contractor Contract hours: Full-time Location: Remote (within 2 hours of London timezone) Salary: €60k - €70k About Adzuna Adzuna is a job search engine that lists every job, everywhere. From our launch in the UK in 2011, we now have tens of millions of visitors a month and are busy conquering the world from our HQ in West London alongside our remote teams - helping millions of people find better, more fulfilling jobs. We already have a suite of AI-powered tools (such as ValueMyCV, Prepper and ApplyIQ) built by our talented team",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "security",
+      "automation",
+      "backend",
+      "contract"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python",
+      "security",
+      "automation"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "Python/DevOps Engineer, NordVpn/NordSecurity",
+    "link": "https://www.python.org/jobs/8128/",
+    "description_excerpt": "Vilnius / Kaunas / Warsaw, Lithuania/Poland DevOps Engineer Threat Protection Full-time Hybrid Vilnius / Kaunas / Warsaw Learn & grow Boost your skills via our extensive training programs (online and offline) & other resources. Benefit from mentorship and career-switch opportunities to grow within the company. Work from anywhere Recharge with a change of scenery – choose work from any location when you feel a need to power your creativity and drive. Physical well-being Fuel your active lifestyle with online workouts led by our Physical Well-Being experts. Unlock a variety of sports and wellnes",
+    "matched_skills": [
+      "python",
+      "docker",
+      "gitlab",
+      "security",
+      "automation"
+    ],
+    "core_hits": [
+      "python",
+      "docker",
+      "gitlab",
+      "security",
+      "automation"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "Lead Python Backend Engineer, Reef Technologies",
+    "link": "https://www.python.org/jobs/8122/",
+    "description_excerpt": "Warsaw (fully remote), Poland Lead Python Backend Engineer We’re looking for Python backend engineers interested in team management to work on a trustless supercluster of performance-proofed GPU-enabled sandboxed docker container runners controlled by truly decentralized algorithms (not just PAXOS or RAFT). Wow, that was a mouthful... If you found it interesting, join Reef Technologies and lead a team of senior engineers who tackle complex technical challenges. With us, you’ll work on your own terms: Contribute from wherever you like—we are fully remote Set your own time commitment, as long as",
+    "matched_skills": [
+      "python",
+      "docker",
+      "security",
+      "backend",
+      "contract"
+    ],
+    "core_hits": [
+      "python",
+      "docker",
+      "security"
+    ],
+    "match_score": 5
+  },
+  {
+    "title": "AI Engineer, webbyfox consultancy",
+    "link": "https://www.python.org/jobs/8184/",
+    "description_excerpt": "London, UK We're looking for an AI Engineer to design, build, and ship AI-powered features for our clients' Python web applications. You'll take LLM and machine learning ideas from prototype to production, adding AI search, intelligent agents, and automation to Django and FastAPI products. You'll work closely with our senior Python engineers and with client teams. Key responsibilities: - Design and build LLM-powered features such as retrieval-augmented generation (RAG), semantic search, chat assistants, and AI agents - Integrate LLM APIs (e.g. OpenAI, Anthropic, Gemini) and open-source models ",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "docker",
+      "automation"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python",
+      "docker",
+      "automation"
+    ],
+    "match_score": 4
+  },
+  {
+    "title": "Senior Python Engineer, webbyfox consultancy",
+    "link": "https://www.python.org/jobs/8183/",
+    "description_excerpt": "London, UK We're looking for a Senior Python Engineer to design, build, and scale the backend systems that power our products. You'll own services end to end — from architecture and API design through to deployment and monitoring — and work closely with product, data, and DevOps teams. Key responsibilities: - Design, develop, and maintain scalable, high-performance backend services and APIs in Python - Lead technical design discussions and make sound architectural decisions - Write clean, well-tested, maintainable code and champion engineering best practices - Review code and mentor junior and",
+    "matched_skills": [
+      "python",
+      "docker",
+      "security",
+      "automation",
+      "backend"
+    ],
+    "core_hits": [
+      "python",
+      "docker",
+      "security",
+      "automation"
+    ],
+    "match_score": 4
+  },
+  {
+    "title": "ML Engineer, Micro1",
+    "link": "https://www.python.org/jobs/8136/",
+    "description_excerpt": "Remote, Worlwide, Worldwide We are looking for highly skilled Machine Learning Experts to contribute to an AI training project involving model development, training and inference systems, numerical computing, performance optimization, and Python. The work involves creating, solving, reviewing, and validating challenging machine-learning engineering tasks. A representative task may require implementing or modifying a model, constructing a reproducible training or inference workflow, optimizing memory or throughput, debugging numerical or system-level failures, and verifying that the resulting i",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "automation"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python",
+      "automation"
+    ],
+    "match_score": 4
+  },
+  {
+    "title": "SENIOR Back-End Python Engineer - FULLY REMOTE-WORLDWIDE, ActivePrime, Inc.",
+    "link": "https://www.python.org/jobs/8134/",
+    "description_excerpt": "REMOTE, REMOTE As a senior software engineer, you'll join a team tackling genuinely hard problems: distributed data processing at enterprise scale, complex deduplication algorithms, and systems that need to handle billions of records without breaking. The kind of challenges that require actual engineering thinking, not just tutorial-level code. Ready to tackle complex engineering challenges that impact how the world's largest companies manage their data? Very proficient with Linux at the terminal level Test-driven development (TDD) and pytest proficiency 7+ years Python experience Polars exper",
+    "matched_skills": [
+      "python",
+      "security",
+      "automation",
+      "backend"
+    ],
+    "core_hits": [
+      "python",
+      "security",
+      "automation"
+    ],
+    "match_score": 4
+  },
+  {
+    "title": "Junior Machine Learning Engineer, HFT Architecture",
+    "link": "https://www.python.org/jobs/8176/",
+    "description_excerpt": "Remote, Worldwide HFT Architecture builds short-horizon price prediction and the trading system around it. This role works on the pipeline that turns order-book records into validated models, next to more experienced engineers: data preparation, experiments end to end, and the checks that keep the future out of a training set. Fully remote, from anywhere in the world. Junior. Base salary: USD 125,000–155,000 a year. To apply: a link to your résumé, LinkedIn or GitHub, and one sentence on any of our articles. No file, no cover letter. Apply: https://hftarchitecture.com/careers/junior-machine-le",
+    "matched_skills": [
+      "python",
+      "automation"
+    ],
+    "core_hits": [
+      "python",
+      "automation"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Machine Learning Engineer, HFT Architecture",
+    "link": "https://www.python.org/jobs/8175/",
+    "description_excerpt": "Remote, Worldwide HFT Architecture builds short-horizon price prediction and the trading system around it. This role builds the pipeline from raw order-book records to a fitted, validated model: data preparation, features, training and out-of-sample measurement, reproducible run to run, with leakage controls built in. Fully remote, from anywhere in the world. Middle+ to senior. Base salary: USD 180,000–240,000 a year. To apply: a link to your résumé, LinkedIn or GitHub, and an answer to one question about our article \"Why Your Market Maker Loses Money\". No file, no cover letter. Apply: https:/",
+    "matched_skills": [
+      "python",
+      "automation"
+    ],
+    "core_hits": [
+      "python",
+      "automation"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Senior Staff Engineer - Origination & New Products, tem",
+    "link": "https://www.python.org/jobs/8139/",
+    "description_excerpt": "Remote (UK / EU), Remote (UK / EU), Remote (UK / EU) We're hiring a Senior Staff Engineer to lead a new three-person squad building product categories that don't exist at tem yet: deep integration into Rosso, pricing capability, and deal-risk tooling. This is a hands-on individual-contributor role, not people management. You design, build, and review the hardest parts of the system yourself, in Python, alongside the squad. The stack is production-grade Python throughout: services built on AWS Lambda and API Gateway, state and events handled with DynamoDB and EventBridge, all wired together as ",
+    "matched_skills": [
+      "python",
+      "webhook"
+    ],
+    "core_hits": [
+      "python",
+      "webhook"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Software Engineer, Full Stack (Python, Java, Rust, C#, C++), Gridnaut Recruiting",
+    "link": "https://www.python.org/jobs/8135/",
+    "description_excerpt": "Remote, Remote, Worldwide Gridnaut Recruiting is hiring a remote Software Engineer, Full Stack for a flexible hourly contractor engagement supporting a leading AI lab. This is a Python-forward full-stack role: Python is explicitly named as a core language for the position, alongside Java, Rust, C#, and C++. You will contribute to model-training support, evaluation, and structured task review while working across backend services, frontend (React), databases, and cloud systems. Work is fully remote, hourly, and flexible. Pay is $50–$65 per hour (USD), depending on experience and demonstrated sk",
+    "matched_skills": [
+      "python",
+      "backend",
+      "contract"
+    ],
+    "core_hits": [
+      "python"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Agentic Python Engineer, Evaboot",
+    "link": "https://www.python.org/jobs/8133/",
+    "description_excerpt": "Remote, Remote/Worldwide, Remote/Worldwide, Remote Evaboot turns LinkedIn Sales Navigator searches into clean, verified prospecting lists. Demo: https://www.youtube.com/watch?v=khYgyDlo2Iw We are bootstrapped, $2.2M+ ARR, a team of 5, and remote since day one. What we are doing: building self-improving loops and agentic products. Agentic products you will work on: SDR agent (Sales Navigator agent, emailing outreach agent) Self-improving loops you will build: Coding Support SEO & content Analytics Company-wide systems (memory, tooling) You will work directly with the co-founder & CEO. What is g",
+    "matched_skills": [
+      "ai_agent",
+      "python"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Agentic Python Engineer, Evaboot",
+    "link": "https://www.python.org/jobs/8130/",
+    "description_excerpt": "Remote, Remote, Worldwide Evaboot | Agentic Python Engineer | REMOTE | Full-time | $70-120K USD Evaboot turns LinkedIn Sales Navigator searches into clean, verified prospecting lists. Demo: https://www.youtube.com/watch?v=khYgyDlo2Iw Bootstrapped, $2.2M+ ARR, team of 5, remote since day one. What we're doing: building self-improving loops and agentic products. Agentic products you'll work on: SDR agent (sales navigator agent, emailing outreach agent). Self-improving loops you'll build: coding, support, SEO & content, analytics, and company-wide systems (memory, tooling). You will work directly",
+    "matched_skills": [
+      "ai_agent",
+      "python"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Python developer, Eleks",
+    "link": "https://www.python.org/jobs/8129/",
+    "description_excerpt": "Poland, Lviv, Ivano-Frankivsk, Ternopil, Uzhhorod, Chernivtsi or Kyiv, Ukraine/Poland ABOUT PROJECT Our client is one of the leading financial services companies in the USA. The project focuses on developing a large-scale platform for financial data management, enabling secure storage, processing, and delivery of business-critical financial data. Offices to Apply in - Poland Ternopil Ivano-Frankivsk Lviv Kyiv Ukraine Krakow Chicago Las Vegas Argentina Croatia Uzhhorod Chernivtsi Zhytomyr Rivne Lutsk REQUIREMENTS 4+ years of commercial experience with Python Strong experience with Flask Experie",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "backend"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Software Engineer (Remote), Softech Associate",
+    "link": "https://www.python.org/jobs/8126/",
+    "description_excerpt": "Panama City Beach, Florida, United States Join Softech Associate to build and ship real software for our clients. We are looking for engineers with strong fundamentals and excellent communication who want to grow on a remote-first team. What we're looking for Strong foundational knowledge of computer science and software engineering Comfort with data structures, algorithms, system design, and clean coding principles Ability to explain technical concepts clearly and logically Advanced-level English communication skills Confidence and clarity when reasoning through technical problems Responsibil",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "backend"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python"
+    ],
+    "match_score": 3
+  },
+  {
+    "title": "Agentic Python Engineer, Evaboot",
+    "link": "https://www.python.org/jobs/8125/",
+    "description_excerpt": "Remote, Remote/Worldwide, Remote/Worldwide Evaboot turns LinkedIn Sales Navigator searches into clean, verified prospecting lists. Demo: https://www.youtube.com/watch?v=khYgyDlo2Iw We are bootstrapped, $2.2M+ ARR, a team of 5, and remote since day one. What we are doing: building self-improving loops and agentic products. Agentic products you will work on: SDR agent (Sales Navigator agent, emailing outreach agent) Self-improving loops you will build: Coding Support SEO & content Analytics Company-wide systems (memory, tooling) You will work directly with the co-founder & CEO. What is guarantee",
+    "matched_skills": [
+      "ai_agent",
+      "python"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python"
+    ],
+    "match_score": 3
+  }
+]

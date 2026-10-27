@@ -1,0 +1,4 @@
+Query: ejecuta la skill tareas-largas
+Triggered: True
+Expected: trigger
+Pass: True

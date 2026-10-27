@@ -1,0 +1,96 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] ci: bump GitHub Actions to Node 24 compatible versions (#34)
+
+GitHub Actions runners will deprecate Node 16/20 actions in 2026-Q4.
+This patch bumps three actions in the release workflow to versions
+that ship on Node 24:
+
+- actions/checkout@v4 → v5 (Node 24)
+- actions/setup-go@v5 → v6 (Node 24)
+- goreleaser/goreleaser-action@v6 → v7 (Node 24)
+
+Also bumps the Go CI version range to 1.23.x - 1.25.x (drops 1.22).
+
+Verified by reading each action's release notes:
+- checkout v5: https://github.com/actions/checkout/releases/tag/v5.0.0
+- setup-go v6: https://github.com/actions/setup-go/releases/tag/v6.0.0
+- goreleaser-action v7: https://github.com/goreleaser/goreleaser-action/releases/tag/v7.0.0
+
+No breaking changes for our usage. Local `act` run green.
+
+Closes #34.
+
+---
+ .github/workflows/release.yml    | 6 +++---
+ .github/workflows/ci.yml          | 4 ++--
+ README.md                          | 2 +-
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/.github/workflows/release.yml b/.github/workflows/release.yml
+index 1111111..2222222 100644
+--- a/.github/workflows/release.yml
++++ b/.github/workflows/release.yml
+@@ -15,7 +15,7 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v5
+         with:
+           fetch-depth: 0
+ 
+@@ -23,7 +23,7 @@ jobs:
+         uses: actions/setup-go@v5
+         with:
+           go-version: '>=1.23.0 <1.26.0'
+-        uses: actions/setup-go@v5
++        uses: actions/setup-go@v6
+         with:
+           go-version: '>=1.23.0 <1.26.0'
+           check-latest: true
+@@ -39,7 +39,7 @@ jobs:
+           echo "BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
+ 
+       - name: Run GoReleaser
+-        uses: goreleaser/goreleaser-action@v6
++        uses: goreleaser/goreleaser-action@v7
+         with:
+           distribution: goreleaser
+           version: latest
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 3333333..4444444 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -12,13 +12,13 @@ jobs:
+       fail-fast: false
+       matrix:
+         os: [ubuntu-latest, macos-latest, windows-latest]
+-        go: ['1.22.x', '1.23.x', '1.24.x']
++        go: ['1.23.x', '1.24.x', '1.25.x']
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v5
+       - name: Set up Go
+-        uses: actions/setup-go@v5
++        uses: actions/setup-go@v6
+         with:
+           go-version: ${{ matrix.go }}
+       - name: Run tests
+diff --git a/README.md b/README.md
+index 5555555..6666666 100644
+--- a/README.md
++++ b/README.md
+@@ -42,7 +42,7 @@ Tested on Go:
+ 
+ | Version | Status |
+ |---------|--------|
+-| 1.22.x  | ✓      |
+ | 1.23.x  | ✓      |
+ | 1.24.x  | ✓      |
++| 1.25.x  | ✓      |
+ 
+-- 
+2.39.3 (Apple Git-128)

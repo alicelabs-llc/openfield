@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en" data-theme="auto"><head><script type="2730ee8357917e1be2865171-text/javascript">
+      (() => {
+        const legacyThemes = new Map([
+          ["institutional-dark", "dark"],
+          ["institutional-light", "light"],
+        ]);
+        const allowed = new Set(["auto", "dark", "light"]);
+        let selectedTheme = "auto";
+
+        try {
+          let savedTheme = localStorage.getItem("aiv-theme");
+          if (legacyThemes.has(savedTheme)) {
+            savedTheme = legacyThemes.get(savedTheme);
+            localStorage.setItem("aiv-theme", savedTheme);
+          }
+
+          if (allowed.has(savedTheme)) selectedTheme = savedTheme;
+          else if (savedTheme) localStorage.removeItem("aiv-theme");
+        } catch {
+          selectedTheme = "auto";
+        }
+
+        const effectiveTheme =
+          selectedTheme === "auto"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : selectedTheme;
+
+        document.documentElement.dataset.themePreference = selectedTheme;
+        document.documentElement.dataset.theme = effectiveTheme;
+        document.documentElement.dataset.ecTheme = effectiveTheme;
+      })();
+    </script><meta charset="utf-8"><meta name="generator" content="Astro v7.2.9"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Events | AI Village</title><meta name="description" content="Upcoming and past AI Village events, DEF CON village archives, schedules, talks, workshops, and volunteer information."><link rel="icon" href="/public/img/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/public/img/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="/public/img/favicon-16x16.png" sizes="16x16"><link rel="apple-touch-icon" href="/public/img/favicon-32x32.png"><link rel="canonical" href="https://aivillage.org/events/"><meta property="og:title" content="Events"><meta property="og:locale" content="en_US"><meta property="og:description" content="Upcoming and past AI Village events, DEF CON village archives, schedules, talks, workshops, and volunteer information."><meta property="og:url" content="https://aivillage.org/events/"><meta property="og:site_name" content="AI Village"><meta property="og:type" content="website"><meta property="og:image" content="https://aivillage.org/generated/og/assets-images-aiv-logo-8a9d72061d.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Events"><meta name="twitter:site" content="@aivillage_dc"><meta name="twitter:image" content="https://aivillage.org/generated/og/assets-images-aiv-logo-8a9d72061d.jpg"><link type="application/rss+xml" rel="alternate" href="https://aivillage.org/feed.xml" title="AI Village"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Events","description":"Upcoming and past AI Village events, DEF CON village archives, schedules, talks, workshops, and volunteer information.","url":"https://aivillage.org/events/","mainEntityOfPage":"https://aivillage.org/events/"}</script><link rel="stylesheet" href="/_astro/BaseLayout.CX6f1dVo.css"><script type="2730ee8357917e1be2865171-module" src="/_astro/page.DVGEJNLO.js"></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="container"><div class="header-content"><a class="site-title" href="/">AI Village</a><nav class="nav-menu" id="nav-menu"><a href="/events/" class="active" aria-current="page">Events</a><a href="/blog/">Blog</a><a href="/learn/">Learn</a><a href="/community/">Community</a><a href="/about/">About</a><a class="nav-sponsor-cta" href="/sponsors/">Sponsor</a></nav><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color mode" title="Switch color mode"><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M20.99 12.66A8.99 8.99 0 1 1 11.34 3.01a7 7 0 1 0 9.65 9.65Z"></path></svg></button><button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><script type="2730ee8357917e1be2865171-text/javascript">
+  const menu = document.getElementById("nav-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const siteHeader = document.querySelector(".site-header");
+  const mobileNavigation = window.matchMedia("(max-width: 900px)");
+  let previousBodyOverflow = "";
+  let lastScrollPosition = Math.max(window.scrollY, 0);
+  let upwardScrollDistance = 0;
+  let scrollFramePending = false;
+  let anchorJumpActive = false;
+  let anchorJumpTimer;
+
+  function menuIsOpen() {
+    return (
+      menuToggle instanceof HTMLButtonElement &&
+      menuToggle.getAttribute("aria-expanded") === "true"
+    );
+  }
+
+  function setHeaderHidden(hidden) {
+    if (!(siteHeader instanceof HTMLElement)) return;
+    const shouldHide = hidden && mobileNavigation.matches && !menuIsOpen();
+    siteHeader.classList.toggle("site-header--hidden", shouldHide);
+  }
+
+  function finishAnchorJump() {
+    anchorJumpActive = false;
+    lastScrollPosition = Math.max(window.scrollY, 0);
+    upwardScrollDistance = 0;
+    if (anchorJumpTimer) window.clearTimeout(anchorJumpTimer);
+  }
+
+  function beginAnchorJump() {
+    if (!mobileNavigation.matches) return;
+    anchorJumpActive = true;
+    setHeaderHidden(true);
+    upwardScrollDistance = 0;
+    if (anchorJumpTimer) window.clearTimeout(anchorJumpTimer);
+    anchorJumpTimer = window.setTimeout(finishAnchorJump, 1200);
+  }
+
+  function updateHeaderForScroll() {
+    scrollFramePending = false;
+    const currentScrollPosition = Math.max(window.scrollY, 0);
+    const delta = currentScrollPosition - lastScrollPosition;
+
+    if (!mobileNavigation.matches) {
+      setHeaderHidden(false);
+    } else if (anchorJumpActive) {
+      setHeaderHidden(true);
+      upwardScrollDistance = 0;
+    } else if (currentScrollPosition <= 16) {
+      setHeaderHidden(false);
+      upwardScrollDistance = 0;
+    } else if (delta > 1) {
+      upwardScrollDistance = 0;
+      if (currentScrollPosition > 72) setHeaderHidden(true);
+    } else if (delta < -1) {
+      upwardScrollDistance += Math.abs(delta);
+      if (upwardScrollDistance >= 20) setHeaderHidden(false);
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (scrollFramePending) return;
+      scrollFramePending = true;
+      window.requestAnimationFrame(updateHeaderForScroll);
+    },
+    { passive: true },
+  );
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const link =
+      target instanceof Element ? target.closest('a[href^="#"]') : null;
+    const href = link?.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const destination = document.getElementById(
+      decodeURIComponent(href.slice(1)),
+    );
+    if (destination) beginAnchorJump();
+  });
+
+  window.addEventListener("scrollend", () => {
+    if (anchorJumpActive) finishAnchorJump();
+  });
+
+  if (siteHeader instanceof HTMLElement) {
+    siteHeader.addEventListener("focusin", () => setHeaderHidden(false));
+  }
+
+  function setMenuOpen(open, options = {}) {
+    if (
+      !(menuToggle instanceof HTMLButtonElement) ||
+      !(menu instanceof HTMLElement)
+    )
+      return;
+
+    menuToggle.classList.toggle("active", open);
+    menu.classList.toggle("active", open);
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+
+    if (open) {
+      setHeaderHidden(false);
+      previousBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = previousBodyOverflow;
+      previousBodyOverflow = "";
+      if (options.restoreFocus) menuToggle.focus();
+    }
+  }
+
+  const menuItems = document.querySelectorAll(".nav-menu a");
+
+  if (menuToggle instanceof HTMLButtonElement) {
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        menuToggle.getAttribute("aria-expanded") === "true"
+      ) {
+        setMenuOpen(false, { restoreFocus: true });
+      }
+    });
+
+    mobileNavigation.addEventListener("change", (event) => {
+      finishAnchorJump();
+      lastScrollPosition = Math.max(window.scrollY, 0);
+      if (!event.matches) {
+        setMenuOpen(false);
+        setHeaderHidden(false);
+      }
+    });
+  }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const legacyThemes = new Map([
+    ["institutional-dark", "dark"],
+    ["institutional-light", "light"],
+  ]);
+  const productionThemes = new Set(["dark", "light"]);
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function effectiveTheme(theme) {
+    if (theme === "dark" || theme === "light") return theme;
+    return systemTheme.matches ? "dark" : "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.themePreference = theme;
+    const mode = effectiveTheme(theme);
+    document.documentElement.dataset.theme = mode;
+    document.documentElement.dataset.ecTheme = mode;
+  }
+
+  function savedTheme() {
+    try {
+      let value = localStorage.getItem("aiv-theme");
+      if (legacyThemes.has(value)) {
+        value = legacyThemes.get(value);
+        localStorage.setItem("aiv-theme", value);
+      }
+
+      if (productionThemes.has(value)) return value;
+      if (value && value !== "auto") localStorage.removeItem("aiv-theme");
+    } catch {
+      return null;
+    }
+
+    return null;
+  }
+
+  function currentEffectiveMode() {
+    return effectiveTheme(document.documentElement.dataset.theme);
+  }
+
+  function updateThemeToggle() {
+    if (!(themeToggle instanceof HTMLButtonElement)) return;
+
+    const mode = currentEffectiveMode();
+    const nextMode = mode === "dark" ? "light" : "dark";
+    const label = `Switch to ${nextMode} mode`;
+
+    themeToggle.dataset.effectiveTheme = mode;
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+  }
+
+  if (themeToggle instanceof HTMLButtonElement) {
+    updateThemeToggle();
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = currentEffectiveMode() === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+
+      try {
+        localStorage.setItem("aiv-theme", nextTheme);
+      } catch {
+        // Ignore storage failures; the current page still updates immediately.
+      }
+
+      updateThemeToggle();
+    });
+
+    systemTheme.addEventListener("change", () => {
+      if (!savedTheme()) applyTheme("auto");
+      updateThemeToggle();
+    });
+  }
+</script><main id="main-content" class="main-content"><div class="container aiv-page-shell"><section class="content events-page"><h1>Events</h1><p>If you would like to volunteer at an event<a href="https://forms.gle/sFyr1rVeqKAPXhG4A" target="_blank" rel="noopener noreferrer">submit a general volunteer application here.</a></p><br><section class="future-events"><h2 class="event__subtitle">Upcoming Events</h2><details class="year-section" open><summary class="year-heading">2026</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Sep</div><div class="event-day">25</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/bsides-abq-2026/">AI Village @ BSides Albuquerque 2026</a></h3><div class="event-date-range small-muted">September 25–26, 2026</div><div class="event-location small-muted">Albuquerque, NM</div><div class="event-description">Join AI Village at BSides Albuquerque 2026 for hands-on AI security labs, model internals, tokenization, prompt injection, RAG poisoning, and adversarial ML.</div></div></article></div></div></details></section><br><section class="past-events"><h2 class="event__subtitle">Past Events</h2><details class="year-section" open><summary class="year-heading">2026</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">06</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-34/">AI Village @ DEF CON 34</a></h3><div class="event-date-range small-muted">August 6–9, 2026</div><div class="event-location small-muted">LVCC, Level 1, Room W603, Las Vegas, NV</div><div class="event-description">AI Village returns to DEF CON 34 in LVCC W603 with competitions, DEF CON stage sessions, poster presentations, fireside chats, and demos.</div></div></article><article class="event-item"><div class="event-date"><div class="event-month">Mar</div><div class="event-day">23</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/rsac-2026/">AI Village @ RSAC 2026</a></h3><div class="event-location small-muted">San Francisco, CA</div><div class="event-description">Join AI Village at RSAC 2026 for hands-on AI security learning, demos, and community conversations.</div></div></article><article class="event-item"><div class="event-date"><div class="event-month">Mar</div><div class="event-day">21</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/bsides-sf-2026/">AI Village @ BSidesSF 2026</a></h3><div class="event-location small-muted">San Francisco, CA</div><div class="event-description">Join AI Village at BSidesSF 2026 for hands-on AI security demos, workshops, and community learning.</div></div></article></div></div></details><details class="year-section" open><summary class="year-heading">2025</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">07</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-33/">AI Village @ DEF CON 33</a></h3><div class="event-location small-muted">Las Vegas, NV</div><div class="event-description">Join AI Village at DEF CON 33 for Deepfake Karaoke and GRT-3.</div></div></article></div></div></details><details class="year-section" open><summary class="year-heading">2024</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">08</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-32/">AI Village @ DEF CON 32</a></h3><div class="event-location small-muted">Las Vegas, NV</div><div class="event-description">Join AI Village at DEF CON 32 for demos, talks, and the Generative Red Team 2 challenge.</div></div></article><article class="event-item"><div class="event-date"><div class="event-month">May</div><div class="event-day">09</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/othercons2024/">AI Village @ Other 2024 Cons</a></h3><div class="event-location small-muted">Multiple locations</div><div class="event-description">Other 2024 cons we&#39;ve been at, including RSA, BSides, and CypherCon.</div></div></article><article class="event-item"><div class="event-date"><div class="event-month">Apr</div><div class="event-day">26</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/bsides2024/">AI Village @ BsidesSF 2024</a></h3><div class="event-location small-muted">San Francisco, CA</div><div class="event-description">Join AI Village at BsidesSF 2024 for talks, workshops, and demos.</div></div></article></div></div></details><details class="year-section" open><summary class="year-heading">2022</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">11</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-30/">AI Village @ DEF CON 30</a></h3><div class="event-location small-muted">Las Vegas, NV</div><div class="event-description">Join AI Village at DEF CON 30 for ML Evasion and AI Art.</div></div></article><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">06</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-29/">AI Village @ DEF CON 29</a></h3><div class="event-location small-muted">Las Vegas, NV</div><div class="event-description">Join AI Village at DEF CON 29 for Safe Mode.</div></div></article></div></div></details><details class="year-section" open><summary class="year-heading">2020</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">01</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-28/">AI Village @ DEF CON 28, Safe Mode</a></h3><div class="event-description">Schedule archive for AI Village at DEF CON 28, Safe Mode.</div></div></article></div></div></details><details class="year-section" open><summary class="year-heading">2019</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">01</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-27/">AI Village @ DEF CON 27</a></h3><div class="event-description">Schedule archive for AI Village at DEF CON 27.</div></div></article></div></div></details><details class="year-section" open><summary class="year-heading">2018</summary><div class="events-container"><div class="events-list"><article class="event-item"><div class="event-date"><div class="event-month">Aug</div><div class="event-day">01</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-26/">AI Village @ DEF CON 26</a></h3><div class="event-location small-muted">Las Vegas, NV</div><div class="event-description">Join AI Village at DEF CON 26.</div></div></article><article class="event-item"><div class="event-date"><div class="event-month">May</div><div class="event-day">01</div></div><div class="event-content"><h3 class="event__item"><a class="event-link" href="/events/defcon-china-1/">AI Village @ DEF CON China 1</a></h3><div class="event-location small-muted">Beijing, China</div><div class="event-description">Join AI Village at DEF CON China 1.</div></div></article></div></div></details></section><br><section class="schedule-archive"><h2 class="event__subtitle">Schedules and Talks</h2><div class="card"><ul><li><a href="/events/defcon-china-1/schedule/">DEF CON China 1 schedule</a></li><li><a href="/events/defcon-26/schedule/">DEF CON 26 schedule</a></li><li><a href="/events/defcon-27/schedule/">DEF CON 27 schedule</a></li><li><a href="/events/defcon-28/schedule/">DEF CON 28 schedule</a></li><li><a href="/events/defcon-32/talks/">DEF CON 32 talks</a></li></ul></div></section></section></div></main><footer class="site-footer"><div class="container"><div class="footer-content"><div class="footer-brand"><a class="footer-title" href="/">AI Village</a><p class="text-mono">Public AI security education, built by the community.</p></div><div class="footer-sitemap"><nav class="footer-nav-section" aria-label="Programs footer links"><h2>Programs</h2><ul><li><a href="/learn/">Learn / Workshops</a></li><li><a href="/events/">Events</a></li><li><a href="/posters/">Poster Archive</a></li><li><a href="/research/">Research</a></li></ul></nav><nav class="footer-nav-section" aria-label="Community footer links"><h2>Community</h2><ul><li><a href="/community/">Community</a></li><li><a href="/discord/">Discord</a></li><li><a href="https://forms.gle/sFyr1rVeqKAPXhG4A" target="_blank" rel="noopener noreferrer">Volunteer Application</a></li><li><a href="/about/conduct/">Code of Conduct</a></li></ul></nav><nav class="footer-nav-section" aria-label="Organization footer links"><h2>Organization</h2><ul><li><a href="/about/">About</a></li><li><a href="/sponsors/">Sponsors</a></li><li><a href="/blog/">Blog</a></li><li><a href="https://github.com/aivillage" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></nav><nav class="footer-nav-section" aria-label="Utility footer links"><h2>Utility</h2><ul><li><a href="/feed.xml">RSS</a></li><li><a href="https://www.linkedin.com/company/aivillage" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://twitter.com/aivillage_dc" target="_blank" rel="noopener noreferrer">X/Twitter</a></li></ul></nav></div><p class="footer-copyright">&copy; 2026 AI Village. All rights reserved.</p></div></div></footer><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2730ee8357917e1be2865171-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4f4a8439a5d860a',t:'MTc5Mjc5OTU2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

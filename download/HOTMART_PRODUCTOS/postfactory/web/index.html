@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PostFactory — Generador de contenido para redes sociales con IA</title>
+<meta name="description" content="7 tipos de contenido, 7 plataformas, hashtags auto, calendario. IA multi-provider o templates gratis. Self-hosted, lifetime $47.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a14;--card:#13131f;--border:#26263f;--text:#e6ecf5;--muted:#7a8aa8;--accent:#ec4899;--accent2:#06b6d4;--grad:linear-gradient(135deg,#ec4899 0%,#06b6d4 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.brand .logo{width:32px;height:32px;background:var(--grad);border-radius:8px;display:grid;place-items:center;color:#0a0a14;font-weight:900;font-size:18px}
+.cta{background:var(--grad);color:#0a0a14;padding:10px 18px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block}
+.nav nav{display:flex;gap:28px;align-items:center}
+.nav nav a{color:var(--muted);font-weight:500;font-size:14px}
+.hero{padding:80px 0 60px;text-align:center;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 0%,rgba(236,72,153,.12),transparent 70%)}
+.hero h1{font-size:52px;line-height:1.1;letter-spacing:-.03em;font-weight:900;margin-bottom:20px;position:relative}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:680px;margin:0 auto 36px;position:relative}
+.hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-lg{padding:14px 26px;font-size:16px;font-weight:700;border-radius:10px;border:none;cursor:pointer}
+.btn-lg.primary{background:var(--grad);color:#0a0a14}
+.btn-lg.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.3);padding:6px 12px;border-radius:999px;font-size:13px;color:var(--accent);font-weight:500;margin-bottom:20px}
+section{padding:80px 0}
+.section-head{text-align:center;margin-bottom:50px}
+.section-head .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:transform .2s,border-color .2s}
+.feature:hover{transform:translateY(-4px);border-color:var(--accent)}
+.feature .icon{width:48px;height:48px;border-radius:10px;background:rgba(236,72,153,.1);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
+.feature h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.feature p{color:var(--muted);font-size:14.5px}
+.code-block{background:#050b18;border:1px solid var(--border);border-radius:10px;padding:24px;font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.7;overflow-x:auto;color:#c9d1f0}
+.code-block .key{color:#ec4899}
+.code-block .str{color:#a5d6ff}
+.code-block .comment{color:#7a8aa8;font-style:italic}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:34px 30px;position:relative;transition:transform .2s}
+.price:hover{transform:translateY(-4px)}
+.price.featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 60px rgba(236,72,153,.2)}
+.price .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--grad);color:#0a0a14;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.price h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.price .amount{font-size:42px;font-weight:900;margin-bottom:6px}
+.price .amount small{font-size:14px;color:var(--muted);font-weight:500}
+.price ul{list-style:none;padding:0;margin:0 0 28px}
+.price ul li{padding:8px 0 8px 28px;position:relative;font-size:14px}
+.price ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.price .btn{display:block;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--border);background:var(--card);color:var(--text)}
+.price.featured .btn{background:var(--grad);color:#0a0a14;border-color:transparent}
+footer{background:#050b18;border-top:1px solid var(--border);padding:40px 0 24px;margin-top:60px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero h1{font-size:36px}.features,.pricing-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a href="#" class="brand"><span class="logo">P</span><span>Post<span style="color:var(--accent)">Factory</span></span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#pricing">Precios</a>
+      <a href="#pricing" class="cta">Comprar $47</a>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <div class="badge">📝 Self-hosted · 7 plataformas · Hashtags auto · Calendario</div>
+    <h1>Contenido para redes<br><span class="grad">sin pensar</span></h1>
+    <p class="lead">Genera posts para Instagram, LinkedIn, Twitter, TikTok y más. 7 tipos de contenido, hashtags automáticos, calendario. IA multi-provider o templates gratis.</p>
+    <div class="actions">
+      <a href="#pricing" class="cta btn-lg primary">⚡ Lifetime $47 →</a>
+      <a href="#how" class="btn-lg secondary">Ver demo</a>
+    </div>
+  </div>
+</section>
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Features</div>
+      <h2>Genera contenido<br>en segundos</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="icon">📝</div><h3>7 tipos de contenido</h3><p>Educational, promotional, engagement, storytelling, behind the scenes, listicle, how_to. Cada uno con 3+ templates.</p></div>
+      <div class="feature"><div class="icon">🌐</div><h3>7 plataformas</h3><p>Instagram, LinkedIn, Twitter, TikTok, Facebook, YouTube, Blog. Cada una con longitud, tono y límites de hashtags.</p></div>
+      <div class="feature"><div class="icon">🎯</div><h3>Hashtags auto</h3><p>10 nichos predefinidos (marketing, fitness, comida, moda, tech, viajes, negocios, salud, educación). + topic-derived.</p></div>
+      <div class="feature"><div class="icon">📅</div><h3>Calendario</h3><p>Genera calendario de N días. Mejores horarios por plataforma. Topics rotando por nicho.</p></div>
+      <div class="feature"><div class="icon">🤖</div><h3>Multi-provider IA</h3><p>Z.ai GLM-4.6 (barato), OpenAI, Anthropic, Ollama local. Cambia con variable de entorno.</p></div>
+      <div class="feature"><div class="icon">🆓</div><h3>Template fallback</h3><p>Sin API key de IA? Funciona igual con 21 templates (7 tipos × 3 variantes).</p></div>
+    </div>
+  </div>
+</section>
+<section id="how" style="background:#050b18">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2>Topic in. Posts + calendar out.</h2>
+    </div>
+    <div class="code-block">
+<span class="comment"># 1. Generar 3 variantes de post (template mode, gratis)</span>
+postfactory generate "marketing digital" \
+  --platform instagram \
+  --type educational \
+  --variations 3 \
+  --mode template
+
+<span class="comment"># Output:</span>
+Modelo: template-fallback
+
+Variación 1 (45w, 312c)
+¿Sabías que marketing digital? 🤔
+Tu contenido necesita un CTA claro
+La audiencia se construye con valor
+El storytelling vende más que las features
+Link en bio 🔗
+#marketing #marketingdigital #redessociales #contentmarketing #seo
+
+Best time: 07:00-09:00
+
+<span class="comment"># 2. Generar calendario 7 días:</span>
+postfactory calendar --days 7 --platforms "instagram,linkedin"
+
+<span class="comment"># Output:</span>
+📅 Calendario de contenido (7 días)
+| Fecha    | Día       | Tema               | Tipo          | Plataformas                   |
+|----------|-----------|--------------------|---------------|-------------------------------|
+| 26/10    | Monday    | consejo del día... | educational   | instagram@07:00-09:00, ...    |
+| 27/10    | Tuesday   | tendencia en...    | promotional   | ...                           |
+
+<span class="comment"># 3. Solo hashtags:</span>
+postfactory hashtags "fitness motivation" --niche fitness --platform instagram
+<span class="comment"># → #fitnessmotivation #fitness #gym #workout ... (15 tags)</span>
+
+<span class="comment"># 4. Vía API:</span>
+curl -X POST "http://localhost:8007/v1/generate?mode=ai" \
+  -d <span class="str">'{"topic":"productividad","platform":"linkedin","content_type":"how_to","variations":3}'</span>
+    </div>
+  </div>
+</section>
+<section id="pricing" style="background:#050b18">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Precios</div>
+      <h2>Pago único. Sin mensualidad.</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price">
+        <h3>Starter</h3>
+        <div class="amount">$47<small> USD</small></div>
+        <ul>
+          <li>Template mode (gratis)</li>
+          <li>50 AI calls/día</li>
+          <li>7 plataformas</li>
+          <li>Hashtags auto</li>
+          <li>6 meses soporte</li>
+        </ul>
+        <a href="#" class="btn">Comprar $47</a>
+      </div>
+      <div class="price featured">
+        <div class="tag">MÁS POPULAR</div>
+        <h3>Pro</h3>
+        <div class="amount">$97<small> USD</small></div>
+        <ul>
+          <li>500 AI calls/día</li>
+          <li>Calendario completo</li>
+          <li>Multi-provider IA</li>
+          <li>Best posting times</li>
+          <li>Image prompts</li>
+          <li>12 meses soporte</li>
+        </ul>
+        <a href="#" class="btn">Comprar $97</a>
+      </div>
+      <div class="price">
+        <h3>Agency</h3>
+        <div class="amount">$197<small> USD</small></div>
+        <ul>
+          <li>AI calls ilimitados</li>
+          <li>Multi-cliente</li>
+          <li>Marca blanca</li>
+          <li>API admin</li>
+          <li>Onboarding 1:1</li>
+          <li>24 meses soporte</li>
+        </ul>
+        <a href="#" class="btn">Comprar $197</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><div class="container">© 2026 Eddy Flores · PostFactory</div></footer>
+</body>
+</html>

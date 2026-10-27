@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sherlock Protocol" />
+
+    <meta property="og:title" content="Sherlock">
+    <meta property="og:site_name" content="Sherlock Protocol">
+    <meta property="og:url" content="https://app.sherlock.xyz">
+    <meta property="og:description" content="Sherlock is a protocol on the Ethereum blockchain that protects Decentralized Finance (DeFi) users from smart contract exploits with proprietary security analysis and protocol-level coverage.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/bQxJd02.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8716e8" />
+    <meta name="msapplication-TileColor" content="#8716e8" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Sherlock</title>
+    <script type="module" crossorigin src="/assets/index-F_wiLuWX.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-BG2f4sTM.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-62W0Csdc.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-QrCb2vh-.js">
+    <link rel="modulepreload" crossorigin href="/assets/ccip-VMEyKub2.js">
+    <link rel="modulepreload" crossorigin href="/assets/hmac-BeRe1b1e.js">
+    <link rel="modulepreload" crossorigin href="/assets/secp256k1-DwYPkqHs.js">
+    <link rel="modulepreload" crossorigin href="/assets/sha256-CaIoMbEy.js">
+    <link rel="modulepreload" crossorigin href="/assets/_esm-Duak_aqy.js">
+    <link rel="modulepreload" crossorigin href="/assets/events-DOFwgfpU.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CmBQZPGI.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

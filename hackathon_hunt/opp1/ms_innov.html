@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' 'sha256-i0i65h1d7Li2f8s/VteVOh2gQJtw7OFlyhbmpxP0c8Y=' 'sha256-VI7LxG819LtRTsHUrZKJ7muGuOaTGUs549cU8S++OSU=';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' blob: data: https://*.blob.core.windows.net https://avatars.githubusercontent.com;
+               media-src 'self' blob: data: https://*.blob.core.windows.net;
+               connect-src 'self' https://login.microsoftonline.com https://graph.microsoft.com https://management.azure.com https://res.cdn.office.net https://*.azurefd.net https://*.azurewebsites.net https://dc.services.visualstudio.com https://js.monitor.azure.com https://*.applicationinsights.azure.com https://*.in.applicationinsights.azure.com https://*.monitor.azure.com https://*.cognitiveservices.azure.com wss://*.cognitiveservices.azure.com https://*.tts.speech.microsoft.com wss://*.tts.speech.microsoft.com https://*.communication.azure.com turn://*.communication.azure.com https://*.service.signalr.net wss://*.service.signalr.net;
+               font-src 'self';
+               frame-src 'self' https://login.microsoftonline.com;
+               object-src 'none';
+               base-uri 'self';"
+    />
+    <title>Innovation Studio</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem('studio-theme');
+        var d = document.documentElement;
+        if (t === 'dark') d.className = 'dark';
+        else if (t === 'hc') d.className = 'hc';
+        else if (t === 'system' || !t) {
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) d.className = 'dark';
+        }
+      })();
+    </script>
+    <!-- Static twin of src/components/shared/AppSplashScreen.jsx, painted before React mounts (AB#11900). -->
+    <style>
+      .app-splash {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 16px;
+        background: #ffffff;
+        color: #242424;
+        font-family:
+          'Segoe UI',
+          'Segoe UI Web (West European)',
+          -apple-system,
+          BlinkMacSystemFont,
+          Roboto,
+          'Helvetica Neue',
+          sans-serif;
+      }
+      .app-splash__logo {
+        width: 128px;
+        height: 128px;
+      }
+      .app-splash__track {
+        display: block;
+        width: 100%;
+        max-width: 14rem;
+        height: 4px;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: #e6e6e6;
+      }
+      .app-splash__bar {
+        width: 10%;
+        height: 100%;
+        border-radius: 4px;
+        background-color: #0f6cbd;
+      }
+      html.dark .app-splash {
+        background: #252525;
+        color: #e0e0e0;
+      }
+      html.dark .app-splash__track {
+        background-color: #333333;
+      }
+      html.dark .app-splash__bar {
+        background-color: #479ef5;
+      }
+      html.hc .app-splash {
+        background: #000000;
+        color: #ffffff;
+      }
+      html.hc .app-splash__track {
+        background-color: #000000;
+      }
+      html.hc .app-splash__bar {
+        background-color: #1aebff;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/main-xptnfqvz.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/Configuration-Cv73oCBg.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-BVtA5gcw.css">
+  </head>
+  <body>
+    <div id="root">
+      <main class="app-splash" aria-busy="true">
+        <img class="app-splash__logo" src="/favicon.svg" alt="" aria-hidden="true" />
+        <div
+          class="app-splash__track"
+          role="progressbar"
+          aria-label="Loading"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="10"
+        >
+          <div class="app-splash__bar"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

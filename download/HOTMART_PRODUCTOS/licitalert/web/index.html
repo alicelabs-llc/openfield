@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LicitAlert — Alertas de licitaciones públicas LatAm</title>
+<meta name="description" content="Monitorea SECOP Colombia, SERCOP Ecuador, CompraNet México. Alertas por email y Telegram. Self-hosted.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1018;--card:#0f1825;--border:#1f2d44;--text:#e6ecf5;--muted:#7a8aa8;--accent:#3b82f6;--accent2:#10b981;--grad:linear-gradient(135deg,#3b82f6 0%,#10b981 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,16,24,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.brand .logo{width:32px;height:32px;background:var(--grad);border-radius:8px;display:grid;place-items:center;color:#0a1018;font-weight:900;font-size:18px}
+.cta{background:var(--grad);color:#0a1018;padding:10px 18px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block}
+.nav nav{display:flex;gap:28px;align-items:center}
+.nav nav a{color:var(--muted);font-weight:500;font-size:14px}
+.hero{padding:80px 0 60px;text-align:center;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 0%,rgba(59,130,246,.12),transparent 70%)}
+.hero h1{font-size:52px;line-height:1.1;letter-spacing:-.03em;font-weight:900;margin-bottom:20px;position:relative}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:680px;margin:0 auto 36px;position:relative}
+.hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-lg{padding:14px 26px;font-size:16px;font-weight:700;border-radius:10px;border:none;cursor:pointer}
+.btn-lg.primary{background:var(--grad);color:#0a1018}
+.btn-lg.secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);padding:6px 12px;border-radius:999px;font-size:13px;color:var(--accent);font-weight:500;margin-bottom:20px}
+.flags{display:flex;gap:24px;justify-content:center;margin-top:40px;font-size:14px;color:var(--muted)}
+section{padding:80px 0}
+.section-head{text-align:center;margin-bottom:50px}
+.section-head .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:transform .2s,border-color .2s}
+.feature:hover{transform:translateY(-4px);border-color:var(--accent)}
+.feature .icon{width:48px;height:48px;border-radius:10px;background:rgba(59,130,246,.1);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
+.feature h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.feature p{color:var(--muted);font-size:14.5px}
+.code-block{background:#050b18;border:1px solid var(--border);border-radius:10px;padding:24px;font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.7;overflow-x:auto;color:#c9d1f0}
+.code-block .key{color:#3b82f6}
+.code-block .str{color:#a5d6ff}
+.code-block .comment{color:#7a8aa8;font-style:italic}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:34px 30px;position:relative;transition:transform .2s}
+.price:hover{transform:translateY(-4px)}
+.price.featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 60px rgba(59,130,246,.2)}
+.price .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--grad);color:#0a1018;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.price h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.price .amount{font-size:42px;font-weight:900;margin-bottom:6px}
+.price .amount small{font-size:14px;color:var(--muted);font-weight:500}
+.price ul{list-style:none;padding:0;margin:0 0 28px}
+.price ul li{padding:8px 0 8px 28px;position:relative;font-size:14px}
+.price ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.price .btn{display:block;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--border);background:var(--card);color:var(--text)}
+.price.featured .btn{background:var(--grad);color:#0a1018;border-color:transparent}
+footer{background:#050b18;border-top:1px solid var(--border);padding:40px 0 24px;margin-top:60px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero h1{font-size:36px}.features,.pricing-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a href="#" class="brand"><span class="logo">L</span><span>Licit<span style="color:var(--accent)">Alert</span></span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#pricing">Precios</a>
+      <a href="#pricing" class="cta">Comprar $97</a>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <div class="badge">🔔 Self-hosted · 3 países LatAm · Multi-canal</div>
+    <h1>Alertas de licitaciones<br><span class="grad">sin pagar mensualidad</span></h1>
+    <p class="lead">Monitorea SECOP (Colombia), SERCOP (Ecuador), CompraNet (México). Filtros por keywords, presupuesto, categoría. Alertas por email y Telegram.</p>
+    <div class="actions">
+      <a href="#pricing" class="cta btn-lg primary">⚡ Lifetime $97 →</a>
+      <a href="#how" class="btn-lg secondary">Ver demo</a>
+    </div>
+    <div class="flags">
+      <span>🇨🇴 SECOP II</span>
+      <span>🇪🇨 SERCOP</span>
+      <span>🇲🇽 CompraNet</span>
+    </div>
+  </div>
+</section>
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Features</div>
+      <h2>Monitoreo automático<br>de licitaciones LatAm</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="icon">🌎</div><h3>3 países</h3><p>SECOP II (Colombia), SERCOP (Ecuador), CompraNet (México). Arquitectura extensible a Chile, Perú, Argentina.</p></div>
+      <div class="feature"><div class="icon">🔔</div><h3>Multi-canal</h3><p>Email SMTP + Telegram bot. Agrupa matches por regla + destinatario para no spamear.</p></div>
+      <div class="feature"><div class="icon">🎯</div><h3>Filtros avanzados</h3><p>Keywords, país, rango de presupuesto, categoría, exclusión de keywords irrelevantes.</p></div>
+      <div class="feature"><div class="icon">📊</div><h3>Scoring 0-100</h3><p>Cada match tiene score basado en keywords matched. Bonus si presupuesto en rango.</p></div>
+      <div class="feature"><div class="icon">🤖</div><h3>Scheduler auto</h3><p>APScheduler cada N horas (default 6). Sin intervención manual.</p></div>
+      <div class="feature"><div class="icon">💾</div><h3>Cache persistente</h3><p>Hasta 1000 licitaciones en disco. Evita duplicados con ID + país.</p></div>
+    </div>
+  </div>
+</section>
+<section id="how" style="background:#050b18">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2>Crea alerta. Recibe licitaciones en tu email.</h2>
+    </div>
+    <div class="code-block">
+<span class="comment"># 1. Crear alerta</span>
+licitalert add-alert --name "Software Colombia" \
+  --countries co \
+  --keywords "software,desarrollo,sistemas" \
+  --email yo@empresa.com
+
+<span class="comment"># Output:</span>
+✓ Alerta creada: RULE-A1B2C3D4 - Software Colombia
+  Países: ['co']
+  Keywords: ['software', 'desarrollo', 'sistemas']
+
+<span class="comment"># 2. El scheduler corre cada 6 horas automáticamente. Force check:</span>
+licitalert check-now
+
+<span class="comment"># Output:</span>
+Ejecutando ciclo de check...
+✓ Done
+  Nuevas licitaciones: 47
+  Matches: 3
+  Notificaciones enviadas: 1
+
+<span class="comment"># 3. Recibes email con tabla HTML:</span>
+<span class="comment"># Asunto: 🔔 LicitAlert: 3 licitaciones nuevas</span>
+┌──────┬──────────────────────────────────────────┬──────────────────────┬──────────────┬───────┐
+│ País │ Título                                    │ Entidad              │ Presupuesto  │ Score │
+├──────┼──────────────────────────────────────────┼──────────────────────┼──────────────┼───────┤
+│ CO   │ Desarrollo sistema gestión integral       │ Ministerio Tecnología│ $50,000,000 │ 100%  │
+│ CO   │ Software para entidad X                   │ Alcaldía Municipal    │ $25,000,000 │ 67%   │
+│ CO   │ Plataforma digital ciudadana              │ Gobernación           │ $80,000,000 │ 33%   │
+└──────┴──────────────────────────────────────────┴──────────────────────┴──────────────┴───────┘
+
+<span class="comment"># 4. Vía API:</span>
+curl -X POST http://localhost:8009/v1/rules -d <span class="str">'{
+  "name":"Construcción LatAm",
+  "countries":["co","mx"],
+  "keywords":["construccion","obra"],
+  "min_budget":1000000,
+  "alert_channels":["email"],
+  "alert_recipient":"yo@x.com"
+}'</span>
+    </div>
+  </div>
+</section>
+<section id="pricing" style="background:#050b18">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Precios</div>
+      <h2>Pago único. Sin mensualidad.</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price">
+        <h3>Starter</h3>
+        <div class="amount">$97<small> USD</small></div>
+        <ul>
+          <li>1 país</li>
+          <li>5 alertas</li>
+          <li>Email notifications</li>
+          <li>Cache 1000 licitaciones</li>
+          <li>6 meses soporte</li>
+        </ul>
+        <a href="#" class="btn">Comprar $97</a>
+      </div>
+      <div class="price featured">
+        <div class="tag">MÁS POPULAR</div>
+        <h3>Pro</h3>
+        <div class="amount">$197<small> USD</small></div>
+        <ul>
+          <li>3 países</li>
+          <li>50 alertas</li>
+          <li>Email + Telegram</li>
+          <li>API REST completa</li>
+          <li>Scoring avanzado</li>
+          <li>12 meses soporte</li>
+        </ul>
+        <a href="#" class="btn">Comprar $197</a>
+      </div>
+      <div class="price">
+        <h3>Agency</h3>
+        <div class="amount">$297<small> USD</small></div>
+        <ul>
+          <li>Países ilimitados</li>
+          <li>Alertas ilimitadas</li>
+          <li>Multi-usuario</li>
+          <li>Marca blanca</li>
+          <li>Onboarding 1:1</li>
+          <li>24 meses soporte</li>
+        </ul>
+        <a href="#" class="btn">Comprar $297</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><div class="container">© 2026 Eddy Flores · LicitAlert</div></footer>
+</body>
+</html>

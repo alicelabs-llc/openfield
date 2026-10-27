@@ -1,0 +1,74 @@
+{
+  "user": {
+    "name": "Edison",
+    "language": "es"
+  },
+  "city": {
+    "name": "Guayaquil",
+    "lat": -2.1894,
+    "lon": -79.8891,
+    "timezone": "America/Guayaquil"
+  },
+  "wakeTime": "06:30",
+  "mood": {
+    "default": "neutral",
+    "allowed": ["feliz", "neutral", "serio", "motivado", "bajoneado"]
+  },
+  "news": {
+    "maxItems": 6,
+    "feeds": [
+      { "name": "Google News Ecuador", "url": "https://news.google.com/rss?hl=es-419&gl=EC&ceid=EC:es-419" },
+      { "name": "Google News Tecnología", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=es-419&gl=EC&ceid=EC:es-419" },
+      { "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml" },
+      { "name": "France24 Español", "url": "https://www.france24.com/es/rss" },
+      { "name": "eJu.tv Ecuador", "url": "https://eju.tv/feed/" }
+    ]
+  },
+  "tts": { "voice": "tongtong", "speed": 1.0 },
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+  },
+  "features": {
+    "onThisDay": true,
+    "joke": true,
+    "quote": true,
+    "crypto": true
+  },
+  "channels": {
+    "email": {
+      "enabled": false,
+      "smtp": {
+        "host": "smtp.gmail.com",
+        "port": 465,
+        "secure": true,
+        "user": "TU_CORREO@gmail.com",
+        "pass": "APP_PASSWORD"
+      },
+      "to": "TU_CORREO@gmail.com"
+    },
+    "telegram": {
+      "enabled": false,
+      "botToken": "TOKEN_DEL_BOT",
+      "chatId": "TU_CHAT_ID"
+    },
+    "whatsapp": {
+      "enabled": false,
+      "phone": "5939XXXXXXXX",
+      "apikey": "CLAVE_CALLMEBOT"
+    },
+    "facebook": {
+      "enabled": false,
+      "note": "Requiere Meta Graph API (pagina + token). Ver docs/CANALES.md"
+    },
+    "instagram": {
+      "enabled": false,
+      "note": "Requiere Instagram Graph API (cuenta business). Ver docs/CANALES.md"
+    },
+    "tiktok": {
+      "enabled": false,
+      "note": "Requiere TikTok Content Posting API (app aprobada). Ver docs/CANALES.md"
+    }
+  }
+}

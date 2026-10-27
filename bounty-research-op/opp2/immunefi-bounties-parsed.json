@@ -1,0 +1,1108 @@
+[
+  {
+    "slug": "layerzero",
+    "url": "/bug-bounty/layerzero/information/",
+    "launch": "2023-05-17T17:00:00.000Z",
+    "max": 15000000,
+    "project": "LayerZero"
+  },
+  {
+    "slug": "stargate",
+    "url": "/bug-bounty/stargate/information/",
+    "launch": "2024-09-24T18:00:00.000Z",
+    "max": 10000000,
+    "project": "Stargate"
+  },
+  {
+    "slug": "sky",
+    "url": "/bug-bounty/sky/information/",
+    "launch": "2022-02-10T07:00:00.000Z",
+    "max": 10000000,
+    "project": "Sky"
+  },
+  {
+    "slug": "usdt0",
+    "url": "/bug-bounty/usdt0/information/",
+    "launch": "2025-01-30T14:58:00.000Z",
+    "max": 6000000,
+    "project": "USDT0"
+  },
+  {
+    "slug": "sparklend",
+    "url": "/bug-bounty/sparklend/information/",
+    "launch": "2023-11-01T15:00:00.000Z",
+    "max": 5000000,
+    "project": "Spark"
+  },
+  {
+    "slug": "gmx",
+    "url": "/bug-bounty/gmx/information/",
+    "launch": "2021-10-20T12:00:00.000Z",
+    "max": 5000000,
+    "project": "GMX"
+  },
+  {
+    "slug": "olympus",
+    "url": "/bug-bounty/olympus/information/",
+    "launch": "2022-01-06T17:45:00.000Z",
+    "max": 3333333,
+    "project": "Olympus"
+  },
+  {
+    "slug": "ethena",
+    "url": "/bug-bounty/ethena/information/",
+    "launch": "2024-04-04T16:46:29.000Z",
+    "max": 3000000,
+    "project": "Ethena"
+  },
+  {
+    "slug": "chainlink",
+    "url": "/bug-bounty/chainlink/information/",
+    "launch": "2021-05-11T05:00:00.000Z",
+    "max": 3000000,
+    "project": "Chainlink"
+  },
+  {
+    "slug": "hyperlane",
+    "url": "/bug-bounty/hyperlane/information/",
+    "launch": "2023-01-10T21:00:00.000Z",
+    "max": 2500000,
+    "project": "Hyperlane"
+  },
+  {
+    "slug": "optimism",
+    "url": "/bug-bounty/optimism/information/",
+    "launch": "2022-01-14T07:00:00.000Z",
+    "max": 2000042,
+    "project": "Optimism"
+  },
+  {
+    "slug": "rhinofi",
+    "url": "/bug-bounty/rhinofi/information/",
+    "launch": "2023-06-30T13:00:00.000Z",
+    "max": 2000000,
+    "project": "Rhino.fi"
+  },
+  {
+    "slug": "gnosischain",
+    "url": "/bug-bounty/gnosischain/information/",
+    "launch": "2022-02-11T04:00:00.000Z",
+    "max": 2000000,
+    "project": "Gnosis Chain"
+  },
+  {
+    "slug": "arbitrum",
+    "url": "/bug-bounty/arbitrum/information/",
+    "launch": "2021-08-31T13:00:00.000Z",
+    "max": 2000000,
+    "project": "Arbitrum"
+  },
+  {
+    "slug": "lido",
+    "url": "/bug-bounty/lido/information/",
+    "launch": "2021-05-22T05:00:00.000Z",
+    "max": 2000000,
+    "project": "Lido"
+  },
+  {
+    "slug": "beanstalk",
+    "url": "/bug-bounty/beanstalk/information/",
+    "launch": "2022-10-11T19:00:00.000Z",
+    "max": 1100000,
+    "project": "Beanstalk"
+  },
+  {
+    "slug": "veda",
+    "url": "/bug-bounty/veda/information/",
+    "launch": "2026-01-21T15:00:08.000Z",
+    "max": 1000000,
+    "project": "Veda"
+  },
+  {
+    "slug": "capyfi",
+    "url": "/bug-bounty/capyfi/information/",
+    "launch": "2025-11-19T10:10:47.000Z",
+    "max": 1000000,
+    "project": "CapyFi"
+  },
+  {
+    "slug": "immutable",
+    "url": "/bug-bounty/immutable/information/",
+    "launch": "2025-06-10T05:44:56.000Z",
+    "max": 1000000,
+    "project": "Immutable"
+  },
+  {
+    "slug": "compoundfinance",
+    "url": "/bug-bounty/compoundfinance/information/",
+    "launch": "2024-12-11T16:28:00.000Z",
+    "max": 1000000,
+    "project": "Compound Finance"
+  },
+  {
+    "slug": "0x",
+    "url": "/bug-bounty/0x/information/",
+    "launch": "2024-07-30T16:00:00.000Z",
+    "max": 1000000,
+    "project": "0x"
+  },
+  {
+    "slug": "aave",
+    "url": "/bug-bounty/aave/information/",
+    "launch": "2023-10-18T09:00:00.000Z",
+    "max": 1000000,
+    "project": "AAVE"
+  },
+  {
+    "slug": "staderforeth",
+    "url": "/bug-bounty/staderforeth/information/",
+    "launch": "2023-07-08T11:00:00.000Z",
+    "max": 1000000,
+    "project": "Stader for ETH"
+  },
+  {
+    "slug": "ondofinance",
+    "url": "/bug-bounty/ondofinance/information/",
+    "launch": "2023-03-07T21:00:00.000Z",
+    "max": 1000000,
+    "project": "Ondo Finance"
+  },
+  {
+    "slug": "listadao",
+    "url": "/bug-bounty/listadao/information/",
+    "launch": "2022-06-16T16:30:00.000Z",
+    "max": 1000000,
+    "project": "Lista DAO"
+  },
+  {
+    "slug": "balancer",
+    "url": "/bug-bounty/balancer/information/",
+    "launch": "2022-05-12T16:00:00.000Z",
+    "max": 1000000,
+    "project": "Balancer Foundation"
+  },
+  {
+    "slug": "wormhole",
+    "url": "/bug-bounty/wormhole/information/",
+    "launch": "2022-02-11T15:00:00.000Z",
+    "max": 1000000,
+    "project": "Wormhole"
+  },
+  {
+    "slug": "originprotocol",
+    "url": "/bug-bounty/originprotocol/information/",
+    "launch": "2021-11-22T07:15:00.000Z",
+    "max": 1000000,
+    "project": "Origin Protocol"
+  },
+  {
+    "slug": "cowprotocol",
+    "url": "/bug-bounty/cowprotocol/information/",
+    "launch": "2021-06-15T17:00:00.000Z",
+    "max": 1000000,
+    "project": "CoW Protocol"
+  },
+  {
+    "slug": "pancakeswap",
+    "url": "/bug-bounty/pancakeswap/information/",
+    "launch": "2021-03-28T07:00:00.000Z",
+    "max": 1000000,
+    "project": "PancakeSwap"
+  },
+  {
+    "slug": "fluxfinance",
+    "url": "/bug-bounty/fluxfinance/information/",
+    "launch": "2023-02-08T16:00:00.000Z",
+    "max": 550000,
+    "project": "Flux Finance"
+  },
+  {
+    "slug": "raydium",
+    "url": "/bug-bounty/raydium/information/",
+    "launch": "2023-04-25T12:00:00.000Z",
+    "max": 505000,
+    "project": "Raydium"
+  },
+  {
+    "slug": "paxos-labs",
+    "url": "/bug-bounty/paxos-labs/information/",
+    "launch": "2026-10-20T07:26:00.000Z",
+    "max": 500000,
+    "project": "Paxos Labs"
+  },
+  {
+    "slug": "1inch-SmartContracts",
+    "url": "/bug-bounty/1inch-SmartContracts/information/",
+    "launch": "2026-06-11T05:00:00.000Z",
+    "max": 500000,
+    "project": "1inch - Smart Contracts"
+  },
+  {
+    "slug": "lombard-finance",
+    "url": "/bug-bounty/lombard-finance/information/",
+    "launch": "2024-09-04T00:00:00.000Z",
+    "max": 500000,
+    "project": "Lombard Finance"
+  },
+  {
+    "slug": "etherfi",
+    "url": "/bug-bounty/etherfi/information/",
+    "launch": "2024-03-27T01:30:00.000Z",
+    "max": 500000,
+    "project": "Ether.fi"
+  },
+  {
+    "slug": "dexeprotocol",
+    "url": "/bug-bounty/dexeprotocol/information/",
+    "launch": "2024-01-23T20:00:00.000Z",
+    "max": 500000,
+    "project": "DeXe Protocol"
+  },
+  {
+    "slug": "sei",
+    "url": "/bug-bounty/sei/information/",
+    "launch": "2023-11-30T09:00:00.000Z",
+    "max": 500000,
+    "project": "Sei"
+  },
+  {
+    "slug": "mETH",
+    "url": "/bug-bounty/mETH/information/",
+    "launch": "2023-11-28T14:00:00.000Z",
+    "max": 500000,
+    "project": "mETH Protocol"
+  },
+  {
+    "slug": "aera",
+    "url": "/bug-bounty/aera/information/",
+    "launch": "2023-11-20T12:00:00.000Z",
+    "max": 500000,
+    "project": "Aera"
+  },
+  {
+    "slug": "utix",
+    "url": "/bug-bounty/utix/information/",
+    "launch": "2023-07-26T12:00:00.000Z",
+    "max": 500000,
+    "project": "Utix"
+  },
+  {
+    "slug": "ankr",
+    "url": "/bug-bounty/ankr/information/",
+    "launch": "2022-07-21T18:00:00.000Z",
+    "max": 500000,
+    "project": "Ankr"
+  },
+  {
+    "slug": "orca",
+    "url": "/bug-bounty/orca/information/",
+    "launch": "2022-05-19T17:30:00.000Z",
+    "max": 500000,
+    "project": "Orca"
+  },
+  {
+    "slug": "axelarnetwork",
+    "url": "/bug-bounty/axelarnetwork/information/",
+    "launch": "2022-03-11T03:30:00.000Z",
+    "max": 500000,
+    "project": "Axelar Network"
+  },
+  {
+    "slug": "maple",
+    "url": "/bug-bounty/maple/information/",
+    "launch": "2022-01-25T21:00:00.000Z",
+    "max": 500000,
+    "project": "Maple"
+  },
+  {
+    "slug": "instadapp",
+    "url": "/bug-bounty/instadapp/information/",
+    "launch": "2021-09-20T01:30:00.000Z",
+    "max": 500000,
+    "project": "Instadapp"
+  },
+  {
+    "slug": "benqi",
+    "url": "/bug-bounty/benqi/information/",
+    "launch": "2021-08-19T12:00:00.000Z",
+    "max": 500000,
+    "project": "BENQI"
+  },
+  {
+    "slug": "defisaver",
+    "url": "/bug-bounty/defisaver/information/",
+    "launch": "2021-04-21T07:00:00.000Z",
+    "max": 350000,
+    "project": "DeFi Saver"
+  },
+  {
+    "slug": "zksyncera",
+    "url": "/bug-bounty/zksyncera/information/",
+    "launch": "2023-03-10T17:00:00.000Z",
+    "max": 300000,
+    "project": "ZKsync Era"
+  },
+  {
+    "slug": "Aevo",
+    "url": "/bug-bounty/Aevo/information/",
+    "launch": "2021-04-12T07:00:00.000Z",
+    "max": 300000,
+    "project": "Aevo"
+  },
+  {
+    "slug": "sbtc",
+    "url": "/bug-bounty/sbtc/information/",
+    "launch": "2026-07-02T13:59:00.000Z",
+    "max": 250000,
+    "project": "sBTC"
+  },
+  {
+    "slug": "royco",
+    "url": "/bug-bounty/royco/information/",
+    "launch": "2026-02-17T10:24:00.000Z",
+    "max": 250000,
+    "project": "Royco"
+  },
+  {
+    "slug": "parallel",
+    "url": "/bug-bounty/parallel/information/",
+    "launch": "2025-10-02T12:10:00.000Z",
+    "max": 250000,
+    "project": "Parallel"
+  },
+  {
+    "slug": "strata",
+    "url": "/bug-bounty/strata/information/",
+    "launch": "2025-10-01T10:01:00.000Z",
+    "max": 250000,
+    "project": "Strata"
+  },
+  {
+    "slug": "kelp-dao",
+    "url": "/bug-bounty/kelp-dao/information/",
+    "launch": "2024-08-02T00:00:00.000Z",
+    "max": 250000,
+    "project": "Kelp DAO"
+  },
+  {
+    "slug": "avail",
+    "url": "/bug-bounty/avail/information/",
+    "launch": "2024-07-23T02:00:00.000Z",
+    "max": 250000,
+    "project": "Avail"
+  },
+  {
+    "slug": "ens",
+    "url": "/bug-bounty/ens/information/",
+    "launch": "2024-05-10T03:11:00.000Z",
+    "max": 250000,
+    "project": "ENS"
+  },
+  {
+    "slug": "ssvnetwork",
+    "url": "/bug-bounty/ssvnetwork/information/",
+    "launch": "2023-09-11T16:00:00.000Z",
+    "max": 250000,
+    "project": "SSV Network"
+  },
+  {
+    "slug": "stacks",
+    "url": "/bug-bounty/stacks/information/",
+    "launch": "2022-03-31T19:30:00.000Z",
+    "max": 250000,
+    "project": "Stacks"
+  },
+  {
+    "slug": "marinade",
+    "url": "/bug-bounty/marinade/information/",
+    "launch": "2021-12-01T18:30:00.000Z",
+    "max": 250000,
+    "project": "Marinade"
+  },
+  {
+    "slug": "polygon",
+    "url": "/bug-bounty/polygon/information/",
+    "launch": "2021-09-13T13:00:00.000Z",
+    "max": 250000,
+    "project": "Polygon"
+  },
+  {
+    "slug": "hydration",
+    "url": "/bug-bounty/hydration/information/",
+    "launch": "2023-02-20T20:00:00.000Z",
+    "max": 222222,
+    "project": "Hydration"
+  },
+  {
+    "slug": "rootstocklabs",
+    "url": "/bug-bounty/rootstocklabs/information/",
+    "launch": "2026-02-10T01:55:00.000Z",
+    "max": 200000,
+    "project": "RootstockLabs"
+  },
+  {
+    "slug": "enzyme-onyx",
+    "url": "/bug-bounty/enzyme-onyx/information/",
+    "launch": "2025-09-04T10:00:00.000Z",
+    "max": 200000,
+    "project": "Enzyme Onyx"
+  },
+  {
+    "slug": "ostium",
+    "url": "/bug-bounty/ostium/information/",
+    "launch": "2025-04-30T00:00:00.000Z",
+    "max": 200000,
+    "project": "Ostium"
+  },
+  {
+    "slug": "aster",
+    "url": "/bug-bounty/aster/information/",
+    "launch": "2025-04-16T02:43:13.000Z",
+    "max": 200000,
+    "project": "Aster"
+  },
+  {
+    "slug": "beets",
+    "url": "/bug-bounty/beets/information/",
+    "launch": "2022-09-16T03:30:00.000Z",
+    "max": 200000,
+    "project": "Beets"
+  },
+  {
+    "slug": "debridge",
+    "url": "/bug-bounty/debridge/information/",
+    "launch": "2022-01-21T13:00:00.000Z",
+    "max": 200000,
+    "project": "deBridge"
+  },
+  {
+    "slug": "celer",
+    "url": "/bug-bounty/celer/information/",
+    "launch": "2021-11-18T13:00:00.000Z",
+    "max": 200000,
+    "project": "Celer"
+  },
+  {
+    "slug": "yearnfinance",
+    "url": "/bug-bounty/yearnfinance/information/",
+    "launch": "2021-07-01T07:00:00.000Z",
+    "max": 200000,
+    "project": "Yearn Finance"
+  },
+  {
+    "slug": "enzymefinance",
+    "url": "/bug-bounty/enzymefinance/information/",
+    "launch": "2021-03-29T07:00:00.000Z",
+    "max": 200000,
+    "project": "Enzyme Blue"
+  },
+  {
+    "slug": "sushiswap",
+    "url": "/bug-bounty/sushiswap/information/",
+    "launch": "2021-03-26T07:00:00.000Z",
+    "max": 200000,
+    "project": "SushiSwap"
+  },
+  {
+    "slug": "alchemix-1",
+    "url": "/bug-bounty/alchemix-1/information/",
+    "launch": "2026-02-26T19:26:00.000Z",
+    "max": 150000,
+    "project": "Alchemix"
+  },
+  {
+    "slug": "thresholdnetwork",
+    "url": "/bug-bounty/thresholdnetwork/information/",
+    "launch": "2023-04-28T09:00:00.000Z",
+    "max": 150000,
+    "project": "Threshold Network"
+  },
+  {
+    "slug": "gearbox",
+    "url": "/bug-bounty/gearbox/information/",
+    "launch": "2022-02-08T13:00:00.000Z",
+    "max": 150000,
+    "project": "Gearbox"
+  },
+  {
+    "slug": "rocketpool",
+    "url": "/bug-bounty/rocketpool/information/",
+    "launch": "2021-09-08T14:00:00.000Z",
+    "max": 150000,
+    "project": "Rocket Pool"
+  },
+  {
+    "slug": "pythnetwork",
+    "url": "/bug-bounty/pythnetwork/information/",
+    "launch": "2024-06-24T16:00:00.000Z",
+    "max": 125000,
+    "project": "Pyth Network"
+  },
+  {
+    "slug": "intuition",
+    "url": "/bug-bounty/intuition/information/",
+    "launch": "2026-07-08T09:19:00.000Z",
+    "max": 100000,
+    "project": "Intuition"
+  },
+  {
+    "slug": "gmtrade",
+    "url": "/bug-bounty/gmtrade/information/",
+    "launch": "2026-07-06T00:00:00.000Z",
+    "max": 100000,
+    "project": "GMTrade"
+  },
+  {
+    "slug": "1inch-business",
+    "url": "/bug-bounty/1inch-business/information/",
+    "launch": "2026-06-11T14:30:11.000Z",
+    "max": 100000,
+    "project": "1inch - Business"
+  },
+  {
+    "slug": "1inch-wallet",
+    "url": "/bug-bounty/1inch-wallet/information/",
+    "launch": "2026-06-11T13:44:50.000Z",
+    "max": 100000,
+    "project": "1inch - Wallet"
+  },
+  {
+    "slug": "1inch-aqua",
+    "url": "/bug-bounty/1inch-aqua/information/",
+    "launch": "2026-06-11T12:46:32.000Z",
+    "max": 100000,
+    "project": "1inch - Aqua"
+  },
+  {
+    "slug": "onre",
+    "url": "/bug-bounty/onre/information/",
+    "launch": "2026-05-11T09:00:00.000Z",
+    "max": 100000,
+    "project": "OnRe"
+  },
+  {
+    "slug": "variational",
+    "url": "/bug-bounty/variational/information/",
+    "launch": "2026-03-16T16:30:00.000Z",
+    "max": 100000,
+    "project": "Variational"
+  },
+  {
+    "slug": "hermetica",
+    "url": "/bug-bounty/hermetica/information/",
+    "launch": "2026-02-12T09:27:00.000Z",
+    "max": 100000,
+    "project": "Hermetica"
+  },
+  {
+    "slug": "zest-protocol-v2",
+    "url": "/bug-bounty/zest-protocol-v2/information/",
+    "launch": "2026-01-15T22:10:00.000Z",
+    "max": 100000,
+    "project": "Zest Protocol V2"
+  },
+  {
+    "slug": "zksync-os",
+    "url": "/bug-bounty/zksync-os/information/",
+    "launch": "2025-11-24T08:16:26.000Z",
+    "max": 100000,
+    "project": "ZKsync OS"
+  },
+  {
+    "slug": "granite-protocol",
+    "url": "/bug-bounty/granite-protocol/information/",
+    "launch": "2025-02-26T15:58:00.000Z",
+    "max": 100000,
+    "project": "Granite Protocol"
+  },
+  {
+    "slug": "berachain",
+    "url": "/bug-bounty/berachain/information/",
+    "launch": "2025-02-06T11:58:00.000Z",
+    "max": 100000,
+    "project": "Berachain"
+  },
+  {
+    "slug": "fbtc",
+    "url": "/bug-bounty/fbtc/information/",
+    "launch": "2024-12-19T19:46:46.000Z",
+    "max": 100000,
+    "project": "FBTC"
+  },
+  {
+    "slug": "arkadiko",
+    "url": "/bug-bounty/arkadiko/information/",
+    "launch": "2024-06-03T02:44:00.000Z",
+    "max": 100000,
+    "project": "Arkadiko"
+  },
+  {
+    "slug": "orderlynetwork",
+    "url": "/bug-bounty/orderlynetwork/information/",
+    "launch": "2024-02-27T00:05:00.000Z",
+    "max": 100000,
+    "project": "Orderly Network"
+  },
+  {
+    "slug": "stackingdao",
+    "url": "/bug-bounty/stackingdao/information/",
+    "launch": "2024-02-04T20:00:00.000Z",
+    "max": 100000,
+    "project": "StackingDAO"
+  },
+  {
+    "slug": "avalanche",
+    "url": "/bug-bounty/avalanche/information/",
+    "launch": "2023-12-03T22:00:00.000Z",
+    "max": 100000,
+    "project": "Ava Labs Avalanche"
+  },
+  {
+    "slug": "extrafinance",
+    "url": "/bug-bounty/extrafinance/information/",
+    "launch": "2023-09-08T13:00:00.000Z",
+    "max": 100000,
+    "project": "Extra Finance"
+  },
+  {
+    "slug": "velodromefinance",
+    "url": "/bug-bounty/velodromefinance/information/",
+    "launch": "2023-06-29T09:00:00.000Z",
+    "max": 100000,
+    "project": "Velodrome Finance"
+  },
+  {
+    "slug": "bobanetwork",
+    "url": "/bug-bounty/bobanetwork/information/",
+    "launch": "2023-01-13T21:00:00.000Z",
+    "max": 100000,
+    "project": "Boba Network"
+  },
+  {
+    "slug": "silofinance-v2",
+    "url": "/bug-bounty/silofinance-v2/information/",
+    "launch": "2022-08-30T17:30:00.000Z",
+    "max": 100000,
+    "project": "Silo Finance (v2 & v3)"
+  },
+  {
+    "slug": "symbiosis",
+    "url": "/bug-bounty/symbiosis/information/",
+    "launch": "2022-08-18T09:30:00.000Z",
+    "max": 100000,
+    "project": "Symbiosis"
+  },
+  {
+    "slug": "folksfinance",
+    "url": "/bug-bounty/folksfinance/information/",
+    "launch": "2022-03-31T17:00:00.000Z",
+    "max": 100000,
+    "project": "Folks Finance"
+  },
+  {
+    "slug": "synthetix",
+    "url": "/bug-bounty/synthetix/information/",
+    "launch": "2021-03-05T07:00:00.000Z",
+    "max": 100000,
+    "project": "Synthetix"
+  },
+  {
+    "slug": "harvest",
+    "url": "/bug-bounty/harvest/information/",
+    "launch": "2020-12-02T07:00:00.000Z",
+    "max": 100000,
+    "project": "Harvest Finance"
+  },
+  {
+    "slug": "katana",
+    "url": "/bug-bounty/katana/information/",
+    "launch": "2026-02-11T14:57:23.000Z",
+    "max": 80000,
+    "project": "Katana"
+  },
+  {
+    "slug": "xterio",
+    "url": "/bug-bounty/xterio/information/",
+    "launch": "2024-07-08T10:30:00.000Z",
+    "max": 80000,
+    "project": "Xterio"
+  },
+  {
+    "slug": "beefyfinance",
+    "url": "/bug-bounty/beefyfinance/information/",
+    "launch": "2021-07-15T16:00:00.000Z",
+    "max": 75000,
+    "project": "Beefy Finance"
+  },
+  {
+    "slug": "velvetcapital",
+    "url": "/bug-bounty/velvetcapital/information/",
+    "launch": "2023-12-15T09:00:00.000Z",
+    "max": 51000,
+    "project": "Velvet Capital"
+  },
+  {
+    "slug": "dawn",
+    "url": "/bug-bounty/dawn/information/",
+    "launch": "2026-07-12T11:54:11.000Z",
+    "max": 50000,
+    "project": "DAWN USD.infra Vault"
+  },
+  {
+    "slug": "cosmos",
+    "url": "/bug-bounty/cosmos/information/",
+    "launch": "2026-06-22T21:39:00.000Z",
+    "max": 50000,
+    "project": "Cosmos"
+  },
+  {
+    "slug": "1inch-web",
+    "url": "/bug-bounty/1inch-web/information/",
+    "launch": "2026-06-11T07:56:01.000Z",
+    "max": 50000,
+    "project": "1inch - Web"
+  },
+  {
+    "slug": "KAST",
+    "url": "/bug-bounty/KAST/information/",
+    "launch": "2026-04-20T04:48:00.000Z",
+    "max": 50000,
+    "project": "KAST"
+  },
+  {
+    "slug": "kleidi",
+    "url": "/bug-bounty/kleidi/information/",
+    "launch": "2026-02-13T19:09:05.000Z",
+    "max": 50000,
+    "project": "Kleidi"
+  },
+  {
+    "slug": "twyne",
+    "url": "/bug-bounty/twyne/information/",
+    "launch": "2026-01-16T14:30:00.000Z",
+    "max": 50000,
+    "project": "Twyne"
+  },
+  {
+    "slug": "filecoin",
+    "url": "/bug-bounty/filecoin/information/",
+    "launch": "2023-04-14T20:00:00.000Z",
+    "max": 50000,
+    "project": "Filecoin"
+  },
+  {
+    "slug": "magpiexyz",
+    "url": "/bug-bounty/magpiexyz/information/",
+    "launch": "2023-02-09T20:00:00.000Z",
+    "max": 50000,
+    "project": "MagpieXYZ"
+  },
+  {
+    "slug": "justlenddao",
+    "url": "/bug-bounty/justlenddao/information/",
+    "launch": "2022-08-31T03:00:00.000Z",
+    "max": 50000,
+    "project": "JustLend DAO"
+  },
+  {
+    "slug": "hashflow",
+    "url": "/bug-bounty/hashflow/information/",
+    "launch": "2022-03-29T20:00:00.000Z",
+    "max": 50000,
+    "project": "Hashflow"
+  },
+  {
+    "slug": "dhedge",
+    "url": "/bug-bounty/dhedge/information/",
+    "launch": "2021-11-09T12:00:00.000Z",
+    "max": 50000,
+    "project": "dHEDGE"
+  },
+  {
+    "slug": "gamma",
+    "url": "/bug-bounty/gamma/information/",
+    "launch": "2021-10-08T15:00:00.000Z",
+    "max": 50000,
+    "project": "Gamma"
+  },
+  {
+    "slug": "derive",
+    "url": "/bug-bounty/derive/information/",
+    "launch": "2021-08-23T14:00:00.000Z",
+    "max": 50000,
+    "project": "Derive"
+  },
+  {
+    "slug": "thegraph",
+    "url": "/bug-bounty/thegraph/information/",
+    "launch": "2021-08-04T17:00:00.000Z",
+    "max": 50000,
+    "project": "The Graph"
+  },
+  {
+    "slug": "ichi",
+    "url": "/bug-bounty/ichi/information/",
+    "launch": "2021-06-17T15:00:00.000Z",
+    "max": 50000,
+    "project": "Ichi"
+  },
+  {
+    "slug": "pareto",
+    "url": "/bug-bounty/pareto/information/",
+    "launch": "2021-03-25T07:00:00.000Z",
+    "max": 50000,
+    "project": "Pareto Credit"
+  },
+  {
+    "slug": "immunefi",
+    "url": "/bug-bounty/immunefi/information/",
+    "launch": "2020-12-02T05:00:00.000Z",
+    "max": 50000,
+    "project": "Immunefi"
+  },
+  {
+    "slug": "obyte",
+    "url": "/bug-bounty/obyte/information/",
+    "launch": "2020-12-01T07:00:00.000Z",
+    "max": 50000,
+    "project": "Obyte"
+  },
+  {
+    "slug": "nuva",
+    "url": "/bug-bounty/nuva/information/",
+    "launch": "2026-05-18T06:00:00.000Z",
+    "max": 40000,
+    "project": "NUVA"
+  },
+  {
+    "slug": "gammaswap",
+    "url": "/bug-bounty/gammaswap/information/",
+    "launch": "2023-09-29T20:00:00.000Z",
+    "max": 40000,
+    "project": "GammaSwap"
+  },
+  {
+    "slug": "livepeer",
+    "url": "/bug-bounty/livepeer/information/",
+    "launch": "2022-02-25T04:00:00.000Z",
+    "max": 40000,
+    "project": "Livepeer"
+  },
+  {
+    "slug": "hedera",
+    "url": "/bug-bounty/hedera/information/",
+    "launch": "2025-02-05T04:21:00.000Z",
+    "max": 30000,
+    "project": "Hedera"
+  },
+  {
+    "slug": "serai",
+    "url": "/bug-bounty/serai/information/",
+    "launch": "2023-08-04T11:00:00.000Z",
+    "max": 30000,
+    "project": "Serai"
+  },
+  {
+    "slug": "1inch-aqua-improvement",
+    "url": "/bug-bounty/1inch-aqua-improvement/information/",
+    "launch": "2026-06-11T13:20:02.000Z",
+    "max": 25000,
+    "project": "1inch - Aqua Improvement"
+  },
+  {
+    "slug": "openzeppelin-stellar",
+    "url": "/bug-bounty/openzeppelin-stellar/information/",
+    "launch": "2025-05-08T02:51:06.000Z",
+    "max": 25000,
+    "project": "OpenZeppelin on Stellar"
+  },
+  {
+    "slug": "exactly",
+    "url": "/bug-bounty/exactly/information/",
+    "launch": "2022-12-08T21:00:00.000Z",
+    "max": 25000,
+    "project": "Exactly"
+  },
+  {
+    "slug": "zerion",
+    "url": "/bug-bounty/zerion/information/",
+    "launch": "2022-03-29T19:00:00.000Z",
+    "max": 25000,
+    "project": "Zerion"
+  },
+  {
+    "slug": "antefinance",
+    "url": "/bug-bounty/antefinance/information/",
+    "launch": "2022-01-05T18:00:00.000Z",
+    "max": 25000,
+    "project": "Ante Finance"
+  },
+  {
+    "slug": "openzeppelin",
+    "url": "/bug-bounty/openzeppelin/information/",
+    "launch": "2021-11-15T15:00:00.000Z",
+    "max": 25000,
+    "project": "OpenZeppelin"
+  },
+  {
+    "slug": "nexusmutual",
+    "url": "/bug-bounty/nexusmutual/information/",
+    "launch": "2021-02-23T07:00:00.000Z",
+    "max": 25000,
+    "project": "Nexus Mutual"
+  },
+  {
+    "slug": "1inch-infrastructure",
+    "url": "/bug-bounty/1inch-infrastructure/information/",
+    "launch": "2026-06-11T14:09:17.000Z",
+    "max": 20000,
+    "project": "1inch - Infrastructure"
+  },
+  {
+    "slug": "xoxno",
+    "url": "/bug-bounty/xoxno/information/",
+    "launch": "2025-09-16T08:00:31.000Z",
+    "max": 20000,
+    "project": "XOXNO"
+  },
+  {
+    "slug": "hibachi",
+    "url": "/bug-bounty/hibachi/information/",
+    "launch": "2025-01-08T14:58:00.000Z",
+    "max": 20000,
+    "project": "Hibachi"
+  },
+  {
+    "slug": "trufin",
+    "url": "/bug-bounty/trufin/information/",
+    "launch": "2023-09-27T14:00:00.000Z",
+    "max": 20000,
+    "project": "TruYields"
+  },
+  {
+    "slug": "sp1",
+    "url": "/bug-bounty/sp1/information/",
+    "launch": "2026-09-21T15:00:00.000Z",
+    "max": 15000,
+    "project": "SP1"
+  },
+  {
+    "slug": "horizen",
+    "url": "/bug-bounty/horizen/information/",
+    "launch": "2026-07-15T11:00:00.000Z",
+    "max": 10000,
+    "project": "Horizen"
+  },
+  {
+    "slug": "edgex",
+    "url": "/bug-bounty/edgex/information/",
+    "launch": "2026-04-07T22:57:00.000Z",
+    "max": 10000,
+    "project": "edgeX"
+  },
+  {
+    "slug": "yo-protocol",
+    "url": "/bug-bounty/yo-protocol/information/",
+    "launch": "2025-05-05T13:00:00.000Z",
+    "max": 10000,
+    "project": "YO Protocol"
+  },
+  {
+    "slug": "berachain-webapps",
+    "url": "/bug-bounty/berachain-webapps/information/",
+    "launch": "2025-03-18T09:00:00.000Z",
+    "max": 10000,
+    "project": "Berachain (Web/Apps)"
+  },
+  {
+    "slug": "velvet-capital-v2",
+    "url": "/bug-bounty/velvet-capital-v2/information/",
+    "launch": "2024-09-05T21:23:24.000Z",
+    "max": 10000,
+    "project": "Velvet Capital V2"
+  },
+  {
+    "slug": "avalabs",
+    "url": "/bug-bounty/avalabs/information/",
+    "launch": "2023-12-04T09:00:00.000Z",
+    "max": 10000,
+    "project": "Ava Labs"
+  },
+  {
+    "slug": "pragmaoracle",
+    "url": "/bug-bounty/pragmaoracle/information/",
+    "launch": "2023-11-22T09:00:00.000Z",
+    "max": 10000,
+    "project": "Pragma Oracle"
+  },
+  {
+    "slug": "marsecosystem",
+    "url": "/bug-bounty/marsecosystem/information/",
+    "launch": "2021-09-08T11:00:00.000Z",
+    "max": 10000,
+    "project": "Mars Ecosystem"
+  },
+  {
+    "slug": "moneyonchain",
+    "url": "/bug-bounty/moneyonchain/information/",
+    "launch": "2021-01-14T07:00:00.000Z",
+    "max": 10000,
+    "project": "Money on Chain / RIF on Chain"
+  },
+  {
+    "slug": "charm",
+    "url": "/bug-bounty/charm/information/",
+    "launch": "2021-02-05T07:00:00.000Z",
+    "max": 6000,
+    "project": "Charm"
+  },
+  {
+    "slug": "leather",
+    "url": "/bug-bounty/leather/information/",
+    "launch": "2026-07-30T07:43:00.000Z",
+    "max": 5000,
+    "project": "Leather"
+  },
+  {
+    "slug": "blockpinetwork",
+    "url": "/bug-bounty/blockpinetwork/information/",
+    "launch": "2022-11-11T03:00:00.000Z",
+    "max": 5000,
+    "project": "BlockPI Network"
+  },
+  {
+    "slug": "autonolas",
+    "url": "/bug-bounty/autonolas/information/",
+    "launch": "2022-08-10T17:30:00.000Z",
+    "max": 5000,
+    "project": "Autonolas"
+  },
+  {
+    "slug": "mtpelerin",
+    "url": "/bug-bounty/mtpelerin/information/",
+    "launch": "2021-02-08T07:00:00.000Z",
+    "max": 5000,
+    "project": "Mt Pelerin"
+  },
+  {
+    "slug": "ipor",
+    "url": "/bug-bounty/ipor/information/",
+    "launch": "2023-04-11T18:00:00.000Z",
+    "max": 1000,
+    "project": "IPOR"
+  },
+  {
+    "slug": "unstoppablewallet",
+    "url": "/bug-bounty/unstoppablewallet/information/",
+    "launch": "2022-03-04T04:00:00.000Z",
+    "max": 1000,
+    "project": "Unstoppable Wallet"
+  },
+  {
+    "slug": "acala",
+    "url": "/bug-bounty/acala/information/",
+    "launch": "2021-12-14T02:00:00.000Z",
+    "max": 1000,
+    "project": "Acala"
+  }
+]

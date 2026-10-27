@@ -1,0 +1,62 @@
+From a3292ee250b84880c51e2f24cf757018d0197ef6 Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Wed, 7 Oct 2026 02:18:43 +0000
+Subject: [PATCH] Tspan.shape_box: subtract fontsize so the box covers where
+ the glyphs render
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bug #634.
+
+In SVG, the y coordinate of a <text>/<tspan> element is the baseline
+position. The visible glyphs render *above* that baseline — the
+font's ascender extends upward from y. The previous implementation of
+Tspan.shape_box() added the fontsize to y, which placed the entire
+bounding box below the anchor point — the opposite of where the
+visible text actually appears.
+
+For the SVG snippet from the bug report:
+
+    <text x="1.3443393" y="69.905418">
+        <tspan x="1.3443393" y="69.905418"
+               style="font-size:85.3333px">XXX</tspan>
+    </text>
+
+the previous code computed the bounding box as
+  x in [1.34, 1.34], y in [69.91, 155.24]
+which is entirely below the visible glyphs. After this fix it
+computes
+  x in [1.34, 1.34], y in [-15.43, 69.91]
+which actually contains the rendered text.
+
+Subtract instead of add. No behaviour change for callers that only
+used shape_box() as a coarse approximation (the docstring still
+warns the box is "horrible" — only its vertical span changes sign).
+---
+ inkex/elements/_text.py | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/inkex/elements/_text.py b/inkex/elements/_text.py
+index 3c96836..af5cfb1 100644
+--- a/inkex/elements/_text.py
++++ b/inkex/elements/_text.py
+@@ -220,7 +220,14 @@ class Tspan(ShapeElement, TextBBMixin):
+         x1, y1 = effective_transform.apply_to_point((self.x, self.y))
+         fontsize = self.to_dimensionless(self.style.get("font-size", "12px"))
+         x2 = self.x + 0  # XXX This is impossible to calculate!
+-        y2 = self.y + float(fontsize)
++        # In SVG, the y coordinate of a text/tspan element is the baseline
++        # position, and the glyphs render *above* that baseline (the font's
++        # ascender extends upwards from y). The previous implementation added
++        # the fontsize to y, which placed the bounding box entirely below the
++        # anchor point - the opposite of where the visible glyphs actually
++        # are. Subtract instead so the box covers the area above the baseline
++        # where the text is drawn.
++        y2 = self.y - float(fontsize)
+         x2, y2 = effective_transform.apply_to_point((x2, y2))
+         return BoundingBox((x1, x2), (y1, y2))
+ 
+-- 
+2.47.3
+

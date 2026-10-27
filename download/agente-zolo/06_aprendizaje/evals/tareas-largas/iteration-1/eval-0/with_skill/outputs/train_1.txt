@@ -1,0 +1,4 @@
+Query: necesito tareas-largas
+Triggered: True
+Expected: trigger
+Pass: True

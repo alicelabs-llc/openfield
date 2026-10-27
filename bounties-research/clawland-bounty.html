@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-title="page.bounty.title">Bounty Board - Clawland.ai</title>
+    <meta name="description" content="Clawland bounty board. Pick a task, complete it, earn rewards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar"><div class="container nav-container"><a href="../index.html" class="nav-logo"><span class="logo-icon">🦀</span><span class="logo-text">Clawland<span class="logo-dot">.ai</span></span></a><div class="nav-links" id="navLinks"><a href="../index.html#products" class="nav-link" data-i18n="nav.products">Hardware Kits</a><a href="../index.html#scenarios" class="nav-link" data-i18n="nav.scenarios">Use Cases</a><a href="../index.html#architecture" class="nav-link" data-i18n="nav.architecture">Architecture</a><a href="../index.html#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a><a href="../index.html#opensource" class="nav-link" data-i18n="nav.opensource">Open Source</a><a href="zero-config-deploy.html" class="nav-link" data-i18n="nav.deploy">Deploy</a><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a><a href="https://github.com/Clawland-AI" target="_blank" class="nav-link nav-github"><i class="fab fa-github"></i> GitHub</a><div class="lang-switcher"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="zh">中文</button></div></div><div class="nav-right-mobile"><div class="lang-switcher lang-switcher-mobile"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="zh">中文</button></div><button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button></div></div></nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-breadcrumb"><a href="../index.html" data-i18n="breadcrumb.home">Home</a><span class="separator">/</span><a href="../index.html#opensource" data-i18n="nav.opensource">Open Source</a><span class="separator">/</span><span data-i18n="page.bounty.crumb">Bounty Board</span></div>
+            <h1 data-i18n="page.bounty.h1">🎯 Bounty Board</h1>
+            <p class="page-subtitle" data-i18n="page.bounty.subtitle">Pick a task, complete it, earn rewards. Bounties are funded from the 5% Community Fund plus sponsor contributions.</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container prose">
+
+            <h2 data-i18n="bounty.active.title">🔥 Active Bounties</h2>
+
+            <div class="bounty-grid">
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.1.title">Edge HTTP Server for PicClaw</span><span class="bounty-reward">$500</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.1.desc">Implement the Edge API Server module (pkg/edge/server.go) with endpoints: POST /api/command, POST /api/message, GET /api/status, GET /api/health. Must integrate with existing MessageBus.</p>
+                    <div class="bounty-tags"><span class="tag tag-red">High Priority</span><span class="tag tag-blue">Go</span><span class="tag tag-green">picclaw</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.2.title">Edge Reporter Module</span><span class="bounty-reward">$400</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.2.desc">Build the Edge Reporter (pkg/edge/reporter.go) that periodically sends heartbeats, events, and status to MoltClaw cloud via HTTP POST. Support configurable intervals and event-driven reporting.</p>
+                    <div class="bounty-tags"><span class="tag tag-red">High Priority</span><span class="tag tag-blue">Go</span><span class="tag tag-green">picclaw</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.3.title">Fleet Manager Dashboard</span><span class="bounty-reward">$600</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.3.desc">Create a web-based dashboard for MoltClaw Fleet Manager. Real-time node status, alert aggregation, command dispatch, map view for geolocated nodes. React or vanilla JS.</p>
+                    <div class="bounty-tags"><span class="tag tag-yellow">Medium Priority</span><span class="tag tag-purple">TypeScript</span><span class="tag tag-green">clawland-fleet</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.4.title">Aquaculture Monitoring Skill</span><span class="bounty-reward">$200</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.4.desc">Create a complete aquaculture-monitoring YAML skill for PicClaw. Include DO/pH/temp thresholds, aerator control logic, daily report generation, and Memory-based trend learning.</p>
+                    <div class="bounty-tags"><span class="tag tag-yellow">Medium Priority</span><span class="tag tag-purple">YAML</span><span class="tag tag-green">clawland-skills</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.5.title">Greenhouse Kit Hardware Design</span><span class="bounty-reward">$300</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.5.desc">Design the Greenhouse Pro kit: Complete BOM, KiCad schematic, wiring diagram, 3D-printable enclosure, Python driver scripts for all sensors, and test report with real data.</p>
+                    <div class="bounty-tags"><span class="tag tag-yellow">Medium Priority</span><span class="tag tag-yellow">Hardware</span><span class="tag tag-green">clawland-kits</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.6.title">MicroClaw ESP32 Port</span><span class="bounty-reward">$350</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.6.desc">Port microclaw agent to ESP32-C3 (RISC-V). Implement basic sensor reading, MQTT reporting, and OTA update. Target: &lt;64KB RAM, &lt;512KB flash.</p>
+                    <div class="bounty-tags"><span class="tag tag-red">High Priority</span><span class="tag tag-red">C/Rust</span><span class="tag tag-green">microclaw</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.7.title">Chinese Documentation Translation</span><span class="bounty-reward">$150</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.7.desc">Translate all core documentation (README, CONTRIBUTING, API docs, Quick Start) to Chinese. Must be native-quality, not machine translation.</p>
+                    <div class="bounty-tags"><span class="tag tag-green">Low Priority</span><span class="tag tag-blue">Docs</span><span class="tag tag-green">all repos</span></div>
+                </div>
+                <div class="bounty-card">
+                    <div class="bounty-header"><span class="bounty-title" data-i18n="bounty.8.title">Cold Chain Compliance Module</span><span class="bounty-reward">$250</span></div>
+                    <p class="bounty-desc" data-i18n="bounty.8.desc">Build a GSP/HACCP compliance reporting module: CSV/PDF export, tamper-proof logging, audit trail generation, regulatory report templates for cold chain monitoring.</p>
+                    <div class="bounty-tags"><span class="tag tag-yellow">Medium Priority</span><span class="tag tag-blue">Go</span><span class="tag tag-green">clawland-skills</span></div>
+                </div>
+            </div>
+
+            <h2 data-i18n="bounty.howto.title">📋 How to Claim a Bounty</h2>
+
+            <div class="step-block"><div class="step-num">1</div><div><h4 data-i18n="bounty.how1.title">Comment on the Issue</h4><p data-i18n="bounty.how1.desc">Find the corresponding GitHub issue and comment "I'd like to work on this". A maintainer will assign it to you.</p></div></div>
+            <div class="step-block"><div class="step-num">2</div><div><h4 data-i18n="bounty.how2.title">Submit a Plan</h4><p data-i18n="bounty.how2.desc">Within 48 hours, post a brief implementation plan as a comment. This helps prevent duplicate work and ensures alignment.</p></div></div>
+            <div class="step-block"><div class="step-num">3</div><div><h4 data-i18n="bounty.how3.title">Implement & PR</h4><p data-i18n="bounty.how3.desc">Complete the work within the agreed timeline (usually 2-4 weeks). Submit a PR referencing the bounty issue.</p></div></div>
+            <div class="step-block"><div class="step-num">4</div><div><h4 data-i18n="bounty.how4.title">Review & Payout</h4><p data-i18n="bounty.how4.desc">Once the PR is reviewed, approved, and merged, the bounty is paid out via Open Collective (USD) or domestic transfer (CNY).</p></div></div>
+
+            <div class="info-box highlight">
+                <h4 data-i18n="bounty.sponsor.title">💡 Want to Sponsor a Bounty?</h4>
+                <p data-i18n="bounty.sponsor.desc">Companies or individuals can sponsor bounties for features they need. Contact us at <a href="/cdn-cgi/l/email-protection#c3a1acb6adb7ba83a0afa2b4afa2ada7eda2aa"><span class="__cf_email__" data-cfemail="fd9f9288938984bd9e919c8a919c9399d39c94">[email&#160;protected]</span></a> or open a GitHub Discussion. Sponsored bounties get prioritized and the sponsor's logo appears in the project.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-cta"><div class="container"><h3 data-i18n="bounty.cta.title">Ready to Earn?</h3><p data-i18n="bounty.cta.desc">Check out the bounty issues on GitHub and start building.</p><div class="cta-btns"><a href="https://github.com/Clawland-AI" target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-github"></i> <span data-i18n="bounty.cta.btn">View Issues on GitHub</span></a></div></div></section>
+
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="footer-logo"><span class="logo-icon">🦀</span><span class="logo-text">Clawland<span class="logo-dot">.ai</span></span></a><p class="footer-desc" data-i18n="footer.desc">Edge AI Hardware · MoltClaw Compatible Ecosystem<br>Building AI Sentinel Networks with $10 Hardware</p><div class="footer-social"><a href="https://github.com/Clawland-AI" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a><a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></div></div><div class="footer-col"><h4 data-i18n="footer.col1.title">Hardware Kits</h4><a href="../index.html#products">PicClaw Core</a><a href="../index.html#products">DC Sentinel</a><a href="../index.html#products">Pond Guardian</a><a href="../index.html#products">Greenhouse Pro</a><a href="../index.html#products">Safe Guardian</a></div><div class="footer-col"><h4 data-i18n="footer.col2.title">More Kits</h4><a href="../index.html#products">Machine Doctor</a><a href="../index.html#products">Warehouse Guard</a><a href="../index.html#products">Cold Chain Guard</a><a href="../index.html#products">Structure Guard</a><a href="../index.html#products">Energy Expert</a></div><div class="footer-col"><h4 data-i18n="footer.col3.title">Open Source</h4><a href="https://github.com/Clawland-AI" target="_blank">GitHub</a><a href="contributing.html" data-i18n="footer.col3.contrib">Contributing Guide</a><a href="revenue-sharing.html" data-i18n="footer.col3.revenue">Revenue Sharing Plan</a><a href="governance.html" data-i18n="footer.col3.governance">Governance Docs</a><a href="bounty.html" data-i18n="footer.col3.bounty">Bounty Board</a></div><div class="footer-col"><h4 data-i18n="footer.col4.title">Resources</h4><a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a><a href="api-docs.html" data-i18n="footer.col4.api">API Docs</a><a href="quickstart.html" data-i18n="footer.col4.quickstart">Quick Start</a><a href="sensors.html" data-i18n="footer.col4.sensors">Sensor Reference</a><a href="contact.html" data-i18n="footer.col4.contact">Contact Us</a></div></div><div class="footer-bottom"><p><span data-i18n="footer.copyright">© 2025-2026 Clawland.ai — Powered by</span> <a href="https://github.com/Clawland-AI" target="_blank" data-i18n="footer.copyright.link">Clawland Open Source Community</a><span data-i18n="footer.copyright.post"></span></p><p class="footer-licenses" data-i18n="footer.licenses">Core Apache 2.0 · Hardware CERN-OHL-S · Skills MIT · Fleet BSL 1.1</p></div></div></footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../js/i18n.js"></script>
+    <script src="../js/page-common.js"></script>
+</body>
+</html>

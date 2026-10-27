@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en" data-theme="auto"><head><script type="bff0a604cca985b6c43e4f18-text/javascript">
+      (() => {
+        const legacyThemes = new Map([
+          ["institutional-dark", "dark"],
+          ["institutional-light", "light"],
+        ]);
+        const allowed = new Set(["auto", "dark", "light"]);
+        let selectedTheme = "auto";
+
+        try {
+          let savedTheme = localStorage.getItem("aiv-theme");
+          if (legacyThemes.has(savedTheme)) {
+            savedTheme = legacyThemes.get(savedTheme);
+            localStorage.setItem("aiv-theme", savedTheme);
+          }
+
+          if (allowed.has(savedTheme)) selectedTheme = savedTheme;
+          else if (savedTheme) localStorage.removeItem("aiv-theme");
+        } catch {
+          selectedTheme = "auto";
+        }
+
+        const effectiveTheme =
+          selectedTheme === "auto"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : selectedTheme;
+
+        document.documentElement.dataset.themePreference = selectedTheme;
+        document.documentElement.dataset.theme = effectiveTheme;
+        document.documentElement.dataset.ecTheme = effectiveTheme;
+      })();
+    </script><meta charset="utf-8"><meta name="generator" content="Astro v7.2.9"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home | AI Village</title><meta name="description" content="AI Village is a hacker-rooted public-interest AI security community for hands-on education, red-team practice, workshops, events, and open resources."><link rel="icon" href="/public/img/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/public/img/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="/public/img/favicon-16x16.png" sizes="16x16"><link rel="apple-touch-icon" href="/public/img/favicon-32x32.png"><link rel="canonical" href="https://aivillage.org/"><meta property="og:title" content="Home"><meta property="og:locale" content="en_US"><meta property="og:description" content="AI Village is a hacker-rooted public-interest AI security community for hands-on education, red-team practice, workshops, events, and open resources."><meta property="og:url" content="https://aivillage.org/"><meta property="og:site_name" content="AI Village"><meta property="og:type" content="website"><meta property="og:image" content="https://aivillage.org/generated/og/assets-images-aiv-logo-8a9d72061d.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Home"><meta name="twitter:site" content="@aivillage_dc"><meta name="twitter:image" content="https://aivillage.org/generated/og/assets-images-aiv-logo-8a9d72061d.jpg"><link type="application/rss+xml" rel="alternate" href="https://aivillage.org/feed.xml" title="AI Village"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"AI Village","url":"https://aivillage.org","description":"AI Village is a hacker-rooted public-interest AI security community for hands-on education, red-team practice, workshops, events, and open resources."},{"@context":"https://schema.org","@type":"Organization","name":"AI Village","url":"https://aivillage.org","sameAs":["https://twitter.com/aivillage_dc","https://github.com/aivillage","https://www.linkedin.com/company/aivillage"]}]</script><link rel="stylesheet" href="/_astro/BaseLayout.CX6f1dVo.css"><link rel="stylesheet" href="/_astro/index.HmWhKwkV.css"><style>.aiv-button[data-astro-cid-j6ocf6pu]{cursor:pointer;font-family:var(--aiv-font-mono);letter-spacing:.08em;text-transform:uppercase;border:2px solid #0000;border-radius:6px;justify-content:center;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:700;line-height:1.2;text-decoration:none;transition:background-color .2s,border-color .2s,box-shadow .2s,color .2s;display:inline-flex}.aiv-button[data-astro-cid-j6ocf6pu]:hover{text-decoration:none}.aiv-button[data-astro-cid-j6ocf6pu]:focus-visible{outline:3px solid var(--aiv-focus-ring);outline-offset:3px}.aiv-button[data-astro-cid-j6ocf6pu][aria-disabled=true],.aiv-button[data-astro-cid-j6ocf6pu]:disabled{cursor:not-allowed;opacity:.65}.aiv-button--sm[data-astro-cid-j6ocf6pu]{padding:.6rem .9rem;font-size:.85rem}.aiv-button--md[data-astro-cid-j6ocf6pu]{padding:.8rem 1.15rem;font-size:.95rem}.aiv-button--lg[data-astro-cid-j6ocf6pu]{padding:1rem 1.5rem;font-size:1rem}.aiv-button--primary[data-astro-cid-j6ocf6pu]{background:var(--aiv-action-primary);border-color:var(--aiv-action-primary);color:var(--aiv-bg-canvas)}.aiv-button--primary[data-astro-cid-j6ocf6pu]:hover{box-shadow:0 0 0 3px color-mix(in srgb, var(--aiv-action-primary) 22%, transparent)}.aiv-button--secondary[data-astro-cid-j6ocf6pu]{border-color:var(--aiv-action-secondary);color:var(--aiv-action-secondary);background:0 0}html[data-theme=light] .aiv-button--secondary[data-astro-cid-j6ocf6pu]{background:color-mix(in srgb, var(--aiv-action-secondary) 8%, transparent);color:var(--aiv-text-primary)}.aiv-button--secondary[data-astro-cid-j6ocf6pu]:hover{background:color-mix(in srgb, var(--aiv-action-secondary) 14%, transparent);box-shadow:0 0 0 3px color-mix(in srgb, var(--aiv-action-secondary) 18%, transparent)}.aiv-button--ghost[data-astro-cid-j6ocf6pu]{border-color:var(--aiv-card-border);color:var(--aiv-action-primary);background:0 0}.aiv-button--ghost[data-astro-cid-j6ocf6pu]:hover{background:color-mix(in srgb, var(--aiv-bg-raised) 65%, transparent);border-color:var(--aiv-card-hover-border)}@media (prefers-reduced-motion:reduce){.aiv-button[data-astro-cid-j6ocf6pu]{transition:none}}
+</style><script type="bff0a604cca985b6c43e4f18-module" src="/_astro/page.DVGEJNLO.js"></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="container"><div class="header-content"><a class="site-title" href="/">AI Village</a><nav class="nav-menu" id="nav-menu"><a href="/events/">Events</a><a href="/blog/">Blog</a><a href="/learn/">Learn</a><a href="/community/">Community</a><a href="/about/">About</a><a class="nav-sponsor-cta" href="/sponsors/">Sponsor</a></nav><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color mode" title="Switch color mode"><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M20.99 12.66A8.99 8.99 0 1 1 11.34 3.01a7 7 0 1 0 9.65 9.65Z"></path></svg></button><button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><script type="bff0a604cca985b6c43e4f18-text/javascript">
+  const menu = document.getElementById("nav-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const siteHeader = document.querySelector(".site-header");
+  const mobileNavigation = window.matchMedia("(max-width: 900px)");
+  let previousBodyOverflow = "";
+  let lastScrollPosition = Math.max(window.scrollY, 0);
+  let upwardScrollDistance = 0;
+  let scrollFramePending = false;
+  let anchorJumpActive = false;
+  let anchorJumpTimer;
+
+  function menuIsOpen() {
+    return (
+      menuToggle instanceof HTMLButtonElement &&
+      menuToggle.getAttribute("aria-expanded") === "true"
+    );
+  }
+
+  function setHeaderHidden(hidden) {
+    if (!(siteHeader instanceof HTMLElement)) return;
+    const shouldHide = hidden && mobileNavigation.matches && !menuIsOpen();
+    siteHeader.classList.toggle("site-header--hidden", shouldHide);
+  }
+
+  function finishAnchorJump() {
+    anchorJumpActive = false;
+    lastScrollPosition = Math.max(window.scrollY, 0);
+    upwardScrollDistance = 0;
+    if (anchorJumpTimer) window.clearTimeout(anchorJumpTimer);
+  }
+
+  function beginAnchorJump() {
+    if (!mobileNavigation.matches) return;
+    anchorJumpActive = true;
+    setHeaderHidden(true);
+    upwardScrollDistance = 0;
+    if (anchorJumpTimer) window.clearTimeout(anchorJumpTimer);
+    anchorJumpTimer = window.setTimeout(finishAnchorJump, 1200);
+  }
+
+  function updateHeaderForScroll() {
+    scrollFramePending = false;
+    const currentScrollPosition = Math.max(window.scrollY, 0);
+    const delta = currentScrollPosition - lastScrollPosition;
+
+    if (!mobileNavigation.matches) {
+      setHeaderHidden(false);
+    } else if (anchorJumpActive) {
+      setHeaderHidden(true);
+      upwardScrollDistance = 0;
+    } else if (currentScrollPosition <= 16) {
+      setHeaderHidden(false);
+      upwardScrollDistance = 0;
+    } else if (delta > 1) {
+      upwardScrollDistance = 0;
+      if (currentScrollPosition > 72) setHeaderHidden(true);
+    } else if (delta < -1) {
+      upwardScrollDistance += Math.abs(delta);
+      if (upwardScrollDistance >= 20) setHeaderHidden(false);
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (scrollFramePending) return;
+      scrollFramePending = true;
+      window.requestAnimationFrame(updateHeaderForScroll);
+    },
+    { passive: true },
+  );
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const link =
+      target instanceof Element ? target.closest('a[href^="#"]') : null;
+    const href = link?.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const destination = document.getElementById(
+      decodeURIComponent(href.slice(1)),
+    );
+    if (destination) beginAnchorJump();
+  });
+
+  window.addEventListener("scrollend", () => {
+    if (anchorJumpActive) finishAnchorJump();
+  });
+
+  if (siteHeader instanceof HTMLElement) {
+    siteHeader.addEventListener("focusin", () => setHeaderHidden(false));
+  }
+
+  function setMenuOpen(open, options = {}) {
+    if (
+      !(menuToggle instanceof HTMLButtonElement) ||
+      !(menu instanceof HTMLElement)
+    )
+      return;
+
+    menuToggle.classList.toggle("active", open);
+    menu.classList.toggle("active", open);
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+
+    if (open) {
+      setHeaderHidden(false);
+      previousBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = previousBodyOverflow;
+      previousBodyOverflow = "";
+      if (options.restoreFocus) menuToggle.focus();
+    }
+  }
+
+  const menuItems = document.querySelectorAll(".nav-menu a");
+
+  if (menuToggle instanceof HTMLButtonElement) {
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        menuToggle.getAttribute("aria-expanded") === "true"
+      ) {
+        setMenuOpen(false, { restoreFocus: true });
+      }
+    });
+
+    mobileNavigation.addEventListener("change", (event) => {
+      finishAnchorJump();
+      lastScrollPosition = Math.max(window.scrollY, 0);
+      if (!event.matches) {
+        setMenuOpen(false);
+        setHeaderHidden(false);
+      }
+    });
+  }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const legacyThemes = new Map([
+    ["institutional-dark", "dark"],
+    ["institutional-light", "light"],
+  ]);
+  const productionThemes = new Set(["dark", "light"]);
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function effectiveTheme(theme) {
+    if (theme === "dark" || theme === "light") return theme;
+    return systemTheme.matches ? "dark" : "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.themePreference = theme;
+    const mode = effectiveTheme(theme);
+    document.documentElement.dataset.theme = mode;
+    document.documentElement.dataset.ecTheme = mode;
+  }
+
+  function savedTheme() {
+    try {
+      let value = localStorage.getItem("aiv-theme");
+      if (legacyThemes.has(value)) {
+        value = legacyThemes.get(value);
+        localStorage.setItem("aiv-theme", value);
+      }
+
+      if (productionThemes.has(value)) return value;
+      if (value && value !== "auto") localStorage.removeItem("aiv-theme");
+    } catch {
+      return null;
+    }
+
+    return null;
+  }
+
+  function currentEffectiveMode() {
+    return effectiveTheme(document.documentElement.dataset.theme);
+  }
+
+  function updateThemeToggle() {
+    if (!(themeToggle instanceof HTMLButtonElement)) return;
+
+    const mode = currentEffectiveMode();
+    const nextMode = mode === "dark" ? "light" : "dark";
+    const label = `Switch to ${nextMode} mode`;
+
+    themeToggle.dataset.effectiveTheme = mode;
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+  }
+
+  if (themeToggle instanceof HTMLButtonElement) {
+    updateThemeToggle();
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = currentEffectiveMode() === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+
+      try {
+        localStorage.setItem("aiv-theme", nextTheme);
+      } catch {
+        // Ignore storage failures; the current page still updates immediately.
+      }
+
+      updateThemeToggle();
+    });
+
+    systemTheme.addEventListener("change", () => {
+      if (!savedTheme()) applyTheme("auto");
+      updateThemeToggle();
+    });
+  }
+</script><main id="main-content" class="main-content"><section class="aiv-section aiv-section--tone-canvas aiv-section--padding-xl home-hero-section"><div class="aiv-container aiv-container--wide"><div class="home-hero" data-astro-cid-lcdefpme><div class="home-hero__content" data-astro-cid-lcdefpme><p class="home-hero__eyebrow" data-astro-cid-lcdefpme>Public-interest AI security</p><h1 data-astro-cid-lcdefpme>AI security, tested in public.</h1><p class="home-hero__body" data-astro-cid-lcdefpme>AI Village brings hackers, researchers, engineers, and policymakers together through hands-on AI security education, red-team exercises, workshops, events, and open resources.</p><div class="home-hero__actions" aria-label="Homepage primary actions" data-astro-cid-lcdefpme><a class="aiv-button aiv-button--secondary aiv-button--md" href="#programs" data-astro-cid-j6ocf6pu>Explore Programs</a><a class="aiv-button aiv-button--secondary aiv-button--md" href="/learn/" data-astro-cid-j6ocf6pu>Start Learning</a><a class="aiv-button aiv-button--secondary aiv-button--md" href="/sponsors/" data-astro-cid-j6ocf6pu>Sponsor AI Village</a></div></div><div class="home-hero-panels" data-astro-cid-lcdefpme><section data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-nested aiv-card--padding-lg home-hero-panel"><p class="home-hero-panel__eyebrow" data-astro-cid-lcdefpme>Upcoming event</p><h2 data-astro-cid-lcdefpme>AI Village @ BSides Albuquerque 2026</h2><p class="home-hero-panel__meta" data-astro-cid-lcdefpme>Sep 25, 2026 · Albuquerque, NM</p><p data-astro-cid-lcdefpme>Join AI Village at BSides Albuquerque 2026 for hands-on AI security labs, model internals, tokenization, prompt injection, RAG poisoning, and adversarial ML.</p><a class="aiv-button aiv-button--secondary aiv-button--sm" href="/events/bsides-abq-2026/" data-astro-cid-j6ocf6pu>View event</a></section></div></div><div class="home-hero-proof" data-astro-cid-lcdefpme><div class="aiv-proof-strip" data-mobile-heading="Our programming includes" data-astro-cid-ztmlyk3l><div class="aiv-proof-strip__item" data-astro-cid-ztmlyk3l><span class="aiv-proof-strip__label" data-astro-cid-ztmlyk3l>DEF CON Village</span></div><div class="aiv-proof-strip__item" data-astro-cid-ztmlyk3l><span class="aiv-proof-strip__label" data-astro-cid-ztmlyk3l>Generative Red Team</span></div><div class="aiv-proof-strip__item" data-astro-cid-ztmlyk3l><span class="aiv-proof-strip__label" data-astro-cid-ztmlyk3l>Hands-on workshops</span></div><div class="aiv-proof-strip__item" data-astro-cid-ztmlyk3l><span class="aiv-proof-strip__label" data-astro-cid-ztmlyk3l>Open resources</span></div><div class="aiv-proof-strip__item" data-astro-cid-ztmlyk3l><span class="aiv-proof-strip__label" data-astro-cid-ztmlyk3l>Community research</span></div><div class="aiv-proof-strip__item" data-astro-cid-ztmlyk3l><span class="aiv-proof-strip__label" data-astro-cid-ztmlyk3l>Public AI security education</span></div></div></div></div></section><section class="aiv-section aiv-section--tone-surface aiv-section--padding-xl"><div class="aiv-container aiv-container--wide"><div class="home-section-stack" data-astro-cid-lcdefpme><header class="aiv-section-heading aiv-section-heading--start" data-astro-cid-ysklgcyt><p class="aiv-section-heading__eyebrow" data-astro-cid-ysklgcyt>What we do</p><h2 class="aiv-section-heading__title" data-astro-cid-ysklgcyt="true">Practical AI security, built in public.</h2><p class="aiv-section-heading__description" data-astro-cid-ysklgcyt>AI Village connects education, experimentation, and community practice so people can understand, test, and secure AI systems.</p></header><div class="home-card-grid home-card-grid--two" data-astro-cid-lcdefpme><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md home-work-card"><h3 data-astro-cid-lcdefpme>Red-team AI systems</h3><p data-astro-cid-lcdefpme>Run and learn from practical exercises that expose how AI systems fail, where defenses help, and what responsible testing looks like.</p></article><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md home-work-card"><h3 data-astro-cid-lcdefpme>Teach AI security</h3><p data-astro-cid-lcdefpme>Publish workshops, labs, and learning material for people moving from curiosity to hands-on AI security practice.</p></article><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md home-work-card"><h3 data-astro-cid-lcdefpme>Host community events</h3><p data-astro-cid-lcdefpme>Bring hackers, builders, researchers, and policy-minded practitioners together at DEF CON and other community events.</p></article><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md home-work-card"><h3 data-astro-cid-lcdefpme>Publish field notes and resources</h3><p data-astro-cid-lcdefpme>Share technical writing, recaps, and open resources from the people doing the work.</p></article></div></div></div></section><section id="programs" class="aiv-section aiv-section--tone-canvas aiv-section--padding-xl"><div class="aiv-container aiv-container--wide"><div class="home-section-stack" data-astro-cid-lcdefpme><header class="aiv-section-heading aiv-section-heading--start" data-astro-cid-ysklgcyt><p class="aiv-section-heading__eyebrow" data-astro-cid-ysklgcyt>Programs</p><h2 class="aiv-section-heading__title" data-astro-cid-ysklgcyt="true">Start where you can contribute.</h2><p class="aiv-section-heading__description" data-astro-cid-ysklgcyt>Explore the major paths into AI Village: red teaming, workshops, events, and technical work.</p></header><div class="home-card-grid home-card-grid--programs" data-astro-cid-lcdefpme><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-program-card"><h3 class="aiv-program-card__title" data-astro-cid-6dxsocx3>Generative Red Team</h3><p class="aiv-program-card__description" data-astro-cid-6dxsocx3>A public red-team program focused on understanding and exercising real AI system failure modes.</p><div class="aiv-program-card__action" data-astro-cid-6dxsocx3><a class="aiv-button aiv-button--ghost aiv-button--sm" href="/grt/" data-astro-cid-j6ocf6pu>Explore GRT</a></div></article><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-program-card"><h3 class="aiv-program-card__title" data-astro-cid-6dxsocx3>Workshops &amp; Labs</h3><p class="aiv-program-card__description" data-astro-cid-6dxsocx3>Hands-on learning material for AI security, adversarial thinking, and practical experimentation.</p><div class="aiv-program-card__action" data-astro-cid-6dxsocx3><a class="aiv-button aiv-button--ghost aiv-button--sm" href="/learn/" data-astro-cid-j6ocf6pu>Start learning</a></div></article><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-program-card"><h3 class="aiv-program-card__title" data-astro-cid-6dxsocx3>Events &amp; Challenges</h3><p class="aiv-program-card__description" data-astro-cid-6dxsocx3>Find upcoming events, DEF CON activity, schedules, recaps, and community challenges.</p><div class="aiv-program-card__action" data-astro-cid-6dxsocx3><a class="aiv-button aiv-button--ghost aiv-button--sm" href="/events/" data-astro-cid-j6ocf6pu>View events</a></div></article><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-program-card"><h3 class="aiv-program-card__title" data-astro-cid-6dxsocx3>Research &amp; Field Notes</h3><p class="aiv-program-card__description" data-astro-cid-6dxsocx3>Technical writing, event recaps, and practical AI security observations.</p><div class="aiv-program-card__action" data-astro-cid-6dxsocx3><a class="aiv-button aiv-button--ghost aiv-button--sm" href="/research/" data-astro-cid-j6ocf6pu>Read field notes</a></div></article></div></div></div></section><section class="aiv-section aiv-section--tone-surface aiv-section--padding-xl"><div class="aiv-container aiv-container--wide"><div class="home-section-stack" data-astro-cid-lcdefpme><header class="aiv-section-heading aiv-section-heading--start" data-astro-cid-ysklgcyt><p class="aiv-section-heading__eyebrow" data-astro-cid-ysklgcyt>Current activity</p><h2 class="aiv-section-heading__title" data-astro-cid-ysklgcyt="true">What is happening now.</h2><p class="aiv-section-heading__description" data-astro-cid-ysklgcyt>Recent events, posts, and resources from the AI Village community.</p></header><div class="home-card-grid home-card-grid--activity" data-astro-cid-lcdefpme><article data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-activity-card"><div class="aiv-activity-card__body" data-astro-cid-tcqk5pi3><p class="aiv-activity-card__meta" data-astro-cid-tcqk5pi3>Upcoming event · Sep 25, 2026</p><h3 class="aiv-activity-card__title" data-astro-cid-tcqk5pi3>AI Village @ BSides Albuquerque 2026</h3><p class="aiv-activity-card__description" data-astro-cid-tcqk5pi3>Join AI Village at BSides Albuquerque 2026 for hands-on AI security labs, model internals, tokenization, prompt injection, RAG poisoning, and adversarial ML.</p><p class="home-activity-detail" data-astro-cid-lcdefpme>Albuquerque, NM</p><a class="aiv-button aiv-button--ghost aiv-button--sm" href="/events/bsides-abq-2026/" data-astro-cid-j6ocf6pu>View Event</a></div></article><div class="home-activity-posts" data-astro-cid-lcdefpme><a class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-card--interactive aiv-resource-card" href="/blog/defcon34-bruce-schneier-fireside-chat/" data-astro-cid-mx574jlw><p class="aiv-resource-card__meta" data-astro-cid-2zwf5iuo>Latest post · Aug 22, 2026</p><h3 class="aiv-resource-card__title" data-astro-cid-2zwf5iuo>Bruce Schneier&#39;s DEF CON 34 Fireside Chat is now available!</h3><p class="aiv-resource-card__description" data-astro-cid-2zwf5iuo>Watch our conversation with Bruce Schneier on AI and cybersecurity, and explore more from AI Village at DEF CON 34.</p><span class="aiv-resource-card__link" data-astro-cid-2zwf5iuo>Read more</span></a><a class="aiv-card aiv-card--tone-surface aiv-card--padding-md aiv-card--interactive aiv-resource-card" href="/blog/defcon34/" data-astro-cid-mx574jlw><p class="aiv-resource-card__meta" data-astro-cid-2zwf5iuo>Recent post · Aug 3, 2026</p><h3 class="aiv-resource-card__title" data-astro-cid-2zwf5iuo>Navigating the future of Dual-Use AI at DEFCON 34</h3><p class="aiv-resource-card__description" data-astro-cid-2zwf5iuo>Announcing the AI Village keynote panel at DEFCON 34: “The Defender’s Dilemma: Releasing Dual-Use AI Models as Capabilities Climb”</p><span class="aiv-resource-card__link" data-astro-cid-2zwf5iuo>Read more</span></a></div></div></div></div></section><section class="aiv-section aiv-section--tone-panel aiv-section--padding-xl"><div class="aiv-container aiv-container--wide"><div class="home-cta-grid" data-astro-cid-lcdefpme><section data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-nested aiv-card--padding-lg home-cta-card"><h2 data-astro-cid-lcdefpme>Supported by organizations helping keep AI security education open.</h2><div class="home-sponsor-logos" aria-label="Current AI Village sponsors" data-astro-cid-lcdefpme><a class="home-sponsor-logo home-sponsor-logo--light" href="https://www.google.com/" target="_blank" rel="noopener noreferrer" data-astro-cid-lcdefpme><img src="/assets/images/logos/Google_color.png" alt="Google logo" data-astro-cid-lcdefpme></a><a class="home-sponsor-logo home-sponsor-logo--light" href="https://www.infoblox.com/" target="_blank" rel="noopener noreferrer" data-astro-cid-lcdefpme><img src="/assets/images/logos/Infoblox_Logo_Primary_RGB.png" alt="infoblox logo" data-astro-cid-lcdefpme></a><a class="home-sponsor-logo home-sponsor-logo--dark" href="https://www.nbhd.ai/" target="_blank" rel="noopener noreferrer" data-astro-cid-lcdefpme><img src="/assets/images/logos/nbhd_logo.png" alt="nbhd logo" data-astro-cid-lcdefpme></a><a class="home-sponsor-logo home-sponsor-logo--light" href="https://www.realitydefender.com/" target="_blank" rel="noopener noreferrer" data-astro-cid-lcdefpme><img src="/assets/images/logos/RD_Logo.svg" alt="Reality Defender logo" data-astro-cid-lcdefpme></a><a class="home-sponsor-logo home-sponsor-logo--dark" href="https://semgrep.dev/" target="_blank" rel="noopener noreferrer" data-astro-cid-lcdefpme><img src="/assets/images/logos/Semgrep_Logo-Light_On_Dark_crop.png" alt="Semgrep logo" data-astro-cid-lcdefpme></a></div><a class="aiv-button aiv-button--secondary aiv-button--md" href="/sponsors/" data-astro-cid-j6ocf6pu>Sponsor AI Village</a></section><section data-astro-cid-mx574jlw="true" class="aiv-card aiv-card--tone-nested aiv-card--padding-lg home-cta-card"><h2 data-astro-cid-lcdefpme>Join the AI Village community.</h2><p data-astro-cid-lcdefpme>Connect with people learning, testing, building, and securing AI systems in public.</p><div class="home-cta-card__actions" data-astro-cid-lcdefpme><a class="aiv-button aiv-button--primary aiv-button--md" href="/community/" data-astro-cid-j6ocf6pu>Join the Community</a><a class="aiv-button aiv-button--secondary aiv-button--md" href="/discord/" data-astro-cid-j6ocf6pu>Discord</a></div></section></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-content"><div class="footer-brand"><a class="footer-title" href="/">AI Village</a><p class="text-mono">Public AI security education, built by the community.</p></div><div class="footer-sitemap"><nav class="footer-nav-section" aria-label="Programs footer links"><h2>Programs</h2><ul><li><a href="/learn/">Learn / Workshops</a></li><li><a href="/events/">Events</a></li><li><a href="/posters/">Poster Archive</a></li><li><a href="/research/">Research</a></li></ul></nav><nav class="footer-nav-section" aria-label="Community footer links"><h2>Community</h2><ul><li><a href="/community/">Community</a></li><li><a href="/discord/">Discord</a></li><li><a href="https://forms.gle/sFyr1rVeqKAPXhG4A" target="_blank" rel="noopener noreferrer">Volunteer Application</a></li><li><a href="/about/conduct/">Code of Conduct</a></li></ul></nav><nav class="footer-nav-section" aria-label="Organization footer links"><h2>Organization</h2><ul><li><a href="/about/">About</a></li><li><a href="/sponsors/">Sponsors</a></li><li><a href="/blog/">Blog</a></li><li><a href="https://github.com/aivillage" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></nav><nav class="footer-nav-section" aria-label="Utility footer links"><h2>Utility</h2><ul><li><a href="/feed.xml">RSS</a></li><li><a href="https://www.linkedin.com/company/aivillage" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://twitter.com/aivillage_dc" target="_blank" rel="noopener noreferrer">X/Twitter</a></li></ul></nav></div><p class="footer-copyright">&copy; 2026 AI Village. All rights reserved.</p></div></div></footer><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="bff0a604cca985b6c43e4f18-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4f4a7d94fd26e43',t:'MTc5Mjc5OTU0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

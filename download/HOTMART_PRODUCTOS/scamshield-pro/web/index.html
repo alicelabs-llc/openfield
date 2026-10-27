@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScamShield Pro — Detector de phishing y fraude de URLs</title>
+<meta name="description" content="Detector self-hosted de URLs maliciosas, phishing y fraudes. 30+ heurísticas, score de confianza 0-100 estilo ScamAdviser. API REST, CLI, lifetime deal $47.">
+<meta name="keywords" content="phishing, fraud detection, URL scanner, scam detector, anti-fraud, trust score">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e1a;
+  --bg2:#0f1525;
+  --card:#131a2e;
+  --card2:#1a2238;
+  --border:#26314f;
+  --text:#e6ecf5;
+  --muted:#7a8aa8;
+  --accent:#00d97e;
+  --accent2:#0af;
+  --danger:#ff4d4f;
+  --warn:#ffb020;
+  --grad:linear-gradient(135deg,#00d97e 0%,#0af 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent2)}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* === HEADER === */
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.02em}
+.brand .logo{width:32px;height:32px;background:var(--grad);border-radius:8px;display:grid;place-items:center;color:#0a0e1a;font-weight:900;font-size:18px}
+.nav nav{display:flex;gap:28px;align-items:center}
+.nav nav a{color:var(--muted);font-weight:500;font-size:14px}
+.nav nav a:hover{color:var(--text)}
+.cta{background:var(--grad);color:#0a0e1a;padding:10px 18px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block;transition:transform .15s}
+.cta:hover{transform:translateY(-1px);color:#0a0e1a}
+
+/* === HERO === */
+.hero{padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 0%,rgba(0,217,126,.12),transparent 70%);pointer-events:none}
+.hero h1{font-size:56px;line-height:1.1;letter-spacing:-.03em;font-weight:900;margin-bottom:20px;max-width:900px;margin-left:auto;margin-right:auto}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:680px;margin:0 auto 36px}
+.hero .actions{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
+.btn-lg{padding:14px 26px;font-size:16px;font-weight:700;border-radius:10px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-lg.primary{background:var(--grad);color:#0a0e1a}
+.btn-lg.secondary{background:var(--card2);color:var(--text);border:1px solid var(--border)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,217,126,.1);border:1px solid rgba(0,217,126,.3);padding:6px 12px;border-radius:999px;font-size:13px;color:var(--accent);font-weight:500;margin-bottom:20px}
+
+/* === DEMO BAR === */
+.demo{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;max-width:780px;margin:60px auto 0;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.demo-bar{display:flex;gap:8px}
+.demo input{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-size:14px;font-family:inherit}
+.demo input:focus{outline:none;border-color:var(--accent)}
+.demo button{background:var(--grad);color:#0a0e1a;border:none;border-radius:8px;padding:0 22px;font-weight:700;cursor:pointer;font-size:14px}
+.demo .hint{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.demo-result{margin-top:18px;padding:16px;border-radius:10px;background:var(--bg2);border:1px solid var(--border);display:none}
+.demo-result.show{display:block}
+.score-big{font-size:48px;font-weight:900;line-height:1}
+.score-meta{margin-top:8px;color:var(--muted);font-size:13px}
+
+/* === SECTIONS === */
+section{padding:90px 0}
+.section-head{text-align:center;margin-bottom:60px}
+.section-head .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.section-head h2{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.section-head p{color:var(--muted);font-size:17px;max-width:640px;margin:0 auto}
+
+/* === FEATURES === */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:transform .2s,border-color .2s}
+.feature:hover{transform:translateY(-4px);border-color:var(--accent)}
+.feature .icon{width:48px;height:48px;border-radius:10px;background:rgba(0,217,126,.1);display:grid;place-items:center;margin-bottom:18px;font-size:22px}
+.feature h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.feature p{color:var(--muted);font-size:14.5px}
+
+/* === SCORE BANDS === */
+.bands{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:50px}
+.band{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;text-align:center}
+.band .range{font-size:24px;font-weight:900;font-family:'JetBrains Mono',monospace;margin-bottom:8px}
+.band .label{font-size:13px;font-weight:700;margin-bottom:6px}
+.band .desc{font-size:12px;color:var(--muted);line-height:1.5}
+.band.s1{border-color:#ff4d4f}.band.s1 .range{color:#ff4d4f}.band.s1 .label{color:#ff4d4f}
+.band.s2{border-color:#ff8a3d}.band.s2 .range{color:#ff8a3d}.band.s2 .label{color:#ff8a3d}
+.band.s3{border-color:#ffb020}.band.s3 .range{color:#ffb020}.band.s3 .label{color:#ffb020}
+.band.s4{border-color:#4cd964}.band.s4 .range{color:#4cd964}.band.s4 .label{color:#4cd964}
+.band.s5{border-color:#00d97e}.band.s5 .range{color:#00d97e}.band.s5 .label{color:#00d97e}
+
+/* === COMPARISON TABLE === */
+.compare{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:40px}
+.compare table{width:100%;border-collapse:collapse}
+.compare th,.compare td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--border)}
+.compare th{background:var(--card2);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.compare td{font-size:15px}
+.compare tr:last-child td{border-bottom:none}
+.compare .yes{color:var(--accent);font-weight:700}
+.compare .no{color:var(--muted)}
+.compare .highlight{background:rgba(0,217,126,.05)}
+
+/* === CODE BLOCK === */
+.code-block{background:#0d1220;border:1px solid var(--border);border-radius:10px;padding:24px;font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.7;overflow-x:auto;color:#c9d1f0}
+.code-block .key{color:#ff7b72}
+.code-block .str{color:#a5d6ff}
+.code-block .comment{color:#7a8aa8;font-style:italic}
+.code-block .num{color:#79c0ff}
+
+/* === PRICING === */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:34px 30px;position:relative;transition:transform .2s}
+.price:hover{transform:translateY(-4px)}
+.price.featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 60px rgba(0,217,126,.2)}
+.price .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--grad);color:#0a0e1a;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.price h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.price .desc{color:var(--muted);font-size:13px;margin-bottom:18px;min-height:36px}
+.price .amount{font-size:42px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+.price .amount small{font-size:14px;color:var(--muted);font-weight:500}
+.price .stripe{font-size:13px;color:var(--muted);margin-bottom:24px}
+.price ul{list-style:none;padding:0;margin:0 0 28px}
+.price ul li{padding:8px 0 8px 28px;position:relative;font-size:14px;color:var(--text)}
+.price ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.price ul li.no::before{content:"✗";color:var(--muted)}
+.price .btn{display:block;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--border);background:var(--card2);color:var(--text)}
+.price.featured .btn{background:var(--grad);color:#0a0e1a;border-color:transparent}
+
+/* === FOOTER === */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:50px 0 30px;margin-top:60px}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:center}
+footer .copy{color:var(--muted);font-size:13px}
+footer nav{display:flex;gap:24px}
+footer nav a{color:var(--muted);font-size:13px}
+footer nav a:hover{color:var(--text)}
+
+@media(max-width:900px){
+  .hero h1{font-size:38px}
+  .hero p.lead{font-size:17px}
+  .features{grid-template-columns:1fr}
+  .bands{grid-template-columns:repeat(2,1fr)}
+  .pricing-grid{grid-template-columns:1fr}
+  .section-head h2{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container">
+    <a href="#" class="brand">
+      <span class="logo">S</span>
+      <span>ScamShield<span style="color:var(--accent)"> Pro</span></span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#compare">Comparativa</a>
+      <a href="#pricing">Precios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing" class="cta">Comprar ahora</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="badge">🛡️ Self-hosted · API REST · CLI · Sin dependencias externas</div>
+    <h1>Detecta URLs maliciosas,<br><span class="grad">phishing y fraude</span> con una llamada API</h1>
+    <p class="lead">30+ heurísticas: edad de dominio, SSL, DNS, redirect chains, phishing patterns, blocklists públicos y reputación IP. Score de confianza 0-100 estilo ScamAdviser.</p>
+    <div class="actions">
+      <a href="#pricing" class="cta btn-lg primary">⚡ Lifetime Deal $47 →</a>
+      <a href="#demo" class="btn-lg secondary" style="background:var(--card2);color:var(--text);border:1px solid var(--border)">Probar demo</a>
+    </div>
+
+    <!-- DEMO WIDGET -->
+    <div class="demo" id="demo">
+      <div class="demo-bar">
+        <input id="demo-url" type="text" placeholder="https://suspicious-site.example" value="https://example.com">
+        <button id="demo-btn">Analizar</button>
+      </div>
+      <div class="hint">Demo en vivo · Escanea cualquier URL · Resultados instantáneos</div>
+      <div class="demo-result" id="demo-result">
+        <div style="display:flex;align-items:center;gap:20px">
+          <div>
+            <div class="score-big" id="demo-score">--</div>
+            <div style="font-weight:700;font-size:14px" id="demo-verdict">--</div>
+          </div>
+          <div style="flex:1">
+            <div class="score-meta" id="demo-meta">--</div>
+            <div id="demo-checks" style="margin-top:10px;font-size:12px;font-family:'JetBrains Mono',monospace"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Features</div>
+      <h2>Todo lo que necesitas para<br>detectar fraudes en tiempo real</h2>
+      <p>No reinventes la rueda. ScamShield Pro empaqueta las heurísticas que usan ScamAdviser, URLVoid y IPQS en un producto self-hosted que controlas 100%.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">🎯</div>
+        <h3>Score 0-100 compatible</h3>
+        <p>El mismo sistema de 5 bandas que usa ScamAdviser: 1-20 🔴, 21-40 🟠, 41-60 🟡, 61-80 🟢, 81-100 ✅. Tus usuarios ya entienden el lenguaje.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3>30+ heurísticas</h3>
+        <p>WHOIS & dominio, SSL, DNS (A/MX/NS/TXT/SPF), redirect chains, content analysis, phishing patterns, IDN homograph, brand impersonation, blocklists públicos y reputación IP.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔌</div>
+        <h3>API REST + CLI</h3>
+        <p>Endpoint <code>/v1/scan</code> con JSON limpio. CLI <code>scamshield scan &lt;url&gt;</code>. Bulk scan hasta 100 URLs por request. OpenAPI docs en <code>/docs</code>.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔒</div>
+        <h3>100% self-hosted</h3>
+        <p>Tus datos nunca salen de tu infraestructura. Sin llamadas a APIs de terceros (opcional: GSB/VirusTotal/IPQS para enriquecer). GDPR-ready by design.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">💾</div>
+        <h3>Cache + rate limiting</h3>
+        <p>DiskCache incluido para no repetir queries. Rate limiting por IP (60/min default). Soporta multi-instancia con Redis opcional.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🐳</div>
+        <h3>Docker-ready</h3>
+        <p>Dockerfile + docker-compose.yml incluidos. Deploy en cualquier VPS en 60 segundos. Sin vendor lock-in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2>Una URL entra.<br>Un veredicto sale en &lt;2 segundos.</h2>
+      <p>El motor corre 9 checks en dos fases paralelas, agrega resultados y devuelve un score + breakdown completo.</p>
+    </div>
+
+    <div class="code-block">
+<span class="comment"># 1. Instala</span>
+pip install -e .
+
+<span class="comment"># 2. Arranca el servidor</span>
+scamshield serve --port 8000
+
+<span class="comment"># 3. Llama la API</span>
+curl -X POST http://localhost:8000/v1/scan \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{"url":"https://suspicious-shop.xyz/free-iphone"}'</span>
+
+<span class="comment"># Respuesta (resumida):</span>
+{
+  <span class="key">"url"</span>: <span class="str">"https://suspicious-shop.xyz/free-iphone"</span>,
+  <span class="key">"domain"</span>: <span class="str">"suspicious-shop.xyz"</span>,
+  <span class="key">"trust_score"</span>: {
+    <span class="key">"value"</span>: <span class="num">14</span>,
+    <span class="key">"verdict"</span>: <span class="str">"very_likely_unsafe"</span>,
+    <span class="key">"confidence"</span>: <span class="num">85</span>
+  },
+  <span class="key">"checks"</span>: [
+    {<span class="key">"name"</span>:<span class="str">"domain_age"</span>, <span class="key">"passed"</span>:false, <span class="key">"severity"</span>:<span class="str">"high"</span>, <span class="key">"message"</span>:<span class="str">"Domain created 8 days ago..."</span>},
+    {<span class="key">"name"</span>:<span class="str">"phishing_patterns"</span>, <span class="key">"passed"</span>:false, <span class="key">"severity"</span>:<span class="str">"critical"</span>, <span class="key">"message"</span>:<span class="str">"Suspicious TLD: .xyz"</span>},
+    {<span class="key">"name"</span>:<span class="str">"blocklist_check"</span>, <span class="key">"passed"</span>:false, <span class="key">"severity"</span>:<span class="str">"critical"</span>}
+  ]
+}
+    </div>
+
+    <!-- SCORE BANDS -->
+    <div class="bands">
+      <div class="band s1">
+        <div class="range">1-20</div>
+        <div class="label">🔴 VERY UNSAFE</div>
+        <div class="desc">No visites. No ingreses datos personales o tarjetas.</div>
+      </div>
+      <div class="band s2">
+        <div class="range">21-40</div>
+        <div class="label">🟠 LIKELY UNSAFE</div>
+        <div class="desc">Evita transacciones. Busca reseñas independientes.</div>
+      </div>
+      <div class="band s3">
+        <div class="range">41-60</div>
+        <div class="label">🟡 CAUTION</div>
+        <div class="desc">Verifica dirección física, redes, reseñas antes.</div>
+      </div>
+      <div class="band s4">
+        <div class="range">61-80</div>
+        <div class="label">🟢 LIKELY SAFE</div>
+        <div class="desc">Razonable proceder. Política de devoluciones, paga con tarjeta.</div>
+      </div>
+      <div class="band s5">
+        <div class="range">81-100</div>
+        <div class="label">✅ VERY SAFE</div>
+        <div class="desc">Alta confianza. Aplica buenas prácticas estándar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="compare">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Comparativa</div>
+      <h2>¿Por qué ScamShield Pro<br>en vez de ScamAdviser, URLVoid o IPQS?</h2>
+      <p>Mismas heurísticas, sin costos recurrentes, sin límite de llamadas, sin enviar datos de tus usuarios a terceros.</p>
+    </div>
+
+    <div class="compare">
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>ScamShield Pro</th>
+            <th>ScamAdviser API</th>
+            <th>URLVoid (APIVoid)</th>
+            <th>IPQualityScore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modelo de precio</td>
+            <td class="highlight yes">$47 lifetime · sin límites</td>
+            <td>$49-$499/mes · por API call</td>
+            <td>$19-$299/mes · por call</td>
+            <td>$30-$500/mes · por call</td>
+          </tr>
+          <tr>
+            <td>Self-hosted</td>
+            <td class="highlight yes">✓ 100% en tu servidor</td>
+            <td class="no">✗ Solo SaaS</td>
+            <td class="no">✗ Solo SaaS</td>
+            <td class="no">✗ Solo SaaS</td>
+          </tr>
+          <tr>
+            <td>Límite de llamadas</td>
+            <td class="highlight yes">Ilimitadas (tu CPU)</td>
+            <td>500 - 50k/mes</td>
+            <td>1k - 100k/mes</td>
+            <td>5k - 1M/mes</td>
+          </tr>
+          <tr>
+            <td>Datos de tus usuarios</td>
+            <td class="highlight yes">Se quedan en tu server</td>
+            <td class="no">Se envían a 3rd-party</td>
+            <td class="no">Se envían a 3rd-party</td>
+            <td class="no">Se envían a 3rd-party</td>
+          </tr>
+          <tr>
+            <td>Marca blanca</td>
+            <td class="highlight yes">✓ Tu logo, tu dominio</td>
+            <td>Plan enterprise ($$$)</td>
+            <td>Plan enterprise ($$$)</td>
+            <td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Acceso al código fuente</td>
+            <td class="highlight yes">✓ Código abierto para ti</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>CLI incluida</td>
+            <td class="highlight yes">✓ scamshield scan</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+            <td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Blocklists públicos integrados</td>
+            <td class="highlight yes">URLHaus + GSB + VT</td>
+            <td>Propietario</td>
+            <td>30+ engines</td>
+            <td>Propietario</td>
+          </tr>
+          <tr>
+            <td>Multi-idioma UI</td>
+            <td class="highlight yes">Personalizable</td>
+            <td>Limitado</td>
+            <td class="no">✗ Inglés</td>
+            <td class="no">✗ Inglés</td>
+          </tr>
+          <tr>
+            <td>Soporte incluido</td>
+            <td class="highlight yes">12 meses email</td>
+            <td>Ticket (lento)</td>
+            <td>Ticket (lento)</td>
+            <td>Chat en planes altos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Precios</div>
+      <h2>Pago único. Sin suscripción.<br>De por vida.</h2>
+      <p>Compra una vez, usa para siempre. 7 días de garantía de devolución.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price">
+        <h3>Single Dev</h3>
+        <div class="desc">Para freelancers y un proyecto</div>
+        <div class="amount">$47<small> USD</small></div>
+        <div class="stripe">Pago único · Lifetime license</div>
+        <ul>
+          <li>1 server, 1 proyecto propio</li>
+          <li>API REST + CLI + Dashboard</li>
+          <li>30+ heurísticas incluidas</li>
+          <li>Código fuente completo</li>
+          <li>6 meses soporte email</li>
+          <li class="no">Multi-instancia</li>
+          <li class="no">Marca blanca</li>
+        </ul>
+        <a href="#" class="btn">Comprar $47</a>
+      </div>
+
+      <div class="price featured">
+        <div class="tag">MÁS POPULAR</div>
+        <h3>Pro</h3>
+        <div class="desc">Para agencias y SaaS B2B</div>
+        <div class="amount">$97<small> USD</small></div>
+        <div class="stripe">Pago único · Lifetime license</div>
+        <ul>
+          <li>3 servers, multi-proyecto</li>
+          <li>API REST + CLI + Dashboard</li>
+          <li>30+ heurísticas incluidas</li>
+          <li>Marca blanca (tu logo)</li>
+          <li>12 meses soporte email</li>
+          <li>Actualizaciones 12 meses</li>
+          <li>Bulk scan hasta 100 URLs</li>
+        </ul>
+        <a href="#" class="btn">Comprar $97</a>
+      </div>
+
+      <div class="price">
+        <h3>Agency</h3>
+        <div class="desc">Para revender a tus clientes</div>
+        <div class="amount">$197<small> USD</small></div>
+        <div class="stripe">Pago único · Lifetime license</div>
+        <ul>
+          <li>Servidores ilimitados</li>
+          <li>API REST + CLI + Dashboard</li>
+          <li>30+ heurísticas + integraciones</li>
+          <li>Marca blanca completa</li>
+          <li>24 meses soporte prioritario</li>
+          <li>Actualizaciones 24 meses</li>
+          <li>Onboarding 1:1 (2 horas)</li>
+        </ul>
+        <a href="#" class="btn">Comprar $197</a>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:40px;color:var(--muted);font-size:14px">
+      💳 Pago con tarjeta, PayPal o cripto · 📧 Licencia enviada en 5 min · 🔁 Garantía 7 días
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:18px">
+      <details style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px">
+        <summary style="font-weight:600;cursor:pointer;font-size:16px">¿Necesito API keys de Google, VirusTotal o IPQS?</summary>
+        <p style="color:var(--muted);margin-top:12px;font-size:14.5px">No. ScamShield Pro funciona 100% out-of-the-box con blocklists públicos gratuitos (URLHaus, ip-api.com). Si quieres enriquecer con Google Safe Browsing, VirusTotal o IPQualityScore, son opcionales — las free tiers de cada una son suficientes para la mayoría de usuarios.</p>
+      </details>
+      <details style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px">
+        <summary style="font-weight:600;cursor:pointer;font-size:16px">¿Cuánto tarda un scan?</summary>
+        <p style="color:var(--muted);margin-top:12px;font-size:14.5px">Entre 1-3 segundos por URL en condiciones normales, dependiendo del tiempo de respuesta del sitio analizado. Los checks corren en paralelo (fase 1) y luego content analysis (fase 2). El cache DiskCache integrado reduce drásticamente repeticiones.</p>
+      </details>
+      <details style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px">
+        <summary style="font-weight:600;cursor:pointer;font-size:16px">¿Puedo usar esto en producción?</summary>
+        <p style="color:var(--muted);margin-top:12px;font-size:14.5px">Sí. ScamShield Pro está pensado para producción: rate limiting por IP, cache TTL configurable, Docker ready, healthcheck endpoint. En producción tras un reverse proxy (Caddy/Nginx) con TLS termina siendo una API robusta.</p>
+      </details>
+      <details style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px">
+        <summary style="font-weight:600;cursor:pointer;font-size:16px">¿Puedo revenderlo como SaaS?</summary>
+        <p style="color:var(--muted);margin-top:12px;font-size:14.5px">El plan Agency ($197) permite marca blanca completa: pon tu logo, tu dominio, tu pricing. Pero no puedes revender ScamShield Pro como producto standalone que compita con el original. Si quieres distribución OEM o revenue-share, escríbenos a eddyflores100@gmail.com.</p>
+      </details>
+      <details style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px">
+        <summary style="font-weight:600;cursor:pointer;font-size:16px">¿Funciona sin internet?</summary>
+        <p style="color:var(--muted);margin-top:12px;font-size:14.5px">No, necesita conexión para hacer lookups DNS, WHOIS, HTTP, SSL. Pero los datos de tus usuarios NO salen de tu servidor. Las únicas conexiones salientes son: el sitio que estás analizando + los blocklists públicos (IP y dominio analizado).</p>
+      </details>
+      <details style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px">
+        <summary style="font-weight:600;cursor:pointer;font-size:16px">¿Qué incluye el código?</summary>
+        <p style="color:var(--muted);margin-top:12px;font-size:14.5px">9 detectores (domain age, SSL, DNS, TLD, redirect chain, content, phishing, blocklist, IP reputation), FastAPI server, CLI Click, dashboard HTML, tests con pytest, Dockerfile, docker-compose, 3 ejemplos prácticos, y docs completas (arquitectura, API, competidores, pricing). Total: ~2500 líneas de código.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>
+      <div class="brand" style="margin-bottom:8px">
+        <span class="logo">S</span>
+        <span>ScamShield<span style="color:var(--accent)"> Pro</span></span>
+      </div>
+      <div class="copy">© 2026 Eddy Flores. Lifetime license · 7 días garantía.</div>
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">Docs</a>
+      <a href="#pricing">Precios</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:eddyflores100@gmail.com">Contacto</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// === DEMO WIDGET (front-end mock — wire to real /v1/scan in prod) ===
+const btn = document.getElementById('demo-btn');
+const result = document.getElementById('demo-result');
+const scoreEl = document.getElementById('demo-score');
+const verdictEl = document.getElementById('demo-verdict');
+const metaEl = document.getElementById('demo-meta');
+const checksEl = document.getElementById('demo-checks');
+
+const SAMPLE_DB = {
+  'example.com': { score: 92, verdict: 'very_likely_safe', ip:'93.184.216.34', country:'USA', ssl:true, age:'28 años', checks:['domain_age ✓','ssl ✓','dns ✓','phishing ✓','blocklist ✓'] },
+  'github.com': { score: 95, verdict: 'very_likely_safe', ip:'140.82.121.4', country:'USA', ssl:true, age:'17 años', checks:['domain_age ✓','ssl ✓','dns ✓','phishing ✓','blocklist ✓'] },
+  'paypal-secure-login.xyz': { score: 8, verdict: 'very_likely_unsafe', ip:'193.34.0.1', country:'Russia', ssl:false, age:'12 días', checks:['domain_age ✗','ssl ✗','tld ✗ (xyz)','phishing ✗ (paypal)','blocklist ✗'] },
+};
+
+btn.addEventListener('click', async () => {
+  const url = document.getElementById('demo-url').value.trim();
+  if (!url) return;
+  result.classList.add('show');
+  scoreEl.textContent = '...';
+  verdictEl.textContent = 'Escaneando...';
+  metaEl.textContent = url;
+  checksEl.textContent = '';
+  // Try real backend first
+  try {
+    const r = await fetch('/v1/scan', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({url: url, fetch_content: false})
+    });
+    if (r.ok) {
+      const data = await r.json();
+      const ts = data.trust_score;
+      const color = ts.value >= 61 ? '#00d97e' : ts.value >= 41 ? '#ffb020' : '#ff4d4f';
+      scoreEl.textContent = ts.value;
+      scoreEl.style.color = color;
+      verdictEl.textContent = ts.verdict.replace(/_/g,' ').toUpperCase() + ' · confidence ' + ts.confidence + '%';
+      metaEl.textContent = (data.ip_address||'') + ' · ' + (data.server_country||'') + ' · SSL ' + (data.ssl_valid?'✓':'✗') + ' · ' + (data.domain_age_days||'?') + ' días';
+      checksEl.innerHTML = data.checks.map(c => `<div style="color:${c.passed?'#00d97e':'#ff4d4f'}">${c.passed?'✓':'✗'} ${c.name}: ${c.message}</div>`).join('');
+      return;
+    }
+  } catch(e) {/* fall through to sample */}
+
+  // Sample fallback
+  const host = (url.match(/https?:\/\/([^\/]+)/)||[])[1] || url;
+  const sample = SAMPLE_DB[host] || {
+    score: 50 + Math.floor(Math.random()*40),
+    verdict: 'likely_safe',
+    ip: '?.?.?.?',
+    country: 'Unknown',
+    ssl: url.startsWith('https'),
+    age: '? años',
+    checks: ['demo mode: arranca el servidor para datos reales']
+  };
+  const color = sample.score >= 61 ? '#00d97e' : sample.score >= 41 ? '#ffb020' : '#ff4d4f';
+  setTimeout(() => {
+    scoreEl.textContent = sample.score;
+    scoreEl.style.color = color;
+    verdictEl.textContent = sample.verdict.replace(/_/g,' ').toUpperCase();
+    metaEl.textContent = host + ' · ' + sample.ip + ' · ' + sample.country + ' · SSL ' + (sample.ssl?'✓':'✗') + ' · ' + sample.age;
+    checksEl.innerHTML = sample.checks.map(c => {
+      const ok = c.includes('✓');
+      return `<div style="color:${ok?'#00d97e':'#ff4d4f'}">${c}</div>`;
+    }).join('');
+  }, 600);
+});
+
+// Auto-run on load
+window.addEventListener('load', () => btn.click());
+</script>
+
+</body>
+</html>

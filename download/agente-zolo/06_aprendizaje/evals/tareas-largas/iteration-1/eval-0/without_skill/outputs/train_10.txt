@@ -1,0 +1,4 @@
+Query: escribe un fibonacci
+Triggered: False
+Expected: no-trigger
+Pass: True

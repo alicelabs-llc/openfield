@@ -1,0 +1,14 @@
+[2026-10-24T05:30:54] Total eligible: 37
+[2026-10-24T05:30:54] ============================================================
+[2026-10-24T05:30:54] Gmail outreach sender — starting
+[2026-10-24T05:30:54] User: eddyflores100@gmail.com
+[2026-10-24T05:30:54] Batch: 30 emails
+[2026-10-24T05:30:54] Delay between sends: 35 seconds
+[2026-10-24T05:30:54] ============================================================
+[2026-10-24T05:30:54] Already sent previously: 0
+[2026-10-24T05:30:54] Auth pre-flight check...
+[2026-10-24T05:30:55] SMTP auth OK ✅
+[2026-10-24T05:30:55] [1/30] Sending to founders@datamint.xyz (author=m00dy, score=9)
+[2026-10-24T05:30:55]   Subject: HN October thread — your Datamint | Rust Systems Engineer, Browser Security | Remote ...
+[2026-10-24T05:30:58]   ✅ Sent at 2026-10-24T05:30:58
+[2026-10-24T05:30:58]   Waiting 35s before next send...

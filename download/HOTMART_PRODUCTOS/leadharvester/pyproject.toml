@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leadharvester"
+version = "1.0.0"
+description = "Scraper de leads de Instagram para agencias. Extrae seguidores, emails, teléfonos de perfiles públicos. Export CSV/Excel/JSON."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Eddy Flores", email = "eddyflores100@gmail.com" }]
+keywords = ["instagram", "lead generation", "scraper", "agencies", "b2b", "outreach"]
+dependencies = [
+    "fastapi>=0.115", "uvicorn[standard]>=0.34", "click>=8.1", "rich>=13.9",
+    "pydantic>=2.10", "pydantic-settings>=2.7", "httpx[http2]>=0.28",
+    "playwright>=1.49", "beautifulsoup4>=4.12", "lxml>=5.3",
+    "diskcache>=5.6", "tenacity>=9.0",
+    "python-multipart>=0.0.20", "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.25"]
+
+[project.scripts]
+leadharvester = "leadharvester.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

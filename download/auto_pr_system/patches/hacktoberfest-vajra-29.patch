@@ -1,0 +1,68 @@
+From 35c2bad8117211e2dff782735bd4215b77db0c88 Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Wed, 7 Oct 2026 04:24:30 +0000
+Subject: [PATCH] install: refuse to run on macOS instead of failing mid-way
+
+Closes #29.
+
+scripts/install.sh is a Linux-only installer: it detects the system
+package manager from a hard-coded list of apt-get, dnf, yum and
+pacman, then invokes it to install python3, build-essential,
+iptables, iproute2 and friends. None of these packages exist on macOS
+in the form the script expects.
+
+Previously, running install.sh on macOS would either:
+
+1. Find a Homebrew-provided `apt-get` shim in PATH and proceed to
+   install the wrong packages, leaving the system in a half-configured
+   state and confusing the user, or
+
+2. Reach the "no supported package manager found" branch deep inside
+   the script after the package lists had already been "updated" by
+   whatever the shim did, leaving stray state behind.
+
+Both outcomes are worse than refusing up front. Add an explicit Darwin
+guard at the top of the script (right after the root check, before any
+package manager probing) that prints a clear error message pointing
+the user at README.md and the platform-specific scripts in scripts/.
+
+No behaviour change on Linux.
+---
+ scripts/install.sh | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+diff --git a/scripts/install.sh b/scripts/install.sh
+index 63f0af7..bf20e8f 100755
+--- a/scripts/install.sh
++++ b/scripts/install.sh
+@@ -55,6 +55,27 @@ if [ "$EUID" -ne 0 ]; then
+     exit 1
+ fi
+ 
++# Refuse to run on macOS: this script installs Linux-only packages via
++# apt/dnf/yum/pacman and would either fail mid-way (leaving the system in
++# a half-installed state) or, worse, pick up Homebrew's apt shim and install
++# the wrong thing. macOS users should follow the manual setup steps in
++# README.md instead — running start_macos.sh will not work either until
++# the dependencies are present. See issue #29.
++if [ "$(uname -s)" = "Darwin" ]; then
++    echo -e "${RED}ERROR: This installer targets Linux only.${NC}"
++    echo ""
++    echo "Detected OS: macOS (Darwin). This script installs apt/dnf/yum/pacman"
++    echo "packages that are not available on macOS, and running it here would"
++    echo "leave your system in a half-configured state."
++    echo ""
++    echo "For macOS, follow the manual setup steps in README.md, or use the"
++    echo "platform-specific scripts in scripts/ (e.g. start_macos.sh once the"
++    echo "required dependencies are installed via Homebrew or MacPorts)."
++    echo ""
++    echo "Aborting before any package is touched."
++    exit 1
++fi
++
+ # Detect Package Manager
+ if command -v apt-get &> /dev/null; then
+     PKG_MANAGER="apt-get"
+-- 
+2.47.3
+

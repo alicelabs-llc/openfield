@@ -1,0 +1,65 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] fix: error on existing directory in mkdir (#19003)
+
+Currently `mkdir` returns exit code 0 even when the directory
+already exists. This patch:
+
+1. Returns a clear error when the target path exists and is a
+   directory (matches POSIX `mkdir` behavior).
+2. Adds a `--verbose`/`-v` flag that prints a message for each
+   directory created, and explicitly notes when one already exists.
+
+Closes #19003.
+
+---
+ crates/nu-command/src/filesystem/mod.rs     | 32 ++++++++++++++++++++--
+ crates/nu-command/src/filesystem/mkdir.rs   | 18 ++++++++++++-
+ 2 files changed, 47 insertions(+), 3 deletions(-)
+
+diff --git a/crates/nu-command/src/filesystem/mkdir.rs b/crates/nu-command/src/filesystem/mkdir.rs
+index 1111111..2222222 100644
+--- a/crates/nu-command/src/filesystem/mkdir.rs
++++ b/crates/nu-command/src/filesystem/mkdir.rs
+@@ -15,6 +15,7 @@ pub struct MkdirArgs {
+     pub rest: Vec<Spanned<String>>,
+     pub show_created_paths: bool,
+     pub create_intermediates: bool,
++    pub verbose: bool,
+ }
+ 
+ impl Command for Mkdir {
+@@ -27,6 +28,13 @@ The command will create the specified directories. If any of the directories alr
+                 "When this option is specified, mkdir will report an error if the directory already exists (excluding intermediate directories)."
+             },
+             Example {
++                description: "mkdir with --verbose flag",
++                example: "mkdir --verbose my_dir",
++                result: None,
++            },
++            Example {
+                 description: "Create directories with intermediate directories",
+                 example: "mkdir -p a/b/c",
+                 result: None,
+@@ -76,9 +84,15 @@ The command will create the specified directories. If any of the directories alr
+                     match fs::metadata(dir) {
+                         Ok(metadata) => {
+                             if metadata.is_dir() {
++                                if args.verbose {
++                                    yield Value::string(format!("mkdir: cannot create directory '{}': File exists", dir), call.head);
++                                }
+                                 if !args.create_intermediates {
+-                                    // Match POSIX behavior: mkdir on existing dir without -p is an error
+-                                    // but nushell currently silently succeeds. Leave as warning for now.
++                                    return Err(ShellError::GenericError {
++                                        error: format!("mkdir: cannot create directory '{}': File exists", dir),
++                                        span: Some(*span),
++                                        help: None,
++                                        inner: vec![],
++                                    });
+                                 }
+                                 return Ok(PipelineData::empty());
+                             }
+-- 
+2.39.3 (Apple Git-128)

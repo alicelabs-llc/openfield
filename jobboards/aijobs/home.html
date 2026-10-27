@@ -1,0 +1,4857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIJobs.ai is the leading source for AI Jobs and Careers in the fields of Artificial Intelligence, Machine Learning &amp; Data Science. We&#039;re one of the web&#039;s biggest sources of AI jobs from both AI Startups and established companies, with jobs numbering in the thousands.">
+
+                <meta property="og:image" content="https://aijobs.ai/frontend/assets/images/logo/logo.svg">
+    
+    
+
+    <title>AI Jobs - The Leading Job Board for AI, ML &amp; Data Science</title>
+
+    
+        
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-07YGVFF4FR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-07YGVFF4FR');
+</script>
+        <link rel="icon" type="image/png" href="https://aijobs.ai/frontend/assets/images/logo/fav.png">
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
+/>
+
+<link rel="preload" as="style" href="https://aijobs.ai/build/assets/app.e1545005.css" /><link rel="preload" as="style" href="https://aijobs.ai/build/assets/app.d7f7efdc.css" /><link rel="stylesheet" href="https://aijobs.ai/build/assets/app.e1545005.css" /><link rel="stylesheet" href="https://aijobs.ai/build/assets/app.d7f7efdc.css" /><!--only for our live site -->
+<link rel="stylesheet" href="https://aijobs.ai/frontend/assets/css/free-guide.css">
+
+
+    <!-- PWA Meta Theme color and link Start  -->
+
+
+
+
+
+    <!-- PWA Meta Theme color and link End -->
+
+<style>
+    :root {
+        --primary-500: #0A65CC !important;
+        --primary-600: #0851a4 !important;
+        --primary-200: #b6d1f0 !important;
+        --primary-100: #cee1f5 !important;
+        --primary-50: #eef5fc !important;
+        --gray-20: #fbfcfe !important;
+    }
+</style>
+
+<style>
+    
+    #scrollUp {
+        display: flex;
+        bottom: 20px !important;
+        right: 21.5px !important;
+    }
+</style>
+         <!-- Include the preloader -->
+            <link rel="stylesheet" href="https://aijobs.ai/backend/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://aijobs.ai/frontend/plugins/leaflet/autocomplete.min.css">
+    <style>
+    .mymap {
+        width: 100%;
+        min-height: 300px;
+        /* border-radius: 12px; */
+    }
+
+    .p-half {
+        padding: 1px;
+    }
+
+    .mapClass {
+        border: 1px solid transparent;
+        margin-top: 15px;
+        border-radius: 4px 0 0 4px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 35px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #searchInput {
+        font-family: 'Roboto';
+        background-color: #fff;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        margin-left: 16px;
+        font-weight: 400;
+        padding: 0 11px 0 13px;
+    }
+
+    #searchInput:focus {
+        border-color: #4d90fe;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+    @media (max-width: 991px){
+        .jobsearchBox .fromGroup.banner-select{
+            width: auto !important;
+        }
+        #searchInput{
+            padding-left: 36px !important;
+            margin: 0px !important;
+        }
+    }
+</style>
+
+    <style>
+        span.select2-container--default .select2-selection--single {
+            border: none !important;
+        }
+
+        span.select2-selection.select2-selection--single {
+            outline: none;
+        }
+
+        .marginleft {
+            margin-left: 10px !important;
+        }
+    </style>
+
+        
+        
+        
+
+    
+    
+    
+
+</head>
+
+<body dir="ltr">
+    <input type="hidden" value="AW" id="current_country_code">
+    <input type="hidden" id="auth_user" value="0">
+    <input type="hidden" id="auth_user_id" value="0">
+
+        
+    <header class="header rt-fixed-top">
+    <div class="n-header">
+        <div class="n-header--top relative">
+                        <div class="container tw-px-0">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="n-header--top__left main-menu">
+                        <div
+                            class="mbl-top d-flex align-items-center justify-content-between container position-relative d-lg-none">
+                            <div class="d-flex align-items-center">
+                                <a href="https://aijobs.ai" class="brand-logo">
+                                    <img src="https://aijobs.ai/frontend/assets/images/logo/logo.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <div class="d-flex align-items-center ">
+                                    <div class="search-icon d-lg-none">
+                                        <svg id="mblSearchIcon" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                                stroke="#18191C" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M20.9999 21L16.6499 16.65" stroke="#18191C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="mblTogglesearch bg-primary-500 rounded">
+                                        <form action="https://aijobs.ai/jobs" method="GET" id="search-form"
+                                            class="shadow px-md-5 py-md-3 p-3 !tw-bg-white rounded w-sm-75 w-100">
+                                            <div class="form-item">
+                                                <input name="keyword" class="search-input w-100" type="text"
+                                                    placeholder="Job Title, Keyword"
+                                                    value="" id="global_search">
+                                            </div>
+                                        </form>
+                                    </div>
+                                                                                                                                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="https://aijobs.ai/company/create/pay-per-job"
+                                                       class="btn btn-primary text-white"
+                                                       style="padding:12px 24px !important;">Post a Job
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                                                                                            </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <ul class="menu-active-classes">
+                                <li class="menu-item"><a href="https://aijobs.ai" class="text-primary active">Home</a></li>
+                                <li class="menu-item"><a href="https://aijobs.ai/jobs" class="">Jobs</a></li>
+                                <li class="menu-item"><a href="https://aijobs.ai/companies" class="">Companies</a></li>
+                                                                    <li class="menu-item"><a href="https://aijobs.ai/pricing" class="">Pricing</a></li>
+                                                                <li class="menu-item"><a href="https://aijobs.ai/blog" class="">Blog</a></li>
+                                                                                            </ul>
+                        </div>
+
+                        <div class="xs:tw-hidden tw-mt-6 mbl-bottom">
+                            <div class="container">
+                                                                                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu">
+                        <div class="menu-click tw-pe-3">
+                            <button class="effect1">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header top -->
+        <div class="n-header--bottom">
+            <div class="container position-relative">
+                <div class="d-flex tw-gap-3 tw-items-center">
+                    <div class="n-header--bottom__left d-flex align-items-center">
+                        <a href="https://aijobs.ai" class="brand-logo">
+                            <img src="https://aijobs.ai/frontend/assets/images/logo/logo.svg" alt="">
+                        </a>
+                        <form action="https://aijobs.ai/jobs" method="GET" id="search-form"
+                            class="mx-width-300 d-lg-block d-none">
+                            <div class="search-box form-item position-relative">
+                                <input name="keyword" class="global_header_search search-input w-100" type="text"
+                                    placeholder="Job Title, Keyword" value=""
+                                    id="global_search">
+                                <svg class="position-absolute" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                        stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M21 20.9999L16.65 16.6499" stroke="#0A65CC" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="n-header--bottom__right">
+                        <div class="d-flex align-items-center ">
+                            <div class="search-icon tw-ml-2 d-lg-none !tw-cursor-pointer">
+                                <svg id="searchIcon" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                        stroke="#18191C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20.9999 21L16.6499 16.65" stroke="#18191C" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="togglesearch ">
+                                <form action="https://aijobs.ai/jobs" method="GET" id="search-form"
+                                    class="shadow px-md-5 py-md-3 p-3 !tw-bg-white rounded w-sm-75 w-100">
+                                    <div class="search-box form-item position-relative">
+                                        <input name="keyword" class="search-input w-100" type="text"
+                                            placeholder="Job Title, Keyword"
+                                            value="" id="global_search">
+                                        <svg class="position-absolute" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                                stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M21 20.9999L16.65 16.6499" stroke="#0A65CC" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </form>
+                            </div>
+                                                                                                                            <ul class="list-unstyled tw-flex tw-gap-3 tw-items-center tw-justify-between">
+                                        <li>
+                                            <a href="https://aijobs.ai/login"
+                                               class="btn btn-outline-primary">Sign In</a>
+                                        </li>
+                                        <li class="d-none d-sm-block">
+                                            <a href="https://aijobs.ai/company/create/pay-per-job"
+                                               class="btn btn-primary">Post Job
+                                            </a>
+                                        </li>
+                                    </ul>
+                                                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rt-mobile-menu-overlay"></div>
+        <div class="sidebar-overlay"></div>
+    </div>
+</header>
+
+    
+        <section class="banner-section">
+        <div class="rt-single-banner5">
+            <div class="container position-parent">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="banner-content5">
+                            <div class="mx-727" data-aos="fadeindown" data-aos-duration="1000">
+                                <h1 class="text-gray-900 rt-mb-24">
+                                    The Number One Job Board for Careers in Artificial Intelligence
+                                </h1>
+                                <div class="f-size-18 text-gray-600 rt-mb-30">
+                                    <p>
+                                        Find the perfect job at a top AI company, or in AI adjacent fields like Data Science and Machine Learning.
+                                    </p>
+                                    <p>
+                                        <a href="https://aijobs.ai/company/create/pay-per-job" class="tw-underline">Post a Job</a> to find the best candidates from our 30,000 monthly visitors.
+                                    </p>
+                                </div>
+                            </div>
+                            <form action="https://aijobs.ai/search_jobs_custom_page" method="POST"  id="job_search_form">
+                                <input type="hidden" name="_token" value="u0ROvQv8WwOiIDXJLVMFBsBM95C7aZeGkZLaCVVa" autocomplete="off">                                <div class="jobsearchBox d-flex flex-column flex-md-row bg-gray-10 input-transparent rt-mb-24"
+                                    data-aos="fadeinup" data-aos-duration="400" data-aos-delay="50">
+                                    <div class="flex-grow-1 fromGroup has-icon">
+                                        <input id="index_search" name="keyword" type="text"
+                                            placeholder="Job Title, Keyword" value=""
+                                            autocomplete="off" class="text-gray-900">
+                                        <div class="icon-badge">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+        stroke="var(--primary-500)" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <path d="M20.9999 21L16.6499 16.65" stroke="var(--primary-500)" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="lat" id="lat" value="">
+                                    <input type="hidden" name="long" id="long" value="">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <div class="flex-grow-1 fromGroup has-icon banner-select no-border">
+                                            <input name="long" class="leaf_lon" type="hidden">
+                                            <input name="lat" class="leaf_lat" type="hidden">
+                                            <input name="location_info" class="location_info" type="hidden">
+                                            <input type="text" id="leaflet_search"
+                                                placeholder="Enter Location" name="location"
+                                                value="" autocomplete="off" class="text-gray-900">
+                                            <div class="icon-badge">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+        stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+        stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+                                            </div>
+                                        </div>
+
+                                    <div class="flex-grow-0">
+                                        <button type="submit"
+                                            class="btn btn-primary d-block d-md-inline-block ">Find Job Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 d-flex align-items-center">
+                        <div class="banner-mockup d-none d-xl-block w-100 text-right">
+                            <div class="addimg-1 position-parent video-btn-center">
+                                <img src="https://aijobs.ai/frontend/assets/images/home-banner.png" alt="home page banner" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Start -->
+    <div class="counter-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mx-auto rt-mb-30">
+                    <div
+                        class="card jobcardStyle1 counterbox tw-bg-white hover:tw-shadow-[0px_12px_48px_rgba(0,44,109,0.1)]">
+                        <div class="card-body">
+                            <div class="rt-single-icon-box">
+                                <div class="icon-thumb">
+                                    <div class="icon-72">
+                                        <i class="ph ph-users"></i>
+                                    </div>
+                                </div>
+
+                                <div class="iconbox-content">
+                                    <div class="f-size-24 ft-wt-5">
+                                                                                    <span class="counter">30,000</span>
+                                            <span>+</span>
+                                                                            </div>
+                                    <span class="text-gray-500 f-size-16">Monthly Visitors</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mx-auto rt-mb-30">
+                    <div
+                        class="card jobcardStyle1 counterbox tw-bg-white hover:tw-shadow-[0px_12px_48px_rgba(0,44,109,0.1)]">
+                        <div class="card-body">
+                            <div class="rt-single-icon-box">
+                                <div class="icon-thumb">
+                                    <div class="icon-72">
+                                        <i class="ph ph-suitcase-simple"></i>
+                                    </div>
+                                </div>
+                                <div class="iconbox-content">
+                                    <div class="f-size-24 ft-wt-5">
+
+                                                                                    <span class="counter">20,000</span>
+                                            <span>+</span>
+                                        
+                                    </div>
+                                    <span class="text-gray-500 f-size-16">Jobs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mx-auto rt-mb-30">
+                    <div
+                        class="card jobcardStyle1 counterbox tw-bg-white hover:tw-shadow-[0px_12px_48px_rgba(0,44,109,0.1)]">
+                        <div class="card-body">
+                            <div class="rt-single-icon-box">
+                                <div class="icon-thumb">
+                                    <div class="icon-72">
+                                        <i class="ph ph-buildings"></i>
+                                    </div>
+                                </div>
+                                <div class="iconbox-content">
+                                    <div class="f-size-24 ft-wt-5">
+
+                                                                                    <span class="counter">3000</span>
+                                            <span>+</span>
+                                        
+                                    </div>
+                                    <span class="text-gray-500 f-size-16">Companies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+            <!-- Featured Jobs Start -->
+        <div class="featured-jobs-container">
+                            <section class="featurejob-area rt-pt-40 rt-pt-md-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap">
+                        <div class="flex-grow-1">
+                                                            <h4><span
+                                        class="text-primary-500 has-title-shape">Featured
+                                            <img src="https://aijobs.ai/frontend/assets/images/all-img/title-shape.png"
+                                                 alt="Company Title Shape">
+                                        </span>Jobs</h4>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="rt-spacer-40 "></div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="rt-list featured-jobs-list">
+                                                    <li class="d-block fade-in-bottom  rt-mb-24">
+    <div class="card iconxl-size jobcardStyle1 ">
+        <div class="card-body">
+            <div class="rt-single-icon-box icb-clmn-lg ">
+                <a href="https://aijobs.ai/job/ai-content-engineer-remote" class="icon-thumb">
+                    <img src="https://aijobs.ai/storage/images/company/6ad74bc903379.png" alt="" draggable="false" class="object-fit-contain">
+                </a>
+                <a href="https://aijobs.ai/job/ai-content-engineer-remote" class="iconbox-content md:tw-pr-5">
+                    <div class="post-info2">
+
+                        <div class="post-main-title">
+                            AI Content Engineer (Remote)
+                            <span class="badge rounded-pill bg-primary-50 text-primary-500">
+                                Full Time
+                            </span>
+                        </div>
+                        <div class="tw-flex tw-justify-items-center body-font-4 text-gray-600 pt-2">
+                            
+                                                            <span class="info-tools">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11 2.0625V19.9375" stroke="#C5C9D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M15.8125 7.5625C15.8125 7.11108 15.7236 6.66408 15.5508 6.24703C15.3781 5.82997 15.1249 5.45102 14.8057 5.13182C14.4865 4.81262 14.1075 4.55941 13.6905 4.38666C13.2734 4.21391 12.8264 4.125 12.375 4.125H9.28125C8.36957 4.125 7.49523 4.48716 6.85057 5.13182C6.20591 5.77648 5.84375 6.65082 5.84375 7.5625C5.84375 8.47418 6.20591 9.34852 6.85057 9.99318C7.49523 10.6378 8.36957 11 9.28125 11H13.0625C13.9742 11 14.8485 11.3622 15.4932 12.0068C16.1378 12.6515 16.5 13.5258 16.5 14.4375C16.5 15.3492 16.1378 16.2235 15.4932 16.8682C14.8485 17.5128 13.9742 17.875 13.0625 17.875H8.9375C8.02582 17.875 7.15148 17.5128 6.50682 16.8682C5.86216 16.2235 5.5 15.3492 5.5 14.4375"
+        stroke="#C5C9D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+                                                                            4K - 6K a Month
+                                                                    </span>
+                            
+                            <!-- <span class="info-tools">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M17.875 3.4375H4.125C3.7453 3.4375 3.4375 3.7453 3.4375 4.125V17.875C3.4375 18.2547 3.7453 18.5625 4.125 18.5625H17.875C18.2547 18.5625 18.5625 18.2547 18.5625 17.875V4.125C18.5625 3.7453 18.2547 3.4375 17.875 3.4375Z"
+        stroke="#C5C9D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M15.125 2.0625V4.8125" stroke="#C5C9D6" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <path d="M6.875 2.0625V4.8125" stroke="#C5C9D6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M3.4375 7.5625H18.5625" stroke="#C5C9D6" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+</svg>
+
+                                                                                                            <span>3w 4d Remaining</span>
+                                                                                                </span> -->
+                        </div>
+                    </div>
+                </a>
+                <div class="iconbox-extra align-self-center">
+                    
+                                                                        <a href="https://vertexmg.com/vacancies/ai-content-engineer?src=board-aijobs" target="_blank" rel="nofollow" class="btn btn-primary2-50">
+                                <span class="button-content-wrapper ">
+                                    <span class="button-icon align-icon-right"><i class="ph ph-arrow-right"></i></span>
+                                    <span class="button-text">Apply Now</span>
+                                </span>
+                            </a>
+                                                            </div>
+            </div>
+        </div>
+    </div>
+</li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+                    </div>
+    
+    <div class="joblist-content">
+        <div class="container">
+            <div class="row mt-5">
+                                    <div class="flex-grow-1">
+            <h4><span
+                    class="text-primary-500 has-title-shape">Latest
+                                        <img src="https://aijobs.ai/frontend/assets/images/all-img/title-shape.png"
+                                             alt="Latest Jobs Title Shape">
+                                    </span>
+                Jobs
+            </h4>
+        </div>
+        <div class="rt-spacer-40 "></div>
+    
+    
+            <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/ai-enablement-lead"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            AI Enablement Lead
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            5D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f0186a00354.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Factored</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/office-workplace-administrator"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Office &amp; Workplace Administrator
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            5D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                            <div>
+                            <span class="tw-text-sm tw-text-[#767F8C]">
+                                Salary:
+                                                                    $40 - $40 an Hour
+                                                            </span>
+                        </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f2bc2cf2178.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">RoboForce</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/sr-machine-learning-engineer-10"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Sr. Machine Learning Engineer
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            5D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                                                    <span class="tw-text-[#06C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E6F0FA] tw-px-2 tw-py-1 tw-rounded-[3px]">Remote</span>
+                        
+                    </div>
+                                            <div>
+                            <span class="tw-text-sm tw-text-[#767F8C]">
+                                Salary:
+                                                                    $246,916 - $332,012 
+                                                            </span>
+                        </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67eec241059ea.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Pinterest</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/account-executive-small-and-medium-business-smb-at-thatch"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Account Executive - Small and Medium Business (SMB)  at Thatch
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            5D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/674ad92c28eda.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Thatch</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/forward-deployed-engineer-ai-agents"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Forward Deployed Engineer - AI Agents
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            5D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f55dc1200e3.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Prodigal</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/staff-full-stack-engineer-tqm"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Staff Full-Stack Engineer- TQM
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                            <div>
+                            <span class="tw-text-sm tw-text-[#767F8C]">
+                                Salary:
+                                                                    $750 - $750 
+                                                            </span>
+                        </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f6bb5d8c113.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Forma.ai</span>
+                                                    </div>
+                                                    <span class="tw-flex tw-items-center tw-gap-1 tw-text-[#18191C]">
+                                <i class="ph ph-map-pin"></i>
+                                <span class="tw-location">Canada</span>
+                            </span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/sales-development-representative-at-thatch"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Sales Development Representative  at Thatch
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/674ad92c28eda.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Thatch</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/channel-partnerships-manager-at-thatch"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Channel Partnerships Manager  at Thatch
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/674ad92c28eda.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Thatch</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/account-manager-at-thatch"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Account Manager  at Thatch
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/674ad92c28eda.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Thatch</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/rd-assembly-technician"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            R&amp;D Assembly Technician
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                            <div>
+                            <span class="tw-text-sm tw-text-[#767F8C]">
+                                Salary:
+                                                                    $70,000 - $150,000 
+                                                            </span>
+                        </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f0186ced0b9.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Skild AI</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/director-strategic-accounts-broad-institute"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Director Strategic Accounts | Broad Institute
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/664e3664406dc.jpg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Manifold AI</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/ai-deployment-lead-bengaluru"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            AI Deployment Lead (Bengaluru)
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f55dc1200e3.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Prodigal</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/software-engineer-open-source-ai"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Software Engineer, Open Source AI
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                                                    <span class="tw-text-[#06C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E6F0FA] tw-px-2 tw-py-1 tw-rounded-[3px]">Remote</span>
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/backend/image/default.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Backblaze</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/training-program-lead"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Training Program Lead
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/67f0186a00354.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Factored</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/customer-advocacy-manager-at-thatch"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Customer Advocacy Manager  at Thatch
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/674ad92c28eda.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Thatch</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/senior-ai-engineer-540"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Senior AI Engineer
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/6680bedd603f6.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Backbase</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/member-of-technical-staff-backend"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Member of Technical Staff, Backend
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/664e3526c7eee.png"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Inflection</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                        <div class="col-xl-4 col-md-6 fade-in-bottom rt-mb-24 cat-1 cat-3">
+            <div class="tw-relative tw-h-full">
+        <a href="https://aijobs.ai/job/product-engagement-manager-at-thatch"
+            class="tw-h-full card tw-card tw-block jobcardStyle1 ">
+            <div class="tw-p-6 tw-h-full">
+                <div class="tw-mb-5">
+                    <div class="tw-mb-1.5 d-flex justify-content-between">
+                        <div class="tw-text-[#18191C] tw-text-lg tw-font-medium">
+                            Product Engagement Manager  at Thatch
+                        </div>
+                        <div class="tw-text-sm tw-text-[#767F8C] mt-1 tw-pl-3">
+                            6D
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-items-center tw-mb-1.5">
+                        
+                                                    <span class="tw-text-[#0BA02C] tw-text-[12px] tw-leading-[12px] tw-font-semibold tw-bg-[#E7F6EA] tw-px-2 tw-py-1 tw-rounded-[3px]">
+                                Full Time
+                            </span>
+                        
+                        
+                    </div>
+                                    </div>
+                <div class="rt-single-icon-box tw-flex-wrap tw-gap-4">
+                    <span>
+                        <div class="tw-w-[56px] tw-h-[56px] d-flex align-items-center">
+                                                            <img class="tw-rounded-lg tw-w-[56px] tw-h-[56px] object-fit-contain" src="https://aijobs.ai/storage/images/company/674ad92c28eda.jpeg"
+                                    alt="" draggable="false">
+                            
+                        </div>
+                    </span>
+                    <div class="iconbox-content">
+                        <div class="tw-mb-1 tw-inline-flex">
+                                                            <span class="tw-text-base tw-font-medium tw-text-[#18191C] tw-card-title">Thatch</span>
+                                                    </div>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                                
+            <div id="mix-job" class="row"></div>
+
+                    <input type="hidden" disabled id="jobs-next-page-url" value="https://aijobs.ai/jobs?loadmore=1&amp;page=2" />
+            <button id="load-more-button" data-page="1" data-id="363725"
+                    class="newsButton btn btn-primary px-4 py-2 m-auto">Load More</button>
+            
+
+<script>
+    function loadMoreJobs() {
+        $('#load-more-button').prop('disabled', true).text('Loading...');
+        let nextPageUrl = document.getElementById('jobs-next-page-url').value;
+        axios.get(nextPageUrl).then((response) => {
+            $('#mix-job').append(response.data);
+            $('#load-more-button').prop('disabled', false).text('Load More');
+
+            let nextPageUrl = document.getElementById('jobs-page-next-page-url').value;
+            document.getElementById('jobs-next-page-url').value = nextPageUrl;
+
+            $('#jobs-page-next-page-url').remove();
+
+            if (!nextPageUrl) {
+                $('#load-more-button').remove();
+            }
+        }).catch((error) => {
+            if (error.response && error.response.status === 429) {
+                let retryAfter = 60;
+                if (error.response.headers && error.response.headers['retry-after']) {
+                    retryAfter = error.response.headers['retry-after'];
+                }
+
+                console.error("429 error: Too Many Requests. Retrying in " + retryAfter + " seconds.");
+
+                setTimeout(() => {
+                    $('#load-more-button')
+                        .prop('disabled', false)
+                        .text('Load More')
+                        .removeClass('btn-secondary')
+                        .addClass('btn-primary');
+
+                    loadMoreJobs();
+                }, retryAfter * 1000);
+            } else {
+                $('#load-more-button').prop('disabled', true).text('No jobs found').removeClass('btn-primary')
+                    .addClass('btn-secondary');
+            }
+        })
+    }
+
+    document.getElementById('load-more-button').addEventListener( "click" , (e) => {
+        e.preventDefault();
+        loadMoreJobs();
+    });
+</script>
+                            </div>
+        </div>
+    </div>
+
+    <!-- Top companies Start -->
+    <div class="top-companies-container">
+                    <section class="featurejob-area rt-pt-100 rt-pt-md-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap">
+                            <div class="flex-grow-1">
+                                <h4>Top <span
+                                        class="text-primary-500 has-title-shape">Companies
+                                            <img src="https://aijobs.ai/frontend/assets/images/all-img/title-shape.png"
+                                                 alt="Company Title Shape">
+                                        </span></h4>
+                            </div>
+                            <a href="https://aijobs.ai/companies" class="flex-grow-0 rt-pt-md-10">
+                                <button class="btn btn-outline-primary">
+                                        <span class="button-content-wrapper ">
+                                            <span class="button-icon align-icon-right">
+                                                <i class="ph ph-arrow-right"></i>
+                                            </span>
+                                            <span>
+                                                View All
+                                            </span>
+                                        </span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt-spacer-40 "></div>
+                <div class="row top-companies-list">
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/deepmind"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e32dabb80c.jpg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">DeepMind</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">2
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/c3ai"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e31ac91319.jpg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">C3.ai</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/anduril"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e307e8bd2d.png" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Anduril</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                    <span class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">Defense and Space Manufacturing</span>
+                                                                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/xai"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/67c83b1f0e919.jpeg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">xAI</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">271
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/graphcore"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e347e354ef.jpg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Graphcore</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                    <span class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">Semiconductor Manufacturing</span>
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">174
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/scale-ai"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e3935cbf58.png" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Scale AI</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                    <span class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">Software Development</span>
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">159
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/cerebras-systems"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/6713e3b7c4f6e.jpeg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Cerebras Systems</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                    <span class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">Computer Hardware</span>
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">97
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/charles-river-associates"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e31fcc0541.jpg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Charles River Associates</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                    <span class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">Business Consulting and Services</span>
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">79
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/anthropic_F5Tev"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/66b5ce6f449a9.jpeg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Anthropic</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">78
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/figure"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e33e27afc1.png" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Figure</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                    <span class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">Machinery Manufacturing</span>
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">72
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/cresta_8H20J"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/67dc0ed3aa404.jpeg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Cresta</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">70
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                            <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24 tw-self-stretch">
+                            <a href="https://aijobs.ai/company/together-ai"
+                               class="card jobcardStyle1 tw-relative tw-h-full">
+                                <div class="tw-p-6">
+                                    <div class="rt-single-icon-box tw-gap-3">
+                                        <div class="tw-w-14 tw-h-14">
+                                            <img class="tw-w-full tw-h-full object-fit-contain"
+                                                 src="https://aijobs.ai/storage/images/company/664e3aad42fcc.jpeg" alt="Company Logo" draggable="false" >
+                                        </div>
+                                        <div class="iconbox-content">
+                                            <div class="">
+                            					<span class="tw-text-[#191F33] tw-text-lg tw-font-medium  tw-inline-block">Together AI</span>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                                                            <div class="post-info">
+                                            <div class="tw-flex tw-flex-wrap tw-gap-3">
+                                                                                                                                                    <span
+                                                        class="tw-px-3 tw-py-1 tw-inline-block tw-text-sm tw-font-medium tw-text-[#474C54] tw-rounded-[52px] ll-gray-border">69
+                                                        Open Positions</span>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </a>
+                        </div>
+                                    </div>
+            </div>
+        </section>
+            </div>
+
+    <!-- Tag list Start -->
+    <div class="tag-list-container">
+                    <section class="catagory-area rt-pt-100 rt-pt-md-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-wrap">
+                    <div class="flex-grow-1">
+                        <h4>Popular <span
+                                class="text-primary-500 has-title-shape">Categories
+                                            <img src="https://aijobs.ai/frontend/assets/images/all-img/title-shape.png"
+                                                 alt="Category Title Shape">
+                                        </span></h4>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="rt-spacer-40 rt-spacer-md-20"></div>
+        <div class="row g-3">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/engineer" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Engineer</h3>
+                                                            <p>1,829 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/remote" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Remote</h3>
+                                                            <p>774 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/machine-learning" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Machine Learning</h3>
+                                                            <p>572 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/data-science" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Data Science</h3>
+                                                            <p>448 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/research" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Research</h3>
+                                                            <p>164 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/product-manager" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Product Manager</h3>
+                                                            <p>116 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/cybersecurity" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Cybersecurity</h3>
+                                                            <p>112 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/sales" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Sales</h3>
+                                                            <p>107 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/marketing" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Marketing</h3>
+                                                            <p>73 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/analyst" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Analyst</h3>
+                                                            <p>62 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/consultant" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Consultant</h3>
+                                                            <p>61 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/developer" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Developer</h3>
+                                                            <p>46 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/strategy" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Strategy</h3>
+                                                            <p>44 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/training" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Training</h3>
+                                                            <p>31 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/finance" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Finance</h3>
+                                                            <p>25 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/mlops" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>MLOps</h3>
+                                                            <p>21 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/governance" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Governance</h3>
+                                                            <p>20 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/computer-vision" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Computer Vision</h3>
+                                                            <p>15 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/project-manager" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Project Manager</h3>
+                                                            <p>13 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/internship" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Internship</h3>
+                                                            <p>12 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/deep-learning" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Deep Learning</h3>
+                                                            <p>9 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/legal" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Legal</h3>
+                                                            <p>8 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/causal-inference" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Causal Inference</h3>
+                                                            <p>6 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/chatbot" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Chatbot</h3>
+                                                            <p>5 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/annotation" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Annotation</h3>
+                                                            <p>4 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/healthcare" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Healthcare</h3>
+                                                            <p>4 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/startup" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Startup</h3>
+                                                            <p>4 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/conversational" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Conversational</h3>
+                                                            <p>3 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/prompt-engineer" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Prompt Engineer</h3>
+                                                            <p>2 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/entry-level" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Entry Level</h3>
+                                                            <p>1 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/nlp" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>NLP</h3>
+                                                            <p>1 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/content-writer" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Content Writer</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/ethics" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Ethics</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/tester" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Tester</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/artist" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Artist</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/content-assistant" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Content Assistant</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/content-editor" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Content Editor</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="https://aijobs.ai/tensorflow" class="most-popular-wrap">
+                        <div class="most-popular-item">
+                            <h3>Tensorflow</h3>
+                                                            <p>0 Open Positions</p>
+                                                    </div>
+                    </a>
+                </div>
+            
+        </div>
+    </div>
+    <div class="rt-spacer-100 rt-spacer-md-50"></div>
+</section>
+            </div>
+
+    
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-transparent">
+                    <h5 class="modal-title" id="cvModalLabel">Apply Job: <span id="apply_job_title">
+                            Job Title</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="https://aijobs.ai/jobs/apply" method="POST">
+                    <input type="hidden" name="_token" value="u0ROvQv8WwOiIDXJLVMFBsBM95C7aZeGkZLaCVVa" autocomplete="off">                    <div class="modal-body mt-3">
+                        <input type="hidden" id="apply_job_id" name="id">
+                        <div class="from-group">
+                            <label class="class mb-2" for="for">
+    Choose Resume
+    <span class="form-label-required text-danger">*</span>
+    
+</label>
+                            <select class="rt-selectactive form-control w-100-p" name="resume_id">
+                                <option value="">Select One</option>
+                                                            </select>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="form-group mt-3">
+                            <label class="class mb-2" for="for">
+    Cover Letter
+    <span class="form-label-required text-danger">*</span>
+    
+</label>
+                            <textarea id="default" class="form-control  "  name="cover_letter"
+                                rows="7"></textarea>
+                                                                                                                </div>
+
+                    </div>
+                    <div class="modal-footer border-transparent">
+                        <button type="button" class="bg-priamry-50 btn btn-outline-primary" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <span class="button-content-wrapper ">
+                                <span class="button-icon align-icon-right"><i class="ph ph-arrow-right"></i></span>
+                                <span class="button-text">
+                                    Apply Now
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+            <div class="rt-site-footer bg-gray-900 dark-footer">
+    <div class="footer-top  bg-gray-900">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-sm-6 rt-single-widget ">
+                    <a href="/" class="footer-logo">
+                        <img src="https://aijobs.ai/frontend/assets/images/logo/logowhite.svg" alt="">
+                    </a>
+                    <address>
+                        <div class="body-font-2 text-gray-500">
+                            <div class="max-312 body-font-4 mt-2 text-gray-500">
+                                AIJobs.ai is the leading source for AI Jobs and Careers in the fields of Artificial Intelligence, Machine Learning & Data Science. <br /><br />We're one of the web's biggest sources of AI jobs from both AI Startups and established companies, with jobs numbering in the thousands.
+                            </div>
+                        </div>
+                    </address>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 rt-single-widget ">
+                    <h2 class="footer-title">AI Jobs</h2>
+                    <ul class="rt-usefulllinks2">
+                        <li><a href="https://aijobs.ai/jobs">Jobs</a></li>
+                        <li><a href="https://aijobs.ai/companies">Companies</a></li>
+                        <li><a href="https://aijobs.ai/blog">Blog</a></li>
+                    </ul>
+                </div>
+                                    <div class="col-lg-2 col-md-3 col-sm-6 rt-single-widget ">
+                        <h2 class="footer-title">Companies</h2>
+                        <ul class="rt-usefulllinks2">
+                            <li><a href="https://aijobs.ai/company/create/pay-per-job">Post a Job</a></li>
+                            <li><a href="https://aijobs.ai/pricing">Pricing</a></li>
+                                                            <li><a href="https://aijobs.ai/pricing">Login</a></li>
+                                                                                                            </ul>
+                    </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 rt-single-widget ">
+                    <h2 class="footer-title">Support</h2>
+                    <ul class="rt-usefulllinks2">
+                        <li><a href="https://aijobs.ai/terms-condition">Terms &amp; Conditions</a></li>
+                        <li><a href="https://aijobs.ai/privacy-policy">Privacy &amp; Policy</a></li>
+                    </ul>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.footer-top -->
+    <div class="footer-bottom bg-gray-900">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start f-size-14 text-gray-500">
+                    &copy; AI Jobs 2026 | All Rights Reserved
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="footer-social-links">
+                        
+                        
+                        
+                        <li>
+                            <a href="https://twitter.com/aijobsai" target="_blank">
+                                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1">
+    <path
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+        fill="#727279"></path>
+</svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/aijobs-ai/" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M0 2.66051C0 2.01699 0.225232 1.48611 0.675676 1.06784C1.12612 0.649561 1.71172 0.44043 2.43243 0.44043C3.14029 0.44043 3.71299 0.646337 4.15058 1.05819C4.60102 1.4829 4.82625 2.0363 4.82625 2.71842C4.82625 3.33618 4.60747 3.85097 4.16988 4.26282C3.71944 4.68753 3.12741 4.89989 2.39382 4.89989H2.37452C1.66666 4.89989 1.09396 4.68753 0.656371 4.26282C0.218784 3.83811 0 3.304 0 2.66051ZM0.250965 19.5524V6.65664H4.53668V19.5524H0.250965ZM6.9112 19.5524H11.1969V12.3516C11.1969 11.9012 11.2484 11.5537 11.3514 11.3092C11.5315 10.8716 11.805 10.5015 12.1718 10.1991C12.5386 9.89666 12.9987 9.74545 13.5521 9.74545C14.9936 9.74545 15.7143 10.7171 15.7143 12.6605V19.5524H20V12.1586C20 10.2538 19.5496 8.80915 18.6486 7.8246C17.7477 6.84004 16.5573 6.34776 15.0772 6.34776C13.417 6.34776 12.1236 7.06205 11.1969 8.49062V8.52923H11.1776L11.1969 8.49062V6.65664H6.9112C6.93693 7.06848 6.94981 8.34904 6.94981 10.4983C6.94981 12.6476 6.93693 15.6656 6.9112 19.5524Z"
+        fill="#727279" />
+</svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.footer-bottom -->
+</div><!-- /.rt-site-footer -->
+    
+    <!-- PWA Button Start -->
+
+
+
+    <!-- PWA Button End -->
+
+    <!-- Theme Switcher -->
+
+
+    <!-- scripts -->
+    <script src="https://aijobs.ai/frontend/assets/js/jquery-3.6.0.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/bootstrap.bundle.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/jquery.counterup.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/jquery.scrollUp.min.js"></script>
+
+<script src="https://aijobs.ai/frontend/assets/js/scrollax.min.js"></script>
+<script src="https://aijobs.ai/backend/plugins/select2/js/select2.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/waypoints.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/jquery-ui.min.js"></script>
+<script src="https://aijobs.ai/backend/plugins/toastr/toastr.min.js"></script>
+<script src="https://aijobs.ai/backend/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/aos.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/slick.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/bootstrap-datepicker.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/sortable.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/axios.min.js"></script>
+<script src="https://aijobs.ai/frontend/assets/js/app.js"></script>
+
+
+<script>
+    const $header = $("header.header");
+
+    if ($header.length) {
+        const calculatePageHeight = function (headerHeight) {
+            if (!headerHeight) {
+                headerHeight = parseFloat($header.css('height'));
+            }
+
+            $(".dashboard-wrapper").css("min-height", "calc(100vh - " + headerHeight + "px)");
+        }
+
+        calculatePageHeight();
+
+        document.addEventListener("DOMContentLoaded", () => calculatePageHeight());
+        window.addEventListener("resize", () => calculatePageHeight());
+
+        const resizeObserver = new ResizeObserver((entries) => {
+            let borderBoxHeight;
+
+            for (const entry of entries) {
+                if (entry.borderBoxSize) {
+                    borderBoxHeight = entry.borderBoxSize[0].blockSize;
+                } else {
+                    borderBoxHeight = entry.contentRect.height;
+                }
+
+                calculatePageHeight(borderBoxHeight);
+            }
+        });
+
+        resizeObserver.observe($header.get(0), {box: "border-box"});
+    }
+</script>
+
+<script>
+    var auth_check = $('#auth_user').val();
+
+    if (auth_check == 1) {
+        loadUnreadMessageCount();
+
+        function playAudio(){
+            const audio = new Audio("/frontend/assets/sound.mp3");
+            audio.play();
+        }
+
+        function loadUnreadMessageCount(){
+            $.ajax({
+                url: "https://aijobs.ai/load-unread-count",
+                type: "GET",
+                success: function (response) {
+                    if (response > 0) {
+                        $('.unread-message-part').removeClass('d-none');
+                    }else{
+                        $('.unread-message-part').addClass('d-none');
+                    }
+                }
+            });
+        }
+    }
+
+    $('#global_search').keypress(function(e) {
+        var key = e.which;
+
+        if (key == 13) {
+            $('#search-form').submit();
+        }
+    });
+
+    $("#searchIcon").click(function() {
+        $(".togglesearch").toggle();
+        $("input[type='text']").focus();
+    });
+
+    $("#mblSearchIcon").click(function() {
+        $(".mblTogglesearch").toggle();
+        $("input[type='text']").focus();
+    });
+
+
+    $('button.effect1').on('click', function() {
+        $(this).find('span').toggleClass('active');
+    });
+
+    $('.rt-mobile-menu-overlay').on('click', function() {
+        $('button.effect1').find('span').removeClass('active');
+    });
+
+    //image upload scripts
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                if (input.className === 'profile-file-upload-input') {
+                    $('.profile-image-upload-wrap').hide();
+                    $('.profile-file-upload-image').attr('src', e.target.result);
+                    $('.profile-file-upload-content').show();
+
+                    // $('.image-title').html(input.files[0].name);
+                }
+                if (input.className === 'banner-file-upload-input') {
+                    $('.banner-image-upload-wrap').hide();
+
+                    $('.banner-file-upload-image').attr('src', e.target.result);
+                    $('.banner-file-upload-content').show();
+
+                    // $('.image-title').html(input.files[0].name);
+                }
+                if (input.className === 'resume-file-upload-input') {
+                    $('.cv-image-upload-wrap').hide();
+                    $('.resume-file-upload-content.none').show();
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        } else {
+            $('.profile-remove-image').on('click', function() {
+                $('.profile-file-upload-input').replaceWith($('.profile-file-upload-input').clone());
+                $('.profile-file-upload-content').hide();
+                $('.profile-file-upload-image').attr('src', '');
+                $('.profile-image-upload-wrap').show();
+            })
+            $('.banner-remove-image').on('click', function() {
+                $('.banner-file-upload-input').replaceWith($('.banner-file-upload-input').clone());
+                $('.banner-file-upload-content').hide();
+                $('.banner-file-upload-image').attr('src', '');
+                $('.banner-image-upload-wrap').show();
+            })
+        }
+    }
+    $('.profile-remove-image').on('click', function() {
+        $('.profile-file-upload-input').replaceWith($('.profile-file-upload-input').clone());
+        $('.profile-file-upload-content').hide();
+        $('.profile-image-upload-wrap').show();
+    })
+    $('.banner-remove-image').on('click', function() {
+        $('.banner-file-upload-input').replaceWith($('.banner-file-upload-input').clone());
+        $('.banner-file-upload-content').hide();
+        $('.banner-image-upload-wrap').show();
+    })
+    $('.cv-remove-image').on('click', function() {
+        $('.resume-file-upload-input').replaceWith($('.resume-file-upload-input').clone());
+        $('.resume-file-upload-content').hide();
+        $('.cv-image-upload-wrap').show();
+    })
+
+    $('.image-upload-wrap').bind('dragover', function() {
+        $('.image-upload-wrap').addClass('image-dropping');
+    });
+    $('.image-upload-wrap').bind('dragleave', function() {
+        $('.image-upload-wrap').removeClass('image-dropping');
+    });
+</script>
+
+<script>
+    
+    
+    
+    
+    // toast config
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "hideMethod": "fadeOut"
+    }
+
+    $('.login_required').on('click', function(event) {
+        event.preventDefault();
+
+        Swal.fire({
+            text: "Please login to perform this action",
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: "Login",
+            cancelButtonText: "Cancel",
+        }).then((result) => {
+            if (result.value) {
+                window.location.href = '/login';
+            }
+        })
+    });
+    $('.no_permission').on('click', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: "Unauthorized Access",
+            text: "You don't have permission to perform this action",
+            icon: "warning",
+            dangerMode: true,
+        })
+    });
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $(".notification-icon a").off("click").on('click', function(e) {
+        e.stopImmediatePropagation();
+        return true;
+    });
+</script>
+
+<script>
+    // read notification by ajax
+    function ReadNotification() {
+        $.ajax({
+            url: "https://aijobs.ai/user/notification/read",
+            type: "POST",
+            data: {
+                _token: 'u0ROvQv8WwOiIDXJLVMFBsBM95C7aZeGkZLaCVVa'
+            },
+            dataType: 'json',
+            success: function(data) {
+                $('#unNotifications').hide();
+            }
+        });
+    }
+    // read single notification by ajax
+    function readSingleNotification(url, id) {
+        $.ajax({
+            url: "https://aijobs.ai/markasread/single/notification",
+            type: "POST",
+            data: {
+                id: id,
+                _token: 'u0ROvQv8WwOiIDXJLVMFBsBM95C7aZeGkZLaCVVa'
+            },
+            dataType: 'json',
+            success: function(data) {
+                window.location.href = url;
+            }
+        });
+    }
+
+    // Check if the page uses the ckeditor
+    if (document.querySelector('#ckeditor_default') || document.querySelector('#image_ckeditor')
+        || document.querySelector('#image_ckeditor_2') || document.querySelector('#editor2')
+        || document.querySelector('#editor3') || document.querySelector('#editor4')
+        || document.querySelector('#ckeditor_simple'))
+    {
+        const ckeditorScript = document.createElement('script')
+        ckeditorScript.src = "https://aijobs.ai/frontend/assets/js/ckeditor.min.js"
+        document.body.appendChild(ckeditorScript);
+
+        ckeditorScript.addEventListener("load", () => {
+            // Call ckeditor
+            if (document.querySelector('#ckeditor_default')) {
+                ClassicEditor.create(document.querySelector('#ckeditor_default'))
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+
+            // Call ckeditor
+            if (document.querySelector('#image_ckeditor')) {
+                ClassicEditor.create(document.querySelector('#image_ckeditor'), {
+                    ckfinder: {
+                        uploadUrl: "https://aijobs.ai/ckeditor/upload?_token=u0ROvQv8WwOiIDXJLVMFBsBM95C7aZeGkZLaCVVa"
+                    },
+                })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+            // Call ckeditor
+            if (document.querySelector('#image_ckeditor_2')) {
+                ClassicEditor.create(document.querySelector('#image_ckeditor_2'), {
+                    ckfinder: {
+                        uploadUrl: "https://aijobs.ai/ckeditor/upload?_token=u0ROvQv8WwOiIDXJLVMFBsBM95C7aZeGkZLaCVVa"
+                    },
+                })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+            // Call ckeditor
+            if (document.querySelector('#editor2')) {
+                ClassicEditor.create(document.querySelector('#editor2'))
+                    .then(editor => {
+                        editor.ui.view.editable.element.style.height = '500px';
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+            // Call ckeditor
+            if (document.querySelector('#editor3')) {
+                ClassicEditor.create(document.querySelector('#editor3'))
+                    .then(editor => {
+                        editor.ui.view.editable.element.style.height = '500px';
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+            // Call ckeditor
+            if (document.querySelector('#editor4')) {
+                ClassicEditor.create(document.querySelector('#editor4'))
+                    .then(editor => {
+                        editor.ui.view.editable.element.style.height = '500px';
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+            // Call ckeditor
+            if (document.querySelector('#ckeditor_simple')) {
+                ClassicEditor.create(document.querySelector('#ckeditor_simple'), {
+                    toolbar: ['heading', 'Bold', 'Italic', 'Link', 'BulletedList', 'NumberedList'],
+                })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+        });
+    }
+
+    function setLocationSession(form) {
+        axios.post('/set/session', form)
+            .then((res) => {
+                // console.log(res.data);
+                // toastr.success("Location Saved", 'Success!');
+            })
+            .catch((e) => {
+                toastr.error("Something Wrong", 'Error!');
+            });
+    }
+    // about page testimonial
+    if ($(".testimonal2-active").length > 0) {
+        $(".testimonal2-active").slick({
+            slidesToShow: 1,
+            infinite: true,
+            slidesToScroll: 1,
+            dots: true,
+            fade: false,
+            prevArrow: $(".slickprev3"),
+            nextArrow: $(".slicknext3")
+        });
+    }
+    // tab switch style
+    var style = localStorage.getItem("candidate_style") == null ? 'box' : localStorage.getItem("candidate_style");
+    setStyle(style);
+
+    function styleSwitch(style) {
+        localStorage.setItem("candidate_style", style);
+        setStyle(style);
+    }
+
+    function setStyle(style) {
+        if (style == 'box') {
+            $('#nav-home-tab').addClass('active');
+            $('#nav-home').addClass('show active');
+            $('#nav-profile-tab').removeClass('active');
+            $('#nav-profile').removeClass('show active');
+        } else {
+            $('#nav-home-tab').removeClass('active');
+            $('#nav-home').removeClass('show active');
+            $('#nav-profile-tab').addClass('active');
+            $('#nav-profile').addClass('show active');
+        }
+    }
+
+</script>
+
+    <script src="https://aijobs.ai/backend/js/autocomplete.min.js"></script>
+<script>
+    const getLocationInfo = (object) => ({
+        "display_name": object?.properties?.display_name || null,
+        "lon": object?.geometry?.coordinates[0] || null,
+        "lat": object?.geometry?.coordinates[1] || null,
+        "country": object?.properties?.address?.country || null,
+        "country_code": object?.properties?.address?.country_code || null,
+        "county": object?.properties?.address?.county || null,
+        "state": object?.properties?.address?.state || null,
+        "city_town_village": object?.properties?.address?.city || object?.properties?.address?.town
+            || object?.properties?.address?.village || object?.properties?.address?.hamlet || null,
+        "city": object?.properties?.address?.city || null,
+        "town": object?.properties?.address?.town || null,
+        "village": object?.properties?.address?.village || null,
+        "hamlet": object?.properties?.address?.hamlet || null,
+    });
+
+    new Autocomplete("leaflet_search", {
+        // default selects the first item in
+        // the list of results
+        selectFirst: true,
+
+        // The number of characters entered should start searching
+        howManyCharacters: 2,
+
+        // onSearch
+        onSearch: ({
+            currentValue
+        }) => {
+            // You can also use static files
+            // const api = '../static/search.json'
+            const api =
+                `https://nominatim.openstreetmap.org/search?format=geojson&limit=1&accept-language=en&addressdetails=1&q=${encodeURI(currentValue)}`;
+
+            return new Promise((resolve) => {
+                fetch(api)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        resolve(data.features);
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            });
+        },
+        // nominatim GeoJSON format parse this part turns json into the list of
+        // records that appears when you type.
+        onResults: ({
+            currentValue,
+            matches,
+            template
+        }) => {
+            const regex = new RegExp(currentValue, "gi");
+
+            // if the result returns 0 we
+            // show the no results element
+            return matches === 0
+            ? template
+            : matches
+              .map((element) => {
+                  let split_address = element.properties.display_name.split(', ');
+                  const locationInfo = getLocationInfo(element);
+                  let data = '';
+
+                  if (locationInfo.country || locationInfo.city_town_village) {
+                      data = (locationInfo.city_town_village || '')
+                          + (locationInfo.country && locationInfo.city_town_village ? ', ' : '')
+                          + (locationInfo.country || '');
+                  } else if (split_address.length >= 3) {
+                      let country = split_address[split_address.length - 1];
+                      let city = split_address[0]; // First element
+                      data = city + ', ' + country;
+                  }
+
+                  if (data) {
+                      // Highlight the search term in the modified text
+                      let modifiedText = data.replace(
+                          regex,
+                          (str) => `<b>${str}</b>`
+                      );
+
+                      return `
+                        <li class="loupe">
+                            <p>
+                                ${modifiedText}
+                            </p>
+                        </li>`;
+                  } else {
+                      console.log("Not enough elements in the array to extract.");
+                  }
+              })
+              .join("");
+		},
+
+        // we add an action to enter or click
+        onSubmit: ({
+            object
+        }) => {
+            if (typeof leaflet_map === 'undefined') {
+                return;
+            }
+
+            // console.log(object)
+            // remove all layers from the map
+            leaflet_map.eachLayer(function(layer) {
+                if (!!layer.toGeoJSON) {
+                    leaflet_map.removeLayer(layer);
+                }
+            });
+
+            const {
+                display_name
+            } = object.properties;
+            const [lng, lat] = object.geometry.coordinates;
+
+            //    const marker = L.marker([lat, lng], {
+            //         title: display_name,
+            //    });
+
+            //    marker.addTo(leaflet_map).bindPopup(display_name);
+
+            leaflet_map.setView([lat, lng], 8);
+        },
+
+        // get index and data from li element after
+        // hovering over li with the mouse or using
+        // arrow keys ↓ | ↑
+        onSelectedItem: ({
+            index,
+            element,
+            object
+        }) => {
+            //    console.log(object.properties)
+            //    console.log(object.geometry.coordinates)
+            let leaf_lon = object.geometry.coordinates[0]
+            let leaf_lat = object.geometry.coordinates[1]
+            let full_address = object.properties.display_name
+            let split_address = full_address.split(', ');
+
+            if (split_address.length >= 3) {
+                let country = split_address[split_address.length - 1];
+                let state = split_address[1]; // Second element
+                let city = split_address[0]; // First element
+
+                // Now you have the country, state, and city
+                console.log("Country: " + country);
+                console.log("State: " + state);
+                console.log("City: " + city);
+
+                // You can use this information as needed, for example, to update form fields or make API requests.
+            } else {
+                console.log("Not enough elements in the array to extract.");
+            }
+
+            const locationInfo = getLocationInfo(object);
+
+            $('.leaf_lon').val(leaf_lon);
+            $('.leaf_lat').val(leaf_lat);
+            $('.country').val(locationInfo.country);
+            $('.state').val(locationInfo.state);
+            $('.city_town_village').val(locationInfo.city_town_village);
+            $('.location_info').val(JSON.stringify(locationInfo));
+
+            let split_string = full_address.split(', ');
+            let country = split_string.pop();
+
+            // var form = new FormData();
+            // form.append('lat', leaf_lat);
+            // form.append('lng', leaf_lon);
+            // form.append('country', country);
+            // form.append('place', full_address);
+
+            // axios.post('/set/session', form)
+            // .then((res) => {
+            //     // alert()
+            //     // console.log(res.data);
+            //     // toastr.success("Location Saved", 'Success!');
+            // })
+            // .catch((e) => {
+            //     toastr.error("Something Wrong", 'Error!');
+            // });
+        },
+
+        // the method presents no results element
+        noResults: ({
+                currentValue,
+                template
+            }) =>
+            template(`<li>No results found: "${currentValue}"</li>`),
+    });
+</script>
+
+    
+    <!-- ============== gooogle map ========== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ============== gooogle map ========== -->
+    <script>
+    </script>
+
+    <!-- Custom js -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- PWA Script Start -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- PWA Script End -->
+
+</body>
+
+</html>

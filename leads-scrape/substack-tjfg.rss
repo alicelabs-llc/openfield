@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Load Jquery first -->
+    <script defer
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>-->
+
+    <script defer
+            src="https://cdn.jsdelivr.net/combine/npm/semantic-ui@2.4.2/dist/components/accordion.min.js,npm/semantic-ui@2.4.2/dist/components/dimmer.min.js,npm/semantic-ui@2.4.2/dist/components/api.min.js,npm/semantic-ui@2.4.2/dist/components/checkbox.min.js,npm/semantic-ui@2.4.2/dist/components/dropdown.min.js,npm/semantic-ui@2.4.2/dist/components/form.min.js,npm/semantic-ui@2.4.2/dist/components/modal.min.js,npm/semantic-ui@2.4.2/dist/components/progress.min.js,npm/semantic-ui@2.4.2/dist/components/rating.min.js,npm/semantic-ui@2.4.2/dist/components/search.min.js,npm/semantic-ui@2.4.2/dist/components/sidebar.min.js,npm/semantic-ui@2.4.2/dist/components/site.min.js,npm/semantic-ui@2.4.2/dist/components/tab.min.js,npm/semantic-ui@2.4.2/dist/components/visibility.min.js,npm/semantic-ui@2.4.2/dist/components/transition.min.js"></script>
+
+    <!-- Google Tag Manager
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P26SV22');</script>
+    End Google Tag Manager -->
+
+
+    <!-- Plausible analytics -->
+    <script defer data-domain="techjobsforgood.com"
+            src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+
+    <!-- / Plausible -->
+
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!--Favicon
+    <link rel="icon"
+          type="image/x-icon"
+          href="/static/jobs/favicon.ico">-->
+
+    <link rel="icon" href="/static/jobs/svG.svg" type="image/svg+xml">
+
+    
+        <!-- HTML Meta Tags -->
+        <title>Tech Jobs for Good</title>
+        <meta name="description"
+              content="Tech Jobs for Good helps you find tech jobs at mission driven companies around the US.">
+
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="Tech Jobs for Good">
+        <meta itemprop="description"
+              content="Tech Jobs for Good helps you find tech jobs at mission driven companies around the US.">
+        <meta itemprop="image" content="https://techjobsforgood.com/static/jobs/Tech_Jobs_for_Good_Logo_Light_RGB.png">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://techjobsforgood.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Tech Jobs for Good">
+        <meta property="og:description"
+              content="Tech Jobs for Good helps you find tech jobs at mission driven companies around the US.">
+        <meta property="og:image"
+              content="https://techjobsforgood.com/static/jobs/Tech_Jobs_for_Good_Logo_Light_RGB.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Tech Jobs for Good">
+        <meta name="twitter:description"
+              content="Tech Jobs for Good helps you find tech jobs at mission driven companies around the US.">
+        <meta name="twitter:image"
+              content="https://techjobsforgood.com/static/jobs/Tech_Jobs_for_Good_Logo_Light_RGB.png">
+
+        <!-- Meta Tags Generated via http://heymeta.com -->
+    
+
+    
+
+    
+
+    <!-- Site Properties -->
+    
+
+    <!--Custom Styles-->
+    <style>
+        body {
+            background-color: #F2F4F4;
+        }
+
+        .overview {
+            background-color: #ffffff;
+            padding: 8px 15px 8px 15px;
+        }
+
+        .values {
+            padding: 0px 6px 0px 6px;
+        }
+
+        .posted {
+            padding: 8px 15px 8px 15px;
+        }
+
+        .impact-areas {
+            padding: 0px 6px 0px 6px;
+        }
+
+        .tech-stack {
+            padding: 0px 6px 0px 6px;
+        }
+
+        .sidebar {
+            padding: 80px 20px 40px 20px;
+        }
+
+        /* Save Job CSS" */
+        #save-job {
+            text-align: right;
+            float: right;
+            background-color: #FFFFFF;
+            color: #1D252C;
+            border: 2px solid #1D252C;
+            width: 120px;
+        }
+
+        /* Save Job Hover" */
+        #save-job:hover {
+            text-align: right;
+            float: right;
+            background-color: #D0D0CE;
+            color: #1D252C;
+            border: 2px solid #1D252C;
+            width: 120px;
+        }
+
+        @media only screen and (max-width: 1432px) {
+            .sidebar {
+                display: none;
+            }
+        }
+
+        
+        
+
+    </style>
+
+    <!-- Scripts to load last -->
+    <link rel="preload"
+          href="https://cdn.jsdelivr.net/combine/npm/semantic-ui@2.4.2/dist/components/container.min.css,npm/semantic-ui@2.4.2/dist/components/button.min.css,npm/semantic-ui@2.4.2/dist/components/card.min.css"
+          as="style" onload="this.onload=null;this.rel='stylesheet'"
+          media="handheld"/>
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" media="screen"/>
+
+    <!-- Twitter universal website tag code
+    <script>
+        !function (e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function () {
+                s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+            }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'o8j0b');
+        twq('track', 'PageView');
+    </script>
+    End Twitter universal website tag code -->
+
+    <!-- Tech Jobs for Good Branding Settings -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/jobs/TJFG_branding.css">
+
+    <script defer src="/static/jobs/js/base.js"></script>
+    
+    
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript)
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P26SV22"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+ End Google Tag Manager (noscript) -->
+
+<div class="ui secondary container menu">
+    <a href="/" class="ui item" style="padding: 0px 0px 0px 0px;">
+        <img src="/static/jobs/Tech_Jobs_for_Good_Logo_Light_RGB.png" alt="Tech Jobs for Good Logo"
+             class="ui small image">
+    </a>
+    
+        <div class="ui dropdown item" id="job-seeker-header-menu">
+            For Job Seekers
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a href="/jobs/" class="item">Browse Jobs</a>
+                <a href="/companies/" class="item">Browse Organizations</a>
+                <a href="/accounts/signup/" class="item">Get Matched to Companies</a>
+                <a href="/impact-areas/" class="item">About our Impact Areas</a>
+            </div>
+        </div>
+        <div class="ui dropdown item" id="employer-header-menu">
+            For Employers
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a href="/jobs/new/" class="item" id="click-post-job-menu">Post a Job</a>
+                <a href="/jobs/companies/create" class="item">Create Employer Profile</a>
+                <a href="/pricing/" class="item">Pricing</a>
+            </div>
+        </div>
+        <div class="ui dropdown item" id="community-header-menu">
+            Community
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a href="/events/" class="item">Events</a>
+                <a href="/blog/" class="item">Blog</a>
+                <a href="https://subscribe.page/s/937d3fc580" class="item">Subscribe to Newsletter</a>
+            </div>
+        </div>
+    
+
+
+    <div class="right menu">
+        <div class="item" id="login-header-menu">
+            
+                <a href="/accounts/login">Log In</a>
+            
+        </div>
+
+        
+
+        <div class="item">
+            
+                <a href="/pricing/" class="ui button" id="click-post-job-header">
+                    Post a Job
+                </a>
+            
+        </div>
+
+        <div class="ui dropdown right icon item">
+            <i class="bars icon"></i>
+            <div class="menu">
+                
+                    <div class="job-seeker-bars header" style="color: #0047BB;">
+                        For Job Seekers
+                    </div>
+                    <a href="/" class="job-seeker-bars item">Find a Job</a>
+                    <a href="/companies/" class="job-seeker-bars item">Browse Organizations</a>
+                    <a href="/users/profile/edit/" class="job-seeker-bars item">Get Matched to Companies</a>
+                    <a href="/impact-areas/" class="job-seeker-bars item">About our Impact Areas</a>
+
+                    <div class="job-seeker-bars divider"></div>
+
+
+                    <div class="employer-bars header" style="color: #0047BB;">
+                        For Employers
+                    </div>
+                    <a href="/jobs/new/" class="employer-bars item" id="click-post-job-burger-menu">Post a Job</a>
+                    <a href="/jobs/companies/create" class="employer-bars item">Create Employer Profile</a>
+                    <a href="/pricing/" class="employer-bars item">Pricing</a>
+
+                    <div class="employer-bars divider"></div>
+                
+
+                
+
+                
+
+
+                <div class="community-bars header" style="color: #0047BB;">
+                    Community
+                </div>
+                <a href="/events/" class="community-bars item">Events</a>
+                <a href="/blog/" class="community-bars item">Blog</a>
+
+                <div class="community-bars divider"></div>
+
+                <div class="header" style="color: #0047BB;">
+                    Account
+                </div>
+
+                
+                    <a href="/accounts/signup/" class="item">Create Account</a>
+                    <a href="/accounts/login/" class="item">Log In</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div></div>
+
+<!--Load content here-->
+
+    <!--Container-->
+    <div class="ui container">
+        <div class="ui segments overview">
+            <!--Container for job description-->
+            <div class="ui description">
+                <div class="content">
+                    <div class="ui red message">
+                        <div class="header">
+                            Oh no! The job you are looking for is no longer active.
+                        </div>
+                    </div>
+                    <div class="ui stackable vertically divided grid">
+                        <div class="two column row">
+                            <div class="column">
+                                <br><br>
+                            <div style="text-align: center">
+                                <h3>Search for other jobs on Tech Jobs for Good</h3>
+                            </div>
+                                <br><br>
+                                <!--Search Bar-->
+                                <form method="get" action="https://techjobsforgood.com/jobs/">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <label>Keyword Search</label>
+                                            <div class="ui fluid icon input search">
+                                                <input id="q" name="q" type="text"
+                                                       placeholder="Search for a job, company or location...">
+                                            </div>
+                                        </div>
+
+
+                                        <div style="text-align: center">
+                                            <button class="ui center button teal submit">Search Jobs</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="column">
+                                <p><strong>For Job Seekers</strong></p>
+                                <p><i class="large yellow bell outline icon"></i> Save custom search alerts for
+                                    impactful jobs in tech</p>
+                                <p><i class="large address card outline icon"></i> Hiring managers can reach out and
+                                    message you directly</p>
+
+                                <div class="ui divider"></div>
+
+                                <p><strong>For Employers</strong></p>
+                                <p><i class="large red bullhorn icon"></i> Post jobs and reach a talented community of
+                                    purpose driven technical talent</p>
+                                <p><i class="large file alternate outline icon"></i> Create an employer profile to
+                                    highlight your organization</p>
+                                <p><i class="large user outline icon"></i> Connect directly with talented candidates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+
+<!--Container for footer-->
+<div class="ui inverted vertical footer segment" style="background: #1D252C;">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $('.menu .item').tab();
+            $('.ui.accordion').accordion();
+            $('.ui.dropdown').dropdown();
+            $('.message .close')
+                .on('click', function () {
+                    $(this)
+                        .closest('.message')
+                        .transition('fade')
+                    ;
+                })
+            ;
+        });
+    </script>
+    <div class="ui center aligned container">
+        <br>
+        <div class="ui stackable inverted divided grid">
+            <div class="three wide column">
+                <h4 class="ui inverted header">For Job Seekers</h4>
+                <div class="ui inverted link list">
+                    <a href="/" class="item">Find a Job</a>
+                    <a href="/users/profile/edit/" class="item">Get Matched to Companies</a>
+                    <a href="/companies/" class="item">Browse Organizations</a>
+                    <a href="https://techjobsforgood.com/remote-jobs/" class="item">Find a Remote Tech Job</a>
+                    <a href="https://techjobsforgood.com/impact-areas/" class="item">Our Impact Areas</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">For Companies</h4>
+                <div class="ui inverted link list">
+                    <a href="/jobs/new/" class="item" id="click-post-job-footer-link">Post a Job</a>
+                    <a href="/jobs/companies/create/" class="item">Create Company Profile</a>
+                    <a href="/users/search/" class="item">Search Candidate Database</a>
+                    <a href="/pricing/" class="item">Pricing</a>
+                    <!-- <a href="/blog/" class="item">Community Blog</a>-->
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Connect with Us</h4>
+                <div class="ui inverted link list">
+                    <a href="/about/" class="item">About Us</a>
+                    <a href="/events/" class="item">Upcoming Events</a>
+                    <a href="/blog/" class="item">Community Blog</a>
+                    <a href="https://www.linkedin.com/company/tech-jobs-for-good/" target="_blank"
+                       class="item" rel="noopener">LinkedIn</a>
+                    <a href="https://bsky.app/profile/techjobsforgood.bsky.social" target="_blank"
+                       class="item">Bluesky</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">About Tech Jobs for Good</h4>
+                <p style="font-size: 1em;">Tech Jobs for Good helps mission-driven companies hire the best tech talent
+                    in the United States.</p>
+                <div class="ui large green buttons">
+                    <button onclick="window.location.href='/jobs/'" class="ui button"
+                            id="click-find-a-job-footer-button">Find a
+                        Job
+                    </button>
+                    <div class="or" style="z-index:0;"></div>
+                    <button onclick="window.location.href='/jobs/new/'" class="ui button"
+                            id="click-post-job-footer-button">Post a Job
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <a href="/" class="ui item">
+            <img src="/static/jobs/TJFG%20Logo_Stacked_DarkMode_RGB%201%20-%20no%20border.png"
+                 class="ui centered small image"
+                 alt="Tech Jobs for Good Logo">
+        </a>
+        <div class="ui horizontal inverted small divided link list">
+            <a class="item" href="/cdn-cgi/l/email-protection#e0939590908f9294a0948583888a8f8293868f92878f8f84ce838f8d">Contact Us</a>
+            <a class="item"
+               href="https://app.termly.io/document/terms-of-use-for-saas/01597699-ff1e-43b8-b193-eb4fff26f271"
+               target="_blank" rel="noopener">Terms and Conditions</a>
+            <a class="item" href="https://app.termly.io/document/privacy-policy/03839c01-7246-4617-9cc6-a300c34546fb"
+               target="_blank" rel="noopener">Privacy Policy</a>
+        </div>
+    </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<footer>
+
+    <!-- CSS -->
+    <style>
+        body {
+            background-color: #F2F4F4;
+        }
+
+        #click-find-a-job-footer-button {
+            background-color: #97D700;
+            color: #1D252C;
+            border-radius: 100px;
+        }
+
+        #click-find-a-job-footer-button:hover {
+            background-color: #7EBE00;
+            border-radius: 100px;
+        }
+
+        #click-post-job-footer-button {
+            background-color: #97D700;
+            color: #1D252C;
+            border-radius: 100px;
+        }
+
+        #click-post-job-footer-button:hover {
+            background-color: #7EBE00;
+            border-radius: 100px;
+        }
+
+        #click-post-job-header {
+            background-color: #97D700;
+            color: #1D252C;
+            border-radius: 100px;
+        }
+
+        #click-post-job-header:hover {
+            background-color: #7EBE00;
+            border-radius: 100px;
+        }
+    </style>
+
+
+    <!-- Non critical scripts-->
+
+    <!-- Start of Async Drift Code - don't run on mobile -->
+    <script defer>
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        if (!isMobile()) {
+//place script you don't want to run on mobile here
+            "use strict";
+
+            <!-- HelpScout -->
+            !function (e, t, n) {
+                function a() {
+                    var e = t.getElementsByTagName("script")[0], n = t.createElement("script");
+                    n.type = "text/javascript", n.async = !0, n.src = "https://beacon-v2.helpscout.net", e.parentNode.insertBefore(n, e)
+                }
+
+                if (e.Beacon = n = function (t, n, a) {
+                    e.Beacon.readyQueue.push({method: t, options: n, data: a})
+                }, n.readyQueue = [], "complete" === t.readyState) return a();
+                e.attachEvent ? e.attachEvent("onload", a) : e.addEventListener("load", a, !1)
+            }(window, document, window.Beacon || function () {
+            });
+            window.Beacon('init', '8596340c-3e4e-46ba-a7e3-56e56b18c538');
+
+        }
+    </script>
+    <!-- End of Async Drift Code -->
+
+
+    <!--Convertkit ten seconds on page only anonymous users-->
+    
+        <script defer data-uid="d8b9006888" src="https://tech-jobs-for-good.ck.page/d8b9006888/index.js"></script>
+    
+
+    <style>
+        @media only screen and (min-width: 990px) {
+            /* Logged out */
+            .community-bars {
+                display: none !important;
+            }
+
+            .job-seeker-bars {
+                display: none !important;
+            }
+
+            .employer-bars {
+                display: none !important;
+            }
+
+            /* Logged in - Job Seeker */
+            .jobs-bars {
+                display: none !important;
+            }
+
+            .profile-bars {
+                display: none !important;
+            }
+
+            /* Logged in - Employer */
+            .job-postings-bars {
+                display: none !important;
+            }
+
+            .candidates-bars {
+                display: none !important;
+            }
+
+            .employer-profile-bars {
+                display: none !important;
+            }
+
+        }
+
+        @media only screen and (min-width: 778px) and (max-width: 990px) {
+            /* Logged out */
+            #community-header-menu {
+                display: none;
+            }
+
+            .job-seeker-bars {
+                display: none !important;
+            }
+
+            .employer-bars {
+                display: none !important;
+            }
+
+            /* Logged in - Job Seeker */
+            #job-seeker-community-header-menu {
+                display: none;
+            }
+
+            .jobs-bars {
+                display: none !important;
+            }
+
+            .profile-bars {
+                display: none !important;
+            }
+
+            /* Logged in - Employer */
+            #employer-profile-header-menu {
+                display: none;
+            }
+
+            .job-postings-bars {
+                display: none !important;
+            }
+
+            .candidates-bars {
+                display: none !important;
+            }
+        }
+
+        @media only screen and (min-width: 440px) and (max-width: 778px) {
+            /* Logged out */
+            #community-header-menu {
+                display: none;
+            }
+
+            #job-seeker-header-menu {
+                display: none;
+            }
+
+            #employer-header-menu {
+                display: none;
+            }
+
+            /* Logged in - Job Seeker */
+            #job-seeker-community-header-menu {
+                display: none;
+            }
+
+            #job-seeker-jobs-header-menu {
+                display: none;
+            }
+
+            #job-seeker-profile-header-menu {
+                display: none;
+            }
+
+            /* Logged in - Employer */
+            #employer-profile-header-menu {
+                display: none;
+            }
+
+            #employer-job-postings-header-menu {
+                display: none;
+            }
+
+            #employer-candidates-header-menu {
+                display: none;
+            }
+
+            /* Logged in - Premium Job Seeker */
+            #premium-menu-text {
+                display: none;
+            }
+
+            #premium-gem-header {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 440px) {
+            /* Logged out */
+            #community-header-menu {
+                display: none;
+            }
+
+            #job-seeker-header-menu {
+                display: none;
+            }
+
+            #employer-header-menu {
+                display: none;
+            }
+
+            #login-header-menu {
+                display: none;
+            }
+
+            /* Logged in - Job Seeker */
+            #job-seeker-community-header-menu {
+                display: none;
+            }
+
+            #job-seeker-jobs-header-menu {
+                display: none;
+            }
+
+            #job-seeker-profile-header-menu {
+                display: none;
+            }
+
+            /* Logged in - Employer */
+            #employer-profile-header-menu {
+                display: none;
+            }
+
+            #employer-job-postings-header-menu {
+                display: none;
+            }
+
+            #employer-candidates-header-menu {
+                display: none;
+            }
+
+            /* Logged in - Premium Job Seeker */
+            #premium-menu-text {
+                display: none;
+            }
+
+            #premium-gem-header {
+                display: none;
+            }
+        }
+    </style>
+    <!--CSS Styles -->
+</footer>
+</html>

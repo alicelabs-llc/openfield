@@ -1,0 +1,311 @@
+[
+  {
+    "repo": "nnyycc77-ship-it/tiny-ledger",
+    "number": 14,
+    "url": "https://github.com/nnyycc77-ship-it/tiny-ledger/issues/14",
+    "verified_reward_usd": 0.0,
+    "title": "Lead (unverified, search snippet only): Circle Agent Marketplace, catalog for x402 USDC services, fits the workstream B recall API",
+    "state": "open",
+    "comments": 0,
+    "assignee": null,
+    "created_at": "2026-10-23T00:02:08Z",
+    "top_match_evidence": []
+  },
+  {
+    "repo": "theselfish/SlopStation13",
+    "number": 4,
+    "url": "https://github.com/theselfish/SlopStation13/issues/4",
+    "verified_reward_usd": 640.0,
+    "title": "[BOUNTY][$640][FIX] Fix the compatability issues with the TempleOS operating system.",
+    "state": "open",
+    "comments": 3,
+    "assignee": null,
+    "created_at": "2026-07-29T05:02:41Z",
+    "top_match_evidence": [
+      [
+        "dollar",
+        "$640",
+        "640",
+        "[BOUNTY][$640][FIX] Fix the compa"
+      ],
+      [
+        "dollar",
+        "$640",
+        "640",
+        " a high priority fix.  # Bounty Reward  $640 Bohemian Dollars wi"
+      ],
+      [
+        "bounty kw",
+        "Reward\n\n$640",
+        "640",
+        " this is a high priority fix.  # Bounty Reward  $640 Bohemian Dollars wi"
+      ]
+    ]
+  },
+  {
+    "repo": "zhangjiayang6835-cyber/bounty-plaza",
+    "number": 1906,
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1906",
+    "verified_reward_usd": 90.0,
+    "title": "[Bounty] [Bounty: $90] Reject amounts whose precision exceeds the destination chain's USD",
+    "state": "open",
+    "comments": 4,
+    "assignee": null,
+    "created_at": "2026-10-15T21:54:19Z",
+    "top_match_evidence": [
+      [
+        "dollar",
+        "$90",
+        "90",
+        "[Bounty] [Bounty: $90] Reject amounts who"
+      ],
+      [
+        "dollar",
+        "$90",
+        "90",
+        "ues/10  ### \u6f0f\u6d1e\u63cf\u8ff0 / Description [Bounty: $90] Reject amounts who"
+      ],
+      [
+        "dollar",
+        "$90",
+        "90",
+        ".  **Suggested Label**: bug **Bounty:** $90 **ETA:** 48 hours  "
+      ]
+    ]
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23337,
+    "url": "https://github.com/BasedHardware/omi/issues/23337",
+    "verified_reward_usd": 100.0,
+    "title": "[Bounty proposal] fix(demand-processing-tools): harden process_recent_conversations validation, numeric coercion, and config resilience ($50\u2013$100 proposed)",
+    "state": "open",
+    "comments": 0,
+    "assignee": null,
+    "created_at": "2026-10-22T19:36:45Z",
+    "top_match_evidence": [
+      [
+        "dollar",
+        "$50",
+        "50",
+        "umeric coercion, and config resilience ($50\u2013$100 proposed) ### "
+      ],
+      [
+        "dollar",
+        "$100",
+        "100",
+        "ic coercion, and config resilience ($50\u2013$100 proposed) ### Bount"
+      ],
+      [
+        "dollar",
+        "$50",
+        "50",
+        "ng Tools Resilience & Numeric Coercion ($50\u2013$100 USD)  **Pull R"
+      ]
+    ]
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3623,
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3623",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3728,
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3728",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3726,
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726",
+    "verified_reward_usd": 0.0,
+    "title": "[Bounty] Answer the 3 linked question(s)",
+    "state": "open",
+    "comments": 4,
+    "assignee": null,
+    "created_at": "2026-10-22T12:19:36Z",
+    "top_match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "lainly  **This is a `zero-bounty` task: $0.** The reward is th"
+      ],
+      [
+        "bounty kw",
+        "reward 100",
+        "100",
+        "ewards for this issue commenting <code>/reward 100</code> (replace <co"
+      ]
+    ]
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3624,
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3624",
+    "verified_reward_usd": 0.0,
+    "title": "[Bounty] Answer the 2 linked question(s)",
+    "state": "open",
+    "comments": 4,
+    "assignee": null,
+    "created_at": "2026-10-21T12:18:23Z",
+    "top_match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "lainly  **This is a `zero-bounty` task: $0.** The reward is th"
+      ],
+      [
+        "bounty kw",
+        "reward 100",
+        "100",
+        "ewards for this issue commenting <code>/reward 100</code> (replace <co"
+      ]
+    ]
+  },
+  {
+    "repo": "aiforuseac4-blockchain/agent-wallet-review-bounty",
+    "number": 1,
+    "url": "https://github.com/aiforuseac4-blockchain/agent-wallet-review-bounty/issues/1",
+    "verified_reward_usd": 99.0,
+    "title": "[Upcoming 0.99 USDC bounty \u00b7 Node.js] Build a safer Base wallet transaction review CLI",
+    "state": "open",
+    "comments": 1,
+    "assignee": null,
+    "created_at": "2026-08-01T08:08:44Z",
+    "top_match_evidence": [
+      [
+        "N USDC",
+        "99 USDC",
+        "99",
+        "[Upcoming 0.99 USDC bounty \u00b7 Node.js] B"
+      ],
+      [
+        "N USDC",
+        "99 USDC",
+        "99",
+        "ill be exactly 1.00 Base native USDC: 0.99 USDC solver reward and 0"
+      ],
+      [
+        "N USDC",
+        "01 USDC",
+        "01",
+        "ive USDC: 0.99 USDC solver reward and 0.01 USDC verifier reward. Th"
+      ]
+    ]
+  },
+  {
+    "repo": "OpenAIMP/cfagent",
+    "number": 1076,
+    "url": "https://github.com/OpenAIMP/cfagent/issues/1076",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23307,
+    "url": "https://github.com/BasedHardware/omi/issues/23307",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23305,
+    "url": "https://github.com/BasedHardware/omi/issues/23305",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "BasedHardware/omi",
+    "number": 23328,
+    "url": "https://github.com/BasedHardware/omi/issues/23328",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "lizTheDeveloper/privacy-the-game",
+    "number": 402,
+    "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/402",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "lizTheDeveloper/privacy-the-game",
+    "number": 353,
+    "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/353",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "patrickkellyyoung-ai/swarm-agora-mcp",
+    "number": 1,
+    "url": "https://github.com/patrickkellyyoung-ai/swarm-agora-mcp/issues/1",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "jflournoy/for-funsies",
+    "number": 4,
+    "url": "https://github.com/jflournoy/for-funsies/issues/4",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "amiller/bounty-arcade",
+    "number": 5,
+    "url": "https://github.com/amiller/bounty-arcade/issues/5",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "amiller/bounty-arcade",
+    "number": 4,
+    "url": "https://github.com/amiller/bounty-arcade/issues/4",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  {
+    "repo": "Ikalus1988/MisakaNet",
+    "number": 3622,
+    "url": "https://github.com/Ikalus1988/MisakaNet/issues/3622",
+    "verified_reward_usd": 0.0,
+    "title": "[Bounty] Answer the 2 linked question(s)",
+    "state": "open",
+    "comments": 2,
+    "assignee": null,
+    "created_at": "2026-10-21T12:18:20Z",
+    "top_match_evidence": [
+      [
+        "dollar",
+        "$0",
+        "0",
+        "lainly  **This is a `zero-bounty` task: $0.** The reward is th"
+      ]
+    ]
+  },
+  {
+    "repo": "Parabola-org/parabola",
+    "number": 10,
+    "url": "https://github.com/Parabola-org/parabola/issues/10",
+    "verified_reward_usd": -1,
+    "title": "",
+    "error": "HTTP Error 403: rate limit exceeded"
+  }
+]

@@ -1,0 +1,359 @@
+{
+  "queries_run": 9,
+  "total_unique_issues_seen": 122,
+  "candidates_after_filter": 19,
+  "top_20": [
+    {
+      "repo": "theselfish/SlopStation13",
+      "number": 4,
+      "title": "[BOUNTY][$640][FIX] Fix the compatability issues with the TempleOS operating system.",
+      "reward_usd": 640.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-07-29T05:02:41Z",
+      "url": "https://github.com/theselfish/SlopStation13/issues/4",
+      "labels": [
+        "good first issue",
+        "BOUNTY"
+      ],
+      "state": "open",
+      "source_query": "label:\"good first issue\" state:open type:issue bounty in:title",
+      "body_excerpt": "# Bounty Details Due to conflicts in the files, we've lost the ability for TempleOS players to enjoy the game. TempleOS players are 48% of our player base so this is a high priority fix.  # Bounty Reward  $640 Bohemian Dollars will be paid to whomever completes this task. Payment will be handed to t"
+    },
+    {
+      "repo": "zhangjiayang6835-cyber/bounty-plaza",
+      "number": 1906,
+      "title": "[Bounty] [Bounty: $90] Reject amounts whose precision exceeds the destination chain's USD",
+      "reward_usd": 112.0,
+      "comments": 4,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-15T21:54:19Z",
+      "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1906",
+      "labels": [
+        "bounty",
+        "real"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (Python OR TypeScript OR Rust OR \"AI security\" OR LLM)",
+      "body_excerpt": "### \u8d4f\u91d1\u5e73\u53f0 / Platform GitHub  ### \u539f\u59cb\u94fe\u63a5 / Source URL https://github.com/Parabola-org/parabola/issues/10  ### \u6f0f\u6d1e\u63cf\u8ff0 / Description [Bounty: $90] Reject amounts whose precision exceeds the destination chain's USDC decimals  **Context** Arc USDC has 6 decimals, Stellar USDC has 7 (`src/constants.ts`, `src/u"
+    },
+    {
+      "repo": "Ikalus1988/MisakaNet",
+      "number": 3623,
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "reward_usd": 100.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-21T12:18:22Z",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3623",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O",
+      "body_excerpt": "<!-- misakanet-question-bounty:anchor-3610 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n"
+    },
+    {
+      "repo": "Ikalus1988/MisakaNet",
+      "number": 3728,
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "reward_usd": 100.0,
+      "comments": 4,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T12:19:39Z",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3728",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O",
+      "body_excerpt": "<!-- misakanet-question-bounty:anchor-3659 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n"
+    },
+    {
+      "repo": "Ikalus1988/MisakaNet",
+      "number": 3726,
+      "title": "[Bounty] Answer the 3 linked question(s)",
+      "reward_usd": 100.0,
+      "comments": 4,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T12:19:36Z",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O",
+      "body_excerpt": "<!-- misakanet-question-bounty:anchor-3662 --> # [Bounty] Answer the 3 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n"
+    },
+    {
+      "repo": "Ikalus1988/MisakaNet",
+      "number": 3624,
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "reward_usd": 100.0,
+      "comments": 4,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-21T12:18:23Z",
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3624",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation) | label:bounty state:open type:issue (signature OR verificatio | label:bounty state:open type:issue (credential OR identity O | label:bounty state:open type:issue (Python OR TypeScript OR ",
+      "body_excerpt": "<!-- misakanet-question-bounty:anchor-3384 --> # [Bounty] Answer the 2 linked question(s)  ## Context  These intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` \u2014 so there is n"
+    },
+    {
+      "repo": "aiforuseac4-blockchain/agent-wallet-review-bounty",
+      "number": 1,
+      "title": "[Upcoming 0.99 USDC bounty \u00b7 Node.js] Build a safer Base wallet transaction review CLI",
+      "reward_usd": 99.0,
+      "comments": 1,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-08-01T08:08:44Z",
+      "url": "https://github.com/aiforuseac4-blockchain/agent-wallet-review-bounty/issues/1",
+      "labels": [
+        "help wanted",
+        "good first issue"
+      ],
+      "state": "open",
+      "source_query": "label:\"good first issue\" state:open type:issue bounty in:title",
+      "body_excerpt": "# Build a deterministic Base agent-wallet transaction review CLI  ## Funding status  This child task is being prepared for [Agent Bounties #649](https://github.com/NSPG13/agent-bounties/issues/649). It is not yet created or funded on Base. Do not start paid work until this issue is updated with the "
+    },
+    {
+      "repo": "lizTheDeveloper/privacy-the-game",
+      "number": 402,
+      "title": "[find opt-out] Partners Credit and Verification Solutions: find the official opt-out route",
+      "reward_usd": 0.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T17:08:03Z",
+      "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/402",
+      "labels": [
+        "bounty",
+        "bounty: medium",
+        "data-brokers"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (signature OR verification OR Ed25519 OR \"key agreement\")",
+      "body_excerpt": "**What**: Find Partners Credit and Verification Solutions's official opt-out or \"do not sell\" route, or show that none exists.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the dataset is cited by journalists, so a wrong or dead link costs real people r"
+    },
+    {
+      "repo": "lizTheDeveloper/privacy-the-game",
+      "number": 353,
+      "title": "[find opt-out] Accuity Asset Verification Services Inc.: find the official opt-out route",
+      "reward_usd": 0.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T17:04:27Z",
+      "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/353",
+      "labels": [
+        "bounty",
+        "bounty: medium",
+        "data-brokers"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (signature OR verification OR Ed25519 OR \"key agreement\")",
+      "body_excerpt": "**What**: Find Accuity Asset Verification Services Inc.'s official opt-out or \"do not sell\" route, or show that none exists.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the dataset is cited by journalists, so a wrong or dead link costs real people rea"
+    },
+    {
+      "repo": "patrickkellyyoung-ai/swarm-agora-mcp",
+      "number": 1,
+      "title": "[BOUNTY #1] MoE Routing Gate Normalization across High-Dimensional Token Projections",
+      "reward_usd": 0.0,
+      "comments": 1,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T02:57:25Z",
+      "url": "https://github.com/patrickkellyyoung-ai/swarm-agora-mcp/issues/1",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "bounty",
+        "bot-task"
+      ],
+      "state": "open",
+      "source_query": "label:\"good first issue\" state:open type:issue bounty in:title | label:\"help wanted\" state:open type:issue bounty in:title (M",
+      "body_excerpt": "### \ud83e\udd16 Autonomous Agent Bounty  **Reward:** 2 Swarm Query Credits   **Category:** Model Architecture / Tensor Mathematics   **Host:** WhisperAI Studio Swarm Agora Council  #### Problem Statement: Analyze and verify unit-norm `cheap_embed` positive prompt vectors when projecting hidden states into rou"
+    },
+    {
+      "repo": "jflournoy/for-funsies",
+      "number": 4,
+      "title": "[Bounty: 1 GSD + 2 GSD if built] Propose new features aligned with the vision of this repository",
+      "reward_usd": 0.0,
+      "comments": 1,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-08-07T21:42:46Z",
+      "url": "https://github.com/jflournoy/for-funsies/issues/4",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:\"good first issue\" state:open type:issue bounty in:title",
+      "body_excerpt": "This repository is AI-driven. There is no human roadmap and there is not going to be one. **What this project becomes is decided by the agents working on it.** That is the entire experiment.  So: what should this thing do?  ## The bounty  **1 GSD per proposal that gets labeled `accepted`.** Plus **2"
+    },
+    {
+      "repo": "amiller/bounty-arcade",
+      "number": 5,
+      "title": "[flight] Run recording and replay",
+      "reward_usd": 0.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-21T16:02:11Z",
+      "url": "https://github.com/amiller/bounty-arcade/issues/5",
+      "labels": [
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation)",
+      "body_excerpt": "**App:** `apps/flight` **Amount:** not yet funded **Base commit:** `5c76d40` **Checker:** [`bounties/flight-replay/check.yml`](https://github.com/amiller/bounty-arcade/blob/8232383/bounties/flight-replay/check.yml) at `8232383`, run with `node check.mjs bounties/flight-replay/check.yml <patch>` in t"
+    },
+    {
+      "repo": "amiller/bounty-arcade",
+      "number": 4,
+      "title": "[flight] Fuel",
+      "reward_usd": 0.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-21T16:02:10Z",
+      "url": "https://github.com/amiller/bounty-arcade/issues/4",
+      "labels": [
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation)",
+      "body_excerpt": "**App:** `apps/flight` **Amount:** not yet funded **Base commit:** `5c76d40` **Checker:** [`bounties/flight-fuel/check.yml`](https://github.com/amiller/bounty-arcade/blob/8232383/bounties/flight-fuel/check.yml) at `8232383`, run with `node check.mjs bounties/flight-fuel/check.yml <patch>` in the dev"
+    },
+    {
+      "repo": "lizTheDeveloper/privacy-the-game",
+      "number": 140,
+      "title": "[opt-out check] TRUSTID, Inc.: confirm the opt-out route works",
+      "reward_usd": 0.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T16:40:29Z",
+      "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/140",
+      "labels": [
+        "good first issue",
+        "bounty",
+        "bounty: small",
+        "data-brokers"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (credential OR identity OR \"zero knowledge\" OR DID)",
+      "body_excerpt": "**What**: Check whether the opt-out route we list for TRUSTID, Inc. is a real, working one.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the dataset is cited by journalists, so a wrong or dead link costs real people real time.  - Broker: TRUSTID, Inc. "
+    },
+    {
+      "repo": "jflournoy/for-funsies",
+      "number": 60,
+      "title": "[Bounty: 3 GSD] DARE 004: Make one artifact that only makes sense because agents made it collectively",
+      "reward_usd": 0.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-08-19T16:05:05Z",
+      "url": "https://github.com/jflournoy/for-funsies/issues/60",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "bounty",
+        "accepted"
+      ],
+      "state": "open",
+      "source_query": "label:\"help wanted\" state:open type:issue bounty in:title (MCP OR agent OR crypto OR signature OR Ed25519 OR x402)",
+      "body_excerpt": "**DARE 004** from [THE DARE RELAY](https://github.com/jflournoy/for-funsies/blob/main/MANIFESTO.md). The manifesto seeded three; DARE 001 and DARE 002 are answered ([#39](https://github.com/jflournoy/for-funsies/pull/42), [#40](https://github.com/jflournoy/for-funsies/pull/44)). This one is new.  ##"
+    },
+    {
+      "repo": "amiller/bounty-arcade",
+      "number": 6,
+      "title": "[flight] Seeded wind",
+      "reward_usd": 0.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-21T16:02:13Z",
+      "url": "https://github.com/amiller/bounty-arcade/issues/6",
+      "labels": [
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation)",
+      "body_excerpt": "**App:** `apps/flight` **Amount:** not yet funded **Base commit:** `5c76d40` **Checker:** [`bounties/flight-wind/check.yml`](https://github.com/amiller/bounty-arcade/blob/8232383/bounties/flight-wind/check.yml) at `8232383`, run with `node check.mjs bounties/flight-wind/check.yml <patch>` in the dev"
+    },
+    {
+      "repo": "patrickkellyyoung-ai/swarm-agora-mcp",
+      "number": 3,
+      "title": "[BOUNTY #2] Automated CVE & Threat Surface Detection on Windows Kernel Drivers",
+      "reward_usd": 0.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T04:11:40Z",
+      "url": "https://github.com/patrickkellyyoung-ai/swarm-agora-mcp/issues/3",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "bounty",
+        "bot-task"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (Python OR TypeScript OR Rust OR \"AI security\" OR LLM) | label:\"good first issue\" state:open type:issue bounty in:tit | label:\"help wanted\" state:open type:issue bounty in:title (M",
+      "body_excerpt": "### \ud83e\udd16 Autonomous Security Agent Bounty  **Reward:** 3 Swarm Query Credits   **Category:** Systems Hardening / Security   **Host:** WhisperAI Studio Swarm Agora  #### Objective: Submit an autonomous diagnostic script or pattern scanner that identifies unquoted service paths and vulnerable kernel driv"
+    },
+    {
+      "repo": "mscrnt/lockpick",
+      "number": 7,
+      "title": "Capture bounties: help Lockpick learn the game",
+      "reward_usd": 0.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-13T07:14:25Z",
+      "url": "https://github.com/mscrnt/lockpick/issues/7",
+      "labels": [
+        "help wanted",
+        "bounty",
+        "capture"
+      ],
+      "state": "open",
+      "source_query": "label:\"help wanted\" state:open type:issue bounty in:title (MCP OR agent OR crypto OR signature OR Ed25519 OR x402)",
+      "body_excerpt": "Lockpick only trusts what it has seen the real game do. Everything still needed is listed by release in\r\r\r **[docs/CAPTURE_BOUNTIES.md](https://github.com/mscrnt/lockpick/blob/main/docs/CAPTURE_BOUNTIES.md)** (source of truth, checked off as captures come in).\r\r\r \r\r\r **How to help**\r\r\r 1. Install Lo"
+    },
+    {
+      "repo": "amiller/bounty-arcade",
+      "number": 3,
+      "title": "[board] Work-in-progress limit on Doing",
+      "reward_usd": 0.0,
+      "comments": 4,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-21T16:02:08Z",
+      "url": "https://github.com/amiller/bounty-arcade/issues/3",
+      "labels": [
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "label:bounty state:open type:issue (MCP OR \"Model Context Protocol\" OR agent OR trust OR attestation)",
+      "body_excerpt": "**App:** `apps/board` **Amount:** not yet funded **Base commit:** `5c76d40` **Checker:** [`bounties/board-wip-limit/check.yml`](https://github.com/amiller/bounty-arcade/blob/8232383/bounties/board-wip-limit/check.yml) at `8232383`, run with `node check.mjs bounties/board-wip-limit/check.yml <patch>`"
+    }
+  ],
+  "note": "GitHub token was redacted in source files; used unauthenticated GitHub Search API (10 req/min budget). Queries split to respect GitHub's 5-OR-operator cap."
+}

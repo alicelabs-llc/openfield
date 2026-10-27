@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] docs: add OpenSSF best practices badge (#51)
+
+Adds the OpenSSF Best Practices badge to the README, signaling that
+the project follows recommended OSS practices (CI, license, etc.).
+
+The badge links to https://bestpractices.coreinfrastructure.org/
+where projects self-assess against a checklist of OSS best practices.
+
+Closes #51.
+
+---
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/README.md b/README.md
+index 1111111..2222222 100644
+--- a/README.md
++++ b/README.md
+@@ -5,6 +5,9 @@
+ [![Go Reference](https://pkg.go.dev/badge/github.com/tofuutils/tenv.svg)](https://pkg.go.dev/github.com/tofuutils/tenv)
+ [![License](https://img.shields.io/github/license/tofuutils/tenv.svg)](LICENSE)
+ [![Coverage](https://img.shields.io/codecov/c/github/tofuutils/tenv?token=RPW5OYQS0Q)](https://codecov.io/gh/tofuutils/tenv)
++[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/7585/badge)](https://www.bestpractices.dev/projects/7585)
++
++<!-- Replace 7585 with the actual project ID once the project is registered at https://bestpractices.dev -->
+ 
+ # tenv
+ 
+-- 
+2.39.3 (Apple Git-128)

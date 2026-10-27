@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>Web Security Research Papers - PortSwigger Research</title>
+        <meta name="description" content="Pioneering web security research and the latest research articles from the industry-leading team at PortSwigger Research, James Kettle and Gareth Heyes.">
+        
+<!-- Twitter data -->
+            <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Web Security Research Papers - PortSwigger Research">
+<meta name="twitter:image" content="https://portswigger.net/content/images/logos/portswigger-twittercardlogo.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Web Security Research Papers - PortSwigger Research" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://portswigger.net/research" />
+<meta property="og:image" content="https://portswigger.net/content/images/logos/portswigger-twittercardlogo.png" />
+
+        <link rel="canonical" href="https://portswigger.net/research"/>
+        <link href="/content/images/logos/favicon.ico" rel="icon" type="image/x-icon"/>
+        <link href="/content/images/logos/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="/content/psresearch.css" rel="stylesheet" type="text/css">
+        <link rel="alternate" type="application/rss+xml" href="/research/rss" title="PortSwigger Research">
+        <link rel="preload" href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot" as="font" crossorigin="anonymous">
+<link rel="preload" href="/content/fonts/ps-main/ps-icons.woff?l1la2n" as="font" crossorigin="anonymous">
+            <script nonce="LqOz3h62E0JVOAUDudDHj3BRcgHnp3Vi" type="text/javascript">
+        !function (t, e) {
+            var o, n, p, r;
+            e.__SV || (window.posthog && window.posthog.__loaded) || (window.posthog = e, e._i = [], e.init = function (i, s, a) {
+                function g(t, e) {
+                    var o = e.split(".");
+                    2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () {
+                        t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+
+                (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                var u = e;
+                for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) {
+                    var e = "posthog";
+                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                }, u.people.toString = function () {
+                    return u.toString(1) + ".people (stub)"
+                }, o = "init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Gr Hr createPersonProfile setInternalOrTestUser Wr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+                e._i.push([i, s, a])
+            }, e.__SV = 1)
+        }(document, window.posthog || []);
+        posthog.init('phc_wWfgSaa3bSjrR9jrhn9eUjGxbsMftwzRCsENSman2AWL', {
+            api_host: 'https://phingest.portswigger.com',
+            defaults: '2026-01-30',
+            person_profiles: 'identified_only'
+        });
+    </script>
+
+    </head>
+    <body class="theme-research">
+        
+
+<script nonce="LqOz3h62E0JVOAUDudDHj3BRcgHnp3Vi">
+(function(window, document, dataLayerName, id) {
+    window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+    var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+    var qP = [];
+    dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "LqOz3h62E0JVOAUDudDHj3BRcgHnp3Vi";
+var qPString=qP.length>0?("?"+qP.join("&")):"";
+    tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+    scripts.parentNode.insertBefore(tags,scripts);
+    !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+    var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+    })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+</script>
+        
+
+
+        <header class="page-header" id="top">
+            <div class="container">
+    <a class="logo" href="/"></a>
+    <div class="header-right">
+        <div class="login-buttons">
+                <a class="button-orange-small" href="/users">Login</a>
+        </div>
+        
+
+    <input type="checkbox" id="hamburger-mobile" class="hamburger-input-mobile">
+    <input type="radio" id="hamburger-desktop" class="hamburger-input-desktop" name="mega-nav-input">
+    <div class="hamburger-menu-mobile">
+        <label class="hamburger-menu-label header-hidden" for="hamburger-mobile">
+            <span class="hamburger-layers"></span>
+        </label>
+    </div>
+    <div class="mega-nav">
+        <input type="radio" id="mega-nav-close" class="mega-nav-input-close" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-1" class="mega-nav-input-1" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-2" class="mega-nav-input-2" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-6" class="mega-nav-input-6" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-7" class="mega-nav-input-7" name="mega-nav-input">
+
+        <label for="mega-nav-close" class="mega-nav-close"></label>
+
+        <label class="mega-nav-label mega-nav-label-1" for="mega-nav-label-1">
+            <span class="mega-nav-text">Products</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+        <label class="mega-nav-label mega-nav-label-2" for="mega-nav-label-2">
+            <span class="mega-nav-text">Solutions</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+        <a class="mega-nav-link" href="/research"><span class="mega-nav-text">Research</span></a>
+        <a class="mega-nav-link" href="/web-security"><span class="mega-nav-text">Academy</span></a>
+        <label class="mega-nav-label mega-nav-label-6" for="mega-nav-label-6">
+            <span class="mega-nav-text">Support</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+
+        <label class="mega-nav-label mega-nav-label-7 header-hidden" for="mega-nav-label-7">
+            <span class="mega-nav-text">Company</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+        <div class="hamburger-menu-desktop">
+            <label class="hamburger-menu-label header-show" for="hamburger-desktop">
+                <span class="hamburger-layers"></span>
+            </label>
+            <div>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-1" href="/customers"><span class="mega-nav-text">Customers</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-3" href="/about"><span class="mega-nav-text">About</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-4" href="/blog"><span class="mega-nav-text">Blog</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-5" href="/careers"><span class="mega-nav-text">Careers</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-6" href="/legal"><span class="mega-nav-text">Legal</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-7" href="/contact"><span class="mega-nav-text">Contact</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-8" href="/support/reseller-faqs"><span class="mega-nav-text">Resellers</span></a>
+            </div>
+        </div>
+
+        <a class="mega-nav-link header-hidden" href="/users/youraccount"><span class="mega-nav-text">My account</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-1" href="/customers"><span class="mega-nav-text">Customers</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-3" href="/about"><span class="mega-nav-text">About</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-4" href="/blog"><span class="mega-nav-text">Blog</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-5" href="/careers"><span class="mega-nav-text">Careers</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-6" href="/legal"><span class="mega-nav-text">Legal</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-7" href="/contact"><span class="mega-nav-text">Contact</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-8" href="/support/reseller-faqs"><span class="mega-nav-text">Resellers</span></a>
+
+        <div class="mega-nav-container">
+
+            <div class="mega-nav-content mega-nav-content-1">
+                <div class="section-white-medium-no-padding">
+                    <div class="container-columns-66-percent-right">
+                        <div>
+                            <a href="/burp/burp-at" class="link-block-white">
+                                <img src="/mega-nav/images/burp-at.svg" alt="Burp AT">
+                                <span><strong>Burp AT</strong></span>
+                                <span>Agentic AI that extends human-led pentesting.</span>
+                            </a>
+
+                            <a href="/burp/enterprise" class="link-block-white">
+                                <img src="/content/images/svg/icons/enterprise.svg" alt="Burp Suite DAST">
+                                <span><strong>Burp Suite DAST</strong></span>
+                                <span>The enterprise-enabled dynamic web vulnerability scanner.</span>
+                            </a>
+
+                            <a href="/burp/pro" class="link-block-white">
+                                <img src="/content/images/svg/icons/professional.svg" alt="Burp Suite Professional">
+                                <span><strong>Burp Suite Professional</strong></span>
+                                <span>The world's #1 web penetration testing toolkit.</span>
+                            </a>
+
+                            <a href="/burp/communitydownload" class="link-block-white">
+                                <img src="/content/images/svg/icons/community.svg" alt="Burp Suite Community Edition">
+                                <span><strong>Burp Suite Community Edition</strong></span>
+                                <span>The best manual tools to start web security testing.</span>
+                            </a>
+
+                            <a href="/burp" class="chevron-after">View all product editions</a>
+                        </div>
+
+                        <div>
+                            <div class="container-cards-lists-white">
+                                <a href="/burp/vulnerability-scanner">
+                                    <p><strong>Burp Scanner</strong></p>
+                                    <p>Burp Suite's web vulnerability scanner</p>
+                                    <img src="/mega-nav/images/burp-suite-scanner.jpg" alt="Burp Suite's web vulnerability scanner'">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mega-nav-content mega-nav-content-2">
+                <div class="section-white-medium-no-padding">
+                    <div class="container-columns-66-percent-right">
+                        <div>
+                            <div class="container-columns">
+                                <a href="/solutions/attack-surface-visibility" class="link-block-white">
+                                    <span><strong>Attack surface visibility</strong></span>
+                                    <span>Improve security posture, prioritize manual testing, free up time.</span>
+                                </a>
+                                <a href="/solutions/ci-driven-scanning" class="link-block-white">
+                                    <span><strong>CI-driven scanning</strong></span>
+                                    <span>More proactive security - find and fix vulnerabilities earlier.</span>
+                                </a>
+                                <a href="/solutions" class="link-block-white">
+                                    <span><strong>Application security testing</strong></span>
+                                    <span>See how our software enables the world to secure the web.</span>
+                                </a>
+                                <a href="/solutions/devsecops" class="link-block-white">
+                                    <span><strong>DevSecOps</strong></span>
+                                    <span>Catch critical bugs; ship more secure software, more quickly.</span>
+                                </a>
+
+                                <a href="/solutions/penetration-testing" class="link-block-white">
+                                    <span><strong>Penetration testing</strong></span>
+                                    <span>Accelerate penetration testing - find more bugs, more quickly.</span>
+                                </a>
+                                <a href="/solutions/automated-security-testing" class="link-block-white">
+                                    <span><strong>Automated scanning</strong></span>
+                                    <span>Scale dynamic scanning. Reduce risk. Save time/money.</span>
+                                </a>
+
+                                <a href="/solutions/bug-bounty-hunting" class="link-block-white">
+                                    <span><strong>Bug bounty hunting</strong></span>
+                                    <span>Level up your hacking and earn more bug bounties.</span>
+                                </a>
+                                <a href="/solutions/compliance" class="link-block-white">
+                                    <span><strong>Compliance</strong></span>
+                                    <span>Enhance security monitoring to comply with confidence.</span>
+                                </a>
+                            </div>
+                            <a href="/solutions" class="chevron-after">View all solutions</a>
+                        </div>
+
+                        <div>
+                            <div class="container-cards-lists-white">
+                                <a href="/burp/dast/resources/dast-vs-professional">
+                                    <p><strong>Product comparison</strong></p>
+                                    <p>What's the difference between Pro and DAST?</p>
+                                    <img src="/mega-nav/images/burp-suite.jpg" alt="Burp Suite Professional vs Burp Suite DAST">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mega-nav-content mega-nav-content-6">
+                <div class="section-white-medium-no-padding">
+                    <div class="container-columns-66-percent-right">
+                        <div>
+                            <div class="container-columns">
+                                <a href="/support" class="link-block-white">
+                                    <span><strong>Support Center</strong></span>
+                                    <span>Get help and advice from our experts on all things Burp.</span>
+                                </a>
+                                <a href="/burp/documentation" class="link-block-white">
+                                    <span><strong>Documentation</strong></span>
+                                    <span>Tutorials and guides for Burp Suite.</span>
+                                </a>
+                                <a href="/burp/documentation/desktop/getting-started" class="link-block-white">
+                                    <span><strong>Get Started - Professional</strong></span>
+                                    <span>Get started with Burp Suite Professional.</span>
+                                </a>
+                                <a href="/burp/documentation/dast/setup" class="link-block-white">
+                                    <span><strong>Get Started - DAST</strong></span>
+                                    <span>Get started with Burp Suite DAST.</span>
+                                </a>
+                                <a href="/burp/releases" class="link-block-white">
+                                    <span><strong>Downloads</strong></span>
+                                    <span>Download the latest version of Burp Suite.</span>
+                                </a>
+                            </div>
+                            <a href="/support" class="chevron-after">Visit the Support Center</a>
+                        </div>
+
+                        <div>
+                            <div class="container-cards-lists-white">
+                                <a href="/burp/releases">
+                                    <p><strong>Downloads</strong></p>
+                                    <p>Download the latest version of Burp Suite.</p>
+                                    <img src="/mega-nav/images/latest-burp-suite-software-download.jpg" alt="The latest version of Burp Suite software for download">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+</div>
+        </header>
+        <nav class="navigation-top">
+            <input id="nav-main-featured-research" type="checkbox">
+            <label for="nav-main-featured-research">
+                <span>Overview</span>
+                <span class="icon-arrow-head-down"></span>
+            </label>
+            <ul>
+                
+
+                <li class = current>
+                    <a href="/research">Overview</a>
+                </li>
+                <li >
+                    <input type="checkbox" id="nav-featured-research">
+<label for="nav-featured-research">
+    <span>Core Topics</span>
+    <span class="icon-arrow-head-down"></span>
+</label>
+    <div>
+            <a href="/research/black-hat">Black Hat</a>
+            <a href="/research/cross-site-scripting-research">XSS</a>
+            <a href="/research/request-smuggling">Request Smuggling</a>
+            <a href="/research/template-injection">Template Injection</a>
+            <a href="/research/top-10-web-hacking-techniques">Top 10 Hacking Techniques</a>
+    </div>
+
+                </li>
+                <li >
+                    <a href="/research/articles">Articles</a>
+                </li>
+                <li >
+                    <input type="checkbox" id="nav-meet-the-researchers">
+<label for="nav-meet-the-researchers">
+    <span>Meet the Researchers</span>
+    <span class="icon-arrow-head-down"></span>
+</label>
+<div>
+    <a href="/research/james-kettle">James Kettle</a>
+    <a href="/research/gareth-heyes">Gareth Heyes</a>
+    <a href="/research/zakhar-fedotkin">Zakhar Fedotkin</a>
+    <a href="/research/tom-stacey">Tom Stacey</a>
+    <a href="/research/alex-craig">Alex Craig</a>
+</div>
+
+                </li>
+                <li >
+                    <a href="/research/talks">Talks</a>
+                </li>
+                <li>
+                    <a href="/research/rss">
+                        RSS <span class="icon-rss"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            
+
+<div class="hero theme-navy-1">
+    <div class="hero-content-center">
+            <img src="/content/images/logos/ps-research-logo-orange.svg" alt="Portswigger Research Logo" width="350"
+                 height="auto"/>
+            <h3>Pushing the boundaries of web security</h3>
+    </div>
+</div>
+
+    <div class="section-full-width theme-grey-5">
+        <noscript>
+    <div class="noscript-warning">This page requires JavaScript for an enhanced user experience.</div>
+</noscript>
+        <h2 class="text-center">Featured Research</h2>
+        
+<div class="widget-tile-container margin-top-m">
+
+
+<a href="/research/css-the-bomb-inside-your-inbox" class="tile-container  onecolumn widget-tile size0 style1 textstyle2 is-whitebackground" data-backgroundimageurl=/cms/images/0e/fe/eb24-tile-tile1x1.png  data-backgroundcolorid="0">
+    
+<h3 class="tile-text1 notext2">
+CSS:the bomb inside your inbox</h3>
+    
+<span class="tile-date">06 August 2026</span>
+    
+<span class="tile-text1-alt">CSS:the bomb inside your inbox</span>
+        
+
+</a>
+
+<a href="/research/crlf-powered-desync-attacks" class="tile-container  onecolumn widget-tile size0 style1 textstyle8 is-whitebackground" data-backgroundimageurl=/cms/images/14/fe/c5f2-tile-preview.png  data-backgroundcolorid="0">
+    
+<h3 class="tile-text1 notext2">
+        <span class="tile-text-container">CRLF-Powered Desync Attacks: Beheading HTTP Streams</span>
+</h3>
+    
+<span class="tile-date">05 August 2026</span>
+    
+<span class="tile-text1-alt">CRLF-Powered Desync Attacks: Beheading HTTP Streams</span>
+        
+
+</a>
+
+<a href="/research/can-ai-do-novel-security-research" class="tile-container  onecolumn widget-tile size0 style1 textstyle2 is-whitebackground" data-backgroundimageurl=/cms/images/e3/7c/bf70-tile-http_terminator_1x1.png  data-backgroundcolorid="0">
+    
+<h3 class="tile-text1 notext2">
+Can AI do novel security research? Meet the HTTP Terminator</h3>
+    
+<span class="tile-date">05 August 2026</span>
+    
+<span class="tile-text1-alt">Can AI do novel security research? Meet the HTTP Terminator</span>
+        
+
+</a>
+
+<a href="/research/the-fragile-lock" class="tile-container  onecolumn widget-tile size0 style1 textstyle2 is-whitebackground" data-backgroundimageurl=/cms/images/3d/5b/62c1-tile-fragile-lock-1x1.png  data-backgroundcolorid="0">
+    
+<h3 class="tile-text1 ">
+The Fragile Lock:</h3>
+
+
+    <span class="tile-text2">
+Novel Bypasses For SAML Authentication    </span>
+    
+<span class="tile-date">10 December 2025</span>
+    
+<span class="tile-text1-alt">The Fragile Lock:</span>
+        
+        <span class="tile-text2-alt">Novel Bypasses For SAML Authentication</span>
+
+</a></div>
+
+
+    </div>
+
+<div class="banner text-center theme-grey-5">
+    <a href="https://twitter.com/portswiggerres" class="paragraph-twitter-1">
+        <span class="icon-twitter"></span>
+        <h3>Follow PortSwigger Research on Twitter</h3>
+    </a>
+</div>
+
+<div class="section-full-width theme-navy-1">
+    <noscript>
+    <div class="noscript-warning">This page requires JavaScript for an enhanced user experience.</div>
+</noscript>
+    <h2 class="text-center">Latest Research Articles</h2>
+    
+<div class="widget-tile-container margin-top-m">
+
+
+<a href="/research/the-model-isnt-cooperating" class="tile-container  onecolumn widget-tile size0 style0 textstyle2 is-whitebackground"   data-backgroundcolorid="4">
+    
+<h3 class="tile-text1 notext2">
+The model isn't cooperating</h3>
+    
+<span class="tile-date">06 October 2026</span>
+    
+<span class="tile-text1-alt">The model isn't cooperating</span>
+        
+
+</a>
+
+<a href="/research/smashing-the-token-limit" class="tile-container  onecolumn widget-tile size0 style1 textstyle1 is-whitebackground" data-backgroundimageurl=/cms/images/71/8f/422c-tile-tile.png  data-backgroundcolorid="0">
+    
+<h3 class="tile-text1 notext2">
+        <span class="tile-text-container">Smashing the token limit with overlapping fragments</span>
+</h3>
+    
+<span class="tile-date">05 October 2026</span>
+    
+<span class="tile-text1-alt">Smashing the token limit with overlapping fragments</span>
+        
+
+</a>
+
+<a href="/research/http3-in-burp-suite" class="tile-container  onecolumn widget-tile size0 style1 textstyle2 is-whitebackground" data-backgroundimageurl=/cms/images/09/98/78c9-tile-http3_in_burp_suite_1x1.png  data-backgroundcolorid="0">
+    
+<h3 class="tile-text1 notext2">
+HTTP/3 in Burp Suite - it's time to find a bigger wordlist</h3>
+    
+<span class="tile-date">23 September 2026</span>
+    
+<span class="tile-text1-alt">HTTP/3 in Burp Suite - it's time to find a bigger wordlist</span>
+        
+
+</a>
+
+<a href="/research/whats-in-a-tag-name-javascript-apparently" class="tile-container  onecolumn widget-tile size0 style1 textstyle3 is-whitebackground" data-backgroundimageurl=/cms/images/72/09/438a-tile-tag-name-blog-tile.png  data-backgroundcolorid="2">
+    
+<h3 class="tile-text1 notext2">
+        <span class="tile-text-container">What's in a tag name? JavaScript, apparently</span>
+</h3>
+    
+<span class="tile-date">25 August 2026</span>
+    
+<span class="tile-text1-alt">What's in a tag name? JavaScript, apparently</span>
+        
+
+</a></div>
+
+
+    <a class="callout-large-orange" href="/research/articles">
+        <picture>
+            <source srcset="/content/images/callouts/research-articles.webp" type="image/webp">
+            <source srcset="/content/images/callouts/research-articles.jpg" type="image/jpg">
+            <img src="/content/images/callouts/research-articles.jpg" alt="Research article">
+        </picture>
+        <div>
+            <p>View all articles</p>
+            <span class="icon-arrow-right"></span>
+        </div>
+    </a>
+</div>
+<div class="section-full-width theme-grey-5">
+    <a class="callout-large-orange" href="/research/top-10-web-hacking-techniques-of-2023">
+        <picture>
+            <source srcset="/content/images/callouts/hacking-techniques.webp" type="image/webp">
+            <source srcset="/content/images/callouts/hacking-techniques.jpg" type="image/jpg">
+            <img src="/content/images/callouts/hacking-techniques.jpg" alt="Research article">
+        </picture>
+        <div>
+            <p>Read article</p>
+            <span class="icon-arrow-right"></span>
+        </div>
+    </a>
+</div>
+
+<div class="section-full-width theme-navy-1">
+    <h2 class="text-center">Meet the Researchers</h2>
+    <div class="container-columns">
+        
+<div>
+    <a href="/research/james-kettle" class="no-border">
+        <picture>
+            <img src="/content/images/callouts/james-profile.jpg" alt="James Kettle">
+        </picture>
+    </a>
+    <h3><a href="/research/james-kettle" class="no-border">James Kettle</a></h3>
+    <p>Director of Research</p>
+        <p class="label-twitter">
+            
+<span class="icon-twitter"></span>
+<a href="https://twitter.com/albinowax">@albinowax</a>
+        </p>
+</div>
+
+        
+<div>
+    <a href="/research/gareth-heyes" class="no-border">
+        <picture>
+            <img src="/content/images/callouts/gareth-profile.jpg" alt="Gareth Heyes">
+        </picture>
+    </a>
+    <h3><a href="/research/gareth-heyes" class="no-border">Gareth Heyes</a></h3>
+    <p>Researcher</p>
+        <p class="label-twitter">
+            
+<span class="icon-twitter"></span>
+<a href="https://twitter.com/garethheyes">@garethheyes</a>
+        </p>
+</div>
+
+        
+<div>
+    <a href="/research/zakhar-fedotkin" class="no-border">
+        <picture>
+            <img src="/content/images/callouts/zak-profile.jpg" alt="Zakhar Fedotkin">
+        </picture>
+    </a>
+    <h3><a href="/research/zakhar-fedotkin" class="no-border">Zakhar Fedotkin</a></h3>
+    <p>Researcher</p>
+        <p class="label-twitter">
+            
+<span class="icon-twitter"></span>
+<a href="https://twitter.com/zakfedotkin">@zakfedotkin</a>
+        </p>
+</div>
+
+        
+<div>
+    <a href="/research/tom-stacey" class="no-border">
+        <picture>
+            <img src="/content/images/callouts/tom-profile.jpg" alt="Tom Stacey">
+        </picture>
+    </a>
+    <h3><a href="/research/tom-stacey" class="no-border">Tom Stacey</a></h3>
+    <p>Researcher</p>
+        <p class="label-twitter">
+            
+<span class="icon-twitter"></span>
+<a href="https://twitter.com/t0xodile">@t0xodile</a>
+        </p>
+</div>
+
+
+        
+<div>
+    <a href="/research/alex-craig" class="no-border">
+        <picture>
+            <img src="/content/images/callouts/alex-profile.jpg" alt="Alex Craig">
+        </picture>
+    </a>
+    <h3><a href="/research/alex-craig" class="no-border">Alex Craig</a></h3>
+    <p>Researcher</p>
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+<script src="/bundles/generic/main.js?v=zOceQG46RTwGPbiBodYTf_64R28" nonce="LqOz3h62E0JVOAUDudDHj3BRcgHnp3Vi"></script>
+
+        </div>
+        <footer class="wrapper">
+    <div class="container">
+        <div>
+            <p>Burp Suite</p>
+            <a href="/burp/vulnerability-scanner">Web vulnerability scanner</a>
+            <a href="/burp">Burp Suite Editions</a>
+            <a href="/burp/releases">Release Notes</a>
+        </div>
+        <div>
+            <p>Vulnerabilities</p>
+            <a href="/web-security/cross-site-scripting">Cross-site scripting (XSS)</a>
+            <a href="/web-security/sql-injection">SQL injection</a>
+            <a href="/web-security/csrf">Cross-site request forgery</a>
+            <a href="/web-security/xxe">XML external entity injection</a>
+            <a href="/web-security/file-path-traversal">Directory traversal</a>
+            <a href="/web-security/ssrf">Server-side request forgery</a>
+        </div>
+        <div>
+            <p>Customers</p>
+            <a href="/organizations">Organizations</a>
+            <a href="/testers">Testers</a>
+            <a href="/developers">Developers</a>
+        </div>
+        <div>
+            <p>Company</p>
+            <a href="/about">About</a>
+            <a href="/careers">Careers</a>
+            <a href="/about/contact">Contact</a>
+            <a href="/legal">Legal</a>
+            <a href="/privacy">Privacy Notice</a>
+            <a href="/modern-slavery-statement">Modern Slavery Statement</a>
+        </div>
+        <div>
+            <p>Insights</p>
+            <a href="/web-security">Web Security Academy</a>
+            <a href="/blog">Blog</a>
+            <a href="/research">Research</a>
+            <a href="/engineering">Engineering</a>
+        </div>
+        <div>
+            <a href="/"><img src="/content/images/logos/portswigger-logo.svg" alt="PortSwigger Logo" class="footer-logo"></a>
+            <a class="button-outline-blue-small camelcase" href="https://twitter.com/Burp_Suite" rel="noreferrer"><span class="icon-twitter"></span>  Follow us</a>
+            <p class="grey">&copy; 2026 PortSwigger Ltd.</p>
+        </div>
+    </div>
+</footer>
+<a href="#top" class="back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><polygon points="4.07 14.7 5.03 15.78 12.48 9.13 19.94 15.78 20.9 14.7 12.48 7.2 4.07 14.7" fill="#f63" /><path d="M13,0A13,13,0,1,0,26,13,13,13,0,0,0,13,0Zm0,24.56A11.56,11.56,0,1,1,24.56,13,11.58,11.58,0,0,1,13,24.56Z" fill="#f63" /></svg></a>
+
+        <a class="back-to-top" href="#top">
+            <svg height="26" viewBox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
+                <polygon fill="#f63" points="4.07 14.7 5.03 15.78 12.48 9.13 19.94 15.78 20.9 14.7 12.48 7.2 4.07 14.7"></polygon>
+                <path d="M13,0A13,13,0,1,0,26,13,13,13,0,0,0,13,0Zm0,24.56A11.56,11.56,0,1,1,24.56,13,11.58,11.58,0,0,1,13,24.56Z" fill="#f63"></path>
+            </svg>
+        </a>
+    </body>
+</html>

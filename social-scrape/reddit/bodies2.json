@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://www.reddit.com/r/forhire/comments/1rp5yuv/hiring_senior_gopython_engineer_5day_paid/",
+    "ok": true,
+    "author": "Grouchy_Ad447",
+    "body": "<!-- SC_OFF --><div class=\"md\"><p>Small company, fully documented spec, ready to build. I need someone who executes, not someone who figures it out on my dime.</p> <p>Skills required:</p> <p>∙ Go — not beginner, not “I can learn it”</p> <p>∙ Python/FastAPI</p> <p>∙ PostgreSQL, SQLAlchemy, Alembic</p> <p>∙ Cryptographic primitives — you know what you’re working with when you see the spec</p> <p>∙ Docker Compose</p> <p>The engagement:</p> <p>∙ 5 days, remote</p> <p>∙ Full spec provided after NDA</p> <p>∙ Partial scaffolding already exists</p> <p>∙ Competitive hourly rate</p> <p>Recently laid off from a fintech, infrastructure, or security team? I want to hear from you.</p> <p>Send LinkedIn and resume with your background. We are starting at $115/hour.</p> <p>Once again, you must send your LinkedIn and your resume to be considered.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Grouchy_Ad447\"> /u/Grouchy_Ad447 </a> <br/> <span><a href=\"https://www.reddit.com/r/forhire/comments/1rp5yuv/hiring_senior_gopython_engineer_5day_paid/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/forhire/comments/1rp5yuv/hiring_senior_gopython_engineer_5day_paid/\">[comments]</a></span>",
+    "pub_date_iso": "2026-10-24T04:06:54+00:00",
+    "removed": false
+  },
+  {
+    "url": "https://www.reddit.com/r/forhire/comments/sknd9g/hiring_python_programmer/",
+    "ok": true,
+    "author": "runvnc",
+    "body": "<!-- SC_OFF --><div class=\"md\"><p>Hello, looking for help improving the performance of a program I wrote called <code>genpyteal</code>. If you can make it say 40-50% faster without breaking the examples, I can send some ALGO (or PayPal if you prefer). Right now the limit is going to be about $150.</p> <p><a href=\"https://github.com/runvnc/genpyteal\">https://github.com/runvnc/genpyteal</a></p> <p>Here are some possible ways to improve the performance:</p> <ul> <li>I have a feeling there may be some logic issue causing a lot of unnecessary redundant AST access. It may be obvious to someone who goes through it carefully with a fresh set of eyes. In particular, the all function has become a bit of a catch-all, and may make more sense if broken out with another seq function.</li> <li>One other option which, if it improved the speed significantly, might be preferred, would be to add caching to Red Baron find_all/find so that it can keep a list of matching nodes as long as that part of the tree hasn&#39;t been modified.</li> <li>Possibly go through with some profiling tools.</li> <li>Another possibility is something like a visitor pattern. You might try to do it with RedBaron using the pattern matching feature and some sorting.</li> <li>If really necessary, can fall back to the ast module as mentioned by (I think) Jason P. But would like to take advantage of the RedBaron/Baron features, and not duplicate that other effort in a specific way. Also note, Algorand Foundation/Inc. employees are not eligible for this posting. Lol. Although their efforts with PyTeal and tools like this are much appreciated. Edit: On second thought, they are eligible. Lol.</li> <li>If all else fails, it should be possible to &#39;cheat&#39; and just cache snippets of code (such as function definitions) that have already been converted. That way small changes don&#39;t require waiting for a full rewrite. Note that this is probably going to be less ALGO. But its probably going to solve the issue 90%",
+    "pub_date_iso": "2026-10-24T04:07:02+00:00",
+    "removed": false
+  },
+  {
+    "url": "https://www.reddit.com/r/forhire/comments/1d2sd6s/hiringdevs/",
+    "ok": true,
+    "body": "[removed] <br/> <span><a href=\"https://www.reddit.com/r/forhire/comments/1d2sd6s/deleted_by_user/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/forhire/comments/1d2sd6s/deleted_by_user/\">[comments]</a></span>",
+    "author": "",
+    "removed": true
+  },
+  {
+    "url": "https://www.reddit.com/r/forhire/comments/1dszc7k/hiring_uber_is_looking_for_remote_freelancers/",
+    "ok": true,
+    "body": "[removed] &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UberGAM\"> /u/UberGAM </a> <br/> <span><a href=\"https://www.reddit.com/r/forhire/comments/1dszc7k/hiring_uber_is_looking_for_remote_freelancers/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/forhire/comments/1dszc7k/hiring_uber_is_looking_for_remote_freelancers/\">[comments]</a></span>",
+    "author": "UberGAM",
+    "removed": true
+  },
+  {
+    "url": "https://www.reddit.com/r/forhire/comments/18danwu/hiring_python_university_assignments/",
+    "error": "HTTP Error 429: Too Many Requests",
+    "ok": false
+  },
+  {
+    "url": "https://www.reddit.com/r/SaaS/comments/1992kdn/looking_for_a_mobile_app_developer/",
+    "error": "HTTP Error 429: Too Many Requests",
+    "ok": false
+  },
+  {
+    "url": "https://www.reddit.com/r/freelance/comments/1cqr0jd/what_are_some_good_frameworks_for_freelancing/",
+    "error": "HTTP Error 429: Too Many Requests",
+    "ok": false
+  },
+  {
+    "url": "https://www.reddit.com/r/SaaS/comments/18j3xey/looking_for_app_developer_for_an_mvp/",
+    "error": "HTTP Error 429: Too Many Requests",
+    "ok": false
+  }
+]

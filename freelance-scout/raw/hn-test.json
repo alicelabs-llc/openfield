@@ -1,0 +1,1 @@
+{"by":"franciscop","id":41482917,"kids":[41483390],"parent":41481714,"text":"Please clarify how you&#x27;d be e.g. reading JS files in a Node.js&#x2F;Bun&#x2F;worker&#x2F;function&#x2F;etc without using Node.js (or any of those platform&#x2F;runtime-specific platforms) APIs? I&#x27;m not sure I&#x27;m following.","time":1725827125,"type":"comment"}

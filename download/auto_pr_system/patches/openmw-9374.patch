@@ -1,0 +1,100 @@
+From 85d00d1430f8175ebefe4fb7e8fa583debcff72e Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Wed, 7 Oct 2026 01:44:34 +0000
+Subject: [PATCH] weather: respect Lua-set stormDirection for non-ashstorm
+ weathers
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Bug #9374.
+
+calculateStormDirection() previously always returned either
+Weather::defaultDirection() (0, 1, 0) or the direction from the
+player to Red Mountain (for ashstorm/blight particle effects). It
+ignored whatever value the Weather record's mStormDirection currently
+held — even if a Lua script had just set it via
+`core.weather.records["X"].stormDirection = ...`.
+
+This meant modders who replaced the particleEffect of an existing
+weather (e.g. Ashstorm) with a custom mesh and then set stormDirection
+to control its orientation would see their value silently discarded
+on every weather update: calculateResult() and the per-frame update
+both called calculateStormDirection() and overwrote mStormDirection
+with the hardcoded default.
+
+Fix: make calculateStormDirection() take a fallback parameter and
+only compute a fresh direction when the particle effect is the
+vanilla ashstorm or blight cloud (the two cases where the
+hardcoded Red Mountain direction is the documented behaviour).
+For any other particle effect — including modded replacements —
+return the caller-supplied fallback (the Weather record's current
+mStormDirection), so Lua-set values survive.
+
+No behaviour change for vanilla weathers on the default content:
+- Ashstorm / blight still compute direction to Red Mountain.
+- All other weathers still get Weather::defaultDirection() because
+  the Weather constructor initialises mStormDirection to
+  Weather::defaultDirection() and nothing else writes to it before
+  calculateResult() is called.
+
+Behaviour change only manifests when a Lua script explicitly sets
+`someRecord.stormDirection = vec`, which is exactly what #9374
+asks for.
+---
+ apps/openmw/mwworld/weather.cpp | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+diff --git a/apps/openmw/mwworld/weather.cpp b/apps/openmw/mwworld/weather.cpp
+index 6850bba5..ffe88a2d 100644
+--- a/apps/openmw/mwworld/weather.cpp
++++ b/apps/openmw/mwworld/weather.cpp
+@@ -43,19 +43,23 @@ namespace MWWorld
+             return x * (1 - factor) + y * factor;
+         }
+ 
+-        osg::Vec3f calculateStormDirection(const std::string& particleEffect)
++        osg::Vec3f calculateStormDirection(const std::string& particleEffect, const osg::Vec3f& fallback)
+         {
+-            osg::Vec3f stormDirection = MWWorld::Weather::defaultDirection();
+             if (particleEffect == Settings::models().mWeatherashcloud.get()
+                 || particleEffect == Settings::models().mWeatherblightcloud.get())
+             {
+                 osg::Vec3f playerPos = MWMechanics::getPlayer().getRefData().getPosition().asVec3();
+                 playerPos.z() = 0;
+                 osg::Vec3f redMountainPos = osg::Vec3f(25000.f, 70000.f, 0.f);
+-                stormDirection = (playerPos - redMountainPos);
++                osg::Vec3f stormDirection = (playerPos - redMountainPos);
+                 stormDirection.normalize();
++                return stormDirection;
+             }
+-            return stormDirection;
++            // For non-ashstorm/blight weathers, respect the value currently
++            // held by the Weather record (which may have been set by a Lua
++            // script via core.weather.records[...].stormDirection) instead of
++            // unconditionally overwriting it with the default direction.
++            return fallback;
+         }
+     }
+ 
+@@ -880,7 +884,7 @@ namespace MWWorld
+         mPrecipitation = !(mResult.mParticleEffect.empty() && mResult.mRainEffect.empty())
+             && mResult.mParticleEffect != Settings::models().mWeatherashcloud.get();
+ 
+-        mStormDirection = calculateStormDirection(mResult.mParticleEffect);
++        mStormDirection = mResult.mStormDirection;
+         mRendering.getSkyManager()->setStormParticleDirection(mStormDirection);
+ 
+         // disable sun during night
+@@ -1374,7 +1378,7 @@ namespace MWWorld
+         else
+             mResult.mSunDiscColor.a() = 1;
+ 
+-        mResult.mStormDirection = calculateStormDirection(mResult.mParticleEffect);
++        mResult.mStormDirection = calculateStormDirection(mResult.mParticleEffect, current.mStormDirection);
+     }
+ 
+     inline void WeatherManager::calculateTransitionResult(const float factor, const float gameHour)
+-- 
+2.47.3
+

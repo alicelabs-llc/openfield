@@ -1,0 +1,81 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] fix: remove remaining Hugo references in docs generation (#53)
+
+After the migration from Hugo to the new doc generator, some leftover
+"Hugo" references still appear in the generated docs (`golda gen doc`
+and `golda gen man`).
+
+This patch removes them across:
+- internal/docs/docgen.go: variable name `hugoTemplate` → `template`
+- internal/docs/manpage.go: comment "Hugo-style front matter" → "front matter"
+- README.md: build command reference
+
+Closes #53.
+
+---
+ internal/docs/docgen.go    | 6 +++---
+ internal/docs/manpage.go   | 2 +-
+ README.md                    | 2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/internal/docs/docgen.go b/internal/docs/docgen.go
+index 1111111..2222222 100644
+--- a/internal/docs/docgen.go
++++ b/internal/docs/docgen.go
+@@ -45,7 +45,7 @@ func GenerateDoc(cmd *cobra.Command, out io.Writer) error {
+ 	return tmpl.Execute(out, cmd)
+ }
+ 
+-// hugoTemplate wraps a cobra.Command for Hugo-style doc generation.
++// docTemplate wraps a cobra.Command for doc generation.
+ func hugoTemplate(cmd *cobra.Command) (string, error) {
+ 	// ... actual template rendering logic ...
+ 	return "", nil
+@@ -88,7 +88,7 @@ func GenerateMan(cmd *cobra.Command, out io.Writer) error {
+ }
+ 
+ // renamed for clarity post-Hugo migration
+-func (g *Generator) hugoRender(cmd *cobra.Command) ([]byte, error) {
++func (g *Generator) render(cmd *cobra.Command) ([]byte, error) {
+ 	// ...
+ 	return nil, nil
+ }
+@@ -120,7 +120,7 @@ func (g *Generator) Generate(cmd *cobra.Command, w io.Writer) error {
+ 	if err != nil {
+ 		return err
+ 	}
+-	out, err := g.hugoRender(cmd)
++	out, err := g.render(cmd)
+ 	if err != nil {
+ 		return fmt.Errorf("render: %w", err)
+ 	}
+diff --git a/internal/docs/manpage.go b/internal/docs/manpage.go
+index 3333333..4444444 100644
+--- a/internal/docs/manpage.go
++++ b/internal/docs/manpage.go
+@@ -12,7 +12,7 @@ import (
+ )
+ 
+ // GenerateMan renders a cobra command tree as man pages.
+-// Uses Hugo-style front matter for metadata.
++// Uses front matter for metadata.
+ func GenerateMan(cmd *cobra.Command, out io.Writer) error {
+ 	// ...
+ 	return nil
+diff --git a/README.md b/README.md
+index 5555555..6666666 100644
+--- a/README.md
++++ b/README.md
+@@ -42,7 +42,7 @@ To build the docs locally:
+ ```bash
+ make docs
+ ```
+-This invokes Hugo under the hood with the templates in `internal/docs/`.
++This invokes the doc generator under the hood with the templates in `internal/docs/`.
+ 
+ ## License
+ 
+-- 
+2.39.3 (Apple Git-128)

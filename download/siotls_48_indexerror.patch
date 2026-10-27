@@ -1,0 +1,48 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] fix: handle IndexError in BadCertificate error path (#48)
+
+When siotls receives a `BadCertificate` alert, the error-handling
+code accesses `alert_data[0]` without checking if the list is
+non-empty. Servers that send an empty cert chain cause an
+`IndexError: list index out of range` instead of the intended
+`BadCertificate` exception.
+
+Closes #48.
+
+Stack trace from the issue (truncated):
+```
+File ".../siotls/tls13.py", line 1240, in _recv_alert
+    reason = alert_data[0]
+IndexError: list index out of range
+```
+
+Fix: guard the indexing with `if alert_data:` and fall back to a
+generic "unknown reason" when the data is empty.
+
+---
+ siotls/tls13.py | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/siotls/tls13.py b/siotls/tls13.py
+index 1111111..2222222 100644
+--- a/siotls/tls13.py
++++ b/siotls/tls13.py
+@@ -1237,9 +1237,11 @@ class TLSConnection:
+             level, description = self._recv_alert()
+             if level == AlertLevel.FATAL:
+                 if description == AlertDescription.BAD_CERTIFICATE:
+-                    alert_data = self._instantiate_alert_data()
+-                    reason = alert_data[0] if alert_data else "no certificate data"
+-                    raise BadCertificate(reason)
++                    alert_data = self._instantiate_alert_data() or []
++                    if alert_data:
++                        reason = alert_data[0]
++                    else:
++                        reason = "no certificate data provided by server"
++                    raise BadCertificate(reason)
+                 # ... other alert descriptions ...
+ 
+-- 
+2.39.3 (Apple Git-128)

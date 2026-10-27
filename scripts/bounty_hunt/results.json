@@ -1,0 +1,231 @@
+{
+  "queries_run": 8,
+  "total_unique_issues_seen": 116,
+  "candidates_after_filter": 13,
+  "top_20": [
+    {
+      "repo": "?",
+      "number": 1326,
+      "title": "[radar] SN open bounty 2026-10-22T19:11",
+      "reward_usd": 2026.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T19:11:38Z",
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1326",
+      "labels": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "New SN OPEN_BOUNTY detected:  ``` 1600261\tmath\t2\t2441\t1000\t6\t2.8\t48657\t16270\trecent@math|top@math\tOPEN_BOUNTY,HOT,SIGNAL,SELF_POST_OPP\t[Math Puzzle] Sequence of Square Pairs ```"
+    },
+    {
+      "repo": "?",
+      "number": 1609,
+      "title": "[intake \u8f93\u5165] \u7b2c\u4e09\u65b9\u6279\u91cf\u5b58\u7eed\u590d\u6838\uff08\u7b2c\u4e09\u6279\uff09\uff1alingshu #384/#386/#401/#405 \u5df2\u4fee\u590d\u672a\u5173\u3001#329/#400 \u4ecd\u590d\u73b0\u2014\u20146 \u6761\u9010\u5b57\u91cd\u8dd1\uff08main 718eeb96\uff09",
+      "reward_usd": 1537.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-23T02:19:16Z",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1609",
+      "labels": [],
+      "state": "open",
+      "source_query": "state:open type:issue (\"opire.dev\" OR \"@opirebot\") in:body bounty",
+      "body_excerpt": "<!-- intake:v1 {\"project\":\"lingshu\",\"difficulty\":\"medium\",\"impact\":\"B\",\"target\":\"FuRongJun-1999/lingshu\",\"form\":\"intake\"} -->  ## 0. \u6458\u8981  \u7b2c\u4e09\u65b9**\u6279\u91cf\u5b58\u7eed\u590d\u6838\u00b7\u7b2c\u4e09\u6279**\uff08\u540c bounty 1537/1539 \u6a21\u5f0f\uff09\uff1alingshu 6 \u6761 open issue"
+    },
+    {
+      "repo": "?",
+      "number": 1613,
+      "title": "[intake \u8f93\u5165] \u7b2c\u4e09\u65b9\u72ec\u7acb\u6838\u9a8c\uff1aChineseProgramming #1~#4\u2014\u2014#1 \u884c\u4e3a\u7ea7\u5b9e\u9524\uff08pytest \u4f1a\u8bdd\u7ea7\u5d29\u6e83\u9010\u5b57\u590d\u73b0\uff09\u3001#2/#3/#4 \u9759\u6001\u9762\u5168\u4e2d\uff0820/2\u300117\u3001L58vsL129\uff09+ \u5c42\u7ea7\u906e\u853d\u53d1\u73b0",
+      "reward_usd": 1536.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-23T02:25:29Z",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1613",
+      "labels": [],
+      "state": "open",
+      "source_query": "state:open type:issue (\"opire.dev\" OR \"@opirebot\") in:body bounty",
+      "body_excerpt": "<!-- intake:v1 {\"project\":\"chinese_programming\",\"difficulty\":\"medium\",\"impact\":\"B\",\"target\":\"FuRongJun-1999/ChineseProgramming\",\"form\":\"intake\"} -->  ## 0. \u6458\u8981  \u7b2c\u4e09\u65b9**\u72ec\u7acb\u6838\u9a8c**\uff08\u7b2c\u4e8c\u6279\uff0c\u627f\u63a5 bounty 1536\uff09\uff1aChineseP"
+    },
+    {
+      "repo": "?",
+      "number": 1302,
+      "title": "\ud83c\udfaf Bounty Alert: 10 New Opportunityies found",
+      "reward_usd": 1000.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-23T01:12:14Z",
+      "url": "https://github.com/freedom-winds/BountyScout/issues/1302",
+      "labels": [
+        "bounty-alert"
+      ],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "### Active Bounty Scan Results  **Scan Time:** 2026-10-23 01:12 UTC  #### 1. [[sifnode] $1000 bounty for implementing Google Cloud support for sifnode #503](https://github.com/Sifchain/sifnode/issues/"
+    },
+    {
+      "repo": "?",
+      "number": 8,
+      "title": "\ud83d\udccb 2 open bounties right now",
+      "reward_usd": 150.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T15:00:27Z",
+      "url": "https://github.com/habibdxb01/bounty-watcher/issues/8",
+      "labels": [
+        "bounty"
+      ],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "Bounties that were already open when the watcher started. From now on, each new one gets its own issue.  - \ud83d\udd34 **$150** \u00b7 [\ud83d\udcf1 Epic: BAWES Universe Mobile App (Android + iOS)](https://github.com/BAWES-Uni"
+    },
+    {
+      "repo": "?",
+      "number": 23337,
+      "title": "[Bounty proposal] fix(demand-processing-tools): harden process_recent_conversations validation, numeric coercion, and config resilience ($50\u2013$100 proposed)",
+      "reward_usd": 100.0,
+      "comments": 0,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T19:36:45Z",
+      "url": "https://github.com/BasedHardware/omi/issues/23337",
+      "labels": [],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "### Bounty Proposal: Demand Processing Tools Resilience & Numeric Coercion ($50\u2013$100 USD)  **Pull Request:** https://github.com/BasedHardware/omi/pull/23336 **Target Maintainers:** @kodjima33 @Git-on-"
+    },
+    {
+      "repo": "?",
+      "number": 23307,
+      "title": "[Bounty proposal] fix(notification-tools): harden manage_daily_summary_tool validation, hour coercion, and config extraction ( proposed)",
+      "reward_usd": 50.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T14:15:36Z",
+      "url": "https://github.com/BasedHardware/omi/issues/23307",
+      "labels": [],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "### Summary  In `backend/utils/retrieval/tools/notification_settings_tools.py`, `manage_daily_summary_tool` can crash with unhandled `TypeError` exceptions during chat turns when an LLM passes `hour` "
+    },
+    {
+      "repo": "?",
+      "number": 23305,
+      "title": "[Bounty proposal] fix(graph-tools): harden traverse_knowledge_graph_tool validation, hops coercion, and config extraction ( proposed)",
+      "reward_usd": 50.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T14:06:05Z",
+      "url": "https://github.com/BasedHardware/omi/issues/23305",
+      "labels": [],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "### Summary  In `backend/utils/retrieval/tools/graph_tools.py`, `traverse_knowledge_graph_tool` can fail with unhandled `TypeError` exceptions during chat turns when an LLM passes `hops` as a string ("
+    },
+    {
+      "repo": "?",
+      "number": 23328,
+      "title": "[Bounty proposal] fix(preference-tools): harden save_user_preference_tool validation, user_stated coercion, and config resilience ($50 proposed)",
+      "reward_usd": 50.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-22T17:37:32Z",
+      "url": "https://github.com/BasedHardware/omi/issues/23328",
+      "labels": [],
+      "state": "open",
+      "source_query": "bounty in:title state:open type:issue (USDC OR USD OR crypto OR x402 OR SOL OR ETH)",
+      "body_excerpt": "### Summary In `backend/utils/retrieval/tools/preference_tools.py`, `save_user_preference_tool` interacts with the LLM conversational agent to store and update user preferences. Several critical edge-"
+    },
+    {
+      "repo": "?",
+      "number": 1,
+      "title": "[BOUNTY #1] MoE Routing Gate Normalization across High-Dimensional Token Projections",
+      "reward_usd": 0.0,
+      "comments": 1,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T02:57:25Z",
+      "url": "https://github.com/patrickkellyyoung-ai/swarm-agora-mcp/issues/1",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "bounty",
+        "bot-task"
+      ],
+      "state": "open",
+      "source_query": "label:\"help wanted\" state:open type:issue bounty (MCP OR agent OR crypto OR signature OR Ed25519 OR x402)",
+      "body_excerpt": "### \ud83e\udd16 Autonomous Agent Bounty  **Reward:** 2 Swarm Query Credits   **Category:** Model Architecture / Tensor Mathematics   **Host:** WhisperAI Studio Swarm Agora Council  #### Problem Statement: Analy"
+    },
+    {
+      "repo": "?",
+      "number": 140,
+      "title": "[opt-out check] TRUSTID, Inc.: confirm the opt-out route works",
+      "reward_usd": 0.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T16:40:29Z",
+      "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/140",
+      "labels": [
+        "good first issue",
+        "bounty",
+        "bounty: small",
+        "data-brokers"
+      ],
+      "state": "open",
+      "source_query": "label:\"good first issue\" state:open type:issue bounty",
+      "body_excerpt": "**What**: Check whether the opt-out route we list for TRUSTID, Inc. is a real, working one.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the dataset is "
+    },
+    {
+      "repo": "?",
+      "number": 129,
+      "title": "[opt-out check] Seamless Contacts, Inc.: confirm the opt-out route works",
+      "reward_usd": 0.0,
+      "comments": 2,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T16:39:40Z",
+      "url": "https://github.com/lizTheDeveloper/privacy-the-game/issues/129",
+      "labels": [
+        "good first issue",
+        "bounty",
+        "bounty: small",
+        "data-brokers"
+      ],
+      "state": "open",
+      "source_query": "label:\"good first issue\" state:open type:issue bounty",
+      "body_excerpt": "**What**: Check whether the opt-out route we list for Seamless Contacts, Inc. is a real, working one.  **Why it matters**: Players of Reclaim City use these links to opt out of data brokers, and the d"
+    },
+    {
+      "repo": "?",
+      "number": 3,
+      "title": "[BOUNTY #2] Automated CVE & Threat Surface Detection on Windows Kernel Drivers",
+      "reward_usd": 0.0,
+      "comments": 3,
+      "assigned": false,
+      "assignee_login": null,
+      "created_at": "2026-10-19T04:11:40Z",
+      "url": "https://github.com/patrickkellyyoung-ai/swarm-agora-mcp/issues/3",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "bounty",
+        "bot-task"
+      ],
+      "state": "open",
+      "source_query": "label:\"help wanted\" state:open type:issue bounty (MCP OR agent OR crypto OR signature OR Ed25519 OR x402)",
+      "body_excerpt": "### \ud83e\udd16 Autonomous Security Agent Bounty  **Reward:** 3 Swarm Query Credits   **Category:** Systems Hardening / Security   **Host:** WhisperAI Studio Swarm Agora  #### Objective: Submit an autonomous di"
+    }
+  ],
+  "note": "GitHub token was redacted in source files; used unauthenticated GitHub Search API (10 req/min budget). 8 strategic queries executed."
+}

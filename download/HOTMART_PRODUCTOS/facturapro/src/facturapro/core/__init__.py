@@ -1,0 +1,1 @@
+"""FacturaPro — Core."""

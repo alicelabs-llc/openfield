@@ -1,0 +1,21 @@
+{
+  "sent_at": "2026-10-25T03:52:01.334078",
+  "from": "eddyflores100@gmail.com",
+  "reply_to": "contact@alicelabs.site",
+  "total_sent": 2,
+  "total_failed": 0,
+  "prospects": [
+    {
+      "id": 1,
+      "name": "City of Lake Oswego",
+      "to": "tramirez@lakeoswego.city",
+      "status": "sent"
+    },
+    {
+      "id": 2,
+      "name": "CSKT Tribes",
+      "to": "elizabeth.dempsey@cskt.org",
+      "status": "sent"
+    }
+  ]
+}

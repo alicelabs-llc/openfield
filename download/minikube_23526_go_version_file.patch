@@ -1,0 +1,83 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] ci: use go-version-file in workflows instead of hardcoded version (#23526)
+
+Replace hardcoded `GO_VERSION` env variables in GitHub Actions
+workflows and Makefiles with `go-version-file: 'go.mod'` directive.
+This ensures the CI always uses the same Go version as specified
+in `go.mod`'s `go` directive, eliminating drift between local dev
+and CI.
+
+Closes #23526.
+
+---
+ .github/workflows/build.yml                | 4 +---
+ .github/workflows/conformance.yml          | 3 +--
+ .github/workflows/lint.yml                 | 4 +---
+ .github/workflows/test.yml                 | 4 +---
+ Makefile                                    | 4 ----
+ hack/ensure-go.sh                           | 2 +-
+ 6 files changed, 5 insertions(+), 16 deletions(-)
+
+diff --git a/.github/workflows/build.yml b/.github/workflows/build.yml
+index 1111111..2222222 100644
+--- a/.github/workflows/build.yml
++++ b/.github/workflows/build.yml
+@@ -19,9 +19,7 @@ jobs:
+       - name: Set up Go
+         uses: actions/setup-go@v5
+         with:
+-          # Pinned to match minimum supported Go version.
+-          # Update via `make update-go-version` when bumping.
+-          go-version: '1.23.5'
++          go-version-file: 'go.mod'
+           check-latest: true
+           cache: true
+       - name: Build
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+index 3333333..4444444 100644
+--- a/.github/workflows/test.yml
++++ b/.github/workflows/test.yml
+@@ -22,9 +22,7 @@ jobs:
+       - name: Set up Go
+         uses: actions/setup-go@v5
+         with:
+-          # Pinned for reproducibility — see build.yml.
+-          # Update via `make update-go-version` when bumping.
+-          go-version: '1.23.5'
++          go-version-file: 'go.mod'
+           check-latest: true
+           cache: true
+       - name: Run tests
+diff --git a/.github/workflows/lint.yml b/.github/workflows/lint.yml
+index 5555555..6666666 100644
+--- a/.github/workflows/lint.yml
++++ b/.github/workflows/lint.yml
+@@ -19,9 +19,7 @@ jobs:
+       - name: Set up Go
+         uses: actions/setup-go@v5
+         with:
+-          # Pinned to match minimum supported Go version.
+-          # Update via `make update-go-version` when bumping.
+-          go-version: '1.23.5'
++          go-version-file: 'go.mod'
+           check-latest: true
+       - name: Lint
+         run: make lint
+diff --git a/Makefile b/Makefile
+index 7777777..8888888 100644
+--- a/Makefile
++++ b/Makefile
+@@ -12,10 +12,6 @@ SHELL:=/bin/bash
+ 
+ GOOS ?= $(shell go env GOOS)
+-GO_VERSION ?= 1.23.5
+-# Update via `make update-go-version GO_VERSION=x.y.z`
+-export GO_VERSION
+ 
+-# CI builds use $(GO_VERSION) — keep .go-version in sync.
+ .PHONY: out
+ out:
+-- 
+2.39.3 (Apple Git-128)

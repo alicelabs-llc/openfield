@@ -1,0 +1,35 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] docs: fix Codecov badge showing 0% coverage (#2895)
+
+The Codecov badge in the README was showing 0% coverage because the
+badge URL used the wrong token format. This patch updates the badge
+URL to the correct Codecov endpoint.
+
+Investigation: the badge was using `?token=` query parameter but
+Codecov's badge endpoint expects the token in the path or as a
+shield-style URL.
+
+Closes #2895.
+
+---
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/README.md b/README.md
+index 1111111..2222222 100644
+--- a/README.md
++++ b/README.md
+@@ -1,7 +1,7 @@
+ # KubeArmor
+ [![Go Report Card](https://goreportcard.com/badge/github.com/kubearmor/KubeArmor)](https://goreportcard.com/report/github.com/kubearmor/KubeArmor)
+-[![Coverage Status](https://codecov.io/gh/kubearmor/KubeArmor/branch/main/graph/badge.svg?token=RPW5OYQS0Q)](https://codecov.io/gh/kubearmor/KubeArmor)
+-[![Code Coverage](https://img.shields.io/codecov/c/github/kubearmor/KubeArmor?color=green&style=flat-square)](https://codecov.io/gh/kubearmor/KubeArmor)
++[![Coverage Status](https://codecov.io/gh/kubearmor/KubeArmor/branch/main/graph/badge.svg)](https://codecov.io/gh/kubearmor/KubeArmor)
++[![Code Coverage](https://img.shields.io/codecov/c/github/kubearmor/KubeArmor?style=flat-square)](https://codecov.io/gh/kubearmor/KubeArmor)
+ 
+ [![Docker Repository on Quay](https://quay.io/repository/kubearmor/kubearmor/status "Docker Repository on Quay")](https://quay.io/repository/kubearmor/kubearmor)
+ [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kubearmor/KubeArmor)](https://github.com/kubearmor/KubeArmor/releases)
+-- 
+2.39.3 (Apple Git-128)

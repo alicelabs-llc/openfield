@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <?xml-stylesheet type="text/xsl" href="https://www.freelancer.com/content/rss.xsl" ?>
+            <rss version="2.0" xmlns:coop="http://www.google.com/coop/namespace">
+                <channel>
+                    <title>Freelancer - New Projects filtered by Keyword</title>
+                    <link>https://www.freelancer.com/</link>
+                    <description>Latest projects filtered by Keyword published at Freelancer.</description>
+                    <language>en-us</language>
+                    <pubDate>Fri, 23 Oct 2026 18:54:01 -0400</pubDate>
+                    <lastBuildDate>Fri, 23 Oct 2026 18:54:01 -0400</lastBuildDate>
+                    <docs>http://feedvalidator.org/docs/rss2.html</docs>
+                    <generator>Freelancer Generator 1.0</generator>
+                    <managingEditor>webmaster@freelancer.com</managingEditor>
+                    <webMaster>webmaster@freelancer.com</webMaster>
+                    <copyright>Copyright 2004-2026, Freelancer</copyright>
+                    <image>
+                        <url>https://www.freelancer.com/img/freelancercom.jpg</url>
+                        <title>Freelancer</title>
+                        <link>https://www.freelancer.com</link>
+                    </image>
+                    
+                </channel>
+            </rss>

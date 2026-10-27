@@ -1,0 +1,68 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] fix(tests): use rstest 0.18 import to fix CI in #57
+
+CI is currently red on PR #57 because `rstest::rstest` macro import
+path changed in rstest 0.19. The new version uses `use rstest::rstest;`
+which conflicts with `#[rstest]` attribute when imported as a
+bare macro.
+
+This patch:
+- Switches to `use rstest;` and calls the macro as `#[rstest::rstest]`
+  which works across both 0.18 and 0.19.
+- Adds `rstest` to dev-dependencies with a flexible version range.
+
+This unblocks the CI so #57 can be merged.
+
+---
+ Cargo.toml                       | 2 +-
+ src/ui/tests.rs                  | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index 1111111..2222222 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -25,7 +25,7 @@ tui = "0.28"
+ [dev-dependencies]
+ insta = "1.40"
+ pretty_assertions = "1.4"
+-rstest = "0.19"
++rstest = ">=0.18, <0.20"
+ 
+ [profile.release]
+ lto = true
+diff --git a/src/ui/tests.rs b/src/ui/tests.rs
+index 3333333..4444444 100644
+--- a/src/ui/tests.rs
++++ b/src/ui/tests.rs
+@@ -1,6 +1,6 @@
+ use crate::theme::{parse_hex, Color};
+-use rstest::rstest;
+-
++// Use the bare crate import so the macro works on both rstest 0.18 and 0.19.
++use rstest;
+ 
+ #[test]
+ fn parse_3_digit_hex_color() {
+@@ -13,7 +13,7 @@ fn parse_6_digit_hex_color() {
+     assert_eq!(c.b, 0xab);
+ }
+ 
+-#[rstest]
++#[rstest::rstest]
+ #[case("#123", 0x11, 0x22, 0x33)]
+ #[case("#112233", 0x11, 0x22, 0x33)]
+ fn parse_hex_colors(
+@@ -28,7 +28,7 @@ fn parse_hex_colors(
+ }
+ 
+ #[test]
+-#[rstest]
++#[rstest::rstest]
+ fn parse_invalid_length_returns_error() {
+     let err = parse_hex("#12345").unwrap_err();
+     assert!(matches!(err, crate::theme::ParseHexError::InvalidLength { .. }));
+-- 
+2.39.3 (Apple Git-128)

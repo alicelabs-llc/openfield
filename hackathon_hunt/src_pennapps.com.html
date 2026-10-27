@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PennApps XXVII. Happening in Spring Semester. Leave your email to get notified when applications open in October." />
+  <meta name="theme-color" content="#0a0f0a" />
+  <title>PennApps XXVII</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- CRT overlay effects -->
+  <div class="crt-overlay" aria-hidden="true">
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <!-- Boot / loading screen -->
+  <div id="boot-screen" class="boot-screen" role="dialog" aria-label="System boot">
+    <div class="boot-inner">
+      <pre class="boot-logo" aria-hidden="true">
+ ____  _____ _   _ _   _    _    ____  ____  ____  
+|  _ \| ____| \ | | \ | |  / \  |  _ \|  _ \/ ___| 
+| |_) |  _| |  \| |  \| | / _ \ | |_) | |_) \___ \ 
+|  __/| |___| |\  | |\  |/ ___ \|  __/|  __/ ___) |
+|_|   |_____|_| \_|_| \_/_/   \_\_|   |_|   |____/ 
+      </pre>
+      <p class="boot-status">
+        <span id="boot-text">BOOTING PENNAPPS</span><span class="cursor-blink">█</span>
+      </p>
+      <div class="boot-bar" aria-hidden="true">
+        <div id="boot-progress" class="boot-bar-fill"></div>
+      </div>
+      <p class="boot-hint">PRESS ANY KEY OR CLICK TO SKIP</p>
+    </div>
+  </div>
+
+  <!-- Main page -->
+  <main id="main" class="main hidden" hidden>
+    <div class="bezel">
+      <div class="terminal-card">
+        <header class="card-header">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="header-label">pennapps.exe</span>
+          <span class="header-meta">SPRING SEMESTER · READY</span>
+        </header>
+
+        <div class="card-body">
+          <p class="prompt-line"><span class="prompt">$</span> cat ./announcement.txt</p>
+
+          <h1 class="title">
+            <span class="title-glitch" data-text="PENNAPPS XXVII">PENNAPPS XXVII</span>
+          </h1>
+
+          <div class="copy">
+            <p>
+              PennApps <strong class="hl">XXVII</strong> is happening in <strong class="hl">Spring Semester</strong> now.
+            </p>
+            <p>
+              Applications open later in <strong class="hl">October</strong>.
+            </p>
+            <p class="invite">
+              Leave your name + email. We'll ping you when apps go live<span class="cursor-blink">_</span>
+            </p>
+          </div>
+
+          <form id="notify-form" class="notify-form" novalidate>
+            <input type="hidden" name="_subject" id="form-subject" value="Notify me: PennApps XXVII apps" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <label class="field">
+              <span class="field-label">&gt; NAME</span>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                autocomplete="name"
+                placeholder="ada_lovelace"
+                maxlength="120"
+              />
+            </label>
+
+            <label class="field">
+              <span class="field-label">&gt; EMAIL</span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                autocomplete="email"
+                placeholder="ada@example.com"
+                maxlength="254"
+              />
+            </label>
+
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+
+            <button type="submit" id="submit-btn" class="submit-btn">
+              <span class="btn-bracket">[</span>
+              <span class="btn-label">NOTIFY ME</span>
+              <span class="btn-bracket">]</span>
+            </button>
+          </form>
+
+          <div id="success" class="success" hidden>
+            <p class="success-line">
+              <span class="ok">OK</span> You're on the list.
+            </p>
+            <p class="success-sub">We'll email you when applications open.</p>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <a href="mailto:contact@pennapps.com">contact@pennapps.com</a>
+        </footer>
+      </div>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

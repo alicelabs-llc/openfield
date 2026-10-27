@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video,
+      button,
+      input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        /* line-height: 1.2em; */
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1.2;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      button {
+        outline: none;
+        background-color: transparent;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 62.5%; /* set up 10px as standard */
+      }
+
+      body {
+        display: flex;
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f9f9fb;
+        color: #575865;
+      }
+
+      .error-page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        min-width: 100vw;
+      }
+
+      .error-page-container .error-logo {
+        height: 22.4rem;
+        width: 22.4rem;
+        background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02My43NjY2IDEwMS4xMjlDNTkuNTQwNyAxMDAuNjEgNTUuNjMxMSA5OC43MTI1IDUyLjU3NTYgOTUuNjU3QzQ4Ljk1NyA5Mi4wMzg0IDQ2Ljk1NzkgODcuMjI0MSA0Ni45NTc5IDgyLjA5OTlDNDYuOTU3OSA3OC4zNjExIDQ4LjAzOTcgNzQuNzQ4OCA1MC4wNDUxIDcxLjY2MTZDNTcuMjY5NiA3NS4yODAyIDcyLjU3OSA4Mi45NDc2IDgzLjk2NjIgODguNjUzOEw5My45NzQzIDgzLjYzNzJDODAuODQxMSA3Ny4wNTc5IDQ3Ljc5MyA2MC41MDg1IDQ3Ljc5MyA2MC41MDg1TDQ1LjUwMjkgNjIuOTc1OEM0MC42NjMzIDY4LjE4ODYgMzggNzQuOTgyOSAzOCA4Mi4xMDYyQzM4IDg1LjkwMTkgMzguNzQ2NSA4OS41OTAxIDQwLjIxNDIgOTMuMDU2OUM0MS42MzEyIDk2LjQwOTggNDMuNjYyIDk5LjQxNDcgNDYuMjQzIDEwMi4wMDJDNDguODI0MSAxMDQuNTgzIDUxLjgzNTQgMTA2LjYxNCA1NS4xODgzIDEwOC4wMzFDNTguMDIyNCAxMDkuMjI3IDYwLjk5NTggMTA5Ljk0MiA2NC4wNTEzIDExMC4xNjlDNjMuNzYwMyAxMDcuMTY0IDYzLjY3MTggMTA0LjE0NyA2My43NjY2IDEwMS4xMjlaIiBmaWxsPSIjNEM1OUE4Ii8+CjxwYXRoIGQ9Ik0xNTQuNDc4IDYyLjk2OTVMMTUyLjE4OCA2MC41MDIzTDc4LjUyNTcgOTcuNDA5NEM3NS44MTE4IDk4Ljc2OTYgNzMuMDAyOSA5OS44MzI0IDcwLjE4MTQgMTAwLjU3M0M2OS44MTQ1IDEwMC42NjcgNjkuNDc5MiAxMDAuNzUgNjkuMTY5MyAxMDAuODI2QzY5LjAxNzQgMTA0LjY0NyA2OS4xOTQ2IDEwOC40NjEgNjkuNzAwNyAxMTIuMjQ0QzcwLjA2MTMgMTE0LjgwNiA3MC41NDg0IDExNy4zMzcgNzEuMTc0NyAxMTkuODM2QzcyLjUwMzIgMTI1LjE1IDc0LjQyNjMgMTMwLjMyNSA3Ni45MDYyIDEzNS4yMjFDNzkuMzQxOCAxNDAuMDI5IDgyLjMxNTEgMTQ0LjU4NCA4NS43NDM5IDE0OC43NTlDODkuMTUzOCAxNTIuOTA5IDkzLjAyNTQgMTU2LjY5OSA5Ny4yNTEzIDE2MC4wMTRMMTAwLjAyMiAxNjIuMTlMMTAyLjc5MyAxNjAuMDE0QzEwNy4wMTkgMTU2LjY5MiAxMTAuODkxIDE1Mi45MDkgMTE0LjMgMTQ4Ljc1OUMxMTcuNzI5IDE0NC41ODQgMTIwLjcwMyAxNDAuMDI5IDEyMy4xMzggMTM1LjIyMUMxMjUuNjE4IDEzMC4zMjUgMTI3LjU0MSAxMjUuMTUgMTI4Ljg3IDExOS44MzZDMTI5LjY3OSAxMTYuNTkgMTMwLjI2OCAxMTMuMjc2IDEzMC42MjggMTA5LjkyOUgxMzAuNjM1QzEzMC45MzIgMTA2LjkxMSAxMzEuMDIxIDEwMy44NzUgMTMwLjkgMTAwLjgzOEMxMzAuNTcxIDEwMC43NjIgMTMwLjIxMSAxMDAuNjc0IDEyOS44MTkgMTAwLjU3M0MxMjYuOTk3IDk5LjgzMjQgMTI0LjE4OCA5OC43Njk2IDEyMS40NzQgOTcuNDA5NEwxMTYuMDIxIDk0LjY3NjVMMTA2LjAxMyA5OS42OTMyTDExNy40NTcgMTA1LjQyNUMxMTguOTA2IDEwNi4xNTIgMTIwLjM3NCAxMDYuODA0IDEyMS44NiAxMDcuMzg2QzEyMS41NjkgMTEwLjg1OSAxMjEuMDA2IDExNC4zIDEyMC4xNjUgMTE3LjY2NkMxMTkuMDAxIDEyMi4zMjggMTE3LjMxMiAxMjYuODc3IDExNS4xMzUgMTMxLjE3MkMxMTIuOTk3IDEzNS4zOTggMTEwLjM4NCAxMzkuMzk2IDEwNy4zNzMgMTQzLjA2NkMxMDUuMTM0IDE0NS43ODYgMTAyLjY3MyAxNDguMzM1IDEwMC4wMjggMTUwLjY2M0M5Ny4zNzc4IDE0OC4zMzUgOTQuOTE2OSAxNDUuNzkyIDkyLjY4MzggMTQzLjA2NkM4OS42NjYyIDEzOS4zOTYgODcuMDU5OCAxMzUuMzkyIDg0LjkyMTUgMTMxLjE3MkM4Mi43NDUzIDEyNi44NzcgODEuMDU2MiAxMjIuMzM1IDc5Ljg5MjIgMTE3LjY2NkM3OS4wNTA4IDExNC4zIDc4LjQ4NzggMTEwLjg1MyA3OC4xOTY4IDEwNy4zNzNDNzkuNjcwOCAxMDYuNzkxIDgxLjEzMjEgMTA2LjE0IDgyLjU2MTggMTA1LjQyNUM4Mi41NjE4IDEwNS40MjUgMTQxLjM1MSA3NS45NzYyIDE0OS45NDkgNzEuNjY4MUMxNTEuOTU0IDc0Ljc1NTMgMTUzLjAzNiA3OC4zNjEyIDE1My4wMzYgODIuMTA2M0MxNTMuMDM2IDg3LjIyNDIgMTUxLjA0MyA5Mi4wMzg1IDE0Ny40MTggOTUuNjYzNEMxNDQuMzc1IDk4LjcwNjMgMTQwLjQ5MSAxMDAuNTk4IDEzNi4yOSAxMDEuMTI5QzEzNi4zOTIgMTA0LjE0NyAxMzYuMjk3IDEwNy4xNjQgMTM2LjAxMiAxMTAuMTY5QzEzOS4wNDkgMTA5Ljk0MiAxNDIuMDAzIDEwOS4yMjcgMTQ0LjgxMiAxMDguMDM3QzE0OC4xNjUgMTA2LjYyIDE1MS4xNyAxMDQuNTkgMTUzLjc1NyAxMDIuMDA5QzE1Ni4zMzggOTkuNDI3NSAxNTguMzY5IDk2LjQxNjIgMTU5Ljc4NiA5My4wNjMzQzE2MS4yNTQgODkuNTkwMiAxNjIgODUuOTA4NCAxNjIgODIuMTEyNkMxNjEuOTgxIDc0Ljk4MyAxNTkuMzE4IDY4LjE4ODcgMTU0LjQ3OCA2Mi45Njk1WiIgZmlsbD0iIzRDNTlBOCIvPgo8cGF0aCBkPSJNMTE2LjQyNiA1Ny44MTM3QzExNy44NDkgNTQuOTI4OSAxMTkuOTYyIDUyLjQ0OTEgMTIyLjYxOSA1MC41NTc1QzEyNS45MjIgNDguMjEwNSAxMjkuODE5IDQ2Ljk3MDYgMTMzLjg4NiA0Ni45NzA2VjM4LjAwNjNDMTI3Ljk0NiAzOC4wMDYzIDEyMi4yNTIgMzkuODIxOSAxMTcuNDI2IDQzLjI1MDhDMTE1LjEwNCA0NC45MDE5IDExMy4wNDggNDYuODgyIDExMS4zMTQgNDkuMTQ2OEMxMTAuOTU0IDQ5LjYxNDkgMTEwLjYxMiA1MC4wOTU3IDExMC4yODMgNTAuNTgyOEMxMDcuOTQzIDQ4LjE2NjIgMTA1LjQzNyA0NS44OTUxIDEwMi43OCA0My44MDc1TDEwMC4wMSA0MS42MzEyTDk3LjE0MzcgNDMuODc3Qzk0Ljc0NjEgNDUuNzY4NiA5Mi40MzcgNDcuODMwOSA5MC4yODYxIDUwLjAwNzFDOTAuMDkgNTAuMjAzMyA4OS45MDAyIDUwLjM5OTQgODkuNzEwNCA1MC42MDE4Qzg5LjM3NTIgNTAuMTA4NCA4OS4wMjcyIDQ5LjYxNDkgODguNjYwMyA0OS4xNDA1Qzg2LjkyNjkgNDYuODgyIDg0Ljg3MDkgNDQuODk1NiA4Mi41NDkyIDQzLjI0NDRDNzcuNzIyMyAzOS44MTU2IDcyLjAyODcgMzggNjYuMDg4NCAzOFY0Ni45NjQyQzcwLjE1NjEgNDYuOTY0MiA3NC4wNTMxIDQ4LjIwNDIgNzcuMzU1NCA1MC41NTEyQzgwLjAyNSA1Mi40NDkxIDgyLjE0NDMgNTQuOTQxNiA4My41Njc3IDU3LjgzMjdDODIuODE0OSA1OC44NDQ5IDgyLjA4NzQgNTkuODY5NyA4MS4zOTE1IDYwLjkxMzVDNzkuNjY0NCA2My40OTQ2IDc4LjEwMTggNjYuMTg5NiA3Ni43MTY0IDY4Ljk2NjhMODQuNzMxNyA3Mi45ODM5Qzg3Ljc5MzYgNjYuODQxMiA5MS43OTgxIDYxLjI0MjUgOTYuNjY5MyA1Ni4zMDhDOTcuNzQ0NyA1NS4yMTk5IDk4Ljg1ODEgNTQuMTY5OCAxMDAuMDEgNTMuMTU3NkMxMDYuMzM2IDU4LjcxODMgMTExLjUzIDY1LjQ2ODQgMTE1LjI4MSA3Mi45NzEzTDEyMy4yOTYgNjguOTU0MUMxMjEuMzQxIDY1LjA1MDkgMTE5LjAzOSA2MS4zMTg0IDExNi40MjYgNTcuODEzN1oiIGZpbGw9IiM0QzU5QTgiLz4KPHBhdGggZD0iTTEzMy42NzggOTUuOTIyOEMxMzcuMzc4IDk1LjkyMjggMTQwLjg1MSA5NC40ODA0IDE0My40NzEgOTEuODY3N0MxNDYuMDkgODkuMjU1IDE0Ny41MjYgODUuNzc1NSAxNDcuNTI2IDgyLjA3NDdDMTQ3LjUyNiA4MS4wMTgyIDE0Ny40MDUgNzkuOTgwNyAxNDcuMTc4IDc4Ljk4MTJDMTQ1LjQ1MSA3OS44NDc5IDE0My41NTMgODAuNzk2OCAxNDEuNTQxIDgxLjgwMjdDMTQxLjU0MSA4MS44OTEzIDE0MS41NDcgODEuOTg2MSAxNDEuNTQ3IDgyLjA3NDdDMTQxLjU0NyA4Ni40MTQ1IDEzOC4wMTcgODkuOTQ0NSAxMzMuNjc4IDg5Ljk0NDVDMTMxLjgxOCA4OS45NDQ1IDEzMC4xMDMgODkuMjkyOSAxMjguNzQ5IDg4LjIwNDhDMTI2Ljg0NSA4OS4xNjAxIDEyNC45NTQgOTAuMTA5IDEyMy4xMTMgOTEuMDI2M0MxMjMuMzYgOTEuMzExIDEyMy42MTMgOTEuNTg5MyAxMjMuODg1IDkxLjg2MTRDMTI2LjQ5NyA5NC40ODA0IDEyOS45NzcgOTUuOTIyOCAxMzMuNjc4IDk1LjkyMjhaIiBmaWxsPSIjNEM1OUE4Ii8+CjxwYXRoIGQ9Ik01Ni40ODUyIDkxLjg2MTRDNTkuMDk3OSA5NC40NzQxIDYyLjU3NzMgOTUuOTE2NSA2Ni4yNzgxIDk1LjkxNjVDNjkuOTc5IDk1LjkxNjUgNzMuNDUyIDk0LjQ3NDEgNzYuMDcxMSA5MS44NjE0Qzc2LjM0MzEgOTEuNTg5MyA3Ni41OTYyIDkxLjMxMSA3Ni44NDI5IDkxLjAyNjNDNzUuMDAyIDkwLjEwMjcgNzMuMTEwNCA4OS4xNTM3IDcxLjIwNjIgODguMjA0OEM2OS44NTg4IDg5LjI5MjkgNjguMTQ0NCA4OS45NDQ1IDY2LjI3ODEgODkuOTQ0NUM2MS45MzgzIDg5Ljk0NDUgNTguNDA4MyA4Ni40MTQ1IDU4LjQwODMgODIuMDc0N0M1OC40MDgzIDgxLjk4NjEgNTguNDA4MyA4MS44OTEzIDU4LjQxNDYgODEuODAyN0M1Ni40MDI5IDgwLjc5NjggNTQuNTA1IDc5Ljg0MTYgNTIuNzc4IDc4Ljk4MTJDNTIuNTUwMyA3OS45ODcxIDUyLjQzMDEgODEuMDI0NiA1Mi40MzAxIDgyLjA3NDdDNTIuNDMwMSA4NS43NjkyIDUzLjg3MjQgODkuMjQ4NiA1Ni40ODUyIDkxLjg2MTRaIiBmaWxsPSIjNEM1OUE4Ii8+Cjwvc3ZnPgo=');
+        background-size: cover;
+        background-color: #f0f1f6;
+        border-radius: 50%;
+        margin: 1.6rem 0.8rem;
+      }
+
+      .error-page-container h1,
+      .error-page-container .text,
+      .error-page-container .sub-text {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin-top: 1.6rem;
+      }
+      .error-page-container h1,
+      .error-page-container .text {
+        color: #161a36;
+      }
+      .error-page-container .sub-text {
+        line-height: 1.71;
+      }
+      .error-page-container h1 {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .error-page-container .text {
+        font-size: 2rem;
+        line-height: 1.6;
+        max-width: 80%;
+      }
+
+      .error-page-container .action-container {
+        margin-top: 3.2rem;
+      }
+
+      a,
+      a:hover,
+      a:visited,
+      a:active {
+        text-decoration: none;
+      }
+
+      button {
+        cursor: pointer;
+      }
+      button.disabled,
+      button:disabled,
+      button [disabled],
+      button fieldset[disabled] {
+        cursor: not-allowed;
+      }
+      .btn {
+        display: inline-block;
+        box-sizing: border-box;
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        line-height: 1.71;
+        border-radius: 3px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+        white-space: nowrap;
+
+        margin: 0.8rem;
+        padding: 1.2rem 3.2rem;
+        height: 4.8rem;
+
+        /* Safari 1.x (pre WebKit!) */
+        -khtml-opacity: 0.5;
+
+        /* Modern!
+    /* Firefox 0.9+, Safari 2?, Chrome any?
+    /* Opera 9+, IE 9+ */
+        opacity: 1;
+      }
+
+      .btn.btn-primary {
+        background-color: #4c59a8;
+        border-bottom: 1px solid #4c59a8;
+        color: #ffffff;
+      }
+      .btn.btn-secondary {
+        background-color: #f6f6f6;
+        border: 1px solid #e8e8e8;
+        border-bottom: 1px solid #4c59a8;
+        color: #575865;
+      }
+
+      .btn.btn-primary:hover,
+      .btn.btn-primary:active {
+        background-color: darken(#4c59a8, 10);
+      }
+      .btn.btn-secondary:hover,
+      .btn.btn-secondary:active {
+        background-color: darken(#f6f6f6, 10);
+      }
+
+      .btn.btn-primary.disabled,
+      .btn.btn-primary:disabled,
+      .btn.btn-primary[disabled],
+      .btn.btn-primary fieldset[disabled] {
+        background-color: rgba(#4c59a8, 0.1);
+        border-color: rgba(#4c59a8, 0.1);
+        background-clip: padding-box;
+      }
+      .btn.btn-secondary.disabled,
+      .btn.btn-secondary:disabled,
+      .btn.btn-secondary[disabled],
+      .btn.btn-secondary fieldset[disabled] {
+        background-color: rgba(#f6f6f6, 0.1);
+        color: #717171;
+        border-bottom-color: #989898;
+      }
+
+      .suggested-browsers {
+        margin-top: 2.1rem;
+        display: flex;
+        align-items: stretch;
+      }
+
+      .suggested-browsers .suggestion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .suggested-browsers .suggestion .browser {
+        margin-top: 1.8rem;
+      }
+
+      .suggested-browsers .divider {
+        width: 1px;
+        background-color: #989898;
+        margin: 0 5.5rem;
+      }
+
+      .suggested-browsers a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #4c59a8;
+        font-weight: 600;
+      }
+
+      .suggested-browsers a:hover,
+      .suggested-browsers a:focus,
+      .suggested-browsers a:active {
+        color: darken(#4c59a8, 10);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="intigriti provides an ethical hacking and bug bounty platform to identify and tackle vulnerabilities. Our bug bounty programs facilitate to test online security through using crowd security researchers with a strong focus on Europe"
+    />
+    <meta name="keywords" content="Bug Bounty" />
+    <meta name="theme-color" content="#4c59a8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>intigriti - ethical hacking and managed bug bounty platform</title>
+    <base href="/" />
+  </head>
+
+  <body>
+    <div class="error-page-container">
+      <div class="error-logo"></div>
+      <h1>We didn't find what you're looking for</h1>
+      <div class="text">That's kind of all we know. We're sorry!</div>
+      <div class="action-container">
+        <a href="./" class="btn btn-primary">Return to app</a>
+        <a href="./?support=show" class="btn btn-secondary">Contact support</a>
+      </div>
+    </div>
+  </body>
+</html>

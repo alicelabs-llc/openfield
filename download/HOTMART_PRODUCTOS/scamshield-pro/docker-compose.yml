@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  scamshield:
+    build: .
+    container_name: scamshield-pro
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - scamshield-cache:/home/scamshield/.scamshield/cache
+    restart: unless-stopped
+    networks:
+      - scamshield-net
+
+  # Optional: Redis for shared cache in multi-instance deployments
+  redis:
+    image: redis:7-alpine
+    container_name: scamshield-redis
+    restart: unless-stopped
+    networks:
+      - scamshield-net
+    profiles: ["with-redis"]
+
+volumes:
+  scamshield-cache:
+
+networks:
+  scamshield-net:
+    driver: bridge

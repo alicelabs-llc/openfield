@@ -1,0 +1,5630 @@
+{
+  "props": {
+    "pageProps": {
+      "arcJobs": [
+        {
+          "randomKey": "ptp8lc4kuu",
+          "title": "Full-Stack Developer WW-FT ",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "full-stack-developer-ww-ft",
+          "postedAt": 1792698518,
+          "maxHourlyRate": 55,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "Git",
+              "urlString": "git"
+            },
+            {
+              "name": "Database",
+              "urlString": "database"
+            },
+            {
+              "name": "API",
+              "urlString": "api"
+            },
+            {
+              "name": "NoSQL",
+              "urlString": "nosql"
+            },
+            {
+              "name": "Forms Authentication",
+              "urlString": "forms-authentication"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptkuc43y2w",
+          "title": "Senior Creative Lead (CPG brand experience) - Fulltime - LATAM/NA/EMEA",
+          "jobType": "contract",
+          "jobRole": "design",
+          "applied": null,
+          "timeZone": "Pacific Time (US & Canada)",
+          "timeZoneOffset": "-07:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [
+            "RU",
+            "DK",
+            "SV",
+            "SN",
+            "SI",
+            "CZ",
+            "VE",
+            "BS",
+            "CL",
+            "QA",
+            "MZ",
+            "GE",
+            "EE",
+            "AT",
+            "TD",
+            "LI",
+            "CI",
+            "KW",
+            "AR",
+            "NI",
+            "MG",
+            "BR",
+            "RW",
+            "NA",
+            "PL",
+            "LR",
+            "BZ",
+            "MT",
+            "MC",
+            "BY",
+            "EH",
+            "GI",
+            "EG",
+            "MF",
+            "SA",
+            "SM",
+            "DE",
+            "TT",
+            "SK",
+            "SS",
+            "LT",
+            "JM",
+            "MU",
+            "CY",
+            "BB",
+            "SZ",
+            "HU",
+            "AG",
+            "FI",
+            "ST",
+            "RS",
+            "EC",
+            "AO",
+            "TG",
+            "MR",
+            "IE",
+            "JE",
+            "RE",
+            "DJ",
+            "UA",
+            "DO",
+            "ES",
+            "NO",
+            "BA",
+            "TN",
+            "TR",
+            "PS",
+            "BH",
+            "CU",
+            "MA",
+            "AL",
+            "SY",
+            "CO",
+            "BE",
+            "DZ",
+            "AN",
+            "VA",
+            "GF",
+            "AZ",
+            "GT",
+            "PE",
+            "PY",
+            "US",
+            "KE",
+            "YE",
+            "UG",
+            "LY",
+            "KZ",
+            "SL",
+            "UY",
+            "HN",
+            "AE",
+            "IR",
+            "IQ",
+            "CF",
+            "NL",
+            "GQ",
+            "NE",
+            "ME",
+            "GM",
+            "ZM",
+            "LS",
+            "ET",
+            "CD",
+            "SD",
+            "BL",
+            "KM",
+            "MQ",
+            "BW",
+            "SE",
+            "GH",
+            "CH",
+            "BF",
+            "LU",
+            "BO",
+            "CA",
+            "ML",
+            "PR",
+            "FR",
+            "LV",
+            "MX",
+            "RO",
+            "GG",
+            "TZ",
+            "BI",
+            "SO",
+            "ZW",
+            "ER",
+            "FO",
+            "IM",
+            "GA",
+            "OM",
+            "AM",
+            "PA",
+            "LB",
+            "MD",
+            "HT",
+            "ZA",
+            "AD",
+            "PT",
+            "GN",
+            "UM",
+            "NG",
+            "IL",
+            "JO",
+            "IT",
+            "GB",
+            "BG",
+            "IS",
+            "GP",
+            "CR",
+            "HR",
+            "MK",
+            "GR",
+            "MW",
+            "BJ",
+            "CM",
+            "GW",
+            "CV"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": 4,
+          "experienceLevel": "senior",
+          "urlString": "senior-creative-lead-cpg-brand-experience-fulltime-latam-na-emea",
+          "postedAt": 1792656466,
+          "maxHourlyRate": 40,
+          "minHourlyRate": 20,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "Graphics",
+              "urlString": "graphics"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptf98h8fw7",
+          "title": "Mid-level Full-Stack Developer",
+          "jobType": "permanent",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Central Time (US & Canada)",
+          "timeZoneOffset": "-05:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [],
+          "minAnnualSalary": 40000,
+          "maxAnnualSalary": 60000,
+          "overlapHours": 4,
+          "experienceLevel": "mid",
+          "urlString": "mid-level-full-stack-developer",
+          "postedAt": 1792603029,
+          "maxHourlyRate": null,
+          "minHourlyRate": null,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "Node.js",
+              "urlString": "nodejs"
+            },
+            {
+              "name": "JavaScript",
+              "urlString": "javascript"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptegv56ogg",
+          "title": "Growth Marketing Specialist WW-PT",
+          "jobType": "contract",
+          "jobRole": "marketing",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "growth-marketing-specialist-ww-pt",
+          "postedAt": 1792595490,
+          "maxHourlyRate": 55,
+          "minHourlyRate": 35,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Google ads",
+              "urlString": "google-ads"
+            },
+            {
+              "name": "PPC campaigns",
+              "urlString": "ppc-campaigns"
+            },
+            {
+              "name": "Lead generation",
+              "urlString": "lead-generation"
+            }
+          ]
+        },
+        {
+          "randomKey": "pt72fbno85",
+          "title": "Freelance Developer US-FT ",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Eastern Time (US & Canada)",
+          "timeZoneOffset": "-04:00",
+          "clientTimeZoneRestriction": "strict",
+          "requiredCountries": [
+            "US"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "freelance-developer-us-ft",
+          "postedAt": 1792524692,
+          "maxHourlyRate": 70,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "MuleSoft",
+              "urlString": "mulesoft"
+            },
+            {
+              "name": "DataWeave",
+              "urlString": "dataweave"
+            },
+            {
+              "name": "API",
+              "urlString": "api"
+            },
+            {
+              "name": "Onboarding experiences",
+              "urlString": "onboarding-experiences"
+            }
+          ]
+        },
+        {
+          "randomKey": "pt6p8ztx6y",
+          "title": "Freelance Marketer WW-PT",
+          "jobType": "contract",
+          "jobRole": "marketing",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "freelance-marketer-ww-pt",
+          "postedAt": 1792521191,
+          "maxHourlyRate": 70,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Lead generation",
+              "urlString": "lead-generation"
+            },
+            {
+              "name": "Growth strategy",
+              "urlString": "growth-strategy"
+            },
+            {
+              "name": "Growth Marketing",
+              "urlString": "growth-marketing"
+            },
+            {
+              "name": "Campaign planning",
+              "urlString": "campaign-planning"
+            }
+          ]
+        },
+        {
+          "randomKey": "psx78zmwr6",
+          "title": "Senior Backend / Data Engineer WW-FT",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-backend-data-engineer-ww-ft",
+          "postedAt": 1792430314,
+          "maxHourlyRate": 35,
+          "minHourlyRate": 20,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "PostgreSQL",
+              "urlString": "postgresql"
+            },
+            {
+              "name": "TypeScript",
+              "urlString": "typescript"
+            },
+            {
+              "name": "Apache Kafka",
+              "urlString": "apache-kafka"
+            },
+            {
+              "name": "Data Ingestion",
+              "urlString": "data-ingestion"
+            },
+            {
+              "name": "API Integration",
+              "urlString": "api-integration"
+            }
+          ]
+        },
+        {
+          "randomKey": "psx4zd2bui",
+          "title": "Senior C#/.NET Engineer (Trading System) - Part-time - Overlap PST (3)",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Pacific Time (US & Canada)",
+          "timeZoneOffset": "-07:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-c-net-engineer-trading-system-part-time-overlap-pst-3",
+          "postedAt": 1792429712,
+          "maxHourlyRate": 70,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "C#",
+              "urlString": "c_sharp"
+            },
+            {
+              "name": "Trading Systems",
+              "urlString": "trading-systems"
+            },
+            {
+              "name": "Wavelet analysis",
+              "urlString": "wavelet-analysis"
+            },
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            }
+          ]
+        },
+        {
+          "randomKey": "pswpl69yeb",
+          "title": "Senior Offshore Full-Stack/DevSecOps Engineer",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-offshore-full-stack-devsecops-engineer",
+          "postedAt": 1792425621,
+          "maxHourlyRate": 55,
+          "minHourlyRate": 45,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "React",
+              "urlString": "reactjs"
+            },
+            {
+              "name": "PostgreSQL",
+              "urlString": "postgresql"
+            }
+          ]
+        },
+        {
+          "randomKey": "psw3ntb7eh",
+          "title": "Senior Cloud Architect (AWS) - Fulltime - EMEA/LATAM",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Nairobi",
+          "timeZoneOffset": "+03:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [
+            "RU",
+            "DK",
+            "SN",
+            "SI",
+            "CZ",
+            "QA",
+            "MZ",
+            "GE",
+            "EE",
+            "AT",
+            "TD",
+            "LI",
+            "CI",
+            "KW",
+            "MG",
+            "RW",
+            "NA",
+            "PL",
+            "LR",
+            "MT",
+            "MC",
+            "BY",
+            "EH",
+            "GI",
+            "EG",
+            "SA",
+            "SM",
+            "DE",
+            "SK",
+            "SS",
+            "LT",
+            "MU",
+            "CY",
+            "SZ",
+            "HU",
+            "FI",
+            "ST",
+            "RS",
+            "AO",
+            "TG",
+            "MR",
+            "IE",
+            "JE",
+            "RE",
+            "DJ",
+            "UA",
+            "ES",
+            "NO",
+            "BA",
+            "TN",
+            "TR",
+            "PS",
+            "BH",
+            "MA",
+            "AL",
+            "SY",
+            "BE",
+            "DZ",
+            "VA",
+            "AZ",
+            "KE",
+            "YE",
+            "UG",
+            "LY",
+            "KZ",
+            "SL",
+            "AE",
+            "IR",
+            "IQ",
+            "CF",
+            "NL",
+            "GQ",
+            "NE",
+            "ME",
+            "GM",
+            "ZM",
+            "LS",
+            "ET",
+            "CD",
+            "SD",
+            "KM",
+            "BW",
+            "SE",
+            "GH",
+            "CH",
+            "BF",
+            "LU",
+            "ML",
+            "FR",
+            "LV",
+            "RO",
+            "GG",
+            "TZ",
+            "BI",
+            "SO",
+            "ZW",
+            "ER",
+            "FO",
+            "IM",
+            "GA",
+            "OM",
+            "AM",
+            "LB",
+            "MD",
+            "ZA",
+            "AD",
+            "PT",
+            "GN",
+            "NG",
+            "IL",
+            "JO",
+            "IT",
+            "GB",
+            "BG",
+            "IS",
+            "HR",
+            "MK",
+            "GR",
+            "MW",
+            "BJ",
+            "CM",
+            "GW",
+            "CV"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-cloud-architect-aws-fulltime-emea-latam",
+          "postedAt": 1792419795,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 20,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "AWS",
+              "urlString": "aws"
+            },
+            {
+              "name": "Iam role management",
+              "urlString": "iam-role-management"
+            },
+            {
+              "name": "Terraform",
+              "urlString": "terraform"
+            },
+            {
+              "name": "Infrastructure as Code",
+              "urlString": "infrastructure-as-code"
+            },
+            {
+              "name": "Continuous Integration",
+              "urlString": "continuous-integration"
+            }
+          ]
+        },
+        {
+          "randomKey": "pstzrawmr6",
+          "title": "Freelance React Native Developer",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "mid",
+          "urlString": "freelance-react-native-developer",
+          "postedAt": 1792399626,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Supabase",
+              "urlString": "supabase"
+            },
+            {
+              "name": "React",
+              "urlString": "reactjs"
+            },
+            {
+              "name": "React Native",
+              "urlString": "react-native"
+            }
+          ]
+        },
+        {
+          "randomKey": "psflyrlbmv",
+          "title": "Google Ads/PPC Master Certified Freelancer",
+          "jobType": "contract",
+          "jobRole": "marketing",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "RU",
+            "SK",
+            "DK",
+            "LT",
+            "SI",
+            "CZ",
+            "FR",
+            "KZ",
+            "LV",
+            "CY",
+            "RO",
+            "NL",
+            "HU",
+            "GE",
+            "EE",
+            "AT",
+            "LI",
+            "FI",
+            "ME",
+            "RS",
+            "IE",
+            "AM",
+            "PL",
+            "MD",
+            "UA",
+            "AD",
+            "PT",
+            "ES",
+            "MT",
+            "MC",
+            "NO",
+            "BA",
+            "IT",
+            "GB",
+            "BG",
+            "TR",
+            "IS",
+            "BY",
+            "AL",
+            "HR",
+            "SE",
+            "MK",
+            "GR",
+            "CH",
+            "BE",
+            "VA",
+            "SM",
+            "DE",
+            "AZ",
+            "LU"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "google-ads-ppc-master-certified-freelancer",
+          "postedAt": 1792262038,
+          "maxHourlyRate": 50,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Google ads",
+              "urlString": "google-ads"
+            },
+            {
+              "name": "Lead generation",
+              "urlString": "lead-generation"
+            },
+            {
+              "name": "Ticket sales",
+              "urlString": "ticket-sales"
+            }
+          ]
+        },
+        {
+          "randomKey": "ps0irt3gyg",
+          "title": "AI Integration Engineer (voice agent integration) - WW - FT",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "mid",
+          "urlString": "ai-integration-engineer-voice-agent-integration-ww-ft",
+          "postedAt": 1792117700,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "RESTful API",
+              "urlString": "restful-api"
+            },
+            {
+              "name": "OpenAI",
+              "urlString": "openai"
+            },
+            {
+              "name": "Voice AI",
+              "urlString": "voice-ai"
+            }
+          ]
+        },
+        {
+          "randomKey": "przyb5c12p",
+          "title": "Experienced Software Engineer - AI Coding Tasks",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "mid",
+          "urlString": "experienced-software-engineer-ai-coding-tasks",
+          "postedAt": 1792112263,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            }
+          ]
+        },
+        {
+          "randomKey": "prytr6smi2",
+          "title": "Security Specialist - Part-time - Overlap with EST",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Eastern Time (US & Canada)",
+          "timeZoneOffset": "-04:00",
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "GT",
+            "RU",
+            "PE",
+            "DK",
+            "PY",
+            "SV",
+            "US",
+            "SI",
+            "CZ",
+            "VE",
+            "KZ",
+            "BS",
+            "UY",
+            "HN",
+            "CL",
+            "NL",
+            "GE",
+            "EE",
+            "AT",
+            "LI",
+            "ME",
+            "AR",
+            "NI",
+            "BR",
+            "PL",
+            "BZ",
+            "BL",
+            "MT",
+            "MC",
+            "MQ",
+            "BY",
+            "SE",
+            "CH",
+            "MF",
+            "SM",
+            "DE",
+            "LU",
+            "BO",
+            "TT",
+            "CA",
+            "SK",
+            "LT",
+            "PR",
+            "JM",
+            "FR",
+            "LV",
+            "CY",
+            "BB",
+            "MX",
+            "RO",
+            "HU",
+            "AG",
+            "FI",
+            "RS",
+            "EC",
+            "IE",
+            "AM",
+            "PA",
+            "MD",
+            "HT",
+            "UA",
+            "AD",
+            "PT",
+            "DO",
+            "ES",
+            "UM",
+            "NO",
+            "BA",
+            "IT",
+            "GB",
+            "BG",
+            "TR",
+            "IS",
+            "GP",
+            "CU",
+            "CR",
+            "AL",
+            "HR",
+            "MK",
+            "GR",
+            "CO",
+            "BE",
+            "AN",
+            "VA",
+            "GF",
+            "AZ"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "security-specialist-part-time-overlap-with-est",
+          "postedAt": 1792101487,
+          "maxHourlyRate": 50,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Mobile App Development",
+              "urlString": "mobile-app-development"
+            }
+          ]
+        },
+        {
+          "randomKey": "pryspv2zfo",
+          "title": "Senior Mobile Engineer (iOS, Android) - Overlap with EST",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Eastern Time (US & Canada)",
+          "timeZoneOffset": "-04:00",
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "GT",
+            "RU",
+            "PE",
+            "DK",
+            "PY",
+            "SV",
+            "US",
+            "SI",
+            "CZ",
+            "VE",
+            "KZ",
+            "BS",
+            "UY",
+            "HN",
+            "CL",
+            "NL",
+            "GE",
+            "EE",
+            "AT",
+            "LI",
+            "ME",
+            "AR",
+            "NI",
+            "BR",
+            "PL",
+            "BZ",
+            "BL",
+            "MT",
+            "MC",
+            "MQ",
+            "BY",
+            "SE",
+            "CH",
+            "MF",
+            "SM",
+            "DE",
+            "LU",
+            "BO",
+            "TT",
+            "CA",
+            "SK",
+            "LT",
+            "PR",
+            "JM",
+            "FR",
+            "LV",
+            "CY",
+            "BB",
+            "MX",
+            "RO",
+            "HU",
+            "AG",
+            "FI",
+            "RS",
+            "EC",
+            "IE",
+            "AM",
+            "PA",
+            "MD",
+            "HT",
+            "UA",
+            "AD",
+            "PT",
+            "DO",
+            "ES",
+            "UM",
+            "NO",
+            "BA",
+            "IT",
+            "GB",
+            "BG",
+            "TR",
+            "IS",
+            "GP",
+            "CU",
+            "CR",
+            "AL",
+            "HR",
+            "MK",
+            "GR",
+            "CO",
+            "BE",
+            "AN",
+            "VA",
+            "GF",
+            "AZ"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-mobile-engineer-ios-android-overlap-with-est",
+          "postedAt": 1792101211,
+          "maxHourlyRate": 50,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "API Integration",
+              "urlString": "api-integration"
+            },
+            {
+              "name": "App Store",
+              "urlString": "app-store"
+            },
+            {
+              "name": "Flutter",
+              "urlString": "flutter"
+            }
+          ]
+        },
+        {
+          "randomKey": "pryrlmyzml",
+          "title": "Lead Engineer: Systems Architect, Backend Developer, DevOps Engineer - Overlap with EST",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "GT",
+            "RU",
+            "PE",
+            "DK",
+            "PY",
+            "SV",
+            "US",
+            "SI",
+            "CZ",
+            "VE",
+            "KZ",
+            "BS",
+            "UY",
+            "HN",
+            "CL",
+            "NL",
+            "GE",
+            "EE",
+            "AT",
+            "LI",
+            "ME",
+            "AR",
+            "NI",
+            "BR",
+            "PL",
+            "BZ",
+            "BL",
+            "MT",
+            "MC",
+            "MQ",
+            "BY",
+            "SE",
+            "CH",
+            "MF",
+            "SM",
+            "DE",
+            "LU",
+            "BO",
+            "TT",
+            "CA",
+            "SK",
+            "LT",
+            "PR",
+            "JM",
+            "FR",
+            "LV",
+            "CY",
+            "BB",
+            "MX",
+            "RO",
+            "HU",
+            "AG",
+            "FI",
+            "RS",
+            "EC",
+            "IE",
+            "AM",
+            "PA",
+            "MD",
+            "HT",
+            "UA",
+            "AD",
+            "PT",
+            "DO",
+            "ES",
+            "UM",
+            "NO",
+            "BA",
+            "IT",
+            "GB",
+            "BG",
+            "TR",
+            "IS",
+            "GP",
+            "CU",
+            "CR",
+            "AL",
+            "HR",
+            "MK",
+            "GR",
+            "CO",
+            "BE",
+            "AN",
+            "VA",
+            "GF",
+            "AZ"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "lead-engineer-systems-architect-backend-developer-devops-engineer-overlap-with-est",
+          "postedAt": 1792100914,
+          "maxHourlyRate": 55,
+          "minHourlyRate": 45,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Docker",
+              "urlString": "docker"
+            },
+            {
+              "name": "AWS",
+              "urlString": "aws"
+            }
+          ]
+        },
+        {
+          "randomKey": "prq1o4mjmx",
+          "title": "Senior AI Solutions Architect \u2014 Government AI Projects",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "CA"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-ai-solutions-architect-government-ai-projects",
+          "postedAt": 1792017496,
+          "maxHourlyRate": 50,
+          "minHourlyRate": 20,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "Software architecture",
+              "urlString": "software-architecture"
+            }
+          ]
+        },
+        {
+          "randomKey": "prjpje6skt",
+          "title": "Senior Bitcoin Lightning Engineer (Full-Stack) - PT - WW",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-bitcoin-lightning-engineer-full-stack-pt-ww",
+          "postedAt": 1791956877,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 20,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Bitcoin",
+              "urlString": "bitcoin"
+            },
+            {
+              "name": "Lightning network",
+              "urlString": "lightning-network"
+            },
+            {
+              "name": "TypeScript",
+              "urlString": "typescript"
+            },
+            {
+              "name": "gRPC",
+              "urlString": "grpc"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            }
+          ]
+        },
+        {
+          "randomKey": "prhrzqa9aa",
+          "title": "Senior Fractional CTO (Principal Geospatial & Data Architect) - PT - EMEA/APAC",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "RU",
+            "TK",
+            "DK",
+            "PN",
+            "SN",
+            "SI",
+            "CZ",
+            "KR",
+            "JP",
+            "TL",
+            "UZ",
+            "TV",
+            "MH",
+            "AU",
+            "QA",
+            "MZ",
+            "GE",
+            "EE",
+            "AT",
+            "VN",
+            "TD",
+            "LI",
+            "CI",
+            "NF",
+            "KW",
+            "MG",
+            "TJ",
+            "RW",
+            "NA",
+            "PL",
+            "LR",
+            "VU",
+            "LA",
+            "MT",
+            "MC",
+            "BY",
+            "EH",
+            "GI",
+            "EG",
+            "LK",
+            "SA",
+            "SM",
+            "DE",
+            "SK",
+            "SS",
+            "LT",
+            "MU",
+            "CY",
+            "PF",
+            "SZ",
+            "NU",
+            "HU",
+            "FI",
+            "WF",
+            "NR",
+            "ST",
+            "RS",
+            "TM",
+            "KG",
+            "AO",
+            "TG",
+            "MR",
+            "IE",
+            "JE",
+            "RE",
+            "DJ",
+            "BD",
+            "UA",
+            "ES",
+            "NO",
+            "TH",
+            "BA",
+            "TN",
+            "TR",
+            "PS",
+            "BH",
+            "MA",
+            "AL",
+            "SY",
+            "BE",
+            "DZ",
+            "AS",
+            "VA",
+            "AZ",
+            "MM",
+            "SG",
+            "CK",
+            "KE",
+            "YE",
+            "UG",
+            "LY",
+            "NZ",
+            "KZ",
+            "SL",
+            "GU",
+            "AE",
+            "IR",
+            "IQ",
+            "CF",
+            "NL",
+            "IN",
+            "CN",
+            "GQ",
+            "NE",
+            "BN",
+            "ME",
+            "GM",
+            "ZM",
+            "LS",
+            "ET",
+            "CD",
+            "SD",
+            "MY",
+            "HK",
+            "KM",
+            "MV",
+            "NP",
+            "BW",
+            "MP",
+            "SE",
+            "SB",
+            "GH",
+            "CH",
+            "BF",
+            "BT",
+            "PW",
+            "PK",
+            "TW",
+            "LU",
+            "FM",
+            "ML",
+            "FR",
+            "FJ",
+            "LV",
+            "PG",
+            "RO",
+            "GG",
+            "TZ",
+            "BI",
+            "SO",
+            "PH",
+            "ZW",
+            "NC",
+            "ER",
+            "FO",
+            "ID",
+            "IM",
+            "GA",
+            "MN",
+            "OM",
+            "WS",
+            "AM",
+            "KI",
+            "LB",
+            "AF",
+            "MD",
+            "ZA",
+            "AD",
+            "PT",
+            "GN",
+            "TO",
+            "NG",
+            "IL",
+            "JO",
+            "IT",
+            "GB",
+            "BG",
+            "IS",
+            "HR",
+            "KH",
+            "MK",
+            "GR",
+            "MW",
+            "BJ",
+            "CM",
+            "GW",
+            "CV"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-fractional-cto-principal-geospatial-data-architect-pt-emea-apac",
+          "postedAt": 1791938397,
+          "maxHourlyRate": 70,
+          "minHourlyRate": 45,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "PostGIS",
+              "urlString": "postgis"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "Data Engineering",
+              "urlString": "data-engineering"
+            }
+          ]
+        },
+        {
+          "randomKey": "prfr6ccw58",
+          "title": "WordPress Site Maintenance Specialist",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "junior",
+          "urlString": "wordpress-site-maintenance-specialist",
+          "postedAt": 1791919049,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "WordPress",
+              "urlString": "wordpress"
+            }
+          ]
+        },
+        {
+          "randomKey": "prfaxu6uey",
+          "title": "Full Stack Engineer (Node.js, React) - WW - FT",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "TT",
+            "PE",
+            "PY",
+            "SV",
+            "PR",
+            "JM",
+            "VE",
+            "BS",
+            "UY",
+            "HN",
+            "BB",
+            "MX",
+            "CL",
+            "AG",
+            "AR",
+            "NI",
+            "EC",
+            "BR",
+            "PA",
+            "HT",
+            "BZ",
+            "BL",
+            "DO",
+            "UM",
+            "MQ",
+            "GP",
+            "CU",
+            "CR",
+            "CO",
+            "MF",
+            "AN",
+            "GF",
+            "BO",
+            "GT"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "mid",
+          "urlString": "full-stack-engineer-node-js-react-ww-ft",
+          "postedAt": 1791914734,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Node.js",
+              "urlString": "nodejs"
+            },
+            {
+              "name": "React",
+              "urlString": "reactjs"
+            },
+            {
+              "name": "MySQL",
+              "urlString": "mysql"
+            }
+          ]
+        },
+        {
+          "randomKey": "prepl6f8n6",
+          "title": "AI Implementation Specialist",
+          "jobType": "permanent",
+          "jobRole": "project_manager",
+          "applied": null,
+          "timeZone": "Pacific Time (US & Canada)",
+          "timeZoneOffset": "-07:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [
+            "LK",
+            "BT",
+            "AS",
+            "PW",
+            "PK",
+            "TW",
+            "FM",
+            "RU",
+            "MM",
+            "TK",
+            "SG",
+            "PN",
+            "CK",
+            "KR",
+            "JP",
+            "NZ",
+            "TL",
+            "GU",
+            "FJ",
+            "UZ",
+            "TV",
+            "PG",
+            "MH",
+            "PF",
+            "AU",
+            "IN",
+            "CN",
+            "NU",
+            "VN",
+            "PH",
+            "BN",
+            "NF",
+            "WF",
+            "NR",
+            "NC",
+            "TM",
+            "KG",
+            "ID",
+            "MN",
+            "WS",
+            "TJ",
+            "BD",
+            "KI",
+            "AF",
+            "VU",
+            "MY",
+            "LA",
+            "HK",
+            "TO",
+            "MV",
+            "TH",
+            "NP",
+            "MP",
+            "KH",
+            "SB"
+          ],
+          "minAnnualSalary": 20000,
+          "maxAnnualSalary": 25000,
+          "overlapHours": 8,
+          "experienceLevel": "mid",
+          "urlString": "ai-implementation-specialist",
+          "postedAt": 1791909061,
+          "maxHourlyRate": null,
+          "minHourlyRate": null,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Client training and support",
+              "urlString": "client-training-and-support"
+            },
+            {
+              "name": "Client success management",
+              "urlString": "client-success-management"
+            },
+            {
+              "name": "Ai product experiences",
+              "urlString": "ai-product-experiences"
+            },
+            {
+              "name": "Automatic prompt optimization",
+              "urlString": "automatic-prompt-optimization"
+            },
+            {
+              "name": "Client Facing technical leadership",
+              "urlString": "client-facing-technical-leadership"
+            }
+          ]
+        },
+        {
+          "randomKey": "pre7jrge3k",
+          "title": "Sr/Staff Infrastructure Engineer - Perm - Relocate to SF",
+          "jobType": "permanent",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "MX",
+            "CL",
+            "CA",
+            "SG",
+            "US"
+          ],
+          "minAnnualSalary": 250000,
+          "maxAnnualSalary": 485000,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "sr-staff-infrastructure-engineer-perm-relocate-to-sf",
+          "postedAt": 1791904267,
+          "maxHourlyRate": null,
+          "minHourlyRate": null,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Kubernetes",
+              "urlString": "kubernetes"
+            },
+            {
+              "name": "DevOps",
+              "urlString": "devops"
+            },
+            {
+              "name": "Docker",
+              "urlString": "docker"
+            },
+            {
+              "name": "CI/CD",
+              "urlString": "ci-cd"
+            },
+            {
+              "name": "Iac tools",
+              "urlString": "iac-tools"
+            },
+            {
+              "name": "Terraform",
+              "urlString": "terraform"
+            },
+            {
+              "name": "Azure",
+              "urlString": "azure"
+            },
+            {
+              "name": "Google Cloud Platform",
+              "urlString": "google-cloud-platform"
+            },
+            {
+              "name": "Multi Cloud",
+              "urlString": "multi-cloud"
+            }
+          ]
+        },
+        {
+          "randomKey": "pr9k5u3lh1",
+          "title": "Senior Full-Stack Developer WW-FT ",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-full-stack-developer-ww-ft",
+          "postedAt": 1791859789,
+          "maxHourlyRate": 60,
+          "minHourlyRate": 40,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Angular",
+              "urlString": "angular"
+            },
+            {
+              "name": "Node.js",
+              "urlString": "nodejs"
+            },
+            {
+              "name": "AWS",
+              "urlString": "aws"
+            },
+            {
+              "name": "Anthropic",
+              "urlString": "anthropic"
+            }
+          ]
+        },
+        {
+          "randomKey": "pr88ybusyx",
+          "title": "Full-stack Javascript/typescript (Node.js) Engineer - PT - NA/LATAM/EU",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Eastern Time (US & Canada)",
+          "timeZoneOffset": "-04:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [
+            "GT",
+            "RU",
+            "PE",
+            "DK",
+            "PY",
+            "SV",
+            "US",
+            "SI",
+            "CZ",
+            "VE",
+            "KZ",
+            "BS",
+            "UY",
+            "HN",
+            "CL",
+            "NL",
+            "GE",
+            "EE",
+            "AT",
+            "LI",
+            "ME",
+            "AR",
+            "NI",
+            "BR",
+            "PL",
+            "BZ",
+            "BL",
+            "MT",
+            "MC",
+            "MQ",
+            "BY",
+            "SE",
+            "CH",
+            "MF",
+            "SM",
+            "DE",
+            "LU",
+            "BO",
+            "TT",
+            "CA",
+            "SK",
+            "LT",
+            "PR",
+            "JM",
+            "FR",
+            "LV",
+            "CY",
+            "BB",
+            "MX",
+            "RO",
+            "HU",
+            "AG",
+            "FI",
+            "RS",
+            "EC",
+            "IE",
+            "AM",
+            "PA",
+            "MD",
+            "HT",
+            "UA",
+            "AD",
+            "PT",
+            "DO",
+            "ES",
+            "UM",
+            "NO",
+            "BA",
+            "IT",
+            "GB",
+            "BG",
+            "TR",
+            "IS",
+            "GP",
+            "CU",
+            "CR",
+            "AL",
+            "HR",
+            "MK",
+            "GR",
+            "CO",
+            "BE",
+            "AN",
+            "VA",
+            "GF",
+            "AZ"
+          ],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": 4,
+          "experienceLevel": "senior",
+          "urlString": "full-stack-javascript-typescript-node-js-engineer-pt-na-latam-eu",
+          "postedAt": 1791847245,
+          "maxHourlyRate": 50,
+          "minHourlyRate": 35,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "RESTful API",
+              "urlString": "restful-api"
+            },
+            {
+              "name": "Node.js",
+              "urlString": "nodejs"
+            },
+            {
+              "name": "JavaScript",
+              "urlString": "javascript"
+            },
+            {
+              "name": "OAuth 2.0",
+              "urlString": "oauth-20"
+            }
+          ]
+        },
+        {
+          "randomKey": "pr6urn18d0",
+          "title": "Senior SaaS and DevOps Engineer - Part-time - Worldwide",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Amsterdam",
+          "timeZoneOffset": "+02:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "senior-saas-and-devops-engineer-part-time-worldwide",
+          "postedAt": 1791833910,
+          "maxHourlyRate": 55,
+          "minHourlyRate": 20,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Supabase",
+              "urlString": "supabase"
+            },
+            {
+              "name": "Node.js",
+              "urlString": "nodejs"
+            },
+            {
+              "name": "Next.js",
+              "urlString": "nextjs"
+            },
+            {
+              "name": "Docker",
+              "urlString": "docker"
+            },
+            {
+              "name": "GitHub",
+              "urlString": "github"
+            }
+          ]
+        },
+        {
+          "randomKey": "pr3cp26te4",
+          "title": "Audit of Ml and Econometric Models on Financial Time Series",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "no-preference",
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": null,
+          "experienceLevel": "mid",
+          "urlString": "audit-of-ml-and-econometric-models-on-financial-time-series",
+          "postedAt": 1791800410,
+          "maxHourlyRate": 45,
+          "minHourlyRate": 30,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            }
+          ]
+        },
+        {
+          "randomKey": "pr2mwe0zr5",
+          "title": "Marketing Data Analyst - Part-time - Overlap EST (2) ",
+          "jobType": "contract",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": "Eastern Time (US & Canada)",
+          "timeZoneOffset": "-04:00",
+          "clientTimeZoneRestriction": "overlap",
+          "requiredCountries": [],
+          "minAnnualSalary": null,
+          "maxAnnualSalary": null,
+          "overlapHours": 6,
+          "experienceLevel": "senior",
+          "urlString": "marketing-data-analyst-part-time-overlap-est-2",
+          "postedAt": 1791793555,
+          "maxHourlyRate": 25,
+          "minHourlyRate": 15,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Google BigQuery",
+              "urlString": "google-bigquery"
+            },
+            {
+              "name": "Paid media",
+              "urlString": "paid-media"
+            },
+            {
+              "name": "Google Sheets",
+              "urlString": "google-sheets"
+            },
+            {
+              "name": "HubSpot",
+              "urlString": "hubspot"
+            }
+          ]
+        },
+        {
+          "randomKey": "pq2vlwxisq",
+          "title": "Sr/Staff Backend Engineer - Perm - Relocation to SF",
+          "jobType": "permanent",
+          "jobRole": "engineering",
+          "applied": null,
+          "timeZone": null,
+          "timeZoneOffset": null,
+          "clientTimeZoneRestriction": null,
+          "requiredCountries": [
+            "MX",
+            "CL",
+            "CA",
+            "SG",
+            "US"
+          ],
+          "minAnnualSalary": 245000,
+          "maxAnnualSalary": 485000,
+          "overlapHours": null,
+          "experienceLevel": "senior",
+          "urlString": "sr-staff-backend-engineer-perm-relocation-to-sf",
+          "postedAt": 1791451495,
+          "maxHourlyRate": null,
+          "minHourlyRate": null,
+          "company": {
+            "randomKey": null
+          },
+          "categories": [
+            {
+              "name": "Node.js",
+              "urlString": "nodejs"
+            },
+            {
+              "name": "RAG",
+              "urlString": "rag"
+            },
+            {
+              "name": "LLM",
+              "urlString": "llm"
+            },
+            {
+              "name": "JavaScript",
+              "urlString": "javascript"
+            },
+            {
+              "name": "Distributed Systems Engineering",
+              "urlString": "distributed-systems-engineering"
+            }
+          ]
+        }
+      ],
+      "externalJobs": [
+        {
+          "randomKey": "ptsx1ez43g",
+          "title": "Head of Talent, Performance Marketing",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "marketing",
+          "experienceLevels": [],
+          "urlString": "launch-potato-head-of-talent-performance-marketing",
+          "postedAt": 1792686229,
+          "company": {
+            "randomKey": "alug5qv0l6",
+            "urlString": "launch-potato",
+            "name": "Launch Potato",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Performance marketing",
+              "urlString": "performance-marketing"
+            },
+            {
+              "name": "Operations",
+              "urlString": "operations"
+            },
+            {
+              "name": "Data Science",
+              "urlString": "data-science"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "User acquisition",
+              "urlString": "user-acquisition"
+            },
+            {
+              "name": "Paid media",
+              "urlString": "paid-media"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Forecasting",
+              "urlString": "forecasting"
+            },
+            {
+              "name": "Affiliate marketing",
+              "urlString": "affiliate-marketing"
+            },
+            {
+              "name": "Dynamic Yield",
+              "urlString": "dynamic-yield"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Sourcing Strategies",
+              "urlString": "sourcing-strategies"
+            },
+            {
+              "name": "Recruitment",
+              "urlString": "recruitment"
+            },
+            {
+              "name": "Reporting",
+              "urlString": "reporting"
+            },
+            {
+              "name": "Interview Skills",
+              "urlString": "interview-skills"
+            },
+            {
+              "name": "Technical Recruitment",
+              "urlString": "technical-recruitment"
+            },
+            {
+              "name": "Management",
+              "urlString": "management"
+            },
+            {
+              "name": "Leadership",
+              "urlString": "leadership"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsx38acg8",
+          "title": "Head of Growth Marketing",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US",
+            "CA"
+          ],
+          "positionType": "marketing",
+          "experienceLevels": [],
+          "urlString": "lightning-ai-head-of-growth-marketing",
+          "postedAt": 1792686225,
+          "company": {
+            "randomKey": "f6fjmjwovw",
+            "urlString": "pytorch-lightning",
+            "name": "PyTorch Lightning",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Security software",
+              "urlString": "security-software"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "PyTorch",
+              "urlString": "pytorch"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "System security",
+              "urlString": "system-security"
+            },
+            {
+              "name": "Paid media",
+              "urlString": "paid-media"
+            },
+            {
+              "name": "Growth strategy",
+              "urlString": "growth-strategy"
+            },
+            {
+              "name": "Personas",
+              "urlString": "personas"
+            },
+            {
+              "name": "Digital marketing",
+              "urlString": "digital-marketing"
+            },
+            {
+              "name": "User journey mapping",
+              "urlString": "user-journey-mapping"
+            },
+            {
+              "name": "Product marketing",
+              "urlString": "product-marketing"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "B2B marketing",
+              "urlString": "b2b-marketing"
+            },
+            {
+              "name": "Growth Marketing",
+              "urlString": "growth-marketing"
+            },
+            {
+              "name": "Campaign planning",
+              "urlString": "campaign-planning"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Marketing operations",
+              "urlString": "marketing-operations"
+            },
+            {
+              "name": "Team Building",
+              "urlString": "team-building"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsx3tnedl",
+          "title": "Global Marketing Leader, Contrast Media",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "GB"
+          ],
+          "positionType": "marketing",
+          "experienceLevels": [
+            "lead"
+          ],
+          "urlString": "ge-healthcare-global-marketing-leader-contrast-media",
+          "postedAt": 1792686224,
+          "company": {
+            "randomKey": "cfyhh76vst",
+            "urlString": "ge-healthcare",
+            "name": "GE HealthCare",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Market research",
+              "urlString": "market-research"
+            },
+            {
+              "name": "Product marketing",
+              "urlString": "product-marketing"
+            },
+            {
+              "name": "Compliance",
+              "urlString": "compliance"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "Forecasting",
+              "urlString": "forecasting"
+            },
+            {
+              "name": "Product launch",
+              "urlString": "product-launch"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Brand positioning",
+              "urlString": "brand-positioning"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "Operations",
+              "urlString": "operations"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Internet Advertising",
+              "urlString": "internet-advertising"
+            },
+            {
+              "name": "Digital marketing",
+              "urlString": "digital-marketing"
+            },
+            {
+              "name": "User segmentation",
+              "urlString": "user-segmentation"
+            },
+            {
+              "name": "Messaging Systems",
+              "urlString": "messaging-systems"
+            },
+            {
+              "name": "Strategy",
+              "urlString": "strategy"
+            },
+            {
+              "name": "CRM",
+              "urlString": "crm"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Financial Expertise",
+              "urlString": "financial-expertise"
+            },
+            {
+              "name": "Change management",
+              "urlString": "change-management"
+            }
+          ]
+        },
+        {
+          "randomKey": "phq5g4g1wn",
+          "title": "Senior Manager, Field & Event Marketing",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "marketing",
+          "experienceLevels": [
+            "manager",
+            "senior"
+          ],
+          "urlString": "zafran-security-senior-manager-field-event-marketing",
+          "postedAt": 1792686223,
+          "company": {
+            "randomKey": "le84sx5vqh",
+            "urlString": "zafran-security",
+            "name": "Zafran Security",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Security software",
+              "urlString": "security-software"
+            },
+            {
+              "name": "System security",
+              "urlString": "system-security"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Event marketing",
+              "urlString": "event-marketing"
+            },
+            {
+              "name": "Cybersecurity",
+              "urlString": "cybersecurity"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Forecasting",
+              "urlString": "forecasting"
+            },
+            {
+              "name": "Lead generation",
+              "urlString": "lead-generation"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Operations",
+              "urlString": "operations"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "B2B marketing",
+              "urlString": "b2b-marketing"
+            },
+            {
+              "name": "Event Management",
+              "urlString": "event-management"
+            },
+            {
+              "name": "Partnership marketing",
+              "urlString": "partnership-marketing"
+            },
+            {
+              "name": "Resource management",
+              "urlString": "resource-management"
+            },
+            {
+              "name": "Vendor management",
+              "urlString": "vendor-management"
+            },
+            {
+              "name": "CRM",
+              "urlString": "crm"
+            },
+            {
+              "name": "ROI analysis",
+              "urlString": "roi-analysis"
+            },
+            {
+              "name": "Mentoring",
+              "urlString": "mentoring"
+            },
+            {
+              "name": "Monitoring",
+              "urlString": "monitoring"
+            },
+            {
+              "name": "Strategy",
+              "urlString": "strategy"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsx4te8wb",
+          "title": "Sr. Content Marketing Manager, B2B SaaS",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US",
+            "IN"
+          ],
+          "positionType": "marketing",
+          "experienceLevels": [
+            "manager",
+            "senior"
+          ],
+          "urlString": "gremlin-sr-content-marketing-manager-b2b-saas",
+          "postedAt": 1792686223,
+          "company": {
+            "randomKey": "b4ewd43quz",
+            "urlString": "gremlin",
+            "name": "Gremlin",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Content marketing",
+              "urlString": "content-marketing"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "SEO",
+              "urlString": "seo"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "SaaS",
+              "urlString": "saas"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Case studies",
+              "urlString": "case-studies"
+            },
+            {
+              "name": "Editing & Proofreading",
+              "urlString": "editing-proofreading"
+            },
+            {
+              "name": "Content strategy",
+              "urlString": "content-strategy"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Google Analytics",
+              "urlString": "google-analytics"
+            },
+            {
+              "name": "Geospatial Technology",
+              "urlString": "geospatial-technology"
+            },
+            {
+              "name": "B2B marketing",
+              "urlString": "b2b-marketing"
+            },
+            {
+              "name": "Google Search Console",
+              "urlString": "google-search-console"
+            },
+            {
+              "name": "Google Tag Manager",
+              "urlString": "google-tag-manager"
+            },
+            {
+              "name": "SEO Hacks",
+              "urlString": "seo-hacks"
+            },
+            {
+              "name": "Video Editing",
+              "urlString": "video-editing"
+            },
+            {
+              "name": "Social media marketing",
+              "urlString": "social-media-marketing"
+            },
+            {
+              "name": "Lead generation",
+              "urlString": "lead-generation"
+            },
+            {
+              "name": "Technical Writing",
+              "urlString": "technical-writing"
+            },
+            {
+              "name": "Brand marketing",
+              "urlString": "brand-marketing"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsx6awe4v",
+          "title": "Senior Lifecycle Marketing Manager",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US",
+            "CA"
+          ],
+          "positionType": "marketing",
+          "experienceLevels": [
+            "manager",
+            "senior"
+          ],
+          "urlString": "superhuman-senior-lifecycle-marketing-manager",
+          "postedAt": 1792686222,
+          "company": {
+            "randomKey": "o8c6bydz5l",
+            "urlString": "superhuman950",
+            "name": "Superhuman",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Roadmap planning",
+              "urlString": "roadmap-planning"
+            },
+            {
+              "name": "Data Science",
+              "urlString": "data-science"
+            },
+            {
+              "name": "Figma",
+              "urlString": "figma"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "Operations",
+              "urlString": "operations"
+            },
+            {
+              "name": "Marketing operations",
+              "urlString": "marketing-operations"
+            },
+            {
+              "name": "Monetization",
+              "urlString": "monetization"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "CRM",
+              "urlString": "crm"
+            },
+            {
+              "name": "Growth Marketing",
+              "urlString": "growth-marketing"
+            },
+            {
+              "name": "A/B testing",
+              "urlString": "a-b-testing"
+            },
+            {
+              "name": "Email campaigns",
+              "urlString": "email-campaigns"
+            },
+            {
+              "name": "Brand messaging",
+              "urlString": "brand-messaging"
+            },
+            {
+              "name": "Statistics",
+              "urlString": "statistics"
+            },
+            {
+              "name": "Databricks",
+              "urlString": "databricks"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst6z5qkq",
+          "title": "Game Designer / Indie Developer \u2014 Casual Games \u00d7 Story",
+          "jobType": "contract",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [],
+          "urlString": "taplot-ai-game-designer-indie-developer-casual-games-x-story",
+          "postedAt": 1792686221,
+          "company": {
+            "randomKey": "ptq99ghdp1",
+            "urlString": "taplot-ai",
+            "name": "Taplot AI",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Game Engine Development",
+              "urlString": "game-engine-development"
+            },
+            {
+              "name": "Game Design",
+              "urlString": "game-design"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Unity",
+              "urlString": "unity"
+            },
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "Monetization",
+              "urlString": "monetization"
+            },
+            {
+              "name": "Design Systems",
+              "urlString": "design-systems"
+            },
+            {
+              "name": "Operations",
+              "urlString": "operations"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Cocos creator",
+              "urlString": "cocos-creator"
+            },
+            {
+              "name": "Godot Engine",
+              "urlString": "godot-engine"
+            },
+            {
+              "name": "Cursor",
+              "urlString": "cursor"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsviqw1et",
+          "title": "Senior Game Designer [The Division 2]",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "RO"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "ubisoft-romania-senior-game-designer-the-division-2",
+          "postedAt": 1792686220,
+          "company": {
+            "randomKey": "dk3ldg4anz",
+            "urlString": "ubisoft",
+            "name": "Ubisoft",
+            "logo": "https://c.smartrecruiters.com/sr-careersite-image-prod/56c2eeb9e4b0f5439b7ce493/a0ca342b-3b7f-4dc1-9286-d6edf86258c7?r=s3"
+          },
+          "categories": [
+            {
+              "name": "Game Engine Development",
+              "urlString": "game-engine-development"
+            },
+            {
+              "name": "Game Design",
+              "urlString": "game-design"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            },
+            {
+              "name": "Express.js",
+              "urlString": "expressjs"
+            },
+            {
+              "name": "Unreal Engine",
+              "urlString": "unreal-engine"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Snowflake",
+              "urlString": "snowflake"
+            },
+            {
+              "name": "API Blueprint",
+              "urlString": "api-blueprint"
+            },
+            {
+              "name": "Confluence",
+              "urlString": "confluence"
+            },
+            {
+              "name": "Excel",
+              "urlString": "excel"
+            },
+            {
+              "name": "PowerPoint",
+              "urlString": "powerpoint"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvjgt353",
+          "title": "Instructional Designer",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "CR"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "cornerstone-ondemand-instructional-designer",
+          "postedAt": 1792686220,
+          "company": {
+            "randomKey": "alug1fk3u8",
+            "urlString": "cornerstone-ondemand",
+            "name": "Cornerstone OnDemand",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Security software",
+              "urlString": "security-software"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "API Blueprint",
+              "urlString": "api-blueprint"
+            },
+            {
+              "name": "System security",
+              "urlString": "system-security"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Banking",
+              "urlString": "banking"
+            },
+            {
+              "name": "Editing & Proofreading",
+              "urlString": "editing-proofreading"
+            },
+            {
+              "name": "Operations",
+              "urlString": "operations"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "SaaS",
+              "urlString": "saas"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Instructinal design",
+              "urlString": "instructinal-design"
+            },
+            {
+              "name": "Development",
+              "urlString": "development"
+            },
+            {
+              "name": "Certification",
+              "urlString": "certification"
+            },
+            {
+              "name": "Task Analysis",
+              "urlString": "task-analysis"
+            },
+            {
+              "name": "Performance Testing",
+              "urlString": "performance-testing"
+            },
+            {
+              "name": "Scenario Testing",
+              "urlString": "scenario-testing"
+            },
+            {
+              "name": "Workflows",
+              "urlString": "workflows"
+            },
+            {
+              "name": "Leadership",
+              "urlString": "leadership"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsviywch2",
+          "title": "Junior Puzzle Designer",
+          "jobType": "contract",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "junior"
+          ],
+          "urlString": "counterspell-games-studio-junior-puzzle-designer",
+          "postedAt": 1792686219,
+          "company": {
+            "randomKey": "pt1f51fs1f",
+            "urlString": "counterspell-games-studio",
+            "name": "Counterspell Games Studio",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Game Engine Development",
+              "urlString": "game-engine-development"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Game Design",
+              "urlString": "game-design"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Media Arts",
+              "urlString": "media-arts"
+            },
+            {
+              "name": "Diagramming",
+              "urlString": "diagramming"
+            },
+            {
+              "name": "Collaborative Tools",
+              "urlString": "collaborative-tools"
+            },
+            {
+              "name": "Testing techniques",
+              "urlString": "testing-techniques"
+            },
+            {
+              "name": "System design",
+              "urlString": "system-design"
+            },
+            {
+              "name": "Gameplay",
+              "urlString": "gameplay"
+            },
+            {
+              "name": "Problem solving",
+              "urlString": "problem-solving"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Remote Work",
+              "urlString": "remote-work"
+            },
+            {
+              "name": "Critical Feedback",
+              "urlString": "critical-feedback"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst7hvz63",
+          "title": "Software Engineer - Playable Ads (Creative Engineering)",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "IN"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [],
+          "urlString": "rzr-software-engineer-playable-ads-creative-engineering",
+          "postedAt": 1792686219,
+          "company": {
+            "randomKey": "oo2xvc9w6o",
+            "urlString": "rzr",
+            "name": "RZR",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            },
+            {
+              "name": "HTML5 Games",
+              "urlString": "html5-games"
+            },
+            {
+              "name": "Internet Advertising",
+              "urlString": "internet-advertising"
+            },
+            {
+              "name": "Network",
+              "urlString": "network"
+            },
+            {
+              "name": "Game Engine Development",
+              "urlString": "game-engine-development"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Performance marketing",
+              "urlString": "performance-marketing"
+            },
+            {
+              "name": "JavaScript",
+              "urlString": "javascript"
+            },
+            {
+              "name": "TypeScript",
+              "urlString": "typescript"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Unity",
+              "urlString": "unity"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Game Design",
+              "urlString": "game-design"
+            },
+            {
+              "name": "Webpack",
+              "urlString": "webpack"
+            },
+            {
+              "name": "HTML/CSS",
+              "urlString": "html_css"
+            },
+            {
+              "name": "QA",
+              "urlString": "qa"
+            },
+            {
+              "name": "Hardware",
+              "urlString": "hardware"
+            },
+            {
+              "name": "Animation",
+              "urlString": "animation"
+            },
+            {
+              "name": "HTML Canvas API",
+              "urlString": "html-canvas-api"
+            },
+            {
+              "name": "Compliance",
+              "urlString": "compliance"
+            },
+            {
+              "name": "Responsive Design",
+              "urlString": "responsive-design"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Airdev Canvas",
+              "urlString": "airdev-canvas"
+            },
+            {
+              "name": "WebGL",
+              "urlString": "webgl"
+            },
+            {
+              "name": "PixiJS",
+              "urlString": "pixijs"
+            },
+            {
+              "name": "Phaser",
+              "urlString": "phaser"
+            },
+            {
+              "name": "Createjs",
+              "urlString": "createjs"
+            },
+            {
+              "name": "Cocos creator",
+              "urlString": "cocos-creator"
+            },
+            {
+              "name": "Vite",
+              "urlString": "vite"
+            },
+            {
+              "name": "Rollupjs",
+              "urlString": "rollupjs"
+            },
+            {
+              "name": "SpriteKit",
+              "urlString": "spritekit"
+            },
+            {
+              "name": "Data compression",
+              "urlString": "data-compression"
+            },
+            {
+              "name": "Video Encoding",
+              "urlString": "video-encoding"
+            },
+            {
+              "name": "Code optimization",
+              "urlString": "code-optimization"
+            }
+          ]
+        },
+        {
+          "randomKey": "przdpxccp8",
+          "title": "Junior/Mid UI Animator (Game Development / Unity)",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "ES"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "junior",
+            "mid"
+          ],
+          "urlString": "joppy-junior-mid-ui-animator-game-development-unity",
+          "postedAt": 1792686218,
+          "company": {
+            "randomKey": "aluftxduwr",
+            "urlString": "shield-ai115",
+            "name": "Shield AI",
+            "logo": "https://photos.angel.co/startups/i/32067-6b963ba06095df8d0db297a3ed875e02-medium_jpg.jpg?buster=1525987413"
+          },
+          "categories": [
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Unity",
+              "urlString": "unity"
+            },
+            {
+              "name": "Animation",
+              "urlString": "animation"
+            },
+            {
+              "name": "Game",
+              "urlString": "game"
+            },
+            {
+              "name": "Game Design",
+              "urlString": "game-design"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Functional Programming",
+              "urlString": "functional-programming"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "Mockups",
+              "urlString": "mockups"
+            },
+            {
+              "name": "Storytelling",
+              "urlString": "storytelling"
+            },
+            {
+              "name": "Layout",
+              "urlString": "layout"
+            },
+            {
+              "name": "Motion Graphics",
+              "urlString": "motion-graphics"
+            },
+            {
+              "name": "Rapid Prototyping",
+              "urlString": "rapid-prototyping"
+            },
+            {
+              "name": "Payment systems",
+              "urlString": "payment-systems"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            },
+            {
+              "name": "Ideation",
+              "urlString": "ideation"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvkbceug",
+          "title": "Future Strategist\u3010Future Design Lab\u3011 [AQ-23003]",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "JP"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "aquent-future-strategist-future-design-lab-aq-23003",
+          "postedAt": 1792686218,
+          "company": {
+            "randomKey": "alug3he2s4",
+            "urlString": "aquent616",
+            "name": "Aquent",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Strategy",
+              "urlString": "strategy"
+            },
+            {
+              "name": "Japanese",
+              "urlString": "japanese"
+            },
+            {
+              "name": "Advance prototyping",
+              "urlString": "advance-prototyping"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvl3525l",
+          "title": "Instructional Design Consultant",
+          "jobType": "contract",
+          "requiredCountries": [
+            "AU"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "australian-financial-complaints-authority-instructional-design-consultant",
+          "postedAt": 1792686218,
+          "company": {
+            "randomKey": "p0ososuktc",
+            "urlString": "australian-financial-complaints-aut",
+            "name": "Australian Financial Complaints Authority",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Agile",
+              "urlString": "agile"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Security software",
+              "urlString": "security-software"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Scripting language",
+              "urlString": "scripting-language"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "System security",
+              "urlString": "system-security"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Instructinal design",
+              "urlString": "instructinal-design"
+            },
+            {
+              "name": "Training",
+              "urlString": "training"
+            },
+            {
+              "name": "E-Learning",
+              "urlString": "e-learning"
+            },
+            {
+              "name": "Multimedia",
+              "urlString": "multimedia"
+            },
+            {
+              "name": "Stakeholder management",
+              "urlString": "stakeholder-management"
+            },
+            {
+              "name": "Consulting",
+              "urlString": "consulting"
+            },
+            {
+              "name": "Financial Markets",
+              "urlString": "financial-markets"
+            },
+            {
+              "name": "Governance",
+              "urlString": "governance"
+            },
+            {
+              "name": "Corporate identity",
+              "urlString": "corporate-identity"
+            },
+            {
+              "name": "Change management",
+              "urlString": "change-management"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvl35esq",
+          "title": "Instructional Design Consultant",
+          "jobType": "contract",
+          "requiredCountries": [
+            "AU"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "australian-financial-complaints-authority-instructional-design-consultant",
+          "postedAt": 1792686217,
+          "company": {
+            "randomKey": "p0ososuktc",
+            "urlString": "australian-financial-complaints-aut",
+            "name": "Australian Financial Complaints Authority",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Agile",
+              "urlString": "agile"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Security software",
+              "urlString": "security-software"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Scripting language",
+              "urlString": "scripting-language"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "System security",
+              "urlString": "system-security"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Instructinal design",
+              "urlString": "instructinal-design"
+            },
+            {
+              "name": "Training",
+              "urlString": "training"
+            },
+            {
+              "name": "E-Learning",
+              "urlString": "e-learning"
+            },
+            {
+              "name": "Multimedia",
+              "urlString": "multimedia"
+            },
+            {
+              "name": "Stakeholder management",
+              "urlString": "stakeholder-management"
+            },
+            {
+              "name": "Consulting",
+              "urlString": "consulting"
+            },
+            {
+              "name": "Financial Markets",
+              "urlString": "financial-markets"
+            },
+            {
+              "name": "Governance",
+              "urlString": "governance"
+            },
+            {
+              "name": "Corporate identity",
+              "urlString": "corporate-identity"
+            },
+            {
+              "name": "Change management",
+              "urlString": "change-management"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst7i0jik",
+          "title": "Senior Web Designer - Webflow Developer",
+          "jobType": "permanent",
+          "requiredCountries": [],
+          "positionType": "engineering",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "xrecruiter-senior-web-designer-webflow-developer",
+          "postedAt": 1792686217,
+          "company": {
+            "randomKey": "lorha7zbg9",
+            "urlString": "xrecruiter",
+            "name": "xrecruiter",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Figma",
+              "urlString": "figma"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "CMS",
+              "urlString": "cms"
+            },
+            {
+              "name": "JavaScript",
+              "urlString": "javascript"
+            },
+            {
+              "name": "CSS3",
+              "urlString": "css3"
+            },
+            {
+              "name": "HTML/CSS",
+              "urlString": "html_css"
+            },
+            {
+              "name": "Web Design",
+              "urlString": "web-design"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "SEO",
+              "urlString": "seo"
+            },
+            {
+              "name": "QA",
+              "urlString": "qa"
+            },
+            {
+              "name": "Ux writing",
+              "urlString": "ux-writing"
+            },
+            {
+              "name": "Responsive Design",
+              "urlString": "responsive-design"
+            },
+            {
+              "name": "Time management",
+              "urlString": "time-management"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Graphics",
+              "urlString": "graphics"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Webflow",
+              "urlString": "webflow"
+            },
+            {
+              "name": "Lumen",
+              "urlString": "lumen"
+            },
+            {
+              "name": "API Integration",
+              "urlString": "api-integration"
+            },
+            {
+              "name": "UI design",
+              "urlString": "ui-design"
+            },
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Web Performance",
+              "urlString": "web-performance"
+            },
+            {
+              "name": "Motion Control",
+              "urlString": "motion-control"
+            },
+            {
+              "name": "Interaction Design",
+              "urlString": "interaction-design"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvlurqjv",
+          "title": "Game Design SME",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "BR"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "jobgether-game-design-sme",
+          "postedAt": 1792686216,
+          "company": {
+            "randomKey": "kp4xf5qy6a",
+            "urlString": "jobgether",
+            "name": "Jobgether",
+            "logo": "https://lever-client-logos.s3.us-west-2.amazonaws.com/b9babb10-6786-42c6-a3c5-9eebd25117d5-1762181104361.png"
+          },
+          "categories": [
+            {
+              "name": "Game Engine Development",
+              "urlString": "game-engine-development"
+            },
+            {
+              "name": "Game Design",
+              "urlString": "game-design"
+            },
+            {
+              "name": "Ux writing",
+              "urlString": "ux-writing"
+            },
+            {
+              "name": "Graphics",
+              "urlString": "graphics"
+            },
+            {
+              "name": "Design Systems",
+              "urlString": "design-systems"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "Design Architecture",
+              "urlString": "design-architecture"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "QA",
+              "urlString": "qa"
+            },
+            {
+              "name": "GUI",
+              "urlString": "gui"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Layout Design",
+              "urlString": "layout-design"
+            },
+            {
+              "name": "GDPR",
+              "urlString": "gdpr"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "UI design",
+              "urlString": "ui-design"
+            },
+            {
+              "name": "Gameplay",
+              "urlString": "gameplay"
+            },
+            {
+              "name": "Technical documentation",
+              "urlString": "technical-documentation"
+            },
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Modular Code",
+              "urlString": "modular-code"
+            },
+            {
+              "name": "Configuration management",
+              "urlString": "configuration-management"
+            },
+            {
+              "name": "Usability",
+              "urlString": "usability"
+            },
+            {
+              "name": "Problem solving",
+              "urlString": "problem-solving"
+            }
+          ]
+        },
+        {
+          "randomKey": "o38w74rxia",
+          "title": "Senior UX Designer",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "cvs-health-senior-ux-designer",
+          "postedAt": 1792686216,
+          "company": {
+            "randomKey": "alug18fxg6",
+            "urlString": "cvs-health",
+            "name": "CVS Health",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Ux writing",
+              "urlString": "ux-writing"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "User Research",
+              "urlString": "user-research"
+            },
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Product design",
+              "urlString": "product-design"
+            },
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Usability testing",
+              "urlString": "usability-testing"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Figma",
+              "urlString": "figma"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "HTML/CSS",
+              "urlString": "html_css"
+            },
+            {
+              "name": "CSS3",
+              "urlString": "css3"
+            },
+            {
+              "name": "JavaScript",
+              "urlString": "javascript"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Agile",
+              "urlString": "agile"
+            },
+            {
+              "name": "Personas",
+              "urlString": "personas"
+            },
+            {
+              "name": "User personas",
+              "urlString": "user-personas"
+            },
+            {
+              "name": "User flows",
+              "urlString": "user-flows"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "Digital Design",
+              "urlString": "digital-design"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "UX analysis",
+              "urlString": "ux-analysis"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Sketch",
+              "urlString": "sketch"
+            },
+            {
+              "name": "InVision",
+              "urlString": "invision"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Design Systems",
+              "urlString": "design-systems"
+            },
+            {
+              "name": "Design thinking",
+              "urlString": "design-thinking"
+            },
+            {
+              "name": "Interaction Design",
+              "urlString": "interaction-design"
+            },
+            {
+              "name": "Axure RP",
+              "urlString": "axure-rp"
+            },
+            {
+              "name": "Service Design",
+              "urlString": "service-design"
+            },
+            {
+              "name": "User journey mapping",
+              "urlString": "user-journey-mapping"
+            },
+            {
+              "name": "Advance prototyping",
+              "urlString": "advance-prototyping"
+            }
+          ]
+        },
+        {
+          "randomKey": "dvqwvx5ztm",
+          "title": "Senior Product Designer",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "jasper-senior-product-designer",
+          "postedAt": 1792686216,
+          "company": {
+            "randomKey": "dvijwgqp4a",
+            "urlString": "jasper95",
+            "name": "Jasper",
+            "logo": "https://lever-client-logos.s3.us-west-2.amazonaws.com/2813b5a1-0c8b-4f3c-bc6f-3fad2a4540a6-1643151293745.png"
+          },
+          "categories": [
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Product design",
+              "urlString": "product-design"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Functional Programming",
+              "urlString": "functional-programming"
+            },
+            {
+              "name": "Figma",
+              "urlString": "figma"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Code Review",
+              "urlString": "code-review"
+            },
+            {
+              "name": "Design Architecture",
+              "urlString": "design-architecture"
+            },
+            {
+              "name": "Customer Care",
+              "urlString": "customer-care"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "Responsive Design",
+              "urlString": "responsive-design"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Design Systems",
+              "urlString": "design-systems"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "Advance prototyping",
+              "urlString": "advance-prototyping"
+            },
+            {
+              "name": "Codex",
+              "urlString": "codex"
+            },
+            {
+              "name": "Cursor",
+              "urlString": "cursor"
+            },
+            {
+              "name": "GitHub",
+              "urlString": "github"
+            },
+            {
+              "name": "Interaction Design",
+              "urlString": "interaction-design"
+            },
+            {
+              "name": "Accessibility",
+              "urlString": "accessibility"
+            },
+            {
+              "name": "Information Architecture",
+              "urlString": "information-architecture"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "User Testing",
+              "urlString": "user-testing"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "Design Patterns",
+              "urlString": "design-patterns"
+            }
+          ]
+        },
+        {
+          "randomKey": "pthqx2aiqw",
+          "title": "Senior Product Designer",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US",
+            "AZ"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "nextiva-senior-product-designer",
+          "postedAt": 1792686216,
+          "company": {
+            "randomKey": "j6y0842fqu",
+            "urlString": "nextiva",
+            "name": "Nextiva",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Product design",
+              "urlString": "product-design"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Functional Programming",
+              "urlString": "functional-programming"
+            },
+            {
+              "name": "SaaS",
+              "urlString": "saas"
+            },
+            {
+              "name": "Embedded Systems",
+              "urlString": "embedded-systems"
+            },
+            {
+              "name": "React",
+              "urlString": "reactjs"
+            },
+            {
+              "name": "Usability testing",
+              "urlString": "usability-testing"
+            },
+            {
+              "name": "HTML/CSS",
+              "urlString": "html_css"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Design Systems",
+              "urlString": "design-systems"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Security software",
+              "urlString": "security-software"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "User journey mapping",
+              "urlString": "user-journey-mapping"
+            },
+            {
+              "name": "User flows",
+              "urlString": "user-flows"
+            },
+            {
+              "name": "E-commerce",
+              "urlString": "e-commerce"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Design thinking",
+              "urlString": "design-thinking"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            }
+          ]
+        },
+        {
+          "randomKey": "pthqxijqll",
+          "title": "Senior Product Designer - Growth/Website | Deel",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "CH"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "jobgether-senior-product-designer-growth-website-deel",
+          "postedAt": 1792686215,
+          "company": {
+            "randomKey": "kp4xf5qy6a",
+            "urlString": "jobgether",
+            "name": "Jobgether",
+            "logo": "https://lever-client-logos.s3.us-west-2.amazonaws.com/b9babb10-6786-42c6-a3c5-9eebd25117d5-1762181104361.png"
+          },
+          "categories": [
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "QA",
+              "urlString": "qa"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "Product design",
+              "urlString": "product-design"
+            },
+            {
+              "name": "Storytelling",
+              "urlString": "storytelling"
+            },
+            {
+              "name": "Product marketing",
+              "urlString": "product-marketing"
+            },
+            {
+              "name": "Design Systems",
+              "urlString": "design-systems"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "Performance marketing",
+              "urlString": "performance-marketing"
+            },
+            {
+              "name": "Visual hierarchy",
+              "urlString": "visual-hierarchy"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Google Analytics",
+              "urlString": "google-analytics"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "GDPR",
+              "urlString": "gdpr"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            }
+          ]
+        },
+        {
+          "randomKey": "pthr92x30o",
+          "title": "UI/UX Researcher & Designer",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "CA"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "intelerad-ui-ux-researcher-designer",
+          "postedAt": 1792686215,
+          "company": {
+            "randomKey": "dk3ldb86p0",
+            "urlString": "intelerad",
+            "name": "Intelerad",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Ux Research",
+              "urlString": "ux-research"
+            },
+            {
+              "name": "QA",
+              "urlString": "qa"
+            },
+            {
+              "name": "HTML/CSS",
+              "urlString": "html_css"
+            },
+            {
+              "name": "Figma",
+              "urlString": "figma"
+            },
+            {
+              "name": "Functional Programming",
+              "urlString": "functional-programming"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Scalability",
+              "urlString": "scalability"
+            },
+            {
+              "name": "Cloud",
+              "urlString": "cloud"
+            },
+            {
+              "name": "User Research",
+              "urlString": "user-research"
+            },
+            {
+              "name": "Personas",
+              "urlString": "personas"
+            },
+            {
+              "name": "Agile",
+              "urlString": "agile"
+            },
+            {
+              "name": "Usability testing",
+              "urlString": "usability-testing"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "Mobile UI",
+              "urlString": "mobile-ui"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Roadmap planning",
+              "urlString": "roadmap-planning"
+            },
+            {
+              "name": "CAD",
+              "urlString": "cad"
+            }
+          ]
+        },
+        {
+          "randomKey": "pthr4o6wsb",
+          "title": "Chercheur/Chercheuse et Designer UX/UI",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "CA"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "intelerad-chercheur-chercheuse-et-designer-ux-ui",
+          "postedAt": 1792686215,
+          "company": {
+            "randomKey": "dk3ldb86p0",
+            "urlString": "intelerad",
+            "name": "Intelerad",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Flux",
+              "urlString": "flux"
+            },
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "HTML/CSS",
+              "urlString": "html_css"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Figma",
+              "urlString": "figma"
+            },
+            {
+              "name": "Cloud",
+              "urlString": "cloud"
+            },
+            {
+              "name": "Personas",
+              "urlString": "personas"
+            },
+            {
+              "name": "Agile",
+              "urlString": "agile"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "CAD",
+              "urlString": "cad"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvmv46jw",
+          "title": "Founding Growth Designer",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "design",
+          "experienceLevels": [],
+          "urlString": "52-limited-founding-growth-designer",
+          "postedAt": 1792686214,
+          "company": {
+            "randomKey": "l36q35yors",
+            "urlString": "52-limited",
+            "name": "52 Limited",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Layout Design",
+              "urlString": "layout-design"
+            },
+            {
+              "name": "Web Design",
+              "urlString": "web-design"
+            },
+            {
+              "name": "Copywriting",
+              "urlString": "copywriting"
+            },
+            {
+              "name": "Creative direction",
+              "urlString": "creative-direction"
+            },
+            {
+              "name": "Ux writing",
+              "urlString": "ux-writing"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "E-commerce",
+              "urlString": "e-commerce"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Performance marketing",
+              "urlString": "performance-marketing"
+            },
+            {
+              "name": "Web Development",
+              "urlString": "web-development"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Tools",
+              "urlString": "tools"
+            },
+            {
+              "name": "Cursor",
+              "urlString": "cursor"
+            },
+            {
+              "name": "Front-End",
+              "urlString": "front-end"
+            },
+            {
+              "name": "A/B testing",
+              "urlString": "a-b-testing"
+            },
+            {
+              "name": "Performance Testing",
+              "urlString": "performance-testing"
+            },
+            {
+              "name": "Landing pages",
+              "urlString": "landing-pages"
+            },
+            {
+              "name": "User Testing",
+              "urlString": "user-testing"
+            },
+            {
+              "name": "User acquisition",
+              "urlString": "user-acquisition"
+            },
+            {
+              "name": "Startups",
+              "urlString": "startups"
+            },
+            {
+              "name": "Creative Development",
+              "urlString": "creative-development"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptsvihikh0",
+          "title": "Senior Product Designer - Discovery",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "design",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "relativity-senior-product-designer-discovery",
+          "postedAt": 1792686214,
+          "company": {
+            "randomKey": "alug01yl9r",
+            "urlString": "relativity",
+            "name": "Relativity",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "UX design",
+              "urlString": "ux-design"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Code Review",
+              "urlString": "code-review"
+            },
+            {
+              "name": "Roadmap planning",
+              "urlString": "roadmap-planning"
+            },
+            {
+              "name": "Visual design",
+              "urlString": "visual-design"
+            },
+            {
+              "name": "Continuous Integration",
+              "urlString": "continuous-integration"
+            },
+            {
+              "name": "Git",
+              "urlString": "git"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Sketch",
+              "urlString": "sketch"
+            },
+            {
+              "name": "Mockups",
+              "urlString": "mockups"
+            },
+            {
+              "name": "Version control",
+              "urlString": "version-control"
+            },
+            {
+              "name": "GUI",
+              "urlString": "gui"
+            },
+            {
+              "name": "Storytelling",
+              "urlString": "storytelling"
+            },
+            {
+              "name": "Ux Research",
+              "urlString": "ux-research"
+            },
+            {
+              "name": "Microinteractions",
+              "urlString": "microinteractions"
+            },
+            {
+              "name": "Motion Graphics",
+              "urlString": "motion-graphics"
+            },
+            {
+              "name": "Design thinking",
+              "urlString": "design-thinking"
+            },
+            {
+              "name": "Interface Design",
+              "urlString": "interface-design"
+            },
+            {
+              "name": "Team collaboration",
+              "urlString": "team-collaboration"
+            },
+            {
+              "name": "Layout",
+              "urlString": "layout"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst83df4d",
+          "title": "Senior Machine Learning Engineer: Search Quality",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "US"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "constructor-senior-machine-learning-engineer-search-quality",
+          "postedAt": 1792686214,
+          "company": {
+            "randomKey": "pi91g9uy18",
+            "urlString": "constructor268",
+            "name": "Constructor",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            },
+            {
+              "name": "Hardware",
+              "urlString": "hardware"
+            },
+            {
+              "name": "E-commerce",
+              "urlString": "e-commerce"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Apache Spark",
+              "urlString": "apache-spark"
+            },
+            {
+              "name": "PyTorch",
+              "urlString": "pytorch"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Data Engineering",
+              "urlString": "data-engineering"
+            },
+            {
+              "name": "LLM",
+              "urlString": "llm"
+            },
+            {
+              "name": "SkySpark",
+              "urlString": "skyspark"
+            },
+            {
+              "name": "Airflow",
+              "urlString": "airflow"
+            },
+            {
+              "name": "A/B testing",
+              "urlString": "a-b-testing"
+            },
+            {
+              "name": "Information Retrieval",
+              "urlString": "information-retrieval"
+            },
+            {
+              "name": "Recommendation systems",
+              "urlString": "recommendation-systems"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst83qxu6",
+          "title": "Data Scientist (Senior)",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "VN"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [
+            "senior"
+          ],
+          "urlString": "heineken-vietnam-data-scientist-senior",
+          "postedAt": 1792686213,
+          "company": {
+            "randomKey": "p0ka8huzvn",
+            "urlString": "heineken-vietnam",
+            "name": "HEINEKEN Vietnam",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Data Science",
+              "urlString": "data-science"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            },
+            {
+              "name": "Cloud",
+              "urlString": "cloud"
+            },
+            {
+              "name": "Azure",
+              "urlString": "azure"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "Amazon",
+              "urlString": "amazon"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Continuous Integration",
+              "urlString": "continuous-integration"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Forecasting",
+              "urlString": "forecasting"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Statistics",
+              "urlString": "statistics"
+            },
+            {
+              "name": "Project documentation",
+              "urlString": "project-documentation"
+            },
+            {
+              "name": "Content management",
+              "urlString": "content-management"
+            },
+            {
+              "name": "Image Segmentation",
+              "urlString": "image-segmentation"
+            },
+            {
+              "name": "Code optimization",
+              "urlString": "code-optimization"
+            },
+            {
+              "name": "Apache Spark",
+              "urlString": "apache-spark"
+            },
+            {
+              "name": "Databricks",
+              "urlString": "databricks"
+            },
+            {
+              "name": "CI/CD",
+              "urlString": "ci-cd"
+            },
+            {
+              "name": "Cloud Computing Platforms",
+              "urlString": "cloud-computing-platforms"
+            },
+            {
+              "name": "A/B testing",
+              "urlString": "a-b-testing"
+            },
+            {
+              "name": "Deploy",
+              "urlString": "deploy"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst8mjmxb",
+          "title": "Data Scientist (m/\u017e)",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "SK"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [],
+          "urlString": "orange-data-scientist-m-z",
+          "postedAt": 1792686213,
+          "company": {
+            "randomKey": "lvckle0p97",
+            "urlString": "orange105",
+            "name": "Orange",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            },
+            {
+              "name": "Data Science",
+              "urlString": "data-science"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "NumPy",
+              "urlString": "numpy"
+            },
+            {
+              "name": "Pandas",
+              "urlString": "pandas"
+            },
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "Cloud",
+              "urlString": "cloud"
+            },
+            {
+              "name": "Google Cloud Platform",
+              "urlString": "google-cloud-platform"
+            },
+            {
+              "name": "TensorFlow",
+              "urlString": "tensorflow"
+            },
+            {
+              "name": "Kubernetes",
+              "urlString": "kubernetes"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "PyTorch",
+              "urlString": "pytorch"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "Scikit-learn",
+              "urlString": "scikit-learn"
+            },
+            {
+              "name": "Git",
+              "urlString": "git"
+            },
+            {
+              "name": "Generative AI",
+              "urlString": "generative-ai"
+            },
+            {
+              "name": "R",
+              "urlString": "r"
+            },
+            {
+              "name": "MLOps",
+              "urlString": "mlops"
+            },
+            {
+              "name": "Google BigQuery",
+              "urlString": "google-bigquery"
+            },
+            {
+              "name": "Docker",
+              "urlString": "docker"
+            },
+            {
+              "name": "Data Pipelines",
+              "urlString": "data-pipelines"
+            }
+          ]
+        },
+        {
+          "randomKey": "pj28he14p3",
+          "title": "Forward Deployed Data Scientist (On-site)",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "IT"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [],
+          "urlString": "translated-forward-deployed-data-scientist-on-site",
+          "postedAt": 1792686213,
+          "company": {
+            "randomKey": "lhhjshebbx",
+            "urlString": "translated",
+            "name": "Translated",
+            "logo": "https://brandbadge.clearbit.com/aef7a5e4-9e18-4ae1-a451-26c0730ae32b"
+          },
+          "categories": [
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Data Science",
+              "urlString": "data-science"
+            },
+            {
+              "name": "Machine Learning",
+              "urlString": "machine-learning"
+            },
+            {
+              "name": "Project management",
+              "urlString": "project-management"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "Support",
+              "urlString": "support"
+            },
+            {
+              "name": "Data analytics",
+              "urlString": "data-analytics"
+            },
+            {
+              "name": "Network",
+              "urlString": "network"
+            },
+            {
+              "name": "Forecasting",
+              "urlString": "forecasting"
+            },
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "Amazon",
+              "urlString": "amazon"
+            },
+            {
+              "name": "Wireframing/prototyping",
+              "urlString": "wireframing-prototyping"
+            },
+            {
+              "name": "Amazon S3",
+              "urlString": "amazon-s3"
+            },
+            {
+              "name": "Redis",
+              "urlString": "redis"
+            },
+            {
+              "name": "Functional Programming",
+              "urlString": "functional-programming"
+            },
+            {
+              "name": "Tableau",
+              "urlString": "tableau"
+            },
+            {
+              "name": "Growth",
+              "urlString": "growth"
+            },
+            {
+              "name": "SEO",
+              "urlString": "seo"
+            },
+            {
+              "name": "Statistics",
+              "urlString": "statistics"
+            },
+            {
+              "name": "Software Development",
+              "urlString": "software-development"
+            },
+            {
+              "name": "Marketing strategies",
+              "urlString": "marketing-strategies"
+            },
+            {
+              "name": "SOLID Principles",
+              "urlString": "solid-principles"
+            },
+            {
+              "name": "Data Visualization",
+              "urlString": "data-visualization"
+            },
+            {
+              "name": "Apache Spark",
+              "urlString": "apache-spark"
+            },
+            {
+              "name": "Analysis",
+              "urlString": "analysis"
+            },
+            {
+              "name": "Research",
+              "urlString": "research"
+            },
+            {
+              "name": "Communications",
+              "urlString": "communications"
+            },
+            {
+              "name": "Data Pipelines",
+              "urlString": "data-pipelines"
+            },
+            {
+              "name": "Experimentation",
+              "urlString": "experimentation"
+            },
+            {
+              "name": "Google Analytics",
+              "urlString": "google-analytics"
+            },
+            {
+              "name": "Google ads",
+              "urlString": "google-ads"
+            },
+            {
+              "name": "SEM",
+              "urlString": "sem"
+            },
+            {
+              "name": "Mobile App Development",
+              "urlString": "mobile-app-development"
+            },
+            {
+              "name": "Innovation",
+              "urlString": "innovation"
+            },
+            {
+              "name": "NLP",
+              "urlString": "nlp"
+            },
+            {
+              "name": "Mathematics",
+              "urlString": "mathematics"
+            },
+            {
+              "name": "Statistical model",
+              "urlString": "statistical-model"
+            },
+            {
+              "name": "SQL Server BI",
+              "urlString": "sql-server-bi"
+            },
+            {
+              "name": "Exploratory Data Analysis",
+              "urlString": "exploratory-data-analysis"
+            },
+            {
+              "name": "Data warehouse",
+              "urlString": "data-warehouse"
+            },
+            {
+              "name": "Workflows",
+              "urlString": "workflows"
+            },
+            {
+              "name": "AWS",
+              "urlString": "aws"
+            },
+            {
+              "name": "LLM",
+              "urlString": "llm"
+            },
+            {
+              "name": "Metabase",
+              "urlString": "metabase"
+            }
+          ]
+        },
+        {
+          "randomKey": "ptst8ztknk",
+          "title": "Data & AI Engineer (m/w/d)",
+          "jobType": "permanent",
+          "requiredCountries": [
+            "DE"
+          ],
+          "positionType": "engineering",
+          "experienceLevels": [],
+          "urlString": "atos-data-ai-engineer-m-w-d",
+          "postedAt": 1792686213,
+          "company": {
+            "randomKey": "p6l1xcxjzx",
+            "urlString": "atos269",
+            "name": "Atos",
+            "logo": null
+          },
+          "categories": [
+            {
+              "name": "Python",
+              "urlString": "python"
+            },
+            {
+              "name": "SQL",
+              "urlString": "sql"
+            },
+            {
+              "name": "Data warehouse",
+              "urlString": "data-warehouse"
+            },
+            {
+              "name": "Amazon",
+              "urlString": "amazon"
+            },
+            {
+              "name": "Data",
+              "urlString": "data"
+            },
+            {
+              "name": "Azure",
+              "urlString": "azure"
+            },
+            {
+              "name": "Automation",
+              "urlString": "automation"
+            },
+            {
+              "name": "AI",
+              "urlString": "ai"
+            },
+            {
+              "name": "NumPy",
+              "urlString": "numpy"
+            },
+            {
+              "name": "Apache Spark",
+              "urlString": "apache-spark"
+            },
+            {
+              "name": "Pandas",
+              "urlString": "pandas"
+            },
+            {
+              "name": "ETL",
+              "urlString": "etl"
+            },
+            {
+              "name": "Testing",
+              "urlString": "testing"
+            },
+            {
+              "name": "Manufacturing",
+              "urlString": "manufacturing"
+            },
+            {
+              "name": "Data Engineering",
+              "urlString": "data-engineering"
+            },
+            {
+              "name": "Big Data",
+              "urlString": "big-data"
+            },
+            {
+              "name": "SPA",
+              "urlString": "spa"
+            },
+            {
+              "name": "Jupyter",
+              "urlString": "jupyter"
+            },
+            {
+              "name": "Databricks",
+              "urlString": "databricks"
+            },
+            {
+              "name": "SkySpark",
+              "urlString": "skyspark"
+            },
+            {
+              "name": "MLOps",
+              "urlString": "mlops"
+            },
+            {
+              "name": "LLM",
+              "urlString": "llm"
+            },
+            {
+              "name": "AWS",
+              "urlString": "aws"
+            },
+            {
+              "name": "Google Cloud Platform",
+              "urlString": "google-cloud-platform"
+            },
+            {
+              "name": "Cloud computing",
+              "urlString": "cloud-computing"
+            }
+          ]
+        }
+      ],
+      "totalExternalJobCount": 7426,
+      "tracking": {
+        "appinfoData": {}
+      },
+      "_sentryTraceData": "b3f9bef8037d488a840da8dd821d0866-e2cf5dc79eee03e1-0",
+      "_sentryBaggage": "sentry-environment=production,sentry-release=36c0c64411d8b4461af12b35075dbd6c19c636d2,sentry-public_key=85b553eadb5f4041b501d3dd80f1901d,sentry-trace_id=b3f9bef8037d488a840da8dd821d0866,sentry-sampled=false"
+    },
+    "__N_SSP": true
+  },
+  "page": "/remote-jobs",
+  "query": {},
+  "buildId": "RuJ42o7Qw0JVVy8UDXNAM",
+  "assetPrefix": "https://cdn.arc.dev",
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "gssp": true,
+  "locale": "en",
+  "locales": [
+    "en"
+  ],
+  "defaultLocale": "en",
+  "scriptLoader": []
+}

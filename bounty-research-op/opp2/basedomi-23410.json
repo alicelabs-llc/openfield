@@ -1,0 +1,82 @@
+{
+  "url": "https://api.github.com/repos/BasedHardware/omi/issues/23410",
+  "repository_url": "https://api.github.com/repos/BasedHardware/omi",
+  "labels_url": "https://api.github.com/repos/BasedHardware/omi/issues/23410/labels{/name}",
+  "comments_url": "https://api.github.com/repos/BasedHardware/omi/issues/23410/comments",
+  "events_url": "https://api.github.com/repos/BasedHardware/omi/issues/23410/events",
+  "html_url": "https://github.com/BasedHardware/omi/issues/23410",
+  "id": 5999862120,
+  "node_id": "I_kwDOLkKqys8AAAABZZ6haA",
+  "number": 23410,
+  "title": "[Bounty proposal] fix(retrieval): harden result_bounds edge cases and apply context bounding to omi_tools ( proposed)",
+  "user": {
+    "login": "MD-Mushfiqur123",
+    "id": 206438734,
+    "node_id": "U_kgDODE4BTg",
+    "avatar_url": "https://avatars.githubusercontent.com/u/206438734?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MD-Mushfiqur123",
+    "html_url": "https://github.com/MD-Mushfiqur123",
+    "followers_url": "https://api.github.com/users/MD-Mushfiqur123/followers",
+    "following_url": "https://api.github.com/users/MD-Mushfiqur123/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MD-Mushfiqur123/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MD-Mushfiqur123/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MD-Mushfiqur123/subscriptions",
+    "organizations_url": "https://api.github.com/users/MD-Mushfiqur123/orgs",
+    "repos_url": "https://api.github.com/users/MD-Mushfiqur123/repos",
+    "events_url": "https://api.github.com/users/MD-Mushfiqur123/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MD-Mushfiqur123/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "labels": [
+
+  ],
+  "state": "open",
+  "locked": false,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 1,
+  "created_at": "2026-10-23T14:41:40Z",
+  "updated_at": "2026-10-23T17:26:20Z",
+  "closed_at": null,
+  "assignee": null,
+  "author_association": "CONTRIBUTOR",
+  "issue_field_values": [
+
+  ],
+  "type": null,
+  "active_lock_reason": null,
+  "sub_issues_summary": {
+    "total": 0,
+    "completed": 0,
+    "percent_completed": 0
+  },
+  "issue_dependencies_summary": {
+    "blocked_by": 0,
+    "total_blocked_by": 0,
+    "blocking": 0,
+    "total_blocking": 0
+  },
+  "body": "### Summary\nIn retrieval tools, `result_bounds.py` and `omi_tools.py` contained several edge-case crash and context-overflow vulnerabilities:\n\n1. **Negative `max_items` Slicing**: In `cap_items_for_llm`, when `max_items < 0` (e.g. computed limits after offset), Python sliced from the end `items[:max_items]` (e.g. `items[:-1]` dropped 1 item instead of returning empty list). Now returns `[], total_found, total_found > 0`.\n2. **`None` / Non-string TypeError in `bounded_result`**: Calling `bounded_result(None)` raised unhandled `TypeError: object of type 'NoneType' has no len()`. Coerced defensively to safe string representation.\n3. **Negative `shown` Normalization**: Clamped `shown_count = max(0, shown)` to prevent negative count annotations.\n4. **Context Overflow in `omi_tools.py`**: `get_omi_product_info_tool` accumulated arbitrary numbers of documentation markdown files without applying `bounded_result`, risking context window overflow and model freezing (issue #4927). Now bounded to `MAX_RESULT_CHARS` (60,000 chars) with truncation guidance.\n5. **Query Validation & Non-Dict Resilience**: Supports optional/None queries with structured error response instead of crashing, and verifies `context` is a valid mapping before invoking `.items()`.\n\n### Unit Test Verification\nAll 20 tests pass hermetically across both test suites:\n```\npython -m pytest backend/tests/unit/test_retrieval_result_bounds.py backend/tests/unit/test_omi_tools_resilience.py -v\n======================== 20 passed, 1 warning in 2.55s ========================\n```\n\n### Proposed Bounty\n- **Proposed Reward**: $50 USD on merge\n- **Preferred Payout**: Algora / Crypto\n- **Contributor**: @MD-Mushfiqur123\n",
+  "closed_by": null,
+  "reactions": {
+    "url": "https://api.github.com/repos/BasedHardware/omi/issues/23410/reactions",
+    "total_count": 0,
+    "+1": 0,
+    "-1": 0,
+    "laugh": 0,
+    "hooray": 0,
+    "confused": 0,
+    "heart": 0,
+    "rocket": 0,
+    "eyes": 0
+  },
+  "timeline_url": "https://api.github.com/repos/BasedHardware/omi/issues/23410/timeline",
+  "performed_via_github_app": null,
+  "state_reason": null,
+  "pinned_comment": null
+}

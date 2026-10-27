@@ -1,0 +1,653 @@
+     1→### BlitzKraft/saythanks.io #398
+     2→   title: saythanks.io returning 504 Gateway Time-out openresty for all URLs
+     3→   assignee: Pavithratrdev | idle=54d (since update) | created 202d ago | labels: bug,enhancement,good first issue
+     4→   https://github.com/BlitzKraft/saythanks.io/issues/398
+     5→   created=2026-04-05T20:07:05Z updated=2026-08-31T06:41:10Z
+     6→
+     7→### Ergane-Foundation/adbt #12
+     8→   title: Simulate battery level and unplugged state
+     9→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+    10→   https://github.com/Ergane-Foundation/adbt/issues/12
+    11→   created=2026-10-06T08:28:20Z updated=2026-10-06T08:28:20Z
+    12→
+    13→### Ergane-Foundation/adbt #13
+    14→   title: Add time limit, bitrate and size options to screen recording
+    15→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+    16→   https://github.com/Ergane-Foundation/adbt/issues/13
+    17→   created=2026-10-06T08:28:26Z updated=2026-10-06T08:28:26Z
+    18→
+    19→### Ergane-Foundation/adbt #17
+    20→   title: Disable and enable apps
+    21→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/apps,hacktoberfest
+    22→   https://github.com/Ergane-Foundation/adbt/issues/17
+    23→   created=2026-10-06T08:28:47Z updated=2026-10-06T08:28:47Z
+    24→
+    25→### Ergane-Foundation/adbt #18
+    26→   title: Open an app's system settings page
+    27→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/apps,hacktoberfest
+    28→   https://github.com/Ergane-Foundation/adbt/issues/18
+    29→   created=2026-10-06T08:28:53Z updated=2026-10-06T08:28:53Z
+    30→
+    31→### Ergane-Foundation/adbt #19
+    32→   title: Copy the package name to the clipboard
+    33→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/apps,hacktoberfest
+    34→   https://github.com/Ergane-Foundation/adbt/issues/19
+    35→   created=2026-10-06T08:28:59Z updated=2026-10-06T08:28:59Z
+    36→
+    37→### Ergane-Foundation/adbt #23
+    38→   title: Toggle hidden files
+    39→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/files,hacktoberfest
+    40→   https://github.com/Ergane-Foundation/adbt/issues/23
+    41→   created=2026-10-06T08:29:21Z updated=2026-10-06T08:29:21Z
+    42→
+    43→### Ergane-Foundation/adbt #24
+    44→   title: Add bookmarks for common folders
+    45→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/files,hacktoberfest
+    46→   https://github.com/Ergane-Foundation/adbt/issues/24
+    47→   created=2026-10-06T08:29:27Z updated=2026-10-06T08:29:27Z
+    48→
+    49→### Ergane-Foundation/adbt #29
+    50→   title: Choose the log buffer
+    51→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/logcat,hacktoberfest
+    52→   https://github.com/Ergane-Foundation/adbt/issues/29
+    53→   created=2026-10-06T08:29:53Z updated=2026-10-06T08:29:53Z
+    54→
+    55→### Ergane-Foundation/adbt #30
+    56→   title: Search the log with regular expressions
+    57→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/logcat,hacktoberfest
+    58→   https://github.com/Ergane-Foundation/adbt/issues/30
+    59→   created=2026-10-06T08:29:59Z updated=2026-10-06T08:29:59Z
+    60→
+    61→### Ergane-Foundation/adbt #34
+    62→   title: Update GitHub Actions to versions that run on Node 24
+    63→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,area/ci,hacktoberfest
+    64→   https://github.com/Ergane-Foundation/adbt/issues/34
+    65→   created=2026-10-06T08:30:21Z updated=2026-10-06T08:30:21Z
+    66→
+    67→### Ergane-Foundation/adbt #35
+    68→   title: Pin GoReleaser to v2 in the release workflow
+    69→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,area/release,hacktoberfest
+    70→   https://github.com/Ergane-Foundation/adbt/issues/35
+    71→   created=2026-10-06T08:30:26Z updated=2026-10-06T08:30:26Z
+    72→
+    73→### Ergane-Foundation/adbt #39
+    74→   title: Add tests for parseLsLine and FormatFileSize
+    75→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,area/ci,hacktoberfest
+    76→   https://github.com/Ergane-Foundation/adbt/issues/39
+    77→   created=2026-10-06T08:30:48Z updated=2026-10-06T08:30:48Z
+    78→
+    79→### Ergane-Foundation/adbt #40
+    80→   title: Add tests for ParseApps and parseAppDetails
+    81→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,area/ci,hacktoberfest
+    82→   https://github.com/Ergane-Foundation/adbt/issues/40
+    83→   created=2026-10-06T08:30:54Z updated=2026-10-06T08:30:54Z
+    84→
+    85→### Ergane-Foundation/adbt #41
+    86→   title: Add tests for the battery and thermal parsers
+    87→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,area/ci,hacktoberfest
+    88→   https://github.com/Ergane-Foundation/adbt/issues/41
+    89→   created=2026-10-06T08:31:00Z updated=2026-10-06T08:31:00Z
+    90→
+    91→### Ergane-Foundation/adbt #42
+    92→   title: Add tests for the device info parsers
+    93→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,area/ci,hacktoberfest
+    94→   https://github.com/Ergane-Foundation/adbt/issues/42
+    95→   created=2026-10-06T08:31:06Z updated=2026-10-06T08:31:06Z
+    96→
+    97→### Ergane-Foundation/adbt #44
+    98→   title: Add a demo recording to the README
+    99→   assignee: - | idle=18d (since update) | created 18d ago | labels: documentation,good first issue,area/docs,hacktoberfest
+   100→   https://github.com/Ergane-Foundation/adbt/issues/44
+   101→   created=2026-10-06T08:31:16Z updated=2026-10-06T08:31:16Z
+   102→
+   103→### Ergane-Foundation/adbt #5
+   104→   title: Toggle animation scales on and off
+   105→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+   106→   https://github.com/Ergane-Foundation/adbt/issues/5
+   107→   created=2026-10-06T08:27:41Z updated=2026-10-06T08:27:41Z
+   108→
+   109→### Ergane-Foundation/adbt #6
+   110→   title: Toggle dark mode
+   111→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+   112→   https://github.com/Ergane-Foundation/adbt/issues/6
+   113→   created=2026-10-06T08:27:47Z updated=2026-10-06T08:27:47Z
+   114→
+   115→### Ergane-Foundation/adbt #7
+   116→   title: Toggle show taps and pointer location
+   117→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+   118→   https://github.com/Ergane-Foundation/adbt/issues/7
+   119→   created=2026-10-06T08:27:52Z updated=2026-10-06T08:27:52Z
+   120→
+   121→### Ergane-Foundation/adbt #8
+   122→   title: Set and reset font scale
+   123→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+   124→   https://github.com/Ergane-Foundation/adbt/issues/8
+   125→   created=2026-10-06T08:27:58Z updated=2026-10-06T08:27:58Z
+   126→
+   127→### Ergane-Foundation/adbt #9
+   128→   title: Override and reset screen size and density
+   129→   assignee: - | idle=18d (since update) | created 18d ago | labels: enhancement,good first issue,area/devices,hacktoberfest
+   130→   https://github.com/Ergane-Foundation/adbt/issues/9
+   131→   created=2026-10-06T08:28:04Z updated=2026-10-06T08:28:04Z
+   132→
+   133→### Ergane-Foundation/vajra #71
+   134→   title: Pass payload, flags, ttl and addresses to the ML features in the threat orchestrator
+   135→   assignee: - | idle=7d (since update) | created 7d ago | labels: bug,good first issue,hacktoberfest,area: ml
+   136→   https://github.com/Ergane-Foundation/vajra/issues/71
+   137→   created=2026-10-17T17:45:34Z updated=2026-10-17T17:45:34Z
+   138→
+   139→### Ergane-Foundation/vajra #12
+   140→   title: Add make demo and document it in the README
+   141→   assignee: - | idle=18d (since update) | created 18d ago | labels: documentation,good first issue,hacktoberfest,area: docker
+   142→   https://github.com/Ergane-Foundation/vajra/issues/12
+   143→   created=2026-10-06T12:07:51Z updated=2026-10-06T12:07:51Z
+   144→
+   145→### Ergane-Foundation/vajra #15
+   146→   title: Add tests for eve.json alert parsing and severity mapping
+   147→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,hacktoberfest,area: pipeline,area: tests
+   148→   https://github.com/Ergane-Foundation/vajra/issues/15
+   149→   created=2026-10-06T12:08:00Z updated=2026-10-06T12:08:00Z
+   150→
+   151→### Ergane-Foundation/vajra #16
+   152→   title: Add tests for the SOAR allowlist and dry-run mode
+   153→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,hacktoberfest,area: soar,area: tests
+   154→   https://github.com/Ergane-Foundation/vajra/issues/16
+   155→   created=2026-10-06T12:08:02Z updated=2026-10-06T12:08:02Z
+   156→
+   157→### Ergane-Foundation/vajra #18
+   158→   title: Run shellcheck on the scripts and fix what it reports
+   159→   assignee: - | idle=18d (since update) | created 18d ago | labels: good first issue,hacktoberfest,area: scripts,area: ci
+   160→   https://github.com/Ergane-Foundation/vajra/issues/18
+   161→   created=2026-10-06T12:08:08Z updated=2026-10-06T12:08:08Z
+   162→
+   163→### Ergane-Foundation/vajra #25
+   164→   title: Make stop.sh match its help text and stop every service
+   165→   assignee: - | idle=18d (since update) | created 18d ago | labels: bug,good first issue,hacktoberfest,area: scripts
+   166→   https://github.com/Ergane-Foundation/vajra/issues/25
+   167→   created=2026-10-06T12:08:31Z updated=2026-10-06T12:08:31Z
+   168→
+   169→### Ishannaik/harbour #22
+   170→   title: Clearer error when harbour-indexer binary isn't found (src/ensure_indexer.rs)
+   171→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   172→   https://github.com/Ishannaik/harbour/issues/22
+   173→   created=2026-10-05T03:47:50Z updated=2026-10-05T03:47:50Z
+   174→
+   175→### Ishannaik/harbour #23
+   176→   title: cleanup_orphaned_indexers should log what it actually killed
+   177→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   178→   https://github.com/Ishannaik/harbour/issues/23
+   179→   created=2026-10-05T03:47:53Z updated=2026-10-05T03:47:53Z
+   180→
+   181→### Ishannaik/harbour #24
+   182→   title: packages/harbour-cli/bin/harbour.js: no error message if no binary matches the platform
+   183→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   184→   https://github.com/Ishannaik/harbour/issues/24
+   185→   created=2026-10-05T03:47:56Z updated=2026-10-05T03:47:56Z
+   186→
+   187→### Ishannaik/harbour #25
+   188→   title: SourceId Display/as_str: the sidebar label casing is inconsistent (GamesHub vs CineVault vs TsukiBase)
+   189→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   190→   https://github.com/Ishannaik/harbour/issues/25
+   191→   created=2026-10-05T03:47:59Z updated=2026-10-05T03:47:59Z
+   192→
+   193→### Ishannaik/harbour #26
+   194→   title: docs/theming.md: no worked example of adding a brand-new theme from scratch
+   195→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,docs
+   196→   https://github.com/Ishannaik/harbour/issues/26
+   197→   created=2026-10-05T03:48:01Z updated=2026-10-05T03:48:01Z
+   198→
+   199→### Ishannaik/harbour #36
+   200→   title: theme: support 8-digit and 4-digit hex color parsing in parse_hex
+   201→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   202→   https://github.com/Ishannaik/harbour/issues/36
+   203→   created=2026-10-05T03:48:30Z updated=2026-10-05T03:48:30Z
+   204→
+   205→### Ishannaik/harbour #37
+   206→   title: core: handle base32 padding in decode_base32_info_hash
+   207→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   208→   https://github.com/Ishannaik/harbour/issues/37
+   209→   created=2026-10-05T03:48:32Z updated=2026-10-05T03:48:32Z
+   210→
+   211→### Ishannaik/harbour #38
+   212→   title: paths: strip redundant trailing slashes and normalize separators in normalize_dir
+   213→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   214→   https://github.com/Ishannaik/harbour/issues/38
+   215→   created=2026-10-05T03:48:35Z updated=2026-10-05T03:48:35Z
+   216→
+   217→### Ishannaik/harbour #39
+   218→   title: settings: parse numbers with explicit positive sign in parse_opt_number
+   219→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   220→   https://github.com/Ishannaik/harbour/issues/39
+   221→   created=2026-10-05T03:48:38Z updated=2026-10-05T03:48:38Z
+   222→
+   223→### Ishannaik/harbour #4
+   224→   title: Add a buffer-snapshot test for the settings overlay (src/ui/settings.rs)
+   225→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,tests
+   226→   https://github.com/Ishannaik/harbour/issues/4
+   227→   created=2026-10-05T03:47:03Z updated=2026-10-05T03:47:03Z
+   228→
+   229→### Ishannaik/harbour #40
+   230→   title: ui: add PiB support and boundary clamping in human_bytes
+   231→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   232→   https://github.com/Ishannaik/harbour/issues/40
+   233→   created=2026-10-05T03:48:41Z updated=2026-10-05T03:48:41Z
+   234→
+   235→### Ishannaik/harbour #41
+   236→   title: persist: filter control characters and newlines in push_history
+   237→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   238→   https://github.com/Ishannaik/harbour/issues/41
+   239→   created=2026-10-05T03:48:44Z updated=2026-10-05T12:39:05Z
+   240→
+   241→### Ishannaik/harbour #42
+   242→   title: types: clamp negative or NaN values in ItemView::progress
+   243→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   244→   https://github.com/Ishannaik/harbour/issues/42
+   245→   created=2026-10-05T03:48:47Z updated=2026-10-05T03:48:47Z
+   246→
+   247→### Ishannaik/harbour #43
+   248→   title: batch_picker: select_prev and page_up underflow edge cases
+   249→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest
+   250→   https://github.com/Ishannaik/harbour/issues/43
+   251→   created=2026-10-05T03:48:50Z updated=2026-10-05T03:48:50Z
+   252→
+   253→### Ishannaik/harbour #5
+   254→   title: Add a buffer-snapshot test for the player picker (src/ui/player.rs)
+   255→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,tests
+   256→   https://github.com/Ishannaik/harbour/issues/5
+   257→   created=2026-10-05T03:47:06Z updated=2026-10-05T03:47:06Z
+   258→
+   259→### Ishannaik/harbour #6
+   260→   title: Add a buffer-snapshot test for the confirm dialog (src/ui/confirm.rs)
+   261→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,tests
+   262→   https://github.com/Ishannaik/harbour/issues/6
+   263→   created=2026-10-05T03:47:09Z updated=2026-10-05T03:47:09Z
+   264→
+   265→### Ishannaik/harbour #7
+   266→   title: Add a buffer-snapshot test for the episode picker (src/ui/episode_picker.rs)
+   267→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,tests
+   268→   https://github.com/Ishannaik/harbour/issues/7
+   269→   created=2026-10-05T03:47:12Z updated=2026-10-05T03:47:12Z
+   270→
+   271→### Ishannaik/harbour #8
+   272→   title: Add a buffer-snapshot test for the batch picker (src/ui/batch_picker.rs)
+   273→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,tests
+   274→   https://github.com/Ishannaik/harbour/issues/8
+   275→   created=2026-10-05T03:47:14Z updated=2026-10-05T03:47:14Z
+   276→
+   277→### Vayz0001/polyfarmer #20
+   278→   title: ui: add tooltip explaining tick-snapping on market view
+   279→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   280→   https://github.com/Vayz0001/polyfarmer/issues/20
+   281→   created=2026-10-05T09:40:03Z updated=2026-10-05T09:40:03Z
+   282→
+   283→### Vayz0001/polyfarmer #21
+   284→   title: fix: add missing 15-second auto-refresh trigger to positions page
+   285→   assignee: - | idle=19d (since update) | created 19d ago | labels: bug,good first issue,hacktoberfest,ui/ux
+   286→   https://github.com/Vayz0001/polyfarmer/issues/21
+   287→   created=2026-10-05T09:40:05Z updated=2026-10-05T09:40:05Z
+   288→
+   289→### Vayz0001/polyfarmer #22
+   290→   title: docs: document all HTTP security headers and CSP policy in SECURITY.md
+   291→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest,security
+   292→   https://github.com/Vayz0001/polyfarmer/issues/22
+   293→   created=2026-10-05T09:40:07Z updated=2026-10-05T09:40:07Z
+   294→
+   295→### Vayz0001/polyfarmer #23
+   296→   title: ui: display active market count badge in sidebar navigation
+   297→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   298→   https://github.com/Vayz0001/polyfarmer/issues/23
+   299→   created=2026-10-05T09:40:09Z updated=2026-10-05T09:40:09Z
+   300→
+   301→### Vayz0001/polyfarmer #24
+   302→   title: test: add unit test verifying snap_to_tick behavior on sub-cent ticks
+   303→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,engine,testing
+   304→   https://github.com/Vayz0001/polyfarmer/issues/24
+   305→   created=2026-10-05T09:40:11Z updated=2026-10-05T09:40:11Z
+   306→
+   307→### Vayz0001/polyfarmer #25
+   308→   title: ui: highlight current route in mobile navigation drawer
+   309→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   310→   https://github.com/Vayz0001/polyfarmer/issues/25
+   311→   created=2026-10-05T09:40:13Z updated=2026-10-05T09:40:13Z
+   312→
+   313→### Vayz0001/polyfarmer #26
+   314→   title: docs: add troubleshooting guide for 'Address already in use' error
+   315→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest
+   316→   https://github.com/Vayz0001/polyfarmer/issues/26
+   317→   created=2026-10-05T09:40:15Z updated=2026-10-05T09:40:15Z
+   318→
+   319→### Vayz0001/polyfarmer #27
+   320→   title: ui: add clear button to search input in market browse view
+   321→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   322→   https://github.com/Vayz0001/polyfarmer/issues/27
+   323→   created=2026-10-05T09:40:17Z updated=2026-10-05T09:40:17Z
+   324→
+   325→### Vayz0001/polyfarmer #28
+   326→   title: fix: correct broken intra-doc links in rustdoc comments
+   327→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,rust,hacktoberfest
+   328→   https://github.com/Vayz0001/polyfarmer/issues/28
+   329→   created=2026-10-05T09:40:19Z updated=2026-10-05T09:40:19Z
+   330→
+   331→### Vayz0001/polyfarmer #29
+   332→   title: ui: format large numbers with commas in rewards history table
+   333→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   334→   https://github.com/Vayz0001/polyfarmer/issues/29
+   335→   created=2026-10-05T09:40:20Z updated=2026-10-05T09:40:20Z
+   336→
+   337→### Vayz0001/polyfarmer #30
+   338→   title: ui: add animated spinner to login submission button
+   339→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   340→   https://github.com/Vayz0001/polyfarmer/issues/30
+   341→   created=2026-10-05T09:40:22Z updated=2026-10-05T09:40:22Z
+   342→
+   343→### Vayz0001/polyfarmer #31
+   344→   title: test: add integration test for invalid session cookie rejection
+   345→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,testing
+   346→   https://github.com/Vayz0001/polyfarmer/issues/31
+   347→   created=2026-10-05T09:40:24Z updated=2026-10-05T09:40:24Z
+   348→
+   349→### Vayz0001/polyfarmer #32
+   350→   title: docs: add architecture diagram to CONTRIBUTING.md
+   351→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest
+   352→   https://github.com/Vayz0001/polyfarmer/issues/32
+   353→   created=2026-10-05T09:40:26Z updated=2026-10-05T09:40:26Z
+   354→
+   355→### Vayz0001/polyfarmer #33
+   356→   title: ui: display connection latency indicator in status strip
+   357→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   358→   https://github.com/Vayz0001/polyfarmer/issues/33
+   359→   created=2026-10-05T09:40:27Z updated=2026-10-05T09:40:27Z
+   360→
+   361→### Vayz0001/polyfarmer #34
+   362→   title: ui: add link to Polymarket event page from tracked market label
+   363→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   364→   https://github.com/Vayz0001/polyfarmer/issues/34
+   365→   created=2026-10-05T09:40:29Z updated=2026-10-05T09:40:29Z
+   366→
+   367→### Vayz0001/polyfarmer #35
+   368→   title: docs: document environment variables table in README
+   369→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest
+   370→   https://github.com/Vayz0001/polyfarmer/issues/35
+   371→   created=2026-10-05T09:40:31Z updated=2026-10-05T09:40:31Z
+   372→
+   373→### Vayz0001/polyfarmer #36
+   374→   title: ui: add confirm prompt before removing a market
+   375→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   376→   https://github.com/Vayz0001/polyfarmer/issues/36
+   377→   created=2026-10-05T09:40:33Z updated=2026-10-05T09:40:33Z
+   378→
+   379→### Vayz0001/polyfarmer #37
+   380→   title: test: add test asserting CSRF failure on missing token
+   381→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,security,testing
+   382→   https://github.com/Vayz0001/polyfarmer/issues/37
+   383→   created=2026-10-05T09:40:35Z updated=2026-10-05T09:40:35Z
+   384→
+   385→### Vayz0001/polyfarmer #38
+   386→   title: ui: add empty-state illustration when zero markets are tracked
+   387→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   388→   https://github.com/Vayz0001/polyfarmer/issues/38
+   389→   created=2026-10-05T09:40:37Z updated=2026-10-05T09:40:37Z
+   390→
+   391→### Vayz0001/polyfarmer #39
+   392→   title: docs: add guide for running behind Caddy reverse proxy
+   393→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest
+   394→   https://github.com/Vayz0001/polyfarmer/issues/39
+   395→   created=2026-10-05T09:40:40Z updated=2026-10-05T09:40:40Z
+   396→
+   397→### Vayz0001/polyfarmer #40
+   398→   title: ui: add export activity log button as CSV
+   399→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux,feature
+   400→   https://github.com/Vayz0001/polyfarmer/issues/40
+   401→   created=2026-10-05T09:40:42Z updated=2026-10-05T09:40:42Z
+   402→
+   403→### Vayz0001/polyfarmer #41
+   404→   title: test: verify that health status returns 200 OK without auth
+   405→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,testing
+   406→   https://github.com/Vayz0001/polyfarmer/issues/41
+   407→   created=2026-10-05T09:40:44Z updated=2026-10-05T09:40:44Z
+   408→
+   409→### Vayz0001/polyfarmer #42
+   410→   title: ui: show estimated daily earnings in rewards header
+   411→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   412→   https://github.com/Vayz0001/polyfarmer/issues/42
+   413→   created=2026-10-05T09:40:46Z updated=2026-10-05T09:40:46Z
+   414→
+   415→### Vayz0001/polyfarmer #43
+   416→   title: docs: add systemd service troubleshooting guide
+   417→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest
+   418→   https://github.com/Vayz0001/polyfarmer/issues/43
+   419→   created=2026-10-05T09:40:49Z updated=2026-10-05T09:40:49Z
+   420→
+   421→### Vayz0001/polyfarmer #44
+   422→   title: ui: preserve selected sort column across browse pagination
+   423→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   424→   https://github.com/Vayz0001/polyfarmer/issues/44
+   425→   created=2026-10-05T09:40:51Z updated=2026-10-05T09:40:51Z
+   426→
+   427→### Vayz0001/polyfarmer #45
+   428→   title: fix: sanitize user-entered market URLs before resolving
+   429→   assignee: - | idle=19d (since update) | created 19d ago | labels: bug,good first issue,hacktoberfest
+   430→   https://github.com/Vayz0001/polyfarmer/issues/45
+   431→   created=2026-10-05T09:40:53Z updated=2026-10-05T09:40:53Z
+   432→
+   433→### Vayz0001/polyfarmer #46
+   434→   title: ui: add color-coded badge for order distance from midpoint
+   435→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   436→   https://github.com/Vayz0001/polyfarmer/issues/46
+   437→   created=2026-10-05T09:40:55Z updated=2026-10-05T09:40:55Z
+   438→
+   439→### Vayz0001/polyfarmer #47
+   440→   title: docs: document demo mode environment variables in .env.example
+   441→   assignee: - | idle=19d (since update) | created 19d ago | labels: documentation,good first issue,hacktoberfest
+   442→   https://github.com/Vayz0001/polyfarmer/issues/47
+   443→   created=2026-10-05T09:40:57Z updated=2026-10-05T09:40:57Z
+   444→
+   445→### Vayz0001/polyfarmer #48
+   446→   title: ui: add version number display in dashboard footer
+   447→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,ui/ux
+   448→   https://github.com/Vayz0001/polyfarmer/issues/48
+   449→   created=2026-10-05T09:40:59Z updated=2026-10-05T12:36:57Z
+   450→
+   451→### Vayz0001/polyfarmer #49
+   452→   title: test: add test asserting strict Content-Security-Policy headers
+   453→   assignee: - | idle=19d (since update) | created 19d ago | labels: good first issue,hacktoberfest,security,testing
+   454→   https://github.com/Vayz0001/polyfarmer/issues/49
+   455→   created=2026-10-05T09:41:01Z updated=2026-10-05T09:41:01Z
+   456→
+   457→### astral-sh/uv #17512
+   458→   title: Investigate why uv holds so many file handles open
+   459→   assignee: - | idle=32d (since update) | created 281d ago | labels: bug,help wanted
+   460→   https://github.com/astral-sh/uv/issues/17512
+   461→   created=2026-01-16T09:32:03Z updated=2026-09-22T14:06:16Z
+   462→
+   463→### collective/icalendar #1929
+   464→   title: Enforce UID format for setters
+   465→   assignee: - | idle=0d (since update) | created 11d ago | labels: good first issue
+   466→   https://github.com/collective/icalendar/issues/1929
+   467→   created=2026-10-13T13:58:05Z updated=2026-10-24T20:48:25Z
+   468→
+   469→### collective/icalendar #1851
+   470→   title: property accessors for vRecur (first-timer collaboration)
+   471→   assignee: - | idle=1d (since update) | created 24d ago | labels: help wanted,good first issue
+   472→   https://github.com/collective/icalendar/issues/1851
+   473→   created=2026-09-30T08:50:48Z updated=2026-10-23T04:55:01Z
+   474→
+   475→### collective/icalendar #1890
+   476→   title: language attribute for text types
+   477→   assignee: - | idle=1d (since update) | created 17d ago | labels: good first issue
+   478→   https://github.com/collective/icalendar/issues/1890
+   479→   created=2026-10-07T13:07:43Z updated=2026-10-22T23:41:24Z
+   480→
+   481→### collective/icalendar #1896
+   482→   title: Equality of vCalAddress (email equality)
+   483→   assignee: - | idle=3d (since update) | created 16d ago | labels: feature,good first issue
+   484→   https://github.com/collective/icalendar/issues/1896
+   485→   created=2026-10-08T18:21:23Z updated=2026-10-21T17:53:22Z
+   486→
+   487→### collective/icalendar #1569
+   488→   title: Audit `Alarm.singletons` to ensure all its items are actually supported
+   489→   assignee: - | idle=7d (since update) | created 96d ago | labels: help wanted,good first issue,hacktoberfest,NLnet
+   490→   https://github.com/collective/icalendar/issues/1569
+   491→   created=2026-07-20T01:30:50Z updated=2026-10-17T14:11:04Z
+   492→
+   493→### collective/icalendar #1916
+   494→   title: vCalAddress interface improvements
+   495→   assignee: - | idle=9d (since update) | created 12d ago | labels: feature,good first issue
+   496→   https://github.com/collective/icalendar/issues/1916
+   497→   created=2026-10-12T10:42:44Z updated=2026-10-15T13:06:20Z
+   498→
+   499→### collective/icalendar #1797
+   500→   title: Create Todo.COMPLETED
+   501→   assignee: - | idle=10d (since update) | created 38d ago | labels: good first issue
+   502→   https://github.com/collective/icalendar/issues/1797
+   503→   created=2026-09-16T16:07:58Z updated=2026-10-14T14:53:27Z
+   504→
+   505→### collective/icalendar #1895
+   506→   title: vBinary.uri - convert data into a data: URI
+   507→   assignee: - | idle=10d (since update) | created 16d ago | labels: feature,good first issue
+   508→   https://github.com/collective/icalendar/issues/1895
+   509→   created=2026-10-08T18:16:37Z updated=2026-10-14T14:51:06Z
+   510→
+   511→### collective/icalendar #1917
+   512→   title: icalendar.parse convenience method
+   513→   assignee: - | idle=10d (since update) | created 12d ago | labels: feature,good first issue
+   514→   https://github.com/collective/icalendar/issues/1917
+   515→   created=2026-10-12T16:19:48Z updated=2026-10-14T14:51:07Z
+   516→
+   517→### collective/icalendar #1930
+   518→   title: Proper typing for vRecur
+   519→   assignee: - | idle=10d (since update) | created 11d ago | labels: good first issue
+   520→   https://github.com/collective/icalendar/issues/1930
+   521→   created=2026-10-13T14:03:45Z updated=2026-10-14T10:34:46Z
+   522→
+   523→### collective/icalendar #1921
+   524→   title: get() for StrEnum
+   525→   assignee: - | idle=11d (since update) | created 11d ago | labels: good first issue
+   526→   https://github.com/collective/icalendar/issues/1921
+   527→   created=2026-10-13T10:32:26Z updated=2026-10-13T12:19:38Z
+   528→
+   529→### collective/icalendar #1865
+   530→   title: Revise contributing page first impression
+   531→   assignee: - | idle=18d (since update) | created 22d ago | labels: doc,help wanted,good first issue
+   532→   https://github.com/collective/icalendar/issues/1865
+   533→   created=2026-10-02T09:50:14Z updated=2026-10-06T18:15:48Z
+   534→
+   535→### collective/icalendar #1787
+   536→   title: Document Component.errors
+   537→   assignee: - | idle=22d (since update) | created 40d ago | labels: doc,good first issue
+   538→   https://github.com/collective/icalendar/issues/1787
+   539→   created=2026-09-14T14:01:42Z updated=2026-10-02T18:40:19Z
+   540→
+   541→### collective/icalendar #1840
+   542→   title: PARTSTAT and other enums should accept case-insensitive values
+   543→   assignee: - | idle=22d (since update) | created 26d ago | labels: feature,good first issue
+   544→   https://github.com/collective/icalendar/issues/1840
+   545→   created=2026-09-28T09:10:13Z updated=2026-10-02T07:39:16Z
+   546→
+   547→### collective/icalendar #1868
+   548→   title: Suppress warnings in test run
+   549→   assignee: - | idle=22d (since update) | created 22d ago | labels: good first issue
+   550→   https://github.com/collective/icalendar/issues/1868
+   551→   created=2026-10-02T12:12:24Z updated=2026-10-02T12:12:24Z
+   552→
+   553→### collective/icalendar #1802
+   554→   title: [TYPING] TZP.localize and TZP.localize_utc
+   555→   assignee: - | idle=32d (since update) | created 38d ago | labels: good first issue
+   556→   https://github.com/collective/icalendar/issues/1802
+   557→   created=2026-09-16T19:11:14Z updated=2026-09-22T00:46:44Z
+   558→
+   559→### collective/icalendar #1650
+   560→   title: Replace generated docstrings with static docstrings
+   561→   assignee: - | idle=33d (since update) | created 76d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   562→   https://github.com/collective/icalendar/issues/1650
+   563→   created=2026-08-09T17:32:18Z updated=2026-09-21T20:51:53Z
+   564→
+   565→### collective/icalendar #1473
+   566→   title: Clarify auto-generated properties for `new` class methods
+   567→   assignee: - | idle=38d (since update) | created 129d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   568→   https://github.com/collective/icalendar/issues/1473
+   569→   created=2026-06-17T20:16:54Z updated=2026-09-16T19:00:34Z
+   570→
+   571→### collective/icalendar #1784
+   572→   title: Create ACTION enum
+   573→   assignee: - | idle=40d (since update) | created 40d ago | labels: good first issue
+   574→   https://github.com/collective/icalendar/issues/1784
+   575→   created=2026-09-14T13:03:01Z updated=2026-09-14T18:18:06Z
+   576→
+   577→### collective/icalendar #1158
+   578→   title: [Beginner] Correct broken links to classes & functions in documentation
+   579→   assignee: - | idle=48d (since update) | created 258d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   580→   https://github.com/collective/icalendar/issues/1158
+   581→   created=2026-02-08T13:00:26Z updated=2026-09-06T10:08:22Z
+   582→
+   583→### collective/icalendar #1072
+   584→   title: apply Google Style to a function documentation [beginner, Python]
+   585→   assignee: - | idle=58d (since update) | created 291d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   586→   https://github.com/collective/icalendar/issues/1072
+   587→   created=2026-01-06T11:27:56Z updated=2026-08-27T10:06:07Z
+   588→
+   589→### collective/icalendar #1118
+   590→   title: Document __new__ methods
+   591→   assignee: - | idle=58d (since update) | created 267d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   592→   https://github.com/collective/icalendar/issues/1118
+   593→   created=2026-01-30T12:09:10Z updated=2026-08-27T10:06:08Z
+   594→
+   595→### collective/icalendar #1244
+   596→   title: Replace copy-paste of RFCs in docstrings with Pythonic docstrings
+   597→   assignee: - | idle=58d (since update) | created 240d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   598→   https://github.com/collective/icalendar/issues/1244
+   599→   created=2026-02-26T15:00:23Z updated=2026-08-27T10:06:12Z
+   600→
+   601→### collective/icalendar #1620
+   602→   title: Merge ``__init__`` or ``__new__`` docstrings into their class's docstring
+   603→   assignee: - | idle=58d (since update) | created 85d ago | labels: doc,help wanted,good first issue,hacktoberfest,NLnet
+   604→   https://github.com/collective/icalendar/issues/1620
+   605→   created=2026-07-31T14:33:17Z updated=2026-08-27T10:41:37Z
+   606→
+   607→### collective/icalendar #1152
+   608→   title: `None` type does not get linked in Sphinx
+   609→   assignee: - | idle=180d (since update) | created 258d ago | labels: doc,help wanted,good first issue,hacktoberfest
+   610→   https://github.com/collective/icalendar/issues/1152
+   611→   created=2026-02-08T00:57:30Z updated=2026-04-27T09:25:00Z
+   612→
+   613→### home-assistant/core #185133
+   614→   title: Roborock map shows "NO MAP" until already-selected map is manually reselected
+   615→   assignee: allenporter | idle=12d (since update) | created 16d ago | labels: help-wanted,integration: roborock,good first issue
+   616→   https://github.com/home-assistant/core/issues/185133
+   617→   created=2026-10-08T21:46:16Z updated=2026-10-12T00:41:35Z
+   618→
+   619→### internetarchive/openlibrary #13989
+   620→   title: `/search.json` ignores the documented `editions.sort` parameter
+   621→   assignee: - | idle=7d (since update) | created 8d ago | labels: Theme: Search,Module: Solr,Theme: Public APIs,Good First Issue,Needs: Triage,Affects: Server,Needs: Response
+   622→   https://github.com/internetarchive/openlibrary/issues/13989
+   623→   created=2026-10-16T21:49:13Z updated=2026-10-17T08:37:35Z
+   624→
+   625→### internetarchive/openlibrary #13648
+   626→   title: Restrict field, What work is this an edition of? to super librarians and admins.
+   627→   assignee: - | idle=18d (since update) | created 38d ago | labels: Good First Issue,Theme: Editing,Affects: UI,Priority: 2,Affects: Data,Affects: Librarians,Lead: @cdrini,Needs: Response
+   628→   https://github.com/internetarchive/openlibrary/issues/13648
+   629→   created=2026-09-16T09:38:19Z updated=2026-10-06T08:44:38Z
+   630→
+   631→### pwndbg/pwndbg #3805
+   632→   title: improve `heap` command output
+   633→   assignee: - | idle=174d (since update) | created 237d ago | labels: help wanted,feature,heap
+   634→   https://github.com/pwndbg/pwndbg/issues/3805
+   635→   created=2026-02-28T23:35:21Z updated=2026-05-03T15:27:20Z
+   636→
+   637→### wger-project/wger #2205
+   638→   title: Pre-select weight units
+   639→   assignee: - | idle=145d (since update) | created 246d ago | labels: good first issue
+   640→   https://github.com/wger-project/wger/issues/2205
+   641→   created=2026-02-20T10:38:46Z updated=2026-06-01T22:22:32Z
+   642→
+   643→### zulip/zulip #38384
+   644→   title: Make wildcard mention permissions configurable per-channel
+   645→   assignee: - | idle=1d (since update) | created 229d ago | labels: help wanted,area: channel settings,new feature
+   646→   https://github.com/zulip/zulip/issues/38384
+   647→   created=2026-03-09T19:28:33Z updated=2026-10-23T02:55:16Z
+   648→
+   649→### zulip/zulip #38839
+   650→   title: Improve how Mattermost threads are converted.
+   651→   assignee: - | idle=2d (since update) | created 201d ago | labels: help wanted,area: data import/export
+   652→   https://github.com/zulip/zulip/issues/38839
+   653→   created=2026-04-06T14:28:31Z updated=2026-10-22T14:59:42Z

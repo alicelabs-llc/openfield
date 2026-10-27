@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en" data-theme="auto"><head><script type="7d0ff63778db6a377c20fdd2-text/javascript">
+      (() => {
+        const legacyThemes = new Map([
+          ["institutional-dark", "dark"],
+          ["institutional-light", "light"],
+        ]);
+        const allowed = new Set(["auto", "dark", "light"]);
+        let selectedTheme = "auto";
+
+        try {
+          let savedTheme = localStorage.getItem("aiv-theme");
+          if (legacyThemes.has(savedTheme)) {
+            savedTheme = legacyThemes.get(savedTheme);
+            localStorage.setItem("aiv-theme", savedTheme);
+          }
+
+          if (allowed.has(savedTheme)) selectedTheme = savedTheme;
+          else if (savedTheme) localStorage.removeItem("aiv-theme");
+        } catch {
+          selectedTheme = "auto";
+        }
+
+        const effectiveTheme =
+          selectedTheme === "auto"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : selectedTheme;
+
+        document.documentElement.dataset.themePreference = selectedTheme;
+        document.documentElement.dataset.theme = effectiveTheme;
+        document.documentElement.dataset.ecTheme = effectiveTheme;
+      })();
+    </script><meta charset="utf-8"><meta name="generator" content="Astro v7.2.9"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 | AI Village</title><meta name="description" content="A community of hackers and data scientists working to educate the world on the use and abuse of artificial intelligence in security and privacy."><link rel="icon" href="/public/img/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/public/img/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="/public/img/favicon-16x16.png" sizes="16x16"><link rel="apple-touch-icon" href="/public/img/favicon-32x32.png"><link rel="canonical" href="https://aivillage.org/404.html"><meta property="og:title" content="404"><meta property="og:locale" content="en_US"><meta property="og:description" content="A community of hackers and data scientists working to educate the world on the use and abuse of artificial intelligence in security and privacy."><meta property="og:url" content="https://aivillage.org/404.html"><meta property="og:site_name" content="AI Village"><meta property="og:type" content="website"><meta property="og:image" content="https://aivillage.org/generated/og/assets-images-aiv-logo-8a9d72061d.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="404"><meta name="twitter:site" content="@aivillage_dc"><meta name="twitter:image" content="https://aivillage.org/generated/og/assets-images-aiv-logo-8a9d72061d.jpg"><link type="application/rss+xml" rel="alternate" href="https://aivillage.org/feed.xml" title="AI Village"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"404","description":"A community of hackers and data scientists working to educate the world on the use and abuse of artificial intelligence in security and privacy.","url":"https://aivillage.org/404.html","mainEntityOfPage":"https://aivillage.org/404.html"}</script><link rel="stylesheet" href="/_astro/BaseLayout.CX6f1dVo.css"><script type="7d0ff63778db6a377c20fdd2-module" src="/_astro/page.DVGEJNLO.js"></script></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="container"><div class="header-content"><a class="site-title" href="/">AI Village</a><nav class="nav-menu" id="nav-menu"><a href="/events/">Events</a><a href="/blog/">Blog</a><a href="/learn/">Learn</a><a href="/community/">Community</a><a href="/about/">About</a><a class="nav-sponsor-cta" href="/sponsors/">Sponsor</a></nav><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color mode" title="Switch color mode"><svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M20.99 12.66A8.99 8.99 0 1 1 11.34 3.01a7 7 0 1 0 9.65 9.65Z"></path></svg></button><button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header><script type="7d0ff63778db6a377c20fdd2-text/javascript">
+  const menu = document.getElementById("nav-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const siteHeader = document.querySelector(".site-header");
+  const mobileNavigation = window.matchMedia("(max-width: 900px)");
+  let previousBodyOverflow = "";
+  let lastScrollPosition = Math.max(window.scrollY, 0);
+  let upwardScrollDistance = 0;
+  let scrollFramePending = false;
+  let anchorJumpActive = false;
+  let anchorJumpTimer;
+
+  function menuIsOpen() {
+    return (
+      menuToggle instanceof HTMLButtonElement &&
+      menuToggle.getAttribute("aria-expanded") === "true"
+    );
+  }
+
+  function setHeaderHidden(hidden) {
+    if (!(siteHeader instanceof HTMLElement)) return;
+    const shouldHide = hidden && mobileNavigation.matches && !menuIsOpen();
+    siteHeader.classList.toggle("site-header--hidden", shouldHide);
+  }
+
+  function finishAnchorJump() {
+    anchorJumpActive = false;
+    lastScrollPosition = Math.max(window.scrollY, 0);
+    upwardScrollDistance = 0;
+    if (anchorJumpTimer) window.clearTimeout(anchorJumpTimer);
+  }
+
+  function beginAnchorJump() {
+    if (!mobileNavigation.matches) return;
+    anchorJumpActive = true;
+    setHeaderHidden(true);
+    upwardScrollDistance = 0;
+    if (anchorJumpTimer) window.clearTimeout(anchorJumpTimer);
+    anchorJumpTimer = window.setTimeout(finishAnchorJump, 1200);
+  }
+
+  function updateHeaderForScroll() {
+    scrollFramePending = false;
+    const currentScrollPosition = Math.max(window.scrollY, 0);
+    const delta = currentScrollPosition - lastScrollPosition;
+
+    if (!mobileNavigation.matches) {
+      setHeaderHidden(false);
+    } else if (anchorJumpActive) {
+      setHeaderHidden(true);
+      upwardScrollDistance = 0;
+    } else if (currentScrollPosition <= 16) {
+      setHeaderHidden(false);
+      upwardScrollDistance = 0;
+    } else if (delta > 1) {
+      upwardScrollDistance = 0;
+      if (currentScrollPosition > 72) setHeaderHidden(true);
+    } else if (delta < -1) {
+      upwardScrollDistance += Math.abs(delta);
+      if (upwardScrollDistance >= 20) setHeaderHidden(false);
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (scrollFramePending) return;
+      scrollFramePending = true;
+      window.requestAnimationFrame(updateHeaderForScroll);
+    },
+    { passive: true },
+  );
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const link =
+      target instanceof Element ? target.closest('a[href^="#"]') : null;
+    const href = link?.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const destination = document.getElementById(
+      decodeURIComponent(href.slice(1)),
+    );
+    if (destination) beginAnchorJump();
+  });
+
+  window.addEventListener("scrollend", () => {
+    if (anchorJumpActive) finishAnchorJump();
+  });
+
+  if (siteHeader instanceof HTMLElement) {
+    siteHeader.addEventListener("focusin", () => setHeaderHidden(false));
+  }
+
+  function setMenuOpen(open, options = {}) {
+    if (
+      !(menuToggle instanceof HTMLButtonElement) ||
+      !(menu instanceof HTMLElement)
+    )
+      return;
+
+    menuToggle.classList.toggle("active", open);
+    menu.classList.toggle("active", open);
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+
+    if (open) {
+      setHeaderHidden(false);
+      previousBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = previousBodyOverflow;
+      previousBodyOverflow = "";
+      if (options.restoreFocus) menuToggle.focus();
+    }
+  }
+
+  const menuItems = document.querySelectorAll(".nav-menu a");
+
+  if (menuToggle instanceof HTMLButtonElement) {
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        menuToggle.getAttribute("aria-expanded") === "true"
+      ) {
+        setMenuOpen(false, { restoreFocus: true });
+      }
+    });
+
+    mobileNavigation.addEventListener("change", (event) => {
+      finishAnchorJump();
+      lastScrollPosition = Math.max(window.scrollY, 0);
+      if (!event.matches) {
+        setMenuOpen(false);
+        setHeaderHidden(false);
+      }
+    });
+  }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const legacyThemes = new Map([
+    ["institutional-dark", "dark"],
+    ["institutional-light", "light"],
+  ]);
+  const productionThemes = new Set(["dark", "light"]);
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function effectiveTheme(theme) {
+    if (theme === "dark" || theme === "light") return theme;
+    return systemTheme.matches ? "dark" : "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.themePreference = theme;
+    const mode = effectiveTheme(theme);
+    document.documentElement.dataset.theme = mode;
+    document.documentElement.dataset.ecTheme = mode;
+  }
+
+  function savedTheme() {
+    try {
+      let value = localStorage.getItem("aiv-theme");
+      if (legacyThemes.has(value)) {
+        value = legacyThemes.get(value);
+        localStorage.setItem("aiv-theme", value);
+      }
+
+      if (productionThemes.has(value)) return value;
+      if (value && value !== "auto") localStorage.removeItem("aiv-theme");
+    } catch {
+      return null;
+    }
+
+    return null;
+  }
+
+  function currentEffectiveMode() {
+    return effectiveTheme(document.documentElement.dataset.theme);
+  }
+
+  function updateThemeToggle() {
+    if (!(themeToggle instanceof HTMLButtonElement)) return;
+
+    const mode = currentEffectiveMode();
+    const nextMode = mode === "dark" ? "light" : "dark";
+    const label = `Switch to ${nextMode} mode`;
+
+    themeToggle.dataset.effectiveTheme = mode;
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+  }
+
+  if (themeToggle instanceof HTMLButtonElement) {
+    updateThemeToggle();
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = currentEffectiveMode() === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+
+      try {
+        localStorage.setItem("aiv-theme", nextTheme);
+      } catch {
+        // Ignore storage failures; the current page still updates immediately.
+      }
+
+      updateThemeToggle();
+    });
+
+    systemTheme.addEventListener("change", () => {
+      if (!savedTheme()) applyTheme("auto");
+      updateThemeToggle();
+    });
+  }
+</script><main id="main-content" class="main-content"><div class="container aiv-page-shell"><div class="card card--center"><h1>404</h1><p class="text-muted">Page not found.</p><p><a class="text-accent" href="/">Return home</a></p></div></div></main><footer class="site-footer"><div class="container"><div class="footer-content"><div class="footer-brand"><a class="footer-title" href="/">AI Village</a><p class="text-mono">Public AI security education, built by the community.</p></div><div class="footer-sitemap"><nav class="footer-nav-section" aria-label="Programs footer links"><h2>Programs</h2><ul><li><a href="/learn/">Learn / Workshops</a></li><li><a href="/events/">Events</a></li><li><a href="/posters/">Poster Archive</a></li><li><a href="/research/">Research</a></li></ul></nav><nav class="footer-nav-section" aria-label="Community footer links"><h2>Community</h2><ul><li><a href="/community/">Community</a></li><li><a href="/discord/">Discord</a></li><li><a href="https://forms.gle/sFyr1rVeqKAPXhG4A" target="_blank" rel="noopener noreferrer">Volunteer Application</a></li><li><a href="/about/conduct/">Code of Conduct</a></li></ul></nav><nav class="footer-nav-section" aria-label="Organization footer links"><h2>Organization</h2><ul><li><a href="/about/">About</a></li><li><a href="/sponsors/">Sponsors</a></li><li><a href="/blog/">Blog</a></li><li><a href="https://github.com/aivillage" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></nav><nav class="footer-nav-section" aria-label="Utility footer links"><h2>Utility</h2><ul><li><a href="/feed.xml">RSS</a></li><li><a href="https://www.linkedin.com/company/aivillage" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://twitter.com/aivillage_dc" target="_blank" rel="noopener noreferrer">X/Twitter</a></li></ul></nav></div><p class="footer-copyright">&copy; 2026 AI Village. All rights reserved.</p></div></div></footer><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="7d0ff63778db6a377c20fdd2-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4f4a8025967ddc5',t:'MTc5Mjc5OTU1NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

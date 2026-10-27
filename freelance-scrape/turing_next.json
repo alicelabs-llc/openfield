@@ -1,0 +1,4302 @@
+{
+  "props": {
+    "pageProps": {
+      "page": {
+        "id": "ZuKmTRAAACIA1aMr",
+        "uid": "jobs",
+        "url": "/jobs",
+        "type": "job_v2",
+        "href": "https://turing.cdn.prismic.io/api/v2/documents/search?ref=atqwWhEAACwAcMPE&integrationFieldsRef=turing%7E349ccdc5-bf20-4f2b-950d-397ebe6337fb&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22ZuKmTRAAACIA1aMr%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2024-09-12T08:29:06+0000",
+        "last_publication_date": "2025-12-09T00:52:08+0000",
+        "slugs": [
+          "center"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [
+          {
+            "id": "ZvFakBYAACUAcH0j",
+            "type": "job_v2",
+            "lang": "es-ar",
+            "uid": "jobs"
+          },
+          {
+            "id": "ZvFadRYAACQAcHz6",
+            "type": "job_v2",
+            "lang": "pt-br",
+            "uid": "jobs"
+          }
+        ],
+        "data": {
+          "slices": [
+            {
+              "variation": "dark",
+              "version": "initial",
+              "items": [],
+              "primary": {
+                "bg_position": "center",
+                "background_image": {
+                  "dimensions": {
+                    "width": 2880,
+                    "height": 1800
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/turing/aTdykXNYClf9n8cW_jobs-compressed.webp?auto=format,compress",
+                  "id": "aTdykXNYClf9n8cW",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                },
+                "tablet_background_image": {
+                  "dimensions": {
+                    "width": 1920,
+                    "height": 1440
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/turing/aTdtkXNYClf9n8bo_jobs-tablet-compressed.webp?auto=format,compress",
+                  "id": "aTdtkXNYClf9n8bo",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                },
+                "mobile_background_image": {
+                  "dimensions": {
+                    "width": 1536,
+                    "height": 1440
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/turing/aTdtiHNYClf9n8bm_jobs-mobile-compressed.webp?auto=format,compress",
+                  "id": "aTdtiHNYClf9n8bm",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                },
+                "text_theme": "light",
+                "eyebrow_text": null,
+                "heading": "Accelerate your career with AI",
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Work remotely with global teams at leading companies. Solve cutting-edge challenges and advance AI.",
+                    "spans": [],
+                    "direction": "ltr"
+                  }
+                ],
+                "primary_cta_text": "Apply Now",
+                "primary_cta_url": {
+                  "link_type": "Web",
+                  "key": "d522e3bc-1f74-440e-9f82-c69e5093ce25",
+                  "url": "https://developers.turing.com/signup",
+                  "target": ""
+                },
+                "primary_cta_target": "_self",
+                "primary_cta_action": null,
+                "secondary_cta_text": "",
+                "secondary_cta_url": {
+                  "link_type": "Any"
+                },
+                "secondary_cta_target": null,
+                "secondary_cta_action": null,
+                "cta_description": null,
+                "logos": {
+                  "id": "ZvE8ixYAACYAcFIS",
+                  "type": "logos",
+                  "tags": [],
+                  "lang": "en-us",
+                  "slug": "work-with-top-u.s.-companies",
+                  "first_publication_date": "2024-09-23T10:02:32+0000",
+                  "last_publication_date": "2025-10-17T06:53:00+0000",
+                  "uid": "jobspage-logos---092024",
+                  "data": {
+                    "logos": [
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 256,
+                            "height": 128
+                          },
+                          "alt": "pepsi logo",
+                          "copyright": null,
+                          "url": "https://images.prismic.io/turing/ZvSsoLVsGrYSwA1l_Pepsi-300-viz-center-blk.png?auto=format,compress",
+                          "id": "ZvSsoLVsGrYSwA1l",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      },
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 91,
+                            "height": 50
+                          },
+                          "alt": "Disney+ logo",
+                          "copyright": null,
+                          "url": "https://turing.cdn.prismic.io/turing/ZoDoHB5LeNNTwp56_CompanyLogos__Disney_White.svg",
+                          "id": "ZoDoHB5LeNNTwp56",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      },
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 461,
+                            "height": 120
+                          },
+                          "alt": "Anthropic Logo",
+                          "copyright": null,
+                          "url": "https://images.prismic.io/turing/ZoDvDx5LeNNTwp6Z_Anthropic.png?auto=format,compress",
+                          "id": "ZoDvDx5LeNNTwp6Z",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      },
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 454,
+                            "height": 120
+                          },
+                          "alt": "Nvidia Logo",
+                          "copyright": null,
+                          "url": "https://images.prismic.io/turing/ZoDwWh5LeNNTwp6n_Nvidia.png?auto=format,compress",
+                          "id": "ZoDwWh5LeNNTwp6n",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      },
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 401,
+                            "height": 120
+                          },
+                          "alt": "Snowflake Logo",
+                          "copyright": null,
+                          "url": "https://images.prismic.io/turing/ZoDwXB5LeNNTwp6p_Snowflake.png?auto=format,compress",
+                          "id": "ZoDwXB5LeNNTwp6p",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      },
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 123,
+                            "height": 43
+                          },
+                          "alt": "dell logo",
+                          "copyright": null,
+                          "url": "https://turing.cdn.prismic.io/turing/2adc0154-5349-49bf-9b44-a689db546272_dell.svg",
+                          "id": "ZTlj0RAAACcA93bD",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      },
+                      {
+                        "logo": {
+                          "dimensions": {
+                            "width": 155,
+                            "height": 50
+                          },
+                          "alt": "Reddit logo",
+                          "copyright": null,
+                          "url": "https://turing.cdn.prismic.io/turing/ZoDoHh5LeNNTwp58_CompanyLogos__Reddit_White.svg",
+                          "id": "ZoDoHh5LeNNTwp58",
+                          "edit": {
+                            "x": 0,
+                            "y": 0,
+                            "zoom": 1,
+                            "background": "transparent"
+                          }
+                        },
+                        "content": null,
+                        "url": {
+                          "link_type": "Any"
+                        },
+                        "inline_svg": null
+                      }
+                    ],
+                    "title": "Work with top U.S. companies"
+                  },
+                  "link_type": "Document",
+                  "key": "6281ddc3-7f37-4086-add5-8eea1d7760a1",
+                  "isBroken": false
+                },
+                "column_split_size": "50_50",
+                "heading_size": "normal",
+                "trust_pilot_score": {
+                  "dimensions": {
+                    "width": 106,
+                    "height": 16
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://turing.cdn.prismic.io/turing/aPoQeLpReVYa3mW2_trustpilotscore.svg",
+                  "id": "aPoQeLpReVYa3mW2",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                }
+              },
+              "id": "hero$b7845e0d-4f52-42bf-9ef9-6a23e4aa8c3b",
+              "slice_type": "hero",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [
+                {
+                  "icon": {
+                    "dimensions": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOaj3J5xUNkB1wTv_paid_32dp_2E6EDF_FILL0_wght400_GRAD0_opsz40.png?auto=format,compress",
+                    "id": "aOaj3J5xUNkB1wTv",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Enjoy well-paid jobs with top companies",
+                  "description": "Collaborate on high-impact projects with leading companies while earning more for your expertise.",
+                  "link_text": null,
+                  "link": {
+                    "link_type": "Any"
+                  }
+                },
+                {
+                  "icon": {
+                    "dimensions": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvE9vrVsGrYSvqxr_AdvanceCareer-Black1.png?auto=format,compress",
+                    "id": "ZvE9vrVsGrYSvqxr",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Advance your career with AI",
+                  "description": "Enhance your skills faster by working at the forefront of cutting-edge technology.",
+                  "link_text": null,
+                  "link": {
+                    "link_type": "Any"
+                  }
+                },
+                {
+                  "icon": {
+                    "dimensions": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvE9sbVsGrYSvqxj_WorkRemotely-Black1.png?auto=format,compress",
+                    "id": "ZvE9sbVsGrYSvqxj",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Work remotely with global teams",
+                  "description": "Control your schedule, eliminate commutes, and collaborate with diverse teams on impactful projects.",
+                  "link_text": null,
+                  "link": {
+                    "link_type": "Any"
+                  }
+                }
+              ],
+              "primary": {
+                "heading": "Why join Turing?",
+                "background_color": "dark",
+                "icon_placement": "Right",
+                "sub_heading": null,
+                "title_sub_heading_alignment": "center"
+              },
+              "id": "info_display_cards$e0f0aee0-d8b1-44a8-a406-5b8585f9d480",
+              "slice_type": "info_display_cards",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [
+                {
+                  "headshot": {
+                    "dimensions": {
+                      "width": 201,
+                      "height": 201
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvXhR7VsGrYSwDe__PersonaHeadshots_0002_LATAM.webp?auto=format,compress",
+                    "id": "ZvXhR7VsGrYSwDe_",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Software developers",
+                  "description": "Professionals of all skills levels with experience building software applications and proficiency in one or more coding languages.\u00a0",
+                  "cta_text": "Apply now",
+                  "cta_url": "https://developers.turing.com/signup"
+                },
+                {
+                  "headshot": {
+                    "dimensions": {
+                      "width": 201,
+                      "height": 201
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvXhSLVsGrYSwDfA_PersonaHeadshots_0001_AFRICA.webp?auto=format,compress",
+                    "id": "ZvXhSLVsGrYSwDfA",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Data scientists \n& engineers",
+                  "description": "Professionals across skills levels with experience ranging from analyzing large data sets to building and deploying Machine Learning solutions.",
+                  "cta_text": "Apply now",
+                  "cta_url": "https://developers.turing.com/signup"
+                },
+                {
+                  "headshot": {
+                    "dimensions": {
+                      "width": 201,
+                      "height": 201
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvXhS7VsGrYSwDfC_PersonaHeadshots_0000_INDIA.webp?auto=format,compress",
+                    "id": "ZvXhS7VsGrYSwDfC",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Domain experts",
+                  "description": "Professionals across skill levels and business functions including development, operations, marketing, HR, and sales\u2014as well as researchers, PhDs, and industry experts.",
+                  "cta_text": "Apply now",
+                  "cta_url": "https://developers.turing.com/signup"
+                }
+              ],
+              "primary": {
+                "eyebrow_text": "Job opportunities",
+                "heading": "Who are we looking for?",
+                "description": "We\u2019re looking for skilled professionals across a range of expertise who are ready to tackle complex challenges and push the boundaries of AI technology. Find your path to remote, well-paid jobs and make a global impact on technological innovation.",
+                "background_color": "light_blue"
+              },
+              "id": "info_collapse_cards$e02a4f20-a616-44c2-857c-f5069311900c",
+              "slice_type": "info_collapse_cards",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [
+                {
+                  "icon": {
+                    "dimensions": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvE_mrVsGrYSvq2E_coding_skill.png?auto=format,compress",
+                    "id": "ZvE_mrVsGrYSvq2E",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "Application engineering",
+                  "description": "Deploy the world\u2019s most advanced AI systems into real-world applications like copilots, workflow automation, and knowledge bots; and translate advanced research into industry-specific use cases."
+                },
+                {
+                  "icon": {
+                    "dimensions": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvE_u7VsGrYSvq2L_DataManagement.png?auto=format,compress",
+                    "id": "ZvE_u7VsGrYSvq2L",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  },
+                  "heading": "AI advancement",
+                  "description": "Use your industry, technical or academic expertise to help foundational AI companies improve their model\u2019s accuracy and reasoning, deepen  its understanding of complex human intelligence and iteratively enhance the performance of new math algorithms."
+                }
+              ],
+              "primary": {
+                "heading": "What kinds of projects will you work on?",
+                "image_1": {
+                  "dimensions": {
+                    "width": 201,
+                    "height": 201
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/turing/ZvXhR7VsGrYSwDe__PersonaHeadshots_0002_LATAM.webp?auto=format,compress",
+                  "id": "ZvXhR7VsGrYSwDe_",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                },
+                "image_2": {
+                  "dimensions": {
+                    "width": 201,
+                    "height": 201
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/turing/ZvXhSLVsGrYSwDfA_PersonaHeadshots_0001_AFRICA.webp?auto=format,compress",
+                  "id": "ZvXhSLVsGrYSwDfA",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                },
+                "image_3": {
+                  "dimensions": {
+                    "width": 201,
+                    "height": 201
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/turing/ZvXhS7VsGrYSwDfC_PersonaHeadshots_0000_INDIA.webp?auto=format,compress",
+                  "id": "ZvXhS7VsGrYSwDfC",
+                  "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                  }
+                },
+                "background_color": "light_blue"
+              },
+              "id": "info_display_personas$63e4d254-7470-4273-a642-fc0c86b13ae1",
+              "slice_type": "info_display_personas",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "98c8cbc5-cee6-4121-87c0-629eba89ea30",
+                    "url": "https://vimeo.com/1122276168"
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1080
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOan955xUNkB1wVf_thumb-3-.jpg?auto=format,compress",
+                    "id": "aOan955xUNkB1wVf",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                },
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "b7ca5051-602d-4c75-98e9-31dce01bad28",
+                    "url": "https://vimeo.com/1003386292",
+                    "target": ""
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1280,
+                      "height": 720
+                    },
+                    "alt": "Danilo",
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/ZvstnLVsGrYSwLQx_danilo_dev_video-testimonial.jpg?auto=format,compress",
+                    "id": "ZvstnLVsGrYSwLQx",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                },
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "78e4bb7a-2eb2-4d15-9e10-aa936bdc5f55",
+                    "url": "https://vimeo.com/1003386309"
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1080
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOao_J5xUNkB1wV4_thumb-5-.jpg?auto=format,compress",
+                    "id": "aOao_J5xUNkB1wV4",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                },
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "45a593db-af36-4c78-8a63-dcbdfe987986",
+                    "url": "https://vimeo.com/1125583713"
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1080
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOao1J5xUNkB1wVu_thumb-7-.jpg?auto=format,compress",
+                    "id": "aOao1J5xUNkB1wVu",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                },
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "e24c238e-5fac-4772-97a5-94988c46dca1",
+                    "url": "https://vimeo.com/1122663761"
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1080
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOao6p5xUNkB1wV2_thumb-2-.jpg?auto=format,compress",
+                    "id": "aOao6p5xUNkB1wV2",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                },
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "d7cf1e5c-6708-4ca0-b92b-ba8ef441f60a",
+                    "url": "https://vimeo.com/1122272526"
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1080
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOan2p5xUNkB1wVd_thumb-6-.jpg?auto=format,compress",
+                    "id": "aOan2p5xUNkB1wVd",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                },
+                {
+                  "headshot": {},
+                  "name_designation": null,
+                  "quote": null,
+                  "video_url": {
+                    "link_type": "Web",
+                    "key": "feace19c-c1b6-4b17-8484-d2caf5877164",
+                    "url": "https://vimeo.com/1003385934"
+                  },
+                  "video_thumbnail": {
+                    "dimensions": {
+                      "width": 1280,
+                      "height": 720
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://images.prismic.io/turing/aOapQZ5xUNkB1wV7_thumb-8-.jpg?auto=format,compress",
+                    "id": "aOapQZ5xUNkB1wV7",
+                    "edit": {
+                      "x": 0,
+                      "y": 0,
+                      "zoom": 1,
+                      "background": "transparent"
+                    }
+                  }
+                }
+              ],
+              "primary": {
+                "eyebrow_text": "Testimonials",
+                "heading": "Talent thrives at Turing",
+                "description": null,
+                "background_color": "light_blue"
+              },
+              "id": "testimonial_carousel$6a2c05b6-a1bb-4430-80d0-1bf9e5af3ba3",
+              "slice_type": "testimonial_carousel",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [
+                {
+                  "question": "What is Turing?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Turing is an AGI infrastructure company specializing in post-training large language models (LLMs) to enhance advanced reasoning, problem-solving, and cognitive tasks. Founded in 2018, Turing leverages the expertise of its globally distributed technical, business, and research experts to help Fortune 500 companies deploy customized AI solutions that transform operations and accelerate growth. As a leader in the AGI ecosystem, Turing partners with top AI labs and enterprises to deliver cutting-edge innovations in generative AI, making it a critical player in shaping the future of artificial intelligence.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "Why should I join Turing?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Turing opens the door to remote jobs with the world\u2019s top companies, while enabling you to work from anywhere. Our AI-powered platform matches your skills and expertise with roles that align to your career goals. Plus, you\u2019ll have access to competitive pay and ongoing support and resources to help you thrive. Join Turing to work on cutting-edge projects using the latest technology with leading global companies.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "How does Turing ensure the right fit for my skills?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Turing uses advanced AI matching technology to ensure that your skills and experience are perfectly aligned with the roles we offer. We carefully assess your technical abilities and professional background to match you with opportunities that maximize your potential and fit your career goals, whether you\u2019re working on AI advancement or application engineering.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "How do taxes work with Turing?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Taxes depend on your country of residence. As an independent contractor, you\u2019ll be responsible for managing your tax obligations in accordance with local laws. Turing doesn\u2019t provide VISAs, but we offer resources and guidance to help you navigate tax requirements, but it's recommended to consult with a tax professional to ensure compliance.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "What level English is necessary to get a job?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "A strong command of English is essential for working at Turing, as it\u2019s the primary language used for communication with global teams and U.S.-based clients. You should be proficient in both written and spoken English to effectively collaborate and contribute to projects.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "How does Turing go beyond traditional methods for talent?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Turing goes beyond traditional methods by using AI-powered matching to connect you with opportunities that align perfectly with your skills and career goals. We focus on remote roles that allow you to work with global teams on groundbreaking AI projects. Additionally, Turing provides continuous support and access to a network of top professionals, setting you up for long-term success.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "What level of experience is needed to qualify for opportunities?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Turing caters to professionals with varying levels of technical, business, and research experience. Whether you\u2019re an experienced software development, data scientist, engineer, business specialist, or PhD, Turing has roles that fit your expertise. The level of experience required will vary depending on the specific role.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "What is the application process?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Find well-paid remote roles at leading U.S. companies in 4 easy steps. First create your profile. Let us get to know you and optimize your profile by providing your work history, skills, rate, and more. Once complete, start receiving personalized job recommendations for roles at U.S. companies that match your expertise and career interests. Or apply to available roles based on your skills. Complete our skill assessments and live interviews matched to your experience. Then start working with one of our high-profile clients on cutting-edge projects while enjoying seamless onboarding and continuous support from Turing.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "What type of remote roles does Turing offer?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Turing offers a wide range of remote roles tailored to software developers, data scientists, engineers, and business specialists. You can work on AI advancement, which involves improving and evolving AI technologies, or on application engineering, where you'll implement these technologies into real-world applications. These roles are available with leading U.S. companies, ensuring you\u2019re part of a high-impact, global team.",
+                      "spans": [],
+                      "direction": "ltr"
+                    }
+                  ]
+                },
+                {
+                  "question": "How can I get started?",
+                  "answer": [
+                    {
+                      "type": "paragraph",
+                      "text": "Getting started is easy. Select apply now to start building your profile and begin receiving personalized job recommendations.\u00a0",
+                      "spans": [
+                        {
+                          "start": 32,
+                          "end": 41,
+                          "type": "hyperlink",
+                          "data": {
+                            "link_type": "Web",
+                            "url": "https://developers.turing.com/signup",
+                            "target": "_self"
+                          }
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ],
+              "primary": {
+                "heading": "Frequently asked questions",
+                "sub_heading": "Find answers to common questions about finding job opportunities at Turing",
+                "background_color": "dark",
+                "enable_faq_schema": false
+              },
+              "id": "faq$6fcf0616-4cae-4e05-b39b-07390a28fcda",
+              "slice_type": "faq",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [],
+              "primary": {
+                "full_bleed_background_image": {},
+                "header": "Ready to accelerate your career with AI?",
+                "description": [],
+                "cta_text": "Apply Now",
+                "cta_url": {
+                  "link_type": "Web",
+                  "key": "ab5c389b-fa92-4c17-819e-bb8e49060daf",
+                  "url": "https://developers.turing.com/signup",
+                  "target": ""
+                },
+                "cta_target": "_self",
+                "cta_type": "button",
+                "cta_action": "URL",
+                "cta_variant": "Primary",
+                "inline_image": {},
+                "cta_block": {
+                  "id": "Z7R0tBIAACAA3Qek",
+                  "type": "cta_block",
+                  "tags": [
+                    "Bottom-CTA-Slice-CTA-Block"
+                  ],
+                  "lang": "en-us",
+                  "slug": "want-to-accelerate-your-business-with-ai",
+                  "first_publication_date": "2025-02-18T11:53:40+0000",
+                  "last_publication_date": "2025-02-18T12:13:30+0000",
+                  "uid": "bottom-cta-block",
+                  "data": {
+                    "description": "Talk to one of our solutions architects and start innovating with AI-powered talent.",
+                    "title": "Want to accelerate your business with AI?",
+                    "cta_text": "Get Started",
+                    "cta_link": {
+                      "link_type": "Web",
+                      "key": "e07e4782-691c-4f0e-9207-8c9c9bd9c95a",
+                      "url": "/get-started"
+                    }
+                  },
+                  "link_type": "Document",
+                  "key": "64e0c62b-fa56-4b1e-b0fe-168f8d654d8d",
+                  "isBroken": false
+                },
+                "cta_block_2": {
+                  "link_type": "Any"
+                }
+              },
+              "id": "bottom_cta$fa5e91e4-55df-4375-9ae0-ea3183304bf2",
+              "slice_type": "bottom_cta",
+              "slice_label": null
+            },
+            {
+              "variation": "default",
+              "version": "initial",
+              "items": [],
+              "primary": {
+                "heading": "Equal Opportunity Policy",
+                "description": "Turing is an equal opportunity employer. Turing prohibits discrimination and harassment of any type and affords equal employment opportunities to employees and applicants without regard to race, color, religion, sex, sexual orientation, gender identity or expression, age, disability status, protected veteran status, or any other characteristic protected by law.",
+                "background_color": "dark",
+                "alignment": "split_50_50",
+                "font_size_heading": "h2",
+                "font_size_description": "14",
+                "padding_top_bottom": "Medium"
+              },
+              "id": "heading$15c2beb2-9e7b-4035-a695-9c2d42e5ed10",
+              "slice_type": "heading",
+              "slice_label": null
+            }
+          ],
+          "meta_description": "Work remotely with leading U.S. companies to solve cutting-edge challenges and advance AI. Find your path to remote, well-paid jobs and make a global impact on technological innovation.",
+          "meta_image": {},
+          "meta_title": "Your path to remote, well-paid jobs at leading U.S. companies l Turing",
+          "meta_keywords": null,
+          "canonical_url": {
+            "link_type": "Web",
+            "key": "5ffd2d04-1bf8-4380-a1d2-7f0885a81cf2",
+            "url": "https://www.turing.com/jobs"
+          },
+          "no_index": false,
+          "schema_name": null,
+          "schema_description": null,
+          "rating": [
+            {
+              "rating_value": null,
+              "rating_count": null
+            }
+          ],
+          "product_rating": [
+            {
+              "rating_value": null,
+              "rating_count": null
+            }
+          ],
+          "review": [
+            {
+              "rating_value": null
+            }
+          ],
+          "j_title": null,
+          "j_description": null,
+          "j_responsibilities": null,
+          "j_experience_months": null,
+          "j_experience_requirements": null,
+          "j_required_skills": null,
+          "j_enable_education_requirements": false,
+          "j_applicant_location": [
+            {
+              "j_applicant_location": null
+            }
+          ],
+          "j_job_location": [
+            {
+              "street_address": null,
+              "address_locality": null,
+              "address_region": null,
+              "postal_code": null,
+              "address_country": null
+            }
+          ],
+          "j_generic": {
+            "link_type": "Document"
+          }
+        }
+      },
+      "__lang": "en",
+      "__namespaces": {
+        "common": {
+          "header": {
+            "login": "Login",
+            "profile": "Go to Profile",
+            "customer": {
+              "title": "Client",
+              "login": "Login",
+              "call": "Book a Call"
+            },
+            "developer": {
+              "title": "Developer",
+              "login": "Login",
+              "register": "Create an Account"
+            }
+          },
+          "watch-video": "Watch Video",
+          "read-more": "Read more",
+          "read-less": "Read less",
+          "read-article": "Read article",
+          "see-more": "See more",
+          "out-of": "out of",
+          "apply-for-this-job": "Apply for this job",
+          "job-description": "Job description",
+          "job-responsibilities": "Job responsibilities",
+          "minimal-requirements": "Minimum requirements",
+          "preferred-skills": "Preferred skills",
+          "share-this-job": "Share this job",
+          "share-this": "Share this",
+          "intrested-in-this-job": "Interested in this job?",
+          "apply-to-turing-today": "Apply to Turing today.",
+          "apply-now": "Apply now",
+          "search-placeholder": "Search skills, roles ...",
+          "view-all-latest": "View all latest developer jobs",
+          "view-full-job-description": "View full job description",
+          "technologies": "Technologies",
+          "company-size": "Company size",
+          "industry": "Industry",
+          "home": "Home",
+          "remote-developer-jobs": "Remote Developer Jobs",
+          "developer-video-title": "Developers <heart></heart> Turing",
+          "developer_story": {
+            "show_less": "Show less stories",
+            "show_more": "Show more stories",
+            "apply_text": "Apply for jobs",
+            "read_story": "Read story"
+          },
+          "promo": {
+            "developer": {
+              "title": "Why join Turing?",
+              "watch_video": "Watch Video",
+              "step1": {
+                "name": "Elite US Jobs",
+                "description": "Turing\u2019s developers earn better than market pay in most countries, working with top US companies."
+              },
+              "step2": {
+                "name": "Career Growth",
+                "description": "Grow rapidly by working on challenging technical and business problems on the latest technologies."
+              },
+              "step3": {
+                "name": "Developer success support",
+                "description": "While matched, enjoy 24/7 developer success support."
+              }
+            },
+            "customer": {
+              "title": "What Turing offers",
+              "watch_video": "Watch Video",
+              "step1": {
+                "name": "Intelligent vetting",
+                "description": "Developers vetted over 5+ hours of rigorous tests and interviews."
+              },
+              "step2": {
+                "name": "Fast hiring",
+                "description": "Hire experienced developers in a matter of 3 days."
+              },
+              "step3": {
+                "name": "Remote work made easy",
+                "description": "Timezone-matched for easy communication."
+              }
+            }
+          },
+          "faq_section": {
+            "title": "Frequently Asked Questions",
+            "view_more": "View more FAQs"
+          },
+          "footer_cta": {
+            "developer": {
+              "title": "Work full-time at top U.S. companies",
+              "subtitle": "Create your profile, pass Turing Tests and get job offers as early as 2 weeks.",
+              "cta": "Apply now"
+            },
+            "customer": {
+              "title": "Hire remote developers",
+              "subtitle": "Tell us the skills you need and we'll find the best developer for you in days, not weeks.",
+              "cta": "Hire Developers"
+            }
+          },
+          "gradient_box": {
+            "box1": {
+              "title": "Press",
+              "desc": "What's up with Turing?\nGet the latest news about us here."
+            },
+            "box2": {
+              "title": "Blog",
+              "desc": "Know more about remote work.<br></br>Checkout our blog here."
+            },
+            "box3": {
+              "title": "Contact",
+              "desc": "Have any questions?<br></br>We'd love to hear from you."
+            },
+            "box4": {
+              "title": "Careers",
+              "desc": "Explore exciting opportunities and work<br></br>with the best minds from Silicon Valley."
+            }
+          },
+          "social_card": {
+            "twitter": "Turing on Twitter",
+            "linkedin": "Turing on Linkedin",
+            "facebook": "Turing on Facebook",
+            "instagram": "Turing on Instagram",
+            "cta": "Follow us"
+          },
+          "trust": {
+            "technology": "Technology",
+            "fintech": "FinTech",
+            "ecommerce": "E-commerce",
+            "education": "Education",
+            "healthcare": "Healthcare",
+            "marketing_dvertising": "Marketing & Advertising",
+            "consulting": "Consulting"
+          },
+          "view_bio": "View bio",
+          "continents": {
+            "global": "Global",
+            "europe": "Europe",
+            "americas": "Americas",
+            "africa": "Africa",
+            "asia": "Asia"
+          },
+          "livejobs_popup": {
+            "title": "Get access to 100s of jobs with just one easy process",
+            "step1": "Complete your profile",
+            "step2": "Get Matched",
+            "step3": "Start working"
+          },
+          "remote_job_card": {
+            "preTitle": "FULL-TIME REMOTE JOB"
+          },
+          "hire_developers": "Hire Developers",
+          "hiring-developers": "I'm hiring developers",
+          "looking-for-jobs": "I'm looking for jobs",
+          "last-updated-on": "Last updated on",
+          "table-of-contents": "Table of contents",
+          "view-answer": "View Answer",
+          "hide-answer": "Hide Answer",
+          "check-more-interview-questions": "Check out more interview questions",
+          "experience": "Experience",
+          "availability": "Availability",
+          "timeline_steps_cards": {
+            "go_to_step": "Go to step {{step}}",
+            "steps_region": "Process steps"
+          },
+          "rl_cards": {
+            "pytest_status": "$ pytest \u00b7 42 passed"
+          },
+          "two_card_loop": {
+            "close_the_loop_line1": "Close the <accent>loop</accent> between",
+            "close_the_loop_line2": "Frontier research and",
+            "close_the_loop_line3": "Enterprise deployment",
+            "loop_active": "Loop active",
+            "explore": "Explore {{title}}",
+            "diagram_aria": "Frontier AI and Enterprise AI connected in a continuous loop: close the loop between frontier research and enterprise deployment"
+          },
+          "frontier_ai": {
+            "items_region": "Frontier AI focus areas"
+          },
+          "why_turing": {
+            "embedded_pod": "EMBEDDED POD",
+            "your_team": "YOUR TEAM",
+            "your_stack": "YOUR STACK",
+            "agents": "AGENTS",
+            "control_plane": "CONTROL PLANE",
+            "any_model": "ANY MODEL \u00b7 ANY CLOUD",
+            "timeline_aria": "Embedded pod connecting your team and your stack",
+            "bars_aria": "Agents, control plane, and any model on any cloud architecture diagram"
+          }
+        },
+        "header": {
+          "theme": "Dark",
+          "logo": {
+            "dimensions": {
+              "width": 153,
+              "height": 24
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/turing/aTNYj3NYClf9n4Fn_Turing_Logo_Full_White-24-no_margin.png?auto=format,compress",
+            "id": "aTNYj3NYClf9n4Fn",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          },
+          "items": [
+            {
+              "text": "Train AI",
+              "link": {
+                "link_type": "Any"
+              },
+              "drop_down_type": "Full Width",
+              "alignment_type": "Navigation",
+              "resource_title": null,
+              "resource_read_more_text": null,
+              "see_all_resources_text": null,
+              "see_all_resources_link": null,
+              "resource_post_link": {
+                "link_type": "Any"
+              },
+              "type": "Menu",
+              "cta_type": null,
+              "cta_link": {
+                "link_type": "Any"
+              },
+              "cta_variant": "Primary",
+              "navigation_list": {
+                "id": "aOdI5hEAACIAWnME",
+                "type": "header_dropdown_links",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "disciplines",
+                "first_publication_date": "2025-12-08T05:54:09+0000",
+                "last_publication_date": "2025-12-08T05:54:09+0000",
+                "uid": "nav-menu-train-ai",
+                "data": {
+                  "navigation_links": [
+                    {
+                      "link_to_document": {
+                        "id": "aOdKNxEAACMAWnTm",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "coding",
+                        "first_publication_date": "2025-10-09T05:42:01+0000",
+                        "last_publication_date": "2026-06-29T07:46:24+0000",
+                        "uid": "nav-list-ta2-disciplines",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Coding",
+                              "icon": {},
+                              "link_target": null,
+                              "description": "Datasets and evaluation for real-world programming.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "f823dd93-ed57-43cd-87bc-653997ab0d57",
+                                "url": "/advance/coding"
+                              }
+                            },
+                            {
+                              "label": "STEM",
+                              "icon": {},
+                              "link_target": null,
+                              "description": "Physics, chemistry, biology, and math datasets.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "fd5bea74-897c-4fd7-9a83-6baac530310c",
+                                "url": "/advance/stem"
+                              }
+                            },
+                            {
+                              "label": "Domain-specific",
+                              "icon": {},
+                              "link_target": null,
+                              "description": "Finance, legal, medical, and economics datasets.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "b2e17c65-b07b-48d0-bde7-b6efb563cacb",
+                                "url": "/advance/domain"
+                              }
+                            },
+                            {
+                              "label": "What is Turing AGI Advancement",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": "Power richer data generation and model gains with proprietary data and benchmarks.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "19365191-b12a-4c87-9abd-ea881c031548",
+                                "url": "/advance"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "2da7a81b-1e70-46e3-8bd5-222be568477f",
+                        "isBroken": false
+                      },
+                      "item_text": "Disciplines"
+                    },
+                    {
+                      "link_to_document": {
+                        "id": "aTNWHxAAACUAAr42",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "datasets",
+                        "first_publication_date": "2025-12-08T05:54:09+0000",
+                        "last_publication_date": "2026-01-14T03:55:00+0000",
+                        "uid": "nav-list-ta2-capabilities",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Datasets",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "f823dd93-ed57-43cd-87bc-653997ab0d57",
+                                "url": "/advance/datasets"
+                              }
+                            },
+                            {
+                              "label": "RL Environments",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "fd5bea74-897c-4fd7-9a83-6baac530310c",
+                                "url": "/advance/rl-gyms"
+                              }
+                            },
+                            {
+                              "label": "Safety",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "56ef0913-75a2-440a-8b0c-b162b582f42f",
+                                "url": "/advance/safety"
+                              }
+                            },
+                            {
+                              "label": "SWE-Bench++",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "c148dfc2-dab0-4828-b82c-529d5c6ae513",
+                                "url": "https://research.turing.com/swebench"
+                              }
+                            },
+                            {
+                              "label": "Code Review Bench",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "19365191-b12a-4c87-9abd-ea881c031548",
+                                "url": "https://research.turing.com/crave"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "f42c4b63-5285-4685-8b85-52ed2723c459",
+                        "isBroken": false
+                      },
+                      "item_text": "Capabilities"
+                    },
+                    {
+                      "link_to_document": {
+                        "id": "aTNXeBAAACQAAsAd",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "research",
+                        "first_publication_date": "2025-12-05T22:08:43+0000",
+                        "last_publication_date": "2025-12-05T22:08:43+0000",
+                        "uid": "nav-list-ta2-research",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Research",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "c148dfc2-dab0-4828-b82c-529d5c6ae513",
+                                "url": "https://research.turing.com/"
+                              }
+                            },
+                            {
+                              "label": "Contact a Researcher",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "19365191-b12a-4c87-9abd-ea881c031548",
+                                "url": "/advance/contact"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "82ca3e0a-4381-40bf-90a0-19bda53818b1",
+                        "isBroken": false
+                      },
+                      "item_text": "Research"
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "3d4ac331-651d-432a-b0e4-15dcade431ed",
+                "isBroken": false
+              }
+            },
+            {
+              "text": "Build AI",
+              "link": {
+                "link_type": "Any"
+              },
+              "drop_down_type": "Full Width",
+              "alignment_type": "Navigation",
+              "resource_title": null,
+              "resource_read_more_text": null,
+              "see_all_resources_text": null,
+              "see_all_resources_link": null,
+              "resource_post_link": {
+                "link_type": "Any"
+              },
+              "type": "Menu",
+              "cta_type": null,
+              "cta_link": {
+                "link_type": "Any"
+              },
+              "cta_variant": "Primary",
+              "navigation_list": {
+                "id": "aOdJqhEAACAAWnQZ",
+                "type": "header_dropdown_links",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "deploy-proprietary-ai",
+                "first_publication_date": "2025-12-08T05:54:09+0000",
+                "last_publication_date": "2025-12-08T05:54:09+0000",
+                "uid": "nav-menu-deploy-ai",
+                "data": {
+                  "navigation_links": [
+                    {
+                      "link_to_document": {
+                        "id": "Ze_NZxIAANMKAbt4",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "deploy-ai-systems",
+                        "first_publication_date": "2024-03-12T03:35:07+0000",
+                        "last_publication_date": "2025-12-08T05:54:08+0000",
+                        "uid": "nav-list-ti-deploy-ai",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Deploy AI Systems",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": "Go from pilot to production with scalable, KPI-aligned systems.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "480aeb9a-2d5a-4a92-bf27-c75f9e779727",
+                                "url": "/intelligence/build"
+                              }
+                            },
+                            {
+                              "label": "Deploy AI Talent",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": "Accelerate delivery with AI-native pods integrated into your team and stack.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "ef35238d-058f-413e-b50e-e08c9b000cba",
+                                "url": "/intelligence/talent"
+                              }
+                            },
+                            {
+                              "label": "Develop AI Strategy",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": "Align AI strategy to business outcomes and build a roadmap you can deliver on.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "50c08732-21f5-4d21-8036-1392d88406cd",
+                                "url": "/intelligence/advise"
+                              }
+                            },
+                            {
+                              "label": "What is Turing Intelligence",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": "AI strategy, talent, and systems to move from roadmap to real-world outcomes",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "d908c30d-cc3a-44c1-a8ae-0d178ba1c19f",
+                                "url": "/intelligence"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "c0f23004-072c-4d07-950b-fb018ae01f83",
+                        "isBroken": false
+                      },
+                      "item_text": "Deploy Proprietary AI"
+                    },
+                    {
+                      "link_to_document": {
+                        "id": "aTNclBAAACQAAsdP",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "enterprise-insights",
+                        "first_publication_date": "2025-12-08T05:54:09+0000",
+                        "last_publication_date": "2025-12-08T05:54:09+0000",
+                        "uid": "nav-list-ti-resources",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Enterprise Insights",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "df3f12a5-edf5-45a5-9222-703ab976b8b1",
+                                "url": "/resources"
+                              }
+                            },
+                            {
+                              "label": "Case Studies",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "15aabe3e-b622-4a62-b3e6-f4879d5083c0",
+                                "url": "/case-study"
+                              }
+                            },
+                            {
+                              "label": "Talk to an Expert",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "c249b4a1-53c0-4042-88e6-ea78176286ed",
+                                "url": "/intelligence/contact"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "2dce6ba7-742e-4fad-bbf6-2df4820ae8c8",
+                        "isBroken": false
+                      },
+                      "item_text": "Resources"
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "51d65bff-8728-4a96-952f-c64f8898fa62",
+                "isBroken": false
+              }
+            },
+            {
+              "text": "Hire AI Talent",
+              "link": {
+                "link_type": "Any"
+              },
+              "drop_down_type": "Content Fit",
+              "alignment_type": "Navigation",
+              "resource_title": null,
+              "resource_read_more_text": null,
+              "see_all_resources_text": null,
+              "see_all_resources_link": null,
+              "resource_post_link": {
+                "link_type": "Any"
+              },
+              "type": "Menu",
+              "cta_type": null,
+              "cta_link": {
+                "link_type": "Any"
+              },
+              "cta_variant": "Primary",
+              "navigation_list": {
+                "id": "aOdJ8BEAACMAWnR_",
+                "type": "header_dropdown_links",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "nav-menu-hire-talent",
+                "first_publication_date": "2025-12-08T05:54:07+0000",
+                "last_publication_date": "2025-12-08T05:54:07+0000",
+                "uid": "nav-menu-hire-talent",
+                "data": {
+                  "navigation_links": [
+                    {
+                      "link_to_document": {
+                        "id": "aTNidxAAACIAAs-Q",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "hire-ai-talent",
+                        "first_publication_date": "2025-12-08T05:54:08+0000",
+                        "last_publication_date": "2026-03-03T17:40:59+0000",
+                        "uid": "nav-list-talent-hire",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Hire AI talent",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": "Accelerate delivery with AI-native pods integrated into your team and stack.",
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "ef35238d-058f-413e-b50e-e08c9b000cba",
+                                "url": "/intelligence/talent"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "85c58a4a-2ddd-40fb-b677-8d6d13777419",
+                        "isBroken": false
+                      },
+                      "item_text": null
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "0ac13b41-7f1f-495a-82ee-f9956388fc85",
+                "isBroken": false
+              }
+            },
+            {
+              "text": "Research",
+              "link": {
+                "link_type": "Web",
+                "key": "bbc7b1cc-1daa-4dcc-b8f8-62eca9701193",
+                "url": "https://research.turing.com"
+              },
+              "drop_down_type": null,
+              "alignment_type": "Navigation",
+              "resource_title": "",
+              "resource_read_more_text": null,
+              "see_all_resources_text": null,
+              "see_all_resources_link": null,
+              "resource_post_link": {
+                "link_type": "Any"
+              },
+              "type": "Link",
+              "cta_type": "None",
+              "cta_link": {
+                "link_type": "Any"
+              },
+              "cta_variant": "Primary",
+              "navigation_list": {
+                "id": "aMkYrBAAACMAAo6m",
+                "type": "header_dropdown_links",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "company",
+                "first_publication_date": "2025-09-16T07:58:41+0000",
+                "last_publication_date": "2025-12-08T05:54:07+0000",
+                "uid": "company",
+                "data": {
+                  "navigation_links": [
+                    {
+                      "link_to_document": {
+                        "id": "aTNkqxAAACQAAtIz",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "about-us",
+                        "first_publication_date": "2025-12-05T23:03:56+0000",
+                        "last_publication_date": "2025-12-05T23:03:56+0000",
+                        "uid": "nav-list-company",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "About Us",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "c90d1b69-c14d-4316-a351-34f5b5f47953",
+                                "url": "/company"
+                              }
+                            },
+                            {
+                              "label": "Careers",
+                              "icon": {},
+                              "link_target": "_blank",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "a6c9eb65-753f-4cbd-abc0-1dcf05086fcb",
+                                "url": "https://careers.turing.com"
+                              }
+                            },
+                            {
+                              "label": "Contact Us",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Web",
+                                "key": "7a25dd4f-1012-4df0-94d9-80cf6101f367",
+                                "url": "/contact-us"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "7d2be45b-c780-42d3-a647-021e8ddb017f",
+                        "isBroken": false
+                      },
+                      "item_text": null
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "36e5e2a7-3278-4841-8972-c17cbc3d0cf2",
+                "isBroken": false
+              }
+            },
+            {
+              "text": "Join Talent Network",
+              "link": {
+                "link_type": "Web",
+                "key": "adb8fd3d-64aa-4b2f-b821-4b693909554f",
+                "url": "https://turing.com/talent"
+              },
+              "drop_down_type": null,
+              "alignment_type": "CTA",
+              "resource_title": null,
+              "resource_read_more_text": null,
+              "see_all_resources_text": null,
+              "see_all_resources_link": null,
+              "resource_post_link": {
+                "link_type": "Any"
+              },
+              "type": "Link",
+              "cta_type": "None",
+              "cta_link": {
+                "link_type": "Any"
+              },
+              "cta_variant": "Primary",
+              "navigation_list": {
+                "link_type": "Any"
+              }
+            }
+          ]
+        },
+        "header_v3": {
+          "logo": {
+            "dimensions": {
+              "width": 796,
+              "height": 125
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://turing.cdn.prismic.io/turing/iiiDLzHp8RDqpk5A_turing_light.svg",
+            "id": "iiiDLzHp8RDqpk5A",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          },
+          "navigation": [
+            {
+              "child_type": "group",
+              "title": "Frontier AI",
+              "nav_link": {
+                "id": "amHtuBEAACsAHB_z",
+                "type": "page_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "why-turing",
+                "first_publication_date": "2026-07-23T14:41:05+0000",
+                "last_publication_date": "2026-10-16T22:08:45+0000",
+                "uid": "frontier-ai",
+                "link_type": "Document",
+                "key": "f06ea17c-d239-4f56-8a92-7d3fb64a742c",
+                "isBroken": false
+              },
+              "menu": {
+                "id": "amISVBEAACgAHGU6",
+                "type": "header_menu_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T13:12:10+0000",
+                "last_publication_date": "2026-07-24T00:57:44+0000",
+                "uid": "frontier-ai-dropdown-menu",
+                "data": {
+                  "items": [
+                    {
+                      "type": "single",
+                      "content": null,
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amK4JxEAACoAHXgv",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "frontier-ai",
+                        "first_publication_date": "2026-07-24T00:57:06+0000",
+                        "last_publication_date": "2026-07-29T08:35:17+0000",
+                        "uid": "navlinks-v3-frontier-ai-single",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Frontier AI",
+                              "description": "Improve frontier models",
+                              "link": {
+                                "id": "amHtuBEAACsAHB_z",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "why-turing",
+                                "first_publication_date": "2026-07-23T14:41:05+0000",
+                                "last_publication_date": "2026-10-16T22:08:45+0000",
+                                "uid": "frontier-ai",
+                                "link_type": "Document",
+                                "key": "5491b2b1-cfd4-418f-8205-93865bb7e2ec",
+                                "isBroken": false
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "41545519-b981-475f-96ff-d57cda451b38",
+                        "isBroken": false
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "content": "DOMAIN",
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amIRcREAACsAHGOa",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "software-engineering",
+                        "first_publication_date": "2026-07-23T13:04:55+0000",
+                        "last_publication_date": "2026-07-29T08:36:11+0000",
+                        "uid": "frontier-ai-domain-dropdown-links",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Software Engineering",
+                              "description": "End-to-end SDLC tasks",
+                              "link": {
+                                "id": "amHu8xEAACsAHCIt",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "real-engineering-work-not-just-coding-puzzles",
+                                "first_publication_date": "2026-07-23T14:41:07+0000",
+                                "last_publication_date": "2026-09-16T17:17:02+0000",
+                                "uid": "frontier-ai__software-engineering",
+                                "link_type": "Document",
+                                "key": "da39179c-f6f8-48ed-bebd-f9d83aece11b",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Enterprise Knowledge Work",
+                              "description": "Long-horizon industry workflows",
+                              "link": {
+                                "id": "amHvEhEAACcAHCJs",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "domain-specific-datasets",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-09-16T17:17:39+0000",
+                                "uid": "frontier-ai__enterprise-knowledge-work",
+                                "link_type": "Document",
+                                "key": "f0bc4230-babb-4851-90e9-1cf7c79b894c",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Frontier STEM",
+                              "description": "Scientific reasoning problems",
+                              "link": {
+                                "id": "amHvQxEAACoAHCLM",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "stem-reasoning-problems",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-10-08T21:00:05+0000",
+                                "uid": "frontier-ai__stem",
+                                "link_type": "Document",
+                                "key": "b0e63e2e-2a78-4486-a338-2d789c729b71",
+                                "isBroken": false
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "8871b811-f458-4185-8f70-7b8a4804cdd5",
+                        "isBroken": false
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "content": "CAPABILITY",
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amIS2xEAACgAHGYc",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "off-the-shelf-datasets",
+                        "first_publication_date": "2026-07-23T13:11:41+0000",
+                        "last_publication_date": "2026-07-29T20:47:31+0000",
+                        "uid": "frontier-ai-capability-dropdown-links",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Off-The-Shelf Datasets",
+                              "description": "Expert-built for hillclimbing",
+                              "link": {
+                                "id": "amHuxBEAAC0AHCHY",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "trusted-by-the-industry",
+                                "first_publication_date": "2026-07-23T14:41:07+0000",
+                                "last_publication_date": "2026-09-16T17:18:15+0000",
+                                "uid": "frontier-ai__datasets",
+                                "link_type": "Document",
+                                "key": "b6f16acf-343e-41c5-8c4b-ade266f4ab06",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "RL Environments",
+                              "description": "MCP and computer-use",
+                              "link": {
+                                "id": "amHvLREAACoAHCKh",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "built-for-frontier-standards",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-09-16T17:19:18+0000",
+                                "uid": "frontier-ai__rl-environments",
+                                "link_type": "Document",
+                                "key": "25718e8f-a371-478c-874a-e6659af978a5",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Experts",
+                              "description": "PhD-level across domains",
+                              "link": {
+                                "id": "amHvWxEAAC0AHCL5",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "every-discipline-frontier-research-needs",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-09-16T17:18:47+0000",
+                                "uid": "frontier-ai__experts",
+                                "link_type": "Document",
+                                "key": "0df579cc-33a8-40cc-922e-1219608a9b88",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Research",
+                              "description": "Benchmarks & experimental datasets",
+                              "link": {
+                                "id": "amHuOxEAAC4AHCDi",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "research",
+                                "first_publication_date": "2026-07-23T14:40:08+0000",
+                                "last_publication_date": "2026-10-14T22:13:33+0000",
+                                "uid": "research-v3",
+                                "link_type": "Document",
+                                "key": "14bbd51d-5c10-40e2-9dc5-b3b156f1d11d",
+                                "isBroken": false
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "903a45bb-d395-41ba-8dc8-6e71097adb58",
+                        "isBroken": false
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "145af561-a4fc-40b9-8094-edbfb8736166",
+                "isBroken": false
+              }
+            },
+            {
+              "child_type": "single",
+              "title": "Enterprise AI",
+              "nav_link": {
+                "id": "amHt9hEAACwAHCBl",
+                "type": "page_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "enterprise-ai",
+                "first_publication_date": "2026-07-23T14:41:05+0000",
+                "last_publication_date": "2026-10-18T22:41:45+0000",
+                "uid": "enterprise-ai",
+                "link_type": "Document",
+                "key": "8effcb25-128d-459c-8cc4-5b0fc665d9bc",
+                "isBroken": false
+              },
+              "menu": {
+                "link_type": "Document"
+              }
+            },
+            {
+              "child_type": "single",
+              "title": "Research",
+              "nav_link": {
+                "id": "amHuOxEAAC4AHCDi",
+                "type": "page_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "research",
+                "first_publication_date": "2026-07-23T14:40:08+0000",
+                "last_publication_date": "2026-10-14T22:13:33+0000",
+                "uid": "research-v3",
+                "link_type": "Document",
+                "key": "75861eef-586a-435e-b7be-f34cff159152",
+                "isBroken": false
+              },
+              "menu": {
+                "link_type": "Document"
+              }
+            },
+            {
+              "child_type": "group",
+              "title": "Resources",
+              "nav_link": {
+                "link_type": "Any"
+              },
+              "menu": {
+                "id": "amITyBEAACgAHGhG",
+                "type": "header_menu_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "group",
+                "first_publication_date": "2026-07-23T13:15:05+0000",
+                "last_publication_date": "2026-07-24T00:12:45+0000",
+                "uid": "dropdown-resources",
+                "data": {
+                  "items": [
+                    {
+                      "type": "group",
+                      "content": null,
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amKtUREAAC0AHWip",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "blog",
+                        "first_publication_date": "2026-07-24T00:12:11+0000",
+                        "last_publication_date": "2026-07-29T17:31:06+0000",
+                        "uid": "navlinks-v3-resources",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Blog",
+                              "description": "Dive deep into latest research",
+                              "link": {
+                                "id": "ZkXibxEAACgA14Rt",
+                                "type": "page_v2",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "turing-blog",
+                                "first_publication_date": "2024-05-16T10:39:46+0000",
+                                "last_publication_date": "2026-01-19T10:54:08+0000",
+                                "uid": "blog-home",
+                                "link_type": "Document",
+                                "key": "967533d6-88e7-4dc9-8f62-f810fd7244c3",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Case Studies",
+                              "description": "Customer results",
+                              "link": {
+                                "link_type": "Web",
+                                "key": "02be9598-f8e8-48dc-84c5-4b6431ead785",
+                                "url": "https://turing.com/case-study"
+                              }
+                            },
+                            {
+                              "content": "Articles",
+                              "description": "Trending topics in AI",
+                              "link": {
+                                "id": "Z44HRRAAACIAX8GP",
+                                "type": "page_v2",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "resource-hub",
+                                "first_publication_date": "2025-01-20T08:32:20+0000",
+                                "last_publication_date": "2026-02-26T03:26:58+0000",
+                                "uid": "resources-home",
+                                "link_type": "Document",
+                                "key": "6a06e041-41f8-4e3a-a85d-721555d22335",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "News",
+                              "description": "Latest from Turing",
+                              "link": {
+                                "id": "ZjC37xIAAFQLBrMh",
+                                "type": "page_v2",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "newsroom",
+                                "first_publication_date": "2024-04-30T09:20:50+0000",
+                                "last_publication_date": "2026-09-24T15:32:28+0000",
+                                "uid": "press",
+                                "link_type": "Document",
+                                "key": "6c829659-08f0-4be2-a056-e2e971747b15",
+                                "isBroken": false
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "88b64d51-3ba3-4d9a-a0c9-779b00a334bc",
+                        "isBroken": false
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "b4624e03-9491-43e8-9b49-186516be40fc",
+                "isBroken": false
+              }
+            },
+            {
+              "child_type": "group",
+              "title": "Experts",
+              "nav_link": {
+                "link_type": "Any"
+              },
+              "menu": {
+                "id": "amKqYxEAACkAHWSB",
+                "type": "header_menu_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "group",
+                "first_publication_date": "2026-07-23T23:59:45+0000",
+                "last_publication_date": "2026-07-24T00:15:24+0000",
+                "uid": "dropmenu-v3-experts",
+                "data": {
+                  "items": [
+                    {
+                      "type": "group",
+                      "content": null,
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amKuKhEAACcAHWnl",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "join-network",
+                        "first_publication_date": "2026-07-24T00:14:57+0000",
+                        "last_publication_date": "2026-07-29T20:49:50+0000",
+                        "uid": "navlinks-v3-experts",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Join Network",
+                              "description": "AI job opportunities",
+                              "link": {
+                                "id": "aaJmVhEAACMAAphL",
+                                "type": "page_v2",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "your-expertise",
+                                "first_publication_date": "2026-03-13T06:32:04+0000",
+                                "last_publication_date": "2026-06-15T00:14:43+0000",
+                                "uid": "talent-home",
+                                "link_type": "Document",
+                                "key": "e0d0bc6e-5e8a-4768-8fd7-6b6619815096",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Fellowship",
+                              "description": "Community of industry experts",
+                              "link": {
+                                "link_type": "Web",
+                                "key": "81884acb-5121-4652-b095-782ef7ca7d56",
+                                "url": "https://fellows.turing.com"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "b763c8ba-c27e-4451-a72f-d65422fc4c3a",
+                        "isBroken": false
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "993c2e32-762f-4130-81f9-b20d8ddcfba4",
+                "isBroken": false
+              }
+            }
+          ],
+          "buttons": [
+            {
+              "button_type": "search",
+              "content": null,
+              "has_arrow_right": false,
+              "link": {
+                "link_type": "Web",
+                "key": "6d511050-17a7-4d5c-a2f1-5a3de5c825a6",
+                "url": "https://www.turing.com/search"
+              }
+            },
+            {
+              "button_type": "cta",
+              "content": "Join expert network",
+              "has_arrow_right": true,
+              "link": {
+                "link_type": "Web",
+                "key": "593e8a2d-2ac2-44c7-8d78-2535067981fb",
+                "url": "https://www.turing.com/talent"
+              }
+            }
+          ]
+        },
+        "getstarted": {
+          "eyebrows": [],
+          "title": "How do you want to innovate?",
+          "sub_title": null,
+          "items": [
+            {
+              "anchor_id": null,
+              "background_image": {
+                "dimensions": {
+                  "width": 2176,
+                  "height": 582
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/turing/aULV7XNYClf9oXFd_train-gs-compressed.webp?auto=format,compress",
+                "id": "aULV7XNYClf9oXFd",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "icon": "None",
+              "tag_line": "For AI Labs",
+              "title": "Train Frontier Models",
+              "sub_title": "Strengthen benchmarks, access research-grade data packs, and run RL Gyms to advance model reasoning, multimodality, and more.",
+              "cta_link": {
+                "link_type": "Web",
+                "key": "e3a73f0b-323d-4ca5-af3d-251157ca4511",
+                "url": "/advance/contact",
+                "target": "_blank",
+                "text": "Talk to a researcher"
+              }
+            },
+            {
+              "anchor_id": null,
+              "background_image": {
+                "dimensions": {
+                  "width": 1056,
+                  "height": 702
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/turing/aULV63NYClf9oXFb_build-gs-compressed.webp?auto=format,compress",
+                "id": "aULV63NYClf9oXFb",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "icon": "None",
+              "tag_line": "For Enterprises",
+              "title": "Build Custom AI Systems",
+              "sub_title": "Integrate AI into your operations, enhance automation, and optimize cloud migration for scalable impact.",
+              "cta_link": {
+                "link_type": "Web",
+                "key": "05a5262f-db80-46de-ba69-d5662536b386",
+                "url": "/intelligence/contact",
+                "text": "Talk to an expert"
+              }
+            },
+            {
+              "anchor_id": null,
+              "background_image": {
+                "dimensions": {
+                  "width": 1056,
+                  "height": 702
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/turing/aULV7HNYClf9oXFc_hire-gs-compressed.webp?auto=format,compress",
+                "id": "aULV7HNYClf9oXFc",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "icon": "None",
+              "tag_line": "For enterprises & Startups",
+              "title": "Hire Elite\u2028AI Talent",
+              "sub_title": "Access our global network of vetted engineers, researchers, and domain experts\u2014ready to accelerate development at every stage.",
+              "cta_link": {
+                "link_type": "Web",
+                "key": "20a46878-5da7-45bf-993c-a4b1d6d512ff",
+                "url": "https://www.turing.com/intelligence/get-talent",
+                "target": "_blank",
+                "text": "Hire talent"
+              }
+            },
+            {
+              "anchor_id": null,
+              "background_image": {},
+              "icon": null,
+              "tag_line": "For Talent",
+              "title": "Find Remote AI Work",
+              "sub_title": "Join a global network of elite talent working remotely at leading companies. Solve cutting-edge challenges and advance AI.",
+              "cta_link": {
+                "link_type": "Web",
+                "key": "d814e604-6f05-47de-81c0-168e54afca64",
+                "url": "https://developers.turing.com/signup",
+                "text": "Apply today"
+              }
+            }
+          ],
+          "logos": {
+            "link_type": "Document"
+          }
+        },
+        "footer": {
+          "logo": {
+            "dimensions": {
+              "width": 605,
+              "height": 139
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://turing.cdn.prismic.io/turing/aMkbuWGNHVfTPQ7p_Turing-Wordmark_White.svg",
+            "id": "aMkbuWGNHVfTPQ7p",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          },
+          "inline_turing_logo": "TuringWhiteLogo",
+          "navigation": [
+            {
+              "title": "Train AI",
+              "row": 1,
+              "column": 1,
+              "footer_navigation_links": {
+                "id": "aMkaGhAAACEAApDH",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "what-is-turing-agi-advancement",
+                "first_publication_date": "2025-09-16T08:05:09+0000",
+                "last_publication_date": "2025-09-16T08:05:09+0000",
+                "uid": "footer-agi-train-models",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "What is Turing AGI Advancement",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "636ca62d-6264-4020-9734-a090539adf96",
+                        "url": "/advance"
+                      }
+                    },
+                    {
+                      "label": "Evaluate models",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "bd201d85-94d8-4548-87b8-a2ebcd6d44b4",
+                        "url": "/advance/evaluate"
+                      }
+                    },
+                    {
+                      "label": "Generate data",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "fa7f9c89-a668-4c69-a358-fcb81ca9c5ee",
+                        "url": "/advance/generate"
+                      }
+                    },
+                    {
+                      "label": "Improve models",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "c34d1a0f-00a2-4355-a843-674d42ae9177",
+                        "url": "/advance/improve"
+                      }
+                    },
+                    {
+                      "label": "Datasets",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "31b377ce-8cec-4469-9938-23de27bc0e69",
+                        "url": "/advance/datasets"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "ee9454bc-c93b-4289-9245-f84726ea5297",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Data samples",
+              "row": 1,
+              "column": 2,
+              "footer_navigation_links": {
+                "id": "aMka0hAAACIAApHg",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "coding",
+                "first_publication_date": "2025-09-16T08:10:33+0000",
+                "last_publication_date": "2026-05-21T01:26:50+0000",
+                "uid": "footer-ta2-data-samples",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "Coding",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "636ca62d-6264-4020-9734-a090539adf96",
+                        "url": "https://www.turing.com/advance/datasets/coding"
+                      }
+                    },
+                    {
+                      "label": "STEM",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "bd201d85-94d8-4548-87b8-a2ebcd6d44b4",
+                        "url": "https://www.turing.com/advance/datasets/stem"
+                      }
+                    },
+                    {
+                      "label": "Multimodal",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "fa7f9c89-a668-4c69-a358-fcb81ca9c5ee",
+                        "url": "https://www.turing.com/advance/datasets/multimodal"
+                      }
+                    },
+                    {
+                      "label": "Domain-Specific",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "c34d1a0f-00a2-4355-a843-674d42ae9177",
+                        "url": "https://www.turing.com/advance/datasets/domain-specific"
+                      }
+                    },
+                    {
+                      "label": "Robotics",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "eb36701e-0d33-4fda-8d1f-9296f93f0e25",
+                        "url": "https://www.turing.com/advance/datasets/robotics"
+                      }
+                    },
+                    {
+                      "label": "Custom",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "f5250caa-f40d-4427-aafd-a5b0fbdb4f8b",
+                        "url": "https://www.turing.com/advance/datasets/custom"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "9c64b1cf-c406-4cfc-afa9-2602ab63a087",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Build AI",
+              "row": 2,
+              "column": 1,
+              "footer_navigation_links": {
+                "id": "aMkaQxAAACIAApEJ",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "what-is-turing-intelligence",
+                "first_publication_date": "2025-09-16T08:07:31+0000",
+                "last_publication_date": "2025-12-09T23:27:04+0000",
+                "uid": "footer-ti-deploy-ai",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "What is Turing Intelligence",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "636ca62d-6264-4020-9734-a090539adf96",
+                        "url": "/intelligence"
+                      }
+                    },
+                    {
+                      "label": "Develop AI Strategy",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "bd201d85-94d8-4548-87b8-a2ebcd6d44b4",
+                        "url": "/intelligence/advise"
+                      }
+                    },
+                    {
+                      "label": "Build AI Systems",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "fa7f9c89-a668-4c69-a358-fcb81ca9c5ee",
+                        "url": "/intelligence/build"
+                      }
+                    },
+                    {
+                      "label": "Hire AI Talent",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "c34d1a0f-00a2-4355-a843-674d42ae9177",
+                        "url": "/intelligence/talent"
+                      }
+                    },
+                    {
+                      "label": "AI for BFSI",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "7d1139ce-e02b-4282-89aa-6df835f532da",
+                        "url": "/intelligence/bfsi"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "5cc2bc93-1e04-4b92-b7a7-d8e1c542552b",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "For talent",
+              "row": 1,
+              "column": 3,
+              "footer_navigation_links": {
+                "id": "ZfArkBIAAOoQA2As",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "how-to-get-hired",
+                "first_publication_date": "2024-03-12T10:50:07+0000",
+                "last_publication_date": "2025-01-09T22:57:27+0000",
+                "uid": "primary-footer-for-developers-list",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "How to get hired",
+                      "icon": {},
+                      "link_target": "_blank",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "dc485074-8be2-4570-a4cd-b4e4a9494b59",
+                        "url": "/jobs",
+                        "target": ""
+                      }
+                    },
+                    {
+                      "label": "Developer reviews",
+                      "icon": {},
+                      "link_target": null,
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "20dd46c1-1e26-4fb6-a7fb-061907b41059",
+                        "url": "/review",
+                        "target": ""
+                      }
+                    },
+                    {
+                      "label": "Talent resources",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "2128c593-8699-49b3-a317-c9b3ccbeb5f1",
+                        "url": "/kb",
+                        "target": ""
+                      }
+                    },
+                    {
+                      "label": "Tech interview questions",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "f73598e1-ec55-4a9a-879e-4547e1054e43",
+                        "url": "/sitemap/interview-questions",
+                        "target": ""
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "65d640ad-4c2f-4329-8269-f4d3d9e9abd2",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Research & Resources",
+              "row": 1,
+              "column": 4,
+              "footer_navigation_links": {
+                "id": "ZfAr2xIAAOcQA2G6",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "research",
+                "first_publication_date": "2024-03-12T10:50:07+0000",
+                "last_publication_date": "2025-09-16T07:52:33+0000",
+                "uid": "primary-footer-resources-list",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "Research",
+                      "icon": {
+                        "dimensions": {
+                          "width": 24,
+                          "height": 24
+                        },
+                        "alt": null,
+                        "copyright": null,
+                        "url": "https://turing.cdn.prismic.io/turing/Ze_L0UmNsf2sHgvn_arrow_forward-linkemphasis.svg?auto=compress,format",
+                        "id": "Ze_L0UmNsf2sHgvn",
+                        "edit": {
+                          "x": 0,
+                          "y": 0,
+                          "zoom": 1,
+                          "background": "transparent"
+                        }
+                      },
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "db9063fa-d5d6-4746-88d3-ec8b606e865d",
+                        "url": "https://research.turing.com"
+                      }
+                    },
+                    {
+                      "label": "Case studies",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "0fd0a0af-f169-438c-902e-3f5f67ed5369",
+                        "url": "/case-study"
+                      }
+                    },
+                    {
+                      "label": "Use cases",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "d757a0ea-5e12-4bc6-aec6-614a97322118",
+                        "url": "/use-case"
+                      }
+                    },
+                    {
+                      "label": "Enterprise Insights",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "635e3dc8-7425-441b-a5f4-d79f55c5b2d3",
+                        "url": "/resources"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "dc98f3e6-0472-4a7b-97f9-e6d14fa66075",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Company",
+              "row": 2,
+              "column": 3,
+              "footer_navigation_links": {
+                "id": "aMkYAhAAACEAAo2m",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "about",
+                "first_publication_date": "2025-09-16T07:55:53+0000",
+                "last_publication_date": "2025-09-27T00:12:06+0000",
+                "uid": "company",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "About",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "c90d1b69-c14d-4316-a351-34f5b5f47953",
+                        "url": "/company"
+                      }
+                    },
+                    {
+                      "label": "Careers",
+                      "icon": {},
+                      "link_target": "_blank",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "a6c9eb65-753f-4cbd-abc0-1dcf05086fcb",
+                        "url": "https://careers.turing.com"
+                      }
+                    },
+                    {
+                      "label": "Blog",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "780edb8a-800b-4bab-864f-80542e211d35",
+                        "url": "/blog"
+                      }
+                    },
+                    {
+                      "label": "Press",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "f8ec6f44-dfa1-43f2-b6dc-a69ff3b1fd9c",
+                        "url": "/press"
+                      }
+                    },
+                    {
+                      "label": "Contact Us",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "7a25dd4f-1012-4df0-94d9-80cf6101f367",
+                        "url": "/contact-us"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "9f7a0456-f0b2-4bd9-a041-b6527d5600b9",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Connect",
+              "row": 2,
+              "column": 4,
+              "footer_navigation_links": {
+                "id": "ZfAsYRIAAOcQA2QX",
+                "type": "navigation_list",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "-",
+                "first_publication_date": "2024-03-12T10:50:06+0000",
+                "last_publication_date": "2024-03-13T16:34:07+0000",
+                "uid": "primary-footer-connect-list",
+                "data": {
+                  "navigation_items": [
+                    {
+                      "label": "Contact us",
+                      "icon": {},
+                      "link_target": "_self",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "f34b44c6-41d5-4adb-bd8b-075bc04e287a",
+                        "url": "/contact-us",
+                        "target": ""
+                      }
+                    },
+                    {
+                      "label": "Help center",
+                      "icon": {},
+                      "link_target": "_blank",
+                      "description": null,
+                      "cta_click": null,
+                      "link": {
+                        "link_type": "Web",
+                        "key": "81793956-a1eb-4cb9-86f1-401aac4ac57f",
+                        "url": "https://help.turing.com/",
+                        "target": ""
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "da0251e1-066b-4915-a299-4e4907dd479b",
+                "isBroken": false
+              }
+            }
+          ],
+          "aicpa_logo": {},
+          "inline_aicpa_logo": "aicpaDark",
+          "secondary_footer_links": {
+            "id": "ZfAtSRIAAA0RA2if",
+            "type": "navigation_list",
+            "tags": [],
+            "lang": "en-us",
+            "slug": "sitemap",
+            "first_publication_date": "2024-03-12T10:50:05+0000",
+            "last_publication_date": "2025-06-27T05:59:07+0000",
+            "uid": "secondary-footer-links-list",
+            "data": {
+              "navigation_items": [
+                {
+                  "label": "Sitemap",
+                  "icon": {},
+                  "link_target": "_blank",
+                  "description": null,
+                  "cta_click": null,
+                  "link": {
+                    "link_type": "Web",
+                    "key": "b5c733c8-46d2-43b5-934d-f61b5f668d56",
+                    "url": "/sitemap",
+                    "target": ""
+                  }
+                },
+                {
+                  "label": "Terms of service",
+                  "icon": {},
+                  "link_target": "_blank",
+                  "description": null,
+                  "cta_click": null,
+                  "link": {
+                    "link_type": "Web",
+                    "key": "e6f4e737-fbe2-4138-bf4e-5dd74c053ab9",
+                    "url": "/terms-of-service",
+                    "target": ""
+                  }
+                },
+                {
+                  "label": "Privacy policy",
+                  "icon": {},
+                  "link_target": "_blank",
+                  "description": null,
+                  "cta_click": null,
+                  "link": {
+                    "link_type": "Web",
+                    "key": "c2abc9b4-cbbb-4424-aa20-224319f055c6",
+                    "url": "/policy",
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "label": "Cookie settings",
+                  "icon": {},
+                  "link_target": null,
+                  "description": null,
+                  "cta_click": "Privacy Setting",
+                  "link": {
+                    "link_type": "Any"
+                  }
+                },
+                {
+                  "label": "Do Not Sell or Share My Personal Info",
+                  "icon": {},
+                  "link_target": null,
+                  "description": null,
+                  "cta_click": "Do Not Sell or Share My Personal Info",
+                  "link": {
+                    "link_type": "Any"
+                  }
+                }
+              ]
+            },
+            "link_type": "Document",
+            "key": "7c5e42e7-9cb1-4f47-8e8e-728706f0b7af",
+            "isBroken": false
+          },
+          "social_media_logos": [
+            {
+              "logo": {
+                "dimensions": {
+                  "width": 30,
+                  "height": 30
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/turing/ZfBRd0mNsf2sHhW4_fb-social-icon.png?auto=format,compress",
+                "id": "ZfBRd0mNsf2sHhW4",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "link_target": "_blank",
+              "inline_svg": "Facebook",
+              "link": {
+                "link_type": "Web",
+                "key": "64c7f913-e61a-4722-883a-e653bd54d805",
+                "url": "https://www.facebook.com/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "logo": {},
+              "link_target": "_blank",
+              "inline_svg": "Twitter",
+              "link": {
+                "link_type": "Web",
+                "key": "8fc2277f-f7c1-46a2-84aa-2ed5cb2fa96e",
+                "url": "https://twitter.com/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "logo": {},
+              "link_target": "_blank",
+              "inline_svg": "LinkedIn",
+              "link": {
+                "link_type": "Web",
+                "key": "41b9a179-8d45-4518-89d9-a2d8c6d109dc",
+                "url": "https://www.linkedin.com/company/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "logo": {},
+              "link_target": "_blank",
+              "inline_svg": "Instagram",
+              "link": {
+                "link_type": "Web",
+                "key": "cb079d9f-8aa0-45b6-9480-6802c66c1fac",
+                "url": "https://www.instagram.com/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "logo": {},
+              "link_target": "_blank",
+              "inline_svg": "Youtube",
+              "link": {
+                "link_type": "Web",
+                "key": "4a909f49-4208-4815-83f2-307dd6f71086",
+                "url": "https://www.youtube.com/channel/UCLfxdtB3H0JdnniBnd4DoNA",
+                "target": ""
+              }
+            }
+          ],
+          "address": [
+            {
+              "type": "paragraph",
+              "text": "548 Market Street, PMB 18282, San Francisco, CA 94104",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "copy_rights": "\u00a9 2024 Turing"
+        },
+        "footer_v3": {
+          "logo": {
+            "dimensions": {
+              "width": 796,
+              "height": 125
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://turing.cdn.prismic.io/turing/iiiDLzHp8RDqpk5A_turing_light.svg",
+            "id": "iiiDLzHp8RDqpk5A",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          },
+          "description": "Accelerate superintelligence \u2028to drive real economic progress",
+          "copyright_phrase": "\u00a9 2026 Turing Enterprises, Inc. All rights reserved.",
+          "address": "548 Market Street, PMB 18282, San Francisco, CA 94104",
+          "bottom_links": [
+            {
+              "link": {
+                "link_type": "Web",
+                "key": "05aa6ea8-73cc-4afe-a117-9b0a9924fc62",
+                "url": "https://www.turing.com/terms-of-service"
+              },
+              "label": "Terms of Service",
+              "actions": null
+            },
+            {
+              "link": {
+                "link_type": "Web",
+                "key": "06637e95-6b75-4ea2-8d42-45c526eb2017",
+                "url": "https://turing.com/policy"
+              },
+              "label": "Privacy Policy",
+              "actions": null
+            },
+            {
+              "link": {
+                "link_type": "Any"
+              },
+              "label": "Cookie Settings",
+              "actions": "Cookie Settings"
+            },
+            {
+              "link": {
+                "link_type": "Any"
+              },
+              "label": "Do Not Sell or Share My Personal Info",
+              "actions": "Do Not Sell"
+            }
+          ],
+          "social_media": [
+            {
+              "icon": {
+                "dimensions": {
+                  "width": 2000,
+                  "height": 2000
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://turing.cdn.prismic.io/turing/6540f94e0b105250cf53c4d0_facebook.svg",
+                "id": "ZUD5TgsQUlDPU8TQ",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "link": {
+                "link_type": "Web",
+                "key": "de24218b-f5cd-48dc-a41a-0aeead0210a4",
+                "url": "https://www.facebook.com/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": {
+                "dimensions": {
+                  "width": 30,
+                  "height": 30
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://turing.cdn.prismic.io/turing/jxhSHU-_YeFHlh8Z_twitter-cropped.svg",
+                "id": "jxhSHU-_YeFHlh8Z",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "link": {
+                "link_type": "Web",
+                "key": "7de3409e-a05f-4d86-a0fb-b2e8db3e2df5",
+                "url": "https://twitter.com/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": {
+                "dimensions": {
+                  "width": 2000,
+                  "height": 2000
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://turing.cdn.prismic.io/turing/6540f93d0b105250cf53c4ce_linkedin.svg",
+                "id": "ZUD5PQsQUlDPU8TO",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "link": {
+                "link_type": "Web",
+                "key": "a3b26a79-2e53-4e65-a392-e299f89d7c89",
+                "url": "https://www.linkedin.com/company/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": {
+                "dimensions": {
+                  "width": 2000,
+                  "height": 2000
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://turing.cdn.prismic.io/turing/6540f95f0b105250cf53c4d2_instagram.svg",
+                "id": "ZUD5XwsQUlDPU8TS",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "link": {
+                "link_type": "Web",
+                "key": "692a6ac4-e677-4edd-aee4-150d1aef58ee",
+                "url": "https://www.instagram.com/turingcom",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": {
+                "dimensions": {
+                  "width": 28,
+                  "height": 28
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://turing.cdn.prismic.io/turing/ah2ESweQX7-eWfM0_youtube-logo.svg",
+                "id": "ah2ESweQX7-eWfM0",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              },
+              "link": {
+                "link_type": "Web",
+                "key": "2c6e9895-e552-420d-8756-bba8436b3e59",
+                "url": "https://www.youtube.com/channel/UCLfxdtB3H0JdnniBnd4DoNA",
+                "target": "_blank"
+              }
+            }
+          ],
+          "columns": [
+            {
+              "title": "Frontier AI",
+              "content": {
+                "id": "amIbshEAAC0AHHbi",
+                "type": "footer_column_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T13:48:54+0000",
+                "last_publication_date": "2026-07-29T08:45:10+0000",
+                "uid": "footer-col-frontier-ai",
+                "data": {
+                  "childs": [
+                    {
+                      "child_type": "single",
+                      "title": "Frontier AI",
+                      "link": {
+                        "id": "amHtuBEAACsAHB_z",
+                        "type": "page_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "why-turing",
+                        "first_publication_date": "2026-07-23T14:41:05+0000",
+                        "last_publication_date": "2026-10-16T22:08:45+0000",
+                        "uid": "frontier-ai",
+                        "link_type": "Document",
+                        "key": "8a3140ff-758b-4204-9aea-0b662e5fa01d",
+                        "isBroken": false
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "group",
+                      "title": "Domain",
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amIRcREAACsAHGOa",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "software-engineering",
+                        "first_publication_date": "2026-07-23T13:04:55+0000",
+                        "last_publication_date": "2026-07-29T08:36:11+0000",
+                        "uid": "frontier-ai-domain-dropdown-links",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Software Engineering",
+                              "description": "End-to-end SDLC tasks",
+                              "link": {
+                                "id": "amHu8xEAACsAHCIt",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "real-engineering-work-not-just-coding-puzzles",
+                                "first_publication_date": "2026-07-23T14:41:07+0000",
+                                "last_publication_date": "2026-09-16T17:17:02+0000",
+                                "uid": "frontier-ai__software-engineering",
+                                "link_type": "Document",
+                                "key": "da39179c-f6f8-48ed-bebd-f9d83aece11b",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Enterprise Knowledge Work",
+                              "description": "Long-horizon industry workflows",
+                              "link": {
+                                "id": "amHvEhEAACcAHCJs",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "domain-specific-datasets",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-09-16T17:17:39+0000",
+                                "uid": "frontier-ai__enterprise-knowledge-work",
+                                "link_type": "Document",
+                                "key": "f0bc4230-babb-4851-90e9-1cf7c79b894c",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Frontier STEM",
+                              "description": "Scientific reasoning problems",
+                              "link": {
+                                "id": "amHvQxEAACoAHCLM",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "stem-reasoning-problems",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-10-08T21:00:05+0000",
+                                "uid": "frontier-ai__stem",
+                                "link_type": "Document",
+                                "key": "b0e63e2e-2a78-4486-a338-2d789c729b71",
+                                "isBroken": false
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "12f2b104-073b-4a92-9ace-707385434ff3",
+                        "isBroken": false
+                      }
+                    },
+                    {
+                      "child_type": "group",
+                      "title": "Capability",
+                      "link": {
+                        "link_type": "Any"
+                      },
+                      "links_group": {
+                        "id": "amIS2xEAACgAHGYc",
+                        "type": "nav_link_list_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "off-the-shelf-datasets",
+                        "first_publication_date": "2026-07-23T13:11:41+0000",
+                        "last_publication_date": "2026-07-29T20:47:31+0000",
+                        "uid": "frontier-ai-capability-dropdown-links",
+                        "data": {
+                          "links": [
+                            {
+                              "content": "Off-The-Shelf Datasets",
+                              "description": "Expert-built for hillclimbing",
+                              "link": {
+                                "id": "amHuxBEAAC0AHCHY",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "trusted-by-the-industry",
+                                "first_publication_date": "2026-07-23T14:41:07+0000",
+                                "last_publication_date": "2026-09-16T17:18:15+0000",
+                                "uid": "frontier-ai__datasets",
+                                "link_type": "Document",
+                                "key": "b6f16acf-343e-41c5-8c4b-ade266f4ab06",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "RL Environments",
+                              "description": "MCP and computer-use",
+                              "link": {
+                                "id": "amHvLREAACoAHCKh",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "built-for-frontier-standards",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-09-16T17:19:18+0000",
+                                "uid": "frontier-ai__rl-environments",
+                                "link_type": "Document",
+                                "key": "25718e8f-a371-478c-874a-e6659af978a5",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Experts",
+                              "description": "PhD-level across domains",
+                              "link": {
+                                "id": "amHvWxEAAC0AHCL5",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "every-discipline-frontier-research-needs",
+                                "first_publication_date": "2026-07-23T14:41:06+0000",
+                                "last_publication_date": "2026-09-16T17:18:47+0000",
+                                "uid": "frontier-ai__experts",
+                                "link_type": "Document",
+                                "key": "0df579cc-33a8-40cc-922e-1219608a9b88",
+                                "isBroken": false
+                              }
+                            },
+                            {
+                              "content": "Research",
+                              "description": "Benchmarks & experimental datasets",
+                              "link": {
+                                "id": "amHuOxEAAC4AHCDi",
+                                "type": "page_v3",
+                                "tags": [],
+                                "lang": "en-us",
+                                "slug": "research",
+                                "first_publication_date": "2026-07-23T14:40:08+0000",
+                                "last_publication_date": "2026-10-14T22:13:33+0000",
+                                "uid": "research-v3",
+                                "link_type": "Document",
+                                "key": "14bbd51d-5c10-40e2-9dc5-b3b156f1d11d",
+                                "isBroken": false
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "ed34bd03-16c2-4bcb-a469-deeeb731ec1e",
+                        "isBroken": false
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "4627fa73-8eff-4cec-90e2-927aedf5681c",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Enterprise AI",
+              "content": {
+                "id": "amIi_hEAACoAHIVd",
+                "type": "footer_column_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T14:19:47+0000",
+                "last_publication_date": "2026-07-29T08:40:32+0000",
+                "uid": "footer-col-enterprise-ai",
+                "data": {
+                  "childs": [
+                    {
+                      "child_type": "single",
+                      "title": "Enterprise AI",
+                      "link": {
+                        "id": "amHt9hEAACwAHCBl",
+                        "type": "page_v3",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "enterprise-ai",
+                        "first_publication_date": "2026-07-23T14:41:05+0000",
+                        "last_publication_date": "2026-10-18T22:41:45+0000",
+                        "uid": "enterprise-ai",
+                        "link_type": "Document",
+                        "key": "952d60a9-5c48-4f80-b94b-3148dcb26cac",
+                        "isBroken": false
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "5a08e921-2005-4b64-9ac6-5024bc7581e2",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Resources",
+              "content": {
+                "id": "amIjoBEAACwAHIa_",
+                "type": "footer_column_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T14:22:50+0000",
+                "last_publication_date": "2026-07-29T17:31:42+0000",
+                "uid": "footer-col-resources",
+                "data": {
+                  "childs": [
+                    {
+                      "child_type": "single",
+                      "title": "Blog",
+                      "link": {
+                        "id": "ZkXibxEAACgA14Rt",
+                        "type": "page_v2",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "turing-blog",
+                        "first_publication_date": "2024-05-16T10:39:46+0000",
+                        "last_publication_date": "2026-01-19T10:54:08+0000",
+                        "uid": "blog-home",
+                        "link_type": "Document",
+                        "key": "bb6688ff-6f74-4303-8928-2633804cae2b",
+                        "isBroken": false
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Case Studies",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "e963d2af-30ee-44bc-808c-6cb8a050695d",
+                        "url": "https://turing.com/case-study"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Articles",
+                      "link": {
+                        "id": "Z44HRRAAACIAX8GP",
+                        "type": "page_v2",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "resource-hub",
+                        "first_publication_date": "2025-01-20T08:32:20+0000",
+                        "last_publication_date": "2026-02-26T03:26:58+0000",
+                        "uid": "resources-home",
+                        "link_type": "Document",
+                        "key": "cdfcbc20-1231-4a40-b3dd-3e18ea889d4e",
+                        "isBroken": false
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "3756eee5-43a6-4586-be53-1aabc57bbc46",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "For Experts",
+              "content": {
+                "id": "amIkFREAAC4AHIfF",
+                "type": "footer_column_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T14:24:27+0000",
+                "last_publication_date": "2026-07-29T17:30:12+0000",
+                "uid": "footer-col-experts",
+                "data": {
+                  "childs": [
+                    {
+                      "child_type": "single",
+                      "title": "How to get hired",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "e77a5876-4181-4f3d-9a37-fb0eccd1c684",
+                        "url": "https://work.turing.com/jobs",
+                        "target": "_blank"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Developer reviews",
+                      "link": {
+                        "id": "ZVIP2hAAAP-eWLuI",
+                        "type": "page",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "turing-developer-reviews",
+                        "first_publication_date": "2023-11-13T12:00:29+0000",
+                        "last_publication_date": "2025-05-29T09:29:33+0000",
+                        "uid": "review",
+                        "link_type": "Document",
+                        "key": "6ad64f64-a23f-4177-b224-69fa14b13b59",
+                        "isBroken": false
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Knowledge base",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "2b7cda11-ebbf-4474-a160-9c874560c24c",
+                        "url": "https://turing.com/kb"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Tech interview questions",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "86354e45-93bb-47ef-8e0a-2ab95c4a3da5",
+                        "url": "https://turing.com/sitemap/interview-questions"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "def47185-0d61-4157-a172-9f6fd3ed6402",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Company",
+              "content": {
+                "id": "amIkixEAACoAHIjo",
+                "type": "footer_column_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T14:26:25+0000",
+                "last_publication_date": "2026-07-29T17:29:49+0000",
+                "uid": "footer-col-company",
+                "data": {
+                  "childs": [
+                    {
+                      "child_type": "single",
+                      "title": "About",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "553c33cb-26b1-4717-9d2f-ea0bf03e5568",
+                        "url": "https://turing.com/company"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Careers",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "4893e7aa-7a38-4440-ac1e-e236fb6fd18b",
+                        "url": "https://careers.turing.com"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "News",
+                      "link": {
+                        "id": "ZjC37xIAAFQLBrMh",
+                        "type": "page_v2",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "newsroom",
+                        "first_publication_date": "2024-04-30T09:20:50+0000",
+                        "last_publication_date": "2026-09-24T15:32:28+0000",
+                        "uid": "press",
+                        "link_type": "Document",
+                        "key": "8c54fec1-3b4e-4544-af31-94aa90a97e98",
+                        "isBroken": false
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "928f256d-e8c4-40ef-84e8-df04ec0f3955",
+                "isBroken": false
+              }
+            },
+            {
+              "title": "Contact",
+              "content": {
+                "id": "amIkzREAACsAHImL",
+                "type": "footer_column_v3",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "single",
+                "first_publication_date": "2026-07-23T14:27:31+0000",
+                "last_publication_date": "2026-07-30T22:58:01+0000",
+                "uid": "footer-col-contact",
+                "data": {
+                  "childs": [
+                    {
+                      "child_type": "single",
+                      "title": "Contact Us",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "23013307-92b2-4334-9706-065356c0ebda",
+                        "url": "https://go.turing.com/contact-us"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    },
+                    {
+                      "child_type": "single",
+                      "title": "Help Center",
+                      "link": {
+                        "link_type": "Web",
+                        "key": "01e1f8ae-07ac-4609-a83d-86517990003e",
+                        "url": "https://help.turing.com/"
+                      },
+                      "links_group": {
+                        "link_type": "Document"
+                      }
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "76df4eb4-c3d6-43e6-9cf6-45f61b3b80e1",
+                "isBroken": false
+              }
+            }
+          ]
+        },
+        "form_cta": {},
+        "research_catalog": {},
+        "datasets_catalog": {},
+        "industry_use_cases": {},
+        "search": {
+          "placeholder_text": "Search all of Turing",
+          "close_button_text": "Close",
+          "popular_search_title": "Popular Searches",
+          "popular_searches": [
+            {
+              "search_term": "LLM Training"
+            },
+            {
+              "search_term": "Generative AI"
+            },
+            {
+              "search_term": "Hire developers"
+            },
+            {
+              "search_term": "Open jobs"
+            }
+          ],
+          "search_button_tooltip_text": null,
+          "clear_button_tooltip_text": null
+        },
+        "sub_header": {
+          "items": [
+            {
+              "text": "Categories",
+              "link": {
+                "link_type": "Any"
+              },
+              "alignment_type": "Navigation",
+              "type": "Menu",
+              "navigation_list": {
+                "id": "ZkbofxIAACoAraeV",
+                "type": "header_dropdown_links",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "for-companies",
+                "first_publication_date": "2024-05-17T05:17:55+0000",
+                "last_publication_date": "2024-05-17T05:17:55+0000",
+                "uid": "sub-header-dropdown-links-blog-page-categories",
+                "data": {
+                  "navigation_links": [
+                    {
+                      "link_to_document": {
+                        "id": "ZkbluBIAAC0AraOq",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "genai-engineering",
+                        "first_publication_date": "2024-05-17T05:06:08+0000",
+                        "last_publication_date": "2024-05-17T05:06:08+0000",
+                        "uid": "sub-header-navigation-list-for-companies",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "GenAI engineering",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "AI/ML Enginerring",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "Application and cloud engineering",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "LLM training and enhancement",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "e6060fc3-bde0-4393-bad4-2db5f4f963b1",
+                        "isBroken": false
+                      },
+                      "item_text": "For companies"
+                    },
+                    {
+                      "link_to_document": {
+                        "id": "ZkbmdxIAACkAraS5",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "hiring-vetted-talent",
+                        "first_publication_date": "2024-05-17T05:09:44+0000",
+                        "last_publication_date": "2024-05-17T05:09:44+0000",
+                        "uid": "sub-header-navigation-list-for-developers",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Hiring vetted talent",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "Talent onboarding and operations",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "Leadership and productivity",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "5c4179a3-bd8d-4a91-9a0b-61fbc539e381",
+                        "isBroken": false
+                      },
+                      "item_text": "For developers"
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "44f9d795-bbe9-442f-a037-4505ec6cbeeb",
+                "isBroken": false
+              },
+              "rendering_url": {
+                "link_type": "Web",
+                "key": "b2c580f1-4d02-4edd-a807-72d3f30e9d89",
+                "url": "/blog",
+                "target": ""
+              }
+            },
+            {
+              "text": "Categories",
+              "link": {
+                "link_type": "Any"
+              },
+              "alignment_type": "Navigation",
+              "type": "Menu",
+              "navigation_list": {
+                "id": "ZkbpoBIAACwArak7",
+                "type": "header_dropdown_links",
+                "tags": [],
+                "lang": "en-us",
+                "slug": "for-companies",
+                "first_publication_date": "2024-05-17T05:24:10+0000",
+                "last_publication_date": "2024-05-17T05:24:10+0000",
+                "uid": "sub-header-dropdown-links---case-studies-page---categories",
+                "data": {
+                  "navigation_links": [
+                    {
+                      "link_to_document": {
+                        "id": "ZkbpXRIAACsArajZ",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "genai-engineering",
+                        "first_publication_date": "2024-05-17T05:21:58+0000",
+                        "last_publication_date": "2024-05-17T05:21:58+0000",
+                        "uid": "sub-header-navigation-list--for-companies-case-studies-page",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "GenAI engineering",
+                              "icon": {},
+                              "link_target": "_self",
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "AI/ML Enginerring",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "Application and cloud engineering",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "LLM training and enhancement",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "81fc3974-66dc-4782-820d-ac65fcbf94a1",
+                        "isBroken": false
+                      },
+                      "item_text": "For companies"
+                    },
+                    {
+                      "link_to_document": {
+                        "id": "ZkbpERIAACoArahp",
+                        "type": "navigation_list",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "hiring-vetted-talent",
+                        "first_publication_date": "2024-05-17T05:21:18+0000",
+                        "last_publication_date": "2024-05-17T05:21:18+0000",
+                        "uid": "sub-header-navigation-list--for-developers-case-studies-page",
+                        "data": {
+                          "navigation_items": [
+                            {
+                              "label": "Hiring vetted talent",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "Talent onboarding and operations",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            },
+                            {
+                              "label": "Leadership and productivity",
+                              "icon": {},
+                              "link_target": null,
+                              "description": null,
+                              "cta_click": null,
+                              "link": {
+                                "link_type": "Any"
+                              }
+                            }
+                          ]
+                        },
+                        "link_type": "Document",
+                        "key": "cec726a0-a807-48c6-82c4-b0370fa1e6e5",
+                        "isBroken": false
+                      },
+                      "item_text": "For developers"
+                    }
+                  ]
+                },
+                "link_type": "Document",
+                "key": "357a5ede-c064-4dde-a936-910062bfea44",
+                "isBroken": false
+              },
+              "rendering_url": {
+                "link_type": "Web",
+                "key": "8857b8c9-9cc7-448e-8368-42bb54f14241",
+                "url": "/resources",
+                "target": ""
+              }
+            },
+            {
+              "text": "Case studies",
+              "link": {
+                "link_type": "Any"
+              },
+              "alignment_type": "Navigation",
+              "type": "Link",
+              "navigation_list": {
+                "link_type": "Any"
+              },
+              "rendering_url": {
+                "link_type": "Any"
+              }
+            },
+            {
+              "text": "Use cases",
+              "link": {
+                "link_type": "Any"
+              },
+              "alignment_type": "Navigation",
+              "type": "Link",
+              "navigation_list": {
+                "link_type": "Any"
+              },
+              "rendering_url": {
+                "link_type": "Any"
+              }
+            },
+            {
+              "text": "Blog",
+              "link": {
+                "link_type": "Any"
+              },
+              "alignment_type": "Navigation",
+              "type": "Link",
+              "navigation_list": {
+                "link_type": "Any"
+              },
+              "rendering_url": {
+                "link_type": "Any"
+              }
+            },
+            {
+              "text": "More resources",
+              "link": {
+                "link_type": "Any"
+              },
+              "alignment_type": "Navigation",
+              "type": "Link",
+              "navigation_list": {
+                "link_type": "Any"
+              },
+              "rendering_url": {
+                "link_type": "Any"
+              }
+            }
+          ]
+        },
+        "marketing-banner": [
+          {
+            "id": "af5WixAAAC1eRw_g",
+            "uid": "enterprise-superintelligence-will-be-won-on-the-data-and-deployment-loop",
+            "url": null,
+            "type": "marketing_banner_document",
+            "href": "https://turing.cdn.prismic.io/api/v2/documents/search?ref=atVLLhIAAC4AynBV&integrationFieldsRef=turing%7E349ccdc5-bf20-4f2b-950d-397ebe6337fb&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22af5WixAAAC1eRw_g%22%29+%5D%5D",
+            "tags": [],
+            "first_publication_date": "2026-05-08T21:33:51+0000",
+            "last_publication_date": "2026-05-08T21:34:32+0000",
+            "slugs": [
+              "enterprise-superintelligence-will-be-won-on-the-data-and-deployment-loop"
+            ],
+            "linked_documents": [],
+            "lang": "en-us",
+            "alternate_languages": [],
+            "data": {
+              "title": "Enterprise superintelligence will be won on the data and deployment loop",
+              "cta_text": "Read now",
+              "cta_link": {
+                "link_type": "Web",
+                "key": "adaa59ad-41e5-41d7-a727-69733c4a6919",
+                "url": "https://www.turing.com/blog/data-and-deployment-loop",
+                "target": "_blank",
+                "text": "Learn More"
+              },
+              "choose_specific_page_to_show_on": {
+                "link_type": "Web",
+                "key": "2312351b-d2af-43aa-b5e1-2906aa30a3fa",
+                "url": "/"
+              },
+              "select_specific_page_type": null
+            }
+          }
+        ]
+      }
+    },
+    "__N_SSG": true
+  },
+  "page": "/jobs",
+  "query": {},
+  "buildId": "16820176135c7e67d606c3bd1debb71f259fa21b",
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "dynamicIds": [
+    12153,
+    74679,
+    98898,
+    59843,
+    74456,
+    6218,
+    3785,
+    17847,
+    93107,
+    5968,
+    48147
+  ],
+  "gsp": true,
+  "locale": "en",
+  "locales": [
+    "en",
+    "es",
+    "pt"
+  ],
+  "defaultLocale": "en",
+  "scriptLoader": []
+}

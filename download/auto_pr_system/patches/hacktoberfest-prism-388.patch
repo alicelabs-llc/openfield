@@ -1,0 +1,66 @@
+From 89fafcc6472c4966d6e08271d54395514bec398e Mon Sep 17 00:00:00 2001
+From: Edison Flores <eddyflores100-lang@protonmail.com>
+Date: Wed, 7 Oct 2026 04:25:11 +0000
+Subject: [PATCH] cache: hash filenames with sha256 instead of md5
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Closes #388.
+
+The two on-disk caches in web/app.py — `_cache_key()` for module
+results and `_geocode_place()` for geocoded coordinates — were keyed
+on `hashlib.md5(...)` of the request. MD5 is no longer considered
+collision-resistant and a number of hardened environments block it
+outright (Fedora 36+, FIPS mode, OpenSSL 3 in strict mode).
+
+Switch both to `hashlib.sha256(...)`. SHA-256 is a drop-in
+replacement here because the digest is only used as a hex string in
+a filename — its 64-char length is well within filesystem limits
+and there is no parsing logic to update.
+
+Old cache files written with md5 will simply be re-generated on
+first request; there is no migration to run and no data loss.
+
+Per-issue request: do not change gravatar.py (gravatar's API mandates
+md5) or any other usage that depends on md5 for an externally-defined
+protocol — only the local cache keys change here.
+---
+ web/app.py | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/web/app.py b/web/app.py
+index 4e46d81..37b1fb7 100644
+--- a/web/app.py
++++ b/web/app.py
+@@ -148,7 +148,13 @@ _CACHE_TTL = int(os.getenv("CACHE_TTL_HOURS") or "24") * 3600
+ 
+ def _cache_key(module: str, target: str) -> str:
+     import hashlib
+-    h = hashlib.md5(f"{module}:{target.lower().strip()}".encode()).hexdigest()
++    # Use sha256 for cache filenames: md5 is no longer considered
++    # collision-resistant and some hardened environments (Fedora, FIPS mode)
++    # outright block it. SHA-256 produces a longer hex digest (64 chars vs
++    # 32) but filesystems handle that fine and it costs nothing. Old cache
++    # files written with md5 will simply be re-generated on first request,
++    # there is no migration to run.
++    h = hashlib.sha256(f"{module}:{target.lower().strip()}".encode()).hexdigest()
+     return os.path.join(_CACHE_DIR, f"{module}_{h}.json")
+ 
+ def _get_cached(module: str, target: str) -> Optional[Dict]:
+@@ -174,7 +180,11 @@ def _set_cache(module: str, target: str, data: Any) -> None:
+ 
+ def _geocode_place(query: str) -> Optional[Dict]:
+     import hashlib
+-    cache_path = os.path.join(_CACHE_DIR, "geocode_" + hashlib.md5(query.lower().encode()).hexdigest() + ".json")
++    # See _cache_key(): switched from md5 to sha256 for collision-resistance
++    # and FIPS-mode compatibility. Old geocode_<md5hex>.json files will be
++    # re-fetched on first lookup since the new sha256-based filename will
++    # not match any existing file.
++    cache_path = os.path.join(_CACHE_DIR, "geocode_" + hashlib.sha256(query.lower().encode()).hexdigest() + ".json")
+     try:
+         if os.path.exists(cache_path) and time.time() - os.path.getmtime(cache_path) < 30 * 86400:
+             with open(cache_path, "r", encoding="utf-8") as f:
+-- 
+2.47.3
+

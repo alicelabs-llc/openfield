@@ -1,0 +1,42 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] docs: explain tenv lockfile behavior for parallel runs (#302)
+
+Adds a new section to the documentation explaining how tenv handles
+lockfiles when multiple tenv instances run in parallel (e.g. across
+multiple shells or CI jobs).
+
+Closes #302.
+
+---
+ README.md | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/README.md b/README.md
+index 1111111..2222222 100644
+--- a/README.md
++++ b/README.md
+@@ -233,6 +233,19 @@ To install a specific version:
+ tenv terraform install 1.5.7
+ ```
+ 
++## Lockfile behavior with parallel runs
++
++If multiple tenv instances run in parallel (e.g., across multiple shells or CI
++jobs), tenv uses a file lock at `$TENVPATH/.tenv.lock` to serialize installs
++and avoid corrupting the local version cache.
++
++- The first process to acquire the lock performs the install (or no-op if
++  the requested version is already installed).
+- Subsequent processes **wait** for the lock (no error) and then proceed
++  using the now-installed version.
++- If a process cannot acquire the lock within the timeout (default: 60s,
++  configurable via `TENV_LOCK_TIMEOUT`), it fails with a clear error
++  message rather than proceeding with a potentially half-installed version.
++
+ ## Uninstall a version
+ 
+ ```bash
+-- 
+2.39.3 (Apple Git-128)

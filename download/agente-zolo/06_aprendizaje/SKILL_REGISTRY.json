@@ -1,0 +1,354 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Skill lifecycle registry — métricas vivas por skill (regla 36, v7.0)",
+    "inspired_by": "Hermes curator + ECC continuous-learning-v2",
+    "last_updated": "2026-10-25T02:55:14.718221+00:00"
+  },
+  "config": {
+    "stale_after_days": 30,
+    "archive_after_days": 60,
+    "auto_pin_threshold": 5,
+    "auto_pin_window_days": 30,
+    "pinned_skills": [
+      "auto-curador",
+      "autonomia-total",
+      "memoria-alethech",
+      "reflexion-post-mortem",
+      "runbook-incidentes",
+      "seguridad-fuentes"
+    ]
+  },
+  "skills": {
+    "runbook-incidentes": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": true,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "escalera-outreach": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "plan-y-ejecucion": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "best-of-n-decisiones": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "subagentes-contrato": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "seguridad-fuentes": {
+      "use_count": 1,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": true,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "tareas-largas": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "mantenimiento-mensual": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "mcp-compliance-2026": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "iniciativa-agent-first": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "memoria-alethech": {
+      "use_count": 1,
+      "view_count": 1,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": true,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "maquina-ventas": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "patrones-flujo": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "bucle-autonomo": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "memoria-jerarquica": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "biblioteca-skills": {
+      "use_count": 2,
+      "view_count": 1,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "reflexion-post-mortem": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": true,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "equipo-virtual": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "flota-produccion": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "ledger-autoaprendizaje": {
+      "use_count": 3,
+      "view_count": 2,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "autoinstalador-skills": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "depuracion-sistematica": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "diseno-web-premium": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "cumplimiento-legal-vibecoding": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "canales-distribucion": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "sueno-consolidacion": {
+      "use_count": 2,
+      "view_count": 1,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:30:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "noticiero-matutino": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-24T22:42:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.5,
+      "scope": "global"
+    },
+    "evaluador-skills": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 1,
+      "last_activity_at": "2026-10-25T01:35:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "ciclo-hooks": {
+      "use_count": 1,
+      "view_count": 1,
+      "patch_count": 1,
+      "last_activity_at": "2026-10-25T01:35:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.8,
+      "scope": "global"
+    },
+    "optimizador-descripciones": {
+      "use_count": 1,
+      "view_count": 1,
+      "patch_count": 1,
+      "last_activity_at": "2026-10-25T01:35:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.7,
+      "scope": "global"
+    },
+    "autonomia-total": {
+      "use_count": 1,
+      "view_count": 1,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:35:00-05:00",
+      "state": "active",
+      "pinned": true,
+      "confidence": 0.9,
+      "scope": "global"
+    },
+    "supervisor-meta": {
+      "use_count": 0,
+      "view_count": 0,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:35:00-05:00",
+      "state": "active",
+      "pinned": false,
+      "confidence": 0.6,
+      "scope": "global"
+    },
+    "auto-curador": {
+      "use_count": 1,
+      "view_count": 1,
+      "patch_count": 0,
+      "last_activity_at": "2026-10-25T01:35:00-05:00",
+      "state": "active",
+      "pinned": true,
+      "confidence": 0.9,
+      "scope": "global"
+    }
+  }
+}

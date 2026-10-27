@@ -1,0 +1,360 @@
+[
+  {
+    "platform": "Arc.dev",
+    "title": "AI Integration Engineer (voice agent integration) - WW - FT",
+    "url": "https://arc.dev/remote-jobs/ai-integration-engineer-voice-agent-integration-ww-ft",
+    "rate": "$30-$45/hr",
+    "posted_days_ago": 8,
+    "categories": [
+      "RESTful API",
+      "OpenAI",
+      "Voice AI"
+    ],
+    "experience": "mid",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 4,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Lead Engineer: Systems Architect, Backend Developer, DevOps Engineer - Overlap with EST",
+    "url": "https://arc.dev/remote-jobs/lead-engineer-systems-architect-backend-developer-devops-engineer-overlap-with-est",
+    "rate": "$45-$55/hr",
+    "posted_days_ago": 8,
+    "categories": [
+      "Docker",
+      "AWS"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 4,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior SaaS and DevOps Engineer - Part-time - Worldwide",
+    "url": "https://arc.dev/remote-jobs/senior-saas-and-devops-engineer-part-time-worldwide",
+    "rate": "$20-$55/hr",
+    "posted_days_ago": 11,
+    "categories": [
+      "Supabase",
+      "Node.js",
+      "Next.js",
+      "Docker",
+      "GitHub"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 4,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior AI Solutions Architect \u2014 Government AI Projects",
+    "url": "https://arc.dev/remote-jobs/senior-ai-solutions-architect-government-ai-projects",
+    "rate": "$20-$50/hr",
+    "posted_days_ago": 9,
+    "categories": [
+      "AI",
+      "Python",
+      "Software architecture"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": false,
+    "match_score": 4,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior Backend / Data Engineer WW-FT",
+    "url": "https://arc.dev/remote-jobs/senior-backend-data-engineer-ww-ft",
+    "rate": "$20-$35/hr",
+    "posted_days_ago": 4,
+    "categories": [
+      "PostgreSQL",
+      "TypeScript",
+      "Apache Kafka",
+      "Data Ingestion",
+      "API Integration"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 3,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "AI Implementation Specialist",
+    "url": "https://arc.dev/remote-jobs/ai-implementation-specialist",
+    "rate": "?",
+    "posted_days_ago": 10,
+    "categories": [
+      "Client training and support",
+      "Client success management",
+      "Ai product experiences",
+      "Automatic prompt optimization",
+      "Client Facing technical leadership"
+    ],
+    "experience": "mid",
+    "type": "permanent",
+    "ec_eligible": false,
+    "match_score": 3,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Sr/Staff Backend Engineer - Perm - Relocation to SF",
+    "url": "https://arc.dev/remote-jobs/sr-staff-backend-engineer-perm-relocation-to-sf",
+    "rate": "?",
+    "posted_days_ago": 15,
+    "categories": [
+      "Node.js",
+      "RAG",
+      "LLM",
+      "JavaScript",
+      "Distributed Systems Engineering"
+    ],
+    "experience": "senior",
+    "type": "permanent",
+    "ec_eligible": false,
+    "match_score": 3,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Full-Stack Developer WW-FT",
+    "url": "https://arc.dev/remote-jobs/full-stack-developer-ww-ft",
+    "rate": "$40-$55/hr",
+    "posted_days_ago": 1,
+    "categories": [
+      "SQL",
+      "Git",
+      "Database",
+      "API",
+      "NoSQL",
+      "Forms Authentication"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Mid-level Full-Stack Developer",
+    "url": "https://arc.dev/remote-jobs/mid-level-full-stack-developer",
+    "rate": "?",
+    "posted_days_ago": 2,
+    "categories": [
+      "Python",
+      "Node.js",
+      "JavaScript"
+    ],
+    "experience": "mid",
+    "type": "permanent",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior Offshore Full-Stack/DevSecOps Engineer",
+    "url": "https://arc.dev/remote-jobs/senior-offshore-full-stack-devsecops-engineer",
+    "rate": "$45-$55/hr",
+    "posted_days_ago": 4,
+    "categories": [
+      "Python",
+      "React",
+      "PostgreSQL"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Experienced Software Engineer - AI Coding Tasks",
+    "url": "https://arc.dev/remote-jobs/experienced-software-engineer-ai-coding-tasks",
+    "rate": "$30-$45/hr",
+    "posted_days_ago": 8,
+    "categories": [
+      "Software Development"
+    ],
+    "experience": "mid",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Security Specialist - Part-time - Overlap with EST",
+    "url": "https://arc.dev/remote-jobs/security-specialist-part-time-overlap-with-est",
+    "rate": "$40-$50/hr",
+    "posted_days_ago": 8,
+    "categories": [
+      "Mobile App Development"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior Mobile Engineer (iOS, Android) - Overlap with EST",
+    "url": "https://arc.dev/remote-jobs/senior-mobile-engineer-ios-android-overlap-with-est",
+    "rate": "$40-$50/hr",
+    "posted_days_ago": 8,
+    "categories": [
+      "API Integration",
+      "App Store",
+      "Flutter"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior Bitcoin Lightning Engineer (Full-Stack) - PT - WW",
+    "url": "https://arc.dev/remote-jobs/senior-bitcoin-lightning-engineer-full-stack-pt-ww",
+    "rate": "$20-$45/hr",
+    "posted_days_ago": 9,
+    "categories": [
+      "Bitcoin",
+      "Lightning network",
+      "TypeScript",
+      "gRPC",
+      "Python"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Full-stack Javascript/typescript (Node.js) Engineer - PT - NA/LATAM/EU",
+    "url": "https://arc.dev/remote-jobs/full-stack-javascript-typescript-node-js-engineer-pt-na-latam-eu",
+    "rate": "$35-$50/hr",
+    "posted_days_ago": 11,
+    "categories": [
+      "RESTful API",
+      "Node.js",
+      "JavaScript",
+      "OAuth 2.0"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Audit of Ml and Econometric Models on Financial Time Series",
+    "url": "https://arc.dev/remote-jobs/audit-of-ml-and-econometric-models-on-financial-time-series",
+    "rate": "$30-$45/hr",
+    "posted_days_ago": 11,
+    "categories": [
+      "Python",
+      "Machine Learning"
+    ],
+    "experience": "mid",
+    "type": "contract",
+    "ec_eligible": true,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Freelance Developer US-FT",
+    "url": "https://arc.dev/remote-jobs/freelance-developer-us-ft",
+    "rate": "$40-$70/hr",
+    "posted_days_ago": 3,
+    "categories": [
+      "MuleSoft",
+      "DataWeave",
+      "API",
+      "Onboarding experiences"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": false,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Senior Fractional CTO (Principal Geospatial & Data Architect) - PT - EMEA/APAC",
+    "url": "https://arc.dev/remote-jobs/senior-fractional-cto-principal-geospatial-data-architect-pt-emea-apac",
+    "rate": "$45-$70/hr",
+    "posted_days_ago": 10,
+    "categories": [
+      "SQL",
+      "PostGIS",
+      "Python",
+      "Data Engineering"
+    ],
+    "experience": "senior",
+    "type": "contract",
+    "ec_eligible": false,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  },
+  {
+    "platform": "Arc.dev",
+    "title": "Sr/Staff Infrastructure Engineer - Perm - Relocate to SF",
+    "url": "https://arc.dev/remote-jobs/sr-staff-infrastructure-engineer-perm-relocate-to-sf",
+    "rate": "?",
+    "posted_days_ago": 10,
+    "categories": [
+      "Kubernetes",
+      "DevOps",
+      "Docker",
+      "CI/CD",
+      "Iac tools",
+      "Terraform",
+      "Azure",
+      "Google Cloud Platform",
+      "Multi Cloud"
+    ],
+    "experience": "senior",
+    "type": "permanent",
+    "ec_eligible": false,
+    "match_score": 2,
+    "direct_apply": true,
+    "apply_url": "https://arc.dev/get-started/developer?step=user-type"
+  }
+]

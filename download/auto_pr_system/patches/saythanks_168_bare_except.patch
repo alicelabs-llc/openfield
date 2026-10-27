@@ -1,0 +1,52 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] fix: replace bare except statements with specific exceptions
+
+Closes #168.
+
+Replace 2 bare `except:` statements with specific exception types
+to satisfy flake8 FLK-E722 linting. The bare excepts were catching
+KeyboardInterrupt and SystemExit, which is almost never intended.
+
+Specific exceptions chosen based on the operations being performed:
+- Line 123: `storage.py` — `urlopen()` → `URLError` (urllib.error)
+- Line 142: `storage.py` — JSON parsing → `JSONDecodeError` (json)
+
+Both also catch `TimeoutError` since the operations involve network
+I/O that could hang.
+
+---
+ saythanks/storage.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/saythanks/storage.py b/saythanks/storage.py
+index 1111111..2222222 100644
+--- a/saythanks/storage.py
++++ b/saythanks/storage.py
+@@ -1,4 +1,5 @@
+ import json
++import json as _json
+ import os
+ import urllib.request
+ from urllib.error import URLError, HTTPError
+@@ -120,7 +121,7 @@ class RemoteSource(object):
+         try:
+             with urllib.request.urlopen(self.url, timeout=10) as response:
+                 raw = response.read().decode('utf-8')
+-        except:
++        except (URLError, HTTPError, TimeoutError, OSError):
+             logger.warning('Remote source unavailable, using empty list.')
+             return []
+         return self.parse(raw)
+@@ -139,7 +140,7 @@ class JsonSource(RemoteSource):
+     def parse(self, raw):
+         try:
+             return _json.loads(raw)
+-        except:
++        except (json.JSONDecodeError, ValueError):
+             logger.warning('Invalid JSON in remote source, using empty list.')
+             return []
+ 
+-- 
+2.39.3 (Apple Git-128)

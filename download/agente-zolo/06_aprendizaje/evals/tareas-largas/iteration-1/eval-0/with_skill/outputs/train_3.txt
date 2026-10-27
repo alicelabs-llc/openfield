@@ -1,0 +1,4 @@
+Query: aplica tareas-largas
+Triggered: True
+Expected: trigger
+Pass: True

@@ -1,0 +1,179 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Eddy Flores <eddyflores100@gmail.com>
+Date: Sat, 25 Oct 2026 00:00:00 +0000
+Subject: [PATCH] Add tests for eve.json alert parsing + severity mapping (#15)
+
+Adds pytest coverage for:
+- `SOAREngine._parse_eve_alert` against fixture eve.json lines
+- `KafkaBridge._map_severity` for severities 1-4 + missing severity
+
+Severity mapping table (per project docs):
+    1 -> critical
+    2 -> high
+    3 -> medium
+    4 -> low
+    (missing/unknown) -> medium  # safe default
+
+Closes #15.
+
+---
+ src/vajra/soar/engine.py                   |   2 +-
+ src/vajra/pipeline/kafka_bridge.py         |   2 +-
+ tests/unit/test_eve_parsing.py             | 110 +++++++++++++++++++++
+ tests/fixtures/eve/sample_alerts.json     |  18 ++++
+ 4 files changed, 130 insertions(+), 2 deletions(-)
+ create mode 100644 tests/unit/test_eve_parsing.py
+ create mode 100644 tests/fixtures/eve/sample_alerts.json
+
+diff --git a/tests/fixtures/eve/sample_alerts.json b/tests/fixtures/eve/sample_alerts.json
+new file mode 100644
+index 0000000..1111111
+--- /dev/null
++++ b/tests/fixtures/eve/sample_alerts.json
+@@ -0,0 +1,18 @@
++{"timestamp":"2026-10-25T10:00:00.000000+0000","flow_id":12345,"in_iface":"eth0","event_type":"alert","src_ip":"192.168.1.100","src_port":49152,"dest_ip":"10.0.0.1","dest_port":80,"proto":"TCP","alert":{"action":"allowed","gid":1,"signature_id":2100498,"rev":7,"signature":"ET POLICY curl User-Agent Outbound","category":"Attempted Information Leak","severity":1}}
++{"timestamp":"2026-10-25T10:01:00.000000+0000","flow_id":12346,"in_iface":"eth0","event_type":"alert","src_ip":"192.168.1.101","src_port":49153,"dest_ip":"10.0.0.2","dest_port":443,"proto":"TCP","alert":{"action":"allowed","gid":1,"signature_id":2100499,"rev":3,"signature":"ET INFO TLS Handshake Failure","category":"Attempted Information Leak","severity":2}}
++{"timestamp":"2026-10-25T10:02:00.000000+0000","flow_id":12347,"in_iface":"eth0","event_type":"alert","src_ip":"192.168.1.102","src_port":49154,"dest_ip":"10.0.0.3","dest_port":22,"proto":"TCP","alert":{"action":"allowed","gid":1,"signature_id":2100500,"rev":2,"signature":"ET SCAN SSH Version scan attempt","category":"Attempted Information Leak","severity":3}}
++{"timestamp":"2026-10-25T10:03:00.000000+0000","flow_id":12348,"in_iface":"eth0","event_type":"alert","src_ip":"192.168.1.103","src_port":49155,"dest_ip":"10.0.0.4","dest_port":53,"proto":"UDP","alert":{"action":"allowed","gid":1,"signature_id":2100501,"rev":1,"signature":"ET DNS Query for .onion TLD","category":"Not Suspicious","severity":4}}
++{"timestamp":"2026-10-25T10:04:00.000000+0000","flow_id":12349,"in_iface":"eth0","event_type":"alert","src_ip":"192.168.1.104","src_port":49156,"dest_ip":"10.0.0.5","dest_port":8080,"proto":"TCP","alert":{"action":"allowed","gid":1,"signature_id":2100502,"rev":1,"signature":"ET POLICY Unsupported HTTP method","category":"Not Suspicious"}}
+diff --git a/tests/unit/test_eve_parsing.py b/tests/unit/test_eve_parsing.py
+new file mode 100644
+index 0000000..2222222
+--- /dev/null
++++ b/tests/unit/test_eve_parsing.py
+@@ -0,0 +1,110 @@
++"""Tests for eve.json alert parsing and severity mapping (#15).
++
++These tests cover:
++- ``SOAREngine._parse_eve_alert`` — parses a single eve.json alert line.
++- ``KafkaBridge._map_severity`` — maps Suricata severity 1-4 to internal
++  critical/high/medium/low, with medium as the safe default for missing
++  or unknown severities.
++"""
++import json
++from pathlib import Path
++
++import pytest
++
++from vajra.soar.engine import SOAREngine
++from vajra.pipeline.kafka_bridge import KafkaBridge
++
++
++FIXTURES = Path(__file__).parent.parent / "fixtures" / "eve" / "sample_alerts.json"
++
++
++@pytest.fixture
++def sample_alerts() -> list[dict]:
++    """Load the 5 sample alerts from fixture file."""
++    alerts = []
++    with FIXTURES.open() as f:
++        for line in f:
++            line = line.strip()
++            if line:
++                alerts.append(json.loads(line))
++    assert len(alerts) == 5, "Expected 5 fixture alerts"
++    return alerts
++
++
++# ===== SOAREngine._parse_eve_alert =====
++
++class TestParseEveAlert:
++    def _engine(self) -> SOAREngine:
++        # Build a minimal engine instance for parsing (no Kafka/Pulsar needed)
++        return SOAREngine.__new__(SOAREngine)
++
++    def test_parse_returns_dict_with_required_fields(self, sample_alerts):
++        eng = self._engine()
++        result = eng._parse_eve_alert(sample_alerts[0])
++        assert isinstance(result, dict)
++        assert "signature" in result
++        assert "src_ip" in result
++        assert "dest_ip" in result
++        assert "severity" in result
++
++    def test_parse_extracts_signature_id(self, sample_alerts):
++        eng = self._engine()
++        result = eng._parse_eve_alert(sample_alerts[0])
++        assert result["signature_id"] == 2100498
++
++    def test_parse_extracts_src_and_dest(self, sample_alerts):
++        eng = self._engine()
++        result = eng._parse_eve_alert(sample_alerts[0])
++        assert result["src_ip"] == "192.168.1.100"
++        assert result["dest_ip"] == "10.0.0.1"
++        assert result["dest_port"] == 80
++
++    def test_parse_preserves_severity(self, sample_alerts):
++        eng = self._engine()
++        result = eng._parse_eve_alert(sample_alerts[0])
++        assert result["severity"] == 1
++
++    def test_parse_handles_missing_severity(self, sample_alerts):
++        """Last fixture line has no 'severity' key — parser must not crash."""
++        eng = self._engine()
++        result = eng._parse_eve_alert(sample_alerts[4])
++        # Implementation detail: severity either defaults or is None
++        assert "severity" in result
++
++    def test_parse_invalid_input_raises(self):
++        eng = self._engine()
++        with pytest.raises((KeyError, ValueError, TypeError)):
++            eng._parse_eve_alert({})
++
++
++# ===== KafkaBridge._map_severity =====
++
++class TestMapSeverity:
++    def _bridge(self) -> KafkaBridge:
++        return KafkaBridge.__new__(KafkaBridge)
++
++    @pytest.mark.parametrize("suricata_severity,expected", [
++        (1, "critical"),
++        (2, "high"),
++        (3, "medium"),
++        (4, "low"),
++    ])
++    def test_known_severities(self, suricata_severity, expected):
++        bridge = self._bridge()
++        assert bridge._map_severity(suricata_severity) == expected
++
++    @pytest.mark.parametrize("missing_value", [None, 0, -1, 5, 99, "unknown"])
++    def test_unknown_or_missing_severity_defaults_to_medium(self, missing_value):
++        bridge = self._bridge()
++        assert bridge._map_severity(missing_value) == "medium"
++
++    def test_missing_severity_key_in_dict(self):
++        """Alert dict without 'severity' field should map to 'medium'."""
++        bridge = self._bridge()
++        alert = {"signature": "test", "src_ip": "1.2.3.4"}
++        # Method accepts either int or dict-with-severity-key — both should
++        # default to medium when severity is absent
++        result = bridge._map_severity(alert.get("severity"))
++        assert result == "medium"
++
++    @pytest.mark.parametrize("suricata_severity,expected", [
++        (1, "critical"),
++        (2, "high"),
++        (3, "medium"),
++        (4, "low"),
++        (None, "medium"),
++    ])
++    def test_full_alert_round_trip(self, sample_alerts, suricata_severity, expected):
++        """End-to-end: parse → map_severity → ensure mapped value matches table."""
++        eng = self._engine_for_parse()
++        bridge = self._bridge()
++        # Pick fixture by severity
++        alert = next(
++            (a for a in sample_alerts if a["alert"].get("severity") == suricata_severity),
++            None,
++        )
++        if alert is None:
++            pytest.skip(f"No fixture for severity {suricata_severity}")
++        parsed = eng._parse_eve_alert(alert)
++        mapped = bridge._map_severity(parsed.get("severity"))
++        assert mapped == expected
++
++    def _engine_for_parse(self) -> SOAREngine:
++        return SOAREngine.__new__(SOAREngine)
+-- 
+2.39.3 (Apple Git-128)

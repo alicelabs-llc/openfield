@@ -1,0 +1,1 @@
+"""PostFactory — Core."""

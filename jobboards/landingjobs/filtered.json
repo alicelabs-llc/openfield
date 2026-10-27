@@ -1,0 +1,85 @@
+[
+  {
+    "id": 19792,
+    "title": "Lead Platform Engineer (AWS)",
+    "company": "Wyden",
+    "company_url": "https://landing.jobs/at/wyden",
+    "remote": true,
+    "full_remote": true,
+    "remote_label": "Work fully or mostly remotely. Specify your location preferences and timezone requirements.",
+    "contract_type": "Permanent",
+    "experience_level": "Senior",
+    "published_at": "2026-10-09",
+    "industry": "Technology",
+    "skills": [
+      "Bash",
+      "DevOps",
+      "Python",
+      "Solution Architecture",
+      "Kubernetes",
+      "Terraform",
+      "Prometheus",
+      "IAM",
+      "Grafana",
+      "AWS Lambda",
+      "Terragrunt",
+      "GitHub Actions",
+      "CloudWatch",
+      "AWS S3",
+      "VPC",
+      "GitLab CI/CD",
+      "CodePipeline",
+      "Route53",
+      "CI",
+      "Aurora PostgreSQL"
+    ],
+    "url": "https://landing.jobs/jobs/lead-platform-engineer-aws",
+    "matched_skills": [
+      "ai_agent",
+      "python",
+      "docker",
+      "gitlab",
+      "github",
+      "automation"
+    ],
+    "core_hits": [
+      "ai_agent",
+      "python",
+      "docker",
+      "gitlab",
+      "github",
+      "automation"
+    ],
+    "match_score": 5
+  },
+  {
+    "id": 19714,
+    "title": "Principal Cloud Security Engineer",
+    "company": "Damia",
+    "company_url": "https://landing.jobs/at/damia",
+    "remote": true,
+    "full_remote": true,
+    "remote_label": "Work fully or mostly remotely. Specify your location preferences and timezone requirements.",
+    "contract_type": "Permanent",
+    "experience_level": "Senior",
+    "published_at": "2026-08-04",
+    "industry": "Technology",
+    "skills": [
+      "Amazon Web Services",
+      "Kubernetes",
+      "GitLab"
+    ],
+    "url": "https://landing.jobs/jobs/principal-cloud-security-engineer",
+    "matched_skills": [
+      "docker",
+      "gitlab",
+      "security"
+    ],
+    "core_hits": [
+      "docker",
+      "gitlab",
+      "security"
+    ],
+    "match_score": 4
+  }
+]

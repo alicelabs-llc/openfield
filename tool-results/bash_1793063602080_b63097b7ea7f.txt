@@ -1,0 +1,1055 @@
+INBOX: 2837 messages total
+
+=== Últimos 15 correos (más recientes primero) ===
+
+  📅 Mon, 26 Oct 2026 19:51:17 | From: K S <witmer960@gmail.com>                         
+     Subj: Re: AliceLabs LLC — Capabilities Packet + Project Discovery Questions
+
+  📅 Mon, 26 Oct 2026 19:11:43 | From: K S <witmer960@gmail.com>                         
+     Subj: Re: AliceLabs LLC — Capabilities Packet + Project Discovery Questions
+
+  📅 Mon, 26 Oct 2026 23:50:11 | From: Debbie from Finance <debbiefromfinance@usmobile.co
+     Subj: A US Mobile deal so good we aren’t marketing it
+
+  📅 Mon, 26 Oct 2026 23:19:53 | From: Shopify Community <notifications@community.shopify
+     Subj: [Shopify Community] Summary
+
+  📅 Mon, 26 Oct 2026 22:18:59 | From: Texas Comptroller Webfile <noreply-webfile@cpa.tex
+     Subj: Email Verification Code
+
+  📅 Mon, 26 Oct 2026 22:11:44 | From: Boardy Boardman <boardy@boardy.ai>                
+     Subj: ¿Un full-stack TypeScript para el equipo remoto?
+
+  📅 Mon, 26 Oct 2026 14:51:50 | From: Andreas Philippi <notifications@github.com>       
+     Subj: Re: [chatmcp/mcpso] Submit Your MCP Servers here (Issue #1)
+
+  📅 Mon, 26 Oct 2026 14:51:28 | From: Andreas Philippi <notifications@github.com>       
+     Subj: Re: [chatmcp/mcpso] Submit Your MCP Servers here (Issue #1)
+
+  📅 Mon, 26 Oct 2026 21:33:27 | From: Boardy Boardman <boardy@boardy.ai>                
+     Subj: Boardy Intro: Edison + Nikhil
+
+  📅 Mon, 26 Oct 2026 21:31:05 | From: Boardy Boardman <boardy@boardy.ai>                
+     Subj: ¿Probar ATC/UTA en agentes hospedados?
+
+  📅 Mon, 26 Oct 2026 21:30:23 | From: donotreply@sam.gov                                
+     Subj: SAM.gov | One-Time Password
+
+  📅 Mon, 26 Oct 2026 21:29:59 | From: donotreply@sam.gov                                
+     Subj: SAM.gov | One-Time Password
+
+  📅 Mon, 26 Oct 2026 21:26:10 | From: "Login.gov" <no-reply@login.gov>                  
+     Subj: Nuevo inicio de sesión y autenticación con su cuenta de Login.gov
+
+  📅 Mon, 26 Oct 2026 21:24:06 | From: "Login.gov" <no-reply@login.gov>                  
+     Subj: Su contraseña cambió
+
+  📅 Mon, 26 Oct 2026 21:23:16 | From: "Login.gov" <no-reply@login.gov>                  
+     Subj: Se solicitó restablecer la contraseña de su cuenta de Login.gov
+
+
+=== Correos desde 26-Oct-2026: 40 ===
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:51:17 -0500
+From: K S <witmer960@gmail.com>
+Subject: Re: AliceLabs LLC — Capabilities Packet + Project Discovery Questions
+--- BODY (first 3500 chars) ---
+Hello Edison,
+
+Thanks for your detailed explanation.
+I sent you my detailed collaboration content via this gmail.
+Honestly, I explained to you my exact state and what I am doing.
+I really want you to collaborate with me and help me.
+Thanks! You are really kind and cool.
+Please check the txt file and let me know what you think.
+I am prepared for all your questions that you are curious about.
+
+Kaito.
+
+On Mon, Oct 26, 2026 at 7:29 PM AliceLabs LLC <contacto@alicelabs.site>
+wrote:
+
+> Hi Kaito,
+>
+> Thanks for the quick reply, and for the kind words about the founder
+> replying
+> personally. You're right that I missed your earlier message to my Gmail
+> (eddyflores100@gmail.com) — I check that address rarely.
+> contacto@alicelabs.site
+> is the channel I monitor every day, so let's keep using this one.
+>
+> Let me be transparent with you up front, because I'd rather we find out now
+> whether this is a fit than waste your time on a call that doesn't go
+> anywhere.
+>
+> About me, personally:
+>
+> I am Edison Flores Guerra, the founder and sole principal of AliceLabs LLC.
+> The company is registered in Wyoming, USA, but I live and work from
+> Ecuador.
+> I run the entire business online — code, sales, support, deployments, all
+> of
+> it. The Wyoming LLC lets me contract with US and international clients from
+> anywhere in the world, which is exactly how I work.
+>
+> One honest constraint: my spoken English is basic. I read and write English
+> fluently (you can see this in my code, my GitHub, and the proposals I
+> send),
+> but a live video call in English is hard for me. For every client meeting
+> where English is the working language, I bring a human translator — a real
+> person, not a tool — who joins the call with me. She handles the spoken
+> translation in both directions while I take notes and answer in Spanish. It
+> has worked for every English-speaking client I have had so far.
+>
+> If a video call is a hard requirement on your side, I am happy to do it
+> with
+> the translator. If a video call is not strictly required, I'd rather we
+> work
+> this out by chat (email, Telegram, Slack, Discord — whichever you prefer).
+> Chat works better for me, and it leaves a written record we can both refer
+> back to. Please don't let language be the barrier that stops us from
+> working
+> together. I'd rather we agree on a working mode that fits both of us.
+>
+> About AliceLabs LLC, in case it helps you decide:
+>
+> - We are a Wyoming LLC, registered in 2024. Senior-only, no offshore
+> staffing,
+> no sub-contractors. I write the code and sign the contracts.
+> - We work fixed-fee by milestone. No hourly billing. You see what you pay
+> for
+> before you pay for it.
+> - We deliver WCAG 2.1/2.2 AA on every public-facing site, document our
+> accessibility testing, and can provide a W-9, Certificate of Insurance,
+> E-Verify compliance, and three client references on request.
+> - We work in English and Spanish.
+>
+> About my work, so you can verify what I'm telling you:
+>
+> My GitHub is https://github.com/eddyflores100-lang (131 public repos,
+> profile
+> location: Ecuador, bio: Founder, AliceLabs LLC). The organization account
+> is
+> https://github.com/alicelabs-llc (24 repos, "AI Agents, SaaS, Web/Mobile,
+> Security Research, GovTech | Wyoming, USA"). Please review whatever you
+> want
+> there before we move forward. Code, commits, and issues are public.
+>
+> The projects I'd highlight as the mos
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:11:43 -0500
+From: K S <witmer960@gmail.com>
+Subject: Re: AliceLabs LLC — Capabilities Packet + Project Discovery Questions
+--- BODY (first 3500 chars) ---
+Hi Edison,
+
+Hope you had a great weekend!
+
+It's King from Airtasker - I saw your reply, and honestly, it's pretty
+amazing that the founder took the time to respond. Really appreciate that.
+
+I sent you a message into your gmail(eddyflores100@gmail.com) a long time
+ago but it was not opened. Lol.
+
+I am an individual Software Engineer and I am looking for a
+developer(collaborator) for my business. My collaborator 's role will be
+interviewing with clients and it takes only 2 or 3 hours per week.
+
+I'd love to walk you through my suggestion idea in more detail over a video
+call. Whenever you have some free time, feel free to grab a slot here:
+
+https://calendly.com/futurelove200077/30min
+<https://l.gotourl.es/l/664cb88776b31737c99ea6788276312e9a2b4a25?u=14420718>
+
+Looking forward to hearing from you!
+
+Thanks,
+Kaito
+
+On Mon, Oct 26, 2026 at 7:05 PM AliceLabs LLC <contacto@alicelabs.site>
+wrote:
+
+> Hi,
+>
+> Thanks for reaching out via Airtasker — happy to send over our
+> capabilities packet.
+>
+> AliceLabs LLC is a Wyoming-registered web development and design company.
+> We build websites, web applications, content management systems, and visual
+> identity systems for government, institutional, and commercial clients
+> across the US, Canada, and Latin America.
+>
+> A few things to know about us up front, so you can decide if we're the
+> right fit:
+>
+> - We are a senior-only team. The person who writes your proposal is the
+> same person who writes your code. No hand-offs, no offshore staffing, no
+> sub-contractors.
+> - We work fixed-fee by milestone. No hourly billing. You see what you're
+> paying for before you pay for it.
+> - We deliver WCAG 2.1/2.2 AA on every public-facing site we build, and we
+> document our accessibility testing in the acceptance report.
+> - We are E-Verify compliant, can provide a W-9 and Certificate of
+> Insurance, and have three client references available on request.
+> - We work in English and Spanish. Spanish-language and bilingual EN/ES
+> implementations are part of our normal practice.
+>
+> I have attached our Capabilities & Discovery Packet as a PDF. It covers
+> who we are, what we build, how we work, five selected case studies, and a
+> company snapshot.
+>
+> The packet also includes Section 4 — a list of project discovery
+> questions. Those are the same questions we ask every client before quoting
+> a fixed fee. If you can answer as many as you can in writing, I will send
+> you a fixed-fee proposal within 48 hours.
+>
+> If you'd rather have a 30-minute call instead of writing, send me two or
+> three times that work for you and I'll confirm one by reply. Either path is
+> free.
+>
+> Quick context so I don't waste your time on the wrong quote:
+>
+> 1. What is the one-sentence goal of the project? (e.g. "launch a paid
+> course platform", "migrate a 12-year-old Drupal site to a modern CMS",
+> "build a customer portal that integrates with our CRM")
+> 2. Is there a fixed deadline driving this, or is the timeline flexible?
+> 3. Do you have a budget range already? I'll tell you honestly what we can
+> deliver inside that range and what we can't.
+> 4. Is this for yourself, your business, or a client of yours?
+>
+> Looking forward to your reply.
+>
+> Best,
+> Edison Flores Guerra
+> AliceLabs LLC
+> Wyoming, USA
+> contacto@alicelabs.site · alicelabs.site
+>
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:51:00 -0000
+From: PlanetBids<CustomerCare@planetbids.com>
+Subject: West Valley Water District Registration Confirmation
+--- BODY (first 3500 chars) ---
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="generator" content="Responsive Email Designer 3.0.1602">
+    <style id="vendor_styles">
+        html {
+            -ms-overflow-y: auto !important;
+        }
+
+        body {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table.radius td {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+        }
+
+        table.round td {
+            -webkit-border-radius: 500px;
+            -moz-border-radius: 500px;
+        }
+
+        table.columns td.element_connector,
+        td.element_connector {
+            width: 100% !important;
+            width: calc(100%) !important;
+            width: -webkit-calc(100%) !important;
+        }
+
+        div,
+        p,
+        a,
+        li,
+        td {
+            -webkit-text-size-adjust: none;
+        }
+
+        @media screen {
+            img {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300);
+        @media screen and (max-device-width: 600px),
+        screen and (max-width: 600px) {
+            table.body center {
+                min-width: 0px !important;
+            }
+            table.body .container {
+                max-width: 700px;
+                width: 100% !important;
+            }
+            table.body .container > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row {
+                width: 100% !important;
+                display: block !important;
+            }
+            table.body .row > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row::after {
+                content: " ";
+                display: table;
+                height: 0px;
+                clear: both;
+                visibility: hidden;
+            }
+            table.row > tbody > tr > td.align-center {
+                padding: 0px !important;
+            }
+            table.body .wrapper {
+                display: block !important;
+                float: none !important;
+                min-width: 0px !important;
+            }
+            table.body .columns,
+            table.body .column {
+                max-width: 700px !important;
+                table-layout: fixed !important;
+                float: left !important;
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+            table.body .columns td.element_connector,
+            table.body .column td.element_connector {
+                width: 100% !important;
+                min-width: 0px !important;
+            }
+            table.body .wrapper.first .columns,
+            table.body .w
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:50:59 -0000
+From: PlanetBids<CustomerCare@planetbids.com>
+Subject: West Valley Water District Registration Confirmation
+--- BODY (first 3500 chars) ---
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="generator" content="Responsive Email Designer 3.0.1602">
+    <style id="vendor_styles">
+        html {
+            -ms-overflow-y: auto !important;
+        }
+
+        body {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table.radius td {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+        }
+
+        table.round td {
+            -webkit-border-radius: 500px;
+            -moz-border-radius: 500px;
+        }
+
+        table.columns td.element_connector,
+        td.element_connector {
+            width: 100% !important;
+            width: calc(100%) !important;
+            width: -webkit-calc(100%) !important;
+        }
+
+        div,
+        p,
+        a,
+        li,
+        td {
+            -webkit-text-size-adjust: none;
+        }
+
+        @media screen {
+            img {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300);
+        @media screen and (max-device-width: 600px),
+        screen and (max-width: 600px) {
+            table.body center {
+                min-width: 0px !important;
+            }
+            table.body .container {
+                max-width: 700px;
+                width: 100% !important;
+            }
+            table.body .container > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row {
+                width: 100% !important;
+                display: block !important;
+            }
+            table.body .row > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row::after {
+                content: " ";
+                display: table;
+                height: 0px;
+                clear: both;
+                visibility: hidden;
+            }
+            table.row > tbody > tr > td.align-center {
+                padding: 0px !important;
+            }
+            table.body .wrapper {
+                display: block !important;
+                float: none !important;
+                min-width: 0px !important;
+            }
+            table.body .columns,
+            table.body .column {
+                max-width: 700px !important;
+                table-layout: fixed !important;
+                float: left !important;
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+            table.body .columns td.element_connector,
+            table.body .column td.element_connector {
+                width: 100% !important;
+                min-width: 0px !important;
+            }
+            table.body .wrapper.first .columns,
+            table.body .w
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:37:24 -0000
+From: PlanetBids<CustomerCare@planetbids.com>
+Subject: City of La Mesa Registration Confirmation
+--- BODY (first 3500 chars) ---
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="generator" content="Responsive Email Designer 3.0.1602">
+    <style id="vendor_styles">
+        html {
+            -ms-overflow-y: auto !important;
+        }
+
+        body {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table.radius td {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+        }
+
+        table.round td {
+            -webkit-border-radius: 500px;
+            -moz-border-radius: 500px;
+        }
+
+        table.columns td.element_connector,
+        td.element_connector {
+            width: 100% !important;
+            width: calc(100%) !important;
+            width: -webkit-calc(100%) !important;
+        }
+
+        div,
+        p,
+        a,
+        li,
+        td {
+            -webkit-text-size-adjust: none;
+        }
+
+        @media screen {
+            img {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300);
+        @media screen and (max-device-width: 600px),
+        screen and (max-width: 600px) {
+            table.body center {
+                min-width: 0px !important;
+            }
+            table.body .container {
+                max-width: 700px;
+                width: 100% !important;
+            }
+            table.body .container > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row {
+                width: 100% !important;
+                display: block !important;
+            }
+            table.body .row > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row::after {
+                content: " ";
+                display: table;
+                height: 0px;
+                clear: both;
+                visibility: hidden;
+            }
+            table.row > tbody > tr > td.align-center {
+                padding: 0px !important;
+            }
+            table.body .wrapper {
+                display: block !important;
+                float: none !important;
+                min-width: 0px !important;
+            }
+            table.body .columns,
+            table.body .column {
+                max-width: 700px !important;
+                table-layout: fixed !important;
+                float: left !important;
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+            table.body .columns td.element_connector,
+            table.body .column td.element_connector {
+                width: 100% !important;
+                min-width: 0px !important;
+            }
+            table.body .wrapper.first .columns,
+            table.body .w
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:37:24 -0000
+From: PlanetBids<CustomerCare@planetbids.com>
+Subject: City of La Mesa Registration Confirmation
+--- BODY (first 3500 chars) ---
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="generator" content="Responsive Email Designer 3.0.1602">
+    <style id="vendor_styles">
+        html {
+            -ms-overflow-y: auto !important;
+        }
+
+        body {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table.radius td {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+        }
+
+        table.round td {
+            -webkit-border-radius: 500px;
+            -moz-border-radius: 500px;
+        }
+
+        table.columns td.element_connector,
+        td.element_connector {
+            width: 100% !important;
+            width: calc(100%) !important;
+            width: -webkit-calc(100%) !important;
+        }
+
+        div,
+        p,
+        a,
+        li,
+        td {
+            -webkit-text-size-adjust: none;
+        }
+
+        @media screen {
+            img {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300);
+        @media screen and (max-device-width: 600px),
+        screen and (max-width: 600px) {
+            table.body center {
+                min-width: 0px !important;
+            }
+            table.body .container {
+                max-width: 700px;
+                width: 100% !important;
+            }
+            table.body .container > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row {
+                width: 100% !important;
+                display: block !important;
+            }
+            table.body .row > tbody > tr > td:not(.wrapper) {
+                min-width: 0px !important;
+            }
+            table.body .row::after {
+                content: " ";
+                display: table;
+                height: 0px;
+                clear: both;
+                visibility: hidden;
+            }
+            table.row > tbody > tr > td.align-center {
+                padding: 0px !important;
+            }
+            table.body .wrapper {
+                display: block !important;
+                float: none !important;
+                min-width: 0px !important;
+            }
+            table.body .columns,
+            table.body .column {
+                max-width: 700px !important;
+                table-layout: fixed !important;
+                float: left !important;
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+            table.body .columns td.element_connector,
+            table.body .column td.element_connector {
+                width: 100% !important;
+                min-width: 0px !important;
+            }
+            table.body .wrapper.first .columns,
+            table.body .w
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:26:50 +0000
+From: PlanetBids Login <login@planetbids.com>
+Subject: Your one-time code for PlanetBids is 872870
+--- BODY (first 3500 chars) ---
+Your login request to Identities
+Your one-time login code for Vendors on Identities is
+872870
+Your code expires in 10 minutes.
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:13:05 +0000
+From: Bonfire Support <support@gobonfire.com>
+Subject: Step 2 - Complete Setup | Euna Supplier Network
+--- BODY (first 3500 chars) ---
+Bonfire Premium Vendor (Bonfire)
+
+Complete Your Account Setup
+
+*************************************
+Almost done!
+*************************************
+
+
+
+Please paste this link into your browser to complete setting up your account: 
+https://vendor.bonfirehub.com/completeSetup?token=28a6765ff215c4022181c814236cf028
+
+
+Happy bidding!
+
+The Euna Team (formerly Bonfire)
+
+---
+
+You were sent this email because you signed up for a Euna Supplier subscription. If you received this email by mistake, please ignore it.
+
+© 2025 Euna Supplier Network. All rights reserved.
+
+Euna Solutions
+603 Michigan Dr Unit 1, Oakville, ON L6L 0G2
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 19:10:37 +0000 (UTC)
+From: PlanetBids Login <login@planetbids.com>
+Subject: Your one-time login code for PlanetBids is 945225
+--- BODY (first 3500 chars) ---
+Welcome to Identities
+Your one-time code to finish creating your account for Vendors on Identities is
+945225
+Your code expires in 10 minutes.
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 18:54:45 +0000 (UTC)
+From: OpenGov Procurement Team <procurement-notifications@opengov.com>
+Subject: OpenGov Procurement Account Activated!
+--- BODY (first 3500 chars) ---
+Thank you for completing account registration! Your account is confirmed and ready for use.
+
+To ensure you continue receiving emails from us, please add procurement-support@opengov.com and procurement-notifications@opengov.com to your contacts or safe senders list.
+
+Cheers,
+OpenGov Procurement Team
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 18:52:54 +0000 (UTC)
+From: OpenGov Procurement Team <procurement-notifications@opengov.com>
+Subject: Welcome to OpenGov Procurement!
+--- BODY (first 3500 chars) ---
+Thank you for signing up with OpenGov Procurement!
+
+Please follow the link below to complete registration and activate your account:
+https://url856.opengov.com/ls/click?upn=u001.5qmbCqwQOTPvopPQAW5qNvHCEUBx86lrvxbKofnX-2B2RM88IKocHczxw3YIjCZ6bxIvHo3dI7koLKXjKF-2F3xU6XeQQ9Tj-2Fc1JlGK32GcZt3wmShMX05S3cmyqlI9kBkVVX1-2FS0yMqbYY2SY8xm2DEqw-3D-3D0xIY_qqk8pzmFTqXgUqmijN8NLiPQGvurKZnX6zbpRH6fZAGqV6E8unflfBaD547EooNSCKrvVgCyMj5wfRpZCssxocxbhBxBGdvA6OaMiyR28Ma-2FIvGspZDOYx-2Bymx4C-2FAVmg11KxYxiiNgb0peKBI4wbU47QXqeFEHFigy1AO-2BKfaj6VUuE3i82RHeTvTPIqUaNQl8b3YXxK1GIziFBk2BFrMsg4cxHfGTSXPHdidIBfUnuLfjGagxrMUu3pADQF2-2BzkONm9WDr2sz-2F3S3rTAqISkN8H3F3rQDvacEIypgDt-2BiVgm9pJBq2wxT-2BYlB8A3nf59cdlfmy-2B4XFsZnlgCbkowGVkY7znzNnHmyDaK-2FFDCo8r11Xs3-2B-2FObFd2nTs3gmn2x1qF4z1hMcDABhLY9nLiFm7YhREQdrQAMaCyxzpGTaXb2ZyEO15CJCEGsCz4ji-2BAAlM0JnkVHKDukQfEpV5KA-3D-3D
+To ensure you continue receiving emails from us, please add procurement-support@opengov.com and procurement-notifications@opengov.com to your contacts or safe senders list.
+
+Cheers,
+OpenGov Procurement Team
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 18:50:02 +0000
+From: Luz Granados <lgranados@wvwd.org>
+Subject: RE: Proposal: Website Redesign & Maintenance — AliceLabs LLC
+--- BODY (first 3500 chars) ---
+Thank you for your interest. Please submit all Questions and proposals through our PlanetBids Portal online.
+Link to Solicitation
+https://vendors.planetbids.com/portal/28789/bo/bo-detail/147647 <https://vendors.planetbids.com/portal/28789/bo/bo-detail/147647>
+
+
+
+From: AliceLabs LLC <contacto@alicelabs.site>
+Sent: Sunday, October 25, 2026 10:07 AM
+To: Luz Granados <lgranados@wvwd.org>
+Subject: Proposal: Website Redesign & Maintenance — AliceLabs LLC
+
+You don't often get email from contacto@alicelabs.site<mailto:contacto@alicelabs.site>. Learn why this is important<https://aka.ms/LearnAboutSenderIdentification>
+Proposal for West Valley Water
+
+Dear West Valley Water team,
+
+We are AliceLabs LLC, a Wyoming-registered web development company. We are submitting our proposal in response to your procurement notice.
+
+What we do
+
+  *   Website design & development (WordPress, custom)
+  *   Visual identity & branding
+  *   CMS implementation & migration
+  *   WCAG 2.1 AA accessibility compliance
+  *   Ongoing maintenance & support
+
+About AliceLabs
+
+AliceLabs LLC (Wyoming, USA) with team in Ecuador. W-9, insurance, E-Verify, and references available upon request.
+
+Next Steps
+
+  1.  Reply to schedule a 30-min consultation call
+  2.  We deliver formal proposal + W-9 within 48 hours
+  3.  Contact: contacto@alicelabs.site<mailto:contacto@alicelabs.site> · marketnow.site
+
+AliceLabs LLC · Wyoming, USA · Reply "unsubscribe" to stop
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 18:49:55 +0000
+From: Luz Granados <lgranados@wvwd.org>
+Subject: RE: Proposal: Website Redesign & Maintenance — AliceLabs LLC
+--- BODY (first 3500 chars) ---
+Thank you for your interest. Please submit all Questions and proposals through our PlanetBids Portal online.
+Link to Solicitation
+https://vendors.planetbids.com/portal/28789/bo/bo-detail/147647 <https://vendors.planetbids.com/portal/28789/bo/bo-detail/147647>
+
+
+
+From: AliceLabs LLC <contacto@alicelabs.site>
+Sent: Sunday, October 25, 2026 11:18 AM
+To: Luz Granados <lgranados@wvwd.org>
+Subject: Proposal: Website Redesign & Maintenance — AliceLabs LLC
+
+You don't often get email from contacto@alicelabs.site<mailto:contacto@alicelabs.site>. Learn why this is important<https://aka.ms/LearnAboutSenderIdentification>
+West Valley Water District
+
+Proposal from AliceLabs LLC
+
+Deadline: November 20, 2026 · Budget: To be confirmed upon RFP review
+
+
+Dear L. Granados,
+
+We are pleased to submit our proposal in response to your procurement notice. AliceLabs LLC is a Wyoming-registered web development and design company specializing in government, institutional, and commercial projects.
+
+Project Understanding
+
+Website redesign, accessibility compliance, ongoing maintenance, and user-facing functionality (bill payment, usage dashboard, outage map) for a California water district.
+
+Requirements We Can Meet
+
+Website redesign, accessibility, maintenance, user functions
+
+Our Proposal
+
+$25,000
+
+Timeline and detailed scope to be confirmed upon full RFP review.
+
+Why AliceLabs
+
+We have experience with utility district websites, online bill payment integration, water usage dashboards, outage communication systems, and public sector accessibility compliance.
+
+AliceLabs LLC is registered in Wyoming, USA. We provide W-9, Certificate of Insurance, E-Verify compliance, and client references upon request.
+
+1. Reply to schedule a 30-minute consultation call
+2. We deliver a formal proposal with W-9, references, and portfolio within 48 hours
+3. Contact: contacto@alicelabs.site<mailto:contacto@alicelabs.site> · alicelabs.site<https://alicelabs.site/>
+4. Deadline: November 20, 2026
+
+AliceLabs LLC
+
+Wyoming, USA · Government Contractor · E-Verify Compliant
+
+📧 contacto@alicelabs.site<mailto:contacto@alicelabs.site> · 🌐 alicelabs.site
+
+Reply "unsubscribe" to stop receiving emails
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 18:49:28 +0000
+From: Luz Granados <lgranados@wvwd.org>
+Subject: RE: Proposal: Website Redesign & Maintenance — AliceLabs LLC
+--- BODY (first 3500 chars) ---
+Thank you for your interest. Please submit all Questions and proposals through our PlanetBids Portal online.
+Link to Solicitation
+https://vendors.planetbids.com/portal/28789/bo/bo-detail/147647 <https://vendors.planetbids.com/portal/28789/bo/bo-detail/147647>
+
+
+From: AliceLabs LLC <contacto@alicelabs.site>
+Sent: Sunday, October 25, 2026 11:53 AM
+To: Luz Granados <lgranados@wvwd.org>
+Subject: Proposal: Website Redesign & Maintenance — AliceLabs LLC
+
+You don't often get email from contacto@alicelabs.site<mailto:contacto@alicelabs.site>. Learn why this is important<https://aka.ms/LearnAboutSenderIdentification>
+West Valley Water
+
+Proposal from AliceLabs LLC
+
+
+Dear West Valley Water team,
+
+We are AliceLabs LLC, a Wyoming-registered web development and design company. We are submitting our proposal in response to your procurement notice.
+
+We specialize in government, institutional, and commercial web projects with expertise in WordPress, visual identity, CMS implementation, WCAG 2.1/2.2 AA accessibility, content migration, and ongoing maintenance.
+
+What We Do
+
+  *   Website design & development (WordPress, custom)
+  *   Visual identity, branding, and logo design
+  *   CMS implementation & content migration
+  *   WCAG 2.1/2.2 AA accessibility compliance
+  *   E-commerce (WooCommerce, Shopify)
+  *   Ongoing maintenance & technical support
+  *   Staff training & documentation
+
+About AliceLabs
+
+AliceLabs LLC is registered in Wyoming, USA. We provide W-9, Certificate of Insurance, E-Verify compliance, and client references upon request. We understand government procurement processes and can work within your fiscal year requirements.
+
+1. Reply to schedule a 30-minute consultation call
+2. We deliver a formal proposal with W-9, references, and portfolio within 48 hours
+3. Contact: contacto@alicelabs.site<mailto:contacto@alicelabs.site> · alicelabs.site<https://alicelabs.site/>
+
+AliceLabs LLC
+
+Wyoming, USA · Government Contractor · E-Verify Compliant
+
+📧 contacto@alicelabs.site<mailto:contacto@alicelabs.site> · 🌐 alicelabs.site
+
+Reply "unsubscribe" to stop receiving emails
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 14:07:44 +0000
+From: Dan Coldiron <Dan.Coldiron@cityofloveland.org>
+Subject: RE: [External] Proposal: Website Migration & Consolidation — AliceLabs LLC
+--- BODY (first 3500 chars) ---
+All communication during this phase of the project must be conducted through the BidNet Direct portal.  As well, responses to the RFP must be received through the portal.
+
+Thanks, Dan!
+
+[City of Loveland logo]<https://www.lovgov.org/>
+Dan Coldiron
+Chief Information Officer, Information Technology Department
+
+Office: 970-962-2332
+
+[Follow us on Facebook]<https://www.facebook.com/CityofLovelandCO/>[Follow us on Instagram]<https://www.instagram.com/cityofloveland/>[Follow us on LinkedIn]<https://www.linkedin.com/company/cityofloveland>[Follow us on Nextdoor]<https://nextdoor.com/agency-detail/co/loveland/city-of-loveland/>[Follow us on X, formerly known as Twitter]<https://twitter.com/CityofLoveland>[Follow us on YouTube]<https://www.youtube.com/user/CityofLoveland>
+
+
+From: AliceLabs LLC <contacto@alicelabs.site>
+Sent: Sunday, October 25, 2026 12:52 PM
+To: Dan Coldiron <Dan.Coldiron@cityofloveland.org>
+Subject: [External] Proposal: Website Migration & Consolidation — AliceLabs LLC
+
+Loveland CO
+
+Proposal from AliceLabs LLC
+
+
+Dear Loveland CO team,
+
+We are AliceLabs LLC, a Wyoming-registered web development and design company. We are submitting our proposal in response to your procurement notice.
+
+We specialize in government, institutional, and commercial web projects with expertise in WordPress, visual identity, CMS implementation, WCAG 2.1/2.2 AA accessibility, content migration, and ongoing maintenance.
+
+What We Do
+
+  *   Website design & development (WordPress, custom)
+  *   Visual identity, branding, and logo design
+  *   CMS implementation & content migration
+  *   WCAG 2.1/2.2 AA accessibility compliance
+  *   E-commerce (WooCommerce, Shopify)
+  *   Ongoing maintenance & technical support
+  *   Staff training & documentation
+
+About AliceLabs
+
+AliceLabs LLC is registered in Wyoming, USA. We provide W-9, Certificate of Insurance, E-Verify compliance, and client references upon request. We understand government procurement processes and can work within your fiscal year requirements.
+
+1. Reply to schedule a 30-minute consultation call
+2. We deliver a formal proposal with W-9, references, and portfolio within 48 hours
+3. Contact: contacto@alicelabs.site<mailto:contacto@alicelabs.site> · alicelabs.site<https://urldefense.com/v3/__https:/alicelabs.site__;!!HxSnvVm2WdNPEuU!oHm_IZCxw-0ucWCIJ8gNw6h_BYJUEstEa0f7RTG0TbRJ2i6BsKbkCNRiIJR_BQ_nL_PccNqMDC9jqyFPjZsth2zAwLKCzD3-$>
+
+AliceLabs LLC
+
+Wyoming, USA · Government Contractor · E-Verify Compliant
+
+📧 contacto@alicelabs.site<mailto:contacto@alicelabs.site> · 🌐 alicelabs.site
+
+Reply "unsubscribe" to stop receiving emails
+--- END ---
+
+========================================================================
+📅 Date: Mon, 26 Oct 2026 04:25:19 +0000
+From: Procurement WWF <Procurement.WWF@wwf.id>
+Subject: RE: Proposal: WebGIS & Digital Monitoring Platform — AliceLabs LLC
+--- BODY (first 3500 chars) ---
+Dear AliceLabs LLC Team,
+
+Thank you for contacting us and expressing your interest.
+
+In the process of preparing and submitting your proposal, you are responsible for ensuring that the proposal is sent to the designated email address before the applicable deadline.
+
+The deadline for proposal submission is November 2, 2026, at 15:00 GMT+7.
+
+Please ensure that all required supporting documents are signed and stamped, saved in PDF format, and free from viruses or file corruption that could hinder the process of opening or reviewing the documents.
+
+WWF-Indonesia only accepts proposal submissions via email. Hard copy documents will not be accepted.
+
+We look forward to receiving your proposal and thank you for your interest in procurement opportunities at WWF-Indonesia.
+
+Thank you.
+
+Best Regards.
+Procurement WWF-Indonesia
+
+From: AliceLabs LLC <contacto@alicelabs.site>
+Sent: Monday, October 26, 2026 2:14 AM
+To: Procurement WWF <Procurement.WWF@wwf.id>
+Subject: Proposal: WebGIS & Digital Monitoring Platform — AliceLabs LLC
+
+You don't often get email from contacto@alicelabs.site<mailto:contacto@alicelabs.site>. Learn why this is important<https://aka.ms/LearnAboutSenderIdentification>
+WWF Indonesia
+
+Proposal from AliceLabs LLC
+
+
+Dear WWF Indonesia team,
+
+We are AliceLabs LLC, a Wyoming-registered web development and design company. We are submitting our proposal in response to your procurement notice.
+
+We specialize in government, institutional, and commercial projects with expertise in WordPress, visual identity, CMS implementation, WCAG accessibility, AI/ML, and ongoing maintenance.
+
+Project Understanding
+
+WebGIS development, digital monitoring platform SoESIS
+
+What We Do
+
+  *   Website design & development (WordPress, custom)
+  *   Visual identity, branding, and logo design
+  *   CMS implementation & content migration
+  *   WCAG 2.1/2.2 AA accessibility compliance
+  *   AI chatbots, automation, and software integration
+  *   Ongoing maintenance & technical support
+  *   Staff training & documentation
+
+1. Reply to schedule a 30-minute consultation call
+2. We deliver a formal proposal with W-9, references, and portfolio within 48 hours
+3. Contact: contacto@alicelabs.site<mailto:contacto@alicelabs.site> · alicelabs.site<https://alicelabs.site/>
+
+AliceLabs LLC
+
+Wyoming, USA · Government Contractor · E-Verify Compliant
+
+📧 contacto@alicelabs.site<mailto:contacto@alicelabs.site> · 🌐 alicelabs.site
+
+Reply "unsubscribe" to stop receiving emails
+--- END ---

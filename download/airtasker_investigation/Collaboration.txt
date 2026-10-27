@@ -1,0 +1,49 @@
+Let me start by sharing a little about my background, what I am doing, and what I am trying to achieve.
+
+I am an individual software developer(AI and Full-Stack) and have been working as a freelancer. So far, I have earned some money through freelancing, but I want to grow much further. Recently, I realized there may be a better approach compared with the way I have worked until now.
+
+To be honest, most of my previous clients have been from Asia. As you know, many Asian clients have smaller budgets compared with American clients, so my earning potential has been limited. Because of that, I started thinking about working more with clients from America, where there are more opportunities and higher budgets.
+
+However, I am an Asia-based freelancer. Many American clients prefer working with American developers because of timezone, communication, and easier collaboration. Because of this, American freelancers usually have an advantage in getting hired, and their hourly rates can be much higher compared with freelancers from other countries.
+
+So my idea is to collaborate with someone in America. You would handle client interviews, video calls, and communication when required, while I would handle all development work and deliver the technical side of the projects.
+
+This would only require around 2–3 hours per week from you, and depending on your involvement, you could earn around $3,000–$4,000 per month.
+
+Do you know about freelancing sites like Handshake, Toptal, Outlier, Snorkel, Mercor, AfterQuery? Those sites is a matchmaking platform where clients post jobs and freelancers apply for those jobs or client finds freelancers for their projects. I have noticed that American freelancers can get opportunities more easily because many clients prefer working with someone located in America. Of course, I understand that building a strong profile and getting consistent jobs will take some time.
+
+The process is simple:   
+You create an freelancing account.
+I will log into that account using remote desktop tools like AnyDesk and TeamView, and work on freelancing site using your account.
+And then you should have a video call and interview with clients when they requested. It won’t take up much time. So you just spend only 2 hours per week.
+As I mentioned before, I will handle all development work on my end and your role is to communicate with clients and companies when a video meeting or interview is required. Text-based communication will be managed by me.
+
+That main reasons for Account Blocks on Upwork is because of IP Address Mismatch
+If there’s a mismatch between the login location and the registered address, that site’s security system may flag or block the account. This is the most important problem.
+To prevent any of these issues, my plan is to access your account only via your PC using software like AnyDesk or TeamViewer.
+Following this way, we stay aligned with your registered location.
+By operating from your device, we avoid triggering any security measures that could impact your account.
+This approach is designed to protect your account, maintain platform compliance, and ensure a sustainable collaboration between us.
+
+There is one important thing I want to explain. Those sites' security system is very strict. If there is a mismatch between the login location, account information, and activity patterns, the account may be flagged or restricted. Because of this, I need to work through a dedicated laptop for our collaboration instead of using my own computer.
+
+I do not mean accessing your personal computer or personal information. We can prepare a separate laptop only for this collaboration. It does not need to be a brand-new laptop; a normal working laptop is enough. You can monitor my activities on that laptop at any time, so everything is transparent.
+
+The reason we need a shared Gmail account is also for collaboration. I cannot use your personal Gmail because I need to monitor job notifications, client messages, and those sites-related activities in real time. A shared Gmail account allows us to keep all collaboration-related communication separate from your personal accounts and makes the workflow easier to manage.
+
+The collaboration steps would be:
+
+1. We prepare a separate laptop that will only be used for this collaboration.
+2. We create a new shared Gmail account that will be used only for our collaboration.
+3. We create an freelancing sites account using this shared Gmail account. When creating the account, we can discuss the profile information together because your technical background and my technical background are different. Your profile can focus on your strengths, while I can support the technical side with my full-stack and AI experience.
+4. After the account is created, I will handle the daily freelancing site activities, such as finding opportunities, preparing technical responses, and managing the development side. You will always be able to monitor my activities.
+
+My goal is not to do anything unusual or misuse your account. I want to create a transparent long-term partnership where you handle the client relationship side and I handle the technical execution.
+
+As I said before, all payment mothod will be managed by you and I have to receive my profit from you.
+
+In total, I am a Japanese Engineer. by this reason I can't log into many freelancing accounts and has many limitions to earn some money. Now US is the most developed and powerful country in AI and IT.
+So many accounts and sites so that I can get great amount money requires US developers and all clients are from the US. By this, I want to collaborate with US based developer. And also my rate is very low compared with US based developers, just by the reason of Japanese, not American.
+
+Honestly, I want to collaborate with you and want you to help and have a great partnership.
+

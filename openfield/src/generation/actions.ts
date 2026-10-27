@@ -1,45 +1,31 @@
 /**
- * Client-side generation actions — for static export (GitHub Pages, Cloudflare Pages static).
- *
- * In static mode, we can only use providers that:
- * 1. Don't require server-side API keys (no HF, fal.ai, Kling, MiniMax, Suno)
- * 2. Allow CORS from the browser (Pollinations does — the URL IS the image)
- *
- * For non-Pollinations models, we throw a clear error explaining why.
+ * Client-side generation actions for static export (Cloudflare Pages / GitHub Pages).
+ * Only Pollinations models work without a backend proxy.
+ * Settings page (/settings) lets users manage all API keys for future dynamic deploy.
  */
-
 import type { QueuedRequest, GenerationResult } from "@/providers";
 import { buildPollinationsImageUrl } from "@/providers/pollinations";
 
 const CREDENTIALS_KEY = "openfield_creds_static";
 
-type StoredCreds = {
-  hfToken?: string;
-  falKey?: string;
-  klingJwt?: string;
-  minimaxKey?: string;
-  sunoToken?: string;
-};
-
 export class MissingCredentialsError extends Error {
   constructor() {
     super(
-      "This model requires a Node.js runtime (HuggingFace, fal.ai, Kling, MiniMax, Suno). On static hosting (GitHub Pages), only Pollinations models work without a backend.",
+      "This model requires a Node.js runtime. On static hosting, only Pollinations models work. Deploy with Vercel/Netlify/Cloudflare Workers to use all 28 models.",
     );
     this.name = "MissingCredentialsError";
   }
 }
+
+type StoredCreds = Record<string, string>;
 
 export async function savePlatformCredentials(data: unknown): Promise<void> {
   if (typeof window === "undefined") return;
   const stored = readStored() ?? {};
   const incoming = data as Record<string, unknown>;
   const merged: StoredCreds = { ...stored };
-  for (const key of ["hfToken", "falKey", "klingJwt", "minimaxKey", "sunoToken"] as const) {
-    const v = incoming[key] ?? incoming[key.toLowerCase()];
-    if (typeof v === "string" && v.trim()) {
-      merged[key] = v.trim();
-    }
+  for (const [k, v] of Object.entries(incoming)) {
+    if (typeof v === "string" && v.trim()) merged[k] = v.trim();
   }
   window.localStorage.setItem(CREDENTIALS_KEY, JSON.stringify(merged));
 }
@@ -59,11 +45,6 @@ export async function listStoredProviders(): Promise<string[]> {
   return Object.keys(stored);
 }
 
-/**
- * In static mode, only Pollinations can be called directly from the browser
- * (the URL itself returns the image bytes). All other providers require a
- * backend proxy to keep API keys safe.
- */
 export async function submitGeneration(plane: {
   model: string;
   prompt: { text: string };
@@ -72,11 +53,10 @@ export async function submitGeneration(plane: {
   const modelId = plane.model;
   const promptText = plane.prompt.text;
 
-  // Only Pollinations models are supported in static mode
+  // Only Pollinations models supported in static mode
   if (!modelId.startsWith("pollinations-")) {
     throw new Error(
-      `Model "${modelId}" requires a backend runtime. On static hosting, only Pollinations models work. ` +
-        `Deploy with a Node.js runtime (Vercel/Netlify/Cloudflare Workers) to use this model.`,
+      `Model "${modelId}" requires a backend runtime. On static hosting, only Pollinations models work. Visit /settings to get API keys for other providers, then deploy with a Node.js runtime.`,
     );
   }
 
@@ -122,10 +102,6 @@ const ASPECT_TO_DIMENSIONS: Record<string, { width: number; height: number }> = 
   "2:3": { width: 720, height: 1080 },
 };
 
-/**
- * In static mode, results are immediately "completed" because the statusUrl
- * IS the image URL — the browser fetches it on render.
- */
 export async function getGenerationStatuses(data: unknown): Promise<Array<GenerationResult>> {
   const payload = data as { requests: Array<QueuedRequest> };
   if (!Array.isArray(payload.requests) || payload.requests.length === 0) {

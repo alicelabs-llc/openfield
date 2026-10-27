@@ -22,3 +22,10 @@ tsconfig.tsbuildinfo
 .env
 .env.*
 !.env.example
+
+# OpenNext / Cloudflare build artifacts
+.open-next/
+.vercel/
+
+# Wrangler
+.wrangler/

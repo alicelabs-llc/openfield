@@ -1,0 +1,139 @@
+From: contacto@alicelabs.site
+To: witmer960@gmail.com
+Subject: Re: AliceLabs LLC — Capabilities Packet + Project Discovery Questions
+
+Hi Kaito,
+
+Thanks for the quick reply, and for the kind words about the founder replying
+personally. You're right that I missed your earlier message to my Gmail
+(eddyflores100@gmail.com) — I check that address rarely. contacto@alicelabs.site
+is the channel I monitor every day, so let's keep using this one.
+
+Let me be transparent with you up front, because I'd rather we find out now
+whether this is a fit than waste your time on a call that doesn't go anywhere.
+
+About me, personally:
+
+I am Edison Flores Guerra, the founder and sole principal of AliceLabs LLC.
+The company is registered in Wyoming, USA, but I live and work from Ecuador.
+I run the entire business online — code, sales, support, deployments, all of
+it. The Wyoming LLC lets me contract with US and international clients from
+anywhere in the world, which is exactly how I work.
+
+One honest constraint: my spoken English is basic. I read and write English
+fluently (you can see this in my code, my GitHub, and the proposals I send),
+but a live video call in English is hard for me. For every client meeting
+where English is the working language, I bring a human translator — a real
+person, not a tool — who joins the call with me. She handles the spoken
+translation in both directions while I take notes and answer in Spanish. It
+has worked for every English-speaking client I have had so far.
+
+If a video call is a hard requirement on your side, I am happy to do it with
+the translator. If a video call is not strictly required, I'd rather we work
+this out by chat (email, Telegram, Slack, Discord — whichever you prefer).
+Chat works better for me, and it leaves a written record we can both refer
+back to. Please don't let language be the barrier that stops us from working
+together. I'd rather we agree on a working mode that fits both of us.
+
+About AliceLabs LLC, in case it helps you decide:
+
+- We are a Wyoming LLC, registered in 2024. Senior-only, no offshore staffing,
+  no sub-contractors. I write the code and sign the contracts.
+- We work fixed-fee by milestone. No hourly billing. You see what you pay for
+  before you pay for it.
+- We deliver WCAG 2.1/2.2 AA on every public-facing site, document our
+  accessibility testing, and can provide a W-9, Certificate of Insurance,
+  E-Verify compliance, and three client references on request.
+- We work in English and Spanish.
+
+About my work, so you can verify what I'm telling you:
+
+My GitHub is https://github.com/eddyflores100-lang (131 public repos, profile
+location: Ecuador, bio: Founder, AliceLabs LLC). The organization account is
+https://github.com/alicelabs-llc (24 repos, "AI Agents, SaaS, Web/Mobile,
+Security Research, GovTech | Wyoming, USA"). Please review whatever you want
+there before we move forward. Code, commits, and issues are public.
+
+The projects I'd highlight as the most relevant:
+
+1. universal-trust-adapter (https://github.com/alicelabs-llc/universal-trust-adapter)
+   — ATC/1.0 protocol: Ed25519-signed trust cards for AI agents, RFC 8785 JCS
+   canonicalization, ten verification controls, live x402 payment endpoint in
+   USDC on Base. This is the core product of AliceLabs right now.
+
+2. MarketNow (https://github.com/eddyflores100-lang/marketnow) — security
+   infrastructure for AI agents: 71,000+ MCP skills indexed, Sentinel-scanned,
+   evidence-based trust scoring. Free MCP API and a paid tier.
+
+3. VRFKYC (https://github.com/eddyflores100-lang/vrfkyc) — global AML,
+   sanctions, PEP and adverse-media screening API with MCP integration.
+   Compliance-grade output for onboarding workflows.
+
+4. Alethech (https://github.com/eddyflores100-lang/alethech) — verifiable
+   agent execution protocol: Ed25519-signed memory, hash-linked DAG, key
+   rotation with reachability guarantee. Local-first, zero-lock-in.
+
+5. SLOTH / SlothPay (https://github.com/eddyflores100-lang/sloth and
+   /slothpay) — overnight AI agent running on a 1B open-weight model on CPU,
+   with an x402 payment gatekeeper using ATC/1.0 trust verification. Built
+   for Hacktoberfest 2026.
+
+A few other things in flight: mailhand-aws-cds (agentic email code review via
+AWS SES + Bedrock, submitted to the AWS CDS Agentic AI Partner Hackathon on
+Oct 28), and alethech-agent-vault (verifiable agent execution on Vultr,
+submitted to the Vultr Agent Rush Hackathon Nov 3-8).
+
+About your specific ask — a developer (collaborator) role, 2-3 hours per week,
+interviewing with clients:
+
+I have some questions before I commit to anything, and I'd rather ask them now
+than after a call. I am writing them here so you can answer by email if you
+prefer:
+
+1. When you say "interviewing with clients," can you describe what those
+   interviews look like in practice? Are they sales discovery calls,
+   technical scoping calls, or ongoing client management? Who schedules
+   them — you or me?
+
+2. Are the clients yours (i.e. you bring them and I represent your business),
+   or are they AliceLabs clients that I bring and you help me close? The
+   working model is very different in each case, and so is the compensation
+   structure.
+
+3. What is the compensation model you have in mind? The Airtasker listing
+   showed $1,500 USD with a $223.50 service fee. Is that a flat fee per
+   client closed, a per-hour rate, a monthly retainer, or a commission on
+   closed work? I work fixed-fee by milestone; hourly doesn't work for me.
+
+4. Are the interviews in English, Spanish, or both? If English, my
+   translator joins — please confirm you're okay with that, because some
+   clients are not.
+
+5. What does "2-3 hours per week" translate to in concrete calls? Is it one
+   30-minute call per week, four calls per week, or one longer session? I
+   need to know the rhythm before I block the time.
+
+6. Do you need me to sign any document, NDA, or contract before we start?
+   If yes, please send it as a PDF attached to your reply and I will review
+   it before our next step. I will not sign anything under time pressure
+   during a video call.
+
+7. Are you an individual or a registered business? I am a registered LLC
+   and I invoice through my company. If you are an individual, that's fine —
+   I just need to know how to structure the contract.
+
+If you'd rather answer these on a 30-minute call, my translator can join.
+Pick any slot on the Calendly link you sent and reply with the chosen time,
+and I will confirm. If you'd rather answer by email, just reply here — I
+usually respond within one business day.
+
+Either way, looking forward to it. The work sounds interesting if the model
+fits. I just want to make sure we both know what we're signing up for before
+either of us blocks time.
+
+Best,
+Edison Flores Guerra
+Founder, AliceLabs LLC
+Wyoming, USA · operating from Ecuador
+contacto@alicelabs.site · alicelabs.site
+GitHub: https://github.com/eddyflores100-lang · https://github.com/alicelabs-llc

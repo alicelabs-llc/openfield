@@ -115,6 +115,13 @@ export function toPlatform(plane: GenerationPlane): ProviderRequest {
         tags: str(plane, "tags") || undefined,
       };
 
+    case "openrouter":
+      return {
+        provider: "openrouter",
+        model: model.provider.modelId,
+        prompt,
+      };
+
     default: {
       const exhaustive: never = model.provider;
       throw new Error(`Provider ${(exhaustive as { provider: string }).provider} not implemented`);

@@ -1,21 +1,19 @@
 import type { ModelEntry } from "./types";
 
 /* ============================================================================
- * POLLINATIONS — 100% free, no API key, no signup
+ * POLLINATIONS — 100% FREE, no signup, no API key, no auth.
+ * Anonymous tier works for IMAGE only (5 models). Text/Audio/Video requires
+ * a free pollen key (https://enter.pollinations.ai).
  * ==========================================================================*/
 
 const pollinationsFlux: ModelEntry = {
   id: "pollinations-flux",
   surface: "image",
   label: "Flux (Pollinations)",
-  blurb: "FLUX.1-dev · free · no key",
+  blurb: "FLUX.1-dev · 100% free · no key",
   roles: {},
   settings: {
-    aspectRatio: {
-      type: "enum",
-      values: ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"],
-      default: "1:1",
-    },
+    aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"], default: "1:1" },
     seed: { type: "range", min: 0, max: 999999, default: 0, step: 1 },
   },
   provider: { provider: "pollinations", model: "flux", needsKey: false },
@@ -26,7 +24,7 @@ const pollinationsTurbo: ModelEntry = {
   id: "pollinations-turbo",
   surface: "image",
   label: "Turbo (Pollinations)",
-  blurb: "Fastest · free · no key",
+  blurb: "Fastest image model · 100% free",
   roles: {},
   settings: {
     aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16", "4:3", "3:4"], default: "1:1" },
@@ -40,7 +38,7 @@ const pollinationsFluxRealism: ModelEntry = {
   id: "pollinations-flux-realism",
   surface: "image",
   label: "Flux Realism (Pollinations)",
-  blurb: "Photorealistic · free",
+  blurb: "Photorealistic · 100% free",
   roles: {},
   settings: {
     aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16", "4:3", "3:4"], default: "1:1" },
@@ -54,7 +52,7 @@ const pollinationsFluxAnime: ModelEntry = {
   id: "pollinations-flux-anime",
   surface: "image",
   label: "Flux Anime (Pollinations)",
-  blurb: "Anime style · free",
+  blurb: "Anime / illustration · 100% free",
   roles: {},
   settings: {
     aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16", "4:3", "3:4"], default: "1:1" },
@@ -68,7 +66,7 @@ const pollinationsFlux3d: ModelEntry = {
   id: "pollinations-flux-3d",
   surface: "image",
   label: "Flux 3D (Pollinations)",
-  blurb: "3D rendered look · free",
+  blurb: "3D-rendered look · 100% free",
   roles: {},
   settings: {
     aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16", "4:3", "3:4"], default: "1:1" },
@@ -79,27 +77,22 @@ const pollinationsFlux3d: ModelEntry = {
 };
 
 /* ============================================================================
- * HUGGINGFACE INFERENCE API — free with HF token (rate limited)
+ * HUGGINGFACE — free with HF token (signup at huggingface.co/settings/tokens)
+ * Free Inference API: ~30 req/hour on classic, $0.10/mo credit on Router.
  * ==========================================================================*/
 
 const hfFluxSchnell: ModelEntry = {
   id: "hf-flux-schnell",
   surface: "image",
   label: "FLUX.1-schnell (HF)",
-  blurb: "Apache 2.0 · 4-step distilled · free w/ HF token",
+  blurb: "Apache 2.0 · 4-step · free w/ HF token",
   roles: {},
   settings: {
     aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16", "4:3", "3:4"], default: "1:1" },
     numInferenceSteps: { type: "range", min: 1, max: 8, default: 4, step: 1 },
     seed: { type: "range", min: 0, max: 999999, default: 0, step: 1 },
   },
-  provider: {
-    provider: "huggingface",
-    model: "black-forest-labs/FLUX.1-schnell",
-    needsKey: true,
-    defaultSteps: 4,
-    defaultGuidance: 0,
-  },
+  provider: { provider: "huggingface", model: "black-forest-labs/FLUX.1-schnell", needsKey: true, defaultSteps: 4, defaultGuidance: 0 },
   free: true,
 };
 
@@ -115,13 +108,7 @@ const hfFluxDev: ModelEntry = {
     guidanceScale: { type: "range", min: 1, max: 10, default: 3.5, step: 0.1 },
     seed: { type: "range", min: 0, max: 999999, default: 0, step: 1 },
   },
-  provider: {
-    provider: "huggingface",
-    model: "black-forest-labs/FLUX.1-dev",
-    needsKey: true,
-    defaultSteps: 28,
-    defaultGuidance: 3.5,
-  },
+  provider: { provider: "huggingface", model: "black-forest-labs/FLUX.1-dev", needsKey: true, defaultSteps: 28, defaultGuidance: 3.5 },
   free: true,
 };
 
@@ -137,13 +124,7 @@ const hfSdxl: ModelEntry = {
     guidanceScale: { type: "range", min: 1, max: 20, default: 7.5, step: 0.5 },
     seed: { type: "range", min: 0, max: 999999, default: 0, step: 1 },
   },
-  provider: {
-    provider: "huggingface",
-    model: "stabilityai/stable-diffusion-xl-base-1.0",
-    needsKey: true,
-    defaultSteps: 25,
-    defaultGuidance: 7.5,
-  },
+  provider: { provider: "huggingface", model: "stabilityai/stable-diffusion-xl-base-1.0", needsKey: true, defaultSteps: 25, defaultGuidance: 7.5 },
   free: true,
 };
 
@@ -159,134 +140,20 @@ const hfSd15: ModelEntry = {
     guidanceScale: { type: "range", min: 1, max: 20, default: 7.5, step: 0.5 },
     seed: { type: "range", min: 0, max: 999999, default: 0, step: 1 },
   },
-  provider: {
-    provider: "huggingface",
-    model: "runwayml/stable-diffusion-v1-5",
-    needsKey: true,
-    defaultSteps: 20,
-    defaultGuidance: 7.5,
-  },
+  provider: { provider: "huggingface", model: "runwayml/stable-diffusion-v1-5", needsKey: true, defaultSteps: 20, defaultGuidance: 7.5 },
   free: true,
 };
 
 /* ============================================================================
- * HUGGINGFACE ROUTER (Inference Providers) — paid but with $2/mo free credit
- * Routes through fal-ai / replicate / wavespeed / nscale
- * ==========================================================================*/
-
-const routerFluxSchnellFal: ModelEntry = {
-  id: "router-flux-schnell-fal",
-  surface: "image",
-  label: "FLUX.1-schnell (HF Router)",
-  blurb: "Via fal.ai · $2/mo free credit",
-  roles: {},
-  settings: {
-    aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" },
-  },
-  provider: {
-    provider: "hf-router",
-    modelId: "black-forest-labs/FLUX.1-schnell",
-    task: "text-to-image",
-    needsKey: true,
-  },
-  free: true,
-};
-
-const routerFluxDev: ModelEntry = {
-  id: "router-flux-dev",
-  surface: "image",
-  label: "FLUX.1-dev (HF Router)",
-  blurb: "Via fal.ai · $2/mo free credit",
-  roles: {},
-  settings: {
-    aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" },
-  },
-  provider: {
-    provider: "hf-router",
-    modelId: "black-forest-labs/FLUX.1-dev",
-    task: "text-to-image",
-    needsKey: true,
-  },
-  free: true,
-};
-
-const routerFluxKontext: ModelEntry = {
-  id: "router-flux-kontext",
-  surface: "image",
-  label: "FLUX.1-Kontext (HF Router)",
-  blurb: "Image edit · Via fal.ai",
-  roles: { reference: 1 },
-  settings: {
-    aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" },
-  },
-  provider: {
-    provider: "hf-router",
-    modelId: "black-forest-labs/FLUX.1-Kontext-dev",
-    task: "image-to-image",
-    needsKey: true,
-  },
-  free: true,
-};
-
-const routerSdxl: ModelEntry = {
-  id: "router-sdxl",
-  surface: "image",
-  label: "SDXL 1.0 (HF Router)",
-  blurb: "Via fal.ai · fast-sdxl",
-  roles: {},
-  settings: {
-    aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" },
-  },
-  provider: {
-    provider: "hf-router",
-    modelId: "stabilityai/stable-diffusion-xl-base-1.0",
-    task: "text-to-image",
-    needsKey: true,
-  },
-  free: true,
-};
-
-const routerLlama8b: ModelEntry = {
-  id: "router-llama-8b",
-  surface: "text",
-  label: "Llama 3.1 8B (HF Router)",
-  blurb: "LLM · via novita · cheap",
-  roles: {},
-  settings: {},
-  provider: {
-    provider: "hf-router",
-    modelId: "meta-llama/Llama-3.1-8B-Instruct",
-    task: "chat-completions",
-    needsKey: true,
-  },
-  free: true,
-};
-
-const routerQwen4b: ModelEntry = {
-  id: "router-qwen-4b",
-  surface: "text",
-  label: "Qwen3-4B Instruct (HF Router)",
-  blurb: "Cheapest LLM · nscale · $0.01/1M tok",
-  roles: {},
-  settings: {},
-  provider: {
-    provider: "hf-router",
-    modelId: "Qwen/Qwen3-4B-Instruct-2507",
-    task: "chat-completions",
-    needsKey: true,
-  },
-  free: true,
-};
-
-/* ============================================================================
- * FAL.AI — paid but with $1 credit on signup
+ * FAL.AI — 5 free FLUX 3 Max videos per day (rolling 24h window).
+ * Signup: https://fal.ai/dashboard/keys
  * ==========================================================================*/
 
 const falFluxSchnell: ModelEntry = {
   id: "fal-flux-schnell",
   surface: "image",
   label: "FLUX.1-schnell (fal.ai)",
-  blurb: "$1 free credit · fast",
+  blurb: "$1 free credit · fastest FLUX",
   roles: {},
   settings: {
     image_size: {
@@ -295,12 +162,7 @@ const falFluxSchnell: ModelEntry = {
       default: "landscape_16_9",
     },
   },
-  provider: {
-    provider: "fal",
-    kind: "image",
-    model: "fal-ai/flux/schnell",
-    needsKey: true,
-  },
+  provider: { provider: "fal", kind: "image", model: "fal-ai/flux/schnell", needsKey: true },
   free: true,
 };
 
@@ -317,12 +179,21 @@ const falFluxDev: ModelEntry = {
       default: "landscape_16_9",
     },
   },
-  provider: {
-    provider: "fal",
-    kind: "image",
-    model: "fal-ai/flux/dev",
-    needsKey: true,
+  provider: { provider: "fal", kind: "image", model: "fal-ai/flux/dev", needsKey: true },
+  free: true,
+};
+
+const falFlux3MaxVideo: ModelEntry = {
+  id: "fal-flux-3-max-video",
+  surface: "video",
+  label: "FLUX 3 Max Video (fal.ai)",
+  blurb: "5 free videos/day · 720p",
+  roles: {},
+  settings: {
+    duration: { type: "range", min: 5, max: 10, default: 5, step: 5 },
+    aspect_ratio: { type: "enum", values: ["16:9", "9:16", "1:1"], default: "16:9" },
   },
+  provider: { provider: "fal", kind: "video", model: "fal-ai/flux-3-max/video", needsKey: true },
   free: true,
 };
 
@@ -330,18 +201,13 @@ const falKling16: ModelEntry = {
   id: "fal-kling-1.6",
   surface: "video",
   label: "Kling 1.6 Standard (fal.ai)",
-  blurb: "Video · $1 free credit",
+  blurb: "$1 free credit · Chinese video model",
   roles: { start: 1, end: 1 },
   settings: {
     duration: { type: "range", min: 5, max: 10, default: 5, step: 5 },
     aspect_ratio: { type: "enum", values: ["16:9", "9:16", "1:1"], default: "16:9" },
   },
-  provider: {
-    provider: "fal",
-    kind: "video",
-    model: "fal-ai/kling-video/v1.6/standard/text-to-video",
-    needsKey: true,
-  },
+  provider: { provider: "fal", kind: "video", model: "fal-ai/kling-video/v1.6/standard/text-to-video", needsKey: true },
   free: true,
 };
 
@@ -349,18 +215,13 @@ const falMinimaxHailuo: ModelEntry = {
   id: "fal-minimax-hailuo",
   surface: "video",
   label: "MiniMax Hailuo 02 (fal.ai)",
-  blurb: "Chinese video model · $1 free",
+  blurb: "$1 free credit · Chinese video model",
   roles: {},
   settings: {
     duration: { type: "range", min: 5, max: 10, default: 5, step: 5 },
     aspect_ratio: { type: "enum", values: ["16:9", "9:16", "1:1"], default: "16:9" },
   },
-  provider: {
-    provider: "fal",
-    kind: "video",
-    model: "fal-ai/minimax/hailuo-02/standard/text-to-video",
-    needsKey: true,
-  },
+  provider: { provider: "fal", kind: "video", model: "fal-ai/minimax/hailuo-02/standard/text-to-video", needsKey: true },
   free: true,
 };
 
@@ -368,18 +229,13 @@ const falVeo3Fast: ModelEntry = {
   id: "fal-veo3-fast",
   surface: "video",
   label: "Veo 3 Fast (fal.ai)",
-  blurb: "Google Veo 3 · $1 free credit",
+  blurb: "$1 free credit · Google Veo 3",
   roles: {},
   settings: {
     duration: { type: "range", min: 4, max: 8, default: 4, step: 4 },
     aspect_ratio: { type: "enum", values: ["16:9", "9:16"], default: "16:9" },
   },
-  provider: {
-    provider: "fal",
-    kind: "video",
-    model: "fal-ai/veo3/fast",
-    needsKey: true,
-  },
+  provider: { provider: "fal", kind: "video", model: "fal-ai/veo3/fast", needsKey: true },
   free: true,
 };
 
@@ -387,30 +243,124 @@ const falPikaTurbo: ModelEntry = {
   id: "fal-pika-turbo",
   surface: "video",
   label: "Pika v2.2 Turbo (fal.ai)",
-  blurb: "Pika Labs · $1 free credit",
+  blurb: "$1 free credit · Pika Labs",
   roles: {},
   settings: {
     duration: { type: "range", min: 5, max: 10, default: 5, step: 5 },
     aspect_ratio: { type: "enum", values: ["16:9", "9:16", "1:1"], default: "16:9" },
   },
-  provider: {
-    provider: "fal",
-    kind: "video",
-    model: "fal-ai/pika/v2.2/turbo/text-to-video",
-    needsKey: true,
-  },
+  provider: { provider: "fal", kind: "video", model: "fal-ai/pika/v2.2/turbo/text-to-video", needsKey: true },
   free: true,
 };
 
 /* ============================================================================
- * KLING — direct web API (66 free credits/day with session JWT)
+ * HUGGINGFACE ROUTER — $0.10 free monthly credit (no PRO needed)
+ * Signup: huggingface.co/settings/tokens
+ * ==========================================================================*/
+
+const routerFluxSchnell: ModelEntry = {
+  id: "router-flux-schnell",
+  surface: "image",
+  label: "FLUX.1-schnell (HF Router)",
+  blurb: "$0.10/mo credit · via fal.ai",
+  roles: {},
+  settings: { aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" } },
+  provider: { provider: "hf-router", modelId: "black-forest-labs/FLUX.1-schnell", task: "text-to-image", needsKey: true },
+  free: true,
+};
+
+const routerFluxDev: ModelEntry = {
+  id: "router-flux-dev",
+  surface: "image",
+  label: "FLUX.1-dev (HF Router)",
+  blurb: "$0.10/mo credit · via fal.ai",
+  roles: {},
+  settings: { aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" } },
+  provider: { provider: "hf-router", modelId: "black-forest-labs/FLUX.1-dev", task: "text-to-image", needsKey: true },
+  free: true,
+};
+
+const routerFluxKontext: ModelEntry = {
+  id: "router-flux-kontext",
+  surface: "image",
+  label: "FLUX.1-Kontext (HF Router)",
+  blurb: "Image edit · via fal.ai",
+  roles: { reference: 1 },
+  settings: { aspectRatio: { type: "enum", values: ["1:1", "16:9", "9:16"], default: "1:1" } },
+  provider: { provider: "hf-router", modelId: "black-forest-labs/FLUX.1-Kontext-dev", task: "image-to-image", needsKey: true },
+  free: true,
+};
+
+const routerLlama8b: ModelEntry = {
+  id: "router-llama-8b",
+  surface: "text",
+  label: "Llama 3.1 8B (HF Router)",
+  blurb: "LLM · $0.10/mo credit",
+  roles: {},
+  settings: {},
+  provider: { provider: "hf-router", modelId: "meta-llama/Llama-3.1-8B-Instruct", task: "chat-completions", needsKey: true },
+  free: true,
+};
+
+const routerQwen4b: ModelEntry = {
+  id: "router-qwen-4b",
+  surface: "text",
+  label: "Qwen3-4B Instruct (HF Router)",
+  blurb: "🇨🇳 Chinese LLM · cheapest on market",
+  roles: {},
+  settings: {},
+  provider: { provider: "hf-router", modelId: "Qwen/Qwen3-4B-Instruct-2507", task: "chat-completions", needsKey: true },
+  free: true,
+};
+
+/* ============================================================================
+ * OPENROUTER — Free LLMs (~50 req/day without payment, ~1000/day with $10 top-up)
+ * Signup: openrouter.ai/keys
+ * ==========================================================================*/
+
+const openrouterLlama4: ModelEntry = {
+  id: "openrouter-llama-4-maverick",
+  surface: "text",
+  label: "Llama 4 Maverick (OpenRouter)",
+  blurb: "Free LLM · 400B MoE · multimodal",
+  roles: {},
+  settings: {},
+  provider: { provider: "openrouter", modelId: "meta-llama/llama-4-maverick:free", needsKey: true },
+  free: true,
+};
+
+const openrouterGemma4: ModelEntry = {
+  id: "openrouter-gemma-4",
+  surface: "text",
+  label: "Gemma 4 27B (OpenRouter)",
+  blurb: "Free LLM · Google · multilingual",
+  roles: {},
+  settings: {},
+  provider: { provider: "openrouter", modelId: "google/gemma-4-27b:free", needsKey: true },
+  free: true,
+};
+
+const openrouterGptOss: ModelEntry = {
+  id: "openrouter-gpt-oss-20b",
+  surface: "text",
+  label: "GPT-OSS 20B (OpenRouter)",
+  blurb: "Free LLM · OpenAI · code-focused",
+  roles: {},
+  settings: {},
+  provider: { provider: "openrouter", modelId: "openai/gpt-oss-20b:free", needsKey: true },
+  free: true,
+};
+
+/* ============================================================================
+ * KLING (Web session JWT) — 66 free credits/day
+ * Signup: klingai.com (login with Google/email)
  * ==========================================================================*/
 
 const klingFree: ModelEntry = {
   id: "kling-free",
   surface: "video",
   label: "Kling 1.6 (Klingai Web)",
-  blurb: "66 credits/day · free web API",
+  blurb: "🇨🇳 66 credits/day free · watermarked 720p",
   roles: {},
   settings: {
     duration: { type: "range", min: 5, max: 10, default: 5, step: 5 },
@@ -422,14 +372,15 @@ const klingFree: ModelEntry = {
 };
 
 /* ============================================================================
- * MINIMAX — official API (30k initial credits, 5k/day)
+ * MINIMAX — 30k initial credits + 5k/day refresh
+ * Signup: platform.minimaxi.com (phone verification required)
  * ==========================================================================*/
 
 const minimaxAudio: ModelEntry = {
   id: "minimax-audio-tts",
   surface: "audio",
   label: "MiniMax Speech-02 (TTS)",
-  blurb: "Chinese TTS · 30k initial credits",
+  blurb: "🇨🇳 30k initial credits · Chinese TTS",
   roles: {},
   settings: {
     voice_id: {
@@ -448,7 +399,7 @@ const minimaxVideo: ModelEntry = {
   id: "minimax-video",
   surface: "video",
   label: "MiniMax Hailuo (Direct)",
-  blurb: "Video · 30k initial credits",
+  blurb: "🇨🇳 30k initial credits · video",
   roles: {},
   settings: {
     duration: { type: "range", min: 5, max: 10, default: 5, step: 5 },
@@ -459,14 +410,15 @@ const minimaxVideo: ModelEntry = {
 };
 
 /* ============================================================================
- * SUNO — unofficial web API (50 credits/day)
+ * SUNO (Web session) — 50 free credits/day, ~10 songs/day
+ * Signup: suno.com (login with Google/email)
  * ==========================================================================*/
 
 const sunoFree: ModelEntry = {
   id: "suno-free",
   surface: "audio",
   label: "Suno V4 (Music)",
-  blurb: "50 credits/day · web session",
+  blurb: "50 credits/day free · web session",
   roles: {},
   settings: {
     make_instrumental: { type: "boolean", default: false },
@@ -481,36 +433,40 @@ const sunoFree: ModelEntry = {
 };
 
 export const FREE_MODELS: ModelEntry[] = [
-  // Pollinations — no key needed
+  // 5 Pollinations — no key needed
   pollinationsFlux,
   pollinationsTurbo,
   pollinationsFluxRealism,
   pollinationsFluxAnime,
   pollinationsFlux3d,
-  // HuggingFace direct (free with token, rate-limited)
+  // 4 HuggingFace direct — free with HF token
   hfFluxSchnell,
   hfFluxDev,
   hfSdxl,
   hfSd15,
-  // HuggingFace router ($2/mo free)
-  routerFluxSchnellFal,
-  routerFluxDev,
-  routerFluxKontext,
-  routerSdxl,
-  routerLlama8b,
-  routerQwen4b,
-  // fal.ai ($1 free signup credit)
+  // 7 fal.ai — 5 free videos/day + $1 credit
   falFluxSchnell,
   falFluxDev,
+  falFlux3MaxVideo,
   falKling16,
   falMinimaxHailuo,
   falVeo3Fast,
   falPikaTurbo,
-  // Kling (66 credits/day free)
+  // 5 HF Router — $0.10/mo credit
+  routerFluxSchnell,
+  routerFluxDev,
+  routerFluxKontext,
+  routerLlama8b,
+  routerQwen4b,
+  // 3 OpenRouter — free LLMs
+  openrouterLlama4,
+  openrouterGemma4,
+  openrouterGptOss,
+  // 1 Kling direct
   klingFree,
-  // MiniMax (30k initial + 5k/day free)
+  // 2 MiniMax direct
   minimaxAudio,
   minimaxVideo,
-  // Suno (50 credits/day free)
+  // 1 Suno direct
   sunoFree,
 ];

@@ -138,6 +138,23 @@ export function Topbar({
           <span className="ohf-key-text">{keyConfigured ? "HF token set" : "Add HF token (opt)"}</span>
           <span className="ohf-lamp" />
         </button>
+        <a
+          href="/settings"
+          className="ohf-key ohf-settings-link"
+          aria-label="Open Settings page (manage all API keys)"
+          title="Settings — manage all API keys"
+          style={{
+            marginLeft: 8,
+            textDecoration: "none",
+            padding: "8px 12px",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          <span aria-hidden>⚙️</span>
+          <span className="ohf-key-text">Settings</span>
+        </a>
       </div>
     </div>
   );

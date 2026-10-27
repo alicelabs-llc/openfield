@@ -18,7 +18,7 @@ export interface RunRecord {
   status: RunStatus;
   requestId?: string;
   statusUrl?: string;
-  provider?: "pollinations" | "huggingface" | "hf-router" | "fal" | "kling" | "minimax" | "suno";
+  provider?: "pollinations" | "huggingface" | "hf-router" | "fal" | "kling" | "minimax" | "suno" | "openrouter";
   /** Provider-specific polling metadata (e.g. isAsync flag for HF router) */
   pollMeta?: Record<string, unknown>;
   error?: string;

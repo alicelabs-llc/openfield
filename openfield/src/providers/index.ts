@@ -20,6 +20,7 @@ import {
   pollMinimaxVideo,
 } from "./minimax";
 import { submitSunoSong, pollSunoStatus } from "./suno";
+import { submitOpenRouter, pollOpenRouter } from "./openrouter";
 
 export type ProviderName =
   | "pollinations"
@@ -28,7 +29,8 @@ export type ProviderName =
   | "fal"
   | "kling"
   | "minimax"
-  | "suno";
+  | "suno"
+  | "openrouter";
 
 export type ProviderRequest =
   | {
@@ -90,6 +92,12 @@ export type ProviderRequest =
       make_instrumental?: boolean;
       tags?: string;
       title?: string;
+    }
+  | {
+      provider: "openrouter";
+      model: string;
+      prompt: string;
+      systemPrompt?: string;
     };
 
 export type ProviderCredentials = {
@@ -98,6 +106,7 @@ export type ProviderCredentials = {
   klingJwt?: string;
   minimaxKey?: string;
   sunoToken?: string;
+  openrouterKey?: string;
 };
 
 export type QueuedRequest = {
@@ -276,6 +285,16 @@ export async function submitToProvider(
       };
     }
 
+    case "openrouter": {
+      if (!creds.openrouterKey) throw new Error("OpenRouter requires an API key (free at openrouter.ai/keys)");
+      const result = await submitOpenRouter({ model: req.model, prompt: req.prompt }, creds.openrouterKey);
+      return {
+        requestId: result.requestId,
+        statusUrl: result.statusUrl,
+        provider: "openrouter",
+      };
+    }
+
     default: {
       const exhaustive: never = req;
       throw new Error(`Provider ${(exhaustive as { provider: string }).provider} not implemented`);
@@ -338,6 +357,11 @@ export async function pollProvider(req: QueuedRequest, creds: ProviderCredential
       if (result.status === "completed" && result.audio) {
         return { ...result, audio: result.audio };
       }
+      return result;
+    }
+
+    case "openrouter": {
+      const result = await pollOpenRouter(req.requestId, req.statusUrl);
       return result;
     }
 

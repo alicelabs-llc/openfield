@@ -49,6 +49,11 @@ export type ProviderConfig =
   | {
       provider: "suno";
       needsKey: true;
+    }
+  | {
+      provider: "openrouter";
+      modelId: string;
+      needsKey: true;
     };
 
 export type ModelEntry = {

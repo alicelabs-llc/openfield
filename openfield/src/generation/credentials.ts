@@ -44,6 +44,7 @@ export type StoredCredentials = {
   klingJwt?: string;
   minimaxKey?: string;
   sunoToken?: string;
+  openrouterKey?: string;
 };
 
 export function encodeCredentials(creds: StoredCredentials): string {
@@ -62,6 +63,7 @@ export function decodeCredentials(raw: string | undefined): StoredCredentials | 
     if (typeof record.klingJwt === "string" && record.klingJwt.trim()) creds.klingJwt = record.klingJwt.trim();
     if (typeof record.minimaxKey === "string" && record.minimaxKey.trim()) creds.minimaxKey = record.minimaxKey.trim();
     if (typeof record.sunoToken === "string" && record.sunoToken.trim()) creds.sunoToken = record.sunoToken.trim();
+    if (typeof record.openrouterKey === "string" && record.openrouterKey.trim()) creds.openrouterKey = record.openrouterKey.trim();
     return Object.keys(creds).length === 0 ? null : creds;
   } catch {
     return null;
@@ -81,9 +83,9 @@ export function parseCredentialInput(data: unknown): StoredCredentials {
   }
   const record = data as Record<string, unknown>;
 
-  // New shape: { hfToken, falKey, klingJwt, minimaxKey, sunoToken }
+  // New shape: { hfToken, falKey, klingJwt, minimaxKey, sunoToken, openrouterKey }
   const creds: StoredCredentials = {};
-  for (const key of ["hfToken", "falKey", "klingJwt", "minimaxKey", "sunoToken"] as const) {
+  for (const key of ["hfToken", "falKey", "klingJwt", "minimaxKey", "sunoToken", "openrouterKey"] as const) {
     const v = record[key] ?? record[key.toLowerCase()] ?? record[key.replace(/([A-Z])/g, "_$1").toLowerCase()];
     if (typeof v === "string" && v.trim()) {
       creds[key] = v.trim();
@@ -95,6 +97,7 @@ export function parseCredentialInput(data: unknown): StoredCredentials {
   if (typeof legacyKey === "string" && legacyKey.trim()) {
     const trimmed = legacyKey.trim();
     if (trimmed.startsWith("hf_")) creds.hfToken = trimmed;
+    else if (trimmed.startsWith("sk-or-v1-")) creds.openrouterKey = trimmed;
     else if (!creds.falKey) creds.falKey = trimmed;
   }
 
